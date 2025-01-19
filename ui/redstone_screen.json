@@ -1,0 +1,51 @@
+{
+  "namespace": "redstone",
+  "hopper_screen@common.inventory_screen_common": {
+     "$close_on_player_hurt|default": true,
+     "close_on_player_hurt": "$close_on_player_hurt",
+     "variables": [
+        {
+           "requires": "($desktop_screen or $pocket_screen)",
+           "$screen_content": "hopper_zeta.hopper_panel",
+           "$screen_bg_content": "common.screen_background",
+           "$screen_background_alpha": 0.6
+        }
+     ]
+  },
+  "dispenser_screen@common.inventory_screen_common": {
+     "$close_on_player_hurt|default": true,
+     "close_on_player_hurt": "$close_on_player_hurt",
+     "variables": [
+        {
+           "requires": "($desktop_screen or $pocket_screen)",
+           "$screen_content": "dispenser_zeta.dispenser_panel",
+           "$screen_bg_content": "common.screen_background",
+           "$screen_background_alpha": 0.6
+        }
+     ]
+  },
+  "dropper_screen@common.inventory_screen_common": {
+    "$close_on_player_hurt|default": true,
+    "close_on_player_hurt": "$close_on_player_hurt",
+    "variables": [
+       {
+          "requires": "($desktop_screen or $pocket_screen)",
+          "$screen_content": "dispenser_zeta.dispenser_panel",
+          "$screen_bg_content": "common.screen_background",
+          "$screen_background_alpha": 0.6
+       }
+    ]
+ },
+  "crafter_screen@common.inventory_screen_common": {
+     "$close_on_player_hurt|default": true,
+     "close_on_player_hurt": "$close_on_player_hurt",
+     "variables": [
+        {
+           "requires": "($desktop_screen or $pocket_screen)",
+           "$screen_content": "crafter_zeta.panel_crafter",
+           "$screen_bg_content": "common.screen_background",
+           "$screen_background_alpha": 0.6
+        }
+     ]
+  }
+}

@@ -1,0 +1,61 @@
+{
+    "ui_defs": [
+      // Recipe Book Base Grid Data
+      "ui/atemp/book_dat.atemp",
+      "ui/atemp/furnace_reicpe_book_data.atemp",
+      "ui/recipe_toggle.json",
+      "ui/atemp/recipe_Scroll_grid.atemp",
+  
+      // Core UI textures
+      "ui/atemp/burnables.atemp",
+      "ui/atemp/double_chest_epsilon.atemp",
+      "ui/atemp/inventory.atemp",
+      "ui/recipe_search_gamma.json",
+      "ui/atemp/small_chest_epsilon.atemp",
+  
+      // Epsilon UI texture Components
+      "ui/atemp/anvil_epsilon.atemp",
+      "ui/atemp/beacon_epsilon.atemp",
+      "ui/atemp/brewing_stand_epsilon.atemp",
+      "ui/atemp/cartography_epsilon.atemp",
+      "ui/atemp/crafter_epsilon.atemp",
+      "ui/atemp/crafting_table_epsilon.atemp",
+      "ui/atemp/dispenser_epsilon.atemp",
+      "ui/atemp/enchanting_table_epsilon.atemp",
+      "ui/atemp/furnace_epsilon.atemp",
+      "ui/atemp/grindstone_epsilon.atemp",
+      "ui/atemp/hopper_epsilon.atemp",
+      "ui/atemp/horse_epsilon.atemp",
+      "ui/atemp/loom_epsilon.atemp",
+      "ui/atemp/smithing_epsilon.atemp",
+      "ui/atemp/stonecutter_epsilon.atemp",
+      "ui/atemp/villager_epsilon.atemp",
+  
+      // Delta UI Containers
+      "ui/kappa_containers/anvil_zeta.atemp",
+      "ui/kappa_containers/beacon_zeta.atemp",
+      "ui/kappa_containers/brewing_zeta.atemp",
+      "ui/kappa_containers/cartography_zeta.atemp",
+      "ui/kappa_containers/crafter_zeta.atemp",
+      "ui/kappa_containers/dispenser_zeta.atemp",
+      "ui/kappa_containers/double_chest_zeta.atemp",
+      "ui/kappa_containers/enchanting_zeta.atemp",
+      "ui/kappa_containers/furnace_zeta.atemp",
+      "ui/kappa_containers/grindstone_zeta.atemp",
+      "ui/kappa_containers/hopper_zeta.atemp",
+      "ui/kappa_containers/loom_zeta.atemp",
+      "ui/kappa_containers/small_chest_zeta.atemp",
+      "ui/kappa_containers/stonecutter_zeta.atemp",
+      "ui/kappa_containers/smithing_zeta.atemp",
+      "ui/kappa_containers/villager_zeta.atemp",
+  
+      // Common UI
+      "ui/common_zeta.json",
+      "ui/crafting_table.json",
+      "ui/inventory_surv_common/survival_common.json",
+      "ui/recipe_survival_tabs/loom_common.json",
+      "ui/recipe_survival_tabs/recipe_tabs.json",
+      "ui/recipe_survival_tabs/trade_common.json"
+    ]
+  }
+  

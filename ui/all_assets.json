@@ -1,0 +1,41 @@
+{
+    "all_assets": {
+      "@common.container_screen_exit_animation_push": {},
+      "@common.container_screen_exit_animation_pop": {},
+      "@common.container_screen_entrance_animation_push": {},
+      "@common.container_screen_entrance_animation_pop": {},
+      "@common.screen_exit_animation_push_fade": {},
+      "@common.screen_exit_animation_pop_fade": {},
+      "@common.screen_entrance_animation_push_fade": {},
+      "@common.screen_entrance_animation_pop_fade": {}
+    },
+    "reset_button@common.button": {
+        "offset": [ 0, 5 ],
+        "size": [ "75%", "75%" ],
+        "$default_texture": "textures/ui/wysiwyg_reset",
+        "$hover_texture": "textures/ui/wysiwyg_reset",
+        "$pressed_texture": "textures/ui/wysiwyg_reset",
+        "$pressed_button_name": "button.menu_ok",
+        "controls": [
+          {
+            "default": {
+              "type": "image",
+              "texture": "$default_texture"
+            }
+          },
+          {
+            "hover": {
+              "type": "image",
+              "texture": "$hover_texture"
+            }
+          },
+          {
+            "pressed": {
+              "type": "image",
+              "texture": "$pressed_texture"
+            }
+          }
+        ]
+      }
+  }
+  

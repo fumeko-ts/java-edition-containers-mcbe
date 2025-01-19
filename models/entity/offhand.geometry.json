@@ -1,0 +1,51 @@
+{
+   "format_version": "1.12.0",
+   "minecraft:geometry": [
+      {
+         "description": {
+            "identifier": "geometry.offhand",
+            "texture_width": 15,
+            "texture_height": 15,
+            "visible_bounds_width": 2,
+            "visible_bounds_height": 2.5,
+            "visible_bounds_offset": [0, 0.75, 0]
+         },
+         "bones": [
+            {
+               "name": "offhand_slot",
+               "pivot": [0, 0, 0],
+               "cubes": [
+                  {
+                     "origin": [-14, -7.7, 0],
+                     "size"  : [ 15, 15  , 0],
+                     "uv"    : [  0,  0     ]
+                  }
+               ]
+            }
+         ]
+      },
+      {
+         "description": {
+            "identifier": "geometry.offhand_slot",
+            "texture_width": 21.4,
+            "texture_height": 21.6,
+            "visible_bounds_width": 4,
+            "visible_bounds_height": 2.5,
+            "visible_bounds_offset": [0, 0.75, 0]
+         },
+         "bones": [
+            {
+               "name": "offhand_slot",
+               "pivot": [0, 0, 0],
+               "cubes": [
+                  {
+                     "origin": [-17  , -10.8, 0],
+                     "size"  : [ 21.4,  21.6, 0],
+                     "uv"    : [  0  ,   0     ]
+                  }
+               ]
+            }
+         ]
+      }
+   ]
+}

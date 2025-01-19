@@ -1,0 +1,18 @@
+{
+    "format_version": "1.8.0",
+    "animations": {
+       "animation.offhand_slot": {
+          "loop": true,
+          "bones": {
+             "offhand_slot": {
+                "position": [
+                   0,
+                   "(query.is_swimming ? -17.1275 : 0.0) + 879.6",
+                   0
+                ],
+                "scale": 0.87
+             }
+          }
+       }
+    }
+ }

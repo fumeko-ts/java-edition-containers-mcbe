@@ -1,0 +1,13 @@
+{
+    "namespace": "hopper_epsilon",
+    "image_element": {
+       "type": "image",
+       "texture": "assets/minecraft/textures/gui/container/hopper",
+       "uv_size": [176, 133],
+       "size": [176, 133],
+       "offset": [0, 0],
+       "anchor_from": "top_left",
+       "anchor_to": "top_left"
+    }
+ }
+ 

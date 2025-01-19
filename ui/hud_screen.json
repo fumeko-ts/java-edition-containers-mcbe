@@ -1,0 +1,691 @@
+{
+"serverdisplay": {
+  "type": "panel",
+  "size": ["100% - 2px", "100% - 6px"],
+  "anchor_from": "top_right",
+  "offset": [-20, 1],
+  "anchor_to": "top_right",
+  "controls": [
+    {"world_name": {
+      "type": "image",
+      "texture": "textures/ui/Black",
+      "alpha": 0.0,
+      "size": ["100%c", 11],
+      "ignored": "$is_on_3p_server",
+      "anchor_from": "top_right",
+      "anchor_to": "top_right",
+      "controls": [
+        {"label": {
+          "type": "label",
+          "bindings": [
+            {"binding_name": "#player_list_title"},
+            {"binding_type": "view", "source_property_name": "('§7' + (#player_list_title))", "target_property_name": "#text"}
+          ],
+          "layer": 12,
+          "text_alignment": "center",
+          "anchor_from": "center",
+          "anchor_to": "center",
+          "offset": [2, 0],
+          "ignored": "$is_on_3p_server",
+          "shadow": false,
+          "text": "#text"
+        }}
+      ]
+    }},
+    {"cubecraft@$hud_world_name": {
+      "anchor_from": "top_right",
+      "anchor_to": "top_right",
+      "$server_name": "(#player_list_title = 'CubeCraft Games')",
+      "ignored": "(not $is_on_3p_server)",
+      "$server_adress": "§7CubeCraft Games-[play.cubecraft.net]"
+    }},
+    {"galaxite@$hud_world_name": {
+      "anchor_from": "top_right",
+      "anchor_to": "top_right",
+      "$server_name": "(#player_list_title = 'Galaxite')",
+      "ignored": "(not $is_on_3p_server)",
+      "$server_adress": "§7Galaxite-[play.galaxite.net]"
+    }},
+    {"magma-mc@$hud_world_name": {
+      "anchor_from": "top_right",
+      "anchor_to": "top_right",
+      "$server_name": "(#player_list_title = 'Magma MC')",
+      "ignored": "(not $is_on_3p_server)",
+      "$server_adress": "Magma MC-[play.magmaMC.net]"
+    }},
+    {"hive@$hud_world_name": {
+      "anchor_from": "top_right",
+      "anchor_to": "top_right", 
+      "$server_name": "(#player_list_title = 'Hive Games')",
+      "ignored": "(not $is_on_3p_server)",
+      "$server_adress": "§7Hive Games-[geo.hivebedrock.network]"
+    }},
+    {"lifeboat@$hud_world_name": {
+      "anchor_from": "top_right",
+      "anchor_to": "top_right",
+      "offset": [0, -20],
+      "$server_name": "(#player_list_title = 'Lifeboard Network')",
+      "ignored": "(not $is_on_3p_server)",
+      "$server_adress": "§7Lifeboard Network-[mco.lbsg.net]"
+    }}
+  ]},
+
+  "world_name_template": {
+    "type": "image",
+    "texture": "textures/ui/Black",
+    "alpha": 0,
+    "size": ["100%c", 11],
+    "bindings": [
+      {"binding_name": "#player_list_title"},
+      {
+        "binding_type"        : "view"        ,
+        "source_property_name": "$server_name",
+        "target_property_name": "#visible"
+      }
+    ],
+    "controls": [
+      {
+        "label": {
+          "type": "label",
+          "text": "$server_adress",
+          "layer": 12,
+          "ignored": "$world_name",
+          "text_alignment": "center",
+          "anchor_from": "center",
+          "anchor_to": "center",
+          "offset": [2, 0]
+        }
+      }
+    ]
+  },
+  "player_count": {
+    "type": "panel",
+    "size": ["100%", 12],
+    "controls": [
+      {
+        "label": {
+          "type": "label",
+          "size": ["100% - 9px", 10],
+          "text": "#pq",
+          "anchor_from": "$right_middle",
+          "anchor_to": "$right_middle",
+          "bindings": [
+            {
+              "binding_type"           : "collection_details",
+              "binding_collection_name": "players_collection"
+            },
+            {
+              "binding_type"           : "collection"        ,
+              "binding_collection_name": "players_collection",
+              "binding_name"           : "#collection_index"
+            },
+            {
+              "binding_type"        : "view"                   ,
+              "source_property_name": "(#collection_index + 1)",
+              "target_property_name": "#text"
+            },
+            {
+              "binding_type"        : "view"                                  ,
+              "source_property_name": "('§a' + (#text) + '§8§7 Users online')",
+              "target_property_name": "#pq"
+            }
+          ]
+        }
+      }
+    ]
+  },
+  "tab_list": {
+    "type": "button",
+    "pressed_control": "pressed",
+    "button_mappings": [
+      {
+        "from_button_id": "button.scoreboard",
+        "to_button_id"  : "button.tab_dummy" ,
+        "mapping_type"  : "global"
+      }
+    ],
+    "controls": [
+      {
+        "pressed": {
+          "type": "panel",
+          "anchor_from": "$top_middle",
+          "anchor_to": "$top_middle",
+          "size": [510, 238],
+          "offset": [0, 23],
+          "layer": 50,
+          "controls": [
+            {"serber_info@$display": {}},
+            {
+              "logo": {
+                "offset": [-200, -113],
+                "type": "image",
+                "size": [60, 30],
+                "layer": 90,
+                "texture": "textures/ui/title"
+              }
+            },
+            {
+              "player_list_listing": {
+                "type": "image",
+                "size": ["100%", "100%"],
+                "texture": "textures/ui/White",
+                "layer": 10,
+                "alpha": 0.5,
+                "color": [0, 0, 0],
+                "anchor_from": "$top_middle",
+                "anchor_to": "$top_middle",
+                "controls": [
+                  {
+                    "player_count": {
+                      "type": "image",
+                      "anchor_from": "$top_middle",
+                      "anchor_to": "$top_middle",
+                      "size": ["100%", 12],
+                      "clips_children": true,
+                      "texture": "textures/ui/White",
+                      "color": [0, 0, 0],
+                      "alpha": 0.4,
+                      "controls": [
+                        {
+                          "players_grid_count": {
+                            "offset": [100, 0],
+                            "type": "grid",
+                            "size": ["100%", "default"],
+                            "grid_item_template": "$template",
+                            "grid_dimension_binding": "#players_grid_dimension",
+                            "collection_name": "players_collection",
+                            "anchor_to": "$bottom_left",
+                            "anchor_from": "$bottom_left",
+                            "bindings": [
+                              {
+                                "binding_name"     : "#players_grid_dimension",
+                                "binding_condition": "always"
+                              }
+                            ]
+                          }
+                        }
+                      ]
+                    }
+                  },
+                  {
+                    "tab_list_content": {
+                      "type": "image",
+                      "anchor_from": "$top_middle",
+                      "anchor_to": "$top_middle",
+                      "offset": [0, 10],
+                      "alpha": 0,
+                      "layer": 10,
+                      "texture": "textures/ui/white",
+                      "size": ["100%c + 8px", "100%c + 6px"],
+                      "controls": [
+                        {
+                          "tab_list_base_grid": {
+                            "type": "collection_panel",
+                            "size": ["100%c", "100%c"],
+                            "collection_name": "players_collection",
+                            "controls": [ {"list@$list_panel": {}} ]
+                          }
+                        }
+                      ]
+                    }
+                  }
+                ],
+                "bindings": [
+                  {
+                    "binding_name"         : "#hud_visible",
+                    "binding_name_override": "#visible"    ,
+                    "binding_type"         : "global"
+                  }
+                ]
+              }
+            }
+          ]
+        }
+      }
+    ]
+  },
+  "tab_list_stack_panel": {
+    "type": "stack_panel",
+    "orientation": "horizontal",
+    "size": ["100%c - 40px", "100%cm - 30px"],
+    "controls": [
+      {
+        "stack_0": {
+          "type": "panel",
+          "size": ["100%cm", "100%c"],
+          "max_size": ["100%cm", 216],
+          "$base_users": 0,
+          "$extra_users": 17,
+          "controls": [
+            {
+              "null@$tab_list_grid": { "offset": [20, 0] }
+            }
+          ]
+        }
+      },
+      {
+        "stack_1": {
+          "type": "panel",
+          "size": ["100%cm", "100%c"],
+          "max_size": ["100%cm", 216],
+          "$base_users": 18,
+          "$extra_users": 35,
+          "controls": [
+            {
+              "null@$tab_list_grid": { "offset": [0, -216] }
+            }
+          ],
+          "bindings": [
+            {
+              "binding_name"           : "#collection_index" ,
+              "binding_type"           : "collection"        ,
+              "binding_collection_name": "players_collection"
+            },
+            {
+              "binding_type"        : "view"                    ,
+              "source_property_name": "(#collection_index > 17)",
+              "target_property_name": "#visible"
+            }
+          ]
+        }
+      },
+      {
+        "stack_2": {
+          "type": "panel",
+          "size": ["100%cm", "100%c"],
+          "max_size": ["100%cm", 216],
+          "$base_users": 36,
+          "$extra_users": 53,
+          "controls": [
+            {
+              "null@$tab_list_grid": { "offset": [-10, -432] }
+            }
+          ],
+          "bindings": [
+            {
+              "binding_name"           : "#collection_index" ,
+              "binding_type"           : "collection"        ,
+              "binding_collection_name": "players_collection"
+            },
+            {
+              "binding_type"        : "view"                    ,
+              "source_property_name": "(#collection_index > 35)",
+              "target_property_name": "#visible"
+            }
+          ]
+        }
+      },
+      {
+        "stack_3": {
+          "type": "panel",
+          "size": ["100%cm", "100%c"],
+          "max_size": ["100%cm", 216],
+          "$base_users": 54,
+          "$extra_users": 71,
+          "controls": [
+            {
+              "null@$tab_list_grid": { "offset": [-10, -648] }
+            }
+          ],
+          "bindings": [
+            {
+              "binding_name"           : "#collection_index" ,
+              "binding_type"           : "collection"        ,
+              "binding_collection_name": "players_collection"
+            },
+            {
+              "binding_type"        : "view"                    ,
+              "source_property_name": "(#collection_index > 53)",
+              "target_property_name": "#visible"
+            }
+          ]
+        }
+      }
+    ]
+  },
+  "tab_list_base_grid": {
+    "type": "grid",
+    "anchor_from": "$top_middle",
+    "anchor_to": "$top_middle",
+    "size": [140, "100%c"],
+    "grid_item_template": "$tab_grid_item",
+    "collection_name": "players_collection",
+    "grid_dimension_binding": "#players_grid_dimension",
+    "bindings": [ {"binding_name": "#players_grid_dimension"} ]
+  },
+  "tab_list_base_grid_item": {
+    "type": "stack_panel",
+    "orientation": "horizontal",
+    "size": [140, 12],
+    "layer": 3,
+    "bindings": [
+      {
+        "binding_name"           : "#collection_index" ,
+        "binding_type"           : "collection"        ,
+        "binding_collection_name": "players_collection"
+      },
+      {
+        "binding_type": "view",
+        "source_property_name": "(((#collection_index > $base_users) or (#collection_index = $base_users)) and ((#collection_index < $extra_users) or (#collection_index = $extra_users)))",
+        "target_property_name": "#visible"
+      }
+    ],
+    "controls": [
+      {
+        "player_picture": {
+          "type": "panel",
+          "layer": 11,
+          "size": "$10x10",
+          "controls": [
+            {
+              "player_gamer_pic": {
+                "type": "image",
+                "texture": "#texture",
+                "size": "$10x10",
+                "texture_file_system": "#texture_source",
+                "anchor_from": "$top_left",
+                "anchor_to": "$top_left",
+                "bindings": [
+                  {
+                    "binding_name"           : "#texture"          ,
+                    "binding_type"           : "collection"        ,
+                    "binding_collection_name": "players_collection"
+                  },
+                  {
+                    "binding_name"           : "#texture_source"     ,
+                    "binding_name_override"  : "#texture_file_system",
+                    "binding_type"           : "collection"          ,
+                    "binding_collection_name": "players_collection"
+                  },
+                  {
+                    "binding_name"           : "#gamerpic_visible" ,
+                    "binding_type"           : "collection"        ,
+                    "binding_collection_name": "players_collection",
+                    "binding_name_override"  : "#visible"
+                  }
+                ]
+              }
+            },
+            {
+              "player_local_icon": {
+                "type": "image",
+                "texture": "textures/ui/lan_icon",
+                "size": "$10x10",
+                "anchor_from": "$top_left",
+                "anchor_to": "$top_left",
+                "bindings": [
+                  {
+                    "binding_name"           : "(not #gamerpic_visible)",
+                    "binding_type"           : "collection"             ,
+                    "binding_collection_name": "players_collection"     ,
+                    "binding_name_override"  : "#visible"
+                  }
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "player_gamertag": {
+          "type": "panel",
+          "size": ["fill", 12],
+          "controls": [
+            {
+              "gamertag_text": {
+                "type": "label",
+                "text": "#gamertag",
+                "anchor_from": "$left_middle",
+                "anchor_to": "$left_middle",
+                "size": ["default", "default"],
+                "font_type": "default",
+                "offset": [1, 0],
+                "layer": 11,
+                "bindings": [
+                  {
+                    "binding_name"           : "#gamertag"         ,
+                    "binding_type"           : "collection"        ,
+                    "binding_collection_name": "players_collection"
+                  }
+                ]
+              }
+            }
+          ]
+        }
+      }
+    ]
+  },
+  "offhand_renderer": {
+    "type": "custom",
+    "renderer": "live_player_renderer",
+    "size": [20, 20],
+    "offset": [-104, 1000],
+    "anchor_from": "$bottom_middle",
+    "anchor_to": "$bottom_middle",
+    "layer": 2
+  },
+  "aux_delta_base_new": {
+    "type": "panel",
+    "anchor_from": "$bottom_left",
+    "anchor_to": "$bottom_left",
+    "layer": 8,
+    "controls": [ {"aux_delta@$aux_delta": {}} ]
+  },
+  "aux_delta": {
+    "type": "grid",
+    "grid_item_template": "$aux_grid_item_template",
+    "grid_dimension_binding": "#hotbar_grid_dimensions",
+    "collection_name": "hotbar_items",
+    "size": ["100%cm", 0],
+    "anchor_from": "$bottom_left",
+    "anchor_to": "$bottom_left",
+    "bindings": [
+      {"binding_name": "#hotbar_grid_dimensions", "binding_type": "global"}
+    ]
+  },
+  "aux_item_id_panel_epsilon": {
+    "type": "panel",
+    "size": [0, 0],
+    "bindings": [
+      {
+        "binding_name"           : "#slot_selected",
+        "binding_name_override"  : "#visible"      ,
+        "binding_type"           : "collection"    ,
+        "binding_collection_name": "hotbar_items"
+      }
+    ],
+    "controls": [ {"background@$aux_bg_base_delta": {}} ]
+  },
+  "aux_bg_base_old": {
+    "type": "image",
+    "size": ["100%c + 8px", 16],
+    "offset": [4, -2],
+    "layer": -5,
+    "texture": "textures/ui/blank",
+    "alpha": 0,
+    "color": [0.25, 0.25, 0.25],
+    "anchor_from": "$bottom_left",
+    "anchor_to": "$bottom_left",
+    "bindings": [
+      {
+        "binding_name"           : "#item_id_aux",
+        "binding_type"           : "collection"  ,
+        "binding_collection_name": "hotbar_items"
+      }
+    ],
+    "controls": [
+      {
+        "label@$aux_id_renderer": { "offset": [0, 0] }
+      },
+      {
+        "aux_id_null": {
+          "type": "label",
+          "text": "§8AUX ID: §cUnknown",
+          "offset": [0, 0],
+          "layer": 1,
+          "shadow": true,
+          "text_alignment": "center",
+          "font_scale_factor": 1,
+          "localize": false,
+          "bindings": [
+            {
+              "binding_name"           : "#item_id_aux",
+              "binding_type"           : "collection"  ,
+              "binding_collection_name": "hotbar_items"
+            },
+            {
+              "binding_type"        : "view"               ,
+              "source_property_name": "(#item_id_aux = -1)",
+              "target_property_name": "#visible"
+            }
+          ]
+        }
+      }
+    ]
+  },
+  "item_aux_id_renderer": {
+    "type": "label",
+    "text": "#text",
+    "shadow": true,
+    "text_alignment": "center",
+    "font_scale_factor": 1,
+    "layer": 1,
+    "localize": false,
+    "bindings": [
+      {
+        "binding_name"           : "#item_id_aux",
+        "binding_type"           : "collection"  ,
+        "binding_collection_name": "hotbar_items"
+      },
+      {
+        "binding_type"        : "view"                           ,
+        "source_property_name": "('§8AUX ID: §7' + #item_id_aux)",
+        "target_property_name": "#text"
+      },
+      {
+        "binding_type"        : "view"                     ,
+        "source_property_name": "(not (#item_id_aux = -1))",
+        "target_property_name": "#visible"
+      }
+    ]
+  },
+  "slot": {
+    "type": "image",
+    "size": [130, 20],
+    "anchor_from": "$bottom_left",
+    "anchor_to": "$bottom_left",
+    "texture": "textures/ui/renderer_slot",
+    "controls": [ {"1@$aux_background": {}} ]
+  },
+  "selected_panel_bg": {
+    "type": "panel",
+    "layer": 8,
+    "controls": [ {"netherite_delta@$item_display_Screen": {}} ]
+  },
+  "selected_item_grid": {
+    "type": "grid",
+    "grid_item_template": "$item_grid_item_template",
+    "grid_dimension_binding": "#hotbar_grid_dimensions",
+    "collection_name": "hotbar_items",
+    "size": ["100%cm", 0],
+    "anchor_from": "$bottom_left",
+    "anchor_to": "$bottom_left",
+    "bindings": [
+      {"binding_name": "#hotbar_grid_dimensions", "binding_type": "global"}
+    ]
+  },
+  "selected_item_panel": {
+    "type": "panel",
+    "size": [0, 0],
+    "bindings": [
+      {
+        "binding_name"           : "#slot_selected",
+        "binding_name_override"  : "#visible"      ,
+        "binding_type"           : "collection"    ,
+        "binding_collection_name": "hotbar_items"
+      }
+    ],
+    "controls": [ {"background@$new_template_bg": {}} ]
+  },
+  "selected_item@hud.item_renderer": {
+    "offset": [110, -10],
+    "$aux": "#a",
+    "property_bag": {"#item_id_aux": "$aux"},
+    "bindings": [
+      {
+        "binding_name"           : "#item_id_aux",
+        "binding_type"           : "collection"  ,
+        "binding_collection_name": "hotbar_items"
+      },
+      {
+        "binding_type"        : "view"        ,
+        "source_property_name": "#item_id_aux",
+        "target_property_name": "#a"
+      },
+      {
+        "binding_type"        : "view"                     ,
+        "source_property_name": "(not (#item_id_aux = -1))",
+        "target_property_name": "#visible"
+      },
+      {
+        "binding_name"           : "#slot_selected",
+        "binding_type"           : "collection"    ,
+        "binding_collection_name": "hotbar_items"  ,
+        "binding_name_override"  : "#visible"
+      }
+    ]
+  },
+  "item_renderer": {
+    "type": "custom",
+    "renderer": "inventory_item_renderer",
+    "size": [16, 16],
+    "anchor_to": "$left_middle",
+    "anchor_from": "$left_middle"
+  },
+  "hud_content": {
+    "modifications": [
+      {
+        "array_name": "controls",
+        "operation": "insert_front",
+        "value": [
+          {
+            "offhand_panel@$ep": {
+              "animation_reset_name": "screen_animation_reset",
+              "anims": [
+                "@common.container_screen_exit_animation_push"    ,
+                "@common.container_screen_exit_animation_pop"     ,
+                "@common.container_screen_entrance_animation_push",
+                "@common.container_screen_entrance_animation_pop"
+              ],
+              "controls": [ {"offhand_renderer@$offhand_renderer": {}} ]
+            }
+          },
+          {
+            "dev_beta_test@$ep": {
+              "$neth": "$ep",
+              "variables": [
+                {"requires": "($dev = true)" , "$neth": "hud.slot"},
+                {"requires": "($dev = false)", "$neth": "$ep"     }
+              ],
+              "controls": [ {"netherite@$neth": {}} ]
+            }
+          },
+          {
+            "dev_aux@$ep": {
+              "$dev_aux": "$ep",
+              "variables": [
+                {
+                  "requires": "($dev = true)"         ,
+                  "$dev_aux": "hud.aux_delta_base_new"
+                },
+                {"requires": "($dev = false)", "$dev_aux": "$ep"}
+              ],
+              "controls": [ {"Aux_mode@$dev_aux": {}} ]
+            }
+          },
+          {"tab_list@$tab_menu": {}}
+        ]
+      }
+    ]
+  }
+}

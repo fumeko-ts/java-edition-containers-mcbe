@@ -1,0 +1,13 @@
+{
+    "namespace": "brewing_stand_epsilon",
+    "image_element": {
+       "type": "image",
+       "texture": "assets/minecraft/textures/gui/container/brewing_stand",
+       "uv_size": [176, 166],
+       "size": [176, 166],
+       "offset": [0, 3],
+       "anchor_from": "top_left",
+       "anchor_to": "top_left"
+    }
+ }
+ 

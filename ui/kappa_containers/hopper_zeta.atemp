@@ -1,0 +1,102 @@
+{
+    "namespace": "hopper_zeta",
+    "redstone_input_grid": {
+        "type": "grid",
+        "anchor_from": "center",
+        "anchor_to": "center",
+        "offset": [0, 0],
+        "grid_dimensions": [5, 1],
+        "collection_name": "container_items",
+        "grid_item_template": "common.container_item",
+        "$item_collection_name": "container_items"
+      },
+    
+      "redstone_panel_top_half": {
+        "type": "panel",
+        "size": [ "100%", "50% - 12px" ],
+        "offset": [ 0, 0.6],
+        "anchor_to": "top_left",
+        "anchor_from": "top_left",
+        "controls": [
+          { "redstone_input_grid@hopper_zeta.redstone_input_grid": {} }
+        ]
+      },
+    "hopper_panel": {
+    "type": "panel",
+    "controls": [
+      { "container_gamepad_helpers@common.container_gamepad_helpers": {} },
+      { "selected_item_details_factory@common.selected_item_details_factory": {} },
+      { "item_lock_notification_factory@common.item_lock_notification_factory": {} },
+      {
+        "root_panel@common.empty_panel": {
+          "layer": 1,
+          "size": [176, 133],
+          "controls": [
+            { "common_panel@hopper_epsilon.image_element": {} },
+            {
+              "redstone_screen_inventory": {
+                "type": "panel",
+                "layer": 5,
+                "controls": [
+                  { "red_panel@hopper_zeta.redstone_panel_top_half": {} },
+                  { "red_bottom_half@common.inventory_panel_bottom_half_with_label": {"offset":[0, -3]} },
+                  { "hotbar_grid@common.hotbar_grid_template": {"offset":[0, -7]} },
+                  { "red_hold_icon@common.inventory_take_progress_icon_button": {} }
+                ]
+              }
+            },
+            { "red_icon@common.inventory_selected_icon_button": {} },
+            { "gamepad_cursor@common.gamepad_cursor_button": {} }
+          ]
+        }
+      },
+      { "flying_item_renderer@common.flying_item_renderer": { "layer": 21 } },
+      { "bundle_touch_tooltip@gameplay.bundle_touch_tooltip": {} },
+      { "bundle_cursor_tooltip@gameplay.bundle_cursor_tooltip": {} },
+      {
+        "close_button_panel": {
+           "type": "panel",
+           "layer": 80,
+           "size": [18, 18],
+           "bindings": [
+              {
+                 "binding_name"         : "#close_button_visible",
+                 "binding_name_override": "#visible"
+              }
+           ],
+           "controls": [
+              {
+                 "close_button": {
+                    "type":"panel",
+                    "$exit_panel": "",
+                    "variables": [
+                     {
+                        "requires": "($Exit_panel_enabled = true)",
+                        "$exit_panel": "common.light_close_button_sucrose"
+                     },
+                     {
+                        "requires": "($Exit_panel_enabled = false)",
+                        "$exit_panel": "common.empty_panel"
+                     },
+                     {
+                        "requires": "$pocket_screen",
+                        "$exit_panel": "common.light_close_button_sucrose"
+                     }
+                  ],
+                    "controls": [
+                       {
+                          "close_button@$exit_panel": {
+                             "offset": [100.8, -59],
+                             "anchor_from": "center",
+                             "anchor_to": "center"
+                          }
+                       }
+                    ]
+                 }
+              }
+           ]
+        }
+     }
+    ]
+  }
+}

@@ -1,0 +1,13 @@
+{
+    "namespace": "beacon_epsilon",
+    "image_element": {
+       "type": "image",
+       "texture": "assets/minecraft/textures/gui/container/beacon",
+       "uv_size": [230, 220],
+       "size": [230, 220],
+       "offset": [12, -0.2],
+       "anchor_from": "top_left",
+       "anchor_to": "top_left"
+    }
+ }
+ 

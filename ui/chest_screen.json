@@ -1,0 +1,75 @@
+/********************************************************
++*   (c) Mojang. All rights reserved                       *
++*   (c) Microsoft. All rights reserved.                   *
++*********************************************************/
+
+{
+  "namespace": "chest",
+  "selected_item_details@common.selected_item_details": {
+    "offset": [ 0, 0 ]
+  },
+  "small_chest_screen@common.inventory_screen_common": {
+    "$close_on_player_hurt|default": true,
+    "close_on_player_hurt": "$close_on_player_hurt",
+    "variables": [
+      {
+        "requires": "($desktop_screen or $pocket_screen)",
+        "$screen_content": "small_chest_zeta.small_chest_panel",
+        "$screen_bg_content": "common.screen_background",
+        "$screen_background_alpha": 0.6
+      }
+    ]
+  },
+
+  "large_chest_screen@common.inventory_screen_common": {
+    "$close_on_player_hurt|default": true,
+    "close_on_player_hurt": "$close_on_player_hurt",
+    "variables": [
+      {
+        "requires": "($desktop_screen or $pocket_screen)",
+        "$screen_content": "double_chest_zeta.double_chest_panel",
+        "$screen_bg_content": "common.screen_background",
+        "$screen_background_alpha": 0.6
+      }
+    ]
+  },
+
+  "ender_chest_screen@common.inventory_screen_common": {
+    "$close_on_player_hurt|default": true,
+    "close_on_player_hurt": "$close_on_player_hurt",
+    "variables": [
+      {
+        "requires": "($desktop_screen or $pocket_screen)",
+        "$screen_content": "small_chest_zeta.small_chest_panel",
+        "$screen_bg_content": "common.screen_background",
+        "$screen_background_alpha": 0.6
+      }
+    ]
+  },
+
+  "shulker_box_screen@chest.small_chest_screen": {
+    "$close_on_player_hurt": true,
+    "variables": [
+      {
+        "requires": "($desktop_screen or $pocket_screen)",
+        "$screen_content": "small_chest_zeta.small_chest_panel",
+        "$screen_bg_content": "common.screen_background",
+        "$screen_background_alpha": 0.6
+      }
+    ]
+  },
+
+  "barrel_screen@chest.small_chest_screen": {
+    "$close_on_player_hurt": true,
+    "variables": [
+      {
+        "requires": "($desktop_screen or $pocket_screen)",
+        "$screen_content": "small_chest_zeta.small_chest_panel",
+        "$screen_bg_content": "common.screen_background",
+        "$screen_background_alpha": 0.6
+      }
+    ]
+  }
+}
+
+// #endregion
