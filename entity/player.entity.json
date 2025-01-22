@@ -17,8 +17,8 @@
              "map"            : "textures/items/map_filled"     ,
              "totem"          : "textures/items/totem"          ,
              "nautilus_shell" : "textures/items/nautilus"       ,
-             "shield"         : "textures/ui/shield"            ,
-             "offhand_slot"   : "textures/ui/slot"
+             "shield"         : "textures/atemp/ui/shield"            ,
+             "offhand_slot"   : "assets/minecraft/textures/gui/sprites/hud/hotbar_offhand_right"
           },
           "geometry": {
              "default"     : "geometry.humanoid.custom",

@@ -1304,6 +1304,18 @@
     "texture": "assets/minecraft/textures/gui/sprites/widget/text_field_highlighted"
   },
 
+  "edit_box_indent2": {
+    "type": "image",
+    "texture": "assets/minecraft/textures/gui/sprites/widget/text_field",
+    "alpha": "$alpha",
+    "$alpha|default": 0
+  },
+
+  "edit_box_indent_hover2@common.edit_box_indent": {
+    "alpha": "$alpha",
+    "$alpha|default": 0,
+    "texture": "assets/minecraft/textures/gui/sprites/widget/text_field_highlighted"
+  },
 
   "edit_box_indent": {
     "type": "image",
@@ -1757,7 +1769,297 @@
     ]
   },
 
-  
+  "text_edit_box_beta_search_tab": {
+    "type": "edit_box",
+
+    "$focus_id|default": "",
+    "$focus_override_down|default": "",
+    "$focus_override_up|default": "",
+    "$focus_override_left|default": "",
+    "$focus_override_right|default": "",
+    "focus_identifier": "$focus_id",
+    "focus_change_down": "$focus_override_down",
+    "focus_change_up": "$focus_override_up",
+    "focus_change_left": "$focus_override_left",
+    "focus_change_right": "$focus_override_right",
+    "focus_enabled": true,
+
+    "anchor_from": "center",
+    "anchor_to": "center",
+    "enabled": "#enabled",
+
+    "$text_box_name|default": "#text_box_name",
+    "$text_box_enabled_binding_name|default": "#text_box_enabled",
+    "$text_edit_box_enabled_binding_type|default": "global",
+    "$text_edit_box_grid_collection_name|default": "",
+    "$text_edit_clipping_panel_size|default": [ "100%", "100%" ],
+    "$text_edit_box_label_size|default": [ "default", "default" ],
+    "$text_edit_box_label_anchor_point|default": "right_middle",
+    "$text_edit_box_label_min_size|default": [ "100%", 0 ],
+    "$text_edit_box_label_offset|default": [ 0, 0 ],
+
+    "text_box_name": "$text_box_name",
+    "text_edit_box_grid_collection_name": "$text_edit_box_grid_collection_name",
+
+    "$deselectable_binding_type|default": "none",
+    "$deselectable_binding_name|default": "#can_be_deselected",
+
+    "$text_edit_box_focusable_binding_name|default": "#text_edit_box_focusable",
+
+    "$text_edit_visible_binding_name|default": "#text_edit_box_visible",
+    "$text_edit_visible_binding_collection_name|default": "",
+    "$text_edit_visible_binding_type|default": "none",
+
+    "$text_edit_type_name|default": "accessibility.textbox.tts.title",
+    "$text_box_tts_header|default": "",
+    "$tts_section_header|default": "",
+
+    "tts_name": "$text_edit_type_name",
+    "tts_control_header": "$text_box_tts_header",
+    "tts_section_header": "$tts_section_header",
+    "$tts_override_control_value|default": " ",
+    "tts_override_control_value": "$tts_override_control_value",
+
+    "bindings": [
+      {
+        "binding_type": "$text_edit_box_enabled_binding_type",
+        "binding_collection_name": "$text_edit_box_grid_collection_name",
+        "binding_name": "$text_box_enabled_binding_name",
+        "binding_name_override": "#enabled"
+      },
+      {
+        "binding_type": "$deselectable_binding_type",
+        "binding_name": "$deselectable_binding_name",
+        "binding_name_override": "#can_be_deselected"
+      },
+      {
+        "binding_type": "none",
+        "binding_name": "$text_edit_box_focusable_binding_name",
+        "binding_name_override": "#focus_enabled"
+      },
+      {
+        "binding_name": "$text_edit_visible_binding_name",
+        "binding_name_override": "#visible",
+        "binding_type": "$text_edit_visible_binding_type",
+        "binding_collection_name": "$text_edit_visible_binding_collection_name"
+      }
+    ],
+
+    "locked_control": "locked",
+    "default_control": "default",
+    "hover_control": "hover",
+    "pressed_control": "pressed",
+
+    "max_length": 14,
+    "$text_edit_box_text_type|default": "ExtendedASCII",
+    "text_type": "$text_edit_box_text_type",
+
+    "$virtual_keyboard_buffer_control|default": "",
+    "virtual_keyboard_buffer_control": "$virtual_keyboard_buffer_control",
+
+    "$text_edit_text_control|default": "display_text",
+    "text_control": "$text_edit_text_control",
+    "$place_holder_control": "common.text_edit_box_place_holder_label",
+    "$text_background_default": "common.edit_box_indent2",
+    "$text_background_hover": "common.edit_box_indent_hover2",
+    "place_holder_control": "place_holder_control",
+
+    "$text_edit_box_hovered_button_id|default": "button.text_edit_box_hovered",
+
+    "$text_edit_box_clear_from_button_id|default": "button.menu_clear",
+    "$text_edit_box_clear_to_button_id|default": "button.text_edit_box_clear",
+    "$text_edit_box_clear_scope|default": "view",
+
+    "$text_edit_box_selected_to_button_id|default": "button.text_edit_box_selected",
+    "$text_edit_box_deselected_to_button_id|default": "button.text_edit_box_deselected",
+
+    "button_mappings": [
+      {
+        "from_button_id": "button.menu_select",
+        "to_button_id": "$text_edit_box_selected_to_button_id",
+        "handle_select": true,
+        "handle_deselect": false,
+        "mapping_type": "pressed"
+      },
+      {
+        "from_button_id": "button.menu_select",
+        "to_button_id": "$text_edit_box_selected_to_button_id",
+        "handle_select": false,
+        "handle_deselect": true,
+        "mapping_type": "global",
+        // Deselect textbox and allow selection of another UI control with same mouse press
+        "consume_event": false
+      },
+      {
+        "from_button_id": "button.menu_ok",
+        "to_button_id": "$text_edit_box_selected_to_button_id",
+        "handle_select": true,
+        "handle_deselect": true,
+        "mapping_type": "pressed"
+      },
+      {
+        "from_button_id": "button.menu_ok",
+        "to_button_id": "$text_edit_box_selected_to_button_id",
+        "handle_select": false,
+        "handle_deselect": true,
+        "mapping_type": "global"
+      },
+      {
+        "from_button_id": "button.menu_cancel",
+        "to_button_id": "$text_edit_box_deselected_to_button_id",
+        "handle_select": false,
+        "handle_deselect": true,
+        "mapping_type": "global"
+      },
+      {
+        "to_button_id": "$text_edit_box_hovered_button_id",
+        "mapping_type": "pressed"
+      },
+      {
+        "from_button_id": "$text_edit_box_clear_from_button_id",
+        "to_button_id": "$text_edit_box_clear_to_button_id",
+        "handle_select": false,
+        "handle_deselect": false,
+        "mapping_type": "focused"
+      }
+    ],
+
+    "$shadow": false,
+    "$font_size": "normal",
+    "$color|default": [ 1, 1, 1, 1 ],
+    "$alpha|default": 1.0,
+    "$disabled_alpha|default": 0.5,
+    "$text_offset|default": [ 0, 0 ],
+
+    "$place_holder_text_hover_color|default": "$text_box_text_color",
+    "place_holder_text_hover_color": "$place_holder_text_hover_color",
+
+    "$text_clear_button_enabled|default": false,
+    "$text_clear_button_size|default": [ 15, 15 ],
+    "$text_clear_button_offset|default": [ 0, 0 ],
+    "$magnifying_glass_enabled|default": false,
+    "$magnifying_glass_size|default": [ 10, 10 ],
+    "$magnifying_glass_offset|default": [ 0, 0 ],
+
+    "controls": [
+      {
+        "centering_panel": {
+          "type": "panel",
+          "size": [ "100% - 6px", "100% - 4px" ],
+          "controls": [
+            {
+              "clipper_panel": {
+                "type": "panel",
+                "size": "$text_edit_clipping_panel_size",
+                "anchor_from": "left_middle",
+                "anchor_to": "left_middle",
+                "offset": "$text_offset",
+                "clips_children": true,
+                "$disabled_color|default": "$color",
+                "controls": [
+                  {
+                    "$text_edit_text_control@common.text_edit_box_label": {
+                      "layer": 1,
+                      "size": "$text_edit_box_label_size",
+                      "offset": "$text_edit_box_label_offset",
+                      "min_size": "$text_edit_box_label_min_size",
+                      "anchor_from": "$text_edit_box_label_anchor_point",
+                      "anchor_to": "$text_edit_box_label_anchor_point",
+                      "font_size": "$font_size",
+                      "$text_alpha|default": "$alpha",
+                      "$locked_text_alpha|default": "$disabled_alpha",
+                      "$locked_color|default": "$disabled_color"
+                    }
+                  },
+                  {
+                    "magnifying_glass@common.text_magnifying_glass_image": {
+                      "anchor_from": "left_middle",
+                      "anchor_to": "left_middle",
+                      "visible": "$magnifying_glass_enabled",
+                      "size": "$magnifying_glass_size",
+                      "offset": "$magnifying_glass_offset"
+                    }
+                  },
+                  {
+                    "clear_text_button_panel": {
+                      "type": "panel",
+                      "size": [ "100%", "100%" ],
+                      "visible": "$text_clear_button_enabled",
+                      "controls": [
+                        {
+                          "clear_text_button@common.clear_text_button": {
+                            "anchor_from": "right_middle",
+                            "anchor_to": "right_middle",
+                            "size": "$text_clear_button_size",
+                            "offset": "$text_clear_button_offset",
+                            "bindings": [
+                              {
+                                "binding_type": "global",
+                                "binding_name": "#show_clear_text_button",
+                                "binding_name_override": "#visible"
+                              }
+                            ]
+                          }
+                        }
+                      ]
+                    }
+                  },
+                  {
+                    "visibility_panel": {
+                      "type": "panel",
+                      "$placeholder_label_size|default": "$text_edit_box_label_size",
+                      "controls": [
+                        {
+                          "place_holder_control@$place_holder_control": {
+                            "layer": 1,
+                            "size": "$placeholder_label_size",
+                            "offset": "$text_edit_box_label_offset",
+                            "min_size": "$text_edit_box_label_min_size",
+                            "anchor_from": "$text_edit_box_label_anchor_point",
+                            "anchor_to": "$text_edit_box_label_anchor_point",
+                            "$text_alpha|default": "$alpha",
+                            "$locked_text_alpha|default": "$disabled_alpha",
+                            "$locked_color|default": "$disabled_color"
+                          }
+                        }
+                      ],
+
+                      "bindings": [
+                        {
+                          "binding_type": "view",
+                          "source_control_name": "$text_edit_text_control",
+                          "source_property_name": "(#item_name = '')",
+                          "target_property_name": "#visible",
+                          "resolve_sibling_scope": true
+                        }
+                      ]
+                    }
+                  }
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "locked": {
+          "type": "panel",
+          "$disabled_color|default": "$color",
+          "controls": [
+            {
+              "edit_box_indent@$text_background_default": {
+                "$color": "$disabled_color",
+                "$alpha": "$disabled_alpha"
+              }
+            }
+          ]
+        }
+      },
+      { "default@$text_background_default": {} },
+      { "hover@$text_background_hover": {} },
+      { "pressed@$text_background_hover": {} }
+    ]
+  },
   "text_edit_box_beta": {
     "type": "edit_box",
 
@@ -3451,17 +3753,17 @@
     "controls": [
       {
         "default@common.close_button_panel": {
-          "$close_button_texture": "textures/ui/pane_default"
+          "$close_button_texture": "textures/atemp/ui/pane_default"
         }
       },
       {
         "hover@common.close_button_panel": {
-          "$close_button_texture": "textures/ui/pane_hover"
+          "$close_button_texture": "textures/atemp/ui/pane_hover"
         }
       },
       {
         "pressed@common.close_button_panel": {
-          "$close_button_texture": "textures/ui/pane_pressed"
+          "$close_button_texture": "textures/atemp/ui/pane_pressed"
         }
       }
     ]
@@ -4093,7 +4395,7 @@
   "flying_item_renderer": {
     "type": "custom",
     "renderer": "flying_item_renderer",
-    "layer": 40,
+    "layer": 400,
     "property_bag": {
       "#flying_item_renderer": true
     }
@@ -4295,9 +4597,9 @@
 
   "scroll_bar_and_track": {
     "type": "panel",
-    "$scroll_bar_and_track_size|default": [ "100%c", "100%" ],
+    "$scroll_bar_and_track_size|default": [ 14, "100%" ],
     "size": "$scroll_bar_and_track_size",
-    "clips_children": true,
+    "clips_children": false,
     "anchor_from": "right_middle",
     "anchor_to": "right_middle",
 
@@ -4329,8 +4631,16 @@
                       "$scroll_track_anchor|default": "center",
                       "anchor_from": "$scroll_track_anchor",
                       "anchor_to": "$scroll_track_anchor",
-                      "$scroll_track_offset|default": [ 0, 0 ],
+                      "$scroll_track_offset|default": [ -1, 11 ],
                       "offset": "$scroll_track_offset",
+                      "$scroller_box|default": "common.scroll_box",
+                      "variables": [
+                          {
+                            "requires": "($loom_screen = true)",
+                            "$scroll_track_offset|default": [ -1.4, -0.2 ],
+                            "$scroller_box": "common.loom_scroller_box"
+                          }
+                      ],
                       "controls": [
                         {
                           "track@common.scrollbar_track": {
@@ -4340,8 +4650,9 @@
                           }
                         },
                         {
-                          "scroll_box@common.scroll_box": {
+                          "scroll_box@$scroller_box": {
                             "layer": 5,
+                            
                             "anchor_from": "center",
                             "anchor_to": "center"
                           }
@@ -4473,6 +4784,48 @@
       }
     ]
   },
+  "loom_scroller_box": {
+    "type": "panel",
+    "controls": [
+      {
+        "box": {
+          "type": "scrollbar_box",
+          "anchor_to": "top_left",
+          "anchor_from": "top_left",
+          "layer": 1,
+          "visible": "$scroll_box_visible",
+          "contained": true,
+          "draggable": "vertical",
+
+          "$scroll_box_mouse_image_control|default": "common.loom_scrollbar_box_image",
+          "$scroll_box_touch_image_control|default": "common.touch_scrollbar_box_image",
+
+          "button_mappings": [
+            {
+              "from_button_id": "button.menu_select",
+              "to_button_id": "button.menu_select",
+              "mapping_type": "pressed",
+              "button_up_right_of_first_refusal": true
+            }
+          ],
+          "controls": [
+            {
+              "mouse_box@$scroll_box_mouse_image_control": {
+                "ignored": "$touch"
+              }
+            },
+            {
+              "touch_box@$scroll_box_touch_image_control": {
+                "size": "$scroll_box_size",
+                "ignored": "(not $touch)"
+              }
+            }
+          ]
+        }
+      }
+    ]
+
+  },
 
   "scroll_box": {
     "type": "panel",
@@ -4521,6 +4874,13 @@
     "type": "image",
     "texture": "textures/ui/ScrollRail",
     "layer": 1
+  },
+
+  "loom_scrollbar_box_image": {
+    "type": "image",
+    "texture": "assets/minecraft/textures/gui/sprites/container/creative_inventory/scroller",
+    "size": [ 5, "100%" ],
+    "layer": 4
   },
 
   "scrollbar_box_image": {
@@ -5263,10 +5623,6 @@
 
 
   //vanilla
-  "container_scroll_box_image": {
-    "type": "image",
-    "texture": "textures/ui/ScrollBox"
-  },
 
   "container_scroll_bar_side_rails": {
     "type": "image",
@@ -5295,12 +5651,30 @@
     "layer": 2,
     "texture": "textures/ui/recipe_book_pane_bg"
   },
-
+  // creative scroll bar scroller texture
+  "creative_inventory_box_img": {
+    "type": "image",
+    "size": [ 14, 18 ],
+    "texture": "assets/minecraft/textures/gui/sprites/container/creative_inventory/scroller"
+  },
+  "creative_inventory_track_img": {
+    "type": "panel",
+    "layer": 1,
+    "anchor_to": "top_right",
+    "anchor_from": "top_right",
+    "controls": [
+      {
+        "rails@common.creative_inventory_box_img": {
+          "allow_clipping": true
+        }
+      }
+    ]
+  },
   "container_scroll_panel@common.scrolling_panel_with_offset": {
     "$scrolling_content|default": "common.container_grid",
 
     "$scrolling_pane_offset": [ 0, 0 ],
-    "$scrolling_pane_size": [ "100%", "100%" ],
+    "$scrolling_pane_size": [ "100% + 1px", "100%" ],
     "$scrolling_pane_size_touch": [ "100% + 10px", "100%" ],
     "$scroll_size_touch": [ 18, "100%" ],
     "$scroll_view_port_size": [ "100% - 2px", "100% - 2px" ],
@@ -5314,7 +5688,7 @@
     "$scroll_background_image_control": "common.container_scroll_background_image",
     "$background_size_touch": [ "100% - 10px", "100%" ],
     "$scroll_track_image_control": "common.container_scrollbar_track",
-    "$scroll_box_mouse_image_control": "common.container_scroll_box_image",
+    "$scroll_box_mouse_image_control": "common.container_scrollbox_track",
     "$scroll_box_touch_image_control": "common.container_touch_scrollbar_box_image",
     "$allow_scrolling_even_when_content_fits": false,
     "variables": [
@@ -5322,6 +5696,11 @@
             "requires": "($loom_screen = true)",
             "$scroll_track_image_control": "common.loom_controler",
             "$scroll_box_mouse_image_control": "common.loom_box_image"
+          },
+          {
+            "requires": "($creative_layout = true)",
+            "$scroll_track_image_control": "common.empty_panel",
+            "$scroll_box_mouse_image_control": "common.creative_inventory_track_img"
           }
     ],
 

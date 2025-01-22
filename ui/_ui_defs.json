@@ -48,10 +48,13 @@
       "ui/kappa_containers/stonecutter_zeta.atemp",
       "ui/kappa_containers/smithing_zeta.atemp",
       "ui/kappa_containers/villager_zeta.atemp",
+      "ui/kappa_containers/creative_layout.atemp",
   
       // Common UI
       "ui/common_zeta.json",
+      "ui/left_tab_most.atemp",
       "ui/crafting_table.json",
+      "ui/creative_tabs.json",
       "ui/inventory_surv_common/survival_common.json",
       "ui/recipe_survival_tabs/loom_common.json",
       "ui/recipe_survival_tabs/recipe_tabs.json",

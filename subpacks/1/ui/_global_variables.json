@@ -2,16 +2,16 @@
   ////////     misallaneous    ////////
   "$ep": "common.empty_panel",
 
-    // Anchor positions
-    "$top_left": "top_left",
-    "$top_middle": "top_middle", 
-    "$top_right": "top_right",
-    "$left_middle": "left_middle",
-    "$center": "center",
-    "$right_middle": "right_middle", 
-    "$bottom_left": "bottom_left",
-    "$bottom_middle": "bottom_middle",
-    "$bottom_right": "bottom_right",
+  // Anchor positions
+  "$top_left": "top_left",
+  "$top_middle": "top_middle", 
+  "$top_right": "top_right",
+  "$left_middle": "left_middle",
+  "$center": "center",
+  "$right_middle": "right_middle", 
+  "$bottom_left": "bottom_left",
+  "$bottom_middle": "bottom_middle",
+  "$bottom_right": "bottom_right",
    
   "$selected_stack_panel": true,
   ////////     hud variables   ////////
@@ -34,12 +34,13 @@
   "$hud_item_delta": "hud.item_renderer",
   "$10x10": [10, 10],
   ////////       dev mode      ////////
-  "$dev": true, // this is for when i will make the furnace recipe book and when i will place this in all item tooltips only enable if you know what your doing.
+  "$dev": false, // only enable if you know what your doing.
   ////////   Custom variables  ////////
   "$pane_bg": "textures/ui/pane_bg",
   "$Exit_panel_enabled": true, // this is for the subpacks to specify witch pack houses the container exit buttons
   "$output": false, // this is for the output slot for the cartography table 
-  "$loom_screen": false,
+  "$loom_screen": false, // forgot what this is for but i will keep it incase its needed
+  "$creative_layout": false,
   //"$book_size": [ 160, "100%" ], // blacked these out because i have not compleated the book screen yet
   //"$page_size": [ 160, "100%" ],
   "$all_Screen_bg_transparency": 0.6, // this is for the transparency of the screen background for all containers and some other screens

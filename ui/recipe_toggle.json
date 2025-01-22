@@ -1,4 +1,13 @@
 {
+//+=============================================================+\\
+//
+//     Code design by Ashura Temps aka Ashura Tepes
+//
+//     * Do not use any code design without permission
+//     * Do not steal or edit this code
+//
+//+=============================================================+\\
+
    "namespace": "recipe_toggle",
    "recipe_p": {
       "type": "panel",

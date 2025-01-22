@@ -36,6 +36,45 @@
             }
           }
         ]
+      },
+      "chat_copy_mode_toggle@common_toggles.light_content_toggle":{
+        "$toggle_view_binding_name":"chat_copy_mode_toggle",
+        "$pressed_no_hover_texture":"textures/ui/button_borderless_light",
+        "$pressed_texture":"textures/ui/button_borderless_light",
+        "$toggle_name":"(not $chat_copy_mode)",
+        "$button_content":"chat_new.chat_icon_copy_mode",
+        "size":[
+          27,
+          27
+        ],
+        "$icons_color":"$title_text_color"
+      },
+      "chat_icon_copy_mode@common.empty_image":{
+        "controls":[
+          {
+            "edit_icon":{
+              "type":"label",
+              "ignored":"$pressed_state",
+              "color":"$text_color",
+              "text":"Aa..",
+              "size":[
+                "default",
+                10
+              ]
+            }
+          },
+          {
+            "edit_icon_back@common.empty_image":{
+              "ignored":"(not $pressed_state)",
+              "texture":"textures/ui/arrow_left_white",
+              "color":"$title_text_color",
+              "size":[
+                16,
+                16
+              ]
+            }
+          }
+        ]
       }
   }
   

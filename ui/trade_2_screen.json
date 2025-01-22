@@ -257,7 +257,7 @@
         },
         {
            "cross_out_image@trade2.cross_out_image": {
-              "layer": 2,
+              "layer": 200,
               "anchor_from": "right_middle",
               "anchor_to": "right_middle",
               "bindings": [
@@ -308,6 +308,11 @@
         {"binding_name": "(not #padding_around_sell_item)", "binding_name_override": "#visible"}
       ]
     }},
+    {
+      "arrow_holder@trade2.arrow_holder": {
+        "inherit_max_sibling_height": true
+      }
+    },
     {"padding_4": {"type": "panel", "size": [2, 0]}},
     {"sell_item_holder": {
       "type": "panel",

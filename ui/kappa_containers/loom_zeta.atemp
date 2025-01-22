@@ -271,7 +271,7 @@
     },
     "scroll_panel@common.container_scroll_panel": {
        "$scroll_size": [14, "100%"],// the size of the scroller bar
-       "$scrolling_pane_offset": [ 1, 0 ],// this offsets the entire scroll panel bar included
+       "$scrolling_pane_offset": [-0.4, -0],
        "$loom_screen": true,  // this tells common to use the loom textures for scroll bar not grid
        "size": ["60% - 12px", "50% - 25px"],
        "$scrolling_content": "loom.scroll_grid_panel",

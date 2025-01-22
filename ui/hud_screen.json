@@ -1,75 +1,159 @@
 {
-"serverdisplay": {
-  "type": "panel",
-  "size": ["100% - 2px", "100% - 6px"],
-  "anchor_from": "top_right",
-  "offset": [-20, 1],
-  "anchor_to": "top_right",
-  "controls": [
-    {"world_name": {
-      "type": "image",
-      "texture": "textures/ui/Black",
-      "alpha": 0.0,
-      "size": ["100%c", 11],
-      "ignored": "$is_on_3p_server",
-      "anchor_from": "top_right",
-      "anchor_to": "top_right",
-      "controls": [
-        {"label": {
-          "type": "label",
-          "bindings": [
-            {"binding_name": "#player_list_title"},
-            {"binding_type": "view", "source_property_name": "('§7' + (#player_list_title))", "target_property_name": "#text"}
-          ],
-          "layer": 12,
-          "text_alignment": "center",
-          "anchor_from": "center",
-          "anchor_to": "center",
-          "offset": [2, 0],
+  //+=============================================================+\\
+//
+//     Code design by Ashura Temps aka Ashura Tepes
+//
+//     * Do not use any code design without permission
+//     * Do not steal or edit this code
+//
+//+=============================================================+\\
+  "hotbar_chooser": {
+    "type": "panel",
+    "size": ["100%c", "100%c"],
+    "$ignore_desktop": true,
+    "$ignore_pocket": false,
+    "variables": [
+      {
+        "requires": "($desktop_screen and not $education_edition)",
+        "$ignore_desktop": false,
+        "$ignore_pocket": true
+      }
+    ],
+    "controls": [
+      {
+        "desktop_hotbar@hud.desktop_hotbar_panel": {
+          "ignored": "$ignore_desktop",
+          "offset": [-4, 0]
+        }
+      },
+      {
+        "pocket_hotbar@hotbar_panel": {
+          "ignored": "$ignore_pocket",
+          "offset": [-4, 0]
+        }
+      }
+    ]
+  },
+  "desktop_hotbar_panel": {
+    "type": "panel",
+    "size": [182, 22],
+    "anchor_from": "bottom_middle",
+    "anchor_to": "bottom_middle",
+    "controls": [
+      {"hotbar_image@hud.hotbar_image": {}                                   },
+      {                                     "hotbar_grid@hud.hotbar_grid": {}}
+    ]
+  },
+  "hotbar_slot_image": {
+    "$hotbar_slot_image_size|default": [20, 22],
+    "type": "image",
+    "offset": [0, 0],
+    "size": "$hotbar_slot_image_size",
+    "layer": 1,
+    "alpha": 1
+  },
+  "hotbar_image": {
+    "type": "image",
+    "offset": [0, 0],
+    "size": [182, 22],
+    "texture": "assets/minecraft/textures/gui/sprites/hud/hotbar",
+    "layer": 1,
+    "alpha": 1
+  },
+  "hotbar_slot_selected_image": {
+    "type": "image",
+    "texture": "assets/minecraft/textures/gui/sprites/hud/hotbar_selection",
+    "size": [24, 23],
+    "layer": 8,
+    "offset": [0, 0.6],
+    "bindings": [
+      {
+        "binding_name"           : "#slot_selected"         ,
+        "binding_name_override"  : "#visible"               ,
+        "binding_type"           : "collection"             ,
+        "binding_collection_name": "$hotbar_collection_name"
+      }
+    ]
+  },
+  "serverdisplay": {
+    "type": "panel",
+    "size": ["100% - 2px", "100% - 6px"],
+    "anchor_from": "top_right",
+    "offset": [-20, 1],
+    "anchor_to": "top_right",
+    "controls": [
+      {
+        "world_name": {
+          "type": "image",
+          "texture": "textures/ui/Black",
+          "alpha": 0.0,
+          "size": ["100%c", 11],
           "ignored": "$is_on_3p_server",
-          "shadow": false,
-          "text": "#text"
-        }}
-      ]
-    }},
-    {"cubecraft@$hud_world_name": {
-      "anchor_from": "top_right",
-      "anchor_to": "top_right",
-      "$server_name": "(#player_list_title = 'CubeCraft Games')",
-      "ignored": "(not $is_on_3p_server)",
-      "$server_adress": "§7CubeCraft Games-[play.cubecraft.net]"
-    }},
-    {"galaxite@$hud_world_name": {
-      "anchor_from": "top_right",
-      "anchor_to": "top_right",
-      "$server_name": "(#player_list_title = 'Galaxite')",
-      "ignored": "(not $is_on_3p_server)",
-      "$server_adress": "§7Galaxite-[play.galaxite.net]"
-    }},
-    {"magma-mc@$hud_world_name": {
-      "anchor_from": "top_right",
-      "anchor_to": "top_right",
-      "$server_name": "(#player_list_title = 'Magma MC')",
-      "ignored": "(not $is_on_3p_server)",
-      "$server_adress": "Magma MC-[play.magmaMC.net]"
-    }},
-    {"hive@$hud_world_name": {
-      "anchor_from": "top_right",
-      "anchor_to": "top_right", 
-      "$server_name": "(#player_list_title = 'Hive Games')",
-      "ignored": "(not $is_on_3p_server)",
-      "$server_adress": "§7Hive Games-[geo.hivebedrock.network]"
-    }},
-    {"lifeboat@$hud_world_name": {
-      "anchor_from": "top_right",
-      "anchor_to": "top_right",
-      "offset": [0, -20],
-      "$server_name": "(#player_list_title = 'Lifeboard Network')",
-      "ignored": "(not $is_on_3p_server)",
-      "$server_adress": "§7Lifeboard Network-[mco.lbsg.net]"
-    }}
-  ]},
-
+          "anchor_from": "top_right",
+          "anchor_to": "top_right",
+          "controls": [
+            {
+              "label": {
+                "type": "label",
+                "bindings": [
+                  {"binding_name": "#player_list_title"},
+                  {
+                    "binding_type"        : "view"                         ,
+                    "source_property_name": "('§7' + (#player_list_title))",
+                    "target_property_name": "#info_dat"
+                  }
+                ],
+                "layer": 12,
+                "text_alignment": "center",
+                "anchor_from": "center",
+                "anchor_to": "center",
+                "offset": [2, 0],
+                "shadow": true,
+                "ignored": "$is_on_3p_server",
+                "text": "#info_dat"
+              }
+            }
+          ]
+        }
+      },
+      {
+        "cubecraft@$hud_world_name": {
+          "ignored"        : "(not $is_on_3p_server)"                  ,
+          "$server_address": "play.cubecraft.net"  ,
+          "anchor_from"    : "top_right"                               ,
+          "anchor_to"      : "top_right"                               ,
+          "$server_name"   : "(#player_list_title = 'CubeCraft Games')"
+        }
+      },
+      {
+        "galaxite@$hud_world_name": {
+          "ignored"        : "(not $is_on_3p_server)"           ,
+          "$server_address": "play.galaxite.net"   ,
+          "anchor_from"    : "top_right"                        ,
+          "anchor_to"      : "top_right"                        ,
+          "$server_name"   : "(#player_list_title = 'Galaxite')"
+        }
+      },
+      {
+        "magma-mc@$hud_world_name": {
+          "ignored"        : "(not $is_on_3p_server)"           ,
+          "$server_address": "play.magmaMC.net"    ,
+          "anchor_from"    : "top_right"                        ,
+          "anchor_to"      : "top_right"                        ,
+          "$server_name"   : "(#player_list_title = 'Magma MC')"
+        }
+      },
+      {
+        "hive@$hud_world_name": {
+          "ignored"        : "(not $is_on_3p_server)"                ,
+          "$server_address": "geo.hivebedrock.network",
+          "anchor_from"    : "top_right"                             ,
+          "anchor_to"      : "top_right"                             ,
+          "$server_name"   : "(#player_list_title = 'Hive Games')"
+        }
+      }
+    ]
+  },
   "world_name_template": {
     "type": "image",
     "texture": "textures/ui/Black",
@@ -87,9 +171,8 @@
       {
         "label": {
           "type": "label",
-          "text": "$server_adress",
+          "text": "$server_address",
           "layer": 12,
-          "ignored": "$world_name",
           "text_alignment": "center",
           "anchor_from": "center",
           "anchor_to": "center",
