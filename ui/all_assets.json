@@ -9,6 +9,25 @@
       "@common.screen_entrance_animation_push_fade": {},
       "@common.screen_entrance_animation_pop_fade": {}
     },
+    		"chat_copy_mode_toggle@common_toggles.light_content_toggle":{
+			"$toggle_view_binding_name":"chat_copy_mode_toggle",
+			"$pressed_no_hover_texture":"textures/ui/button_borderless_light",
+			"$pressed_texture":"textures/ui/button_borderless_light",
+			"$toggle_name":"(not $chat_copy_mode)",
+			"$button_content":"chat_new.chat_icon_copy_mode",
+			"size":[
+				27,
+				27
+			],
+			"$icons_color":"$title_text_color",
+		"bindings":[
+			{
+				"binding_type":"view",
+				"source_control_name":"chat_copy_mode_toggle",
+				"source_property_name":"#toggle_state",
+				"target_property_name":"#visible"
+			}
+		],
     "reset_button@common.button": {
         "offset": [ 0, 5 ],
         "size": [ "75%", "75%" ],
