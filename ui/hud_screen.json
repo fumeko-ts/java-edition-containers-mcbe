@@ -7,74 +7,7 @@
 //     * Do not steal or edit this code
 //
 //+=============================================================+\\
-  "hotbar_chooser": {
-    "type": "panel",
-    "size": ["100%c", "100%c"],
-    "$ignore_desktop": true,
-    "$ignore_pocket": false,
-    "variables": [
-      {
-        "requires": "($desktop_screen and not $education_edition)",
-        "$ignore_desktop": false,
-        "$ignore_pocket": true
-      }
-    ],
-    "controls": [
-      {
-        "desktop_hotbar@hud.desktop_hotbar_panel": {
-          "ignored": "$ignore_desktop",
-          "offset": [-4, 0]
-        }
-      },
-      {
-        "pocket_hotbar@hotbar_panel": {
-          "ignored": "$ignore_pocket",
-          "offset": [-4, 0]
-        }
-      }
-    ]
-  },
-  "desktop_hotbar_panel": {
-    "type": "panel",
-    "size": [182, 22],
-    "anchor_from": "bottom_middle",
-    "anchor_to": "bottom_middle",
-    "controls": [
-      {"hotbar_image@hud.hotbar_image": {}                                   },
-      {                                     "hotbar_grid@hud.hotbar_grid": {}}
-    ]
-  },
-  "hotbar_slot_image": {
-    "$hotbar_slot_image_size|default": [20, 22],
-    "type": "image",
-    "offset": [0, 0],
-    "size": "$hotbar_slot_image_size",
-    "layer": 1,
-    "alpha": 1
-  },
-  "hotbar_image": {
-    "type": "image",
-    "offset": [0, 0],
-    "size": [182, 22],
-    "texture": "assets/minecraft/textures/gui/sprites/hud/hotbar",
-    "layer": 1,
-    "alpha": 1
-  },
-  "hotbar_slot_selected_image": {
-    "type": "image",
-    "texture": "assets/minecraft/textures/gui/sprites/hud/hotbar_selection",
-    "size": [24, 23],
-    "layer": 8,
-    "offset": [0, 0.6],
-    "bindings": [
-      {
-        "binding_name"           : "#slot_selected"         ,
-        "binding_name_override"  : "#visible"               ,
-        "binding_type"           : "collection"             ,
-        "binding_collection_name": "$hotbar_collection_name"
-      }
-    ]
-  },
+
   "serverdisplay": {
     "type": "panel",
     "size": ["100% - 2px", "100% - 6px"],

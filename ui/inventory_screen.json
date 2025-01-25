@@ -700,9 +700,11 @@
     ]
   },
   "crafting_screen@crafting.inventory_screen_base": {
-    "$inventory_gui": false,
-    "send_telemetry": false,
-    "$uses_bundle_tooltip": true,
+    "$inventory_gui": false,         "send_telemetry": false,
+    "load_screen_immediately": true, "$use_loading_bars": false,
+    "low_frequency_rendering": true, "render_game_behind": true,
+    "force_render_below": true,      "absorbs_input": false,
+    "is_showing_menu": true,         "$uses_bundle_tooltip": true,
     "$screen_content": "crafting.recipe_inventory_screen_content",
     "$screen_bg_content": "common.screen_background",
     "$top_half_variant": "crafting.crafting_panel_top_half",
@@ -710,8 +712,11 @@
     "close_on_player_hurt": "$close_on_player_hurt"
   },
   "inventory_screen@crafting.inventory_screen_base": {
-    "$inventory_gui": true,
-    "send_telemetry": false,
+    "$inventory_gui": true,          "send_telemetry": false,
+    "load_screen_immediately": true, "$use_loading_bars": false,
+    "low_frequency_rendering": true, "render_game_behind": true,
+    "force_render_below": true,      "absorbs_input": true,
+    "is_showing_menu": true,         "$uses_bundle_tooltip": true,
     "$screen_content": "crafting.recipe_inventory_screen_content",
     "$screen_bg_content": "common.screen_background",
     "$screen_background_alpha": 0.4, // not used because i have set the global alpha in _global_variables.json
@@ -892,7 +897,7 @@
                     "player_renderer": {
                       "type": "custom",
                       "renderer": "live_player_renderer",
-                      "property_bag": {"#look_at_cursor": true},
+                      "property_bag": {"#look_at_cursor": false},
                       "animation_reset_name": "screen_animation_reset",
                       "anims": [
                         "@common.screen_exit_size_animation_push"    ,

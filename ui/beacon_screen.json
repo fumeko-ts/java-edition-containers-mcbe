@@ -2,6 +2,14 @@
   "namespace": "beacon",
   "beacon_screen@common.inventory_screen_common": {
      "$close_on_player_hurt|default": true,
+     "send_telemetry": false,
+     "load_screen_immediately": true, 
+     "$use_loading_bars": false,
+     "low_frequency_rendering": true, 
+     "render_game_behind": true,
+     "force_render_below": true,      
+     "absorbs_input": true,
+     "is_showing_menu": true,   
      "close_on_player_hurt": "$close_on_player_hurt",
      "variables": [
         {

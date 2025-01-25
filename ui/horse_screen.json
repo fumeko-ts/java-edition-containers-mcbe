@@ -275,6 +275,14 @@
   },
   "horse_screen@common.inventory_screen_common": {
     "$close_on_player_hurt|default": false,
+    "send_telemetry": false,
+    "load_screen_immediately": true, 
+    "$use_loading_bars": false,
+    "low_frequency_rendering": true, 
+    "render_game_behind": true,
+    "force_render_below": true,      
+    "absorbs_input": true,
+    "is_showing_menu": true,    
     "close_on_player_hurt": "$close_on_player_hurt",
     "variables": [
       {
@@ -284,7 +292,7 @@
       },
       {
         "requires": "$pocket_screen",
-        "$screen_content": "horse_pocket.horse_panel",
+        "$screen_content": "horse.horse_panel",
         "$screen_bg_content": "common.screen_background",
         "$close_on_player_hurt": true
       }
