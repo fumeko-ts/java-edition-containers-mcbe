@@ -67,7 +67,7 @@
       "$default_border_visible": false,
       "$button_content": "crafting.layout_toggle_content",
       "$toggle_name": "layout_toggle",
-      "$template_toggle": "crafting.layout_template_toggle",
+      "$template_toggle": "survival_layout.layout_template_toggle",
       "$allow_controller_back_button_mapping": "$is_ps4"
    },
    "toggle_panel":{
@@ -75,7 +75,7 @@
       "size": [22, 20],
       "anchor_to": "top_left",
       "anchor_from": "top_left",
-      "layer": 100,
+      "layer": 10,
       "controls": [
          {
             "recipe_toggle@recipe_toggle.recipe_p": {

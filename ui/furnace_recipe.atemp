@@ -1,0 +1,78 @@
+{
+    "namespace": "furnace_recipe",
+    "cell_specifications@common.button": {
+     "focus_enabled": false,
+     "size": [25, 25],
+     "focus_magnet_enabled": false,
+     "anchor_from": "center",
+     "anchor_to": "center",
+     "sound_volume": 0,
+     "sound_pitch": 0,
+     "offset": "$entire_slot_offset",
+     "$entire_slot_offset": [-50, 25],
+     "$slot_cell_texture|default": "assets/minecraft/textures/gui/sprites/recipe_book/slot_craftable.png",
+     "$slot_cell_size|default": [25, 25],
+     "$slot_cell_offset|default": [2, 2],
+     "$slot_texture_uv_size|default": [25, 25],
+     "$cell_item_id_aux|default": 0,
+     "$aux_item_offset|default": [2, 2],
+     "$white_highlight_slot_size": [20, 20],
+     "$white_highlight_slot_offset": [1.6, 1.4],
+     "$highlight_layer|default": 65,
+     "$layer|default": 70,
+     "$tooltip_text|default": null,
+     "$hover_text_offset|default": [40, -40],
+     "$item_collection_name": "none",
+     "pressed_control": "pressed",
+     "controls": [
+      {
+       "hover@common.empty_panel": {
+        "anchor_from": "center",
+        "anchor_to": "center",
+        "controls": [
+         { "highlight@common.highlight_slot": {"layer": "$highlight_layer"} },
+         {
+          "tooltip@common.hover_text": {
+           "layer": 100,
+           "property_bag": {"force_update": true, "#hover_text": "$tooltip_text"}
+          }
+         }
+        ]
+       }
+      },
+      {
+       "slot_texture@somali_to_Mori_no_Kamisama.image_element": {
+        "anchor_from": "center",
+        "fill": true,
+        "anchor_to": "center",
+        "texture": "$slot_cell_texture",
+        "size": "$slot_cell_size",
+        "offset": "$slot_cell_offset",
+        "$uv": "$slot_texture_uv_size"
+       }
+      },
+      {
+       "cell_aux@beacon.item_renderer": {
+        "offset": "$aux_item_offset",
+        "layer": "$layer",
+        "anchor_from": "center",
+        "anchor_to": "center",
+        "property_bag": {"#item_id_aux": "$cell_item_id_aux"}
+       }
+      }
+     ],
+     "button_mappings": [
+      {
+       "from_button_id": "button.menu_ok",
+       "to_button_id"  : "button.menu_ok",
+       "mapping_type"  : "focused"
+      },
+      {
+       "from_button_id": "button.menu_select",
+       "to_button_id"  : "button.menu_select",
+       "mapping_type"  : "pressed"
+      }
+     ]
+    }
+   }
+   

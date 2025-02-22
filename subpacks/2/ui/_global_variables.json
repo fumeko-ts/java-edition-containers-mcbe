@@ -1,30 +1,32 @@
 {
-  ////////     misallaneous    ////////
+  // Core System References
   "$ep": "common.empty_panel",
+  "$bypass": "#visiblex",
+  "$selected_stack_panel": true,
+  "$dev": false,
 
-  // Anchor positions
+  // Anchor Positions
   "$top_left": "top_left",
-  "$top_middle": "top_middle", 
+  "$top_middle": "top_middle",
   "$top_right": "top_right",
   "$left_middle": "left_middle",
   "$center": "center",
-  "$right_middle": "right_middle", 
+  "$right_middle": "right_middle",
   "$bottom_left": "bottom_left",
   "$bottom_middle": "bottom_middle",
   "$bottom_right": "bottom_right",
-   
-  "$selected_stack_panel": true,
-  ////////     hud variables   ////////
+
+  // HUD Components
   "$template": "hud.player_count",
-  "$list_panel": "hud.tab_list_stack_panel",
-  "$tab_list_grid": "hud.tab_list_base_grid",
-  "$tab_grid_item": "hud.tab_list_base_grid_item",
+  "$list_panel": "tab_menu.tab_list_stack_panel",
+  "$tab_list_grid": "tab_menu.tab_list_base_grid",
+  "$tab_grid_item": "tab_menu.tab_list_base_grid_item",
   "$aux_delta": "hud.aux_delta",
   "$aux_grid_item_template": "hud.aux_item_id_panel_epsilon",
   "$aux_bg_base_delta": "hud.aux_bg_base_old",
   "$aux_id_renderer": "hud.item_aux_id_renderer",
   "$offhand_renderer": "hud.offhand_renderer",
-  "$tab_menu": "hud.tab_list",
+  "$tab_menu": "tab_menu.tab_list",
   "$hud_world_name": "hud.world_name_template",
   "$display": "hud.serverdisplay",
   "$aux_background": "hud.selected_panel_bg",
@@ -33,46 +35,43 @@
   "$new_template_bg": "hud.selected_item",
   "$hud_item_delta": "hud.item_renderer",
   "$10x10": [10, 10],
-  ////////       dev mode      ////////
-  "$dev": false, // only enable if you know what your doing.
-  ////////   Custom variables  ////////
-  "$pane_bg": "textures/ui/pane_bg",
-  "$Exit_panel_enabled": false, // this is for the subpacks to specify witch pack houses the container exit buttons
-  "$output": false, // this is for the output slot for the cartography table 
-  "$loom_screen": false, // forgot what this is for but i will keep it incase its needed
-  "$creative_layout": false,
-  //"$book_size": [ 160, "100%" ], // blacked these out because i have not compleated the book screen yet
-  //"$page_size": [ 160, "100%" ],
-  "$all_Screen_bg_transparency": 0.6, // this is for the transparency of the screen background for all containers and some other screens
-  //////// recipe book offsets ////////
-  "$a":[0,0], // do not change these offsets as of 1.21.51 they work perfectly if you notice they dont join my discord and send a video of the problem
-  "$b":[0,-100],
-  "$c":[0,-200],
-  "$d":[0,-300],
-  "$e":[0,-400],
-  "$f":[0,-500],
-  "$g":[0,-600],
-  "$h":[0,-700],
-  "$i":[0,-800],
-  "$j":[0,-900],
-  "$k":[0,-1000],
-  "$l":[0,-1100],
-  "$m":[0,-1200],
-  "$n":[0,-1300],
-  "$o":[0,-1400],
-  "$p":[0,-1500],
-  "$q":[0,-1600],
-  "$r":[0,-1700],
-  "$s":[0,-1800],
-  "$t":[0,-1900],
-  "$u":[0,-2000],
-  "$v":[0,-2100],
-  "$w":[0,-2200],
-  "$x":[0,-2300],
-  "$y":[0,-2400],
-  "$z":[0,-2500],
-  "$aa":[0,-2600],
-  "$ab":[0,-2700],
-  "$state": false
-}
 
+  // Container Settings
+  "$pane_bg": "textures/ui/pane_bg",
+  "$Exit_panel_enabled": true,
+  "$output": false,
+  "$loom_screen": false,
+  "$creative_layout": false,
+  "$all_Screen_bg_transparency": 0,
+   "$unchecked_text_color": [ 1.0, 1.0, 1.0 ],
+   "$unchecked_hover_text_color": [ 1.0, 1.0, 1.0, 0.8 ],
+   "$unchecked_locked_text_color": [ 0.7, 0.7, 0.7 ],
+   "$unchecked_locked_hover_text_color": [ 0.7, 0.7, 0.7, 0.8 ],
+   "$checked_text_color": [ 1.0, 1.0, 1.0 ],
+   "$checked_hover_text_color": [ 1.0, 1.0, 1.0, 0.8 ],
+   "$checked_locked_text_color": [ 0.7, 0.7, 0.7 ],
+   "$checked_locked_hover_text_color": [ 0.7, 0.7, 0.7, 0.8 ],
+   "$default_text_color": [ 1.0, 1.0, 1.0 ],
+   "$hover_text_color": [ 1.0, 1.0, 1.0, 0.8 ],
+   "$locked_text_color": [ 0.7, 0.7, 0.7 ],
+ 
+   // Add position variables
+   "$default_position": [ 0, 0 ],
+   "$hover_position": [ 0, 20 ],
+   "$locked_position": [ 0, 40 ],
+   "$tab_layer": 2,
+  // Recipe Book Settings
+  "$no": [0, 63],
+  "$uh": [-1.8, 63],
+  "$recipe_book": false,
+  "$state": false,
+
+  // Recipe Grid Offsets
+  "$a": [0,0],      "$b": [0,-100],   "$c": [0,-200],   "$d": [0,-300],
+  "$e": [0,-400],   "$f": [0,-500],   "$g": [0,-600],   "$h": [0,-700],
+  "$i": [0,-800],   "$j": [0,-900],   "$k": [0,-1000],  "$l": [0,-1100],
+  "$m": [0,-1200],  "$n": [0,-1300],  "$o": [0,-1400],  "$p": [0,-1500],
+  "$q": [0,-1600],  "$r": [0,-1700],  "$s": [0,-1800],  "$t": [0,-1900],
+  "$u": [0,-2000],  "$v": [0,-2100],  "$w": [0,-2200],  "$x": [0,-2300],
+  "$y": [0,-2400],  "$z": [0,-2500],  "$aa": [0,-2600], "$ab": [0,-2700]
+}

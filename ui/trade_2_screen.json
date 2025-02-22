@@ -48,23 +48,23 @@
   "red_slash": {"type": "image", "texture": "textures/ui/red_slash"},
   "blue_progress_bar": {
      "type": "image",
-     "texture": "textures/ui/experience_bar_full_blue",
+     "texture": "",
      "clip_direction": "left",
      "clip_pixelperfect": false
   },
   "white_progress_bar": {
      "type": "image",
-     "texture": "textures/ui/experience_bar_full_white",
+     "texture": "assets/minecraft/textures/gui/sprites/container/villager/experience_bar_current.png",
      "clip_direction": "left",
      "clip_pixelperfect": false
   },
   "empty_progress_bar": {
      "type"   : "image"                                ,
-     "texture": "textures/ui/experience_bar_empty_blue"
+     "texture": "assets/minecraft/textures/gui/sprites/container/villager/experience_bar_background.png"
   },
   "progress_bar_nub": {
      "type": "image",
-     "texture": "textures/ui/experience_bar_nub_blue",
+     "texture": "",
      "tiled": true
   },
   "hover_button": {
@@ -938,14 +938,9 @@
      ]
   },
   "right_panel@common.root_panel": {
-   
      "layer": 1,
      "controls": [
-        {
-           "common_panel@villager_epsilon.image_element": {
-              "$show_close_button": false
-           }
-        },
+        { "common_panel@somali_to_Mori_no_Kamisama.somali": {"$0_trade_screen": true} },
         {
            "trade_screen_inventory": {
               "type": "panel",
