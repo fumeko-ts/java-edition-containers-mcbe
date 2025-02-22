@@ -43,24 +43,6 @@
   "$loom_screen": false,
   "$creative_layout": false,
   "$all_Screen_bg_transparency": 0,
-   "$unchecked_text_color": [ 1.0, 1.0, 1.0 ],
-
-   "$unchecked_hover_text_color": [ 1.0, 1.0, 1.0, 0.8 ],
-   "$unchecked_locked_text_color": [ 0.7, 0.7, 0.7 ],
-   "$unchecked_locked_hover_text_color": [ 0.7, 0.7, 0.7, 0.8 ],
-   "$checked_text_color": [ 1.0, 1.0, 1.0 ],
-   "$checked_hover_text_color": [ 1.0, 1.0, 1.0, 0.8 ],
-   "$checked_locked_text_color": [ 0.7, 0.7, 0.7 ],
-   "$checked_locked_hover_text_color": [ 0.7, 0.7, 0.7, 0.8 ],
-   "$default_text_color": [ 1.0, 1.0, 1.0 ],
-   "$hover_text_color": [ 1.0, 1.0, 1.0, 0.8 ],
-   "$locked_text_color": [ 0.7, 0.7, 0.7 ],
- 
-   // Add position variables
-   "$default_position": [ 0, 0 ],
-   "$hover_position": [ 0, 20 ],
-   "$locked_position": [ 0, 40 ],
-   "$tab_layer": 2,
   // Recipe Book Settings
   "$no": [0, 63],
   "$uh": [-1.8, 63],

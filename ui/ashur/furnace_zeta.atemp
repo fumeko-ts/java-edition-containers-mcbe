@@ -472,17 +472,17 @@
    // page offset controler    #do not edit the values in the following section it will break the code
    "misc_panel@common.empty_panel"      :{
       "controls":[
-        {"misc@furnace_recipe.burnables_panel":{}}
+        {"misc@furnace_recipe.base_panel":{}}
      ]
    },
    "burnables_panel@common.empty_panel" :{
       "controls":[
-        {"burnables@furnace_recipe.burnables_panel":{}}
+        {"burnables@furnace_recipe.base_panel":{}}
      ]
    },
    "smeltables_panel@common.empty_panel":{
       "controls":[
-        {"smeltables@furnace_recipe.burnables_panel":{}}
+        {"smeltables@furnace_recipe.base_panel":{}}
      ]
    },
    "offset": { "offset": [1, -1.4] },

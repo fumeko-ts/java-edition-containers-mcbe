@@ -48,5 +48,52 @@
  "$scrolling_pane_offset": [0, 0],
  "$scroll_track_image_control": "common.container_scrollbar_track",
  "$scroll_box_mouse_image_control": "common.container_scroll_box_image",
- "$scroll_box_touch_image_control": "common.container_touch_scrollbar_box_image"
+ "$scroll_box_touch_image_control": "common.container_touch_scrollbar_box_image",
+ 
+   "progress_bar_percentage": {
+    "type": "label",
+    "text": "#text",
+    "bindings": [
+      { "binding_type": "global",
+        "binding_name": "#loading_bar_percentage",
+        "binding_condition": "always"
+      },
+      { "binding_type": "view",
+        "source_property_name": "(100 * (1 - #loading_bar_percentage))",
+        "target_property_name": "#epbl"
+      },
+      { "binding_type": "view",
+        "source_property_name": "(#epbl - #epcl1)",
+        "target_property_name": "#epbl1"
+      },
+      { "binding_type": "view",
+        "source_property_name": "(#epbl1 - #epcl2)",
+        "target_property_name": "#epbl2"
+      },
+      { "binding_type": "view",
+        "source_property_name": "(100 * ((#epbl > 100) + (#epbl > 200) + (#epbl > 300) + (#epbl > 400) + (#epbl > 500) + (#epbl > 600) + (#epbl > 700) + (#epbl > 800) + (#epbl > 900)))",
+        "target_property_name": "#epcl1"
+      },
+      { "binding_type": "view",
+        "source_property_name": "(10 * ((#epbl1 > 10) + (#epbl1 > 20) + (#epbl1 > 30) + (#epbl1 > 40) + (#epbl1 > 50) + (#epbl1 > 60) + (#epbl1 > 70) + (#epbl1 > 80) + (#epbl1 > 90)))",
+        "target_property_name": "#epcl2"
+      },
+      { "binding_type": "view",
+        "source_property_name": "(1 * ((#epbl2 > 1) + (#epbl2 > 2) + (#epbl2 > 3) + (#epbl2 > 4) + (#epbl2 > 5) + (#epbl2 > 6) + (#epbl2 > 7) + (#epbl2 > 8) + (#epbl2 > 9)))",
+        "target_property_name": "#epcl3"
+      },
+      { "binding_type": "view",
+        "source_property_name": "(#epcl1 + #epcl2 + #epcl3)",
+        "target_property_name": "#finalc"
+      },
+      { "binding_type": "view",
+        "source_property_name": "(not(#finalc = 0))",
+        "target_property_name": "#visible"
+      },
+      { "binding_type": "view",
+        "source_property_name": "('§z' + #finalc + '%%')",
+        "target_property_name": "#text"
+    }]
+  }
+
 }
