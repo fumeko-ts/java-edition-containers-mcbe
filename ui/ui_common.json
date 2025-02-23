@@ -65,7 +65,6 @@
          },
          {
           "binding_type": "view",
-          "source_property_name": "(#hover_text_binding + (#end_text + '\n§8-\nAux Id: ' + #aux_id))",
           "source_property_name": "(#hover_text_binding + (#end_text + '\n-\nAux Id: ' + #aux_id))",
           "target_property_name": "#hover_text"
          },
@@ -116,7 +115,6 @@
        },
        {
         "binding_type"        : "view"                                                 ,
-        "source_property_name": "((#result < #item_durability_total_amount) + #result)",
         "source_property_name": "((#result < #item_durability_total_amount) - (#start > #item_durability_total_amount) + #result)",
         "target_property_name": "#result"                                              ,
         "binding_condition"   : "always"
