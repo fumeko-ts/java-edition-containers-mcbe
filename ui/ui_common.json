@@ -21,8 +21,9 @@
   },
 "custom_menu_button@common.button": {
     "$pressed_view_binding_name": "$toggle_trigger_name",
-    "$toggle_trigger_name":"new_tgl",
-    "size": [20, 20],
+    "$toggle_trigger_name":"$toggle_new_name",
+    "$toggle_new_name": "ashur",
+    "size": [22, 20],
     "controls": [
         {
             "custom@common.ui_base_toggle": {
@@ -37,23 +38,10 @@
     "anchor_to": "center",
     "anchor_from": "center",
     "layer": 10,
-    "controls": [
-        {
-            "survival_toggle@common.custom_menu_button": {
-              "bindings": [
-                {
-                    "binding_type": "view",
-                    "source_control_name": "new_tgl",
-                    "source_property_name": "(not #toggle_state)",
-                    "target_property_name": "#visible"
-               }
-             ]
-          }
-       }
-    ]
+    "controls": [{"survival_toggle@common.custom_menu_button":{"$toggle_new_name": "ashur"}}]
 },
 
-
+//highlight slot overide
   "highlight_slot_panel/highlight": {
    "variables": [
     {

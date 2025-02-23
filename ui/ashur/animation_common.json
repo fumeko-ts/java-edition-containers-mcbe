@@ -1,5 +1,8 @@
 {
     "namespace": "animation_common",
+
+      //compleated offical below experamental above ^
+      //                                            |
         "offset_base": { 
             "anim_type": "offset", 
             "easing": "linear", 

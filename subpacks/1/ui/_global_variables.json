@@ -35,7 +35,7 @@
   "$new_template_bg": "hud.selected_item",
   "$hud_item_delta": "hud.item_renderer",
   "$10x10": [10, 10],
-
+  "$max|Default":"",
   // Container Settings
   "$pane_bg": "textures/ui/pane_bg",
   "$Exit_panel_enabled": true,
