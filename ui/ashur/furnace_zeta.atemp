@@ -1,161 +1,180 @@
 {
   "namespace": "furnace_zeta",
   /* === TAB STATE MANAGEMENT === */
-  "tab_state_common": {
-     "type": "panel",
-     "size": ["100%", "100%"],
-     "$is_checked_locked_hover|default": false,
-     "$is_checked_locked|default": false,
-     "$is_checked_hover|default": false,
-     "$is_checked|default": false,
-     "$is_unchecked_locked_hover|default": false,
-     "$is_unchecked_locked|default": false,
-     "$is_unchecked_hover|default": false,
-     "$is_unchecked|default": false,
-     "$tab_icon|default": "",
-     "$size": [18, 16],
-     "$state_offset": [0, 0],
-     "anchor_to": "center",
-     "anchor_from": "center",
-     "variables":[
-          {
-           "requires": "($is_unchecked = true or $is_unchecked_locked = true or $is_unchecked = true)",
-           "$state_offset": [3, 0]
-          },
-          {
+"tab_state_common": {
+    "anchor_from": "center",
+    "anchor_to": "center",
+    "controls": "$tab_texture_controlers",
+    "size": ["100%", "100%"],
+    "type": "panel",
+    
+    "$is_checked|default": false,
+    "$is_checked_hover|default": false,
+    "$is_checked_locked|default": false,
+    "$is_checked_locked_hover|default": false,
+    "$is_unchecked|default": false,
+    "$is_unchecked_hover|default": false,
+    "$is_unchecked_locked|default": false,
+    "$is_unchecked_locked_hover|default": false,
+    "$size": [18, 16],
+    "$state_offset": [0, 0],
+    "$tab_icon|default": "",
+
+    "variables": [
+        {
+            "requires": "($is_unchecked = true or $is_unchecked_locked = true or $is_unchecked = true)",
+            "$state_offset": [3, 0]
+        },
+        {
             "requires": "($is_unchecked_locked_hover = true or $is_unchecked_hover = true)",
             "$state_offset": [2, 0]
-          },
-          {
-           "requires": "($focus_id = misc_tab)",
-           "$tab_icon": "textures/items/compass_item"
-          },
-          {
-           "requires": "($focus_id = burnables_tab)",
-           "$tab_icon": "textures/atemp/ui/stone"
-          },
-          {
-           "requires": "($focus_id = smeltable_tab)",
-           "$size": [20, 18],
-           "$tab_icon": "textures/atemp/ui/fuel"
-          }
-     ],
-     "$tab_texture_controlers": [
-        {
-          "icon":{
-            "type": "image",
-            "texture": "$tab_icon",
-            "layer": 14,
-            "size": "$size",
-            "offset": "$state_offset",
-            "anchor_to": "center",
-            "anchor_from": "center"
-          }
         },
         {
-           "tab_unchecked": {
-              "ignored": "(not $is_unchecked)",
-              "type": "image",
-              "texture": "assets/minecraft/textures/gui/sprites/recipe_book/tab",
-              "size": [36, 26],
-              "layer": 5,
-              "offset": [4, 0]
-           }
+            "requires": "($focus_id = misc_tab)",
+            "$tab_icon": "textures/items/compass_item"
         },
         {
-           "tab_unchecked_hover": {
-              "ignored": "(not $is_unchecked_hover)",
-              "type": "image",
-              "texture": "assets/minecraft/textures/gui/sprites/recipe_book/tab",
-              "size": [36, 26],
-              "layer": 5,
-              "offset": [3, 0]
-           }
+            "requires": "($focus_id = burnables_tab)",
+            "$tab_icon": "textures/atemp/ui/stone"
         },
         {
-           "tab_unchecked_locked": {
-              "ignored": "(not $is_unchecked_locked)",
-              "type": "image",
-              "texture": "assets/minecraft/textures/gui/sprites/recipe_book/tab",
-              "size": [36, 26],
-              "layer": 5,
-              "offset": [4, 0]
-           }
-        },
-        {
-           "tab_unchecked_locked_hover": {
-              "ignored": "(not $is_unchecked_locked_hover)",
-              "type": "image",
-              "texture": "assets/minecraft/textures/gui/sprites/recipe_book/tab",
-              "size": [36, 26],
-              "layer": 5,
-              "offset": [3, 0]
-           }
-        },
-        {
-           "tab_checked": {
-              "ignored": "(not $is_checked)",
-              "type": "image",
-              "texture": "assets/minecraft/textures/gui/sprites/recipe_book/tab_selected",
-              "size": [36, 26],
-              "layer": 11,
-              "offset": [-0.4, 0]
-           }
-        },
-        {
-           "tab_checked_hover": {
-              "ignored": "(not $is_checked_hover)",
-              "type": "image",
-              "texture": "assets/minecraft/textures/gui/sprites/recipe_book/tab_selected",
-              "size": [36, 26],
-              "layer": 11,
-              "offset": [-0.4, 0]
-           }
-        },
-        {
-           "tab_checked_locked": {
-              "ignored": "(not $is_checked_locked)",
-              "type": "image",
-              "texture": "assets/minecraft/textures/gui/sprites/recipe_book/tab_selected",
-              "size": [36, 26],
-              "layer": 11,
-              "offset": [-0.4, 0]
-           }
-        },
-        {
-           "tab_checked_locked_hover": {
-              "ignored": "(not $is_checked_locked_hover)",
-              "type": "image",
-              "texture": "assets/minecraft/textures/gui/sprites/recipe_book/tab_selected",
-              "size": [36, 26],
-              "layer": 11,
-              "offset": [-0.4, 0]
-           }
+            "requires": "($focus_id = smeltable_tab)",
+            "$size": [20, 18],
+            "$tab_icon": "textures/atemp/ui/fuel"
         }
-     ],
-     "controls": "$tab_texture_controlers"
-  },
+    ],
+
+    "$tab_texture_controlers": [
+        {
+            "icon": {
+                "anchor_from": "center",
+                "anchor_to": "center",
+                "layer": 14,
+                "offset": "$state_offset",
+                "size": "$size",
+                "texture": "$tab_icon",
+                "type": "image"
+            }
+        },
+        {
+            "tab_unchecked": {
+                "anchor_from": "center",
+                "anchor_to": "center",
+                "ignored": "(not $is_unchecked)",
+                "layer": 5,
+                "offset": [4, 0],
+                "size": [36, 26],
+                "texture": "assets/minecraft/textures/gui/sprites/recipe_book/tab",
+                "type": "image"
+            }
+        },
+        {
+            "tab_unchecked_hover": {
+                "anchor_from": "center",
+                "anchor_to": "center",
+                "ignored": "(not $is_unchecked_hover)",
+                "layer": 5,
+                "offset": [3, 0],
+                "size": [36, 26],
+                "texture": "assets/minecraft/textures/gui/sprites/recipe_book/tab",
+                "type": "image"
+            }
+        },
+        {
+            "tab_unchecked_locked": {
+                "anchor_from": "center",
+                "anchor_to": "center",
+                "ignored": "(not $is_unchecked_locked)",
+                "layer": 5,
+                "offset": [4, 0],
+                "size": [36, 26],
+                "texture": "assets/minecraft/textures/gui/sprites/recipe_book/tab",
+                "type": "image"
+            }
+        },
+        {
+            "tab_unchecked_locked_hover": {
+                "anchor_from": "center",
+                "anchor_to": "center",
+                "ignored": "(not $is_unchecked_locked_hover)",
+                "layer": 5,
+                "offset": [3, 0],
+                "size": [36, 26],
+                "texture": "assets/minecraft/textures/gui/sprites/recipe_book/tab",
+                "type": "image"
+            }
+        },
+        {
+            "tab_checked": {
+                "anchor_from": "center",
+                "anchor_to": "center",
+                "ignored": "(not $is_checked)",
+                "layer": 11,
+                "offset": [-0.6, 0],
+                "size": [36, 26],
+                "texture": "assets/minecraft/textures/gui/sprites/recipe_book/tab_selected",
+                "type": "image"
+            }
+        },
+        {
+            "tab_checked_hover": {
+                "anchor_from": "center",
+                "anchor_to": "center",
+                "ignored": "(not $is_checked_hover)",
+                "layer": 11,
+                "offset": [-0.6, 0],
+                "size": [36, 26],
+                "texture": "assets/minecraft/textures/gui/sprites/recipe_book/tab_selected",
+                "type": "image"
+            }
+        },
+        {
+            "tab_checked_locked": {
+                "anchor_from": "center",
+                "anchor_to": "center",
+                "ignored": "(not $is_checked_locked)",
+                "layer": 11,
+                "offset": [-0.6, 0],
+                "size": [36, 26],
+                "texture": "assets/minecraft/textures/gui/sprites/recipe_book/tab_selected",
+                "type": "image"
+            }
+        },
+        {
+            "tab_checked_locked_hover": {
+                "anchor_from": "center",
+                "anchor_to": "center",
+                "ignored": "(not $is_checked_locked_hover)",
+                "layer": 11,
+                "offset": [-0.6, 0],
+                "size": [36, 26],
+                "texture": "assets/minecraft/textures/gui/sprites/recipe_book/tab_selected",
+                "type": "image"
+            }
+        }
+    ]
+},
+
   /* === TAB DEFINITIONS === */
   "tab": {
      "type": "panel",
      "anchor_from": "top_left",
      "anchor_to": "top_left",
      "$tab_view_binding_name|default": "tab",
-     "$is_checked_state": false,
-     "$tab_texture_definition_grabber|default": "furnace_zeta.tab_state_common",
+     "$is_checked_state": true,
      "controls": [
         {
            "$tab_view_binding_name@common.toggle": {
               "controls": [
                  {
-                    "unchecked@$tab_texture_definition_grabber": {
+                    "unchecked@furnace_zeta.tab_state_common": {
                        "$tab_state": "unchecked",
                        "layer": 1,
                        "$is_unchecked": true
                     }
                  },
                  {
-                    "unchecked_hover@$tab_texture_definition_grabber": {
+                    "unchecked_hover@furnace_zeta.tab_state_common": {
                        "$tab_state": "unchecked_hover",
                        "$is_unchecked_hover": true,
                        "$hover": true,
@@ -163,27 +182,27 @@
                     }
                  },
                  {
-                    "unchecked_locked@$tab_texture_definition_grabber": {
+                    "unchecked_locked@furnace_zeta.tab_state_common": {
                        "$tab_state": "unchecked_locked",
                        "$is_unchecked_locked": true,
                        "offset": [4, 0]
                     }
                  },
                  {
-                    "unchecked_locked_hover@$tab_texture_definition_grabber": {
+                    "unchecked_locked_hover@furnace_zeta.tab_state_common": {
                        "$tab_state": "unchecked_locked_hover",
                        "$is_unchecked_locked_hover": true
                     }
                  },
                  {
-                    "checked@$tab_texture_definition_grabber": {
+                    "checked@furnace_zeta.tab_state_common": {
                        "$tab_state": "checked",
                        "$is_checked_state": true,
                        "$is_checked": true
                     }
                  },
                  {
-                    "checked_hover@$tab_texture_definition_grabber": {
+                    "checked_hover@furnace_zeta.tab_state_common": {
                        "$tab_state": "checked_hover",
                        "$is_checked_state": true,
                        "$is_checked_hover": true,
@@ -192,14 +211,14 @@
                     }
                  },
                  {
-                    "checked_locked@$tab_texture_definition_grabber": {
+                    "checked_locked@furnace_zeta.tab_state_common": {
                        "$tab_state": "checked_locked",
                        "$is_checked_state": true,
                        "$is_checked_locked": true
                     }
                  },
                  {
-                    "checked_locked_hover@$tab_texture_definition_grabber": {
+                    "checked_locked_hover@furnace_zeta.tab_state_common": {
                        "$tab_state": "checked_locked_hover",
                        "$is_checked_state": true,
                        "$is_checked_locked_hover": true
@@ -264,7 +283,7 @@
      "size": [146, 166],
      "anchor_from": "center",
      "anchor_to": "center",
-     "offset": [-110, 0],
+     "offset": "$recipe_book_offset",
      "layer": 30,
      "$all_tabs_offset": [-31, 3],
      "controls": [
@@ -847,7 +866,7 @@
                            {"requires": "$pocket_screen", "$exit_panel": "common.light_close_button_sucrose"}
                         ],
                         "controls": [
-                           {"close_button@$exit_panel": {"offset": [100.8, -75], "anchor_from": "center", "anchor_to": "center"}}
+                           {"close_button@$exit_panel": {"offset": [180.8, -75], "anchor_from": "center", "anchor_to": "center"}}
                         ]
                      }
                   }
@@ -861,6 +880,8 @@
             "root_panel@common.empty_panel": {
                "size": [176, 166],
                "layer": 1,
+               "offset": [79.2, 0],
+               "$recipe_book_offset|default":[-163, 0],
                "controls": [
                   {"recipe_book@furnace_zeta.furnace_recipe_panel": {}},
                   {"common_panel@somali_to_Mori_no_Kamisama.somali": {"$furnace_screen": true}},
