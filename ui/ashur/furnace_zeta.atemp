@@ -161,7 +161,7 @@
      "anchor_from": "top_left",
      "anchor_to": "top_left",
      "$tab_view_binding_name|default": "tab",
-     "$is_checked_state": true,
+     "$is_checked_state": false,
      "controls": [
         {
            "$tab_view_binding_name@common.toggle": {
@@ -481,13 +481,13 @@
 
   "burnables_panel@common.empty_panel": {
      "controls": [
-        {"burnables@furnace_recipe.base_panel": {"offset": [-204, -40]}}
+        {"burnables@furnace_recipe.burn_base_panel": {"$is_burn_tab|default": true,"offset": [-204, -40]}}
      ]
   },
 
   "smeltables_panel@common.empty_panel": {
      "controls": [
-        {"smeltables@$ep": {}}
+        {"smeltables@furnace_recipe.burn_base_panel": {"$is_smelt_tab|default": true,"offset": [-204, -40]}}
      ]
   },
 
@@ -495,7 +495,7 @@
 
   "alpha_tepes_offset_template@furnace_zeta.offset": {
      "type": "panel",
-     "clips_children": true,
+     "clips_children": false,
      "size": [125, 100],
      "controls": [
         {

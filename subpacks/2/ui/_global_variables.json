@@ -4,7 +4,6 @@
   "$bypass": "#visiblex",
   "$selected_stack_panel": true,
   "$dev": false,
-  "$max|Default":"",
   // Anchor Positions
   "$top_left": "top_left",
   "$top_middle": "top_middle",
