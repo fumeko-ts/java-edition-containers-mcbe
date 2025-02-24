@@ -1,5 +1,6 @@
 {
   "namespace": "trade2",
+  //keeping villagers code here because whenever i try to localise it. it just crashes
   "toolbar_background": {
      "type"   : "image"                         ,
      "texture": "textures/ui/toolbar_background"
@@ -940,7 +941,7 @@
   "right_panel@common.root_panel": {
      "layer": 1,
      "controls": [
-        { "common_panel@somali_to_Mori_no_Kamisama.somali": {"$0_trade_screen": true} },
+        { "common_panel@somali_to_Mori_no_Kamisama.somali": {"$main_trade_screen": true} },
         {
            "trade_screen_inventory": {
               "type": "panel",
@@ -991,54 +992,6 @@
      "$gamepad_helper_binding_condition"   : "always"
   },
   "screen_panel": {
-   "modifications": [
-      {
-         "array_name": "controls",
-         "operation": "insert_front",
-         "value": [
-            {
-               "close_button_panel": {
-                  "type": "panel",
-                  "layer": 80,
-                  "size": [18, 18],
-                  "bindings": [
-                     {
-                        "binding_name"         : "#close_button_visible",
-                        "binding_name_override": "#visible"
-                     }
-                  ],
-                  "controls": [
-                     {
-                        "close_button": {
-                           "type":"panel",
-                           "$exit_panel": "",
-                           "variables": [
-                              {
-                                 "requires": "($Exit_panel_enabled = true)",
-                                 "$exit_panel": "common.light_close_button_sucrose"
-                              },
-                              {
-                                 "requires": "($Exit_panel_enabled = false)",
-                                 "$exit_panel": "common.empty_panel"
-                              }
-                           ],
-                           "controls": [
-                              {
-                                 "close_button@$exit_panel": {
-                                    "offset": [147.8, -75],
-                                    "anchor_from": "center",
-                                    "anchor_to": "center"
-                                 }
-                              }
-                           ]
-                        }
-                     }
-                  ]
-               }
-            }
-         ]
-      }
-   ],
      "type": "panel",
      "offset": [0, 0],
      "controls": [

@@ -52,51 +52,7 @@
       },
       { "flying_item_renderer@common.flying_item_renderer": { "layer": 21 } },
       { "bundle_touch_tooltip@gameplay.bundle_touch_tooltip": {} },
-      { "bundle_cursor_tooltip@gameplay.bundle_cursor_tooltip": {} },
-      {
-        "close_button_panel": {
-           "type": "panel",
-           "layer": 80,
-           "size": [18, 18],
-           "bindings": [
-              {
-                 "binding_name"         : "#close_button_visible",
-                 "binding_name_override": "#visible"
-              }
-           ],
-           "controls": [
-              {
-                 "close_button": {
-                    "type":"panel",
-                    "$exit_panel": "",
-                    "variables": [
-                     {
-                        "requires": "($Exit_panel_enabled = true)",
-                        "$exit_panel": "common.light_close_button_sucrose"
-                     },
-                     {
-                        "requires": "($Exit_panel_enabled = false)",
-                        "$exit_panel": "common.empty_panel"
-                     },
-                     {
-                        "requires": "$pocket_screen",
-                        "$exit_panel": "common.light_close_button_sucrose"
-                     }
-                  ],
-                    "controls": [
-                       {
-                          "close_button@$exit_panel": {
-                             "offset": [100.8, -59],
-                             "anchor_from": "center",
-                             "anchor_to": "center"
-                          }
-                       }
-                    ]
-                 }
-              }
-           ]
-        }
-     }
+      { "bundle_cursor_tooltip@gameplay.bundle_cursor_tooltip": {} }
     ]
   }
 }

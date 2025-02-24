@@ -1,46 +1,47 @@
 {
   "ui_defs": [
-      // Core UI and Common Components
-      "ui/common_zeta.json",
-      "ui/left_tab_most.atemp",
-      "ui/creative_tabs.json",
-      "ui/ashur/tab_menu.atemp",
-      
-      // Recipe System
-      "ui/furnace_recipe.atemp",
-      "ui/recipe_toggle.json",
-      "ui/recipe_search_gamma.json",
-      "ui/-common/recipe_tabs.json",
-      "ui/-common/loom_common.json",
-      "ui/-common/trade_common.json",
-      
-      // Timer
-      "ui/ashur/animation_common.json",
-      
-      // Base Container System
-      "ui/ashur/somali_to_Mori_no_Kamisama.atemp",
-      
-      // Layout Systems
-      "ui/ashur/creative_layout.atemp",
-      "ui/ashur/survival_layout.atemp",
-      
-      // Container Implementations
-      "ui/ashur/anvil_zeta.atemp",
-      "ui/ashur/beacon_zeta.atemp",
-      "ui/ashur/brewing_zeta.atemp",
-      "ui/ashur/cartography_zeta.atemp",
-      "ui/ashur/crafter_zeta.atemp",
-      "ui/ashur/dispenser_zeta.atemp",
-      "ui/ashur/double_chest_zeta.atemp",
-      "ui/ashur/enchanting_zeta.atemp",
-      "ui/ashur/furnace_zeta.atemp",
-      "ui/ashur/grindstone_zeta.atemp",
-      "ui/ashur/hopper_zeta.atemp",
-      "ui/ashur/loom_zeta.atemp",
-      "ui/ashur/small_chest_zeta.atemp",
-      "ui/ashur/stonecutter_zeta.atemp",
-      "ui/ashur/smithing_zeta.atemp",
-      "ui/ashur/shulker_zeta.atemp",
-      "ui/ashur/villager_zeta.atemp"
+    // Core UI and Common Components
+    "ui/common_zeta.json",
+    "ui/left_tab_most.atemp",
+    "ui/creative_tabs.json",
+    "ui/ashur/tab_menu.atemp",
+    "ui/ashur/-container_common.atemp",
+    
+    // Recipe System
+    "ui/-common/recipe_tabs.json",
+    "ui/-common/loom_common.json",
+    "ui/-common/trade_common.json",
+    "ui/furnace_recipe.atemp",
+    "ui/recipe_toggle.json",
+    "ui/recipe_search_gamma.json",
+    
+    // Timer
+    "ui/ashur/animation_common.json",
+    
+    // Base Container System
+    "ui/ashur/somali_to_Mori_no_Kamisama.atemp",
+    
+    // Layout Systems
+    "ui/ashur/creative_layout.atemp",
+    "ui/ashur/survival_layout.atemp",
+    
+    // Container Implementations
+    "ui/ashur/anvil_zeta.atemp",
+    "ui/ashur/beacon_zeta.atemp",
+    "ui/ashur/brewing_zeta.atemp",
+    "ui/ashur/cartography_zeta.atemp",
+    "ui/ashur/crafter_zeta.atemp",
+    "ui/ashur/dispenser_zeta.atemp",
+    "ui/ashur/double_chest_zeta.atemp",
+    "ui/ashur/enchanting_zeta.atemp",
+    "ui/ashur/furnace_zeta.atemp",
+    "ui/ashur/grindstone_zeta.atemp",
+    "ui/ashur/hopper_zeta.atemp",
+    "ui/ashur/loom_zeta.atemp",
+    "ui/ashur/small_chest_zeta.atemp",
+    "ui/ashur/stonecutter_zeta.atemp",
+    "ui/ashur/smithing_zeta.atemp",
+    "ui/ashur/shulker_zeta.atemp",
+    "ui/ashur/villager_zeta.atemp"
   ]
 }

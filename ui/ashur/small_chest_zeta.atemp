@@ -32,50 +32,6 @@
   "small_chest_panel": {
     "type": "panel",
     "controls": [
-      {
-        "close_button_panel": {
-          "type": "panel",
-          "layer": 80,
-          "size": [18, 18],
-          "bindings": [
-            {
-              "binding_name": "#close_button_visible",
-              "binding_name_override": "#visible"
-            }
-          ],
-          "controls": [
-            {
-              "close_button": {
-                "type": "panel",
-                "$exit_panel": "",
-                "variables": [
-                  {
-                    "requires": "($Exit_panel_enabled = true)",
-                    "$exit_panel": "common.light_close_button_sucrose"
-                  },
-                  {
-                    "requires": "($Exit_panel_enabled = false)",
-                    "$exit_panel": "common.empty_panel"
-                  },
-                  {
-                    "requires": "$pocket_screen",
-                    "$exit_panel": "common.light_close_button_sucrose"
-                  }
-                ],
-                "controls": [
-                  {
-                    "close_button@$exit_panel": {
-                      "offset": [100.8, -75],
-                      "anchor_from": "center",
-                      "anchor_to": "center"
-                    }
-                  }
-                ]
-              }
-            }
-          ]
-        }
-      },
       { "container_gamepad_helpers@common.container_gamepad_helpers": {} },
       { "selected_item_details_factory@common.selected_item_details_factory": {} },
       { "item_lock_notification_factory@common.item_lock_notification_factory": {} },

@@ -212,56 +212,51 @@
       }
     ]
   },
-
-  "scroll_panel@common.container_scroll_panel": {
-    "$creative_layout": true,
-    "size": [ 180, 112 ],
-    "layer": 6,
-    "$scroll_size": [ 12, 110 ],
-    "$scroll_track_offset": [ -1, 1 ],
-    "$scroll_view_port_size": [ 163, 90.8 ],
-    "$scroll_view_port_offset": [ 1, 1 ],
-    "anchor_from": "top_left",
-    "anchor_to": "top_left",
-    "$scrolling_pane_size": [ "100%", "100%" ],
-    "$scrolling_pane_offset": [ 1, 0 ],
-    "$scroll_track_image_control": "somali_to_Mori_no_Kamisama.creative_container_scrollbar_track",
-    "$scroll_box_mouse_image_control": "somali_to_Mori_no_Kamisama.creative_container_scroll_box_image",
-    "$scroll_box_touch_image_control": "somali_to_Mori_no_Kamisama.creative_container_scroll_box_image",
-    "$scrolling_panel_base_button_mappings": [
-      {
-        "from_button_id": "button.menu_select",
-        "to_button_id": "button.destroy_selection",
-        "mapping_type": "pressed"
-      },
-      {
-        "from_button_id": "button.menu_secondary_select",
-        "to_button_id": "button.container_reset_held",
-        "mapping_type": "pressed"
-      },
-      {
-        "from_button_id": "button.menu_ok",
-        "to_button_id": "button.destroy_selection",
-        "mapping_type": "pressed"
-      },
-      {
-        "from_button_id": "button.controller_back",
-        "to_button_id": "button.destroy_selection",
-        "mapping_type": "pressed",
-        "ignored": "(not $is_ps4)"
-      },
-      {
-        "from_button_id": "button.controller_select",
-        "to_button_id": "button.clear_hotbar_or_remove_one",
-        "mapping_type": "pressed"
-      },
-      {
-        "from_button_id": "button.controller_secondary_select",
-        "to_button_id": "button.container_reset_held",
-        "mapping_type": "pressed"
-      }
-    ]
-  },
+    "scroll_panel@common.container_scroll_panel": {
+      "size": [ 180, 112 ],
+      "offset": [ 8, 17 ],
+      "layer": 6,
+      "$scroll_size": [ 12, 110 ],
+      "$scroll_track_offset": [ -1, 1 ],
+      "$scroll_view_port_size": [ 161, 88 ],
+      "$scroll_view_port_offset": [ 1, 1 ],
+      "$scroll_grid_size": [ 162, "100%c-2px" ],
+      "$scroll_grid_offset": [ -1, -1 ],
+      "anchor_from": "top_left",
+      "anchor_to": "top_left",
+      "$scrolling_pane_size": [ "100%", "100%" ],
+      "$scrolling_pane_offset": [ 0, 0 ],
+      "$scroll_track_image_control": "common.empty_panel",
+      "$scroll_box_mouse_image_control": "somali_to_Mori_no_Kamisama.scroll_box_image",
+      "$scroll_box_touch_image_control": "somali_to_Mori_no_Kamisama.scroll_box_image",
+      "$scrolling_panel_base_button_mappings": [
+        {
+          "from_button_id": "button.menu_select",
+          "to_button_id": "button.destroy_selection",
+          "mapping_type": "pressed"
+        },
+        {
+          "from_button_id": "button.menu_secondary_select",
+          "to_button_id": "button.container_reset_held",
+          "mapping_type": "pressed"
+        },
+        {
+          "from_button_id": "button.menu_ok",
+          "to_button_id": "button.destroy_selection",
+          "mapping_type": "pressed"
+        },
+        {
+          "from_button_id": "button.controller_select",
+          "to_button_id": "button.clear_hotbar_or_remove_one",
+          "mapping_type": "pressed"
+        },
+        {
+          "from_button_id": "button.controller_secondary_select",
+          "to_button_id": "button.container_reset_held",
+          "mapping_type": "pressed"
+        }
+      ]
+    },
 
   "scroll_grid_panel@crafting.crafting_root_panel": {
     "type": "input_panel",
@@ -1135,36 +1130,6 @@
               "binding_type": "global",
               "binding_name": "#is_recipe_book_layout",
               "binding_name_override": "#visible"
-            }
-          ]
-        }
-      },
-      {
-        "close_button": {
-          "type": "panel",
-          "$exit_panel": "",
-          "variables": [
-            {
-              "requires": "($Exit_panel_enabled = true)",
-              "$exit_panel": "common.light_close_button_sucrose"
-            },
-            {
-              "requires": "($Exit_panel_enabled = false)",
-              "$exit_panel": "common.empty_panel"
-            },
-            {
-              "requires": "$pocket_screen",
-              "$exit_panel": "common.light_close_button_sucrose"
-            }
-          ],
-          "controls": [
-            {
-              "close_button@$exit_panel": {
-                "offset": [106.8, -61],
-                "layer": 90,
-                "anchor_from": "center",
-                "anchor_to": "center"
-              }
             }
           ]
         }

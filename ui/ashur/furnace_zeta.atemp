@@ -475,7 +475,7 @@
   /* === PAGE OFFSET CONTROLLER === */
   "misc_panel@common.empty_panel": {
      "controls": [
-        {"misc@somali_to_Mori_no_Kamisama.creative_container_scroll_box_image": {}}
+        {"misc@furnace_recipe.burn_base_panel": {"$is_misc_tab|default": true,"offset": [-204, -40]}}
      ]
   },
 
@@ -495,7 +495,7 @@
 
   "alpha_tepes_offset_template@furnace_zeta.offset": {
      "type": "panel",
-     "clips_children": false,
+     "clips_children": true,
      "size": [125, 100],
      "controls": [
         {
@@ -849,30 +849,6 @@
       "anchor_to": "right_middle",
       "$custom_slot_offset|default": [-2, -1],
       "controls": [
-         {
-            "close_button_panel": {
-               "type": "panel",
-               "layer": 80,
-               "size": [18, 18],
-               "bindings": [{"binding_name": "#close_button_visible", "binding_name_override": "#visible"}],
-               "controls": [
-                  {
-                     "close_button": {
-                        "type": "panel",
-                        "$exit_panel": "",
-                        "variables": [
-                           {"requires": "($Exit_panel_enabled = true)", "$exit_panel": "common.light_close_button_sucrose"},
-                           {"requires": "($Exit_panel_enabled = false)", "$exit_panel": "common.empty_panel"},
-                           {"requires": "$pocket_screen", "$exit_panel": "common.light_close_button_sucrose"}
-                        ],
-                        "controls": [
-                           {"close_button@$exit_panel": {"offset": [180.8, -75], "anchor_from": "center", "anchor_to": "center"}}
-                        ]
-                     }
-                  }
-               ]
-            }
-         },
          {"container_gamepad_helpers@common.container_gamepad_helpers": {}},
          {"selected_item_details_factory@common.selected_item_details_factory": {}},
          {"item_lock_notification_factory@common.item_lock_notification_factory": {}},

@@ -41,7 +41,7 @@
   "$output": false,
   "$loom_screen": false,
   "$creative_layout": false,
-  "$all_Screen_bg_transparency": 0,
+  "$all_Screen_bg_transparency": 0.7,
   // Recipe Book Settings
   "$no": [0, 63],
   "$uh": [-1.8, 63],

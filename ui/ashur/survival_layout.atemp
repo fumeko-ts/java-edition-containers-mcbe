@@ -811,29 +811,6 @@
      "common_panel@$somali-ch": { "offset": [0, 0], "$show_close_button": false }
     },
     {
-     "close_button": {
-      "type": "panel",
-      "$exit_panel": "",
-      "variables": [
-       {
-        "requires"   : "($Exit_panel_enabled = true)"     ,
-        "$exit_panel": "common.light_close_button_sucrose"
-       },
-       {"requires": "($Exit_panel_enabled = false)", "$exit_panel": "common.empty_panel"},
-       {"requires": "$pocket_screen", "$exit_panel": "common.light_close_button_sucrose"}
-      ],
-      "controls": [
-       {
-        "close_button@$exit_panel": {
-         "offset": [100.8, -75.8],
-         "anchor_from": "center",
-         "anchor_to": "center"
-        }
-       }
-      ]
-     }
-    },
-    {
      "crafting_layout": {
       "type": "panel",
       "size": [22, 20],
