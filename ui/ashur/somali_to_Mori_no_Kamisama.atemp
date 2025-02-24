@@ -207,13 +207,15 @@
     "scroll_box_image": {
       "type": "panel",
       "size": ["100% - 2px", "100% - 2px"],
+      "offset":"$scroll_bar_ashur_offset",
+      "$scroll_bar_ashur_offset":[-0.4, 1],
       "controls": [
          {
          "js": { 
             "type": "image", 
             "texture": "assets/minecraft/textures/gui/sprites/container/loom/scroller.png", 
             "size": [12, 15],
-            "offset": [-0.4, 1],
+            "offset": "$scroll_bar_ashur_offset",
             "alpha": 1,
             "anchor_from": "top_middle", 
             "anchor_to": "top_middle", 
