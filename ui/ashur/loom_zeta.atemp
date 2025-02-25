@@ -201,6 +201,7 @@
  },
 
  "result_item_slot@common.container_item": {
+   "$25x25_slot": true, // This indicates whether to use the default 18x18 hover texture or not. 
    "$item_renderer_size": [ 18, 18 ],
    "$item_renderer_offset": [ -1, 0 ],
    "$item_collection_name": "loom_result_items",
@@ -429,12 +430,13 @@
       "$scroll_bar_size": [ 14, "100%" ],
       "anchor_to": "center",
       "anchor_from": "center",
-      "$scroll_bar_offset": [ 28.5, -1 ],
+      "$scroll_bar_offset": [ 28.1, 0 ],
       "offset": [ 60, 13 ],
       "$scroll_size": [ 14, 60 ],
       "$scroll_view_port_offset": [0, 0],
       "$scroll_view_port_size": [ 56, 60 ],
       "$scrolling_pane_size": [ "100%", "100%" ],
+      "$misc_scroller_offset":[-0.6,1],
       "$scrolling_content": "loom_zeta.scroll_grid_panel",
       "$scroll_track_image_control": "common.empty_panel",
       "$scroll_box_mouse_image_control": "somali_to_Mori_no_Kamisama.scroll_box_image",

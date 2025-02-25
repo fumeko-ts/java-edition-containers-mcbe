@@ -38,7 +38,7 @@
    "anchor_to": "center",
    "anchor_from": "center",
    "layer": 10,
-   "controls": [{"survival_toggle@common.custom_menu_button":{"$toggle_new_name": "ashur"}}]
+   "controls": [{"survival_toggle@common.ashur_toggle":{"$toggle_new_name": "ashur"}}]
 },
 
 //highlight slot overide
@@ -159,6 +159,10 @@
    "$slot_vars": "common.highlight_slot",
    "variables": [
      {
+       "requires": "($25x25_slot = true)",
+       "$slot_vars":"common.25x25"
+     },
+     {
        "requires": "($recipe_book = true)",
        "$slot_vars": "common.empty_panel"
      }
@@ -223,6 +227,15 @@
    "$white_highlight_slot_size|default": [ 16, 16 ],
    "alpha": 0.45
  },
+ "25x25": {
+  "type": "image",
+  "texture": "textures/atemp/ui/white_slot",
+  "size": "$white_25x25_size",
+  "offset": "$white_25x25_offset",
+  "$white_25x25_offset|default": [0, 0],
+  "$white_25x25_size|default": [ 24, 24 ],
+  "alpha": 0.45
+},
 
  "white_border_slot": {
    "type": "image",
@@ -791,41 +804,6 @@
    }
   ]
  },
- "loom_scroller_box": {
-  "type": "panel",
-  "controls": [
-   {
-    "box": {
-     "type": "scrollbar_box",
-     "anchor_to": "top_left",
-     "anchor_from": "top_left",
-     "layer": 1,
-     "visible": "$scroll_box_visible",
-     "contained": true,
-     "draggable": "vertical",
-     "$scroll_box_mouse_image_control|default": "common.loom_scrollbar_box_image",
-     "$scroll_box_touch_image_control|default": "common.touch_scrollbar_box_image",
-     "button_mappings": [
-      {
-       "from_button_id": "button.menu_select",
-       "to_button_id": "button.menu_select",
-       "mapping_type": "pressed",
-       "button_up_right_of_first_refusal": true
-      }
-     ],
-     "controls": [
-      { "mouse_box@$scroll_box_mouse_image_control": {"ignored": "$touch"} },
-      {
-       "touch_box@$scroll_box_touch_image_control": {
-        "size"   : "$scroll_box_size",
-        "ignored": "(not $touch)"
-       }
-      }
-     ]
-    }
-   }
-  ]
- },
  "screen_background": {
    "type": "image",
    "texture": "textures/ui/screen_background",
@@ -834,46 +812,6 @@
    "$screen_background_alpha|default": "",
    "alpha": "$all_Screen_bg_transparency"
   },
- "loom_scrollbar_box_image": {
-  "type": "image",
-  "texture": "assets/minecraft/textures/gui/sprites/container/creative_inventory/scroller",
-  "size": [5, "100%"],
-  "layer": 4
- },
- "loom_box_image": {
-  "type"   : "image"                                                        ,
-  "texture": "assets/minecraft/textures/gui/sprites/container/loom/scroller"
- },
- "loom_scrollbar": {
-  "type": "image",
-  "layer": 1,
-  "anchor_from": "top_left",
-  "anchor_to": "top_left",
-  "texture": ""
- },
- "loom_controler": {
-  "type": "panel",
-  "layer": 1,
-  "anchor_to": "top_right",
-  "anchor_from": "top_right",
-  "controls": [
-   { "rails@common.loom_scrollbar": {"allow_clipping": false} }
-  ]
- },
- "creative_inventory_box_img": {
-  "type": "image",
-  "size": [14, 18],
-  "texture": "assets/minecraft/textures/gui/sprites/container/creative_inventory/scroller"
- },
- "creative_inventory_track_img": {
-  "type": "panel",
-  "layer": 1,
-  "anchor_to": "top_right",
-  "anchor_from": "top_right",
-  "controls": [
-   { "rails@common.creative_inventory_box_img": {"allow_clipping": true} }
-  ]
- },
  "container_slot_button_prototype": {
    "type": "button",
    "offset": "$custom_slot_offset",
@@ -1019,59 +957,6 @@
        "presed@$highlight_control": {"offset": [3, 1]}
      }
    ]
- },
- "stonecutter_panel@common.scrolling_panel_with_offset": {
-  "$scrolling_content|default": "common.container_grid",
-  "$scrolling_pane_offset": [0, 0],
-  "$scrolling_pane_size": ["100%", "100%"],
-  "$scrolling_pane_size_touch": ["100% + 10px", "100%"],
-  "$scroll_size_touch": [18, "100%"],
-  "$scroll_view_port_size": [74, 64],
-  "$scroll_view_port_size_touch": ["100% - 18px", "100% - 2px"],
-  "$scroll_view_port_offset": [1, 1],
-  "$scroll_view_port_offset_touch": [0, 1],
-  "$scroll_box_size": [12, 15],
-  "$wider_scroll_area": true,
-  "$scroll_bar_right_padding_size": [0, 0],
-  "$scroll_background_image_control": "common.container_scroll_background_image",
-  "$background_size_touch": ["100% - 10px", "100%"],
-  "$scroll_track_image_control": "common.container_scrollbar_track",
-  "$scroll_box_mouse_image_control": "common.container_scroll_box_image",
-  "$scroll_box_touch_image_control": "common.container_touch_scrollbar_box_image",
-  "$allow_scrolling_even_when_content_fits": false,
-  "$scrolling_panel_base_button_mappings": [
-   {
-    "from_button_id": "button.menu_select"         ,
-    "to_button_id"  : "button.container_reset_held",
-    "mapping_type"  : "pressed"
-   },
-   {
-    "from_button_id": "button.menu_secondary_select",
-    "to_button_id"  : "button.container_reset_held" ,
-    "mapping_type"  : "pressed"
-   },
-   {
-    "from_button_id": "button.menu_ok"             ,
-    "to_button_id"  : "button.container_reset_held",
-    "mapping_type"  : "pressed"
-   },
-   {
-    "from_button_id": "button.controller_back"     ,
-    "to_button_id"  : "button.container_reset_held",
-    "mapping_type"  : "pressed"                    ,
-    "ignored"       : "(not $is_ps4)"
-   },
-   {
-    "from_button_id": "button.controller_select"   ,
-    "to_button_id"  : "button.container_reset_held",
-    "mapping_type"  : "pressed"
-   },
-   {
-    "from_button_id": "button.controller_secondary_select",
-    "to_button_id"  : "button.container_reset_held"       ,
-    "mapping_type"  : "pressed"
-   }
-  ]
  },
  "base_screen_maru": {
   "type": "screen",

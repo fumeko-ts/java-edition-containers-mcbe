@@ -811,6 +811,7 @@
       "controls": [
          {
             "output_item@common.container_item": {
+               "$25x25_slot": true, // This indicates whether to use the default 18x18 hover texture or not. 
                "anchor_from": "left_middle",
                "anchor_to": "left_middle",
                "size": [26, 26],
