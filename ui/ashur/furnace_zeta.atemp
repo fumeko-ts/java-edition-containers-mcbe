@@ -857,10 +857,10 @@
             "root_panel@common.empty_panel": {
                "size": [176, 166],
                "layer": 1,
-               "offset": [79.2, 0],
+               "offset": [0, 0],
                "$recipe_book_offset|default":[-163, 0],
                "controls": [
-                  {"recipe_book@furnace_zeta.furnace_recipe_panel": {}},
+                  //{"recipe_book@furnace_zeta.furnace_recipe_panel": {}},
                   {"common_panel@somali_to_Mori_no_Kamisama.somali": {"$furnace_screen": true}},
                   {
                      "furnace_screen_inventory": {
