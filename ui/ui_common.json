@@ -65,7 +65,7 @@
         },
         {
          "binding_type": "view",
-         "source_property_name": "(#hover_text_binding + (#end_text + '\n-\nAux Id: ' + #aux_id))",
+         "source_property_name": "(#hover_text_binding + ('\n§8-\nAux Id: ' + #aux_id))",
          "target_property_name": "#hover_text"
         },
         {
@@ -133,14 +133,9 @@
       },
       {
        "binding_type": "view",
-       "source_property_name": "('\n§8-§7\nDurability: ' + #start + #slash + #result - '\n§8-§7\nDurability: 0/')",
-       "target_property_name": "#end_text",
+       "source_property_name": "(#hover_text_binding + (#end_text + '\n§8-\nAux Id: ' + #aux_id) + '\n§8-§7\nDurability: ' + #start + #slash + #result - '\n§8-§7\nDurability: 0/')",
+       "target_property_name": "#hover_text",
        "binding_condition": "always"
-      },
-      {
-       "binding_type": "view",
-       "source_property_name": "(#hover_text_binding + (#end_text + '\n§8-\nAux Id: ' + #aux_id))",
-       "target_property_name": "#hover_text"
       },
       {
        "binding_type"        : "view"                          ,
