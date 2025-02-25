@@ -1395,6 +1395,7 @@
             "size": [81, 14],
             "property_bag": {"#property_field": "#item_name"},
             "$shadow": true,
+            
             "max_length": 30,
             "$text_edit_binding_name": "#text_box_item_name",
             "$text_edit_box_label_size": ["default", 8],
