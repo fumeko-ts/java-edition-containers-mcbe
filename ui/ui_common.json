@@ -206,7 +206,49 @@
        }
      }
    ]
- },
+ },  "scroll_box": {
+  "type": "panel",
+  "controls": [
+    {
+      "box": {
+        "type": "scrollbar_box",
+        "anchor_to": "top_left",
+        "anchor_from": "top_left",
+        "layer": 1,
+        "visible": "$scroll_box_visible",
+        "contained": true,
+        "draggable": "vertical",
+
+        "$scroll_box_mouse_image_control|default": "common.scrollbar_box_image",
+        "$scroll_box_touch_image_control|default": "common.touch_scrollbar_box_image",
+
+        "button_mappings": [
+          {
+            "from_button_id": "button.menu_select",
+            "to_button_id": "button.menu_select",
+            "mapping_type": "pressed",
+            "button_up_right_of_first_refusal": true
+          }
+        ],
+        "controls": [
+          {
+            "mouse_box@$scroll_box_mouse_image_control": {
+              "allow_clipping": true,
+              "ignored": "$touch"
+            }
+          },
+          {
+            "touch_box@$scroll_box_touch_image_control": {
+              "size": "$scroll_box_size",
+              "ignored": "(not $touch)"
+            }
+          }
+        ]
+      }
+    }
+  ]
+
+},
  "hover_text": {
    "$hover_text_max_width|default": 0, // A value greater than zero will result in line breaks being added to limit width
    "type": "custom",
