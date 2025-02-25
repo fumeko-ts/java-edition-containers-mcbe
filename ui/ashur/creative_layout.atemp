@@ -211,20 +211,22 @@
         "binding_collection_name": "$collection_name"
       }
     ]
-  },
-    "scroll_panel@common.container_scroll_panel": {
-      "size": [ 180, 100 ],
+  },        
+  "scrolling_panel@common.common_container_scrolling_panel": {
+      "size": [ 181, 112 ],
+      "$collection_name": "recipe_book",
       "offset": [ 8, 17 ],
       "layer": 6,
-      "$scroll_size": [ 12, 100 ],
-      "$scroll_track_offset": [ -1, 1 ],
-      "$scroll_view_port_size": [ 161, 88 ],
-      "$scroll_view_port_offset": [ 1, 1 ],
-      "$scroll_grid_size": [ 162, "100%c-2px" ],
+      "$scroll_size": [ 12, "110px - 4px"],
+      "$scroll_track_offset": [ -5, 1 ],
+      "$scroll_view_port_size": [ 180, 90 ],
+      "$scroll_view_port_offset": [ 4, 1 ],
+      "$scroll_grid_size": [ 180, "100%c" ],
       "$scroll_grid_offset": [ -1, -1 ],
-      "$scrolling_pane_size": [ "100%", "100%" ],
-      "$scrolling_pane_offset": [ 0, 0 ],
-      "$misc_scroller_offset":[4,0],
+      "$scrolling_pane_size": [ "100% + 3px", "100%" ],//if scroll bar is cut off change width here
+      "$scrolling_pane_offset": [ -3, 0 ],
+      "$misc_scroller_offset":[3,0],
+      "$scrolling_content": "creative_layout.scroll_grid",
       "$scroll_track_image_control": "common.empty_panel",
       "$scroll_box_mouse_image_control": "somali_to_Mori_no_Kamisama.scroll_box_image",
       "$scroll_box_touch_image_control": "somali_to_Mori_no_Kamisama.scroll_box_image",
@@ -258,18 +260,6 @@
         }
       ]
     },
-
-  "scroll_grid_panel@crafting.crafting_root_panel": {
-    "type": "input_panel",
-    "size": ["100%", "100%c"],
-    "controls": [{"grid@creative_layout.scroll_grid": {}}]
-  },
-
-  "recipe_book_scroll_panel@creative_layout.scroll_panel": {
-    "$scrolling_content": "creative_layout.scroll_grid_panel",
-    "$scroll_box_visible":true,
-    "$collection_name": "recipe_book"
-  },
 
   "recipe_p": {
     "type": "panel",
@@ -1025,7 +1015,7 @@
         }
       },
       {
-        "armor_offhand@creative_layout.recipe_book_scroll_panel": {
+        "armor_offhand@creative_layout.scrolling_panel": {
           "offset": [7, 16]
         }
       },
