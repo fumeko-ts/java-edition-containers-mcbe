@@ -1,5 +1,6 @@
 {
   "namespace": "common",
+  
   "toggle_controlers@common_toggles.light_template_toggle": {
      "$default_texture": "assets/minecraft/textures/gui/sprites/recipe_book/button",
      "$hover_texture": "assets/minecraft/textures/gui/sprites/recipe_book/button_highlighted",
@@ -368,8 +369,10 @@
      "$text_edit_text_control|default": "display_text",
      "text_control": "$text_edit_text_control",
      "$place_holder_control": "common.text_edit_box_place_holder_label",
+
      "$text_background_default": "common.edit_box_indent2",
      "$text_background_hover": "common.edit_box_indent_hover2",
+     
      "place_holder_control": "place_holder_control",
      "$text_edit_box_hovered_button_id|default": "button.text_edit_box_hovered",
      "$text_edit_box_clear_from_button_id|default": "button.menu_clear",
@@ -631,9 +634,10 @@
      "virtual_keyboard_buffer_control": "$virtual_keyboard_buffer_control",
      "$text_edit_text_control|default": "display_text",
      "text_control": "$text_edit_text_control",
-     "$place_holder_control": "common.text_edit_box_place_holder_label",
-     "$text_background_default": "common.edit_box_indent1",
-     "$text_background_hover": "common.edit_box_indent_hover1",
+     "$place_holder_control": "common.text_edit_box_place_holder_label",     
+     "$text_background_default": "somali_to_Mori_no_Kamisama.text_field",
+     "$text_background_hover": "somali_to_Mori_no_Kamisama.text_field_highlighted",
+
      "place_holder_control": "place_holder_control",
      "$text_edit_box_hovered_button_id|default": "button.text_edit_box_hovered",
      "$text_edit_box_clear_from_button_id|default": "button.menu_clear",

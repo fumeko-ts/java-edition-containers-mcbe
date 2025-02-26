@@ -49,7 +49,8 @@
      "arrow_icon": {
         "type": "image",
         "texture": "textures/ui/arrow_large",
-        "size": [22, 15]
+        "size": [22, 15],
+        "alpha": 0
      },
      "cross_out_icon_image": {
         "type": "image",

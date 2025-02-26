@@ -100,6 +100,7 @@
        "size": ["100%", "100%"],
        "anchor_to": "top_middle",
        "anchor_from": "top_middle",
+       "visible": false,
        "controls": [
           {
              "level1@beacon_zeta.pyramid_image": {
@@ -129,6 +130,7 @@
     },
     "item_seperator@beacon_zeta.image_atlas": {
        "size": [5, 18],
+       "visible": false,
        "texture": "textures/ui/item_seperator",
        "anchor_to": "top_left",
        "anchor_from": "top_left"
@@ -592,16 +594,6 @@
        "controls": [
           {"button_panel@beacon_zeta.button_panel": {}},
           { "pyramid_panel@beacon_zeta.pyramid_panel": {"layer": 1} },
-          {
-             "middle_strip@beacon_zeta.image_atlas": {
-                "offset": [0, 3],
-                "layer": 1,
-                "anchor_from": "top_middle",
-                "anchor_to": "top_middle",
-                "texture": "textures/ui/middle_strip",
-                "size": [2, "100%-6px"]
-             }
-          },
           {
              "primary_power_label@beacon_zeta.beacon_label": {
                 "text": "tile.beacon.primary",

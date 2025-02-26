@@ -711,7 +711,7 @@
      "inventory_label@crafting.inventory_label": { "offset": [-21, 72] }
     },
     {
-     "crafting_arrow_large@crafting.crafting_arrow_large": { "offset": [61, 35.5] }
+     "crafting_arrow_large@crafting.crafting_arrow_large": { "alpha":0,"offset": [61, 35.5] }
     },
     {
      "crafting_grid_3x3_with_label_0@crafting.crafting_grid_3x3_with_label": { "offset": [0, 5] }
@@ -732,6 +732,7 @@
       {
         "work_bench_output@crafting.inventory_container_item": {
           "size": [ 26, 26 ],
+          "$25x25_slot": true,
           "$cell_image_size": [ 26, 26 ],
           "$item_collection_name": "crafting_output_items",
           "$button_ref": "crafting.output_no_coalesce_container_slot_button",
@@ -758,6 +759,7 @@
     {
      "crafting_arrow@crafting.crafting_arrow": {
       "offset": [46, 29],
+      "alpha": 0,
       "bindings": [
        {
         "binding_type": "view",

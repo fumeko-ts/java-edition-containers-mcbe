@@ -11,7 +11,7 @@
     "layer": 2
   },
    "arrow_icon": { "type": "image", "texture": "textures/ui/arrow_large", "size": [18, 0] },
-   "banner_outline": {"type": "image", "texture": "textures/ui/Banners"},
+   "banner_outline": {"type": "image", "texture": "textures/ui/Banners","alpha": 0},
    "input_slots_stack_panel": {
       "type": "stack_panel",
       "orientation": "horizontal",
@@ -87,7 +87,7 @@
       "offset": [0, 15],
       "controls": [
          {"main_top_half_stack@loom_zeta.main_top_half_stack": { "offset": [-10, 0] }},
-         {"result_slot_holder@loom_zeta.result_slot_holder": { "offset": [73, -6.5] }}
+         {"result_slot_holder@loom_zeta.result_slot_holder": { "offset": [73.4, -5] }}
       ]
    },
    "right_panel@common.empty_panel": {
@@ -247,10 +247,9 @@
  "result_banner_renderer": {
    "type": "custom",
    "renderer": "banner_pattern_renderer",
-   "size": [ 21, 40 ],
+   "size": [ 18.4, 38.4 ],
    "anchor_from": "top_left",
    "anchor_to": "top_left",
-   "offset": [ 1.4, 1 ],
    "bindings": [
      {
        "binding_name": "#result_patterns",

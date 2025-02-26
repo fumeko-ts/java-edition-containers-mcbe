@@ -685,7 +685,8 @@
       "texture": "textures/ui/arrow_inactive",
       "anchor_from": "top_left",
       "anchor_to": "top_left",
-      "size": [22, 16]
+      "size": [22, 16],
+      "alpha": 0
    },
 
    "furnace_arrow_full_image": {

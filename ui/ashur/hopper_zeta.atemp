@@ -31,9 +31,11 @@
           { "redstone_input_grid@hopper_zeta.redstone_input_grid": {} }
         ]
       },
+
     "hopper_panel": {
     "type": "panel",
     "controls": [
+
       { "container_gamepad_helpers@common.container_gamepad_helpers": {} },
       { "selected_item_details_factory@common.selected_item_details_factory": {} },
       { "item_lock_notification_factory@common.item_lock_notification_factory": {} },

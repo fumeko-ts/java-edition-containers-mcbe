@@ -11,7 +11,8 @@
         "type": "image",
         "texture": "textures/ui/arrow_large",
         "size": [22, 15],
-        "offset": [5, -1]
+        "offset": [5, -1],
+        "alpha": 0
       },
       "cross_out_icon": {
         "type": "image",

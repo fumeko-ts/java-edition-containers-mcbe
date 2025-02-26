@@ -215,6 +215,7 @@
     "smoker@image_element"        : { "uv_size" : [176, 166], "texture" : "assets/minecraft/textures/gui/container/smoker",           "offset" : [0,    0]    },
     "stonecutter@image_element"   : { "uv_size" : [176, 166], "texture" : "assets/minecraft/textures/gui/container/stonecutter",      "offset" : [0,    2]    },
     "trade@image_element"         : { "uv_size" : [276, 166], "texture" : "assets/minecraft/textures/gui/container/villager",         "offset" : [-70, 0]    },
+    //container effects viewer pane
     //content for the other textures
     "scroll_box_image": {
       "type": "panel",
@@ -268,6 +269,35 @@
           "type": "image",
           "texture": "assets/minecraft/textures/gui/sprites/container/villager/scroller",
           "size": [ 6, "100%" ]
+        }
+      }
+    ]
+  },
+  "text_field": {
+    "type": "panel",
+    "size": [ "100%", "100%" ],
+    "controls": [
+      {
+        "texture": {
+          "type": "image",
+          "nineslice_size": 1,
+          "texture": "assets/minecraft/textures/gui/sprites/widget/text_field",
+          "size": [ "100%", "100%" ]
+        }
+      }
+    ]
+  },
+
+  "text_field_highlighted": {
+    "type": "panel",
+    "size": [ "100%", "100%" ],
+    "controls": [
+      {
+        "texture": {
+          "type": "image",
+          "nineslice_size": 1,
+          "texture": "assets/minecraft/textures/gui/sprites/widget/text_field_highlighted",
+          "size": [ "100%", "100%" ]
         }
       }
     ]
