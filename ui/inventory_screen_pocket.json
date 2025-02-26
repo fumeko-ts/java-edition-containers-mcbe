@@ -1,71 +1,70 @@
 {
   "namespace": "crafting_pocket",
   "crafting_screen_pocket@crafting_pocket.inventory_screen_pocket_base": {
-    "send_telemetry": false,
-    "$inventory_gui": false,
-    "$screen_content": "",
-    "$screen_bg_content": "",
-    "load_screen_immediately": true, 
-    "$use_loading_bars": false,
-    "low_frequency_rendering": true, 
-    "render_game_behind": true,
-    "force_render_below": true,      
-    "absorbs_input": true,
-    "is_showing_menu": true, 
-    "$screen_background_alpha": 0.4,
-    "$top_half_variant": "",
-    "variables": [
-      {
-        "requires": "($desktop_screen)",
-        "$inventory_gui": false,
-        "send_telemetry": false,
-        "$screen_content": "crafting.recipe_inventory_screen_content",
-        "$screen_bg_content": "common.screen_background",
-        "$top_half_variant": "crafting.crafting_panel_top_half"
-      },
-      {
-        "requires": "($pocket_edition or $pocket_screen)",
-        "$inventory_gui": false,
-        "send_telemetry": false,
-        "$screen_content": "crafting.recipe_inventory_screen_content",
-        "$screen_bg_content": "common.screen_background",
-        "$top_half_variant": "crafting.crafting_panel_top_half"
-      }
-    ]
+     "send_telemetry": false,
+     "$inventory_gui": false,
+     "$screen_content": "",
+     "$screen_bg_content": "",
+     "load_screen_immediately": true,
+     "$use_loading_bars": false,
+     "low_frequency_rendering": true,
+     "render_game_behind": true,
+     "force_render_below": true,
+     "absorbs_input": true,
+     "is_showing_menu": true,
+     "$screen_background_alpha": 0.4,
+     "$top_half_variant": "",
+     "variables": [
+        {
+           "requires": "($desktop_screen)",
+           "$inventory_gui": false,
+           "send_telemetry": false,
+           "$screen_content": "crafting.recipe_inventory_screen_content",
+           "$screen_bg_content": "common.screen_background",
+           "$top_half_variant": "crafting.crafting_panel_top_half"
+        },
+        {
+           "requires": "($pocket_edition or $pocket_screen)",
+           "$inventory_gui": false,
+           "send_telemetry": false,
+           "$screen_content": "crafting.recipe_inventory_screen_content",
+           "$screen_bg_content": "common.screen_background",
+           "$top_half_variant": "crafting.crafting_panel_top_half"
+        }
+     ]
   },
-
   "inventory_screen_pocket@crafting_pocket.inventory_screen_pocket_base": {
-    "send_telemetry": false,
-    "$screen_content": "",
-    "$screen_bg_content": "",
-    "$screen_background_alpha": 0.4,
-    "$top_half_variant": "",
-    "load_screen_immediately": true, 
-    "$use_loading_bars": false,
-    "low_frequency_rendering": true, 
-    "render_game_behind": true,
-    "force_render_below": true,      
-    "absorbs_input": true,
-    "is_showing_menu": true,   
-    "variables": [
-      {
-        "requires": "($desktop_screen)",
-        "$inventory_gui": true,
-        "send_telemetry": false,
-        "$screen_content": "crafting.recipe_inventory_screen_content",
-        "$screen_bg_content": "common.screen_background",
-        "$screen_background_alpha": 0.4,
-        "$top_half_variant": "inventory.survival_panel_top_half"
-      },
-      {
-        "requires": "($pocket_edition or $pocket_screen)",
-        "$inventory_gui": true,
-        "send_telemetry": false,
-        "$screen_content": "crafting.recipe_inventory_screen_content",
-        "$screen_bg_content": "common.screen_background",
-        "$screen_background_alpha": 0.4,
-        "$top_half_variant": "inventory.survival_panel_top_half"
-      }
-    ]
+     "send_telemetry": false,
+     "$screen_content": "",
+     "$screen_bg_content": "",
+     "$screen_background_alpha": 0.4,
+     "$top_half_variant": "",
+     "load_screen_immediately": true,
+     "$use_loading_bars": false,
+     "low_frequency_rendering": true,
+     "render_game_behind": true,
+     "force_render_below": true,
+     "absorbs_input": true,
+     "is_showing_menu": true,
+     "variables": [
+        {
+           "requires": "($desktop_screen)",
+           "$inventory_gui": true,
+           "send_telemetry": false,
+           "$screen_content": "crafting.recipe_inventory_screen_content",
+           "$screen_bg_content": "common.screen_background",
+           "$screen_background_alpha": 0.4,
+           "$top_half_variant": "inventory.survival_panel_top_half"
+        },
+        {
+           "requires": "($pocket_edition or $pocket_screen)",
+           "$inventory_gui": true,
+           "send_telemetry": false,
+           "$screen_content": "crafting.recipe_inventory_screen_content",
+           "$screen_bg_content": "common.screen_background",
+           "$screen_background_alpha": 0.4,
+           "$top_half_variant": "inventory.survival_panel_top_half"
+        }
+     ]
   }
 }

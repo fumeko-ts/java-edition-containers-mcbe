@@ -1,305 +1,289 @@
 {
-    "namespace" : "somali_to_Mori_no_Kamisama",
-    "somali" : {
-        "type"   : "panel",
-        "size"   : "$size",
-        "offset" : [0, 0],
-        // Screen states
-        "$anvil_screen"           : false,
-        "$barrel_screen"          : false,
-        "$beacon_screen"          : false,
-        "$blast_furnace_screen"   : false,
-        "$brewing_stand_screen"   : false,
-        "$cartography_screen"     : false,
-        "$crafting_screen"        : false,
-        "$crafter_screen"         : false,
-        "$dispenser_screen"       : false,
-        "$enchanting_screen"      : false,
-        "$furnace_screen"         : false,
-        "$double_chest_container" : false,
-        "$grindstone_screen"      : false,
-        "$hopper_screen"          : false,
-        "$horse_screen"           : false,
-        "$inventory_screen"       : false,
-        "$shulker_screen"         : false,
-        "$smithing_screen"        : false,
-        "$smoker_screen"          : false,
-        "$stonecutter_screen"     : false,
-        "$main_trade_screen"      : false,
-        // Container Base References
-        "$inventory_kappa": "inventory",
-        "$recipe_book_kappa": "recipe_book",
-        // Storage Containers
-        "$chest_kappa": "chest",
-        "$double_chest_kappa": "double_chest",
-        "$ender_chest_kappa": "ender_chest",
-        "$barrel_kappa": "barrel",
-        "$shulker_box_kappa": "shulker_box",
-        "$hopper_kappa": "hopper",
-        "$dispenser_kappa": "dispenser",
-        "$dropper_kappa": "dropper",
-        // Crafting Containers
-        "$crafting_kappa": "crafting",
-        "$crafter_kappa": "crafter",
-        "$smithing_kappa": "smithing",
-        "$stonecutter_kappa": "stonecutter",
-        "$grindstone_kappa": "grindstone",
-        "$loom_kappa": "loom",
-        "$cartography_kappa": "cartography",
-        // Furnace Types
-        "$furnace_kappa": "furnace",
-        "$blast_furnace_kappa": "blast_furnace",
-        "$smoker_kappa": "smoker",
-        // Special Containers
-        "$brewing_stand_kappa": "brewing_stand",
-        "$anvil_kappa": "anvil",
-        "$beacon_kappa": "beacon",
-        "$enchanting_kappa": "enchanting",
-        "$trade_kappa": "trade",
-        // Panel references
-        "$1"  : "$ep", "$2"  : "$ep",
-        "$3"  : "$ep", "$4"  : "$ep",
-        "$5"  : "$ep", "$6"  : "$ep",
-        "$7"  : "$ep", "$8"  : "$ep",
-        "$9"  : "$ep", "$10" : "$ep",
-        "$11" : "$ep", "$12" : "$ep",
-        "$13" : "$ep", "$14" : "$ep",
-        "$15" : "$ep", "$16" : "$ep",
-        "$17" : "$ep", "$18" : "$ep",
-        "$19" : "$ep", "$20" : "$ep",
-        "$21" : "$ep", "$22" : "$ep",
-        "$current_panel_offset|default": [20, -20],
-        "variables" : [
-            { "requires" : "($anvil_screen = true)",           "$size" : [176, 166], "$current_panel_offset|default": [100.8, -74], "$1"  : "$anvil_kappa"         },
-            { "requires" : "($barrel_screen = true)",          "$size" : [176, 166], "$current_panel_offset|default": [100.8, -74], "$2"  : "$barrel_kappa"        },
-            { "requires" : "($beacon_screen = true)",          "$size" : [230, 219], "$current_panel_offset|default": [126.8, -100], "$3"  : "$beacon_kappa"       },
-            { "requires" : "($blast_furnace_screen = true)",   "$size" : [176, 166], "$current_panel_offset|default": [100.8, -74], "$4"  : "$blast_furnace_kappa" },
-            { "requires" : "($brewing_stand_screen = true)",   "$size" : [176, 166], "$current_panel_offset|default": [100.8, -71], "$5"  : "$brewing_stand_kappa" },
-            { "requires" : "($cartography_screen = true)",     "$size" : [176, 166], "$current_panel_offset|default": [100.8, -71], "$6"  : "$cartography_kappa"   },
-            { "requires" : "($crafting_screen = true)",        "$size" : [176, 166], "$current_panel_offset|default": [100.8, -74], "$7"  : "$crafting_kappa"      },
-            { "requires" : "($crafter_screen = true)",         "$size" : [176, 166], "$current_panel_offset|default": [100.8, -70], "$8"  : "$crafter_kappa"       },
-            { "requires" : "($dispenser_screen = true)",       "$size" : [176, 166], "$current_panel_offset|default": [100.8, -74], "$9"  : "$dispenser_kappa"     },
-            { "requires" : "($enchanting_screen = true)",      "$size" : [176, 166], "$current_panel_offset|default": [100.8, -71], "$10" : "$enchanting_kappa"    },
-            { "requires" : "($furnace_screen = true)",         "$size" : [176, 166], "$current_panel_offset|default": [100.8, -74], "$11" : "$furnace_kappa"       },
-            { "requires" : "($double_chest_container = true)", "$size" : [176, 222], "$current_panel_offset|default": [100.8, -100], "$12" : "$double_chest_kappa" },
-            { "requires" : "($grindstone_screen = true)",      "$size" : [176, 166], "$current_panel_offset|default": [100.8, -72], "$13" : "$grindstone_kappa"    },
-            { "requires" : "($hopper_screen = true)",          "$size" : [176, 133], "$current_panel_offset|default": [100.8, -57], "$14" : "$hopper_kappa"        },
-            { "requires" : "($horse_screen = true)",           "$size" : [176, 166], "$current_panel_offset|default": [100.8, -74], "$15" : "$horse_kappa"         },
-            { "requires" : "($loom_screen = true)",            "$size" : [176, 166], "$current_panel_offset|default": [100.8, -70], "$16" : "$loom_kappa"          },
-            { "requires" : "($shulker_screen = true)",         "$size" : [176, 166], "$current_panel_offset|default": [100.8, -74], "$17" : "$shulker_box_kappa"   },
-            { "requires" : "($smithing_screen = true)",        "$size" : [176, 166], "$current_panel_offset|default": [100.8, -74], "$18" : "$smithing_kappa"      },
-            { "requires" : "($smoker_screen = true)",          "$size" : [176, 166], "$current_panel_offset|default": [100.8, -74], "$19" : "$smoker_kappa"        },
-            { "requires" : "($stonecutter_screen = true)",     "$size" : [176, 166], "$current_panel_offset|default": [100.8, -73], "$20" : "$stonecutter_kappa"   },
-            { "requires" : "($main_trade_screen = true)",      "$size" : [276, 166], "$current_panel_offset|default": [80.8, -74], "$21" : "$trade_kappa"          },
-            { "requires" : "($inventory_screen = true)",       "$size" : [176, 166], "$current_panel_offset|default": [100.8, -74], "$22" : "$inventory_kappa"     }
-        ],
-        "$text_offset": [0, 0],
-        "controls" : [
-           // { "label@label": {} },
-            { "close_button@close_button": {} },
-            { "anvil@$1"         : {} },
-            { "barrel@$2"        : {} },
-            { "beacon@$3"        : {} },
-            { "blast_furnace@$4" : {} },
-            { "brewing_stand@$5" : {} },
-            { "cartography@$6"   : {} },
-            { "crafting@$7"      : {} },
-            { "crafter@$8"       : {} },
-            { "dispenser@$9"     : {} },
-            { "enchanting@$10"   : {} },
-            { "furnace@$11"      : {} },
-            { "generic@$12"      : {} },
-            { "grindstone@$13"   : {} },
-            { "hopper@$14"       : {} },
-            { "horse@$15"        : {} },
-            { "loom@$16"         : {} },
-            { "shulker@$17"      : {} },
-            { "smithing@$18"     : {} },
-            { "smoker@$19"       : {} },
-            { "stonecutter@$20"  : {} },
-            { "trade@$21"        : {} },
-            { "inventory@$22"    : {} }
-        ]
-    },
-    "label":{
-        "type": "label",
-        "offset": "$text_offset",
-        "$text_offset": [0, 0],
-        "anchor_from": "top_left",
-        "anchor_to": "top_left",
-        "text": "$container_title",
-        "size": [ "90%", "default" ],
-        "color": "$title_text_color",
-        "layer": 20
-      },
-    "close_button": {
-      "type": "panel",  
+   "namespace": "somali_to_Mori_no_Kamisama",
+   "somali": {
+      "type": "panel",
+      "size": "$size",
+      "offset": [0, 0],
+      "$anvil_screen": false,
+      "$barrel_screen": false,
+      "$beacon_screen": false,
+      "$blast_furnace_screen": false,
+      "$brewing_stand_screen": false,
+      "$cartography_screen": false,
+      "$crafting_screen": false,
+      "$crafter_screen": false,
+      "$dispenser_screen": false,
+      "$enchanting_screen": false,
+      "$furnace_screen": false,
+      "$double_chest_container": false,
+      "$grindstone_screen": false,
+      "$hopper_screen": false,
+      "$horse_screen": false,
+      "$inventory_screen": false,
+      "$shulker_screen": false,
+      "$smithing_screen": false,
+      "$smoker_screen": false,
+      "$stonecutter_screen": false,
+      "$main_trade_screen": false,
+      "$inventory_kappa": "inventory",
+      "$recipe_book_kappa": "recipe_book",
+      "$chest_kappa": "chest",
+      "$double_chest_kappa": "double_chest",
+      "$ender_chest_kappa": "ender_chest",
+      "$barrel_kappa": "barrel",
+      "$shulker_box_kappa": "shulker_box",
+      "$hopper_kappa": "hopper",
+      "$dispenser_kappa": "dispenser",
+      "$dropper_kappa": "dropper",
+      "$crafting_kappa": "crafting",
+      "$crafter_kappa": "crafter",
+      "$smithing_kappa": "smithing",
+      "$stonecutter_kappa": "stonecutter",
+      "$grindstone_kappa": "grindstone",
+      "$loom_kappa": "loom",
+      "$cartography_kappa": "cartography",
+      "$furnace_kappa": "furnace",
+      "$blast_furnace_kappa": "blast_furnace",
+      "$smoker_kappa": "smoker",
+      "$brewing_stand_kappa": "brewing_stand",
+      "$anvil_kappa": "anvil",
+      "$beacon_kappa": "beacon",
+      "$enchanting_kappa": "enchanting",
+      "$trade_kappa": "trade",
+      "$1": "$ep",
+      "$2": "$ep",
+      "$3": "$ep",
+      "$4": "$ep",
+      "$5": "$ep",
+      "$6": "$ep",
+      "$7": "$ep",
+      "$8": "$ep",
+      "$9": "$ep",
+      "$10": "$ep",
+      "$11": "$ep",
+      "$12": "$ep",
+      "$13": "$ep",
+      "$14": "$ep",
+      "$15": "$ep",
+      "$16": "$ep",
+      "$17": "$ep",
+      "$18": "$ep",
+      "$19": "$ep",
+      "$20": "$ep",
+      "$21": "$ep",
+      "$22": "$ep",
+      "$current_panel_offset|default": [20, -20],
+      "variables": [
+         { "requires": "($anvil_screen = true)", "$size": [176, 166], "$current_panel_offset|default": [100.8, -74], "$1": "$anvil_kappa" }                   ,
+         { "requires": "($barrel_screen = true)", "$size": [176, 166], "$current_panel_offset|default": [100.8, -74], "$2": "$barrel_kappa" }                 ,
+         { "requires": "($beacon_screen = true)", "$size": [230, 219], "$current_panel_offset|default": [126.8, -100], "$3": "$beacon_kappa" }                ,
+         { "requires": "($blast_furnace_screen = true)", "$size": [176, 166], "$current_panel_offset|default": [100.8, -74], "$4": "$blast_furnace_kappa" }   ,
+         { "requires": "($brewing_stand_screen = true)", "$size": [176, 166], "$current_panel_offset|default": [100.8, -71], "$5": "$brewing_stand_kappa" }   ,
+         { "requires": "($cartography_screen = true)", "$size": [176, 166], "$current_panel_offset|default": [100.8, -71], "$6": "$cartography_kappa" }       ,
+         { "requires": "($crafting_screen = true)", "$size": [176, 166], "$current_panel_offset|default": [100.8, -74], "$7": "$crafting_kappa" }             ,
+         { "requires": "($crafter_screen = true)", "$size": [176, 166], "$current_panel_offset|default": [100.8, -70], "$8": "$crafter_kappa" }               ,
+         { "requires": "($dispenser_screen = true)", "$size": [176, 166], "$current_panel_offset|default": [100.8, -74], "$9": "$dispenser_kappa" }           ,
+         { "requires": "($enchanting_screen = true)", "$size": [176, 166], "$current_panel_offset|default": [100.8, -71], "$10": "$enchanting_kappa" }        ,
+         { "requires": "($furnace_screen = true)", "$size": [176, 166], "$current_panel_offset|default": [100.8, -74], "$11": "$furnace_kappa" }              ,
+         { "requires": "($double_chest_container = true)", "$size": [176, 222], "$current_panel_offset|default": [100.8, -100], "$12": "$double_chest_kappa" },
+         { "requires": "($grindstone_screen = true)", "$size": [176, 166], "$current_panel_offset|default": [100.8, -72], "$13": "$grindstone_kappa" }        ,
+         { "requires": "($hopper_screen = true)", "$size": [176, 133], "$current_panel_offset|default": [100.8, -57], "$14": "$hopper_kappa" }                ,
+         { "requires": "($horse_screen = true)", "$size": [176, 166], "$current_panel_offset|default": [100.8, -74], "$15": "$horse_kappa" }                  ,
+         { "requires": "($loom_screen = true)", "$size": [176, 166], "$current_panel_offset|default": [100.8, -70], "$16": "$loom_kappa" }                    ,
+         { "requires": "($shulker_screen = true)", "$size": [176, 166], "$current_panel_offset|default": [100.8, -74], "$17": "$shulker_box_kappa" }          ,
+         { "requires": "($smithing_screen = true)", "$size": [176, 166], "$current_panel_offset|default": [100.8, -74], "$18": "$smithing_kappa" }            ,
+         { "requires": "($smoker_screen = true)", "$size": [176, 166], "$current_panel_offset|default": [100.8, -74], "$19": "$smoker_kappa" }                ,
+         { "requires": "($stonecutter_screen = true)", "$size": [176, 166], "$current_panel_offset|default": [100.8, -73], "$20": "$stonecutter_kappa" }      ,
+         { "requires": "($main_trade_screen = true)", "$size": [276, 166], "$current_panel_offset|default": [80.8, -74], "$21": "$trade_kappa" }              ,
+         { "requires": "($inventory_screen = true)", "$size": [176, 166], "$current_panel_offset|default": [100.8, -74], "$22": "$inventory_kappa" }
+      ],
+      "$text_offset": [0, 0],
+      "controls": [
+         {"close_button@close_button": {}},
+         {"anvil@$1": {}}                 ,
+         {"barrel@$2": {}}                ,
+         {"beacon@$3": {}}                ,
+         {"blast_furnace@$4": {}}         ,
+         {"brewing_stand@$5": {}}         ,
+         {"cartography@$6": {}}           ,
+         {"crafting@$7": {}}              ,
+         {"crafter@$8": {}}               ,
+         {"dispenser@$9": {}}             ,
+         {"enchanting@$10": {}}           ,
+         {"furnace@$11": {}}              ,
+         {"generic@$12": {}}              ,
+         {"grindstone@$13": {}}           ,
+         {"hopper@$14": {}}               ,
+         {"horse@$15": {}}                ,
+         {"loom@$16": {}}                 ,
+         {"shulker@$17": {}}              ,
+         {"smithing@$18": {}}             ,
+         {"smoker@$19": {}}               ,
+         {"stonecutter@$20": {}}          ,
+         {"trade@$21": {}}                ,
+         {"inventory@$22": {}}
+      ]
+   },
+   "label": {
+      "type": "label",
+      "offset": "$text_offset",
+      "$text_offset": [0, 0],
+      "anchor_from": "top_left",
+      "anchor_to": "top_left",
+      "text": "$container_title",
+      "size": ["90%", "default"],
+      "color": "$title_text_color",
+      "layer": 20
+   },
+   "close_button": {
+      "type": "panel",
       "layer": 80,
       "size": [18, 18],
       "$exit_panel": "common.empty_panel",
-      "anchor_from": "center", 
-      "anchor_to": "center" ,
-      "bindings": [ 
-        {
-        "binding_name": "#close_button_visible", 
-        "binding_name_override": "#visible"
-        } 
-      ],
-      "variables": [ 
-        {
-         "requires": "($Exit_panel_enabled = true)", 
-         "$exit_panel": "common.light_close_button_sucrose"
-        },  
-        {
-          "requires": "($pocket_screen or $pocket_edition)", 
-          "$exit_panel": "common.light_close_button_sucrose"
-        } 
+      "anchor_from": "center",
+      "anchor_to": "center",
+      "bindings": [ {"binding_name": "#close_button_visible", "binding_name_override": "#visible"} ],
+      "variables": [
+         {"requires": "($Exit_panel_enabled = true)"       , "$exit_panel": "common.light_close_button_sucrose"},
+         {"requires": "($pocket_screen or $pocket_edition)", "$exit_panel": "common.light_close_button_sucrose"}
       ],
       "controls": [
+         { "close_button@$exit_panel": {"offset": "$current_panel_offset", "anchor_from": "center", "anchor_to": "center"} }
+      ]
+   },
+   "image_element": {"type": "image", "alpha": 1},
+   "recipe_book@image_element": { "texture": "assets/minecraft/textures/gui/recipe_book", "size": [147, 166], "uv_size": [147, 166], "uv": [1, 1], "offset": [1, 0], "layer": 9 },
+   "anvil@image_element": { "uv_size": [176, 166], "texture": "assets/minecraft/textures/gui/container/anvil", "offset": [0, 0] },
+   "barrel@common.empty_panel": {
+      "controls": [
          {
-            "close_button@$exit_panel": { 
-              "offset": "$current_panel_offset", 
-              "anchor_from": "center", 
-              "anchor_to": "center" 
+            "top_half@image_element": {
+               "anchor_from": "top_middle",
+               "anchor_to": "top_middle",
+               "offset": [0, -47.4],
+               "layer": 4,
+               "texture": "assets/minecraft/textures/gui/container/generic_54",
+               "uv_size": [176, 71]
+            }
+         },
+         {
+            "bottom_half@image_element": {
+               "anchor_from": "top_middle",
+               "anchor_to": "top_middle",
+               "offset": [0, 34.6],
+               "layer": 2,
+               "texture": "assets/minecraft/textures/gui/container/generic_54",
+               "uv_size": [176, 97],
+               "uv": [0, 125]
             }
          }
       ]
    },
-    "image_element" : {
-        "type"    : "image",
-        "alpha"   : 1
-    },
-    // Container Definitions
-    "recipe_book@image_element": {"texture": "assets/minecraft/textures/gui/recipe_book", "size": [147, 166], "uv_size": [147, 166], "uv": [1, 1], "offset": [1, 0], "layer": 9 },
-    "anvil@image_element"         : { "uv_size" : [176, 166], "texture" : "assets/minecraft/textures/gui/container/anvil",            "offset" : [0,    0]    },
-    "barrel@common.empty_panel"   : {
-        "controls" : [
-            {
-                "top_half@image_element" : {
-                    "anchor_from" : "top_middle",
-                    "anchor_to"   : "top_middle",
-                    "offset"      : [0, -47.4],"layer":4,
-                    "texture"     : "assets/minecraft/textures/gui/container/generic_54",
-                    "uv_size"     : [176, 71]
-                }
-            },
-            {
-                "bottom_half@image_element" : {
-                    "anchor_from" : "top_middle",
-                    "anchor_to"   : "top_middle",
-                    "offset"      : [0, 34.6],"layer":2,
-                    "texture"     : "assets/minecraft/textures/gui/container/generic_54",
-                    "uv_size"     : [176, 97],
-                    "uv"          : [0, 125]
-                }
-            }
-        ]
-    },
-    "beacon@image_element"        : { "uv_size" : [230, 219], "texture" : "assets/minecraft/textures/gui/container/beacon",           "offset" : [-1,   0]    },
-    "blast_furnace@image_element" : { "uv_size" : [176, 166], "texture" : "assets/minecraft/textures/gui/container/blast_furnace",    "offset" : [0,    0]    },
-    "brewing_stand@image_element" : { "uv_size" : [176, 166], "texture" : "assets/minecraft/textures/gui/container/brewing_stand",    "offset" : [0,    3]    },
-    "cartography@image_element"   : { "uv_size" : [176, 166], "texture" : "assets/minecraft/textures/gui/container/cartography_table","offset" : [0,    3]   },
-    "crafting@image_element"      : { "uv_size" : [176, 166], "texture" : "assets/minecraft/textures/gui/container/crafting_table",   "offset" : [307,  84],"controls":[{"exit@close_button":{"$current_panel_offset|default":[100.8,-74]}}]},
-    "crafter@image_element"       : { "uv_size" : [176, 166], "texture" : "assets/minecraft/textures/gui/container/crafter",          "offset" : [0,    4.4]    },
-    "dispenser@image_element"     : { "uv_size" : [176, 166], "texture" : "assets/minecraft/textures/gui/container/dispenser",        "offset" : [0,    0]    },
-    "enchanting@image_element"    : { "uv_size" : [176, 166], "texture" : "assets/minecraft/textures/gui/container/enchanting_table", "offset" : [0,    3]    },
-    "furnace@image_element"       : { "uv_size" : [176, 166], "texture" : "assets/minecraft/textures/gui/container/furnace",          "offset" : [0,    0]    },
-    "double_chest@image_element"  : { "uv_size" : [176, 222], "texture" : "assets/minecraft/textures/gui/container/generic_54",       "offset" : [0,    1]    },
-    "grindstone@image_element"    : { "uv_size" : [176, 166], "texture" : "assets/minecraft/textures/gui/container/grindstone",       "offset" : [0,    3]    },
-    "hopper@image_element"        : { "uv_size" : [176, 133], "texture" : "assets/minecraft/textures/gui/container/hopper",           "offset" : [0,    0]    },
-    "horse@image_element"         : { "uv_size" : [176, 166], "texture" : "assets/minecraft/textures/gui/container/horse",            "offset" : [0,    0]    },
-    "inventory@image_element"     : { "uv_size" : [176, 166], "texture" : "assets/minecraft/textures/gui/container/inventory",        "offset" : [0,    0],"controls":[{"exit@close_button":{"$current_panel_offset|default":[100.8,-74]}}]},
-    "loom@image_element"          : { "uv_size" : [176, 166], "texture" : "assets/minecraft/textures/gui/container/loom",             "offset" : [0,    4.4]  },
-    "shulker_box@image_element"   : { "uv_size" : [176, 166], "texture" : "assets/minecraft/textures/gui/container/shulker_box",      "offset" : [0,    0]    },
-    "smithing@image_element"      : { "uv_size" : [176, 166], "texture" : "assets/minecraft/textures/gui/container/smithing",         "offset" : [0,    0]    },
-    "smoker@image_element"        : { "uv_size" : [176, 166], "texture" : "assets/minecraft/textures/gui/container/smoker",           "offset" : [0,    0]    },
-    "stonecutter@image_element"   : { "uv_size" : [176, 166], "texture" : "assets/minecraft/textures/gui/container/stonecutter",      "offset" : [0,    2]    },
-    "trade@image_element"         : { "uv_size" : [276, 166], "texture" : "assets/minecraft/textures/gui/container/villager",         "offset" : [-70, 0]    },
-    //container effects viewer pane
-    //content for the other textures
-    "scroll_box_image": {
-      "type": "panel",
-      "size": ["100% - 2px", "100% - 2px"],           
-      "allow_clipping": true,
-      "offset":"$misc_scroller_offset",
+   "beacon@image_element": { "uv_size": [230, 219], "texture": "assets/minecraft/textures/gui/container/beacon", "offset": [-1, 0] },
+   "blast_furnace@image_element": { "uv_size": [176, 166], "texture": "assets/minecraft/textures/gui/container/blast_furnace", "offset": [0, 0] },
+   "brewing_stand@image_element": { "uv_size": [176, 166], "texture": "assets/minecraft/textures/gui/container/brewing_stand", "offset": [0, 3] },
+   "cartography@image_element": { "uv_size": [176, 166], "texture": "assets/minecraft/textures/gui/container/cartography_table", "offset": [0, 3] },
+   "crafting@image_element": {
+      "uv_size": [176, 166],
+      "texture": "assets/minecraft/textures/gui/container/crafting_table",
+      "offset": [307, 84],
       "controls": [
          {
-         "js": { 
-            "allow_clipping": true,
-            "type": "image", 
-            "texture": "assets/minecraft/textures/gui/sprites/container/loom/scroller.png", 
-            "size": [12, 15],
-            "alpha": 1,
-            "anchor_from": "top_middle", 
-            "anchor_to": "top_middle", 
-            "layer": 20 
+            "exit@close_button": { "$current_panel_offset|default": [100.8, -74] }
+         }
+      ]
+   },
+   "crafter@image_element": { "uv_size": [176, 166], "texture": "assets/minecraft/textures/gui/container/crafter", "offset": [0, 4.4] },
+   "dispenser@image_element": { "uv_size": [176, 166], "texture": "assets/minecraft/textures/gui/container/dispenser", "offset": [0, 0] },
+   "enchanting@image_element": { "uv_size": [176, 166], "texture": "assets/minecraft/textures/gui/container/enchanting_table", "offset": [0, 3] },
+   "furnace@image_element": { "uv_size": [176, 166], "texture": "assets/minecraft/textures/gui/container/furnace", "offset": [0, 0] },
+   "double_chest@image_element": { "uv_size": [176, 222], "texture": "assets/minecraft/textures/gui/container/generic_54", "offset": [0, 1] },
+   "grindstone@image_element": { "uv_size": [176, 166], "texture": "assets/minecraft/textures/gui/container/grindstone", "offset": [0, 3] },
+   "hopper@image_element": { "uv_size": [176, 133], "texture": "assets/minecraft/textures/gui/container/hopper", "offset": [0, 0] },
+   "horse@image_element": { "uv_size": [176, 166], "texture": "assets/minecraft/textures/gui/container/horse", "offset": [0, 0] },
+   "inventory@image_element": {
+      "uv_size": [176, 166],
+      "texture": "assets/minecraft/textures/gui/container/inventory",
+      "offset": [0, 0],
+      "controls": [
+         {
+            "exit@close_button": { "$current_panel_offset|default": [100.8, -74] }
+         }
+      ]
+   },
+   "loom@image_element": { "uv_size": [176, 166], "texture": "assets/minecraft/textures/gui/container/loom", "offset": [0, 4.4] },
+   "shulker_box@image_element": { "uv_size": [176, 166], "texture": "assets/minecraft/textures/gui/container/shulker_box", "offset": [0, 0] },
+   "smithing@image_element": { "uv_size": [176, 166], "texture": "assets/minecraft/textures/gui/container/smithing", "offset": [0, 0] },
+   "smoker@image_element": { "uv_size": [176, 166], "texture": "assets/minecraft/textures/gui/container/smoker", "offset": [0, 0] },
+   "stonecutter@image_element": { "uv_size": [176, 166], "texture": "assets/minecraft/textures/gui/container/stonecutter", "offset": [0, 2] },
+   "trade@image_element": { "uv_size": [276, 166], "texture": "assets/minecraft/textures/gui/container/villager", "offset": [-70, 0] },
+   "scroll_box_image": {
+      "type": "panel",
+      "size": ["100% - 2px", "100% - 2px"],
+      "allow_clipping": true,
+      "offset": "$misc_scroller_offset",
+      "controls": [
+         {
+            "js": {
+               "allow_clipping": true,
+               "type": "image",
+               "texture": "assets/minecraft/textures/gui/sprites/container/loom/scroller.png",
+               "size": [12, 15],
+               "alpha": 1,
+               "anchor_from": "top_middle",
+               "anchor_to": "top_middle",
+               "layer": 20
             }
          }
       ]
    },
    "scroll_box_image_disabled": {
-    "anchor_from":"center",
-    "anchor_to":"center",
-    "type": "panel",
-    "size": ["100% - 2px", "100% - 2px"],           
-    "allow_clipping": true,
-    "offset":"$misc_scroller_disabled_offset",
-    "controls": [
-       {
-       "js": { 
-          "allow_clipping": true,
-          "type": "image", 
-          "texture": "assets/minecraft/textures/gui/sprites/container/stonecutter/scroller_disabled.png", 
-          "size": [12, 15],
-          "alpha": 1,
-          "anchor_from": "top_middle", 
-          "anchor_to": "top_middle", 
-          "layer": 20 
-          }
-       }
-    ]
-  },
-  //villager 
-  "villager_scroller": {
-    "type": "panel",
-    "size": [ 6, "100%" ],
-    "controls": [
-      {
-        "texture": {
-          "type": "image",
-          "texture": "assets/minecraft/textures/gui/sprites/container/villager/scroller",
-          "size": [ 6, "100%" ]
-        }
-      }
-    ]
-  },
-  "text_field": {
-    "type": "panel",
-    "size": [ "100%", "100%" ],
-    "controls": [
-      {
-        "texture": {
-          "type": "image",
-          "nineslice_size": 1,
-          "texture": "assets/minecraft/textures/gui/sprites/widget/text_field",
-          "size": [ "100%", "100%" ]
-        }
-      }
-    ]
-  },
-
-  "text_field_highlighted": {
-    "type": "panel",
-    "size": [ "100%", "100%" ],
-    "controls": [
-      {
-        "texture": {
-          "type": "image",
-          "nineslice_size": 1,
-          "texture": "assets/minecraft/textures/gui/sprites/widget/text_field_highlighted",
-          "size": [ "100%", "100%" ]
-        }
-      }
-    ]
-  } 
+      "anchor_from": "center",
+      "anchor_to": "center",
+      "type": "panel",
+      "size": ["100% - 2px", "100% - 2px"],
+      "allow_clipping": true,
+      "offset": "$misc_scroller_disabled_offset",
+      "controls": [
+         {
+            "js": {
+               "allow_clipping": true,
+               "type": "image",
+               "texture": "assets/minecraft/textures/gui/sprites/container/stonecutter/scroller_disabled.png",
+               "size": [12, 15],
+               "alpha": 1,
+               "anchor_from": "top_middle",
+               "anchor_to": "top_middle",
+               "layer": 20
+            }
+         }
+      ]
+   },
+   "villager_scroller": {
+      "type": "panel",
+      "size": [6, "100%"],
+      "controls": [
+         {
+            "texture": { "type": "image", "texture": "assets/minecraft/textures/gui/sprites/container/villager/scroller", "size": [6, "100%"] }
+         }
+      ]
+   },
+   "text_field": {
+      "type": "panel",
+      "size": ["100%", "100%"],
+      "controls": [
+         {
+            "texture": { "type": "image", "nineslice_size": 1, "texture": "assets/minecraft/textures/gui/sprites/widget/text_field", "size": ["100%", "100%"] }
+         }
+      ]
+   },
+   "text_field_highlighted": {
+      "type": "panel",
+      "size": ["100%", "100%"],
+      "controls": [
+         {
+            "texture": { "type": "image", "nineslice_size": 1, "texture": "assets/minecraft/textures/gui/sprites/widget/text_field_highlighted", "size": ["100%", "100%"] }
+         }
+      ]
+   }
 }

@@ -1,74 +1,72 @@
 {
   "namespace": "shulker_zeta",
   "shulker_label": {
-    "type": "label",
-    "offset": [ -50, 5 ],
-    "anchor_from": "top_middle",
-    "anchor_to": "top_middle",
-    "text": "$container_title",
-    "$container_title": "Shulker Box",
-    "color": "$title_text_color",
-    "layer": 2
+     "type": "label",
+     "offset": [-50, 5],
+     "anchor_from": "top_middle",
+     "anchor_to": "top_middle",
+     "text": "$container_title",
+     "$container_title": "Shulker Box",
+     "color": "$title_text_color",
+     "layer": 2
   },
-  "chest_grid_item@common.container_item": {
-    "$item_collection_name": "container_items"
-  },
-
+  "chest_grid_item@common.container_item": {"$item_collection_name": "container_items"},
   "small_chest_grid": {
-    "type": "grid",
-    "size": [ 162, 54 ],
-    "anchor_from": "top_left",
-    "anchor_to": "top_left",
-    "grid_dimensions": [ 9, 3 ],
-    "grid_item_template": "shulker_zeta.chest_grid_item",
-    "collection_name": "container_items"
+     "type": "grid",
+     "size": [162, 54],
+     "anchor_from": "top_left",
+     "anchor_to": "top_left",
+     "grid_dimensions": [9, 3],
+     "grid_item_template": "shulker_zeta.chest_grid_item",
+     "collection_name": "container_items"
   },
-
   "small_chest_panel_top_half": {
-    "type": "panel",
-    "size": [ "100%", "50%" ],
-    "offset": [ 0, 8 ],
-    "anchor_to": "top_left",
-    "anchor_from": "top_left",
-    "controls": [
-      {
-        "small_chest_grid@shulker_zeta.small_chest_grid": {
-          "offset": [ 7, 9 ]
+     "type": "panel",
+     "size": ["100%", "50%"],
+     "offset": [0, 8],
+     "anchor_to": "top_left",
+     "anchor_from": "top_left",
+     "controls": [
+        {
+           "small_chest_grid@shulker_zeta.small_chest_grid": { "offset": [7, 9] }
         }
-      }
-    ]
+     ]
   },
   "small_chest_panel": {
-    "type": "panel",
-    "controls": [
-      { "container_gamepad_helpers@common.container_gamepad_helpers": {} },
-      { "selected_item_details_factory@common.selected_item_details_factory": {} },
-      { "item_lock_notification_factory@common.item_lock_notification_factory": {} },
-      {
-        "root_panel@common.empty_panel": {
-          "size": [ 176, 166 ],
-          "layer": 1,
-          "controls": [
-            { "common_panel@somali_to_Mori_no_Kamisama.somali": {"$shulker_screen": true} },
-            {
-              "chest_panel": {
-                "type": "panel",
-                "layer": 5,
-                "controls": [
-                  { "shulker_label@shulker_zeta.shulker_label": {} }, 
-                  { "small_chest_panel_top_half@shulker_zeta.small_chest_panel_top_half": {} },
-                  { "inventory_panel_bottom_half_with_label@common.inventory_panel_bottom_half_with_label": {"offset": [0, -3]} },
-                  { "hotbar_grid@common.hotbar_grid_template": {"offset": [0, -7]} },
-                  { "inventory_take_progress_icon_button@common.inventory_take_progress_icon_button": {} },
-                  { "flying_item_renderer@common.flying_item_renderer": { "layer": 15 } }
-                ]
-              }
-            },
-            { "inventory_selected_icon_button@common.inventory_selected_icon_button": {} },
-            { "gamepad_cursor@common.gamepad_cursor_button": {} }
-          ]
+     "type": "panel",
+     "controls": [
+        {"container_gamepad_helpers@common.container_gamepad_helpers": {}},
+        {"selected_item_details_factory@common.selected_item_details_factory": {}},
+        {"item_lock_notification_factory@common.item_lock_notification_factory": {}},
+        {
+           "root_panel@common.empty_panel": {
+              "size": [176, 166],
+              "layer": 1,
+              "controls": [
+                 { "common_panel@somali_to_Mori_no_Kamisama.somali": {"$shulker_screen": true} },
+                 {
+                    "chest_panel": {
+                       "type": "panel",
+                       "layer": 5,
+                       "controls": [
+                          {"shulker_label@shulker_zeta.shulker_label": {}},
+                          {"small_chest_panel_top_half@shulker_zeta.small_chest_panel_top_half": {}},
+                          {
+                             "inventory_panel_bottom_half_with_label@common.inventory_panel_bottom_half_with_label": { "offset": [0, -3] }
+                          },
+                          {
+                             "hotbar_grid@common.hotbar_grid_template": { "offset": [0, -7] }
+                          },
+                          {"inventory_take_progress_icon_button@common.inventory_take_progress_icon_button": {}},
+                          { "flying_item_renderer@common.flying_item_renderer": {"layer": 15} }
+                       ]
+                    }
+                 },
+                 {"inventory_selected_icon_button@common.inventory_selected_icon_button": {}},
+                 {"gamepad_cursor@common.gamepad_cursor_button": {}}
+              ]
+           }
         }
-      }
-    ]
+     ]
   }
 }

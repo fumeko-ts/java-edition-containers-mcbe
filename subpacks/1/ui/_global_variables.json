@@ -1,12 +1,10 @@
 {
-  // Core System References
   "$ep": "common.empty_panel",
   "$bypass": "#visiblex",
   "$selected_stack_panel": true,
   "$dev": false,
   "$25x25_slot": false,
-  "$title_text_color":[0.25, 0.25, 0.25, 1.0],  
-  // Anchor Positions
+  "$title_text_color": [0.25, 0.25, 0.25, 1.0],
   "$top_left": "top_left",
   "$top_middle": "top_middle",
   "$top_right": "top_right",
@@ -16,8 +14,6 @@
   "$bottom_left": "bottom_left",
   "$bottom_middle": "bottom_middle",
   "$bottom_right": "bottom_right",
-
-  // HUD Components
   "$template": "hud.player_count",
   "$list_panel": "tab_menu.tab_list_stack_panel",
   "$tab_list_grid": "tab_menu.tab_list_base_grid",
@@ -36,26 +32,42 @@
   "$new_template_bg": "hud.selected_item",
   "$hud_item_delta": "hud.item_renderer",
   "$10x10": [10, 10],
-
-  // Container Settings
   "$pane_bg": "textures/ui/pane_bg",
   "$Exit_panel_enabled": true,
   "$output": false,
   "$loom_screen": false,
   "$creative_layout": false,
   "$all_Screen_bg_transparency": 0.7,
-  // Recipe Book Settings
   "$no": [0, 63],
   "$uh": [-1.8, 63],
   "$recipe_book": false,
   "$state": false,
-
-  // Recipe Grid Offsets
-  "$a": [0,0],      "$b": [0,-100],   "$c": [0,-200],   "$d": [0,-300],
-  "$e": [0,-400],   "$f": [0,-500],   "$g": [0,-600],   "$h": [0,-700],
-  "$i": [0,-800],   "$j": [0,-900],   "$k": [0,-1000],  "$l": [0,-1100],
-  "$m": [0,-1200],  "$n": [0,-1300],  "$o": [0,-1400],  "$p": [0,-1500],
-  "$q": [0,-1600],  "$r": [0,-1700],  "$s": [0,-1800],  "$t": [0,-1900],
-  "$u": [0,-2000],  "$v": [0,-2100],  "$w": [0,-2200],  "$x": [0,-2300],
-  "$y": [0,-2400],  "$z": [0,-2500],  "$aa": [0,-2600], "$ab": [0,-2700]
+  "$a": [0, 0],
+  "$b": [0, -100],
+  "$c": [0, -200],
+  "$d": [0, -300],
+  "$e": [0, -400],
+  "$f": [0, -500],
+  "$g": [0, -600],
+  "$h": [0, -700],
+  "$i": [0, -800],
+  "$j": [0, -900],
+  "$k": [0, -1000],
+  "$l": [0, -1100],
+  "$m": [0, -1200],
+  "$n": [0, -1300],
+  "$o": [0, -1400],
+  "$p": [0, -1500],
+  "$q": [0, -1600],
+  "$r": [0, -1700],
+  "$s": [0, -1800],
+  "$t": [0, -1900],
+  "$u": [0, -2000],
+  "$v": [0, -2100],
+  "$w": [0, -2200],
+  "$x": [0, -2300],
+  "$y": [0, -2400],
+  "$z": [0, -2500],
+  "$aa": [0, -2600],
+  "$ab": [0, -2700]
 }

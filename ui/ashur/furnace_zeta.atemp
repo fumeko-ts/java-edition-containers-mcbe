@@ -1,619 +1,430 @@
 {
-  "namespace": "furnace_zeta",
-  /* === TAB STATE MANAGEMENT === */
-"tab_state_common": {
-    "anchor_from": "center",
-    "anchor_to": "center",
-    "controls": "$tab_texture_controlers",
-    "size": ["100%", "100%"],
-    "type": "panel",
-    
-    "$is_checked|default": false,
-    "$is_checked_hover|default": false,
-    "$is_checked_locked|default": false,
-    "$is_checked_locked_hover|default": false,
-    "$is_unchecked|default": false,
-    "$is_unchecked_hover|default": false,
-    "$is_unchecked_locked|default": false,
-    "$is_unchecked_locked_hover|default": false,
-    "$size": [18, 16],
-    "$state_offset": [0, 0],
-    "$tab_icon|default": "",
-
-    "variables": [
-        {
-            "requires": "($is_unchecked = true or $is_unchecked_locked = true or $is_unchecked = true)",
-            "$state_offset": [3, 0]
-        },
-        {
-            "requires": "($is_unchecked_locked_hover = true or $is_unchecked_hover = true)",
-            "$state_offset": [2, 0]
-        },
-        {
-            "requires": "($focus_id = misc_tab)",
-            "$tab_icon": "textures/items/compass_item"
-        },
-        {
-            "requires": "($focus_id = burnables_tab)",
-            "$tab_icon": "textures/atemp/ui/stone"
-        },
-        {
-            "requires": "($focus_id = smeltable_tab)",
-            "$size": [20, 18],
-            "$tab_icon": "textures/atemp/ui/fuel"
-        }
-    ],
-
-    "$tab_texture_controlers": [
-        {
-            "icon": {
-                "anchor_from": "center",
-                "anchor_to": "center",
-                "layer": 14,
-                "offset": "$state_offset",
-                "size": "$size",
-                "texture": "$tab_icon",
-                "type": "image"
-            }
-        },
-        {
+   "namespace": "furnace_zeta",
+   "tab_state_common": {
+      "anchor_from": "center",
+      "anchor_to": "center",
+      "controls": "$tab_texture_controlers",
+      "size": ["100%", "100%"],
+      "type": "panel",
+      "$is_checked|default": false,
+      "$is_checked_hover|default": false,
+      "$is_checked_locked|default": false,
+      "$is_checked_locked_hover|default": false,
+      "$is_unchecked|default": false,
+      "$is_unchecked_hover|default": false,
+      "$is_unchecked_locked|default": false,
+      "$is_unchecked_locked_hover|default": false,
+      "$size": [18, 16],
+      "$state_offset": [0, 0],
+      "$tab_icon|default": "",
+      "variables": [
+         { "requires": "($is_unchecked = true or $is_unchecked_locked = true or $is_unchecked = true)", "$state_offset": [3, 0]                                                                },
+         { "requires": "($is_unchecked_locked_hover = true or $is_unchecked_hover = true)"            , "$state_offset": [2, 0]                                                                },
+         { "requires": "($focus_id = misc_tab)"                                                       ,                          "$tab_icon": "textures/items/compass_item"                    },
+         { "requires": "($focus_id = burnables_tab)"                                                  ,                          "$tab_icon": "textures/atemp/ui/stone"                        },
+         { "requires": "($focus_id = smeltable_tab)"                                                  ,                          "$tab_icon": "textures/atemp/ui/fuel"     , "$size": [20, 18] }
+      ],
+      "$tab_texture_controlers": [
+         { "icon": {"anchor_from": "center", "anchor_to": "center", "layer": 14, "offset": "$state_offset", "size": "$size", "texture": "$tab_icon", "type": "image"} },
+         {
             "tab_unchecked": {
-                "anchor_from": "center",
-                "anchor_to": "center",
-                "ignored": "(not $is_unchecked)",
-                "layer": 5,
-                "offset": [4, 0],
-                "size": [36, 26],
-                "texture": "assets/minecraft/textures/gui/sprites/recipe_book/tab",
-                "type": "image"
+               "anchor_from": "center",
+               "anchor_to": "center",
+               "ignored": "(not $is_unchecked)",
+               "layer": 5,
+               "offset": [4, 0],
+               "size": [36, 26],
+               "texture": "assets/minecraft/textures/gui/sprites/recipe_book/tab",
+               "type": "image"
             }
-        },
-        {
+         },
+         {
             "tab_unchecked_hover": {
-                "anchor_from": "center",
-                "anchor_to": "center",
-                "ignored": "(not $is_unchecked_hover)",
-                "layer": 5,
-                "offset": [3, 0],
-                "size": [36, 26],
-                "texture": "assets/minecraft/textures/gui/sprites/recipe_book/tab",
-                "type": "image"
+               "anchor_from": "center",
+               "anchor_to": "center",
+               "ignored": "(not $is_unchecked_hover)",
+               "layer": 5,
+               "offset": [3, 0],
+               "size": [36, 26],
+               "texture": "assets/minecraft/textures/gui/sprites/recipe_book/tab",
+               "type": "image"
             }
-        },
-        {
+         },
+         {
             "tab_unchecked_locked": {
-                "anchor_from": "center",
-                "anchor_to": "center",
-                "ignored": "(not $is_unchecked_locked)",
-                "layer": 5,
-                "offset": [4, 0],
-                "size": [36, 26],
-                "texture": "assets/minecraft/textures/gui/sprites/recipe_book/tab",
-                "type": "image"
+               "anchor_from": "center",
+               "anchor_to": "center",
+               "ignored": "(not $is_unchecked_locked)",
+               "layer": 5,
+               "offset": [4, 0],
+               "size": [36, 26],
+               "texture": "assets/minecraft/textures/gui/sprites/recipe_book/tab",
+               "type": "image"
             }
-        },
-        {
+         },
+         {
             "tab_unchecked_locked_hover": {
-                "anchor_from": "center",
-                "anchor_to": "center",
-                "ignored": "(not $is_unchecked_locked_hover)",
-                "layer": 5,
-                "offset": [3, 0],
-                "size": [36, 26],
-                "texture": "assets/minecraft/textures/gui/sprites/recipe_book/tab",
-                "type": "image"
+               "anchor_from": "center",
+               "anchor_to": "center",
+               "ignored": "(not $is_unchecked_locked_hover)",
+               "layer": 5,
+               "offset": [3, 0],
+               "size": [36, 26],
+               "texture": "assets/minecraft/textures/gui/sprites/recipe_book/tab",
+               "type": "image"
             }
-        },
-        {
+         },
+         {
             "tab_checked": {
-                "anchor_from": "center",
-                "anchor_to": "center",
-                "ignored": "(not $is_checked)",
-                "layer": 11,
-                "offset": [-0.6, 0],
-                "size": [36, 26],
-                "texture": "assets/minecraft/textures/gui/sprites/recipe_book/tab_selected",
-                "type": "image"
+               "anchor_from": "center",
+               "anchor_to": "center",
+               "ignored": "(not $is_checked)",
+               "layer": 11,
+               "offset": [-0.6, 0],
+               "size": [36, 26],
+               "texture": "assets/minecraft/textures/gui/sprites/recipe_book/tab_selected",
+               "type": "image"
             }
-        },
-        {
+         },
+         {
             "tab_checked_hover": {
-                "anchor_from": "center",
-                "anchor_to": "center",
-                "ignored": "(not $is_checked_hover)",
-                "layer": 11,
-                "offset": [-0.6, 0],
-                "size": [36, 26],
-                "texture": "assets/minecraft/textures/gui/sprites/recipe_book/tab_selected",
-                "type": "image"
+               "anchor_from": "center",
+               "anchor_to": "center",
+               "ignored": "(not $is_checked_hover)",
+               "layer": 11,
+               "offset": [-0.6, 0],
+               "size": [36, 26],
+               "texture": "assets/minecraft/textures/gui/sprites/recipe_book/tab_selected",
+               "type": "image"
             }
-        },
-        {
+         },
+         {
             "tab_checked_locked": {
-                "anchor_from": "center",
-                "anchor_to": "center",
-                "ignored": "(not $is_checked_locked)",
-                "layer": 11,
-                "offset": [-0.6, 0],
-                "size": [36, 26],
-                "texture": "assets/minecraft/textures/gui/sprites/recipe_book/tab_selected",
-                "type": "image"
+               "anchor_from": "center",
+               "anchor_to": "center",
+               "ignored": "(not $is_checked_locked)",
+               "layer": 11,
+               "offset": [-0.6, 0],
+               "size": [36, 26],
+               "texture": "assets/minecraft/textures/gui/sprites/recipe_book/tab_selected",
+               "type": "image"
             }
-        },
-        {
+         },
+         {
             "tab_checked_locked_hover": {
-                "anchor_from": "center",
-                "anchor_to": "center",
-                "ignored": "(not $is_checked_locked_hover)",
-                "layer": 11,
-                "offset": [-0.6, 0],
-                "size": [36, 26],
-                "texture": "assets/minecraft/textures/gui/sprites/recipe_book/tab_selected",
-                "type": "image"
+               "anchor_from": "center",
+               "anchor_to": "center",
+               "ignored": "(not $is_checked_locked_hover)",
+               "layer": 11,
+               "offset": [-0.6, 0],
+               "size": [36, 26],
+               "texture": "assets/minecraft/textures/gui/sprites/recipe_book/tab_selected",
+               "type": "image"
             }
-        }
-    ]
-},
-
-  /* === TAB DEFINITIONS === */
-  "tab": {
-     "type": "panel",
-     "anchor_from": "top_left",
-     "anchor_to": "top_left",
-     "$tab_view_binding_name|default": "tab",
-     "$is_checked_state": false,
-     "controls": [
-        {
-           "$tab_view_binding_name@common.toggle": {
-              "controls": [
-                 {
-                    "unchecked@furnace_zeta.tab_state_common": {
-                       "$tab_state": "unchecked",
-                       "layer": 1,
-                       "$is_unchecked": true
-                    }
-                 },
-                 {
-                    "unchecked_hover@furnace_zeta.tab_state_common": {
-                       "$tab_state": "unchecked_hover",
-                       "$is_unchecked_hover": true,
-                       "$hover": true,
-                       "$show_focus": true
-                    }
-                 },
-                 {
-                    "unchecked_locked@furnace_zeta.tab_state_common": {
-                       "$tab_state": "unchecked_locked",
-                       "$is_unchecked_locked": true,
-                       "offset": [4, 0]
-                    }
-                 },
-                 {
-                    "unchecked_locked_hover@furnace_zeta.tab_state_common": {
-                       "$tab_state": "unchecked_locked_hover",
-                       "$is_unchecked_locked_hover": true
-                    }
-                 },
-                 {
-                    "checked@furnace_zeta.tab_state_common": {
-                       "$tab_state": "checked",
-                       "$is_checked_state": true,
-                       "$is_checked": true
-                    }
-                 },
-                 {
-                    "checked_hover@furnace_zeta.tab_state_common": {
-                       "$tab_state": "checked_hover",
-                       "$is_checked_state": true,
-                       "$is_checked_hover": true,
-                       "$show_focus": true,
-                       "$hover": true
-                    }
-                 },
-                 {
-                    "checked_locked@furnace_zeta.tab_state_common": {
-                       "$tab_state": "checked_locked",
-                       "$is_checked_state": true,
-                       "$is_checked_locked": true
-                    }
-                 },
-                 {
-                    "checked_locked_hover@furnace_zeta.tab_state_common": {
-                       "$tab_state": "checked_locked_hover",
-                       "$is_checked_state": true,
-                       "$is_checked_locked_hover": true
-                    }
-                 }
-              ]
-           }
-        }
-     ]
-  },
-
-  /* === CREATIVE TAB CONFIGURATION === */
-  "creative_tab@furnace_zeta.tab": {
-     "$misc_tab": 1,
-     "$burnables_tab": 2,
-     "$smeltable_tab": 3,
-     "$toggle_focus_enabled": false,
-     "$toggle_name": "navigation_tab",
-     "$radio_toggle_group": true,
-     "$toggle_group_default_selected": "$misc_tab"
-  },
-
-  /* === TAB SPECIFIC IMPLEMENTATIONS === */
-  "misc_tab@furnace_zeta.creative_tab": {
-     "$tab_view_binding_name": "misc_tab_toggle",
-     "$toggle_group_forced_index": "$misc_tab",
-     "$toggle_binding_type": "global",
-     "$toggle_state_binding_name": "#is_left_tab_construct",
-     "$focus_id": "misc_tab",
-     "$focus_override_left": "FOCUS_OVERRIDE_STOP",
-     "$focus_override_right": "FOCUS_OVERRIDE_STOP",
-     "$focus_override_down": "burnables_tab"
-  },
-
-  "burnables_tab@furnace_zeta.creative_tab": {
-     "$tab_view_binding_name": "burnables_tab_toggle",
-     "$toggle_group_forced_index": "$burnables_tab",
-     "$toggle_binding_type": "global",
-     "$toggle_state_binding_name": "#is_left_tab_burnables",
-     "$focus_id": "burnables_tab",
-     "$focus_override_left": "FOCUS_OVERRIDE_STOP",
-     "$focus_override_down": "smeltable_tab",
-     "$focus_override_up": "misc_tab"
-  },
-
-  "smeltable_tab@furnace_zeta.creative_tab": {
-     "$tab_view_binding_name": "smeltable_tab_toggle",
-     "$toggle_group_forced_index": "$smeltable_tab",
-     "$toggle_binding_type": "global",
-     "$toggle_state_binding_name": "#is_left_tab_smeltable",
-     "$focus_id": "smeltable_tab",
-     "$focus_override_left": "FOCUS_OVERRIDE_STOP",
-     "$focus_override_right": "nature_tab",
-     "$focus_override_up": "burnables_tab"
-  },
-
-  /* === TAB CONTENT PANELS === */
-  "java_button_page_grid@furnace_zeta.alpha_tepes_offsets": {},
-
-  /* === RECIPE BOOK IMPLEMENTATION === */
-  "furnace_recipe_panel@common.root_panel": {
-     "size": [146, 166],
-     "anchor_from": "center",
-     "anchor_to": "center",
-     "offset": "$recipe_book_offset",
-     "layer": 30,
-     "$all_tabs_offset": [-31, 3],
-     "controls": [
-        {
-           "stack": {
-              "type": "stack_panel",
-              "size": [36, 134],
-              "anchor_to": "top_left",
-              "anchor_from": "top_left",
-              "orientation": "vertical",
-              "controls": [
-                 {
-                    "misc_tab": {
-                       "type": "panel",
-                       "size": [36, 26],
-                       "anchor_to": "center",
-                       "anchor_from": "center",
-                       "controls": [
-                          {"tab@furnace_zeta.misc_tab": {"offset": "$all_tabs_offset"}}
-                       ]
-                    }
-                 },
-                 {
-                    "spacing_1": {
-                       "type": "panel",
-                       "anchor_to": "center",
-                       "anchor_from": "center",
-                       "size": ["fill", "0px"]
-                    }
-                 },
-                 {
-                    "burnables_tab": {
-                       "type": "panel",
-                       "size": [36, 26],
-                       "anchor_to": "center",
-                       "anchor_from": "center",
-                       "controls": [
-                          {"tab@furnace_zeta.burnables_tab": {"offset": "$all_tabs_offset"}}
-                       ]
-                    }
-                 },
-                 {
-                    "spacing_2": {
-                       "type": "panel",
-                       "anchor_to": "center",
-                       "anchor_from": "center",
-                       "size": ["fill", "0px"]
-                    }
-                 },
-                 {
-                    "smeltable_tab": {
-                       "type": "panel",
-                       "size": [36, 26],
-                       "anchor_to": "center",
-                       "anchor_from": "center",
-                       "controls": [
-                          {"tab@furnace_zeta.smeltable_tab": {"offset": "$all_tabs_offset"}}
-                       ]
-                    }
-                 }
-              ]
-           }
-        },
-        {"java_button_page_grid@furnace_zeta.java_button_page_grid": {}},
-        {"book@somali_to_Mori_no_Kamisama.recipe_book": {}}
-     ]
-  },
-
-  /* === NAVIGATION BUTTONS === */
-  "tepes_previos_button@furnace_zeta.base_toggle_button": {
-     "focus_container": true,
-     "use_last_focus": true,
-     "ignored": "$ignore_prev_button",
-     "anchor_from": "top_right",
-     "anchor_to": "top_right",
-     "layer": 10,
-     "$toggle_group_forced_index": 0,
-     "$toggle_control_name": "$tepes_prev_ctrl_numb3r",
-     "$toggle_name": "$tepes_prev_raiden_numb3r",
-     "$unchecked_bg": "furnace_zeta.tepes_prev",
-     "$unchecked_hov_bg": "furnace_zeta.tepes_prev_hov",
-     "$checked_bg": "furnace_zeta.tepes_prev",
-     "$checked_hov_bg": "furnace_zeta.tepes_prev_hov"
-  },
-
-  "tepes_next_button@furnace_zeta.base_toggle_button": {
-     "focus_container": true,
-     "use_last_focus": true,
-     "ignored": "$ignore_next_button",
-     "anchor_from": "top_right",
-     "anchor_to": "top_right",
-     "layer": 10,
-     "$toggle_group_forced_index": 1,
-     "$toggle_control_name": "$tepes_next_ctrl_numb3r",
-     "$toggle_name": "$tepes_next_raiden_numb3r",
-     "$unchecked_bg": "furnace_zeta.tepes_next",
-     "$unchecked_hov_bg": "furnace_zeta.tepes_next_hov",
-     "$checked_bg": "furnace_zeta.tepes_next",
-     "$checked_hov_bg": "furnace_zeta.tepes_next_hov"
-  },
-
-  /* === BUTTON STATES === */
-  "base_toggle_button_state": {
-     "type": "panel",
-     "controls": [{"bg@$bg_image": {}}]
-  },
-
-  "tepes_button_unchecked_hover@furnace_zeta.tepes_button_unchecked": {},
-  "tepes_button_checked@furnace_zeta.tepes_button_unchecked": {},
-  "tepes_button_checked_hover@furnace_zeta.tepes_button_unchecked": {},
-  "tepes_prev_hov@furnace_zeta.tepes_prev_hover": {},
-  "tepes_next@furnace_zeta.tepes_next": {},
-  "tepes_next_hov@furnace_zeta.tepes_next_hover": {},
-
-  /* === BASE TOGGLE BUTTON === */
-  "base_toggle_button": {
-     "type": "panel",
-     "anchor_from": "top_left",
-     "anchor_to": "top_left",
-     "size": [20, 18],
-     "$toggle_group|default": true,
-     "layer": 4,
-     "controls": [
-        {
-           "$toggle_control_name@common.toggle": {
-              "radio_toggle_group": "$toggle_group",
-              "$hover_state|default": true,
-              "focus_wrap_enabled": true,
-              "controls": [
-                 {"unchecked@furnace_zeta.base_toggle_button_state": {"$bg_image": "$unchecked_bg"}},
-                 {
-                    "unchecked_hover@furnace_zeta.base_toggle_button_state": {
-                       "$bg_image": "$unchecked_hov_bg",
-                       "$hover_state": true
-                    }
-                 },
-                 {"checked@furnace_zeta.base_toggle_button_state": {"$bg_image": "$checked_bg"}},
-                 {
-                    "checked_hover@furnace_zeta.base_toggle_button_state": {
-                       "$bg_image": "$checked_hov_bg",
-                       "$hover_state": true
-                    }
-                 }
-              ]
-           }
-        }
-     ]
-  },
-
-  /* === BUTTON TEXTURES === */
-  "tepes_prev": {
-     "type": "image",
-     "texture": "assets/minecraft/textures/gui/sprites/recipe_book/page_backward",
-     "size": [12, 17],
-     "layer": 2
-  },
-
-  "tepes_prev_hover": {
-     "type": "image",
-     "texture": "assets/minecraft/textures/gui/sprites/recipe_book/page_backward_highlighted",
-     "size": [12, 17],
-     "layer": 2
-  },
-
-  "tepes_next": {
-     "type": "image",
-     "texture": "assets/minecraft/textures/gui/sprites/recipe_book/page_forward",
-     "size": [12, 17],
-     "layer": 2
-  },
-
-  "tepes_next_hover": {
-     "type": "image",
-     "texture": "assets/minecraft/textures/gui/sprites/recipe_book/page_forward_highlighted",
-     "size": [12, 17],
-     "layer": 2
-  },
-
-  /* === PAGE NUMBER LABEL === */
-  "base_offset_label": {
-     "type": "label",
-     "color": "white",
-     "text": "$tepes_offset_label",
-     "anchor_from": "center",
-     "anchor_to": "center",
-     "layer": 40
-  },
-
-  /* === PAGE OFFSET CONTROLLER === */
-  "misc_panel@common.empty_panel": {
-     "controls": [
-        {"misc@furnace_recipe.burn_base_panel": {"$is_misc_tab|default": true,"offset": [-204, -40]}}
-     ]
-  },
-
-  "burnables_panel@common.empty_panel": {
-     "controls": [
-        {"burnables@furnace_recipe.burn_base_panel": {"$is_burn_tab|default": true,"offset": [-204, -40]}}
-     ]
-  },
-
-  "smeltables_panel@common.empty_panel": {
-     "controls": [
-        {"smeltables@furnace_recipe.burn_base_panel": {"$is_smelt_tab|default": true,"offset": [-204, -40]}}
-     ]
-  },
-
-  "offset@common.empty_panel": {"offset": [1, -1.4]},
-
-  "alpha_tepes_offset_template@furnace_zeta.offset": {
-     "type": "panel",
-     "clips_children": true,
-     "size": [125, 100],
-     "controls": [
-        {
-          "1@misc_panel"      :{
-            "offset": "$ov", 
-            "layer": 30,
-            "bindings": [
-              {
-                 "binding_type": "view",
-                 "source_control_name": "misc_tab_toggle",
-                 "source_property_name": "#toggle_state",
-                 "target_property_name": "#visible"
-              }
-           ]
-          }
-        },
-        {
-          "2@burnables_panel" :{
-            "offset": "$ov", 
-            "layer": 30,
-            "bindings": [
-              {
-                 "binding_type": "view",
-                 "source_control_name": "burnables_tab_toggle",
-                 "source_property_name": "#toggle_state",
-                 "target_property_name": "#visible"
-              }
+         }
+      ]
+   },
+   "tab": {
+      "type": "panel",
+      "anchor_from": "top_left",
+      "anchor_to": "top_left",
+      "$tab_view_binding_name|default": "tab",
+      "$is_checked_state": false,
+      "controls": [
+         {
+            "$tab_view_binding_name@common.toggle": {
+               "controls": [
+                  { "unchecked@furnace_zeta.tab_state_common": {"$tab_state": "unchecked", "layer": 1, "$is_unchecked": true} },
+                  { "unchecked_hover@furnace_zeta.tab_state_common": {"$tab_state": "unchecked_hover", "$is_unchecked_hover": true, "$hover": true, "$show_focus": true} },
+                  {
+                     "unchecked_locked@furnace_zeta.tab_state_common": { "$tab_state": "unchecked_locked", "$is_unchecked_locked": true, "offset": [4, 0] }
+                  },
+                  { "unchecked_locked_hover@furnace_zeta.tab_state_common": {"$tab_state": "unchecked_locked_hover", "$is_unchecked_locked_hover": true} },
+                  { "checked@furnace_zeta.tab_state_common": {"$tab_state": "checked", "$is_checked_state": true, "$is_checked": true} },
+                  { "checked_hover@furnace_zeta.tab_state_common": {"$tab_state": "checked_hover", "$is_checked_state": true, "$is_checked_hover": true, "$show_focus": true, "$hover": true} },
+                  { "checked_locked@furnace_zeta.tab_state_common": {"$tab_state": "checked_locked", "$is_checked_state": true, "$is_checked_locked": true} },
+                  { "checked_locked_hover@furnace_zeta.tab_state_common": {"$tab_state": "checked_locked_hover", "$is_checked_state": true, "$is_checked_locked_hover": true} }
+               ]
+            }
+         }
+      ]
+   },
+   "creative_tab@furnace_zeta.tab": {
+      "$misc_tab": 1,
+      "$burnables_tab": 2,
+      "$smeltable_tab": 3,
+      "$toggle_focus_enabled": false,
+      "$toggle_name": "navigation_tab",
+      "$radio_toggle_group": true,
+      "$toggle_group_default_selected": "$misc_tab"
+   },
+   "misc_tab@furnace_zeta.creative_tab": {
+      "$tab_view_binding_name"    : "misc_tab_toggle"       ,
+      "$toggle_group_forced_index": "$misc_tab"             ,
+      "$toggle_binding_type"      : "global"                ,
+      "$toggle_state_binding_name": "#is_left_tab_construct",
+      "$focus_id"                 : "misc_tab"              ,
+      "$focus_override_left"      : "FOCUS_OVERRIDE_STOP"   ,
+      "$focus_override_right"     : "FOCUS_OVERRIDE_STOP"   ,
+      "$focus_override_down"      : "burnables_tab"
+   },
+   "burnables_tab@furnace_zeta.creative_tab": {
+      "$tab_view_binding_name"    : "burnables_tab_toggle"  ,
+      "$toggle_group_forced_index": "$burnables_tab"        ,
+      "$toggle_binding_type"      : "global"                ,
+      "$toggle_state_binding_name": "#is_left_tab_burnables",
+      "$focus_id"                 : "burnables_tab"         ,
+      "$focus_override_left"      : "FOCUS_OVERRIDE_STOP"   ,
+      "$focus_override_down"      : "smeltable_tab"         ,
+      "$focus_override_up"        : "misc_tab"
+   },
+   "smeltable_tab@furnace_zeta.creative_tab": {
+      "$tab_view_binding_name"    : "smeltable_tab_toggle"  ,
+      "$toggle_group_forced_index": "$smeltable_tab"        ,
+      "$toggle_binding_type"      : "global"                ,
+      "$toggle_state_binding_name": "#is_left_tab_smeltable",
+      "$focus_id"                 : "smeltable_tab"         ,
+      "$focus_override_left"      : "FOCUS_OVERRIDE_STOP"   ,
+      "$focus_override_right"     : "nature_tab"            ,
+      "$focus_override_up"        : "burnables_tab"
+   },
+   "java_button_page_grid@furnace_zeta.alpha_tepes_offsets": {},
+   "furnace_recipe_panel@common.root_panel": {
+      "size": [146, 166],
+      "anchor_from": "center",
+      "anchor_to": "center",
+      "offset": "$recipe_book_offset",
+      "layer": 30,
+      "$all_tabs_offset": [-31, 3],
+      "controls": [
+         {
+            "stack": {
+               "type": "stack_panel",
+               "size": [36, 134],
+               "anchor_to": "top_left",
+               "anchor_from": "top_left",
+               "orientation": "vertical",
+               "controls": [
+                  {
+                     "misc_tab": {
+                        "type": "panel",
+                        "size": [36, 26],
+                        "anchor_to": "center",
+                        "anchor_from": "center",
+                        "controls": [
+                           { "tab@furnace_zeta.misc_tab": {"offset": "$all_tabs_offset"} }
+                        ]
+                     }
+                  },
+                  {
+                     "spacing_1": { "type": "panel", "anchor_to": "center", "anchor_from": "center", "size": ["fill", "0px"] }
+                  },
+                  {
+                     "burnables_tab": {
+                        "type": "panel",
+                        "size": [36, 26],
+                        "anchor_to": "center",
+                        "anchor_from": "center",
+                        "controls": [
+                           { "tab@furnace_zeta.burnables_tab": {"offset": "$all_tabs_offset"} }
+                        ]
+                     }
+                  },
+                  {
+                     "spacing_2": { "type": "panel", "anchor_to": "center", "anchor_from": "center", "size": ["fill", "0px"] }
+                  },
+                  {
+                     "smeltable_tab": {
+                        "type": "panel",
+                        "size": [36, 26],
+                        "anchor_to": "center",
+                        "anchor_from": "center",
+                        "controls": [
+                           { "tab@furnace_zeta.smeltable_tab": {"offset": "$all_tabs_offset"} }
+                        ]
+                     }
+                  }
+               ]
+            }
+         },
+         {"java_button_page_grid@furnace_zeta.java_button_page_grid": {}},
+         {"book@somali_to_Mori_no_Kamisama.recipe_book": {}}
+      ]
+   },
+   "tepes_previos_button@furnace_zeta.base_toggle_button": {
+      "focus_container": true,
+      "use_last_focus": true,
+      "ignored": "$ignore_prev_button",
+      "anchor_from": "top_right",
+      "anchor_to": "top_right",
+      "layer": 10,
+      "$toggle_group_forced_index": 0,
+      "$toggle_control_name": "$tepes_prev_ctrl_numb3r",
+      "$toggle_name": "$tepes_prev_raiden_numb3r",
+      "$unchecked_bg": "furnace_zeta.tepes_prev",
+      "$unchecked_hov_bg": "furnace_zeta.tepes_prev_hov",
+      "$checked_bg": "furnace_zeta.tepes_prev",
+      "$checked_hov_bg": "furnace_zeta.tepes_prev_hov"
+   },
+   "tepes_next_button@furnace_zeta.base_toggle_button": {
+      "focus_container": true,
+      "use_last_focus": true,
+      "ignored": "$ignore_next_button",
+      "anchor_from": "top_right",
+      "anchor_to": "top_right",
+      "layer": 10,
+      "$toggle_group_forced_index": 1,
+      "$toggle_control_name": "$tepes_next_ctrl_numb3r",
+      "$toggle_name": "$tepes_next_raiden_numb3r",
+      "$unchecked_bg": "furnace_zeta.tepes_next",
+      "$unchecked_hov_bg": "furnace_zeta.tepes_next_hov",
+      "$checked_bg": "furnace_zeta.tepes_next",
+      "$checked_hov_bg": "furnace_zeta.tepes_next_hov"
+   },
+   "base_toggle_button_state": {
+      "type": "panel",
+      "controls": [ {"bg@$bg_image": {}} ]
+   },
+   "tepes_button_unchecked_hover@furnace_zeta.tepes_button_unchecked": {},
+   "tepes_button_checked@furnace_zeta.tepes_button_unchecked": {},
+   "tepes_button_checked_hover@furnace_zeta.tepes_button_unchecked": {},
+   "tepes_prev_hov@furnace_zeta.tepes_prev_hover": {},
+   "tepes_next@furnace_zeta.tepes_next": {},
+   "tepes_next_hov@furnace_zeta.tepes_next_hover": {},
+   "base_toggle_button": {
+      "type": "panel",
+      "anchor_from": "top_left",
+      "anchor_to": "top_left",
+      "size": [20, 18],
+      "$toggle_group|default": true,
+      "layer": 4,
+      "controls": [
+         {
+            "$toggle_control_name@common.toggle": {
+               "radio_toggle_group": "$toggle_group",
+               "$hover_state|default": true,
+               "focus_wrap_enabled": true,
+               "controls": [
+                  { "unchecked@furnace_zeta.base_toggle_button_state": {"$bg_image": "$unchecked_bg"} }                                ,
+                  { "unchecked_hover@furnace_zeta.base_toggle_button_state": {"$bg_image": "$unchecked_hov_bg", "$hover_state": true} },
+                  { "checked@furnace_zeta.base_toggle_button_state": {"$bg_image": "$checked_bg"} }                                    ,
+                  { "checked_hover@furnace_zeta.base_toggle_button_state": {"$bg_image": "$checked_hov_bg", "$hover_state": true} }
+               ]
+            }
+         }
+      ]
+   },
+   "tepes_prev": { "type": "image", "texture": "assets/minecraft/textures/gui/sprites/recipe_book/page_backward", "size": [12, 17], "layer": 2 },
+   "tepes_prev_hover": { "type": "image", "texture": "assets/minecraft/textures/gui/sprites/recipe_book/page_backward_highlighted", "size": [12, 17], "layer": 2 },
+   "tepes_next": { "type": "image", "texture": "assets/minecraft/textures/gui/sprites/recipe_book/page_forward", "size": [12, 17], "layer": 2 },
+   "tepes_next_hover": { "type": "image", "texture": "assets/minecraft/textures/gui/sprites/recipe_book/page_forward_highlighted", "size": [12, 17], "layer": 2 },
+   "base_offset_label": {"type": "label", "color": "white", "text": "$tepes_offset_label", "anchor_from": "center", "anchor_to": "center", "layer": 40},
+   "misc_panel@common.empty_panel": {
+      "controls": [
+         {
+            "misc@furnace_recipe.burn_base_panel": { "$is_misc_tab|default": true, "offset": [-204, -40] }
+         }
+      ]
+   },
+   "burnables_panel@common.empty_panel": {
+      "controls": [
+         {
+            "burnables@furnace_recipe.burn_base_panel": { "$is_burn_tab|default": true, "offset": [-204, -40] }
+         }
+      ]
+   },
+   "smeltables_panel@common.empty_panel": {
+      "controls": [
+         {
+            "smeltables@furnace_recipe.burn_base_panel": { "$is_smelt_tab|default": true, "offset": [-204, -40] }
+         }
+      ]
+   },
+   "offset@common.empty_panel": { "offset": [1, -1.4] },
+   "alpha_tepes_offset_template@furnace_zeta.offset": {
+      "type": "panel",
+      "clips_children": true,
+      "size": [125, 100],
+      "controls": [
+         {
+            "1@misc_panel": {
+               "offset": "$ov",
+               "layer": 30,
+               "bindings": [ {"binding_type": "view", "source_control_name": "misc_tab_toggle", "source_property_name": "#toggle_state", "target_property_name": "#visible"} ]
+            }
+         },
+         {
+            "2@burnables_panel": {
+               "offset": "$ov",
+               "layer": 30,
+               "bindings": [ {"binding_type": "view", "source_control_name": "burnables_tab_toggle", "source_property_name": "#toggle_state", "target_property_name": "#visible"} ]
+            }
+         },
+         {
+            "3@smeltables_panel": {
+               "offset": "$ov",
+               "layer": 30,
+               "bindings": [ {"binding_type": "view", "source_control_name": "smeltable_tab_toggle", "source_property_name": "#toggle_state", "target_property_name": "#visible"} ]
+            }
+         },
+         { "label@furnace_zeta.base_offset_label": {"allow_clipping": false, "offset": "$lo", "layer": 40} }
+      ]
+   },
+   "alpha_tepes_offset_1_content@alpha_tepes_offset_template": {"$ov": "$a", "$lo": "$no"},
+   "alpha_tepes_offset_2_content@alpha_tepes_offset_template": {"$ov": "$b", "$lo": "$no"},
+   "alpha_tepes_offset_3_content@alpha_tepes_offset_template": {"$ov": "$c", "$lo": "$no"},
+   "base_tepes_offset_panel": {
+      "type": "panel",
+      "$tepes_offset_content|default": "$ep",
+      "$ignore_prev_button|default": false,
+      "$ignore_next_button|default": false,
+      "controls": [
+         {
+            "offset_content@$tepes_offset_content": { "property_bag": {"#offset_total": "$tepes_num", "#offset_itchigo": "$tepes_marin", "#offset_number_label": "$tepes_offset_label"} }
+         },
+         {
+            "previous@furnace_zeta.tepes_previos_button": { "layer": 10, "offset": [-89.4, 136.5] }
+         },
+         {
+            "next@furnace_zeta.tepes_next_button": { "layer": 10, "offset": [-34.4, 136.5] }
+         }
+      ],
+      "$itchigo_offset": 1,
+      "$prev_offset": "($itchigo_offset - 1)",
+      "$next_offset": "($itchigo_offset + 1)",
+      "$tepes_prev_ctrl_numb3r": "($_tepes_name + '_tepes_offset_' + $prev_offset + '_button')",
+      "$tepes_prev_raiden_numb3r": "($_tepes_name + '_tepes_offset' + $prev_offset + '_' + $itchigo_offset)",
+      "$tepes_next_ctrl_numb3r": "($_tepes_name + '_tepes_offset_' + $next_offset + '_button')",
+      "$tepes_next_raiden_numb3r": "($_tepes_name + '_tepes_offset' + $itchigo_offset + '_' + $next_offset)",
+      "$tepes_marin": "('§r' + $itchigo_offset)",
+      "$tepes_num": "('§r' + $max_tepes_offset)",
+      "$tepes_offset_label": "($tepes_marin + '/' + $tepes_num)",
+      "bindings": [
+         {
+            "binding_type"        : "view"                                                        ,
+            "source_control_name" : "($_tepes_name + '_tepes_offset_' + $next_offset + '_button')",
+            "source_property_name": "(not #toggle_state)"                                         ,
+            "target_property_name": "#visible"
+         }
+      ],
+      "variables": [
+         {"requires": "($itchigo_tepes_offset = 1)", "$tepes_bindings": []},
+         {
+            "requires": "(not $offset_x)",
+            "$tepes_controls": [
+               {
+                  "tepes_offset@furnace_zeta.base_tepes_offset_panel": {
+                     "$tepes_offset_content"      : "('furnace_zeta.' + $_tepes_name + '_tepes_offset_' + $itchigo_tepes_offset + '_content')",
+                     "$itchigo_offset"            : "$itchigo_tepes_offset"                                                                   ,
+                     "$ignore_prev_button|default": "(not $offset_z)"                                                                         ,
+                     "$ignore_next_button|default": "(not $offset_x)"
+                  }
+               }
             ]
-           }
-        },
-        {
-          "3@smeltables_panel":{
-            "offset": "$ov", 
-            "layer": 30,
-            "bindings": [
-              {
-                 "binding_type": "view",
-                 "source_control_name": "smeltable_tab_toggle",
-                 "source_property_name": "#toggle_state",
-                 "target_property_name": "#visible"
-              }
-           ]
-          }
-        },
-        {
-           "label@furnace_zeta.base_offset_label": {
-              "allow_clipping": false,
-              "offset": "$lo",
-              "layer": 40
-           }
-        }
-     ]
-  },
-
-  "alpha_tepes_offset_1_content@alpha_tepes_offset_template": {"$ov": "$a", "$lo": "$no"},
-  "alpha_tepes_offset_2_content@alpha_tepes_offset_template": {"$ov": "$b", "$lo": "$no"},
-  "alpha_tepes_offset_3_content@alpha_tepes_offset_template": {"$ov": "$c", "$lo": "$no"},
-
-  /* === BASE TEPES OFFSET PANEL === */
-  "base_tepes_offset_panel": {
-     "type": "panel",
-     "$tepes_offset_content|default": "$ep",
-     "$ignore_prev_button|default": false,
-     "$ignore_next_button|default": false,
-     "controls": [
-        {
-           "offset_content@$tepes_offset_content": {
-              "property_bag": {
-                 "#offset_total": "$tepes_num",
-                 "#offset_itchigo": "$tepes_marin",
-                 "#offset_number_label": "$tepes_offset_label"
-              }
-           }
-        },
-        {
-           "previous@furnace_zeta.tepes_previos_button": {"layer": 10, "offset": [-89.4, 136.5]}
-        },
-        {
-           "next@furnace_zeta.tepes_next_button": {"layer": 10, "offset": [-34.4, 136.5]}
-        }
-     ],
-     "$itchigo_offset": 1,
-     "$prev_offset": "($itchigo_offset - 1)",
-     "$next_offset": "($itchigo_offset + 1)",
-     "$tepes_prev_ctrl_numb3r": "($_tepes_name + '_tepes_offset_' + $prev_offset + '_button')",
-     "$tepes_prev_raiden_numb3r": "($_tepes_name + '_tepes_offset' + $prev_offset + '_' + $itchigo_offset)",
-     "$tepes_next_ctrl_numb3r": "($_tepes_name + '_tepes_offset_' + $next_offset + '_button')",
-     "$tepes_next_raiden_numb3r": "($_tepes_name + '_tepes_offset' + $itchigo_offset + '_' + $next_offset)",
-     "$tepes_marin": "('§r' + $itchigo_offset)",
-     "$tepes_num": "('§r' + $max_tepes_offset)",
-     "$tepes_offset_label": "($tepes_marin + '/' + $tepes_num)",
-     "bindings": [
-        {
-           "binding_type": "view",
-           "source_control_name": "($_tepes_name + '_tepes_offset_' + $next_offset + '_button')",
-           "source_property_name": "(not #toggle_state)",
-           "target_property_name": "#visible"
-        }
-     ],
-     "variables": [
-        {"requires": "($itchigo_tepes_offset = 1)", "$tepes_bindings": []},
-        {
-           "requires": "(not $offset_x)",
-           "$tepes_controls": [
-              {
-                 "tepes_offset@furnace_zeta.base_tepes_offset_panel": {
-                    "$tepes_offset_content": "('furnace_zeta.' + $_tepes_name + '_tepes_offset_' + $itchigo_tepes_offset + '_content')",
-                    "$itchigo_offset": "$itchigo_tepes_offset",
-                    "$ignore_prev_button|default": "(not $offset_z)",
-                    "$ignore_next_button|default": "(not $offset_x)"
-                 }
-              }
-           ]
-        }
-     ]
-  },
-     /* === BASE TEPES OFFSET === */
-     "base_tepes_offset": {
+         }
+      ]
+   },
+   "base_tepes_offset": {
       "type": "panel",
       "$next_tepes_offset": "($itchigo_tepes_offset + 1)",
       "$next_tepes_offset_control": "('furnace_zeta.' + $_tepes_name + '_tepes_offset_' + $next_tepes_offset)",
@@ -625,18 +436,18 @@
          {
             "tepes_offset@furnace_zeta.base_tepes_offset_panel": {
                "$tepes_offset_content": "('furnace_zeta.' + $_tepes_name + '_tepes_offset_' + $itchigo_tepes_offset + '_content')",
-               "$itchigo_offset": "$itchigo_tepes_offset",
-               "$ignore_prev_button": "(not $offset_z)",
-               "$ignore_next_button": "(not $offset_x)"
+               "$itchigo_offset"      : "$itchigo_tepes_offset"                                                                   ,
+               "$ignore_prev_button"  : "(not $offset_z)"                                                                         ,
+               "$ignore_next_button"  : "(not $offset_x)"
             }
          },
-         {"tepes_offset_next@$next_tepes_offset_control": {"ignored": "(not $offset_x)"}}
+         { "tepes_offset_next@$next_tepes_offset_control": {"ignored": "(not $offset_x)"} }
       ],
       "$tepes_bindings": [
          {
-            "binding_type": "view",
-            "source_control_name": "($_tepes_name + '_tepes_offset_' + $itchigo_tepes_offset + '_button')",
-            "source_property_name": "#toggle_state",
+            "binding_type"        : "view"                                                                 ,
+            "source_control_name" : "($_tepes_name + '_tepes_offset_' + $itchigo_tepes_offset + '_button')",
+            "source_property_name": "#toggle_state"                                                        ,
             "target_property_name": "#visible"
          }
       ],
@@ -647,9 +458,9 @@
             "$tepes_controls": [
                {
                   "tepes_offset@furnace_zeta.base_tepes_offset_panel": {
-                     "$tepes_offset_content": "('furnace_zeta.' + $_tepes_name + '_tepes_offset_' + $itchigo_tepes_offset + '_content')",
-                     "$itchigo_offset": "$itchigo_tepes_offset",
-                     "$ignore_prev_button|default": "(not $offset_z)",
+                     "$tepes_offset_content"      : "('furnace_zeta.' + $_tepes_name + '_tepes_offset_' + $itchigo_tepes_offset + '_content')",
+                     "$itchigo_offset"            : "$itchigo_tepes_offset"                                                                   ,
+                     "$ignore_prev_button|default": "(not $offset_z)"                                                                         ,
                      "$ignore_next_button|default": "(not $offset_x)"
                   }
                }
@@ -657,38 +468,17 @@
          }
       ]
    },
-
-   "alpha_tepes_offsets@furnace_zeta.base_tepes_offset": {
-      "$_tepes_name": "alpha",
-      "$itchigo_tepes_offset": 1,
-      "$max_tepes_offset": 3
-   },
-
+   "alpha_tepes_offsets@furnace_zeta.base_tepes_offset": {"$_tepes_name": "alpha", "$itchigo_tepes_offset": 1, "$max_tepes_offset": 3},
    "alpha_tepes_offset_1@furnace_zeta.base_tepes_offset": {"$itchigo_tepes_offset": 1},
    "alpha_tepes_offset_2@furnace_zeta.base_tepes_offset": {"$itchigo_tepes_offset": 2},
    "alpha_tepes_offset_3@furnace_zeta.base_tepes_offset": {"$itchigo_tepes_offset": 3},
-
-   /* === FURNACE UI COMPONENTS === */
    "flame_panel": {
       "type": "panel",
       "size": [13, 13],
       "offset": [-21, 0],
-      "controls": [
-         {"flame_empty_image@furnace_zeta.flame_empty_image": {}},
-         {"flame_full_image@furnace_zeta.flame_full_image": {}}
-      ]
+      "controls": [ {"flame_empty_image@furnace_zeta.flame_empty_image": {}}, {"flame_full_image@furnace_zeta.flame_full_image": {}} ]
    },
-
-   "furnace_arrow_empty_image": {
-      "type": "image",
-      "layer": 1,
-      "texture": "textures/ui/arrow_inactive",
-      "anchor_from": "top_left",
-      "anchor_to": "top_left",
-      "size": [22, 16],
-      "alpha": 0
-   },
-
+   "furnace_arrow_empty_image": { "type": "image", "layer": 1, "texture": "textures/ui/arrow_inactive", "anchor_from": "top_left", "anchor_to": "top_left", "size": [22, 16], "alpha": 0 },
    "furnace_arrow_full_image": {
       "type": "image",
       "layer": 3,
@@ -697,47 +487,17 @@
       "anchor_to": "top_left",
       "size": [22, 15],
       "clip_direction": "left",
-      "bindings": [
-         {
-            "binding_name": "#furnace_arrow_ratio",
-            "binding_name_override": "#clip_ratio",
-            "binding_condition": "always"
-         }
-      ]
+      "bindings": [ {"binding_name": "#furnace_arrow_ratio", "binding_name_override": "#clip_ratio", "binding_condition": "always"} ]
    },
-
-   "flame_empty_image": {
-      "type": "image",
-      "texture": "textures/ui/flame_empty_image",
-      "alpha": 0,
-      "layer": 2
-   },
-
+   "flame_empty_image": {"type": "image", "texture": "textures/ui/flame_empty_image", "alpha": 0, "layer": 2},
    "flame_full_image": {
       "type": "image",
       "texture": "textures/ui/flame_full_image",
       "layer": 3,
       "clip_direction": "down",
-      "bindings": [
-         {
-            "binding_name": "#furnace_flame_ratio",
-            "binding_name_override": "#clip_ratio",
-            "binding_condition": "always"
-         }
-      ]
+      "bindings": [ {"binding_name": "#furnace_flame_ratio", "binding_name_override": "#clip_ratio", "binding_condition": "always"} ]
    },
-
-   "furnace_label": {
-      "type": "label",
-      "offset": [0, -3],
-      "anchor_from": "top_middle",
-      "anchor_to": "top_middle",
-      "text": "$container_title",
-      "color": "$title_text_color",
-      "layer": 2
-   },
-
-   /* === FURNACE PANELS === */
+   "furnace_label": { "type": "label", "offset": [0, -3], "anchor_from": "top_middle", "anchor_to": "top_middle", "text": "$container_title", "color": "$title_text_color", "layer": 2 },
    "furnace_input_panel": {
       "type": "panel",
       "size": ["50%", "100%"],
@@ -751,15 +511,20 @@
                "anchor_from": "right_middle",
                "anchor_to": "right_middle",
                "controls": [
-                  {"furnace_ingredient_panel@furnace_ingredient_panel": {"offset": [-15, -17.4]}},
-                  {"flame_panel@flame_panel": {"offset": [-16.6, 1]}},
-                  {"furnace_fuel_panel@furnace_fuel_panel": {"offset": [-15, 18.5]}}
+                  {
+                     "furnace_ingredient_panel@furnace_ingredient_panel": { "offset": [-15, -17.4] }
+                  },
+                  {
+                     "flame_panel@flame_panel": { "offset": [-16.6, 1] }
+                  },
+                  {
+                     "furnace_fuel_panel@furnace_fuel_panel": { "offset": [-15, 18.5] }
+                  }
                ]
             }
          }
       ]
    },
-
    "furnace_ingredient_panel": {
       "type": "panel",
       "size": [18, 18],
@@ -769,19 +534,18 @@
       "controls": [
          {
             "ingredient_item@common.container_item": {
-               "anchor_from": "left_middle",
-               "anchor_to": "left_middle",
-               "$item_collection_name": "furnace_ingredient_items",
-               "$focus_id": "furnace_ingredient_item",
-               "$focus_override_left": "FOCUS_OVERRIDE_STOP",
-               "$focus_override_left_binding_type": "none",
-               "$focus_override_up": "FOCUS_OVERRIDE_STOP",
-               "$focus_override_up_binding_type": "none"
+               "anchor_from"                      : "left_middle"             ,
+               "anchor_to"                        : "left_middle"             ,
+               "$item_collection_name"            : "furnace_ingredient_items",
+               "$focus_id"                        : "furnace_ingredient_item" ,
+               "$focus_override_left"             : "FOCUS_OVERRIDE_STOP"     ,
+               "$focus_override_left_binding_type": "none"                    ,
+               "$focus_override_up"               : "FOCUS_OVERRIDE_STOP"     ,
+               "$focus_override_up_binding_type"  : "none"
             }
          }
       ]
    },
-
    "furnace_fuel_panel": {
       "type": "panel",
       "size": [18, 18],
@@ -791,19 +555,18 @@
       "controls": [
          {
             "fuel_item@common.container_item": {
-               "anchor_from": "left_middle",
-               "anchor_to": "left_middle",
-               "$item_collection_name": "furnace_fuel_items",
-               "$focus_id": "furnace_fuel_item",
-               "$focus_override_right": "furnace_output_item",
-               "$focus_override_right_binding_type": "none",
-               "$focus_override_left": "FOCUS_OVERRIDE_STOP",
-               "$focus_override_left_binding_type": "none"
+               "anchor_from"                       : "left_middle"        ,
+               "anchor_to"                         : "left_middle"        ,
+               "$item_collection_name"             : "furnace_fuel_items" ,
+               "$focus_id"                         : "furnace_fuel_item"  ,
+               "$focus_override_right"             : "furnace_output_item",
+               "$focus_override_right_binding_type": "none"               ,
+               "$focus_override_left"              : "FOCUS_OVERRIDE_STOP",
+               "$focus_override_left_binding_type" : "none"
             }
          }
       ]
    },
-
    "furnace_output_panel": {
       "type": "panel",
       "size": ["50%", "100%"],
@@ -812,7 +575,7 @@
       "controls": [
          {
             "output_item@common.container_item": {
-               "$25x25_slot": true, // This indicates whether to use the default 18x18 hover texture or not. 
+               "$25x25_slot": true,
                "anchor_from": "left_middle",
                "anchor_to": "left_middle",
                "size": [26, 26],
@@ -828,7 +591,6 @@
          }
       ]
    },
-
    "furnace_panel_top_half": {
       "type": "panel",
       "size": ["100%", "50% - 12px"],
@@ -838,21 +600,23 @@
       "controls": [
          {"furnace_label@furnace_label": {}},
          {"input@furnace_input_panel": {}},
-         {"furnace_arrow_empty_image@furnace_arrow_empty_image": {"anchor_to": "center", "anchor_from": "center", "offset": [3, 0]}},
-         {"furnace_arrow_full_image@furnace_arrow_full_image": {"anchor_to": "center", "anchor_from": "center", "offset": [3, 0]}},
-         {"output@furnace_output_panel": {"offset": [3, 0.6]}}
+         {
+            "furnace_arrow_empty_image@furnace_arrow_empty_image": { "anchor_to": "center", "anchor_from": "center", "offset": [3, 0] }
+         },
+         {
+            "furnace_arrow_full_image@furnace_arrow_full_image": { "anchor_to": "center", "anchor_from": "center", "offset": [3, 0] }
+         },
+         {
+            "output@furnace_output_panel": { "offset": [3, 0.6] }
+         }
       ]
    },
-
-   /* === MAIN FURNACE PANEL === */
    "furnace_panel": {
       "type": "panel",
       "anchor_from": "right_middle",
       "anchor_to": "right_middle",
-    //"$recipe_book_offset|default":[-163, 0], 
       "$custom_slot_offset|default": [-2, -1],
-      "$main_container_offset": [0, 0],//79.2
-    //"$furnace_recipe_book": "furnace_zeta.furnace_recipe_panel",
+      "$main_container_offset": [0, 0],
       "controls": [
          {"container_gamepad_helpers@common.container_gamepad_helpers": {}},
          {"selected_item_details_factory@common.selected_item_details_factory": {}},
@@ -863,16 +627,19 @@
                "layer": 1,
                "offset": "$main_container_offset",
                "controls": [
-                //{"recipe_book@$furnace_recipe_book": {}},
-                  {"common_panel@somali_to_Mori_no_Kamisama.somali": {"$furnace_screen": true}},
+                  { "common_panel@somali_to_Mori_no_Kamisama.somali": {"$furnace_screen": true} },
                   {
                      "furnace_screen_inventory": {
                         "type": "panel",
                         "layer": 5,
                         "controls": [
                            {"furnace_panel_top_half@furnace_zeta.furnace_panel_top_half": {}},
-                           {"inventory_panel_bottom_half_with_label@common.inventory_panel_bottom_half_with_label": {"offset": [0, -3]}},
-                           {"hotbar_grid@common.hotbar_grid_template": {"offset": [0, -7]}},
+                           {
+                              "inventory_panel_bottom_half_with_label@common.inventory_panel_bottom_half_with_label": { "offset": [0, -3] }
+                           },
+                           {
+                              "hotbar_grid@common.hotbar_grid_template": { "offset": [0, -7] }
+                           },
                            {"inventory_take_progress_icon_button@common.inventory_take_progress_icon_button": {}}
                         ]
                      }
@@ -882,8 +649,7 @@
                ]
             }
          },
-         {"flying_item_renderer@common.flying_item_renderer": {"layer": 15}}
+         { "flying_item_renderer@common.flying_item_renderer": {"layer": 15} }
       ]
    }
 }
-

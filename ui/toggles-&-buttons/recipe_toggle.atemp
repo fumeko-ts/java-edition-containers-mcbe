@@ -1,13 +1,4 @@
 {
-//+=============================================================+\\
-//
-//     Code design by Ashura Temps aka Ashura Tepes
-//
-//     * Do not use any code design without permission
-//     * Do not steal or edit this code
-//
-//+=============================================================+\\
-
    "namespace": "recipe_toggle",
    "recipe_p": {
       "type": "panel",
@@ -22,12 +13,12 @@
                "controls": [
                   {
                      "recipe_book_layout_toggle@recipe_toggle.layout_toggle": {
-                        "$icon_control": "crafting.recipe_book_icon",
-                        "$toggle_group_forced_index": "$recipe_book_layout_index",
-                        "$toggle_binding_type": "global",
-                        "$toggle_state_binding_name": "#is_recipe_book_layout",
-                        "$focus_id": "recipe_book_layout_toggle",
-                        "$toggle_tts_header": "accessibility.button.recipebook.layout"
+                        "$icon_control"             : "crafting.recipe_book_icon"             ,
+                        "$toggle_group_forced_index": "$recipe_book_layout_index"             ,
+                        "$toggle_binding_type"      : "global"                                ,
+                        "$toggle_state_binding_name": "#is_recipe_book_layout"                ,
+                        "$focus_id"                 : "recipe_book_layout_toggle"             ,
+                        "$toggle_tts_header"        : "accessibility.button.recipebook.layout"
                      }
                   }
                ]
@@ -35,7 +26,6 @@
          }
       ]
    },
-   
    "survival_p": {
       "type": "panel",
       "size": [22, 20],
@@ -47,14 +37,14 @@
                "type": "panel",
                "size": [22, 20],
                "controls": [
-                  {            
-                  "survival_layout_toggle@recipe_toggle.layout_toggle": {
-                     "$icon_control": "crafting.inventory_icon",
-                     "$toggle_group_forced_index": "$survival_layout_index",
-                     "$toggle_binding_type": "global",
-                     "$toggle_state_binding_name": "#is_survival_layout",
-                     "$toggle_tts_header": "accessibility.button.survival.layout"
-                    }
+                  {
+                     "survival_layout_toggle@recipe_toggle.layout_toggle": {
+                        "$icon_control"             : "crafting.inventory_icon"             ,
+                        "$toggle_group_forced_index": "$survival_layout_index"              ,
+                        "$toggle_binding_type"      : "global"                              ,
+                        "$toggle_state_binding_name": "#is_survival_layout"                 ,
+                        "$toggle_tts_header"        : "accessibility.button.survival.layout"
+                     }
                   }
                ]
             }
@@ -70,7 +60,7 @@
       "$template_toggle": "survival_layout.layout_template_toggle",
       "$allow_controller_back_button_mapping": "$is_ps4"
    },
-   "toggle_panel":{
+   "toggle_panel": {
       "type": "panel",
       "size": [22, 20],
       "anchor_to": "top_left",
@@ -79,24 +69,12 @@
       "controls": [
          {
             "recipe_toggle@recipe_toggle.recipe_p": {
-               "bindings": [
-                  {
-                     "binding_type": "global",
-                     "binding_name": "(not #is_recipe_book_layout)",
-                     "binding_name_override": "#visible"
-                  }
-               ]
+               "bindings": [ {"binding_type": "global", "binding_name": "(not #is_recipe_book_layout)", "binding_name_override": "#visible"} ]
             }
          },
          {
             "survival_toggle@recipe_toggle.survival_p": {
-               "bindings": [
-                  {
-                     "binding_type": "global",
-                     "binding_name": "#is_recipe_book_layout",
-                     "binding_name_override": "#visible"
-                  }
-               ]
+               "bindings": [ {"binding_type": "global", "binding_name": "#is_recipe_book_layout", "binding_name_override": "#visible"} ]
             }
          }
       ]

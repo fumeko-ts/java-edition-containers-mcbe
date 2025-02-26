@@ -1,411 +1,237 @@
 {
   "player_count": {
-    "type": "panel",
-    "size": ["100%", 12],
-    "controls": [
-      {
-        "single_player_label": {
-          "type": "label",
-          "size": ["100% - 9px", 10],
-          "text": "§aonly me online",
-          "anchor_from": "$right_middle",
-          "anchor_to": "$right_middle",
-          "bindings": [
-            {
-              "binding_type": "collection_details",
-              "binding_collection_name": "players_collection"
-            },
-            {
-              "binding_type": "collection",
-              "binding_collection_name": "players_collection",
-              "binding_name": "#collection_index"
-            },
-            {
-              "binding_type": "view",
-              "source_property_name": "(#collection_index = 0)",
-              "target_property_name": "#visible"
-            }
-          ]
+     "type": "panel",
+     "size": ["100%", 12],
+     "controls": [
+        {
+           "single_player_label": {
+              "type": "label",
+              "size": ["100% - 9px", 10],
+              "text": "§aonly me online",
+              "anchor_from": "$right_middle",
+              "anchor_to": "$right_middle",
+              "bindings": [
+                 {"binding_type": "collection_details", "binding_collection_name": "players_collection"}                             ,
+                 {"binding_type": "collection", "binding_collection_name": "players_collection", "binding_name": "#collection_index"},
+                 {"binding_type": "view", "source_property_name": "(#collection_index = 0)", "target_property_name": "#visible"}
+              ]
+           }
+        },
+        {
+           "multi_player_label": {
+              "type": "label",
+              "size": ["100% - 9px", 10],
+              "text": "#output_base_text",
+              "anchor_from": "$right_middle",
+              "anchor_to": "$right_middle",
+              "bindings": [
+                 {"binding_type": "collection_details", "binding_collection_name": "players_collection"}                                             ,
+                 {"binding_type": "collection", "binding_collection_name": "players_collection", "binding_name": "#collection_index"}                ,
+                 {"binding_type": "view", "source_property_name": "(#collection_index + 1)", "target_property_name": "#count"}                       ,
+                 {"binding_type": "view", "source_property_name": "('§a' + #count + '§7 Users online')", "target_property_name": "#output_base_text"},
+                 {"binding_type": "view", "source_property_name": "(#collection_index > 0)", "target_property_name": "#visible"}
+              ]
+           }
         }
-      },
-      {
-        "multi_player_label": {
-          "type": "label",
-          "size": ["100% - 9px", 10],
-          "text": "#output_base_text",
-          "anchor_from": "$right_middle",
-          "anchor_to": "$right_middle",
-          "bindings": [
-            {
-              "binding_type": "collection_details",
-              "binding_collection_name": "players_collection"
-            },
-            {
-              "binding_type": "collection",
-              "binding_collection_name": "players_collection",
-              "binding_name": "#collection_index"
-            },
-            {
-              "binding_type": "view",
-              "source_property_name": "(#collection_index + 1)",
-              "target_property_name": "#count"
-            },
-            {
-              "binding_type": "view",
-              "source_property_name": "('§a' + #count + '§7 Users online')",
-              "target_property_name": "#output_base_text"
-            },
-            {
-              "binding_type": "view",
-              "source_property_name": "(#collection_index > 0)",
-              "target_property_name": "#visible"
-            }
-          ]
-        }
-      }
-    ]
+     ]
   },
-
-
   "serverdisplay": {
-    "type": "panel",
-    "size": ["100% - 2px", "100% - 6px"],
-    "anchor_from": "top_right",
-    "offset": [-20, 1],
-    "anchor_to": "top_right",
-    "controls": [
-      {
-        "world_name": {
-          "type": "image",
-          "texture": "textures/ui/Black",
-          "alpha": 0.0,
-          "size": ["100%c", 11],
-          "ignored": "$is_on_3p_server",
-          "anchor_from": "top_right",
-          "anchor_to": "top_right",
-          "controls": [
-            {
-              "label": {
-                "type": "label",
-                "bindings": [
-                  {"binding_name": "#player_list_title"},
-                  {
-                    "binding_type"        : "view"                         ,
-                    "source_property_name": "('§7' + (#player_list_title))",
-                    "target_property_name": "#info_dat"
-                  }
-                ],
-                "layer": 12,
-                "text_alignment": "center",
-                "anchor_from": "center",
-                "anchor_to": "center",
-                "offset": [2, 0],
-                "shadow": true,
-                "ignored": "$is_on_3p_server",
-                "text": "#info_dat"
-              }
-            }
-          ]
+     "type": "panel",
+     "size": ["100% - 2px", "100% - 6px"],
+     "anchor_from": "top_right",
+     "offset": [-20, 1],
+     "anchor_to": "top_right",
+     "controls": [
+        {
+           "world_name": {
+              "type": "image",
+              "texture": "textures/ui/Black",
+              "alpha": 0.0,
+              "size": ["100%c", 11],
+              "ignored": "$is_on_3p_server",
+              "anchor_from": "top_right",
+              "anchor_to": "top_right",
+              "controls": [
+                 {
+                    "label": {
+                       "type": "label",
+                       "bindings": [ {"binding_name": "#player_list_title"}, {"binding_type": "view", "source_property_name": "('§7' + (#player_list_title))", "target_property_name": "#info_dat"} ],
+                       "layer": 12,
+                       "text_alignment": "center",
+                       "anchor_from": "center",
+                       "anchor_to": "center",
+                       "offset": [2, 0],
+                       "shadow": true,
+                       "ignored": "$is_on_3p_server",
+                       "text": "#info_dat"
+                    }
+                 }
+              ]
+           }
+        },
+        {
+           "cubecraft@$hud_world_name": {
+              "ignored"        : "(not $is_on_3p_server)"                  ,
+              "$server_address": "play.cubecraft.net"                      ,
+              "anchor_from"    : "top_right"                               ,
+              "anchor_to"      : "top_right"                               ,
+              "$server_name"   : "(#player_list_title = 'CubeCraft Games')"
+           }
+        },
+        {
+           "galaxite@$hud_world_name": {
+              "ignored"        : "(not $is_on_3p_server)"           ,
+              "$server_address": "play.galaxite.net"                ,
+              "anchor_from"    : "top_right"                        ,
+              "anchor_to"      : "top_right"                        ,
+              "$server_name"   : "(#player_list_title = 'Galaxite')"
+           }
+        },
+        {
+           "magma-mc@$hud_world_name": {
+              "ignored"        : "(not $is_on_3p_server)"           ,
+              "$server_address": "play.magmaMC.net"                 ,
+              "anchor_from"    : "top_right"                        ,
+              "anchor_to"      : "top_right"                        ,
+              "$server_name"   : "(#player_list_title = 'Magma MC')"
+           }
+        },
+        {
+           "hive@$hud_world_name": {
+              "ignored"        : "(not $is_on_3p_server)"             ,
+              "$server_address": "geo.hivebedrock.network"            ,
+              "anchor_from"    : "top_right"                          ,
+              "anchor_to"      : "top_right"                          ,
+              "$server_name"   : "(#player_list_title = 'Hive Games')"
+           }
         }
-      },
-      {
-        "cubecraft@$hud_world_name": {
-          "ignored"        : "(not $is_on_3p_server)"                  ,
-          "$server_address": "play.cubecraft.net"  ,
-          "anchor_from"    : "top_right"                               ,
-          "anchor_to"      : "top_right"                               ,
-          "$server_name"   : "(#player_list_title = 'CubeCraft Games')"
-        }
-      },
-      {
-        "galaxite@$hud_world_name": {
-          "ignored"        : "(not $is_on_3p_server)"           ,
-          "$server_address": "play.galaxite.net"   ,
-          "anchor_from"    : "top_right"                        ,
-          "anchor_to"      : "top_right"                        ,
-          "$server_name"   : "(#player_list_title = 'Galaxite')"
-        }
-      },
-      {
-        "magma-mc@$hud_world_name": {
-          "ignored"        : "(not $is_on_3p_server)"           ,
-          "$server_address": "play.magmaMC.net"    ,
-          "anchor_from"    : "top_right"                        ,
-          "anchor_to"      : "top_right"                        ,
-          "$server_name"   : "(#player_list_title = 'Magma MC')"
-        }
-      },
-      {
-        "hive@$hud_world_name": {
-          "ignored"        : "(not $is_on_3p_server)"                ,
-          "$server_address": "geo.hivebedrock.network",
-          "anchor_from"    : "top_right"                             ,
-          "anchor_to"      : "top_right"                             ,
-          "$server_name"   : "(#player_list_title = 'Hive Games')"
-        }
-      }
-    ]
+     ]
   },
   "world_name_template": {
-    "type": "image",
-    "texture": "textures/ui/Black",
-    "alpha": 0,
-    "size": ["100%c", 11],
-    "bindings": [
-      {"binding_name": "#player_list_title"},
-      {
-        "binding_type"        : "view"        ,
-        "source_property_name": "$server_name",
-        "target_property_name": "#visible"
-      }
-    ],
-    "controls": [
-      {
-        "label": {
-          "type": "label",
-          "text": "$server_address",
-          "layer": 12,
-          "text_alignment": "center",
-          "anchor_from": "center",
-          "anchor_to": "center",
-          "offset": [2, 0]
+     "type": "image",
+     "texture": "textures/ui/Black",
+     "alpha": 0,
+     "size": ["100%c", 11],
+     "bindings": [ {"binding_name": "#player_list_title"}, {"binding_type": "view", "source_property_name": "$server_name", "target_property_name": "#visible"} ],
+     "controls": [
+        {
+           "label": { "type": "label", "text": "$server_address", "layer": 12, "text_alignment": "center", "anchor_from": "center", "anchor_to": "center", "offset": [2, 0] }
         }
-      }
-    ]
+     ]
   },
-    
   "chat_grid_item": {
-    "type": "panel",
-    "layer": 1,
-    "size": [ "100%-2px", "100%c" ],
-    "anchor_from": "top_left",
-    "anchor_to": "top_left",
-    "bindings": [
-      {
-        "binding_name": "(not #on_new_death_screen)",
-        "binding_name_override": "#visible"
-      }
-    ],
-    "controls": [
-      {
-        "chat_background": {
-          "type": "image",
-          "texture": "textures/ui/Black",
-          "alpha": 0.6,
-          "size": [ "100%", "100%c" ],
-          "anims": [
-            "@hud.anim_chat_bg_wait"
-          ],
-          "controls": [
-            {
-              "chat_text@chat_label": {
-                "anchor_from": "top_left",
-                "anchor_to": "top_left",
-                "offset": [ 2, 0 ]
-              }
-            }
-          ]
+     "type": "panel",
+     "layer": 1,
+     "size": ["100%-2px", "100%c"],
+     "anchor_from": "top_left",
+     "anchor_to": "top_left",
+     "bindings": [ {"binding_name": "(not #on_new_death_screen)", "binding_name_override": "#visible"} ],
+     "controls": [
+        {
+           "chat_background": {
+              "type": "image",
+              "texture": "textures/ui/Black",
+              "alpha": 0.6,
+              "size": ["100%", "100%c"],
+              "anims": ["@hud.anim_chat_bg_wait"],
+              "controls": [
+                 {
+                    "chat_text@chat_label": { "anchor_from": "top_left", "anchor_to": "top_left", "offset": [2, 0] }
+                 }
+              ]
+           }
         }
-      }
-    ]
+     ]
   },
-
   "chat_panel": {
-    "type": "panel",
-	  "visible": false, 
-	  "clips_children": true,
-    "anchor_from": "top_left",
-    "anchor_to": "top_left",
-    "size": [ "100%", "100%c" ],
-    "max_size": [ "100%", "50%" ],
-
-    "controls": [
-      {
-        "stack_panel": {
-          "type": "stack_panel",
-          "anchor_from": "bottom_left",
-          "anchor_to": "bottom_left",
-          "factory": {
-            "name": "chat_item_factory",
-            "max_children_size": 50,
-            "control_ids": {
-              "chat_item": "chat_item@hud.chat_grid_item"
-            }
-          }
+     "type": "panel",
+     "visible": false,
+     "clips_children": true,
+     "anchor_from": "top_left",
+     "anchor_to": "top_left",
+     "size": ["100%", "100%c"],
+     "max_size": ["100%", "50%"],
+     "controls": [
+        {
+           "stack_panel": {
+              "type": "stack_panel",
+              "anchor_from": "bottom_left",
+              "anchor_to": "bottom_left",
+              "factory": { "name": "chat_item_factory", "max_children_size": 50, "control_ids": {"chat_item": "chat_item@hud.chat_grid_item"} }
+           }
         }
-      }
-    ]
+     ]
   },
-  "offhand_renderer": {
-    "type": "custom",
-    "renderer": "live_player_renderer",
-    "size": [20, 20],
-    "offset": [-104, 1000],
-    "anchor_from": "$bottom_middle",
-    "anchor_to": "$bottom_middle",
-    "layer": 2
-  },
+  "offhand_renderer": { "type": "custom", "renderer": "live_player_renderer", "size": [20, 20], "offset": [-104, 1000], "anchor_from": "$bottom_middle", "anchor_to": "$bottom_middle", "layer": 2 },
   "hud_screen@common.base_screen": {
-    "is_showing_menu": false,
-    "should_steal_mouse": true,
-    "low_frequency_rendering": true,
-    "absorbs_input": false,
-    "send_telemetry": false,
-    //"always_accepts_input": true, //this will allow hud accsess to the hotbar 
-    "$screen_animations": [
-      "@common.screen_exit_animation_push_fade",
-      "@common.screen_exit_animation_pop_fade",
-      "@common.screen_entrance_animation_push_fade",
-      "@common.screen_entrance_animation_pop_fade"
-    ],
-
-    "button_mappings": [
-      {
-        "from_button_id": "button.scoreboard",
-        "to_button_id": "button.scoreboard",
-        "mapping_type": "global"
-      },
-      {
-        "from_button_id": "button.inventory_left",
-        "to_button_id": "button.hotbar_inventory_left",
-        "mapping_type": "global"
-      },
-      {
-        "from_button_id": "button.inventory_right",
-        "to_button_id": "button.hotbar_inventory_right",
-        "mapping_type": "global"
-      },
-      {
-        "from_button_id": "button.hide_gui",
-        "to_button_id": "button.hide_gui_all",
-        "mapping_type": "global"
-      },
-      {
-        "from_button_id": "button.hide_tooltips",
-        "to_button_id": "button.hide_tooltips_hud",
-        "mapping_type": "global"
-      },
-      {
-        "from_button_id": "button.hide_paperdoll",
-        "to_button_id": "button.hide_paperdoll_hud",
-        "mapping_type": "global"
-      },
-      {
-        "from_button_id": "button.slot1",
-        "to_button_id": "button.slot_1",
-        "mapping_type": "global"
-      },
-      {
-        "from_button_id": "button.slot2",
-        "to_button_id": "button.slot_2",
-        "mapping_type": "global"
-      },
-      {
-        "from_button_id": "button.slot3",
-        "to_button_id": "button.slot_3",
-        "mapping_type": "global"
-      },
-      {
-        "from_button_id": "button.slot4",
-        "to_button_id": "button.slot_4",
-        "mapping_type": "global"
-      },
-      {
-        "from_button_id": "button.slot5",
-        "to_button_id": "button.slot_5",
-        "mapping_type": "global"
-      },
-      {
-        "from_button_id": "button.slot6",
-        "to_button_id": "button.slot_6",
-        "mapping_type": "global"
-      },
-      {
-        "from_button_id": "button.slot7",
-        "to_button_id": "button.slot_7",
-        "mapping_type": "global"
-      },
-      {
-        "from_button_id": "button.slot8",
-        "to_button_id": "button.slot_8",
-        "mapping_type": "global"
-      },
-      {
-        "from_button_id": "button.slot9",
-        "to_button_id": "button.slot_9",
-        "mapping_type": "global"
-      },
-      {
-        "from_button_id": "button.slot0",
-        "to_button_id": "button.slot_0",
-        "mapping_type": "global"
-      },
-      {
-        "from_button_id": "button.arrow_up",
-        "to_button_id": "button.arrow_key",
-        "mapping_type": "global"
-      },
-      {
-        "from_button_id": "button.arrow_down",
-        "to_button_id": "button.arrow_key",
-        "mapping_type": "global"
-      },
-      {
-        "from_button_id": "button.arrow_left",
-        "to_button_id": "button.arrow_key",
-        "mapping_type": "global"
-      },
-      {
-        "from_button_id": "button.arrow_right",
-        "to_button_id": "button.arrow_key",
-        "mapping_type": "global"
-      }
-    ],
-    "$screen_content": "hud.hud_content"
+     "is_showing_menu": false,
+     "should_steal_mouse": true,
+     "low_frequency_rendering": true,
+     "absorbs_input": false,
+     "send_telemetry": false,
+     "$screen_animations": [
+        "@common.screen_exit_animation_push_fade"    , "@common.screen_exit_animation_pop_fade"     , "@common.screen_entrance_animation_push_fade", "@common.screen_entrance_animation_pop_fade"
+     ],
+     "button_mappings": [
+        {"from_button_id": "button.scoreboard"     , "to_button_id": "button.scoreboard"            , "mapping_type": "global"},
+        {"from_button_id": "button.inventory_left" , "to_button_id": "button.hotbar_inventory_left" , "mapping_type": "global"},
+        {"from_button_id": "button.inventory_right", "to_button_id": "button.hotbar_inventory_right", "mapping_type": "global"},
+        {"from_button_id": "button.hide_gui"       , "to_button_id": "button.hide_gui_all"          , "mapping_type": "global"},
+        {"from_button_id": "button.hide_tooltips"  , "to_button_id": "button.hide_tooltips_hud"     , "mapping_type": "global"},
+        {"from_button_id": "button.hide_paperdoll" , "to_button_id": "button.hide_paperdoll_hud"    , "mapping_type": "global"},
+        {"from_button_id": "button.slot1"          , "to_button_id": "button.slot_1"                , "mapping_type": "global"},
+        {"from_button_id": "button.slot2"          , "to_button_id": "button.slot_2"                , "mapping_type": "global"},
+        {"from_button_id": "button.slot3"          , "to_button_id": "button.slot_3"                , "mapping_type": "global"},
+        {"from_button_id": "button.slot4"          , "to_button_id": "button.slot_4"                , "mapping_type": "global"},
+        {"from_button_id": "button.slot5"          , "to_button_id": "button.slot_5"                , "mapping_type": "global"},
+        {"from_button_id": "button.slot6"          , "to_button_id": "button.slot_6"                , "mapping_type": "global"},
+        {"from_button_id": "button.slot7"          , "to_button_id": "button.slot_7"                , "mapping_type": "global"},
+        {"from_button_id": "button.slot8"          , "to_button_id": "button.slot_8"                , "mapping_type": "global"},
+        {"from_button_id": "button.slot9"          , "to_button_id": "button.slot_9"                , "mapping_type": "global"},
+        {"from_button_id": "button.slot0"          , "to_button_id": "button.slot_0"                , "mapping_type": "global"},
+        {"from_button_id": "button.arrow_up"       , "to_button_id": "button.arrow_key"             , "mapping_type": "global"},
+        {"from_button_id": "button.arrow_down"     , "to_button_id": "button.arrow_key"             , "mapping_type": "global"},
+        {"from_button_id": "button.arrow_left"     , "to_button_id": "button.arrow_key"             , "mapping_type": "global"},
+        {"from_button_id": "button.arrow_right"    , "to_button_id": "button.arrow_key"             , "mapping_type": "global"}
+     ],
+     "$screen_content": "hud.hud_content"
   },
   "hud_content": {
-    "modifications": [
-      {
-        "array_name": "controls",
-        "operation": "insert_front",
-        "value": [
-          {
-          "chat_panel@hud.chat_panel": {
-            "layer": 10,
-            "clips_children": true,
-            "anchor_from": "$bl",
-            "anchor_to": "$bl",
-            "$bl": "bottom_left",
-            "$offset":[ 0, -42 ],
-            "$size": ["40%","40%"],
-            "variables": [
-                {
-                  "requires": "($pocket_edition or $pocket_screen)",
-                  "$bl": "top_left",
-                  "$size": [ "40%", "20%" ],
-                  "$offset": [ 0, 100 ]
-                }
-            ],
-            "visible": true, 
-            "size": "$size",
-            "offset": "$offset"
-            }
-          },
-          {
-            "offhand_panel@$ep": {
-              "animation_reset_name": "screen_animation_reset",
-              "anims": [
-                "@common.container_screen_exit_animation_push"    ,
-                "@common.container_screen_exit_animation_pop"     ,
-                "@common.container_screen_entrance_animation_push",
-                "@common.container_screen_entrance_animation_pop"
-              ],
-              "controls": [ {"offhand_renderer@$offhand_renderer": {}} ]
-            }
-          },
-          {"tab_list@tab_menu.tab_list": {}}
-        ]
-      }
-    ]
+     "modifications": [
+        {
+           "array_name": "controls",
+           "operation": "insert_front",
+           "value": [
+              {
+                 "chat_panel@hud.chat_panel": {
+                    "layer": 10,
+                    "clips_children": true,
+                    "anchor_from": "$bl",
+                    "anchor_to": "$bl",
+                    "$bl": "bottom_left",
+                    "$offset": [0, -42],
+                    "$size": ["40%", "40%"],
+                    "variables": [
+                       { "requires": "($pocket_edition or $pocket_screen)", "$bl": "top_left", "$size": ["40%", "20%"], "$offset": [0, 100] }
+                    ],
+                    "visible": true,
+                    "size": "$size",
+                    "offset": "$offset"
+                 }
+              },
+              {
+                 "offhand_panel@$ep": {
+                    "animation_reset_name": "screen_animation_reset",
+                    "anims": [
+                       "@common.container_screen_exit_animation_push"    , "@common.container_screen_exit_animation_pop"     , "@common.container_screen_entrance_animation_push",
+                       "@common.container_screen_entrance_animation_pop"
+                    ],
+                    "controls": [ {"offhand_renderer@$offhand_renderer": {}} ]
+                 }
+              },
+              {"tab_list@tab_menu.tab_list": {}}
+           ]
+        }
+     ]
   }
 }

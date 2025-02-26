@@ -1,25 +1,20 @@
 {
   "namespace": "furnace",
   "furnace_screen@common.inventory_screen_common": {
-    "$close_on_player_hurt|default": true,
-    "send_telemetry": false,
-    "load_screen_immediately": true, 
-    "$use_loading_bars": false,
-    "low_frequency_rendering": true, 
-    "render_game_behind": true,
-    "force_render_below": true,      
-    "absorbs_input": true,
-    "is_showing_menu": true,   
-    "close_on_player_hurt": "$close_on_player_hurt",
-    "$main_container_offset": [79.2, 0],
-    "$furnace_recipe_book": "furnace_zeta.furnace_recipe_panel",
-    "variables": [
-      {
-        "requires": "($desktop_screen or $pocket_screen)",
-        "$screen_content": "furnace_zeta.furnace_panel",
-        "$screen_bg_content": "common.screen_background",
-        "$screen_background_alpha": 0.6
-      }
-    ]
+     "$close_on_player_hurt|default": true,
+     "send_telemetry": false,
+     "load_screen_immediately": true,
+     "$use_loading_bars": false,
+     "low_frequency_rendering": true,
+     "render_game_behind": true,
+     "force_render_below": true,
+     "absorbs_input": true,
+     "is_showing_menu": true,
+     "close_on_player_hurt": "$close_on_player_hurt",
+     "$main_container_offset": [79.2, 0],
+     "$furnace_recipe_book": "furnace_zeta.furnace_recipe_panel",
+     "variables": [
+        {"requires": "($desktop_screen or $pocket_screen)", "$screen_content": "furnace_zeta.furnace_panel", "$screen_bg_content": "common.screen_background", "$screen_background_alpha": 0.6}
+     ]
   }
 }

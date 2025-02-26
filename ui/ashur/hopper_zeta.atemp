@@ -1,71 +1,70 @@
 {
-    "namespace": "hopper_zeta",
-    "item_hopper_label": {
-      "type": "label",
-      "offset": [ 8, 5 ],
-      "anchor_from": "top_left",
-      "anchor_to": "top_left",
-      "text": "$container_title",
-      "$container_title": "Item Hopper",
-      "color": "$title_text_color",
-      "layer": 2
-    },
-    "redstone_input_grid": {
-        "type": "grid",
-        "anchor_from": "center",
-        "anchor_to": "center",
-        "offset": [0, 0],
-        "grid_dimensions": [5, 1],
-        "collection_name": "container_items",
-        "grid_item_template": "common.container_item",
-        "$item_collection_name": "container_items"
-      },
-    
-      "redstone_panel_top_half": {
-        "type": "panel",
-        "size": [ "100%", "50% - 12px" ],
-        "offset": [ 0, 0.6],
-        "anchor_to": "top_left",
-        "anchor_from": "top_left",
-        "controls": [
-          { "redstone_input_grid@hopper_zeta.redstone_input_grid": {} }
-        ]
-      },
-
-    "hopper_panel": {
-    "type": "panel",
-    "controls": [
-
-      { "container_gamepad_helpers@common.container_gamepad_helpers": {} },
-      { "selected_item_details_factory@common.selected_item_details_factory": {} },
-      { "item_lock_notification_factory@common.item_lock_notification_factory": {} },
-      {
-        "root_panel@common.empty_panel": {
-          "layer": 1,
-          "size": [176, 133],
-          "controls": [
-            { "common_panel@somali_to_Mori_no_Kamisama.somali": {"$hopper_screen": true} },
-            {
-              "redstone_screen_inventory": {
-                "type": "panel",
-                "layer": 5,
-                "controls": [
-                  { "item_hopper_label@hopper_zeta.item_hopper_label": {} },
-                  { "red_panel@hopper_zeta.redstone_panel_top_half": {} },
-                  { "red_bottom_half@common.inventory_panel_bottom_half_with_label": {"offset":[0, -3]} },
-                  { "hotbar_grid@common.hotbar_grid_template": {"offset":[0, -7]} },
-                  { "red_hold_icon@common.inventory_take_progress_icon_button": {} }
-                ]
-              }
-            },
-            { "red_icon@common.inventory_selected_icon_button": {} },
-            { "gamepad_cursor@common.gamepad_cursor_button": {} }
-          ]
-        }
-      },
-      { "flying_item_renderer@common.flying_item_renderer": { "layer": 21 } },
-      { "bundle_touch_tooltip@gameplay.bundle_touch_tooltip": {} },
-      { "bundle_cursor_tooltip@gameplay.bundle_cursor_tooltip": {} }
-    ]
+  "namespace": "hopper_zeta",
+  "item_hopper_label": {
+     "type": "label",
+     "offset": [8, 5],
+     "anchor_from": "top_left",
+     "anchor_to": "top_left",
+     "text": "$container_title",
+     "$container_title": "Item Hopper",
+     "color": "$title_text_color",
+     "layer": 2
+  },
+  "redstone_input_grid": {
+     "type": "grid",
+     "anchor_from": "center",
+     "anchor_to": "center",
+     "offset": [0, 0],
+     "grid_dimensions": [5, 1],
+     "collection_name": "container_items",
+     "grid_item_template": "common.container_item",
+     "$item_collection_name": "container_items"
+  },
+  "redstone_panel_top_half": {
+     "type": "panel",
+     "size": ["100%", "50% - 12px"],
+     "offset": [0, 0.6],
+     "anchor_to": "top_left",
+     "anchor_from": "top_left",
+     "controls": [ {"redstone_input_grid@hopper_zeta.redstone_input_grid": {}} ]
+  },
+  "hopper_panel": {
+     "type": "panel",
+     "controls": [
+        {"container_gamepad_helpers@common.container_gamepad_helpers": {}},
+        {"selected_item_details_factory@common.selected_item_details_factory": {}},
+        {"item_lock_notification_factory@common.item_lock_notification_factory": {}},
+        {
+           "root_panel@common.empty_panel": {
+              "layer": 1,
+              "size": [176, 133],
+              "controls": [
+                 { "common_panel@somali_to_Mori_no_Kamisama.somali": {"$hopper_screen": true} },
+                 {
+                    "redstone_screen_inventory": {
+                       "type": "panel",
+                       "layer": 5,
+                       "controls": [
+                          {"item_hopper_label@hopper_zeta.item_hopper_label": {}},
+                          {"red_panel@hopper_zeta.redstone_panel_top_half": {}},
+                          {
+                             "red_bottom_half@common.inventory_panel_bottom_half_with_label": { "offset": [0, -3] }
+                          },
+                          {
+                             "hotbar_grid@common.hotbar_grid_template": { "offset": [0, -7] }
+                          },
+                          {"red_hold_icon@common.inventory_take_progress_icon_button": {}}
+                       ]
+                    }
+                 },
+                 {"red_icon@common.inventory_selected_icon_button": {}},
+                 {"gamepad_cursor@common.gamepad_cursor_button": {}}
+              ]
+           }
+        },
+        { "flying_item_renderer@common.flying_item_renderer": {"layer": 21} },
+        {"bundle_touch_tooltip@gameplay.bundle_touch_tooltip": {}},
+        {"bundle_cursor_tooltip@gameplay.bundle_cursor_tooltip": {}}
+     ]
   }
 }

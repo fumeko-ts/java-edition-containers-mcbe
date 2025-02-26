@@ -36,46 +36,26 @@
       "type": "panel",
       "controls": [
          {"container_gamepad_helpers@common.container_gamepad_helpers": {}},
-         {
-            "selected_item_details_factory@common.selected_item_details_factory": {
-               "control_name": "@chest.selected_item_details"
-            }
-         },
-         {
-            "item_lock_notification_factory@common.item_lock_notification_factory": {
-               "control_name": "@common.item_lock_notification"
-            }
-         },
+         { "selected_item_details_factory@common.selected_item_details_factory": {"control_name": "@chest.selected_item_details"} },
+         { "item_lock_notification_factory@common.item_lock_notification_factory": {"control_name": "@common.item_lock_notification"} },
          {
             "root_panel@common.empty_panel": {
                "size": [176, 220],
                "layer": 1,
                "controls": [
-                  { "double_chest_label@double_chest_zeta.double_chest_label": {}},
-                  {
-                     "common_panel@somali_to_Mori_no_Kamisama.somali": {
-                        "$double_chest_container": true
-                     }
-                  },
+                  {"double_chest_label@double_chest_zeta.double_chest_label": {}},
+                  { "common_panel@somali_to_Mori_no_Kamisama.somali": {"$double_chest_container": true} },
                   {
                      "chest_panel": {
                         "type": "panel",
                         "layer": 5,
                         "controls": [
+                           {"double_chest_zeta_panel_top_half@double_chest_zeta.double_chest_zeta_panel_top_half": {}},
                            {
-                              "double_chest_zeta_panel_top_half@double_chest_zeta.double_chest_zeta_panel_top_half": {
-                              }
-                           },
-                           {
-                              "inventory_panel_bottom_half_with_label@common.inventory_panel_bottom_half_with_label": {
-                                 "offset": [0, -1]
-                              }
+                              "inventory_panel_bottom_half_with_label@common.inventory_panel_bottom_half_with_label": { "offset": [0, -1] }
                            },
                            {"hotbar_grid@common.hotbar_grid_template": {}},
-                           {
-                              "inventory_take_progress_icon_button@common.inventory_take_progress_icon_button": {
-                              }
-                           },
+                           {"inventory_take_progress_icon_button@common.inventory_take_progress_icon_button": {}},
                            { "flying_item_renderer@common.flying_item_renderer": {"layer": 15} }
                         ]
                      }

@@ -1,35 +1,25 @@
 {
-    "format_version": "1.8.0",
-    "render_controllers": {
-       "controller.render.offhand": {
-          "geometry": "geometry.offhand",
-          "materials": [
-             {
-                "*": "Material.default"
-             }
-          ],
-          "textures": [
-             "query.get_equipped_item_name(1) == 'arrow' ? texture.arrow : (query.get_equipped_item_name(1) == 'firework_rocket' ? texture.firework_rocket : (query.get_equipped_item_name(1) == 'shield' ? texture.shield : (query.get_equipped_item_name(1) == 'totem' || query.get_equipped_item_name(1) == 'totem_of_undying' ? texture.totem : (query.get_equipped_item_name(1) == 'nautilus_shell' ? texture.nautilus_shell : texture.map))))"
-          ],
-          "is_hurt_color": {},
-          "on_fire_color": {},
-          "light_color_multiplier": 1.15,
-          "ignore_lighting": true
-       },
-       "controller.render.offhand_slot": {
-          "geometry": "geometry.offhand_slot",
-          "materials": [
-             {
-                "*": "Material.alphablend"
-             }
-          ],
-          "textures": [
-             "texture.offhand_slot"
-          ],
-          "is_hurt_color": {},
-          "on_fire_color": {},
-          "light_color_multiplier": 1.14,
-          "ignore_lighting": true
-       }
-    }
- }
+   "format_version": "1.8.0",
+   "render_controllers": {
+      "controller.render.offhand": {
+         "geometry": "geometry.offhand",
+         "materials": [ {"*": "Material.default"} ],
+         "textures": [
+            "query.get_equipped_item_name(1) == 'arrow' ? texture.arrow : (query.get_equipped_item_name(1) == 'firework_rocket' ? texture.firework_rocket : (query.get_equipped_item_name(1) == 'shield' ? texture.shield : (query.get_equipped_item_name(1) == 'totem' || query.get_equipped_item_name(1) == 'totem_of_undying' ? texture.totem : (query.get_equipped_item_name(1) == 'nautilus_shell' ? texture.nautilus_shell : texture.map))))"
+         ],
+         "is_hurt_color": {},
+         "on_fire_color": {},
+         "light_color_multiplier": 1.15,
+         "ignore_lighting": true
+      },
+      "controller.render.offhand_slot": {
+         "geometry": "geometry.offhand_slot",
+         "materials": [ {"*": "Material.alphablend"} ],
+         "textures": ["texture.offhand_slot"],
+         "is_hurt_color": {},
+         "on_fire_color": {},
+         "light_color_multiplier": 1.14,
+         "ignore_lighting": true
+      }
+   }
+}

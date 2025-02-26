@@ -1,244 +1,213 @@
 {
-  "namespace": "-container_common",
-  "toggle": {
-     "type": "toggle",
-     "$focus_id|default": "",
-     "$focus_override_down|default": "",
-     "$focus_override_up|default": "",
-     "$focus_override_left|default": "",
-     "$focus_override_right|default": "",
-     "focus_identifier": "$focus_id",
-     "focus_change_down": "$focus_override_down",
-     "focus_change_up": "$focus_override_up",
-     "focus_change_left": "$focus_override_left",
-     "focus_change_right": "$focus_override_right",
-     "$toggle_focus_enabled|default": true,
-     "focus_enabled": "$toggle_focus_enabled",
-     "focus_magnet_enabled": true,
-     "$default_focus_precedence|default": 0,
-     "default_focus_precedence": "$default_focus_precedence",
-     "layer": 1,
-     "sound_name": "random.click",
-     "sound_volume": 1.0,
-     "sound_pitch": 1.0,
-     "checked_control": "checked",
-     "unchecked_control": "unchecked",
-     "checked_hover_control": "checked_hover",
-     "unchecked_hover_control": "unchecked_hover",
-     "checked_locked_control": "checked_locked",
-     "unchecked_locked_control": "unchecked_locked",
-     "checked_locked_hover_control": "checked_locked_hover",
-     "unchecked_locked_hover_control": "unchecked_locked_hover",
-     "$radio_toggle_group|default": false,
-     "$toggle_default_state|default": false,
-     "$toggle_group_forced_index|default": -1,
-     "$toggle_group_default_selected|default": 0,
-     "$toggle_binding_type|default": "global",
-     "$toggle_binding_condition|default": "visible",
-     "$toggle_state_binding_name|default": "#toggle_state",
-     "$toggle_enabled_binding_type|default": "none",
-     "$toggle_enabled_binding_condition|default": "visible",
-     "$toggle_enabled_binding_name|default": "#toggle_enabled",
-     "$toggle_grid_collection_name|default": "",
-     "$toggle_collection_details_type|default": "none",
-     "$toggle_collection_detail_name|default": "",
-     "$toggle_tts_name|default": "accessibility.toggle.tts.title",
-     "$toggle_tts_header_binding_type|default": "none",
-     "$toggle_tts_header_binding_condition|default": "visible",
-     "$toggle_tts_header_binding_collection_name|default": "",
-     "$toggle_tts_header|default": "",
-     "$toggle_tts_value_binding_type|default": "none",
-     "$toggle_tts_value_binding_condition|default": "visible",
-     "$toggle_tts_value_binding_collection_name|default": "",
-     "$toggle_tts_override_toggle_value|default": "",
-     "$toggle_tts_toggle_on_text|default": "accessibility.state.on",
-     "$toggle_tts_toggle_off_text|default": "accessibility.state.off",
-     "$toggle_tts_type_priority|default": 100,
-     "$tts_section_header|default": "",
-     "radio_toggle_group": "$radio_toggle_group",
-     "toggle_name": "$toggle_name",
-     "toggle_default_state": "$toggle_default_state",
-     "toggle_group_forced_index": "$toggle_group_forced_index",
-     "toggle_group_default_selected": "$toggle_group_default_selected",
-     "toggle_grid_collection_name": "$toggle_grid_collection_name",
-     "$enable_directional_toggling|default": false,
-     "$toggle_on_button|default": "toggle.toggle_on",
-     "$toggle_off_button|default": "toggle.toggle_off",
-     "$toggle_tts_enabled_binding_type|default": "none",
-     "enable_directional_toggling": "$enable_directional_toggling",
-     "toggle_on_button": "$toggle_on_button",
-     "toggle_off_button": "$toggle_off_button",
-     "tts_toggle_on": "$toggle_tts_toggle_on_text",
-     "tts_toggle_off": "$toggle_tts_toggle_off_text",
-     "tts_name": "$toggle_tts_name",
-     "tts_control_header": "$toggle_tts_header",
-     "tts_section_header": "$tts_section_header",
-     "tts_override_control_value": "$toggle_tts_override_toggle_value",
-     "tts_control_type_order_priority": "$toggle_tts_type_priority",
-     "button_mappings": "$toggle_button_mappings",
-     "$toggle_button_mappings|default": [
-        {
-           "from_button_id": "button.menu_select",
-           "to_button_id"  : "button.menu_select",
-           "mapping_type"  : "pressed"
-        },
-        {
-           "from_button_id": "button.menu_ok",
-           "to_button_id"  : "button.menu_ok",
-           "mapping_type"  : "focused"
-        },
-        {
-           "ignored"             : "(not $enable_directional_toggling)",
-           "from_button_id"      : "button.menu_left"                  ,
-           "to_button_id"        : "$toggle_off_button"                ,
-           "mapping_type"        : "pressed"                           ,
-           "input_mode_condition": "gamepad_and_not_gaze"
-        },
-        {
-           "ignored"             : "(not $enable_directional_toggling)",
-           "from_button_id"      : "button.menu_right"                 ,
-           "to_button_id"        : "$toggle_on_button"                 ,
-           "mapping_type"        : "pressed"                           ,
-           "input_mode_condition": "gamepad_and_not_gaze"
-        }
-     ],
-     "$toggle_property_bag|default": {"#toggle_state": true},
-     "property_bag": "$toggle_property_bag",
-     "bindings": [
-        {
-           "binding_type"           : "$toggle_binding_type"        ,
-           "binding_condition"      : "$toggle_binding_condition"   ,
-           "binding_collection_name": "$toggle_grid_collection_name",
-           "binding_name"           : "$toggle_state_binding_name"  ,
-           "binding_name_override"  : "#toggle_state"
-        },
-        {
-           "binding_type"           : "$toggle_enabled_binding_type"     ,
-           "binding_condition"      : "$toggle_enabled_binding_condition",
-           "binding_collection_name": "$toggle_grid_collection_name"     ,
-           "binding_name"           : "$toggle_enabled_binding_name"     ,
-           "binding_name_override"  : "#enabled"
-        },
-        {
-           "binding_type"           : "$toggle_collection_details_type",
-           "binding_collection_name": "$toggle_collection_detail_name"
-        },
-        {
-           "binding_type"           : "$toggle_tts_header_binding_type"           ,
-           "binding_condition"      : "$toggle_tts_header_binding_condition"      ,
-           "binding_collection_name": "$toggle_tts_header_binding_collection_name",
-           "binding_name"           : "$toggle_tts_header"
-        },
-        {
-           "binding_type"           : "$toggle_tts_value_binding_type"           ,
-           "binding_condition"      : "$toggle_tts_value_binding_condition"      ,
-           "binding_collection_name": "$toggle_tts_value_binding_collection_name",
-           "binding_name"           : "$toggle_tts_override_toggle_value"
-        },
-        {
-           "binding_type"         : "$toggle_tts_enabled_binding_type",
-           "binding_name"         : "#tts_enabled"                    ,
-           "binding_name_override": "#focus_enabled"
-        }
-     ]
-  },
-
-  "cell_specifications@-container_common.toggle": {
-     "$toggle_name": "recipe_toggle",
-     "$focus_enabled": false,
-     "size": [25, 25],
-     "focus_magnet_enabled": false,
-     "anchor_from": "center",
-     "anchor_to": "center",
-     "sound_volume": 0.0,
-     "sound_pitch": 0.0,
-     "offset": "$entire_slot_offset",
-     "$entire_slot_offset": [-50, 25],
-     "$slot_cell_texture|default": "assets/minecraft/textures/gui/sprites/recipe_book/slot_craftable.png",
-     "$slot_cell_size|default": [25, 25],
-     "$slot_cell_offset|default": [4, 2],
-     "$slot_texture_uv_size|default": [25, 25],
-     "$aux|default": 0,
-     "$aux_item_offset|default": [4, 2],
-     "$white_highlight_slot_size": [20, 20],
-     "$white_highlight_slot_offset": [3.6, 1.4],
-     "$highlight_layer|default": 65,
-     "$layer|default": 70,
-     "$t_text|default": "",
-     "$hover_text_offset|default": [40, -40],
-     "$item_collection_name": "none",
-     "checked_control": "unchecked",
-     "unchecked_control": "unchecked",
-     "checked_hover_control": "checked",
-     "unchecked_hover_control": "checked",
-     "checked_locked_control": "unchecked",
-     "unchecked_locked_control": "unchecked",
-     "checked_locked_hover_control": "checked",
-     "unchecked_locked_hover_control": "checked",
-     "controls": [
-        {
-           "checked@common.empty_panel": {
-              "anchor_from": "center",
-              "anchor_to": "center",
-              "controls": [
-                 {
-                    "slot_texture@somali_to_Mori_no_Kamisama.image_element": {
-                       "anchor_from": "center",
-                       "fill": true,
-                       "anchor_to": "center",
-                       "texture": "$slot_cell_texture",
-                       "size": "$slot_cell_size",
-                       "offset": "$slot_cell_offset",
-                       "$uv": "$slot_texture_uv_size"
-                    }
-                 },
-                 {
-                    "cell_aux@beacon.item_renderer": {
-                       "offset": "$aux_item_offset",
-                       "layer": "$layer",
-                       "anchor_from": "center",
-                       "anchor_to": "center",
-                       "property_bag": {"#item_id_aux": "$aux"}
-                    }
-                 },
-                 { "highlight@common.highlight_slot": {"layer": "$highlight_layer"} },
-                 {
-                    "tooltip@common.hover_text": {
-                       "layer": 100,
-                       "property_bag": {"force_update": true, "#hover_text": "$t_text"}
-                    }
-                 }
-              ]
-           }
-        },
-        {
-           "unchecked@common.empty_panel": {
-              "anchor_from": "center",
-              "anchor_to": "center",
-              "controls": [
-                 {
-                    "slot_texture@somali_to_Mori_no_Kamisama.image_element": {
-                       "anchor_from": "center",
-                       "fill": true,
-                       "anchor_to": "center",
-                       "texture": "$slot_cell_texture",
-                       "size": "$slot_cell_size",
-                       "offset": "$slot_cell_offset",
-                       "$uv": "$slot_texture_uv_size"
-                    }
-                 },
-                 {
-                    "cell_aux@beacon.item_renderer": {
-                       "offset": "$aux_item_offset",
-                       "layer": "$layer",
-                       "anchor_from": "center",
-                       "anchor_to": "center",
-                       "property_bag": {"#item_id_aux": "$aux"}
-                    }
-                 }
-              ]
-           }
-        }
-     ]
-  }
+   "namespace": "-container_common",
+   "toggle": {
+      "type": "toggle",
+      "$focus_id|default": "",
+      "$focus_override_down|default": "",
+      "$focus_override_up|default": "",
+      "$focus_override_left|default": "",
+      "$focus_override_right|default": "",
+      "focus_identifier": "$focus_id",
+      "focus_change_down": "$focus_override_down",
+      "focus_change_up": "$focus_override_up",
+      "focus_change_left": "$focus_override_left",
+      "focus_change_right": "$focus_override_right",
+      "$toggle_focus_enabled|default": true,
+      "focus_enabled": "$toggle_focus_enabled",
+      "focus_magnet_enabled": true,
+      "$default_focus_precedence|default": 0,
+      "default_focus_precedence": "$default_focus_precedence",
+      "layer": 1,
+      "sound_name": "random.click",
+      "sound_volume": 1.0,
+      "sound_pitch": 1.0,
+      "checked_control": "checked",
+      "unchecked_control": "unchecked",
+      "checked_hover_control": "checked_hover",
+      "unchecked_hover_control": "unchecked_hover",
+      "checked_locked_control": "checked_locked",
+      "unchecked_locked_control": "unchecked_locked",
+      "checked_locked_hover_control": "checked_locked_hover",
+      "unchecked_locked_hover_control": "unchecked_locked_hover",
+      "$radio_toggle_group|default": false,
+      "$toggle_default_state|default": false,
+      "$toggle_group_forced_index|default": -1,
+      "$toggle_group_default_selected|default": 0,
+      "$toggle_binding_type|default": "global",
+      "$toggle_binding_condition|default": "visible",
+      "$toggle_state_binding_name|default": "#toggle_state",
+      "$toggle_enabled_binding_type|default": "none",
+      "$toggle_enabled_binding_condition|default": "visible",
+      "$toggle_enabled_binding_name|default": "#toggle_enabled",
+      "$toggle_grid_collection_name|default": "",
+      "$toggle_collection_details_type|default": "none",
+      "$toggle_collection_detail_name|default": "",
+      "$toggle_tts_name|default": "accessibility.toggle.tts.title",
+      "$toggle_tts_header_binding_type|default": "none",
+      "$toggle_tts_header_binding_condition|default": "visible",
+      "$toggle_tts_header_binding_collection_name|default": "",
+      "$toggle_tts_header|default": "",
+      "$toggle_tts_value_binding_type|default": "none",
+      "$toggle_tts_value_binding_condition|default": "visible",
+      "$toggle_tts_value_binding_collection_name|default": "",
+      "$toggle_tts_override_toggle_value|default": "",
+      "$toggle_tts_toggle_on_text|default": "accessibility.state.on",
+      "$toggle_tts_toggle_off_text|default": "accessibility.state.off",
+      "$toggle_tts_type_priority|default": 100,
+      "$tts_section_header|default": "",
+      "radio_toggle_group": "$radio_toggle_group",
+      "toggle_name": "$toggle_name",
+      "toggle_default_state": "$toggle_default_state",
+      "toggle_group_forced_index": "$toggle_group_forced_index",
+      "toggle_group_default_selected": "$toggle_group_default_selected",
+      "toggle_grid_collection_name": "$toggle_grid_collection_name",
+      "$enable_directional_toggling|default": false,
+      "$toggle_on_button|default": "toggle.toggle_on",
+      "$toggle_off_button|default": "toggle.toggle_off",
+      "$toggle_tts_enabled_binding_type|default": "none",
+      "enable_directional_toggling": "$enable_directional_toggling",
+      "toggle_on_button": "$toggle_on_button",
+      "toggle_off_button": "$toggle_off_button",
+      "tts_toggle_on": "$toggle_tts_toggle_on_text",
+      "tts_toggle_off": "$toggle_tts_toggle_off_text",
+      "tts_name": "$toggle_tts_name",
+      "tts_control_header": "$toggle_tts_header",
+      "tts_section_header": "$tts_section_header",
+      "tts_override_control_value": "$toggle_tts_override_toggle_value",
+      "tts_control_type_order_priority": "$toggle_tts_type_priority",
+      "button_mappings": "$toggle_button_mappings",
+      "$toggle_button_mappings|default": [
+         {"from_button_id": "button.menu_select", "to_button_id": "button.menu_select", "mapping_type": "pressed"},
+         {"from_button_id": "button.menu_ok", "to_button_id": "button.menu_ok", "mapping_type": "focused"},
+         {
+            "ignored"             : "(not $enable_directional_toggling)",
+            "from_button_id"      : "button.menu_left"                  ,
+            "to_button_id"        : "$toggle_off_button"                ,
+            "mapping_type"        : "pressed"                           ,
+            "input_mode_condition": "gamepad_and_not_gaze"
+         },
+         {
+            "ignored"             : "(not $enable_directional_toggling)",
+            "from_button_id"      : "button.menu_right"                 ,
+            "to_button_id"        : "$toggle_on_button"                 ,
+            "mapping_type"        : "pressed"                           ,
+            "input_mode_condition": "gamepad_and_not_gaze"
+         }
+      ],
+      "$toggle_property_bag|default": {"#toggle_state": true},
+      "property_bag": "$toggle_property_bag",
+      "bindings": [
+         {
+            "binding_type"           : "$toggle_binding_type"        ,
+            "binding_condition"      : "$toggle_binding_condition"   ,
+            "binding_collection_name": "$toggle_grid_collection_name",
+            "binding_name"           : "$toggle_state_binding_name"  ,
+            "binding_name_override"  : "#toggle_state"
+         },
+         {
+            "binding_type"           : "$toggle_enabled_binding_type"     ,
+            "binding_condition"      : "$toggle_enabled_binding_condition",
+            "binding_collection_name": "$toggle_grid_collection_name"     ,
+            "binding_name"           : "$toggle_enabled_binding_name"     ,
+            "binding_name_override"  : "#enabled"
+         },
+         {"binding_type": "$toggle_collection_details_type", "binding_collection_name": "$toggle_collection_detail_name"},
+         {
+            "binding_type"           : "$toggle_tts_header_binding_type"           ,
+            "binding_condition"      : "$toggle_tts_header_binding_condition"      ,
+            "binding_collection_name": "$toggle_tts_header_binding_collection_name",
+            "binding_name"           : "$toggle_tts_header"
+         },
+         {
+            "binding_type"           : "$toggle_tts_value_binding_type"           ,
+            "binding_condition"      : "$toggle_tts_value_binding_condition"      ,
+            "binding_collection_name": "$toggle_tts_value_binding_collection_name",
+            "binding_name"           : "$toggle_tts_override_toggle_value"
+         },
+         {"binding_type": "$toggle_tts_enabled_binding_type", "binding_name": "#tts_enabled", "binding_name_override": "#focus_enabled"}
+      ]
+   },
+   "cell_specifications@-container_common.toggle": {
+      "$toggle_name": "recipe_toggle",
+      "$focus_enabled": false,
+      "size": [25, 25],
+      "focus_magnet_enabled": false,
+      "anchor_from": "center",
+      "anchor_to": "center",
+      "sound_volume": 0.0,
+      "sound_pitch": 0.0,
+      "offset": "$entire_slot_offset",
+      "$entire_slot_offset": [-50, 25],
+      "$slot_cell_texture|default": "assets/minecraft/textures/gui/sprites/recipe_book/slot_craftable.png",
+      "$slot_cell_size|default": [25, 25],
+      "$slot_cell_offset|default": [4, 2],
+      "$slot_texture_uv_size|default": [25, 25],
+      "$aux|default": 0,
+      "$aux_item_offset|default": [4, 2],
+      "$white_highlight_slot_size": [20, 20],
+      "$white_highlight_slot_offset": [3.6, 1.4],
+      "$highlight_layer|default": 65,
+      "$layer|default": 70,
+      "$t_text|default": "",
+      "$hover_text_offset|default": [40, -40],
+      "$item_collection_name": "none",
+      "checked_control": "unchecked",
+      "unchecked_control": "unchecked",
+      "checked_hover_control": "checked",
+      "unchecked_hover_control": "checked",
+      "checked_locked_control": "unchecked",
+      "unchecked_locked_control": "unchecked",
+      "checked_locked_hover_control": "checked",
+      "unchecked_locked_hover_control": "checked",
+      "controls": [
+         {
+            "checked@common.empty_panel": {
+               "anchor_from": "center",
+               "anchor_to": "center",
+               "controls": [
+                  {
+                     "slot_texture@somali_to_Mori_no_Kamisama.image_element": {
+                        "anchor_from": "center",
+                        "fill": true,
+                        "anchor_to": "center",
+                        "texture": "$slot_cell_texture",
+                        "size": "$slot_cell_size",
+                        "offset": "$slot_cell_offset",
+                        "$uv": "$slot_texture_uv_size"
+                     }
+                  },
+                  {
+                     "cell_aux@beacon.item_renderer": { "offset": "$aux_item_offset", "layer": "$layer", "anchor_from": "center", "anchor_to": "center", "property_bag": {"#item_id_aux": "$aux"} }
+                  },
+                  { "highlight@common.highlight_slot": {"layer": "$highlight_layer"} },
+                  {
+                     "tooltip@common.hover_text": { "layer": 100, "property_bag": {"force_update": true, "#hover_text": "$t_text"} }
+                  }
+               ]
+            }
+         },
+         {
+            "unchecked@common.empty_panel": {
+               "anchor_from": "center",
+               "anchor_to": "center",
+               "controls": [
+                  {
+                     "slot_texture@somali_to_Mori_no_Kamisama.image_element": {
+                        "anchor_from": "center",
+                        "fill": true,
+                        "anchor_to": "center",
+                        "texture": "$slot_cell_texture",
+                        "size": "$slot_cell_size",
+                        "offset": "$slot_cell_offset",
+                        "$uv": "$slot_texture_uv_size"
+                     }
+                  },
+                  {
+                     "cell_aux@beacon.item_renderer": { "offset": "$aux_item_offset", "layer": "$layer", "anchor_from": "center", "anchor_to": "center", "property_bag": {"#item_id_aux": "$aux"} }
+                  }
+               ]
+            }
+         }
+      ]
+   }
 }
