@@ -4,7 +4,7 @@
         "type"       : "label"                        ,
         "anchor_from": "top_left"                     ,
         "anchor_to"  : "top_left"                     ,
-        "text"       : "Grindstone",
+        "text"       : "Repair & Disenchant",
         "color"      : "$title_text_color"
       },
       "arrow_icon": {
@@ -177,7 +177,7 @@
         "offset": [17, 4],
         "controls": [
           {
-            "title_label@grindstone_zeta.title_label": { "offset": [4, 2] }
+            "title_label@grindstone_zeta.title_label": { "offset": [-9, 4] }
           },
           {
             "grindstone_slots_panel@grindstone_zeta.grindstone_slots_panel": {

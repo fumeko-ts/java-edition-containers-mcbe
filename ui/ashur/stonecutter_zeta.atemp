@@ -1,6 +1,15 @@
 {
    "namespace": "stonecutter_zeta",
- 
+   "stonecutter_label": {
+    "type": "label",
+    "offset": [ 1, -9 ],
+    "anchor_from": "top_left",
+    "anchor_to": "top_left",
+    "text": "$container_title",
+    "$container_title": "Stonecutter",
+    "color": "$title_text_color",
+    "layer": 2
+  },
    "arrow_icon": {
      "type": "image",
      "texture": "textures/ui/arrow_large", 
@@ -487,6 +496,9 @@
      "size": ["100% - 14px", "50% - 22px"],
      "offset": [0, 15],
      "controls": [
+       {
+        "label@stonecutter_label":{}
+       },
        {
          "top_half_stack_panel@stonecutter_zeta.top_half_stack_panel": {
            "offset": [-53, -2.5]

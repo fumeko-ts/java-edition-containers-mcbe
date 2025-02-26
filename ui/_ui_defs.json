@@ -18,7 +18,8 @@
     "ui/ashur/cartography_zeta.atemp",    // Cartography Table UI
     "ui/ashur/crafter_zeta.atemp",        // Crafting Table UI
     "ui/ashur/creative_layout.atemp",     // Creative Inventory Layout
-    "ui/ashur/dispenser_zeta.atemp",      // Dispenser/Dropper UI
+    "ui/ashur/dispenser_zeta.atemp",      // Dispenser UI
+    "ui/ashur/dropper_zeta.atemp",        // Dropper UI
     "ui/ashur/double_chest_zeta.atemp",   // Large Chest UI
     "ui/ashur/enchanting_zeta.atemp",     // Enchanting Table UI
     "ui/ashur/furnace_zeta.atemp",        // Furnace UI
@@ -27,6 +28,8 @@
     "ui/ashur/loom_zeta.atemp",           // Loom UI
     "ui/ashur/shulker_zeta.atemp",        // Shulker Box UI
     "ui/ashur/small_chest_zeta.atemp",    // Small Chest UI
+    "ui/ashur/ender_chest_zeta.atemp",    // Ender Chest UI
+    "ui/ashur/barrel_zeta.atemp",         // Barrel UI
     "ui/ashur/smithing_zeta.atemp",       // Smithing Table UI
     "ui/ashur/stonecutter_zeta.atemp",    // Stonecutter UI
     "ui/ashur/survival_layout.atemp",     // Survival Inventory Layout

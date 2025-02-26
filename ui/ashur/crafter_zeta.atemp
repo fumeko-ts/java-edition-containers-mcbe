@@ -1,5 +1,15 @@
 {
     "namespace": "crafter_zeta",
+    "crafter_label": {
+      "type": "label",
+      "offset": [ -0.4, 9.4 ],
+      "anchor_from": "top_middle",
+      "anchor_to": "top_middle",
+      "text": "$container_title",
+      "$container_title": "Crafter",
+      "color": "$title_text_color",
+      "layer": 2
+    },
     "crafter_input_grid": {
         "type": "grid",
         "anchor_from": "center",
@@ -16,7 +26,6 @@
     "texture": "textures/ui/slot_enabled",
     "layer": 1
   },
-
   "crafter_highlight_slot": {
     "type": "image",
     "texture": "textures/ui/slot_enabled_hover",
@@ -303,6 +312,7 @@
                 "type": "panel",
                 "layer": 5,
                 "controls": [
+                  { "crafter_label@crafter_zeta.crafter_label": {} },
                   {
                     "crafting_grid": {
                       "type": "panel",

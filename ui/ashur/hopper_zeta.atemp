@@ -1,5 +1,15 @@
 {
     "namespace": "hopper_zeta",
+    "item_hopper_label": {
+      "type": "label",
+      "offset": [ 8, 5 ],
+      "anchor_from": "top_left",
+      "anchor_to": "top_left",
+      "text": "$container_title",
+      "$container_title": "Item Hopper",
+      "color": "$title_text_color",
+      "layer": 2
+    },
     "redstone_input_grid": {
         "type": "grid",
         "anchor_from": "center",
@@ -38,6 +48,7 @@
                 "type": "panel",
                 "layer": 5,
                 "controls": [
+                  { "item_hopper_label@hopper_zeta.item_hopper_label": {} },
                   { "red_panel@hopper_zeta.redstone_panel_top_half": {} },
                   { "red_bottom_half@common.inventory_panel_bottom_half_with_label": {"offset":[0, -3]} },
                   { "hotbar_grid@common.hotbar_grid_template": {"offset":[0, -7]} },

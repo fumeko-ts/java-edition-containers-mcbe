@@ -29,7 +29,7 @@
      "render_game_behind": true,
      "force_render_below": true,      
      "absorbs_input": true,
-     "is_showing_menu": true,    
+     "is_showing_menu": true,  
      "close_on_player_hurt": "$close_on_player_hurt",
      "variables": [
         {
@@ -49,12 +49,12 @@
     "render_game_behind": true,
     "force_render_below": true,      
     "absorbs_input": true,
-    "is_showing_menu": true,    
+    "is_showing_menu": true,     
     "close_on_player_hurt": "$close_on_player_hurt",
     "variables": [
        {
           "requires": "($desktop_screen or $pocket_screen)",
-          "$screen_content": "dispenser_zeta.dispenser_panel",
+          "$screen_content": "dropper_zeta.dropper_panel",
           "$screen_bg_content": "common.screen_background",
           "$screen_background_alpha": 0.6
        }

@@ -522,7 +522,7 @@
    "size": [ 96, 240 ],
    "$scroll_size": [ 8, 240 ],
    "$scroll_view_port_size": [ 89, 140 ],
-   "$scroll_view_port_offset": [0, 38.4],
+   "$scroll_view_port_offset": [1, 38.2],
    "$scrolling_pane_size": [ "100% + 2px", "100%" ],//if scroll bar is cut off change width here
    "$scrolling_pane_offset": [ -16, -20 ],
    "$scroll_box_image_control": "somali_to_Mori_no_Kamisama.villager_scroller",
@@ -913,6 +913,16 @@
      "offset": [-5, 14.8],
      "controls": [ {"top_half_stack_panel@trade2.top_half_stack_panel": {}} ]
   },
+  "trades_label": {
+   "type": "label",
+   "offset": [ -155, 5 ],
+   "anchor_from": "top_middle",
+   "anchor_to": "top_middle",
+   "text": "$container_title",
+   "$container_title": "Trades",
+   "color": "$title_text_color",
+   "layer": 12
+ },
   "villager_name_label": {
      "type": "label",
      "anchor_from": "top_middle",
@@ -937,6 +947,7 @@
               "type": "panel",
               "layer": 2,
               "controls": [
+                 {"trades_label@trade2.trades_label": {}},
                  {"villager_name_label@trade2.villager_name_label": {}},
                  {"exp_progress_bar@trade2.exp_progress_bar": {}},
                  {"top_half_panel@trade2.top_half_panel": {}},

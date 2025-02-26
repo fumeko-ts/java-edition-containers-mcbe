@@ -1,5 +1,15 @@
 {
    "namespace": "loom_zeta",
+   "loom_label": {
+    "type": "label",
+    "offset": [ -66, 89.4 ],
+    "anchor_from": "top_middle",
+    "anchor_to": "top_middle",
+    "text": "$container_title",
+    "$container_title": "Loom",
+    "color": "$title_text_color",
+    "layer": 2
+  },
    "arrow_icon": { "type": "image", "texture": "textures/ui/arrow_large", "size": [18, 0] },
    "banner_outline": {"type": "image", "texture": "textures/ui/Banners"},
    "input_slots_stack_panel": {
@@ -449,6 +459,7 @@
       "anchor_to": "center",
       "anchor_from": "center",
       "controls": [
+         { "loom_label@loom_zeta.loom_label": {} },
          {
             "loom_scroll": {
                "type": "panel",

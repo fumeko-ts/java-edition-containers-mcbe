@@ -1,12 +1,12 @@
 {
-    "namespace": "dispenser_zeta",
-    "dispenser_and_dropper_label": {
+    "namespace": "dropper_zeta",
+    "dropper_and_dropper_label": {
       "type": "label",
       "offset": [ 0, 5 ],
       "anchor_from": "top_middle",
       "anchor_to": "top_middle",
       "text": "$container_title",
-      "$container_title": "Dispenser",
+      "$container_title": "Dropper",
       "color": "$title_text_color",
       "layer": 2
     },
@@ -27,10 +27,10 @@
        "anchor_to": "top_left",
        "anchor_from": "top_left",
        "controls": [
-          {"redstone_input_grid@dispenser_zeta.redstone_input_grid": {}}
+          {"redstone_input_grid@dropper_zeta.redstone_input_grid": {}}
        ]
     },
-    "dispenser_panel": {
+    "dropper_panel": {
        "type": "panel",
        "controls": [
           {"container_gamepad_helpers@common.container_gamepad_helpers": {}},
@@ -54,10 +54,10 @@
                          "layer": 5,
                          "controls": [
                             {
-                              "dispenser_and_dropper_label@dispenser_zeta.dispenser_and_dropper_label": {}
+                              "dropper_and_dropper_label@dropper_zeta.dropper_and_dropper_label": {}
                             },
                             {
-                               "red_panel@dispenser_zeta.redstone_panel_top_half": {
+                               "red_panel@dropper_zeta.redstone_panel_top_half": {
                                }
                             },
                             {

@@ -109,7 +109,7 @@
      },
      "brewing_label": {
         "type": "label",
-        "offset": [0, -3],
+        "offset": [0, 2.8],
         "anchor_from": "top_middle",
         "anchor_to": "top_middle",
         "text": "$container_title",
@@ -202,7 +202,6 @@
         "anchor_from": "top_middle",
         "controls": [
            {"brewing_label@brewing_label": {
-                   "offset": [0, 1]
               }
            },                  
            {"brewing_stand_pictogram@brewing_stand_pictogram": {}}

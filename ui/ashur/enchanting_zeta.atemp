@@ -168,10 +168,11 @@
 
   "enchanting_label": {
     "type": "label",
-    "offset": [ 12, 0 ],
+    "offset": [ 10, 1 ],
     "anchor_from": "top_left",
     "anchor_to": "top_left",
     "text": "$container_title",
+    "$container_title": "Enchant",
     "color": "$title_text_color",
     "layer": 2
   },
@@ -261,7 +262,7 @@
       {
         "enchanting_book_panel": {
           "type": "panel",
-          "offset": [ 13, -12 ],
+          "offset": [ 13, -9.6 ],
           "size": [ 40, 40 ],
           "anchor_from": "left_middle",
           "anchor_to": "left_middle",

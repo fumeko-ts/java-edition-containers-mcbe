@@ -64,7 +64,7 @@
     "variables": [
       {
         "requires": "($desktop_screen or $pocket_screen)",
-        "$screen_content": "small_chest_zeta.small_chest_panel",
+        "$screen_content": "ender_chest_zeta.ender_chest_panel_root",
         "$screen_bg_content": "common.screen_background",
         "$screen_background_alpha": 0.6
       }
@@ -105,7 +105,7 @@
     "variables": [
       {
         "requires": "($desktop_screen or $pocket_screen)",
-        "$screen_content": "small_chest_zeta.small_chest_panel",
+        "$screen_content": "barrel_zeta.barrel_chest_panel",
         "$screen_bg_content": "common.screen_background",
         "$screen_background_alpha": 0.6
       }

@@ -8,7 +8,7 @@
         "layer": 1
      },
      "title_label@anvil_zeta.generic_label": {
-        "offset": [0, 3],
+        "offset": [-21, -0.6],
         "anchor_from": "bottom_middle",
         "anchor_to": "bottom_middle",
         "text": "container.repair"
@@ -55,8 +55,8 @@
         "type": "panel",
         "anchor_from": "bottom_left",
         "anchor_to": "bottom_left",
-        "size": ["100%", "70%"],
-        "offset": [-1, 2],
+        "size": [110, 16],
+        "offset": [-0.6, 2],
         "controls": [ {"text_edit_control@anvil_zeta.text_edit_control": {}} ]
      },
      "anvil_title_and_text_panel": {

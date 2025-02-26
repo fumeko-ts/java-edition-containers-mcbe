@@ -1,12 +1,12 @@
 {
-  "namespace": "small_chest_zeta",
-  "small_chest_label": {
+  "namespace": "ender_chest_zeta",
+  "ender_chest_label": {
     "type": "label",
-    "offset": [ -65.8, 5 ],
+    "offset": [ -49, 5 ],
     "anchor_from": "top_middle",
     "anchor_to": "top_middle",
     "text": "$container_title",
-    "$container_title": "Chest",
+    "$container_title": "Ender Chest",
     "color": "$title_text_color",
     "layer": 12
   },
@@ -14,17 +14,17 @@
     "$item_collection_name": "container_items"
   },
 
-  "small_chest_grid": {
+  "ender_chest_grid": {
     "type": "grid",
     "size": [ 162, 54 ],
     "anchor_from": "top_left",
     "anchor_to": "top_left",
     "grid_dimensions": [ 9, 3 ],
-    "grid_item_template": "small_chest_zeta.chest_grid_item",
+    "grid_item_template": "ender_chest_zeta.chest_grid_item",
     "collection_name": "container_items"
   },
 
-  "small_chest_panel_top_half": {
+  "ender_chest_panel_top_half": {
     "type": "panel",
     "size": [ "100%", "50%" ],
     "offset": [ 0, 8 ],
@@ -32,17 +32,17 @@
     "anchor_from": "top_left",
     "controls": [
       {
-        "small_chest_grid@small_chest_zeta.small_chest_grid": {
+        "ender_chest_grid@ender_chest_zeta.ender_chest_grid": {
           "offset": [ 7, 9 ]
         }
       }
     ]
   },
-  "chest_panel": {
+  "ender_chest_panel": {
     "type": "panel",
     "layer": 5,
     "controls": [
-      { "small_chest_panel_top_half@small_chest_zeta.small_chest_panel_top_half": {} },
+      { "ender_chest_panel_top_half@ender_chest_zeta.ender_chest_panel_top_half": {} },
       { "inventory_panel_bottom_half_with_label@common.inventory_panel_bottom_half_with_label": {"offset": [0, -3]} },
       { "hotbar_grid@common.hotbar_grid_template": {"offset": [0, -7]} },
       { "inventory_take_progress_icon_button@common.inventory_take_progress_icon_button": {} },
@@ -53,14 +53,14 @@
     "size": [ 176, 166 ],
     "layer": 1,
     "controls": [
-      { "small_chest_label@small_chest_zeta.small_chest_label": {} },
+      { "ender_chest_label@ender_chest_zeta.ender_chest_label": {} },  
       { "common_panel@somali_to_Mori_no_Kamisama.somali": {"$barrel_screen": true} },
-      { "chest_panel@chest_panel": {} },
+      { "ender_chest_panel@ender_chest_panel": {} },
       { "inventory_selected_icon_button@common.inventory_selected_icon_button": {} },
       { "gamepad_cursor@common.gamepad_cursor_button": {} }
     ]
   },
-  "small_chest_panel": {
+  "ender_chest_panel_root": {
     "type": "panel",
     "controls": [
       { "container_gamepad_helpers@common.container_gamepad_helpers": {} },

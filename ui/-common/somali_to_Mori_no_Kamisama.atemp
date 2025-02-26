@@ -93,8 +93,9 @@
             { "requires" : "($main_trade_screen = true)",      "$size" : [276, 166], "$current_panel_offset|default": [80.8, -74], "$21" : "$trade_kappa"          },
             { "requires" : "($inventory_screen = true)",       "$size" : [176, 166], "$current_panel_offset|default": [100.8, -74], "$22" : "$inventory_kappa"     }
         ],
+        "$text_offset": [0, 0],
         "controls" : [
-            { "label@label": {} },
+           // { "label@label": {} },
             { "close_button@close_button": {} },
             { "anvil@$1"         : {} },
             { "barrel@$2"        : {} },
@@ -122,7 +123,8 @@
     },
     "label":{
         "type": "label",
-        "offset": [ 7, -1 ],
+        "offset": "$text_offset",
+        "$text_offset": [0, 0],
         "anchor_from": "top_left",
         "anchor_to": "top_left",
         "text": "$container_title",

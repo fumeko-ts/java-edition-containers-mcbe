@@ -1,5 +1,15 @@
 {
     "namespace": "cartography_zeta",
+    "cartography_label": {
+      "type": "label",
+      "offset": [ -6, -12 ],
+      "anchor_from": "top_left",
+      "anchor_to": "top_left",
+      "text": "$container_title",
+      "$container_title": "Cartography Table",
+      "color": "$title_text_color",
+      "layer": 2
+    },
     "arrow_icon": {
        "type": "image",
        "texture": "textures/ui/arrow",
@@ -199,6 +209,9 @@
        "type": "panel",
        "size": [162, "100%cm"],
        "controls": [
+          {
+            "label@cartography_label":{}
+          },
           {
              "input_slots@cartography_zeta.input_slots": {
                 "anchor_from": "left_middle",
