@@ -1,0 +1,8 @@
+{
+  "namespace": "smoker",
+
+  "smoker_screen@furnace.furnace_screen": {
+    "$furnace_recipe_book": "common.empty_panel",
+    "$main_container_offset": [0, 0]
+  }
+}

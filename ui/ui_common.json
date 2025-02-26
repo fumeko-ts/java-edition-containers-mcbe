@@ -11,18 +11,14 @@
   },
   "ui_base_toggle": {
      "type": "panel",
-     "$toggle_view_binding_name|default": "this_toggle",
-     "$template_toggle|default": "common.toggle_controlers",
-     "controls": [ {"$toggle_view_binding_name@$template_toggle": {}} ]
-  },
-  "ashur_toggle": {
+     "$toggle_view_binding_name": "$toggle_trigger_name",
      "$pressed_view_binding_name": "$toggle_trigger_name",
      "$toggle_trigger_name": "$toggle_new_name",
      "$toggle_new_name": "ashur",
      "size": [22, 20],
-     "controls": [
-        { "custom@common.ui_base_toggle": {"$toggle_view_binding_name": "$toggle_trigger_name"} }
-     ]
+     "$toggle_view_binding_name|default": "this_toggle",
+     "$template_toggle|default": "common.toggle_controlers",
+     "controls": [ {"$toggle_view_binding_name@$template_toggle": {}} ]
   },
   "toggle_panel": {
      "type": "panel",

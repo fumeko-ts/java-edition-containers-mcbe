@@ -848,7 +848,10 @@
       "type": "panel",
       "anchor_from": "right_middle",
       "anchor_to": "right_middle",
+    //"$recipe_book_offset|default":[-163, 0], 
       "$custom_slot_offset|default": [-2, -1],
+      "$main_container_offset": [0, 0],//79.2
+    //"$furnace_recipe_book": "furnace_zeta.furnace_recipe_panel",
       "controls": [
          {"container_gamepad_helpers@common.container_gamepad_helpers": {}},
          {"selected_item_details_factory@common.selected_item_details_factory": {}},
@@ -857,10 +860,9 @@
             "root_panel@common.empty_panel": {
                "size": [176, 166],
                "layer": 1,
-               "offset": [0, 0],
-               "$recipe_book_offset|default":[-163, 0],
+               "offset": "$main_container_offset",
                "controls": [
-                  //{"recipe_book@furnace_zeta.furnace_recipe_panel": {}},
+                //{"recipe_book@$furnace_recipe_book": {}},
                   {"common_panel@somali_to_Mori_no_Kamisama.somali": {"$furnace_screen": true}},
                   {
                      "furnace_screen_inventory": {

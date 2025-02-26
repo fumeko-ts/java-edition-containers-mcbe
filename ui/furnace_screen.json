@@ -11,6 +11,8 @@
     "absorbs_input": true,
     "is_showing_menu": true,   
     "close_on_player_hurt": "$close_on_player_hurt",
+    "$main_container_offset": [79.2, 0],
+    "$furnace_recipe_book": "furnace_zeta.furnace_recipe_panel",
     "variables": [
       {
         "requires": "($desktop_screen or $pocket_screen)",

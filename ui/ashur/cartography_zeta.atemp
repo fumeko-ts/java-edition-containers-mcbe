@@ -229,6 +229,7 @@
           },
           {
              "result_item_slot@cartography_zeta.cartography_item_slot": {
+                "$25x25_slot":true,
                 "anchor_from": "right_middle",
                 "anchor_to": "right_middle",
                 "$output": true,

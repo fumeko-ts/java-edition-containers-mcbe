@@ -5,7 +5,8 @@
   "$selected_stack_panel": true,
   "$dev": false,
   "$25x25_slot": false,
-  
+    
+  "$furnace_recipe_needed": false,
   // Anchor Positions
   "$top_left": "top_left",
   "$top_middle": "top_middle",

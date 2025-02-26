@@ -502,7 +502,7 @@
   "trade_selector_stack_panel": {
      "type": "stack_panel",
      "orientation": "vertical",
-     "size": ["100% - 4px", "default"],
+     "size": ["100% - 0.8px", "default"],
      "factory": {
         "name"        : "selected_pack_factory"  ,
         "control_name": "trade2.tier_stack_panel"
@@ -515,31 +515,20 @@
         }
      ]
   },
-  "scroll_inner_input_panel@common.root_panel": {
-     "type": "input_panel",
-     "focus_container": true,
-     "size": [ 92, "100%c" ],
-     "focus_navigation_mode_down": "stop",
-     "controls": [
-        {"trade_selector_stack_panel@trade2.trade_selector_stack_panel": {}}
-     ]
-  },
-  "trade_scroll_panel@trade_common.container_scroll_panel": {
-     "size": ["100px + 1px", 140],
-     "$scrolling_content": "trade2.scroll_inner_input_panel",
-     "$collection_name": "trade_tiers",
-     "$scroll_background_image_control": "trade2.scroll_background_image"
-  },
-  "left_panel@common.root_panel": {
-     "size": [136, 166],
-     "controls": [
-        {
-           "trade_scroll_panel@trade2.trade_scroll_panel": {
-              "offset": [4.8, 5.3]
-           }
-        }
-     ]
-  },
+  "scrolling_panel@common.common_container_scrolling_panel": {
+   "anchor_to": "top_left",
+   "anchor_from": "top_left",
+   "$scroll_track_offset": [ -2, -49.4 ],
+   "size": [ 96, 240 ],
+   "$scroll_size": [ 8, 240 ],
+   "$scroll_view_port_size": [ 89, 140 ],
+   "$scroll_view_port_offset": [0, 38.4],
+   "$scrolling_pane_size": [ "100% + 2px", "100%" ],//if scroll bar is cut off change width here
+   "$scrolling_pane_offset": [ -16, -20 ],
+   "$scroll_box_image_control": "somali_to_Mori_no_Kamisama.villager_scroller",
+   "$scrolling_content": "trade2.trade_selector_stack_panel",
+   "$collection_name": "trade_tiers"
+ },
   "exp_progress_bar": {
      "type": "panel",
      "size": [ 102, 5 ],
@@ -801,6 +790,7 @@
      "$cell_image_binding_condition": "always"
   },
   "item_slot_25@common.container_item": {
+    "$25x25_slot":true,
     "anchor_from": "center",
     "anchor_to": "center",
     "size": [26, 26],
@@ -978,7 +968,7 @@
      "orientation": "horizontal",
      "size": ["100%c", "100%cm"],
      "controls": [
-        {"left_panel@trade2.left_panel": {}}        ,
+        {"scrolling_panel@trade2.scrolling_panel": {}}        ,
         {"center_fold@trade2.center_fold": {}}      ,
         {"right_panel@trade2.right_panel": {}}      
      ]
@@ -993,7 +983,7 @@
   },
   "screen_panel": {
      "type": "panel",
-     "offset": [0, 0],
+     "offset": [20, 30],
      "controls": [
         {"screen_stack_panel@trade2.screen_stack_panel": {}},
         {
@@ -1041,7 +1031,7 @@
         },
         {
            "requires": "$pocket_screen",
-           "$screen_content": "trade2_pocket.screen_panel",
+           "$screen_content": "trade2.screen_panel",
            "$button_mappings": [
               {
                  "from_button_id": "button.menu_cancel",

@@ -29,36 +29,34 @@
       }
     ]
   },
+  "chest_panel": {
+    "type": "panel",
+    "layer": 5,
+    "controls": [
+      { "small_chest_panel_top_half@small_chest_zeta.small_chest_panel_top_half": {} },
+      { "inventory_panel_bottom_half_with_label@common.inventory_panel_bottom_half_with_label": {"offset": [0, -3]} },
+      { "hotbar_grid@common.hotbar_grid_template": {"offset": [0, -7]} },
+      { "inventory_take_progress_icon_button@common.inventory_take_progress_icon_button": {} },
+      { "flying_item_renderer@common.flying_item_renderer": { "layer": 15 } }
+    ]
+  },
+  "root_panel@common.empty_panel": {
+    "size": [ 176, 166 ],
+    "layer": 1,
+    "controls": [
+      { "common_panel@somali_to_Mori_no_Kamisama.somali": {"$barrel_screen": true} },
+      { "chest_panel@chest_panel": {} },
+      { "inventory_selected_icon_button@common.inventory_selected_icon_button": {} },
+      { "gamepad_cursor@common.gamepad_cursor_button": {} }
+    ]
+  },
   "small_chest_panel": {
     "type": "panel",
     "controls": [
       { "container_gamepad_helpers@common.container_gamepad_helpers": {} },
       { "selected_item_details_factory@common.selected_item_details_factory": {} },
       { "item_lock_notification_factory@common.item_lock_notification_factory": {} },
-      {
-        "root_panel@common.empty_panel": {
-          "size": [ 176, 166 ],
-          "layer": 1,
-          "controls": [
-            { "common_panel@somali_to_Mori_no_Kamisama.somali": {"$barrel_screen": true} },
-            {
-              "chest_panel": {
-                "type": "panel",
-                "layer": 5,
-                "controls": [
-                  { "small_chest_panel_top_half@small_chest_zeta.small_chest_panel_top_half": {} },
-                  { "inventory_panel_bottom_half_with_label@common.inventory_panel_bottom_half_with_label": {"offset": [0, -3]} },
-                  { "hotbar_grid@common.hotbar_grid_template": {"offset": [0, -7]} },
-                  { "inventory_take_progress_icon_button@common.inventory_take_progress_icon_button": {} },
-                  { "flying_item_renderer@common.flying_item_renderer": { "layer": 15 } }
-                ]
-              }
-            },
-            { "inventory_selected_icon_button@common.inventory_selected_icon_button": {} },
-            { "gamepad_cursor@common.gamepad_cursor_button": {} }
-          ]
-        }
-      }
+      { "root_panel@root_panel": {} }
     ]
   }
 }

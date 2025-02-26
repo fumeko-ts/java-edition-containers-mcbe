@@ -94,6 +94,7 @@
             { "requires" : "($inventory_screen = true)",       "$size" : [176, 166], "$current_panel_offset|default": [100.8, -74], "$22" : "$inventory_kappa"     }
         ],
         "controls" : [
+            { "label@label": {} },
             { "close_button@close_button": {} },
             { "anvil@$1"         : {} },
             { "barrel@$2"        : {} },
@@ -119,7 +120,16 @@
             { "inventory@$22"    : {} }
         ]
     },
-    
+    "label":{
+        "type": "label",
+        "offset": [ 7, -1 ],
+        "anchor_from": "top_left",
+        "anchor_to": "top_left",
+        "text": "$container_title",
+        "size": [ "90%", "default" ],
+        "color": "$title_text_color",
+        "layer": 20
+      },
     "close_button": {
       "type": "panel",  
       "layer": 80,
@@ -139,7 +149,7 @@
          "$exit_panel": "common.light_close_button_sucrose"
         },  
         {
-          "requires": "$pocket_screen", 
+          "requires": "($pocket_screen or $pocket_edition)", 
           "$exit_panel": "common.light_close_button_sucrose"
         } 
       ],
@@ -166,7 +176,7 @@
                 "top_half@image_element" : {
                     "anchor_from" : "top_middle",
                     "anchor_to"   : "top_middle",
-                    "offset"      : [0, -47.4],
+                    "offset"      : [0, -47.4],"layer":4,
                     "texture"     : "assets/minecraft/textures/gui/container/generic_54",
                     "uv_size"     : [176, 71]
                 }
@@ -175,7 +185,7 @@
                 "bottom_half@image_element" : {
                     "anchor_from" : "top_middle",
                     "anchor_to"   : "top_middle",
-                    "offset"      : [0, 34.6],
+                    "offset"      : [0, 34.6],"layer":2,
                     "texture"     : "assets/minecraft/textures/gui/container/generic_54",
                     "uv_size"     : [176, 97],
                     "uv"          : [0, 125]
@@ -245,5 +255,19 @@
           }
        }
     ]
- }  
+  },
+  //villager 
+  "villager_scroller": {
+    "type": "panel",
+    "size": [ 6, "100%" ],
+    "controls": [
+      {
+        "texture": {
+          "type": "image",
+          "texture": "assets/minecraft/textures/gui/sprites/container/villager/scroller",
+          "size": [ 6, "100%" ]
+        }
+      }
+    ]
+  } 
 }

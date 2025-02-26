@@ -200,50 +200,50 @@
    "size": "$cell_image_size"
   },
   "filter_toggle@common_toggles.switch_toggle": {
-   "size": [26, 18],
-   "$default_texture": "assets/minecraft/textures/gui/sprites/recipe_book/filter_disabled",
-   "$hover_texture": "assets/minecraft/textures/gui/sprites/recipe_book/filter_enabled",
-   "$pressed_texture": "assets/minecraft/textures/gui/sprites/recipe_book/filter_disabled_highlighted",
-   "$pressed_no_hover_texture": "assets/minecraft/textures/gui/sprites/recipe_book/filter_enabled_highlighted",
-   "$unchecked_locked_texture": "assets/minecraft/textures/gui/sprites/recipe_book/filter_disabled",
-   "$checked_locked_texture": "assets/minecraft/textures/gui/sprites/recipe_book/filter_disabled_highlighted",
-   "$toggle_name": "toggle.enableFiltering",
-   "$toggle_binding_type": "global",
-   "$toggle_state_binding_name": "#filtering_enabled",
-   "$button_mappings": [
-    {"to_button_id": "button.filter_toggle_hovered", "mapping_type": "pressed"},
-    {
-     "from_button_id": "button.menu_select",
-     "to_button_id"  : "button.menu_select",
-     "mapping_type"  : "pressed"
-    },
-    {
-     "from_button_id": "button.menu_ok",
-     "to_button_id"  : "button.menu_ok",
-     "mapping_type"  : "focused"
-    },
-    {
-     "from_button_id": "button.controller_back",
-     "to_button_id"  : "button.controller_back",
-     "mapping_type"  : "focused"               ,
-     "ignored"       : "(not $is_ps4)"
-    },
-    {
-     "ignored"             : "(not $enable_directional_toggling)",
-     "from_button_id"      : "button.menu_left"                  ,
-     "to_button_id"        : "$toggle_off_button"                ,
-     "mapping_type"        : "pressed"                           ,
-     "input_mode_condition": "gamepad_and_not_gaze"
-    },
-    {
-     "ignored"             : "(not $enable_directional_toggling)",
-     "from_button_id"      : "button.menu_right"                 ,
-     "to_button_id"        : "$toggle_on_button"                 ,
-     "mapping_type"        : "pressed"                           ,
-     "input_mode_condition": "gamepad_and_not_gaze"
-    }
-   ]
-  },
+    "size": [26, 18],
+    "$default_texture": "assets/minecraft/textures/gui/sprites/recipe_book/filter_disabled",
+    "$hover_texture": "assets/minecraft/textures/gui/sprites/recipe_book/filter_enabled",
+    "$pressed_texture": "assets/minecraft/textures/gui/sprites/recipe_book/filter_disabled_highlighted",
+    "$pressed_no_hover_texture": "assets/minecraft/textures/gui/sprites/recipe_book/filter_enabled_highlighted",
+    "$unchecked_locked_texture": "assets/minecraft/textures/gui/sprites/recipe_book/filter_disabled",
+    "$checked_locked_texture": "assets/minecraft/textures/gui/sprites/recipe_book/filter_disabled_highlighted",
+    "$toggle_name": "toggle.enableFiltering",
+    "$toggle_binding_type": "global",
+    "$toggle_state_binding_name": "#filtering_enabled",
+    "$button_mappings": [
+     {"to_button_id": "button.filter_toggle_hovered", "mapping_type": "pressed"},
+     {
+      "from_button_id": "button.menu_select",
+      "to_button_id"  : "button.menu_select",
+      "mapping_type"  : "pressed"
+     },
+     {
+      "from_button_id": "button.menu_ok",
+      "to_button_id"  : "button.menu_ok",
+      "mapping_type"  : "focused"
+     },
+     {
+      "from_button_id": "button.controller_back",
+      "to_button_id"  : "button.controller_back",
+      "mapping_type"  : "focused"               ,
+      "ignored"       : "(not $is_ps4)"
+     },
+     {
+      "ignored"             : "(not $enable_directional_toggling)",
+      "from_button_id"      : "button.menu_left"                  ,
+      "to_button_id"        : "$toggle_off_button"                ,
+      "mapping_type"        : "pressed"                           ,
+      "input_mode_condition": "gamepad_and_not_gaze"
+     },
+     {
+      "ignored"             : "(not $enable_directional_toggling)",
+      "from_button_id"      : "button.menu_right"                 ,
+      "to_button_id"        : "$toggle_on_button"                 ,
+      "mapping_type"        : "pressed"                           ,
+      "input_mode_condition": "gamepad_and_not_gaze"
+     }
+    ]
+   },
   "base_offset_label": {
    "type": "label",
    "color": "white",
@@ -365,26 +365,26 @@
    ]
   },
   "text_edit_control@common.text_edit_box_beta": {
-   "size": [81, 14],
-   "property_bag": {"#property_field": "#item_name"},
-   "$shadow": true,
-   "max_length": 30,
-   "$text_edit_binding_name": "#text_box_item_name",
-   "$text_edit_box_label_size": ["default", 8],
-   "$place_holder_text": "§o§8§7Search...",
-   "$text_edit_box_label_offset": [1, -1],
-   "$text_edit_box_hovered_button_id": "button.search_bar_hovered",
-   "$text_edit_box_clear_to_button_id": "button.search_bar_clear",
-   "$text_edit_box_selected_to_button_id": "button.search_bar_selected",
-   "$text_edit_box_deselected_to_button_id": "button.search_bar_deselected",
-   "$text_clear_button_enabled": true,
-   "$text_clear_button_size": [15, 15],
-   "$text_clear_button_offset": [2, 0],
-   "focus_wrap_enabled": false,
-   "$focus_id": "",
-   "$focus_override_right": "",
-   "$focus_override_up": ""
-  },
+    "size": [81, 14],
+    "property_bag": {"#property_field": "#item_name"},
+    "$shadow": true,
+    "max_length": 30,
+    "$text_edit_binding_name": "#text_box_item_name",
+    "$text_edit_box_label_size": ["default", 8],
+    "$place_holder_text": "§o§8§7Search...",
+    "$text_edit_box_label_offset": [1, -1],
+    "$text_edit_box_hovered_button_id": "button.search_bar_hovered",
+    "$text_edit_box_clear_to_button_id": "button.search_bar_clear",
+    "$text_edit_box_selected_to_button_id": "button.search_bar_selected",
+    "$text_edit_box_deselected_to_button_id": "button.search_bar_deselected",
+    "$text_clear_button_enabled": true,
+    "$text_clear_button_size": [15, 15],
+    "$text_clear_button_offset": [2, 0],
+    "focus_wrap_enabled": false,
+    "$focus_id": "recipe_search_bar",
+    "$focus_override_right": "craftable_toggle",
+    "$focus_override_up": ""
+   },
   "tepes_previos_button@survival_layout.base_toggle_button": {
    "focus_container": true,
    "use_last_focus": true,
@@ -470,17 +470,17 @@
    "$item_collection_name": "recipe_book",
    "$hover_text_binding_name": "#recipe_hover_text"
   },
-  "offset": { "offset": [3, -1.4] },
+  "offset": { "offset": [2.6, -1.8] },
   "alpha_tepes_offset_template@survival_layout.offset": {
    "type": "panel",
    "clips_children": true,
-   "size": [125, 100],
+   "size": [126, 100],
    "controls": [
     { "grid@survival_layout.recipe_dat": {"offset": "$ov", "layer": 30} },
     {
      "txt@survival_layout.text_edit_control": {
       "allow_clipping": false,
-      "offset": [-8, -62.6],
+      "offset": [-8.4, -61.2],
       "layer": 11
      }
     },
@@ -1330,134 +1330,69 @@
     }
    ]
   },
-  "tab_content": {
-   "type": "panel",
-   "layer": 1,
-   "offset": [0, -80],
-   "controls": [
+"tab_content": {
+  "type": "panel",
+  "layer": 1,
+  "offset": [0, -80],
+  "anchor_to":"center",
+  "anchor_from":"center",
+  "controls": [
     {
-     "tab_content_search_bar_panel": {
-      "type": "stack_panel",
-      "size": [118, 5],
-      "offset": [13.6, -0.4],
-      "orientation": "vertical",
-      "controls": [
-       {
-        "vertical_padding_null@crafting.tab_content_padding": { "size": [0, 1] }
-       },
-       {
-        "creative_label_and_filter_toggle_holder": {
-         "type": "stack_panel",
-         "size": ["100% + 1px", 10],
-         "orientation": "horizontal",
-         "offset": [-4.8, 20],
-         "controls": [
+      "search_panel": {
+        "type": "panel",
+        "size": [118, 5],
+        "anchor_to":"center",
+        "anchor_from":"center",
+        "offset": [13.6, -0.4],
+        "controls": [
           {
-           "padding_1": { "type": "panel", "size": [1, 0] }
+            "filter_toggle@crafting.filter_toggle": {
+              "$default_border_visible": false,
+              "$hover_border_visible": false,
+              "anchor_from": "top_right",
+              "anchor_to": "top_right",
+              "size": [28, 18],
+              "offset": [-6.8, 11],
+              "layer": 4,
+              "$default_texture": "assets/minecraft/textures/gui/sprites/recipe_book/filter_disabled",
+              "$hover_texture": "assets/minecraft/textures/gui/sprites/recipe_book/filter_enabled",
+              "$pressed_texture": "assets/minecraft/textures/gui/sprites/recipe_book/filter_disabled_highlighted",
+              "$pressed_no_hover_texture": "assets/minecraft/textures/gui/sprites/recipe_book/filter_enabled_highlighted",
+              "$unchecked_locked_texture": "assets/minecraft/textures/gui/sprites/recipe_book/filter_disabled",
+              "$checked_locked_texture": "assets/minecraft/textures/gui/sprites/recipe_book/filter_disabled_highlighted"
+            }
           },
           {
-           "filter_toggle_holder": {
-            "type": "panel",
-            "size": ["100%c", "100%"],
-            "controls": [
-             {
-              "filter_toggle@survival_layout.filter_toggle": {
-               "offset": [82.6, 13],
-               "anchor_from": "right_middle",
-               "anchor_to": "right_middle",
-               "$focus_id": "craftable_toggle",
-               "$focus_override_left": "recipe_search_bar",
-               "$default_border_visible": false,
-               "$hover_border_visible": false
-              }
-             }
-            ]
-           }
+            "search@survival_layout.text_edit_control": {
+              "offset": [-19.4, 17.6],
+              "anchor_to":"center",
+              "anchor_from":"center",
+              "layer": 2,
+              "bindings": [
+                {"binding_name": "#is_left_tab_search", "binding_name_override": "#visible"}
+              ]
+            }
           }
-         ]
-        }
-       },
-       {
-        "vertical_padding_2@crafting.tab_content_padding": { "size": [0, 1] }
-       },
-       {
-        "search_and_filter_panel": {
-         "type": "stack_panel",
-         "orientation": "horizontal",
-         "size": ["100% + 1px", 15],
-         "layer": 2,
-         "bindings": [
-          {"binding_name": "#is_left_tab_search", "binding_name_override": "#visible"}
-         ],
-         "controls": [
-          {
-           "text_edit_control@common.text_edit_box_beta": {
-            "size": [81, 14],
-            "property_bag": {"#property_field": "#item_name"},
-            "$shadow": true,
-            
-            "max_length": 30,
-            "$text_edit_binding_name": "#text_box_item_name",
-            "$text_edit_box_label_size": ["default", 8],
-            "$place_holder_text": "§o§8§7Search...",
-            "$text_edit_box_label_offset": [1, -1],
-            "$text_edit_box_hovered_button_id": "button.search_bar_hovered",
-            "$text_edit_box_clear_to_button_id": "button.search_bar_clear",
-            "$text_edit_box_selected_to_button_id": "button.search_bar_selected",
-            "$text_edit_box_deselected_to_button_id": "button.search_bar_deselected",
-            "$text_clear_button_enabled": true,
-            "$text_clear_button_size": [15, 15],
-            "$text_clear_button_offset": [2, 0],
-            "focus_wrap_enabled": false,
-            "$focus_id": "recipe_search_bar",
-            "$focus_override_right": "craftable_toggle",
-            "$focus_override_up": ""
-           }
-          },
-          {
-           "padding_1": { "type": "panel", "size": [1, 0] }
-          },
-          {
-           "filter_toggle_holder": {
-            "type": "panel",
-            "size": ["100%c", "100%"],
-            "controls": [
-             {
-              "filter_toggle@survival_layout.filter_toggle": {
-               "offset": [1.6, -0.5],
-               "anchor_from": "right_middle",
-               "anchor_to": "right_middle",
-               "$focus_id": "craftable_toggle",
-               "$focus_override_left": "recipe_search_bar",
-               "$default_border_visible": false,
-               "$hover_border_visible": false
-              }
-             }
-            ]
-           }
-          }
-         ]
-        }
-       }
-      ]
-     }
+        ]
+      }
     },
     {
-     "nodrop_zone@common.root_panel": {
-      "anchor_from": "center",
-      "anchor_to": "center",
-      "size": ["100%", "100%"],
-      "layer": 2,
-      "bindings": [
-       {
-        "binding_type"         : "global"                ,
-        "binding_name"         : "#is_left_tab_inventory",
-        "binding_name_override": "#visible"
-       }
-      ]
-     }
+      "nodrop_zone@common.root_panel": {
+        "anchor_from": "center",
+        "anchor_to": "center",
+        "size": ["100%", "100%"],
+        "layer": 2,
+        "bindings": [
+          {
+            "binding_type": "global",
+            "binding_name": "#is_left_tab_inventory",
+            "binding_name_override": "#visible"
+          }
+        ]
+      }
     }
-   ]
-  }
+  ]
+}
+
  }
  
