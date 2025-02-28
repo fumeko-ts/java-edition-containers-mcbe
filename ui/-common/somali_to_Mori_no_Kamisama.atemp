@@ -50,6 +50,7 @@
       "$beacon_kappa": "beacon",
       "$enchanting_kappa": "enchanting",
       "$trade_kappa": "trade",
+      "$horse_kappa": "horse_inventory",
       "$1": "$ep",
       "$2": "$ep",
       "$3": "$ep",
@@ -211,6 +212,7 @@
          }
       ]
    },
+   "horse_inventory@image_element": { "uv_size": [176, 166], "texture": "assets/minecraft/textures/gui/container/horse", "offset": [0, 0] },
    "loom@image_element": { "uv_size": [176, 166], "texture": "assets/minecraft/textures/gui/container/loom", "offset": [0, 4.4] },
    "shulker_box@image_element": { "uv_size": [176, 166], "texture": "assets/minecraft/textures/gui/container/shulker_box", "offset": [0, 0] },
    "smithing@image_element": { "uv_size": [176, 166], "texture": "assets/minecraft/textures/gui/container/smithing", "offset": [0, 0] },

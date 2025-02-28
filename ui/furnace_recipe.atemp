@@ -74,17 +74,17 @@
       "layer": 60,
       "$layer": 55,
       "controls": [
-         { "01@-container_common.cell_specifications": {"offset": "@furnace_recipe.offset_combined_ores", "$t_text": "Coal Ore\n§9Smeltable\n§8-\nAux Id: 1048576", "$aux": 1048576} }                ,
-         { "02@-container_common.cell_specifications": {"offset": "@furnace_recipe.offset_placeholder1_ores", "$t_text": "Iron Ore\n§9Smeltable\n§8-\nAux Id: 983040", "$aux": 983040} }              ,
-         { "03@-container_common.cell_specifications": {"offset": "@furnace_recipe.offset_placeholder2_ores", "$t_text": "Gold Ore\n§9Smeltable\n§8-\nAux Id: 917504", "$aux": 917504} }              ,
-         { "04@-container_common.cell_specifications": {"offset": "@furnace_recipe.offset_placeholder3_ores", "$t_text": "Diamond Ore\n§9Smeltable\n§8-\nAux Id: 3670016", "$aux": 3670016} }         ,
-         { "05@-container_common.cell_specifications": {"offset": "@furnace_recipe.offset_placeholder4_ores", "$t_text": "Emerald Ore\n§9Smeltable\n§8-\nAux Id: 8454144", "$aux": 8454144} }         ,
-         { "06@-container_common.cell_specifications": {"offset": "@furnace_recipe.offset_placeholder5_ores", "$t_text": "Lapis Lazuli Ore\n§9Smeltable\n§8-\nAux Id: 1376256", "$aux": 1376256} }    ,
-         { "07@-container_common.cell_specifications": {"offset": "@furnace_recipe.offset_placeholder6_ores", "$t_text": "Redstone Ore\n§9Smeltable\n§8-\nAux Id: 4784128", "$aux": 4784128} }        ,
-         { "08@-container_common.cell_specifications": {"offset": "@furnace_recipe.offset_placeholder7_ores", "$t_text": "Copper Ore\n§9Smeltable\n§8-\nAux Id: -20381696", "$aux": -20381696} }      ,
-         { "09@-container_common.cell_specifications": {"offset": "@furnace_recipe.offset_placeholder8_ores", "$t_text": "Nether Gold Ore\n§9Smeltable\n§8-\nAux Id: -18874368", "$aux": -18874368} } ,
-         { "10@-container_common.cell_specifications": {"offset": "@furnace_recipe.offset_placeholder9_ores", "$t_text": "Ancient Debris\n§9Smeltable\n§8-\nAux Id: -17760256", "$aux": -17760256} }  ,
-         { "11@-container_common.cell_specifications": {"offset": "@furnace_recipe.offset_placeholder10_ores", "$t_text": "Nether Quartz Ore\n§9Smeltable\n§8-\nAux Id: 10027008", "$aux": 10027008} }
+         { "01@container_common.cell_specifications": {"offset": "@furnace_recipe.offset_combined_ores", "$t_text": "Coal Ore\n§9Smeltable\n§8-\nAux Id: 1048576", "$aux": 1048576} }                ,
+         { "02@container_common.cell_specifications": {"offset": "@furnace_recipe.offset_placeholder1_ores", "$t_text": "Iron Ore\n§9Smeltable\n§8-\nAux Id: 983040", "$aux": 983040} }              ,
+         { "03@container_common.cell_specifications": {"offset": "@furnace_recipe.offset_placeholder2_ores", "$t_text": "Gold Ore\n§9Smeltable\n§8-\nAux Id: 917504", "$aux": 917504} }              ,
+         { "04@container_common.cell_specifications": {"offset": "@furnace_recipe.offset_placeholder3_ores", "$t_text": "Diamond Ore\n§9Smeltable\n§8-\nAux Id: 3670016", "$aux": 3670016} }         ,
+         { "05@container_common.cell_specifications": {"offset": "@furnace_recipe.offset_placeholder4_ores", "$t_text": "Emerald Ore\n§9Smeltable\n§8-\nAux Id: 8454144", "$aux": 8454144} }         ,
+         { "06@container_common.cell_specifications": {"offset": "@furnace_recipe.offset_placeholder5_ores", "$t_text": "Lapis Lazuli Ore\n§9Smeltable\n§8-\nAux Id: 1376256", "$aux": 1376256} }    ,
+         { "07@container_common.cell_specifications": {"offset": "@furnace_recipe.offset_placeholder6_ores", "$t_text": "Redstone Ore\n§9Smeltable\n§8-\nAux Id: 4784128", "$aux": 4784128} }        ,
+         { "08@container_common.cell_specifications": {"offset": "@furnace_recipe.offset_placeholder7_ores", "$t_text": "Copper Ore\n§9Smeltable\n§8-\nAux Id: -20381696", "$aux": -20381696} }      ,
+         { "09@container_common.cell_specifications": {"offset": "@furnace_recipe.offset_placeholder8_ores", "$t_text": "Nether Gold Ore\n§9Smeltable\n§8-\nAux Id: -18874368", "$aux": -18874368} } ,
+         { "10@container_common.cell_specifications": {"offset": "@furnace_recipe.offset_placeholder9_ores", "$t_text": "Ancient Debris\n§9Smeltable\n§8-\nAux Id: -17760256", "$aux": -17760256} }  ,
+         { "11@container_common.cell_specifications": {"offset": "@furnace_recipe.offset_placeholder10_ores", "$t_text": "Nether Quartz Ore\n§9Smeltable\n§8-\nAux Id: 10027008", "$aux": 10027008} }
       ]
    },
    "deepslate_panel": {
@@ -96,52 +96,52 @@
       "$layer": 56,
       "controls": [
          {
-            "01@-container_common.cell_specifications": {"offset": "@furnace_recipe.offset_combined_deepslate", "$t_text": "Deepslate Coal Ore\n§9Smeltable\n§8-\nAux Id: -26607616", "$aux": -26607616}
+            "01@container_common.cell_specifications": {"offset": "@furnace_recipe.offset_combined_deepslate", "$t_text": "Deepslate Coal Ore\n§9Smeltable\n§8-\nAux Id: -26607616", "$aux": -26607616}
          },
          {
-            "02@-container_common.cell_specifications": {
+            "02@container_common.cell_specifications": {
                "offset": "@furnace_recipe.offset_placeholder1_deepslate",
                "$t_text": "Deepslate Iron Ore\n§9Smeltable\n§8-\nAux Id: -26279936",
                "$aux": -26279936
             }
          },
          {
-            "03@-container_common.cell_specifications": {
+            "03@container_common.cell_specifications": {
                "offset": "@furnace_recipe.offset_placeholder2_deepslate",
                "$t_text": "Deepslate Gold Ore\n§9Smeltable\n§8-\nAux Id: -26345472",
                "$aux": -26345472
             }
          },
          {
-            "04@-container_common.cell_specifications": {
+            "04@container_common.cell_specifications": {
                "offset": "@furnace_recipe.offset_placeholder3_deepslate",
                "$t_text": "Deepslate Diamond Ore\n§9Smeltable\n§8-\nAux Id: -26542080",
                "$aux": -26542080
             }
          },
          {
-            "05@-container_common.cell_specifications": {
+            "05@container_common.cell_specifications": {
                "offset": "@furnace_recipe.offset_placeholder4_deepslate",
                "$t_text": "Deepslate Emerald Ore\n§9Smeltable\n§8-\nAux Id: -26673152",
                "$aux": -26673152
             }
          },
          {
-            "06@-container_common.cell_specifications": {
+            "06@container_common.cell_specifications": {
                "offset": "@furnace_recipe.offset_placeholder5_deepslate",
                "$t_text": "Deepslate Lapis Lazuli Ore\n§9Smeltable\n§8-\nAux Id: -26214400",
                "$aux": -26214400
             }
          },
          {
-            "07@-container_common.cell_specifications": {
+            "07@container_common.cell_specifications": {
                "offset": "@furnace_recipe.offset_placeholder6_deepslate",
                "$t_text": "Deepslate Redstone Ore\n§9Smeltable\n§8-\nAux Id: -26411008",
                "$aux": -26411008
             }
          },
          {
-            "08@-container_common.cell_specifications": {
+            "08@container_common.cell_specifications": {
                "offset": "@furnace_recipe.offset_placeholder7_deepslate",
                "$t_text": "Deepslate Copper Ore\n§9Smeltable\n§8-\nAux Id: -26738688",
                "$aux": -26738688
@@ -157,24 +157,24 @@
       "layer": 60,
       "$layer": 57,
       "controls": [
-         { "01@-container_common.cell_specifications": {"offset": "@furnace_recipe.offset_combined_stone", "$t_text": "Stone\n§9Smeltable\n§8-\nAux Id: 65536", "$aux": 65536} },
-         { "02@-container_common.cell_specifications": {"offset": "@furnace_recipe.offset_placeholder1_stone", "$t_text": "Cobblestone\n§9Smeltable\n§8-\nAux Id: 262144", "$aux": 262144} },
-         { "03@-container_common.cell_specifications": {"offset": "@furnace_recipe.offset_placeholder2_stone", "$t_text": "Stone Bricks\n§9Smeltable\n§8-\nAux Id: 6422528", "$aux": 6422528} },
+         { "01@container_common.cell_specifications": {"offset": "@furnace_recipe.offset_combined_stone", "$t_text": "Stone\n§9Smeltable\n§8-\nAux Id: 65536", "$aux": 65536} },
+         { "02@container_common.cell_specifications": {"offset": "@furnace_recipe.offset_placeholder1_stone", "$t_text": "Cobblestone\n§9Smeltable\n§8-\nAux Id: 262144", "$aux": 262144} },
+         { "03@container_common.cell_specifications": {"offset": "@furnace_recipe.offset_placeholder2_stone", "$t_text": "Stone Bricks\n§9Smeltable\n§8-\nAux Id: 6422528", "$aux": 6422528} },
          {
-            "04@-container_common.cell_specifications": {"offset": "@furnace_recipe.offset_placeholder3_stone", "$t_text": "Deepslate Bricks\n§9Smeltable\n§8-\nAux Id: -25624576", "$aux": -25624576}
+            "04@container_common.cell_specifications": {"offset": "@furnace_recipe.offset_placeholder3_stone", "$t_text": "Deepslate Bricks\n§9Smeltable\n§8-\nAux Id: -25624576", "$aux": -25624576}
          },
-         { "05@-container_common.cell_specifications": {"offset": "@furnace_recipe.offset_placeholder4_stone", "$t_text": "Deepslate Tiles\n§9Smeltable\n§8-\nAux Id: -25362432", "$aux": -25362432} },
+         { "05@container_common.cell_specifications": {"offset": "@furnace_recipe.offset_placeholder4_stone", "$t_text": "Deepslate Tiles\n§9Smeltable\n§8-\nAux Id: -25362432", "$aux": -25362432} },
          {
-            "06@-container_common.cell_specifications": {"offset": "@furnace_recipe.offset_placeholder5_stone", "$t_text": "Cobbled Deepslate\n§9Smeltable\n§8-\nAux Id: -24838144", "$aux": -24838144}
+            "06@container_common.cell_specifications": {"offset": "@furnace_recipe.offset_placeholder5_stone", "$t_text": "Cobbled Deepslate\n§9Smeltable\n§8-\nAux Id: -24838144", "$aux": -24838144}
          },
          {
-            "07@-container_common.cell_specifications": {
+            "07@container_common.cell_specifications": {
                "offset": "@furnace_recipe.offset_placeholder6_stone",
                "$t_text": "Polished Blackstone Bricks\n§9Smeltable\n§8-\nAux Id: -17956864",
                "$aux": -17956864
             }
          },
-         { "08@-container_common.cell_specifications": {"offset": "@furnace_recipe.offset_placeholder7_stone", "$t_text": "Basalt\n§9Smeltable\n§8-\nAux Id: -15335424", "$aux": -15335424} }
+         { "08@container_common.cell_specifications": {"offset": "@furnace_recipe.offset_placeholder7_stone", "$t_text": "Basalt\n§9Smeltable\n§8-\nAux Id: -15335424", "$aux": -15335424} }
       ]
    },
    "terracotta_panel": {
@@ -185,107 +185,107 @@
       "layer": 60,
       "$layer": 58,
       "controls": [
-         { "01@-container_common.cell_specifications": {"offset": "@furnace_recipe.offset_combined_terracotta", "$t_text": "White Terracotta\n§9Smeltable\n§8-\nAux Id: 10420224", "$aux": 10420224} },
+         { "01@container_common.cell_specifications": {"offset": "@furnace_recipe.offset_combined_terracotta", "$t_text": "White Terracotta\n§9Smeltable\n§8-\nAux Id: 10420224", "$aux": 10420224} },
          {
-            "02@-container_common.cell_specifications": {
+            "02@container_common.cell_specifications": {
                "offset": "@furnace_recipe.offset_placeholder1_terracotta",
                "$t_text": "Orange Terracotta\n§9Smeltable\n§8-\nAux Id: -47448064",
                "$aux": -47448064
             }
          },
          {
-            "03@-container_common.cell_specifications": {
+            "03@container_common.cell_specifications": {
                "offset": "@furnace_recipe.offset_placeholder2_terracotta",
                "$t_text": "Magenta Terracotta\n§9Smeltable\n§8-\nAux Id: -47513600",
                "$aux": -47513600
             }
          },
          {
-            "04@-container_common.cell_specifications": {
+            "04@container_common.cell_specifications": {
                "offset": "@furnace_recipe.offset_placeholder3_terracotta",
                "$t_text": "Light Blue Terracotta\n§9Smeltable\n§8-\nAux Id: -47579136",
                "$aux": -47579136
             }
          },
          {
-            "05@-container_common.cell_specifications": {
+            "05@container_common.cell_specifications": {
                "offset": "@furnace_recipe.offset_placeholder4_terracotta",
                "$t_text": "Yellow Terracotta\n§9Smeltable\n§8-\nAux Id: -47644672",
                "$aux": -47644672
             }
          },
          {
-            "06@-container_common.cell_specifications": {
+            "06@container_common.cell_specifications": {
                "offset": "@furnace_recipe.offset_placeholder5_terracotta",
                "$t_text": "Lime Terracotta\n§9Smeltable\n§8-\nAux Id: -47710208",
                "$aux": -47710208
             }
          },
          {
-            "07@-container_common.cell_specifications": {
+            "07@container_common.cell_specifications": {
                "offset": "@furnace_recipe.offset_placeholder6_terracotta",
                "$t_text": "Pink Terracotta\n§9Smeltable\n§8-\nAux Id: -47775744",
                "$aux": -47775744
             }
          },
          {
-            "08@-container_common.cell_specifications": {
+            "08@container_common.cell_specifications": {
                "offset": "@furnace_recipe.offset_placeholder7_terracotta",
                "$t_text": "Gray Terracotta\n§9Smeltable\n§8-\nAux Id: -47841280",
                "$aux": -47841280
             }
          },
          {
-            "09@-container_common.cell_specifications": {
+            "09@container_common.cell_specifications": {
                "offset": "@furnace_recipe.offset_placeholder8_terracotta",
                "$t_text": "Light Gray Terracotta\n§9Smeltable\n§8-\nAux Id: -47906816",
                "$aux": -47906816
             }
          },
          {
-            "10@-container_common.cell_specifications": {
+            "10@container_common.cell_specifications": {
                "offset": "@furnace_recipe.offset_placeholder9_terracotta",
                "$t_text": "Cyan Terracotta\n§9Smeltable\n§8-\nAux Id: -47972352",
                "$aux": -47972352
             }
          },
          {
-            "11@-container_common.cell_specifications": {
+            "11@container_common.cell_specifications": {
                "offset": "@furnace_recipe.offset_placeholder10_terracotta",
                "$t_text": "Purple Terracotta\n§9Smeltable\n§8-\nAux Id: -48037888",
                "$aux": -48037888
             }
          },
          {
-            "12@-container_common.cell_specifications": {
+            "12@container_common.cell_specifications": {
                "offset": "@furnace_recipe.offset_placeholder11_terracotta",
                "$t_text": "Blue Terracotta\n§9Smeltable\n§8-\nAux Id: -48103424",
                "$aux": -48103424
             }
          },
          {
-            "13@-container_common.cell_specifications": {
+            "13@container_common.cell_specifications": {
                "offset": "@furnace_recipe.offset_placeholder12_terracotta",
                "$t_text": "Brown Terracotta\n§9Smeltable\n§8-\nAux Id: -48168960",
                "$aux": -48168960
             }
          },
          {
-            "14@-container_common.cell_specifications": {
+            "14@container_common.cell_specifications": {
                "offset": "@furnace_recipe.offset_placeholder13_terracotta",
                "$t_text": "Green Terracotta\n§9Smeltable\n§8-\nAux Id: -48234496",
                "$aux": -48234496
             }
          },
          {
-            "15@-container_common.cell_specifications": {
+            "15@container_common.cell_specifications": {
                "offset": "@furnace_recipe.offset_placeholder14_terracotta",
                "$t_text": "Red Terracotta\n§9Smeltable\n§8-\nAux Id: -48300032",
                "$aux": -48300032
             }
          },
          {
-            "16@-container_common.cell_specifications": {
+            "16@container_common.cell_specifications": {
                "offset": "@furnace_recipe.offset_placeholder15_terracotta",
                "$t_text": "Black Terracotta\n§9Smeltable\n§8-\nAux Id: -48365568",
                "$aux": -48365568
@@ -302,13 +302,13 @@
       "$layer": 59,
       "controls": [
          {
-            "01@-container_common.cell_specifications": { "offset": [0, 0], "$t_text": "Raw Iron\n§9Smeltable\n§8-\nAux Id: 35323904", "$aux": 35323904 }
+            "01@container_common.cell_specifications": { "offset": [0, 0], "$t_text": "Raw Iron\n§9Smeltable\n§8-\nAux Id: 35323904", "$aux": 35323904 }
          },
          {
-            "02@-container_common.cell_specifications": { "offset": [25, 0], "$t_text": "Raw Gold\n§9Smeltable\n§8-\nAux Id: 35389440", "$aux": 35389440 }
+            "02@container_common.cell_specifications": { "offset": [25, 0], "$t_text": "Raw Gold\n§9Smeltable\n§8-\nAux Id: 35389440", "$aux": 35389440 }
          },
          {
-            "03@-container_common.cell_specifications": { "offset": [50, 0], "$t_text": "Raw Copper\n§9Smeltable\n§8-\nAux Id: 35454976", "$aux": 35454976 }
+            "03@container_common.cell_specifications": { "offset": [50, 0], "$t_text": "Raw Copper\n§9Smeltable\n§8-\nAux Id: 35454976", "$aux": 35454976 }
          }
       ]
    },
@@ -321,22 +321,22 @@
       "$layer": 60,
       "controls": [
          {
-            "01@-container_common.cell_specifications": { "offset": [0, 0], "$t_text": "Sand\n§9Smeltable\n§8-\nAux Id: 786432", "$aux": 786432 }
+            "01@container_common.cell_specifications": { "offset": [0, 0], "$t_text": "Sand\n§9Smeltable\n§8-\nAux Id: 786432", "$aux": 786432 }
          },
          {
-            "02@-container_common.cell_specifications": { "offset": [25, 0], "$t_text": "Red Sand\n§9Smeltable\n§8-\nAux Id: -62193664", "$aux": -62193664 }
+            "02@container_common.cell_specifications": { "offset": [25, 0], "$t_text": "Red Sand\n§9Smeltable\n§8-\nAux Id: -62193664", "$aux": -62193664 }
          },
          {
-            "03@-container_common.cell_specifications": { "offset": [50, 0], "$t_text": "Sandstone\n§9Smeltable\n§8-\nAux Id: 1572864", "$aux": 1572864 }
+            "03@container_common.cell_specifications": { "offset": [50, 0], "$t_text": "Sandstone\n§9Smeltable\n§8-\nAux Id: 1572864", "$aux": 1572864 }
          },
          {
-            "04@-container_common.cell_specifications": { "offset": [75, 0], "$t_text": "Red Sandstone\n§9Smeltable\n§8-\nAux Id: 11730944", "$aux": 11730944 }
+            "04@container_common.cell_specifications": { "offset": [75, 0], "$t_text": "Red Sandstone\n§9Smeltable\n§8-\nAux Id: 11730944", "$aux": 11730944 }
          },
          {
-            "05@-container_common.cell_specifications": { "offset": [100, 0], "$t_text": "Wet Sponge\n§9Smeltable\n§8-\nAux Id: -64487424", "$aux": -64487424 }
+            "05@container_common.cell_specifications": { "offset": [100, 0], "$t_text": "Wet Sponge\n§9Smeltable\n§8-\nAux Id: -64487424", "$aux": -64487424 }
          },
          {
-            "06@-container_common.cell_specifications": { "offset": [100, -25], "$t_text": "Sea Pickle\n§9Smeltable\n§8-\nAux Id: -10223616", "$aux": -10223616 }
+            "06@container_common.cell_specifications": { "offset": [100, -25], "$t_text": "Sea Pickle\n§9Smeltable\n§8-\nAux Id: -10223616", "$aux": -10223616 }
          }
       ]
    },
@@ -348,16 +348,16 @@
       "layer": 60,
       "$layer": 55,
       "controls": [
-         { "01@-container_common.cell_specifications": {"offset": "@furnace_recipe.offset_combined_10", "$t_text": "Oak Log\n§9Burnable\n§8-\nAux Id: 1114112", "$aux": 1114112} }             ,
-         { "02@-container_common.cell_specifications": {"offset": "@furnace_recipe.offset_placeholder1_10", "$t_text": "Dark Oak Log\n§9Burnable\n§8-\nAux Id: -37486592", "$aux": -37486592} },
-         { "03@-container_common.cell_specifications": {"offset": "@furnace_recipe.offset_placeholder2_10", "$t_text": "Pale Oak Log\n§9Burnable\n§8-\nAux Id: -65208320", "$aux": -65208320} },
-         { "04@-container_common.cell_specifications": {"offset": "@furnace_recipe.offset_placeholder3_10", "$t_text": "Birch Log\n§9Burnable\n§8-\nAux Id: -37355520", "$aux": -37355520} }   ,
-         { "05@-container_common.cell_specifications": {"offset": "@furnace_recipe.offset_placeholder4_10", "$t_text": "Spruce Log\n§9Burnable\n§8-\nAux Id: -37289984", "$aux": -37289984} }  ,
-         { "06@-container_common.cell_specifications": {"offset": "@furnace_recipe.offset_placeholder5_10", "$t_text": "Acacia Log\n§9Burnable\n§8-\nAux Id: 10616832", "$aux": 10616832} }    ,
-         { "07@-container_common.cell_specifications": {"offset": "@furnace_recipe.offset_placeholder6_10", "$t_text": "Jungle Log\n§9Burnable\n§8-\nAux Id: -37421056", "$aux": -37421056} }  ,
-         { "08@-container_common.cell_specifications": {"offset": "@furnace_recipe.offset_placeholder7_10", "$t_text": "Mangrove Log\n§9Burnable\n§8-\nAux Id: -31719424", "$aux": -31719424} },
-         { "09@-container_common.cell_specifications": {"offset": "@furnace_recipe.offset_placeholder8_10", "$t_text": "Cherry Log\n§9Burnable\n§8-\nAux Id: -35127296", "$aux": -35127296} }  ,
-         { "10@-container_common.cell_specifications": {"offset": "@furnace_recipe.offset_placeholder9_10", "$t_text": "Bamboo\n§9Burnable\n§8-\nAux Id: -10682368", "$aux": -10682368} }
+         { "01@container_common.cell_specifications": {"offset": "@furnace_recipe.offset_combined_10", "$t_text": "Oak Log\n§9Burnable\n§8-\nAux Id: 1114112", "$aux": 1114112} }             ,
+         { "02@container_common.cell_specifications": {"offset": "@furnace_recipe.offset_placeholder1_10", "$t_text": "Dark Oak Log\n§9Burnable\n§8-\nAux Id: -37486592", "$aux": -37486592} },
+         { "03@container_common.cell_specifications": {"offset": "@furnace_recipe.offset_placeholder2_10", "$t_text": "Pale Oak Log\n§9Burnable\n§8-\nAux Id: -65208320", "$aux": -65208320} },
+         { "04@container_common.cell_specifications": {"offset": "@furnace_recipe.offset_placeholder3_10", "$t_text": "Birch Log\n§9Burnable\n§8-\nAux Id: -37355520", "$aux": -37355520} }   ,
+         { "05@container_common.cell_specifications": {"offset": "@furnace_recipe.offset_placeholder4_10", "$t_text": "Spruce Log\n§9Burnable\n§8-\nAux Id: -37289984", "$aux": -37289984} }  ,
+         { "06@container_common.cell_specifications": {"offset": "@furnace_recipe.offset_placeholder5_10", "$t_text": "Acacia Log\n§9Burnable\n§8-\nAux Id: 10616832", "$aux": 10616832} }    ,
+         { "07@container_common.cell_specifications": {"offset": "@furnace_recipe.offset_placeholder6_10", "$t_text": "Jungle Log\n§9Burnable\n§8-\nAux Id: -37421056", "$aux": -37421056} }  ,
+         { "08@container_common.cell_specifications": {"offset": "@furnace_recipe.offset_placeholder7_10", "$t_text": "Mangrove Log\n§9Burnable\n§8-\nAux Id: -31719424", "$aux": -31719424} },
+         { "09@container_common.cell_specifications": {"offset": "@furnace_recipe.offset_placeholder8_10", "$t_text": "Cherry Log\n§9Burnable\n§8-\nAux Id: -35127296", "$aux": -35127296} }  ,
+         { "10@container_common.cell_specifications": {"offset": "@furnace_recipe.offset_placeholder9_10", "$t_text": "Bamboo\n§9Burnable\n§8-\nAux Id: -10682368", "$aux": -10682368} }
       ]
    },
    "stripped_logs_panel": {
@@ -368,21 +368,21 @@
       "layer": 60,
       "$layer": 56,
       "controls": [
-         { "01@-container_common.cell_specifications": {"offset": "@furnace_recipe.offset_combined_10", "$t_text": "Stripped Oak Log\n§9Burnable\n§8-\nAux Id: -655360", "$aux": -655360} },
-         { "02@-container_common.cell_specifications": {"offset": "@furnace_recipe.offset_placeholder1_10", "$t_text": "Stripped Dark Oak Log\n§9Burnable\n§8-\nAux Id: -589824", "$aux": -589824} },
+         { "01@container_common.cell_specifications": {"offset": "@furnace_recipe.offset_combined_10", "$t_text": "Stripped Oak Log\n§9Burnable\n§8-\nAux Id: -655360", "$aux": -655360} },
+         { "02@container_common.cell_specifications": {"offset": "@furnace_recipe.offset_placeholder1_10", "$t_text": "Stripped Dark Oak Log\n§9Burnable\n§8-\nAux Id: -589824", "$aux": -589824} },
          {
-            "03@-container_common.cell_specifications": {"offset": "@furnace_recipe.offset_placeholder2_10", "$t_text": "Stripped Pale Oak Log\n§9Burnable\n§8-\nAux Id: -65142784", "$aux": -65142784}
+            "03@container_common.cell_specifications": {"offset": "@furnace_recipe.offset_placeholder2_10", "$t_text": "Stripped Pale Oak Log\n§9Burnable\n§8-\nAux Id: -65142784", "$aux": -65142784}
          },
-         { "04@-container_common.cell_specifications": {"offset": "@furnace_recipe.offset_placeholder3_10", "$t_text": "Stripped Birch Log\n§9Burnable\n§8-\nAux Id: -393216", "$aux": -393216} },
-         { "05@-container_common.cell_specifications": {"offset": "@furnace_recipe.offset_placeholder4_10", "$t_text": "Stripped Spruce Log\n§9Burnable\n§8-\nAux Id: -327680", "$aux": -327680} },
-         { "06@-container_common.cell_specifications": {"offset": "@furnace_recipe.offset_placeholder5_10", "$t_text": "Stripped Acacia Log\n§9Burnable\n§8-\nAux Id: -524288", "$aux": -524288} },
-         { "07@-container_common.cell_specifications": {"offset": "@furnace_recipe.offset_placeholder6_10", "$t_text": "Stripped Jungle Log\n§9Burnable\n§8-\nAux Id: -458752", "$aux": -458752} },
+         { "04@container_common.cell_specifications": {"offset": "@furnace_recipe.offset_placeholder3_10", "$t_text": "Stripped Birch Log\n§9Burnable\n§8-\nAux Id: -393216", "$aux": -393216} },
+         { "05@container_common.cell_specifications": {"offset": "@furnace_recipe.offset_placeholder4_10", "$t_text": "Stripped Spruce Log\n§9Burnable\n§8-\nAux Id: -327680", "$aux": -327680} },
+         { "06@container_common.cell_specifications": {"offset": "@furnace_recipe.offset_placeholder5_10", "$t_text": "Stripped Acacia Log\n§9Burnable\n§8-\nAux Id: -524288", "$aux": -524288} },
+         { "07@container_common.cell_specifications": {"offset": "@furnace_recipe.offset_placeholder6_10", "$t_text": "Stripped Jungle Log\n§9Burnable\n§8-\nAux Id: -458752", "$aux": -458752} },
          {
-            "08@-container_common.cell_specifications": {"offset": "@furnace_recipe.offset_placeholder7_10", "$t_text": "Stripped Mangrove Log\n§9Burnable\n§8-\nAux Id: -31784960", "$aux": -31784960}
+            "08@container_common.cell_specifications": {"offset": "@furnace_recipe.offset_placeholder7_10", "$t_text": "Stripped Mangrove Log\n§9Burnable\n§8-\nAux Id: -31784960", "$aux": -31784960}
          },
-         { "09@-container_common.cell_specifications": {"offset": "@furnace_recipe.offset_placeholder8_10", "$t_text": "Stripped Cherry Log\n§9Burnable\n§8-\nAux Id: -35061760", "$aux": -35061760} },
+         { "09@container_common.cell_specifications": {"offset": "@furnace_recipe.offset_placeholder8_10", "$t_text": "Stripped Cherry Log\n§9Burnable\n§8-\nAux Id: -35061760", "$aux": -35061760} },
          {
-            "10@-container_common.cell_specifications": {
+            "10@container_common.cell_specifications": {
                "offset": "@furnace_recipe.offset_placeholder9_10",
                "$t_text": "Block Of Stripped Bamboo\n§9Burnable\n§8-\nAux Id: -34603008",
                "$aux": -34603008
@@ -398,16 +398,16 @@
       "layer": 60,
       "$layer": 56,
       "controls": [
-         { "01@-container_common.cell_specifications": {"offset": "@furnace_recipe.offset_combined_10", "$t_text": "Oak Wood\n§9Burnable\n§8-\nAux Id: -13893632", "$aux": -13893632} }           ,
-         { "02@-container_common.cell_specifications": {"offset": "@furnace_recipe.offset_placeholder1_10", "$t_text": "Dark Oak Wood\n§9Burnable\n§8-\nAux Id: -53608448", "$aux": -53608448} }  ,
-         { "03@-container_common.cell_specifications": {"offset": "@furnace_recipe.offset_placeholder2_10", "$t_text": "Pale Oak Wood\n§9Burnable\n§8-\nAux Id: -65863680", "$aux": -65863680} }  ,
-         { "04@-container_common.cell_specifications": {"offset": "@furnace_recipe.offset_placeholder3_10", "$t_text": "Birch Wood\n§9Burnable\n§8-\nAux Id: -53411840", "$aux": -53411840} }     ,
-         { "05@-container_common.cell_specifications": {"offset": "@furnace_recipe.offset_placeholder4_10", "$t_text": "Spruce Wood\n§9Burnable\n§8-\nAux Id: -53346304", "$aux": -53346304} }    ,
-         { "06@-container_common.cell_specifications": {"offset": "@furnace_recipe.offset_placeholder5_10", "$t_text": "Acacia Wood\n§9Burnable\n§8-\nAux Id: -53542912", "$aux": -53542912} }    ,
-         { "07@-container_common.cell_specifications": {"offset": "@furnace_recipe.offset_placeholder6_10", "$t_text": "Jungle Wood\n§9Burnable\n§8-\nAux Id: -53477376", "$aux": -53477376} }    ,
-         { "08@-container_common.cell_specifications": {"offset": "@furnace_recipe.offset_placeholder7_10", "$t_text": "Mangrove Wood\n§9Burnable\n§8-\nAux Id: -32571392", "$aux": -32571392} }  ,
-         { "09@-container_common.cell_specifications": {"offset": "@furnace_recipe.offset_placeholder8_10", "$t_text": "Cherry Wood\n§9Burnable\n§8-\nAux Id: -35782656", "$aux": -35782656} }    ,
-         { "10@-container_common.cell_specifications": {"offset": "@furnace_recipe.offset_placeholder9_10", "$t_text": "Block of Bamboo\n§9Burnable\n§8-\nAux Id: -34537472", "$aux": -34537472} }
+         { "01@container_common.cell_specifications": {"offset": "@furnace_recipe.offset_combined_10", "$t_text": "Oak Wood\n§9Burnable\n§8-\nAux Id: -13893632", "$aux": -13893632} }           ,
+         { "02@container_common.cell_specifications": {"offset": "@furnace_recipe.offset_placeholder1_10", "$t_text": "Dark Oak Wood\n§9Burnable\n§8-\nAux Id: -53608448", "$aux": -53608448} }  ,
+         { "03@container_common.cell_specifications": {"offset": "@furnace_recipe.offset_placeholder2_10", "$t_text": "Pale Oak Wood\n§9Burnable\n§8-\nAux Id: -65863680", "$aux": -65863680} }  ,
+         { "04@container_common.cell_specifications": {"offset": "@furnace_recipe.offset_placeholder3_10", "$t_text": "Birch Wood\n§9Burnable\n§8-\nAux Id: -53411840", "$aux": -53411840} }     ,
+         { "05@container_common.cell_specifications": {"offset": "@furnace_recipe.offset_placeholder4_10", "$t_text": "Spruce Wood\n§9Burnable\n§8-\nAux Id: -53346304", "$aux": -53346304} }    ,
+         { "06@container_common.cell_specifications": {"offset": "@furnace_recipe.offset_placeholder5_10", "$t_text": "Acacia Wood\n§9Burnable\n§8-\nAux Id: -53542912", "$aux": -53542912} }    ,
+         { "07@container_common.cell_specifications": {"offset": "@furnace_recipe.offset_placeholder6_10", "$t_text": "Jungle Wood\n§9Burnable\n§8-\nAux Id: -53477376", "$aux": -53477376} }    ,
+         { "08@container_common.cell_specifications": {"offset": "@furnace_recipe.offset_placeholder7_10", "$t_text": "Mangrove Wood\n§9Burnable\n§8-\nAux Id: -32571392", "$aux": -32571392} }  ,
+         { "09@container_common.cell_specifications": {"offset": "@furnace_recipe.offset_placeholder8_10", "$t_text": "Cherry Wood\n§9Burnable\n§8-\nAux Id: -35782656", "$aux": -35782656} }    ,
+         { "10@container_common.cell_specifications": {"offset": "@furnace_recipe.offset_placeholder9_10", "$t_text": "Block of Bamboo\n§9Burnable\n§8-\nAux Id: -34537472", "$aux": -34537472} }
       ]
    },
    "planks_panel": {
@@ -418,16 +418,16 @@
       "layer": 60,
       "$layer": 57,
       "controls": [
-         { "01@-container_common.cell_specifications": {"offset": "@furnace_recipe.offset_combined_10", "$t_text": "Oak Planks\n§9Burnable\n§8-\nAux Id: 327680", "$aux": 327680} }               ,
-         { "02@-container_common.cell_specifications": {"offset": "@furnace_recipe.offset_placeholder1_10", "$t_text": "Dark Oak Planks\n§9Burnable\n§8-\nAux Id: -48693248", "$aux": -48693248} },
-         { "03@-container_common.cell_specifications": {"offset": "@furnace_recipe.offset_placeholder2_10", "$t_text": "Pale Oak Planks\n§9Burnable\n§8-\nAux Id: -65273856", "$aux": -65273856} },
-         { "04@-container_common.cell_specifications": {"offset": "@furnace_recipe.offset_placeholder3_10", "$t_text": "Birch Planks\n§9Burnable\n§8-\nAux Id: -48496640", "$aux": -48496640} }   ,
-         { "05@-container_common.cell_specifications": {"offset": "@furnace_recipe.offset_placeholder4_10", "$t_text": "Spruce Planks\n§9Burnable\n§8-\nAux Id: -48431104", "$aux": -48431104} }  ,
-         { "06@-container_common.cell_specifications": {"offset": "@furnace_recipe.offset_placeholder5_10", "$t_text": "Acacia Planks\n§9Burnable\n§8-\nAux Id: -48627712", "$aux": -48627712} }  ,
-         { "07@-container_common.cell_specifications": {"offset": "@furnace_recipe.offset_placeholder6_10", "$t_text": "Jungle Planks\n§9Burnable\n§8-\nAux Id: -48562176", "$aux": -48562176} }  ,
-         { "08@-container_common.cell_specifications": {"offset": "@furnace_recipe.offset_placeholder7_10", "$t_text": "Mangrove Planks\n§9Burnable\n§8-\nAux Id: -31850496", "$aux": -31850496} },
-         { "09@-container_common.cell_specifications": {"offset": "@furnace_recipe.offset_placeholder8_10", "$t_text": "Cherry Planks\n§9Burnable\n§8-\nAux Id: -35192832", "$aux": -35192832} }  ,
-         { "10@-container_common.cell_specifications": {"offset": "@furnace_recipe.offset_placeholder9_10", "$t_text": "Bamboo Planks\n§9Burnable\n§8-\nAux Id: -33423360", "$aux": -33423360} }
+         { "01@container_common.cell_specifications": {"offset": "@furnace_recipe.offset_combined_10", "$t_text": "Oak Planks\n§9Burnable\n§8-\nAux Id: 327680", "$aux": 327680} }               ,
+         { "02@container_common.cell_specifications": {"offset": "@furnace_recipe.offset_placeholder1_10", "$t_text": "Dark Oak Planks\n§9Burnable\n§8-\nAux Id: -48693248", "$aux": -48693248} },
+         { "03@container_common.cell_specifications": {"offset": "@furnace_recipe.offset_placeholder2_10", "$t_text": "Pale Oak Planks\n§9Burnable\n§8-\nAux Id: -65273856", "$aux": -65273856} },
+         { "04@container_common.cell_specifications": {"offset": "@furnace_recipe.offset_placeholder3_10", "$t_text": "Birch Planks\n§9Burnable\n§8-\nAux Id: -48496640", "$aux": -48496640} }   ,
+         { "05@container_common.cell_specifications": {"offset": "@furnace_recipe.offset_placeholder4_10", "$t_text": "Spruce Planks\n§9Burnable\n§8-\nAux Id: -48431104", "$aux": -48431104} }  ,
+         { "06@container_common.cell_specifications": {"offset": "@furnace_recipe.offset_placeholder5_10", "$t_text": "Acacia Planks\n§9Burnable\n§8-\nAux Id: -48627712", "$aux": -48627712} }  ,
+         { "07@container_common.cell_specifications": {"offset": "@furnace_recipe.offset_placeholder6_10", "$t_text": "Jungle Planks\n§9Burnable\n§8-\nAux Id: -48562176", "$aux": -48562176} }  ,
+         { "08@container_common.cell_specifications": {"offset": "@furnace_recipe.offset_placeholder7_10", "$t_text": "Mangrove Planks\n§9Burnable\n§8-\nAux Id: -31850496", "$aux": -31850496} },
+         { "09@container_common.cell_specifications": {"offset": "@furnace_recipe.offset_placeholder8_10", "$t_text": "Cherry Planks\n§9Burnable\n§8-\nAux Id: -35192832", "$aux": -35192832} }  ,
+         { "10@container_common.cell_specifications": {"offset": "@furnace_recipe.offset_placeholder9_10", "$t_text": "Bamboo Planks\n§9Burnable\n§8-\nAux Id: -33423360", "$aux": -33423360} }
       ]
    },
    "stairs_panel": {
@@ -438,16 +438,16 @@
       "layer": 60,
       "$layer": 58,
       "controls": [
-         { "01@-container_common.cell_specifications": {"offset": "@furnace_recipe.offset_combined_10", "$t_text": "Oak Stairs\n§9Burnable\n§8-\nAux Id: 3473408", "$aux": 3473408} }             ,
-         { "02@-container_common.cell_specifications": {"offset": "@furnace_recipe.offset_placeholder1_10", "$t_text": "Dark Oak Stairs\n§9Burnable\n§8-\nAux Id: 10747904", "$aux": 10747904} }  ,
-         { "03@-container_common.cell_specifications": {"offset": "@furnace_recipe.offset_placeholder2_10", "$t_text": "Pale Oak Stairs\n§9Burnable\n§8-\nAux Id: -65536000", "$aux": -65536000} },
-         { "04@-container_common.cell_specifications": {"offset": "@furnace_recipe.offset_placeholder3_10", "$t_text": "Birch Stairs\n§9Burnable\n§8-\nAux Id: 8847360", "$aux": 8847360} }       ,
-         { "05@-container_common.cell_specifications": {"offset": "@furnace_recipe.offset_placeholder4_10", "$t_text": "Spruce Stairs\n§9Burnable\n§8-\nAux Id: 8781824", "$aux": 8781824} }      ,
-         { "06@-container_common.cell_specifications": {"offset": "@furnace_recipe.offset_placeholder5_10", "$t_text": "Acacia Stairs\n§9Burnable\n§8-\nAux Id: 10682368", "$aux": 10682368} }    ,
-         { "07@-container_common.cell_specifications": {"offset": "@furnace_recipe.offset_placeholder6_10", "$t_text": "Jungle Stairs\n§9Burnable\n§8-\nAux Id: 8912896", "$aux": 8912896} }      ,
-         { "08@-container_common.cell_specifications": {"offset": "@furnace_recipe.offset_placeholder7_10", "$t_text": "Mangrove Stairs\n§9Burnable\n§8-\nAux Id: -31981568", "$aux": -31981568} },
-         { "09@-container_common.cell_specifications": {"offset": "@furnace_recipe.offset_placeholder8_10", "$t_text": "Cherry Stairs\n§9Burnable\n§8-\nAux Id: -35454976", "$aux": -35454976} }  ,
-         { "10@-container_common.cell_specifications": {"offset": "@furnace_recipe.offset_placeholder9_10", "$t_text": "Bamboo Stairs\n§9Burnable\n§8-\nAux Id: -33554432", "$aux": -33554432} }
+         { "01@container_common.cell_specifications": {"offset": "@furnace_recipe.offset_combined_10", "$t_text": "Oak Stairs\n§9Burnable\n§8-\nAux Id: 3473408", "$aux": 3473408} }             ,
+         { "02@container_common.cell_specifications": {"offset": "@furnace_recipe.offset_placeholder1_10", "$t_text": "Dark Oak Stairs\n§9Burnable\n§8-\nAux Id: 10747904", "$aux": 10747904} }  ,
+         { "03@container_common.cell_specifications": {"offset": "@furnace_recipe.offset_placeholder2_10", "$t_text": "Pale Oak Stairs\n§9Burnable\n§8-\nAux Id: -65536000", "$aux": -65536000} },
+         { "04@container_common.cell_specifications": {"offset": "@furnace_recipe.offset_placeholder3_10", "$t_text": "Birch Stairs\n§9Burnable\n§8-\nAux Id: 8847360", "$aux": 8847360} }       ,
+         { "05@container_common.cell_specifications": {"offset": "@furnace_recipe.offset_placeholder4_10", "$t_text": "Spruce Stairs\n§9Burnable\n§8-\nAux Id: 8781824", "$aux": 8781824} }      ,
+         { "06@container_common.cell_specifications": {"offset": "@furnace_recipe.offset_placeholder5_10", "$t_text": "Acacia Stairs\n§9Burnable\n§8-\nAux Id: 10682368", "$aux": 10682368} }    ,
+         { "07@container_common.cell_specifications": {"offset": "@furnace_recipe.offset_placeholder6_10", "$t_text": "Jungle Stairs\n§9Burnable\n§8-\nAux Id: 8912896", "$aux": 8912896} }      ,
+         { "08@container_common.cell_specifications": {"offset": "@furnace_recipe.offset_placeholder7_10", "$t_text": "Mangrove Stairs\n§9Burnable\n§8-\nAux Id: -31981568", "$aux": -31981568} },
+         { "09@container_common.cell_specifications": {"offset": "@furnace_recipe.offset_placeholder8_10", "$t_text": "Cherry Stairs\n§9Burnable\n§8-\nAux Id: -35454976", "$aux": -35454976} }  ,
+         { "10@container_common.cell_specifications": {"offset": "@furnace_recipe.offset_placeholder9_10", "$t_text": "Bamboo Stairs\n§9Burnable\n§8-\nAux Id: -33554432", "$aux": -33554432} }
       ]
    },
    "doors_panel": {
@@ -458,16 +458,16 @@
       "layer": 60,
       "$layer": 59,
       "controls": [
-         { "01@-container_common.cell_specifications": {"offset": "@furnace_recipe.offset_combined_10", "$t_text": "Oak Door\n§9Burnable\n§8-\nAux Id: 25165824", "$aux": 25165824} }           ,
-         { "02@-container_common.cell_specifications": {"offset": "@furnace_recipe.offset_placeholder1_10", "$t_text": "Dark Oak Door\n§9Burnable\n§8-\nAux Id: 38666240", "$aux": 38666240} }  ,
-         { "03@-container_common.cell_specifications": {"offset": "@furnace_recipe.offset_placeholder2_10", "$t_text": "Pale Oak Door\n§9Burnable\n§8-\nAux Id: -64880640", "$aux": -64880640} },
-         { "04@-container_common.cell_specifications": {"offset": "@furnace_recipe.offset_placeholder3_10", "$t_text": "Birch Door\n§9Burnable\n§8-\nAux Id: 38469632", "$aux": 38469632} }     ,
-         { "05@-container_common.cell_specifications": {"offset": "@furnace_recipe.offset_placeholder4_10", "$t_text": "Spruce Door\n§9Burnable\n§8-\nAux Id: 38404096", "$aux": 38404096} }    ,
-         { "06@-container_common.cell_specifications": {"offset": "@furnace_recipe.offset_placeholder5_10", "$t_text": "Acacia Door\n§9Burnable\n§8-\nAux Id: 38600704", "$aux": 38600704} }    ,
-         { "07@-container_common.cell_specifications": {"offset": "@furnace_recipe.offset_placeholder6_10", "$t_text": "Jungle Door\n§9Burnable\n§8-\nAux Id: 38535168", "$aux": 38535168} }    ,
-         { "08@-container_common.cell_specifications": {"offset": "@furnace_recipe.offset_placeholder7_10", "$t_text": "Mangrove Door\n§9Burnable\n§8-\nAux Id: 43909120", "$aux": 43909120} }  ,
-         { "09@-container_common.cell_specifications": {"offset": "@furnace_recipe.offset_placeholder8_10", "$t_text": "Cherry Door\n§9Burnable\n§8-\nAux Id: -34799616", "$aux": -34799616} }  ,
-         { "10@-container_common.cell_specifications": {"offset": "@furnace_recipe.offset_placeholder9_10", "$t_text": "Bamboo Door\n§9Burnable\n§8-\nAux Id: -33882112", "$aux": -33882112} }
+         { "01@container_common.cell_specifications": {"offset": "@furnace_recipe.offset_combined_10", "$t_text": "Oak Door\n§9Burnable\n§8-\nAux Id: 25165824", "$aux": 25165824} }           ,
+         { "02@container_common.cell_specifications": {"offset": "@furnace_recipe.offset_placeholder1_10", "$t_text": "Dark Oak Door\n§9Burnable\n§8-\nAux Id: 38666240", "$aux": 38666240} }  ,
+         { "03@container_common.cell_specifications": {"offset": "@furnace_recipe.offset_placeholder2_10", "$t_text": "Pale Oak Door\n§9Burnable\n§8-\nAux Id: -64880640", "$aux": -64880640} },
+         { "04@container_common.cell_specifications": {"offset": "@furnace_recipe.offset_placeholder3_10", "$t_text": "Birch Door\n§9Burnable\n§8-\nAux Id: 38469632", "$aux": 38469632} }     ,
+         { "05@container_common.cell_specifications": {"offset": "@furnace_recipe.offset_placeholder4_10", "$t_text": "Spruce Door\n§9Burnable\n§8-\nAux Id: 38404096", "$aux": 38404096} }    ,
+         { "06@container_common.cell_specifications": {"offset": "@furnace_recipe.offset_placeholder5_10", "$t_text": "Acacia Door\n§9Burnable\n§8-\nAux Id: 38600704", "$aux": 38600704} }    ,
+         { "07@container_common.cell_specifications": {"offset": "@furnace_recipe.offset_placeholder6_10", "$t_text": "Jungle Door\n§9Burnable\n§8-\nAux Id: 38535168", "$aux": 38535168} }    ,
+         { "08@container_common.cell_specifications": {"offset": "@furnace_recipe.offset_placeholder7_10", "$t_text": "Mangrove Door\n§9Burnable\n§8-\nAux Id: 43909120", "$aux": 43909120} }  ,
+         { "09@container_common.cell_specifications": {"offset": "@furnace_recipe.offset_placeholder8_10", "$t_text": "Cherry Door\n§9Burnable\n§8-\nAux Id: -34799616", "$aux": -34799616} }  ,
+         { "10@container_common.cell_specifications": {"offset": "@furnace_recipe.offset_placeholder9_10", "$t_text": "Bamboo Door\n§9Burnable\n§8-\nAux Id: -33882112", "$aux": -33882112} }
       ]
    },
    "trapdoors_panel": {
@@ -478,16 +478,16 @@
       "layer": 60,
       "$layer": 60,
       "controls": [
-         { "01@-container_common.cell_specifications": {"offset": "@furnace_recipe.offset_combined_10", "$t_text": "Oak Trapdoor\n§9Burnable\n§8-\nAux Id: 6291456", "$aux": 6291456} }             ,
-         { "02@-container_common.cell_specifications": {"offset": "@furnace_recipe.offset_placeholder1_10", "$t_text": "Dark Oak Trapdoor\n§9Burnable\n§8-\nAux Id: -9633792", "$aux": -9633792} }  ,
-         { "03@-container_common.cell_specifications": {"offset": "@furnace_recipe.offset_placeholder2_10", "$t_text": "Pale Oak Trapdoor\n§9Burnable\n§8-\nAux Id: -65667072", "$aux": -65667072} },
-         { "04@-container_common.cell_specifications": {"offset": "@furnace_recipe.offset_placeholder3_10", "$t_text": "Birch Trapdoor\n§9Burnable\n§8-\nAux Id: -9568256", "$aux": -9568256} }     ,
-         { "05@-container_common.cell_specifications": {"offset": "@furnace_recipe.offset_placeholder4_10", "$t_text": "Spruce Trapdoor\n§9Burnable\n§8-\nAux Id: -9764864", "$aux": -9764864} }    ,
-         { "06@-container_common.cell_specifications": {"offset": "@furnace_recipe.offset_placeholder5_10", "$t_text": "Acacia Trapdoor\n§9Burnable\n§8-\nAux Id: -9502720", "$aux": -9502720} }    ,
-         { "07@-container_common.cell_specifications": {"offset": "@furnace_recipe.offset_placeholder6_10", "$t_text": "Jungle Trapdoor\n§9Burnable\n§8-\nAux Id: -9699328", "$aux": -9699328} }    ,
-         { "08@-container_common.cell_specifications": {"offset": "@furnace_recipe.offset_placeholder7_10", "$t_text": "Mangrove Trapdoor\n§9Burnable\n§8-\nAux Id: -32505856", "$aux": -32505856} },
-         { "09@-container_common.cell_specifications": {"offset": "@furnace_recipe.offset_placeholder8_10", "$t_text": "Cherry Trapdoor\n§9Burnable\n§8-\nAux Id: -35586048", "$aux": -35586048} }  ,
-         { "10@-container_common.cell_specifications": {"offset": "@furnace_recipe.offset_placeholder9_10", "$t_text": "Bamboo Trapdoor\n§9Burnable\n§8-\nAux Id: -34078720", "$aux": -34078720} }
+         { "01@container_common.cell_specifications": {"offset": "@furnace_recipe.offset_combined_10", "$t_text": "Oak Trapdoor\n§9Burnable\n§8-\nAux Id: 6291456", "$aux": 6291456} }             ,
+         { "02@container_common.cell_specifications": {"offset": "@furnace_recipe.offset_placeholder1_10", "$t_text": "Dark Oak Trapdoor\n§9Burnable\n§8-\nAux Id: -9633792", "$aux": -9633792} }  ,
+         { "03@container_common.cell_specifications": {"offset": "@furnace_recipe.offset_placeholder2_10", "$t_text": "Pale Oak Trapdoor\n§9Burnable\n§8-\nAux Id: -65667072", "$aux": -65667072} },
+         { "04@container_common.cell_specifications": {"offset": "@furnace_recipe.offset_placeholder3_10", "$t_text": "Birch Trapdoor\n§9Burnable\n§8-\nAux Id: -9568256", "$aux": -9568256} }     ,
+         { "05@container_common.cell_specifications": {"offset": "@furnace_recipe.offset_placeholder4_10", "$t_text": "Spruce Trapdoor\n§9Burnable\n§8-\nAux Id: -9764864", "$aux": -9764864} }    ,
+         { "06@container_common.cell_specifications": {"offset": "@furnace_recipe.offset_placeholder5_10", "$t_text": "Acacia Trapdoor\n§9Burnable\n§8-\nAux Id: -9502720", "$aux": -9502720} }    ,
+         { "07@container_common.cell_specifications": {"offset": "@furnace_recipe.offset_placeholder6_10", "$t_text": "Jungle Trapdoor\n§9Burnable\n§8-\nAux Id: -9699328", "$aux": -9699328} }    ,
+         { "08@container_common.cell_specifications": {"offset": "@furnace_recipe.offset_placeholder7_10", "$t_text": "Mangrove Trapdoor\n§9Burnable\n§8-\nAux Id: -32505856", "$aux": -32505856} },
+         { "09@container_common.cell_specifications": {"offset": "@furnace_recipe.offset_placeholder8_10", "$t_text": "Cherry Trapdoor\n§9Burnable\n§8-\nAux Id: -35586048", "$aux": -35586048} }  ,
+         { "10@container_common.cell_specifications": {"offset": "@furnace_recipe.offset_placeholder9_10", "$t_text": "Bamboo Trapdoor\n§9Burnable\n§8-\nAux Id: -34078720", "$aux": -34078720} }
       ]
    },
    "fences_panel": {
@@ -498,16 +498,16 @@
       "layer": 60,
       "$layer": 61,
       "controls": [
-         { "01@-container_common.cell_specifications": {"offset": "@furnace_recipe.offset_combined_10", "$t_text": "Oak Fence\n§9Burnable\n§8-\nAux Id: 5570560", "$aux": 5570560} }             ,
-         { "02@-container_common.cell_specifications": {"offset": "@furnace_recipe.offset_placeholder1_10", "$t_text": "Dark Oak Fence\n§9Burnable\n§8-\nAux Id: -37814272", "$aux": -37814272} },
-         { "03@-container_common.cell_specifications": {"offset": "@furnace_recipe.offset_placeholder2_10", "$t_text": "Pale Oak Fence\n§9Burnable\n§8-\nAux Id: -64946176", "$aux": -64946176} },
-         { "04@-container_common.cell_specifications": {"offset": "@furnace_recipe.offset_placeholder3_10", "$t_text": "Birch Fence\n§9Burnable\n§8-\nAux Id: -37748736", "$aux": -37748736} }   ,
-         { "05@-container_common.cell_specifications": {"offset": "@furnace_recipe.offset_placeholder4_10", "$t_text": "Spruce Fence\n§9Burnable\n§8-\nAux Id: -37945344", "$aux": -37945344} }  ,
-         { "06@-container_common.cell_specifications": {"offset": "@furnace_recipe.offset_placeholder5_10", "$t_text": "Acacia Fence\n§9Burnable\n§8-\nAux Id: -37683200", "$aux": -37683200} }  ,
-         { "07@-container_common.cell_specifications": {"offset": "@furnace_recipe.offset_placeholder6_10", "$t_text": "Jungle Fence\n§9Burnable\n§8-\nAux Id: -37879808", "$aux": -37879808} }  ,
-         { "08@-container_common.cell_specifications": {"offset": "@furnace_recipe.offset_placeholder7_10", "$t_text": "Mangrove Fence\n§9Burnable\n§8-\nAux Id: -32178176", "$aux": -32178176} },
-         { "09@-container_common.cell_specifications": {"offset": "@furnace_recipe.offset_placeholder8_10", "$t_text": "Cherry Fence\n§9Burnable\n§8-\nAux Id: -34865152", "$aux": -34865152} }  ,
-         { "10@-container_common.cell_specifications": {"offset": "@furnace_recipe.offset_placeholder9_10", "$t_text": "Bamboo Fence\n§9Burnable\n§8-\nAux Id: -33751040", "$aux": -33751040} }
+         { "01@container_common.cell_specifications": {"offset": "@furnace_recipe.offset_combined_10", "$t_text": "Oak Fence\n§9Burnable\n§8-\nAux Id: 5570560", "$aux": 5570560} }             ,
+         { "02@container_common.cell_specifications": {"offset": "@furnace_recipe.offset_placeholder1_10", "$t_text": "Dark Oak Fence\n§9Burnable\n§8-\nAux Id: -37814272", "$aux": -37814272} },
+         { "03@container_common.cell_specifications": {"offset": "@furnace_recipe.offset_placeholder2_10", "$t_text": "Pale Oak Fence\n§9Burnable\n§8-\nAux Id: -64946176", "$aux": -64946176} },
+         { "04@container_common.cell_specifications": {"offset": "@furnace_recipe.offset_placeholder3_10", "$t_text": "Birch Fence\n§9Burnable\n§8-\nAux Id: -37748736", "$aux": -37748736} }   ,
+         { "05@container_common.cell_specifications": {"offset": "@furnace_recipe.offset_placeholder4_10", "$t_text": "Spruce Fence\n§9Burnable\n§8-\nAux Id: -37945344", "$aux": -37945344} }  ,
+         { "06@container_common.cell_specifications": {"offset": "@furnace_recipe.offset_placeholder5_10", "$t_text": "Acacia Fence\n§9Burnable\n§8-\nAux Id: -37683200", "$aux": -37683200} }  ,
+         { "07@container_common.cell_specifications": {"offset": "@furnace_recipe.offset_placeholder6_10", "$t_text": "Jungle Fence\n§9Burnable\n§8-\nAux Id: -37879808", "$aux": -37879808} }  ,
+         { "08@container_common.cell_specifications": {"offset": "@furnace_recipe.offset_placeholder7_10", "$t_text": "Mangrove Fence\n§9Burnable\n§8-\nAux Id: -32178176", "$aux": -32178176} },
+         { "09@container_common.cell_specifications": {"offset": "@furnace_recipe.offset_placeholder8_10", "$t_text": "Cherry Fence\n§9Burnable\n§8-\nAux Id: -34865152", "$aux": -34865152} }  ,
+         { "10@container_common.cell_specifications": {"offset": "@furnace_recipe.offset_placeholder9_10", "$t_text": "Bamboo Fence\n§9Burnable\n§8-\nAux Id: -33751040", "$aux": -33751040} }
       ]
    },
    "fence_gates_panel": {
@@ -518,16 +518,16 @@
       "layer": 60,
       "$layer": 62,
       "controls": [
-         { "01@-container_common.cell_specifications": {"offset": "@furnace_recipe.offset_combined_10", "$t_text": "Oak Fence Gate\n§9Burnable\n§8-\nAux Id: 7012352", "$aux": 7012352} }             ,
-         { "02@-container_common.cell_specifications": {"offset": "@furnace_recipe.offset_placeholder1_10", "$t_text": "Dark Oak Fence Gate\n§9Burnable\n§8-\nAux Id: 12189696", "$aux": 12189696} }  ,
-         { "03@-container_common.cell_specifications": {"offset": "@furnace_recipe.offset_placeholder2_10", "$t_text": "Pale Oak Fence Gate\n§9Burnable\n§8-\nAux Id: -65011712", "$aux": -65011712} },
-         { "04@-container_common.cell_specifications": {"offset": "@furnace_recipe.offset_placeholder3_10", "$t_text": "Birch Fence Gate\n§9Burnable\n§8-\nAux Id: 12058624", "$aux": 12058624} }     ,
-         { "05@-container_common.cell_specifications": {"offset": "@furnace_recipe.offset_placeholder4_10", "$t_text": "Spruce Fence Gate\n§9Burnable\n§8-\nAux Id: 11993088", "$aux": 11993088} }    ,
-         { "06@-container_common.cell_specifications": {"offset": "@furnace_recipe.offset_placeholder5_10", "$t_text": "Acacia Fence Gate\n§9Burnable\n§8-\nAux Id: 12255232", "$aux": 12255232} }    ,
-         { "07@-container_common.cell_specifications": {"offset": "@furnace_recipe.offset_placeholder6_10", "$t_text": "Jungle Fence Gate\n§9Burnable\n§8-\nAux Id: 12124160", "$aux": 12124160} }    ,
-         { "08@-container_common.cell_specifications": {"offset": "@furnace_recipe.offset_placeholder7_10", "$t_text": "Mangrove Fence Gate\n§9Burnable\n§8-\nAux Id: -32243712", "$aux": -32243712} },
-         { "09@-container_common.cell_specifications": {"offset": "@furnace_recipe.offset_placeholder8_10", "$t_text": "Cherry Fence Gate\n§9Burnable\n§8-\nAux Id: -34930688", "$aux": -34930688} }  ,
-         { "10@-container_common.cell_specifications": {"offset": "@furnace_recipe.offset_placeholder9_10", "$t_text": "Bamboo Fence Gate\n§9Burnable\n§8-\nAux Id: -33816576", "$aux": -33816576} }
+         { "01@container_common.cell_specifications": {"offset": "@furnace_recipe.offset_combined_10", "$t_text": "Oak Fence Gate\n§9Burnable\n§8-\nAux Id: 7012352", "$aux": 7012352} }             ,
+         { "02@container_common.cell_specifications": {"offset": "@furnace_recipe.offset_placeholder1_10", "$t_text": "Dark Oak Fence Gate\n§9Burnable\n§8-\nAux Id: 12189696", "$aux": 12189696} }  ,
+         { "03@container_common.cell_specifications": {"offset": "@furnace_recipe.offset_placeholder2_10", "$t_text": "Pale Oak Fence Gate\n§9Burnable\n§8-\nAux Id: -65011712", "$aux": -65011712} },
+         { "04@container_common.cell_specifications": {"offset": "@furnace_recipe.offset_placeholder3_10", "$t_text": "Birch Fence Gate\n§9Burnable\n§8-\nAux Id: 12058624", "$aux": 12058624} }     ,
+         { "05@container_common.cell_specifications": {"offset": "@furnace_recipe.offset_placeholder4_10", "$t_text": "Spruce Fence Gate\n§9Burnable\n§8-\nAux Id: 11993088", "$aux": 11993088} }    ,
+         { "06@container_common.cell_specifications": {"offset": "@furnace_recipe.offset_placeholder5_10", "$t_text": "Acacia Fence Gate\n§9Burnable\n§8-\nAux Id: 12255232", "$aux": 12255232} }    ,
+         { "07@container_common.cell_specifications": {"offset": "@furnace_recipe.offset_placeholder6_10", "$t_text": "Jungle Fence Gate\n§9Burnable\n§8-\nAux Id: 12124160", "$aux": 12124160} }    ,
+         { "08@container_common.cell_specifications": {"offset": "@furnace_recipe.offset_placeholder7_10", "$t_text": "Mangrove Fence Gate\n§9Burnable\n§8-\nAux Id: -32243712", "$aux": -32243712} },
+         { "09@container_common.cell_specifications": {"offset": "@furnace_recipe.offset_placeholder8_10", "$t_text": "Cherry Fence Gate\n§9Burnable\n§8-\nAux Id: -34930688", "$aux": -34930688} }  ,
+         { "10@container_common.cell_specifications": {"offset": "@furnace_recipe.offset_placeholder9_10", "$t_text": "Bamboo Fence Gate\n§9Burnable\n§8-\nAux Id: -33816576", "$aux": -33816576} }
       ]
    },
    "signs_panel": {
@@ -538,16 +538,16 @@
       "layer": 60,
       "$layer": 63,
       "controls": [
-         { "01@-container_common.cell_specifications": {"offset": "@furnace_recipe.offset_combined_10", "$t_text": "Oak Sign\n§9Burnable\n§8-\nAux Id: 25100288", "$aux": 25100288} }         ,
-         { "02@-container_common.cell_specifications": {"offset": "@furnace_recipe.offset_placeholder1_10", "$t_text": "Dark Oak Sign\n§9Burnable\n§8-\nAux Id: 40173568", "$aux": 40173568} },
-         { "03@-container_common.cell_specifications": {"offset": "@furnace_recipe.offset_placeholder2_10", "$t_text": "Pale Oak Sign\n§9Burnable\n§8-\nAux Id: 48889856", "$aux": 48889856} },
-         { "04@-container_common.cell_specifications": {"offset": "@furnace_recipe.offset_placeholder3_10", "$t_text": "Birch Sign\n§9Burnable\n§8-\nAux Id: 39976960", "$aux": 39976960} }   ,
-         { "05@-container_common.cell_specifications": {"offset": "@furnace_recipe.offset_placeholder4_10", "$t_text": "Spruce Sign\n§9Burnable\n§8-\nAux Id: 39911424", "$aux": 39911424} }  ,
-         { "06@-container_common.cell_specifications": {"offset": "@furnace_recipe.offset_placeholder5_10", "$t_text": "Acacia Sign\n§9Burnable\n§8-\nAux Id: 40108032", "$aux": 40108032} }  ,
-         { "07@-container_common.cell_specifications": {"offset": "@furnace_recipe.offset_placeholder6_10", "$t_text": "Jungle Sign\n§9Burnable\n§8-\nAux Id: 40042496", "$aux": 40042496} }  ,
-         { "08@-container_common.cell_specifications": {"offset": "@furnace_recipe.offset_placeholder7_10", "$t_text": "Mangrove Sign\n§9Burnable\n§8-\nAux Id: 43974656", "$aux": 43974656} },
-         { "09@-container_common.cell_specifications": {"offset": "@furnace_recipe.offset_placeholder8_10", "$t_text": "Cherry Sign\n§9Burnable\n§8-\nAux Id: 45088768", "$aux": 45088768} }  ,
-         { "10@-container_common.cell_specifications": {"offset": "@furnace_recipe.offset_placeholder9_10", "$t_text": "Bamboo Sign\n§9Burnable\n§8-\nAux Id: 45154304", "$aux": 45154304} }
+         { "01@container_common.cell_specifications": {"offset": "@furnace_recipe.offset_combined_10", "$t_text": "Oak Sign\n§9Burnable\n§8-\nAux Id: 25100288", "$aux": 25100288} }         ,
+         { "02@container_common.cell_specifications": {"offset": "@furnace_recipe.offset_placeholder1_10", "$t_text": "Dark Oak Sign\n§9Burnable\n§8-\nAux Id: 40173568", "$aux": 40173568} },
+         { "03@container_common.cell_specifications": {"offset": "@furnace_recipe.offset_placeholder2_10", "$t_text": "Pale Oak Sign\n§9Burnable\n§8-\nAux Id: 48889856", "$aux": 48889856} },
+         { "04@container_common.cell_specifications": {"offset": "@furnace_recipe.offset_placeholder3_10", "$t_text": "Birch Sign\n§9Burnable\n§8-\nAux Id: 39976960", "$aux": 39976960} }   ,
+         { "05@container_common.cell_specifications": {"offset": "@furnace_recipe.offset_placeholder4_10", "$t_text": "Spruce Sign\n§9Burnable\n§8-\nAux Id: 39911424", "$aux": 39911424} }  ,
+         { "06@container_common.cell_specifications": {"offset": "@furnace_recipe.offset_placeholder5_10", "$t_text": "Acacia Sign\n§9Burnable\n§8-\nAux Id: 40108032", "$aux": 40108032} }  ,
+         { "07@container_common.cell_specifications": {"offset": "@furnace_recipe.offset_placeholder6_10", "$t_text": "Jungle Sign\n§9Burnable\n§8-\nAux Id: 40042496", "$aux": 40042496} }  ,
+         { "08@container_common.cell_specifications": {"offset": "@furnace_recipe.offset_placeholder7_10", "$t_text": "Mangrove Sign\n§9Burnable\n§8-\nAux Id: 43974656", "$aux": 43974656} },
+         { "09@container_common.cell_specifications": {"offset": "@furnace_recipe.offset_placeholder8_10", "$t_text": "Cherry Sign\n§9Burnable\n§8-\nAux Id: 45088768", "$aux": 45088768} }  ,
+         { "10@container_common.cell_specifications": {"offset": "@furnace_recipe.offset_placeholder9_10", "$t_text": "Bamboo Sign\n§9Burnable\n§8-\nAux Id: 45154304", "$aux": 45154304} }
       ]
    },
    "hanging_signs_panel": {
@@ -558,22 +558,22 @@
       "layer": 60,
       "$layer": 64,
       "controls": [
-         { "01@-container_common.cell_specifications": {"offset": "@furnace_recipe.offset_combined_10", "$t_text": "Oak Hanging Sign\n§9Burnable\n§8-\nAux Id: -32768000", "$aux": -32768000} },
+         { "01@container_common.cell_specifications": {"offset": "@furnace_recipe.offset_combined_10", "$t_text": "Oak Hanging Sign\n§9Burnable\n§8-\nAux Id: -32768000", "$aux": -32768000} },
          {
-            "02@-container_common.cell_specifications": {"offset": "@furnace_recipe.offset_placeholder1_10", "$t_text": "Dark Oak Hanging Sign\n§9Burnable\n§8-\nAux Id: -33095680", "$aux": -33095680}
+            "02@container_common.cell_specifications": {"offset": "@furnace_recipe.offset_placeholder1_10", "$t_text": "Dark Oak Hanging Sign\n§9Burnable\n§8-\nAux Id: -33095680", "$aux": -33095680}
          },
          {
-            "03@-container_common.cell_specifications": {"offset": "@furnace_recipe.offset_placeholder2_10", "$t_text": "Pale Oak Hanging Sign\n§9Burnable\n§8-\nAux Id: -65077248", "$aux": -65077248}
+            "03@container_common.cell_specifications": {"offset": "@furnace_recipe.offset_placeholder2_10", "$t_text": "Pale Oak Hanging Sign\n§9Burnable\n§8-\nAux Id: -65077248", "$aux": -65077248}
          },
-         { "04@-container_common.cell_specifications": {"offset": "@furnace_recipe.offset_placeholder3_10", "$t_text": "Birch Hanging Sign\n§9Burnable\n§8-\nAux Id: -32899072", "$aux": -32899072} },
-         { "05@-container_common.cell_specifications": {"offset": "@furnace_recipe.offset_placeholder4_10", "$t_text": "Spruce Hanging Sign\n§9Burnable\n§8-\nAux Id: -32833536", "$aux": -32833536} },
-         { "06@-container_common.cell_specifications": {"offset": "@furnace_recipe.offset_placeholder5_10", "$t_text": "Acacia Hanging Sign\n§9Burnable\n§8-\nAux Id: -33030144", "$aux": -33030144} },
-         { "07@-container_common.cell_specifications": {"offset": "@furnace_recipe.offset_placeholder6_10", "$t_text": "Jungle Hanging Sign\n§9Burnable\n§8-\nAux Id: -32964608", "$aux": -32964608} },
+         { "04@container_common.cell_specifications": {"offset": "@furnace_recipe.offset_placeholder3_10", "$t_text": "Birch Hanging Sign\n§9Burnable\n§8-\nAux Id: -32899072", "$aux": -32899072} },
+         { "05@container_common.cell_specifications": {"offset": "@furnace_recipe.offset_placeholder4_10", "$t_text": "Spruce Hanging Sign\n§9Burnable\n§8-\nAux Id: -32833536", "$aux": -32833536} },
+         { "06@container_common.cell_specifications": {"offset": "@furnace_recipe.offset_placeholder5_10", "$t_text": "Acacia Hanging Sign\n§9Burnable\n§8-\nAux Id: -33030144", "$aux": -33030144} },
+         { "07@container_common.cell_specifications": {"offset": "@furnace_recipe.offset_placeholder6_10", "$t_text": "Jungle Hanging Sign\n§9Burnable\n§8-\nAux Id: -32964608", "$aux": -32964608} },
          {
-            "08@-container_common.cell_specifications": {"offset": "@furnace_recipe.offset_placeholder7_10", "$t_text": "Mangrove Hanging Sign\n§9Burnable\n§8-\nAux Id: -33292288", "$aux": -33292288}
+            "08@container_common.cell_specifications": {"offset": "@furnace_recipe.offset_placeholder7_10", "$t_text": "Mangrove Hanging Sign\n§9Burnable\n§8-\nAux Id: -33292288", "$aux": -33292288}
          },
-         { "09@-container_common.cell_specifications": {"offset": "@furnace_recipe.offset_placeholder8_10", "$t_text": "Cherry Hanging Sign\n§9Burnable\n§8-\nAux Id: -34996224", "$aux": -34996224} },
-         { "10@-container_common.cell_specifications": {"offset": "@furnace_recipe.offset_placeholder9_10", "$t_text": "Bamboo Hanging Sign\n§9Burnable\n§8-\nAux Id: -34209792", "$aux": -34209792} }
+         { "09@container_common.cell_specifications": {"offset": "@furnace_recipe.offset_placeholder8_10", "$t_text": "Cherry Hanging Sign\n§9Burnable\n§8-\nAux Id: -34996224", "$aux": -34996224} },
+         { "10@container_common.cell_specifications": {"offset": "@furnace_recipe.offset_placeholder9_10", "$t_text": "Bamboo Hanging Sign\n§9Burnable\n§8-\nAux Id: -34209792", "$aux": -34209792} }
       ]
    },
    "pressure_plates_panel": {
@@ -584,36 +584,36 @@
       "layer": 60,
       "$layer": 65,
       "controls": [
-         { "01@-container_common.cell_specifications": {"offset": "@furnace_recipe.offset_combined_10", "$t_text": "Oak Pressure Plate\n§9Burnable\n§8-\nAux Id: 4718592", "$aux": 4718592} },
+         { "01@container_common.cell_specifications": {"offset": "@furnace_recipe.offset_combined_10", "$t_text": "Oak Pressure Plate\n§9Burnable\n§8-\nAux Id: 4718592", "$aux": 4718592} },
          {
-            "02@-container_common.cell_specifications": {"offset": "@furnace_recipe.offset_placeholder1_10", "$t_text": "Dark Oak Pressure Plate\n§9Burnable\n§8-\nAux Id: -9961472", "$aux": -9961472}
+            "02@container_common.cell_specifications": {"offset": "@furnace_recipe.offset_placeholder1_10", "$t_text": "Dark Oak Pressure Plate\n§9Burnable\n§8-\nAux Id: -9961472", "$aux": -9961472}
          },
          {
-            "03@-container_common.cell_specifications": {
+            "03@container_common.cell_specifications": {
                "offset": "@furnace_recipe.offset_placeholder2_10",
                "$t_text": "Pale Oak Pressure Plate\n§9Burnable\n§8-\nAux Id: -65339392",
                "$aux": -65339392
             }
          },
-         { "04@-container_common.cell_specifications": {"offset": "@furnace_recipe.offset_placeholder3_10", "$t_text": "Birch Pressure Plate\n§9Burnable\n§8-\nAux Id: -9895936", "$aux": -9895936} },
+         { "04@container_common.cell_specifications": {"offset": "@furnace_recipe.offset_placeholder3_10", "$t_text": "Birch Pressure Plate\n§9Burnable\n§8-\nAux Id: -9895936", "$aux": -9895936} },
          {
-            "05@-container_common.cell_specifications": {"offset": "@furnace_recipe.offset_placeholder4_10", "$t_text": "Spruce Pressure Plate\n§9Burnable\n§8-\nAux Id: -10092544", "$aux": -10092544}
+            "05@container_common.cell_specifications": {"offset": "@furnace_recipe.offset_placeholder4_10", "$t_text": "Spruce Pressure Plate\n§9Burnable\n§8-\nAux Id: -10092544", "$aux": -10092544}
          },
-         { "06@-container_common.cell_specifications": {"offset": "@furnace_recipe.offset_placeholder5_10", "$t_text": "Acacia Pressure Plate\n§9Burnable\n§8-\nAux Id: -9830400", "$aux": -9830400} },
+         { "06@container_common.cell_specifications": {"offset": "@furnace_recipe.offset_placeholder5_10", "$t_text": "Acacia Pressure Plate\n§9Burnable\n§8-\nAux Id: -9830400", "$aux": -9830400} },
          {
-            "07@-container_common.cell_specifications": {"offset": "@furnace_recipe.offset_placeholder6_10", "$t_text": "Jungle Pressure Plate\n§9Burnable\n§8-\nAux Id: -10027008", "$aux": -10027008}
+            "07@container_common.cell_specifications": {"offset": "@furnace_recipe.offset_placeholder6_10", "$t_text": "Jungle Pressure Plate\n§9Burnable\n§8-\nAux Id: -10027008", "$aux": -10027008}
          },
          {
-            "08@-container_common.cell_specifications": {
+            "08@container_common.cell_specifications": {
                "offset": "@furnace_recipe.offset_placeholder7_10",
                "$t_text": "Mangrove Pressure Plate\n§9Burnable\n§8-\nAux Id: -32112640",
                "$aux": -32112640
             }
          },
          {
-            "09@-container_common.cell_specifications": {"offset": "@furnace_recipe.offset_placeholder8_10", "$t_text": "Cherry Pressure Plate\n§9Burnable\n§8-\nAux Id: -35258368", "$aux": -35258368}
+            "09@container_common.cell_specifications": {"offset": "@furnace_recipe.offset_placeholder8_10", "$t_text": "Cherry Pressure Plate\n§9Burnable\n§8-\nAux Id: -35258368", "$aux": -35258368}
          },
-         { "10@-container_common.cell_specifications": {"offset": "@furnace_recipe.offset_placeholder9_10", "$t_text": "Bamboo Pressure Plate\n§9Burnable\n§8-\nAux Id: -33685504", "$aux": -33685504} }
+         { "10@container_common.cell_specifications": {"offset": "@furnace_recipe.offset_placeholder9_10", "$t_text": "Bamboo Pressure Plate\n§9Burnable\n§8-\nAux Id: -33685504", "$aux": -33685504} }
       ]
    },
    "boats_panel": {
@@ -624,16 +624,16 @@
       "layer": 60,
       "$layer": 66,
       "controls": [
-         { "01@-container_common.cell_specifications": {"offset": "@furnace_recipe.offset_combined_10", "$t_text": "Oak Boat\n§9Burnable\n§8-\nAux Id: 26279936", "$aux": 26279936} }         ,
-         { "02@-container_common.cell_specifications": {"offset": "@furnace_recipe.offset_placeholder1_10", "$t_text": "Dark Oak Boat\n§9Burnable\n§8-\nAux Id: 26607616", "$aux": 26607616} },
-         { "03@-container_common.cell_specifications": {"offset": "@furnace_recipe.offset_placeholder2_10", "$t_text": "Pale Oak Boat\n§9Burnable\n§8-\nAux Id: 48758784", "$aux": 48758784} },
-         { "04@-container_common.cell_specifications": {"offset": "@furnace_recipe.offset_placeholder3_10", "$t_text": "Birch Boat\n§9Burnable\n§8-\nAux Id: 26345472", "$aux": 26345472} }   ,
-         { "05@-container_common.cell_specifications": {"offset": "@furnace_recipe.offset_placeholder4_10", "$t_text": "Spruce Boat\n§9Burnable\n§8-\nAux Id: 26476544", "$aux": 26476544} }  ,
-         { "06@-container_common.cell_specifications": {"offset": "@furnace_recipe.offset_placeholder5_10", "$t_text": "Acacia Boat\n§9Burnable\n§8-\nAux Id: 26542080", "$aux": 26542080} }  ,
-         { "07@-container_common.cell_specifications": {"offset": "@furnace_recipe.offset_placeholder6_10", "$t_text": "Jungle Boat\n§9Burnable\n§8-\nAux Id: 26411008", "$aux": 26411008} }  ,
-         { "08@-container_common.cell_specifications": {"offset": "@furnace_recipe.offset_placeholder7_10", "$t_text": "Mangrove Boat\n§9Burnable\n§8-\nAux Id: 44040192", "$aux": 44040192} },
-         { "09@-container_common.cell_specifications": {"offset": "@furnace_recipe.offset_placeholder8_10", "$t_text": "Cherry Boat\n§9Burnable\n§8-\nAux Id: 44957696", "$aux": 44957696} }  ,
-         { "10@-container_common.cell_specifications": {"offset": "@furnace_recipe.offset_placeholder9_10", "$t_text": "Bamboo Raft\n§9Burnable\n§8-\nAux Id: 45219840", "$aux": 45219840} }
+         { "01@container_common.cell_specifications": {"offset": "@furnace_recipe.offset_combined_10", "$t_text": "Oak Boat\n§9Burnable\n§8-\nAux Id: 26279936", "$aux": 26279936} }         ,
+         { "02@container_common.cell_specifications": {"offset": "@furnace_recipe.offset_placeholder1_10", "$t_text": "Dark Oak Boat\n§9Burnable\n§8-\nAux Id: 26607616", "$aux": 26607616} },
+         { "03@container_common.cell_specifications": {"offset": "@furnace_recipe.offset_placeholder2_10", "$t_text": "Pale Oak Boat\n§9Burnable\n§8-\nAux Id: 48758784", "$aux": 48758784} },
+         { "04@container_common.cell_specifications": {"offset": "@furnace_recipe.offset_placeholder3_10", "$t_text": "Birch Boat\n§9Burnable\n§8-\nAux Id: 26345472", "$aux": 26345472} }   ,
+         { "05@container_common.cell_specifications": {"offset": "@furnace_recipe.offset_placeholder4_10", "$t_text": "Spruce Boat\n§9Burnable\n§8-\nAux Id: 26476544", "$aux": 26476544} }  ,
+         { "06@container_common.cell_specifications": {"offset": "@furnace_recipe.offset_placeholder5_10", "$t_text": "Acacia Boat\n§9Burnable\n§8-\nAux Id: 26542080", "$aux": 26542080} }  ,
+         { "07@container_common.cell_specifications": {"offset": "@furnace_recipe.offset_placeholder6_10", "$t_text": "Jungle Boat\n§9Burnable\n§8-\nAux Id: 26411008", "$aux": 26411008} }  ,
+         { "08@container_common.cell_specifications": {"offset": "@furnace_recipe.offset_placeholder7_10", "$t_text": "Mangrove Boat\n§9Burnable\n§8-\nAux Id: 44040192", "$aux": 44040192} },
+         { "09@container_common.cell_specifications": {"offset": "@furnace_recipe.offset_placeholder8_10", "$t_text": "Cherry Boat\n§9Burnable\n§8-\nAux Id: 44957696", "$aux": 44957696} }  ,
+         { "10@container_common.cell_specifications": {"offset": "@furnace_recipe.offset_placeholder9_10", "$t_text": "Bamboo Raft\n§9Burnable\n§8-\nAux Id: 45219840", "$aux": 45219840} }
       ]
    },
    "chest_boats_panel": {
@@ -644,30 +644,30 @@
       "layer": 60,
       "$layer": 67,
       "controls": [
-         { "01@-container_common.cell_specifications": {"offset": "@furnace_recipe.offset_combined_10", "$t_text": "Oak Boat With Chest\n§9Burnable\n§8-\nAux Id: 44236800", "$aux": 44236800} },
+         { "01@container_common.cell_specifications": {"offset": "@furnace_recipe.offset_combined_10", "$t_text": "Oak Boat With Chest\n§9Burnable\n§8-\nAux Id: 44236800", "$aux": 44236800} },
          {
-            "02@-container_common.cell_specifications": {"offset": "@furnace_recipe.offset_placeholder1_10", "$t_text": "Dark Oak Boat With Chest\n§9Burnable\n§8-\nAux Id: 44564480", "$aux": 44564480}
+            "02@container_common.cell_specifications": {"offset": "@furnace_recipe.offset_placeholder1_10", "$t_text": "Dark Oak Boat With Chest\n§9Burnable\n§8-\nAux Id: 44564480", "$aux": 44564480}
          },
          {
-            "03@-container_common.cell_specifications": {"offset": "@furnace_recipe.offset_placeholder2_10", "$t_text": "Pale Oak Boat With Chest\n§9Burnable\n§8-\nAux Id: 48824320", "$aux": 48824320}
+            "03@container_common.cell_specifications": {"offset": "@furnace_recipe.offset_placeholder2_10", "$t_text": "Pale Oak Boat With Chest\n§9Burnable\n§8-\nAux Id: 48824320", "$aux": 48824320}
          },
-         { "04@-container_common.cell_specifications": {"offset": "@furnace_recipe.offset_placeholder3_10", "$t_text": "Birch Boat With Chest\n§9Burnable\n§8-\nAux Id: 44302336", "$aux": 44302336} },
+         { "04@container_common.cell_specifications": {"offset": "@furnace_recipe.offset_placeholder3_10", "$t_text": "Birch Boat With Chest\n§9Burnable\n§8-\nAux Id: 44302336", "$aux": 44302336} },
          {
-            "05@-container_common.cell_specifications": {"offset": "@furnace_recipe.offset_placeholder4_10", "$t_text": "Spruce Boat With Chest\n§9Burnable\n§8-\nAux Id: 44433408", "$aux": 44433408}
-         },
-         {
-            "06@-container_common.cell_specifications": {"offset": "@furnace_recipe.offset_placeholder5_10", "$t_text": "Acacia Boat With Chest\n§9Burnable\n§8-\nAux Id: 44498944", "$aux": 44498944}
+            "05@container_common.cell_specifications": {"offset": "@furnace_recipe.offset_placeholder4_10", "$t_text": "Spruce Boat With Chest\n§9Burnable\n§8-\nAux Id: 44433408", "$aux": 44433408}
          },
          {
-            "07@-container_common.cell_specifications": {"offset": "@furnace_recipe.offset_placeholder6_10", "$t_text": "Jungle Boat With Chest\n§9Burnable\n§8-\nAux Id: 44367872", "$aux": 44367872}
+            "06@container_common.cell_specifications": {"offset": "@furnace_recipe.offset_placeholder5_10", "$t_text": "Acacia Boat With Chest\n§9Burnable\n§8-\nAux Id: 44498944", "$aux": 44498944}
          },
          {
-            "08@-container_common.cell_specifications": {"offset": "@furnace_recipe.offset_placeholder7_10", "$t_text": "Mangrove Boat With Chest\n§9Burnable\n§8-\nAux Id: 44630016", "$aux": 44630016}
+            "07@container_common.cell_specifications": {"offset": "@furnace_recipe.offset_placeholder6_10", "$t_text": "Jungle Boat With Chest\n§9Burnable\n§8-\nAux Id: 44367872", "$aux": 44367872}
          },
          {
-            "09@-container_common.cell_specifications": {"offset": "@furnace_recipe.offset_placeholder8_10", "$t_text": "Cherry Boat With Chest\n§9Burnable\n§8-\nAux Id: 45023232", "$aux": 45023232}
+            "08@container_common.cell_specifications": {"offset": "@furnace_recipe.offset_placeholder7_10", "$t_text": "Mangrove Boat With Chest\n§9Burnable\n§8-\nAux Id: 44630016", "$aux": 44630016}
          },
-         { "10@-container_common.cell_specifications": {"offset": "@furnace_recipe.offset_placeholder9_10", "$t_text": "Bamboo Raft With Chest\n§9Burnable\n§8-\nAux Id: 45285376", "$aux": 45285376} }
+         {
+            "09@container_common.cell_specifications": {"offset": "@furnace_recipe.offset_placeholder8_10", "$t_text": "Cherry Boat With Chest\n§9Burnable\n§8-\nAux Id: 45023232", "$aux": 45023232}
+         },
+         { "10@container_common.cell_specifications": {"offset": "@furnace_recipe.offset_placeholder9_10", "$t_text": "Bamboo Raft With Chest\n§9Burnable\n§8-\nAux Id: 45285376", "$aux": 45285376} }
       ]
    },
    "slabs_panel": {
@@ -678,16 +678,16 @@
       "layer": 60,
       "$layer": 68,
       "controls": [
-         { "01@-container_common.cell_specifications": {"offset": "@furnace_recipe.offset_combined_10", "$t_text": "Oak Slab\n§9Burnable\n§8-\nAux Id: 10354688", "$aux": 10354688} }           ,
-         { "02@-container_common.cell_specifications": {"offset": "@furnace_recipe.offset_placeholder1_10", "$t_text": "Dark Oak Slab\n§9Burnable\n§8-\nAux Id: -52953088", "$aux": -52953088} },
-         { "03@-container_common.cell_specifications": {"offset": "@furnace_recipe.offset_placeholder2_10", "$t_text": "Pale Oak Slab\n§9Burnable\n§8-\nAux Id: -65404928", "$aux": -65404928} },
-         { "04@-container_common.cell_specifications": {"offset": "@furnace_recipe.offset_placeholder3_10", "$t_text": "Birch Slab\n§9Burnable\n§8-\nAux Id: -52756480", "$aux": -52756480} }   ,
-         { "05@-container_common.cell_specifications": {"offset": "@furnace_recipe.offset_placeholder4_10", "$t_text": "Spruce Slab\n§9Burnable\n§8-\nAux Id: -52690944", "$aux": -52690944} }  ,
-         { "06@-container_common.cell_specifications": {"offset": "@furnace_recipe.offset_placeholder5_10", "$t_text": "Acacia Slab\n§9Burnable\n§8-\nAux Id: -52887552", "$aux": -52887552} }  ,
-         { "07@-container_common.cell_specifications": {"offset": "@furnace_recipe.offset_placeholder6_10", "$t_text": "Jungle Slab\n§9Burnable\n§8-\nAux Id: -52822016", "$aux": -52822016} }  ,
-         { "08@-container_common.cell_specifications": {"offset": "@furnace_recipe.offset_placeholder7_10", "$t_text": "Mangrove Slab\n§9Burnable\n§8-\nAux Id: -32047104", "$aux": -32047104} },
-         { "09@-container_common.cell_specifications": {"offset": "@furnace_recipe.offset_placeholder8_10", "$t_text": "Cherry Slab\n§9Burnable\n§8-\nAux Id: -35323904", "$aux": -35323904} }  ,
-         { "10@-container_common.cell_specifications": {"offset": "@furnace_recipe.offset_placeholder9_10", "$t_text": "Bamboo Slab\n§9Burnable\n§8-\nAux Id: -33619968", "$aux": -33619968} }
+         { "01@container_common.cell_specifications": {"offset": "@furnace_recipe.offset_combined_10", "$t_text": "Oak Slab\n§9Burnable\n§8-\nAux Id: 10354688", "$aux": 10354688} }           ,
+         { "02@container_common.cell_specifications": {"offset": "@furnace_recipe.offset_placeholder1_10", "$t_text": "Dark Oak Slab\n§9Burnable\n§8-\nAux Id: -52953088", "$aux": -52953088} },
+         { "03@container_common.cell_specifications": {"offset": "@furnace_recipe.offset_placeholder2_10", "$t_text": "Pale Oak Slab\n§9Burnable\n§8-\nAux Id: -65404928", "$aux": -65404928} },
+         { "04@container_common.cell_specifications": {"offset": "@furnace_recipe.offset_placeholder3_10", "$t_text": "Birch Slab\n§9Burnable\n§8-\nAux Id: -52756480", "$aux": -52756480} }   ,
+         { "05@container_common.cell_specifications": {"offset": "@furnace_recipe.offset_placeholder4_10", "$t_text": "Spruce Slab\n§9Burnable\n§8-\nAux Id: -52690944", "$aux": -52690944} }  ,
+         { "06@container_common.cell_specifications": {"offset": "@furnace_recipe.offset_placeholder5_10", "$t_text": "Acacia Slab\n§9Burnable\n§8-\nAux Id: -52887552", "$aux": -52887552} }  ,
+         { "07@container_common.cell_specifications": {"offset": "@furnace_recipe.offset_placeholder6_10", "$t_text": "Jungle Slab\n§9Burnable\n§8-\nAux Id: -52822016", "$aux": -52822016} }  ,
+         { "08@container_common.cell_specifications": {"offset": "@furnace_recipe.offset_placeholder7_10", "$t_text": "Mangrove Slab\n§9Burnable\n§8-\nAux Id: -32047104", "$aux": -32047104} },
+         { "09@container_common.cell_specifications": {"offset": "@furnace_recipe.offset_placeholder8_10", "$t_text": "Cherry Slab\n§9Burnable\n§8-\nAux Id: -35323904", "$aux": -35323904} }  ,
+         { "10@container_common.cell_specifications": {"offset": "@furnace_recipe.offset_placeholder9_10", "$t_text": "Bamboo Slab\n§9Burnable\n§8-\nAux Id: -33619968", "$aux": -33619968} }
       ]
    },
    "misc_cartography_table_def": {
@@ -699,7 +699,7 @@
       "$layer": 69,
       "controls": [
          {
-            "01@-container_common.cell_specifications": { "offset": [200, 0], "$t_text": "Cartography Table\n§9Burnable\n§8-\nAux Id: -13107200", "$aux": -13107200 }
+            "01@container_common.cell_specifications": { "offset": [200, 0], "$t_text": "Cartography Table\n§9Burnable\n§8-\nAux Id: -13107200", "$aux": -13107200 }
          }
       ]
    },
@@ -712,7 +712,7 @@
       "$layer": 69,
       "controls": [
          {
-            "01@-container_common.cell_specifications": { "offset": [200, 0], "$t_text": "Fletching Table\n§9Burnable\n§8-\nAux Id: -13172736", "$aux": -13172736 }
+            "01@container_common.cell_specifications": { "offset": [200, 0], "$t_text": "Fletching Table\n§9Burnable\n§8-\nAux Id: -13172736", "$aux": -13172736 }
          }
       ]
    },
@@ -725,7 +725,7 @@
       "$layer": 69,
       "controls": [
          {
-            "01@-container_common.cell_specifications": { "offset": [200, 0], "$t_text": "Crafting Table\n§9Burnable\n§8-\nAux Id: 3801088", "$aux": 3801088 }
+            "01@container_common.cell_specifications": { "offset": [200, 0], "$t_text": "Crafting Table\n§9Burnable\n§8-\nAux Id: 3801088", "$aux": 3801088 }
          }
       ]
    },
@@ -738,7 +738,7 @@
       "$layer": 69,
       "controls": [
          {
-            "01@-container_common.cell_specifications": { "offset": [200, 0], "$t_text": "Loom\n§9Burnable\n§8-\nAux Id: -13369344", "$aux": -13369344 }
+            "01@container_common.cell_specifications": { "offset": [200, 0], "$t_text": "Loom\n§9Burnable\n§8-\nAux Id: -13369344", "$aux": -13369344 }
          }
       ]
    },
@@ -751,7 +751,7 @@
       "$layer": 70,
       "controls": [
          {
-            "01@-container_common.cell_specifications": { "offset": [200, 0], "$t_text": "Chest\n§9Burnable\n§8-\nAux Id: 3538946", "$aux": 3538946 }
+            "01@container_common.cell_specifications": { "offset": [200, 0], "$t_text": "Chest\n§9Burnable\n§8-\nAux Id: 3538946", "$aux": 3538946 }
          }
       ]
    },
@@ -764,7 +764,7 @@
       "$layer": 70,
       "controls": [
          {
-            "01@-container_common.cell_specifications": { "offset": [200, 0], "$t_text": "Barrel\n§9Burnable\n§8-\nAux Id: -13303808", "$aux": -13303808 }
+            "01@container_common.cell_specifications": { "offset": [200, 0], "$t_text": "Barrel\n§9Burnable\n§8-\nAux Id: -13303808", "$aux": -13303808 }
          }
       ]
    },
@@ -777,7 +777,7 @@
       "$layer": 71,
       "controls": [
          {
-            "01@-container_common.cell_specifications": { "offset": [200, 0], "$t_text": "Bookshelf\n§9Burnable\n§8-\nAux Id: 3080192", "$aux": 3080192 }
+            "01@container_common.cell_specifications": { "offset": [200, 0], "$t_text": "Bookshelf\n§9Burnable\n§8-\nAux Id: 3080192", "$aux": 3080192 }
          }
       ]
    },
@@ -790,7 +790,7 @@
       "$layer": 71,
       "controls": [
          {
-            "01@-container_common.cell_specifications": { "offset": [200, 0], "$t_text": "Chiseled Bookshelf\n§9Burnable\n§8-\nAux Id: -34471936", "$aux": -34471936 }
+            "01@container_common.cell_specifications": { "offset": [200, 0], "$t_text": "Chiseled Bookshelf\n§9Burnable\n§8-\nAux Id: -34471936", "$aux": -34471936 }
          }
       ]
    },
@@ -803,7 +803,7 @@
       "$layer": 71,
       "controls": [
          {
-            "01@-container_common.cell_specifications": { "offset": [200, 0], "$t_text": "Lectern\n§9Burnable\n§8-\nAux Id: -12713984", "$aux": -12713984 }
+            "01@container_common.cell_specifications": { "offset": [200, 0], "$t_text": "Lectern\n§9Burnable\n§8-\nAux Id: -12713984", "$aux": -12713984 }
          }
       ]
    },
@@ -816,7 +816,7 @@
       "$layer": 72,
       "controls": [
          {
-            "01@-container_common.cell_specifications": { "offset": [200, 0], "$t_text": "Stick\n§9Burnable\n§8-\nAux Id: 22609920", "$aux": 22609920 }
+            "01@container_common.cell_specifications": { "offset": [200, 0], "$t_text": "Stick\n§9Burnable\n§8-\nAux Id: 22609920", "$aux": 22609920 }
          }
       ]
    },
@@ -829,7 +829,7 @@
       "$layer": 72,
       "controls": [
          {
-            "01@-container_common.cell_specifications": { "offset": [200, 0], "$t_text": "Bowl\n§9Burnable\n§8-\nAux Id: 22675456", "$aux": 22675456 }
+            "01@container_common.cell_specifications": { "offset": [200, 0], "$t_text": "Bowl\n§9Burnable\n§8-\nAux Id: 22675456", "$aux": 22675456 }
          }
       ]
    },
@@ -842,7 +842,7 @@
       "$layer": 72,
       "controls": [
          {
-            "01@-container_common.cell_specifications": { "offset": [200, 0], "$t_text": "Composter\n§9Burnable\n§8-\nAux Id: -13959168", "$aux": -13959168 }
+            "01@container_common.cell_specifications": { "offset": [200, 0], "$t_text": "Composter\n§9Burnable\n§8-\nAux Id: -13959168", "$aux": -13959168 }
          }
       ]
    },
@@ -855,7 +855,7 @@
       "$layer": 74,
       "controls": [
          {
-            "01@-container_common.cell_specifications": { "offset": [200, 0], "$t_text": "Coal Block\n§9Burnable\n§8-\nAux Id: 11337728", "$aux": 11337728 }
+            "01@container_common.cell_specifications": { "offset": [200, 0], "$t_text": "Coal Block\n§9Burnable\n§8-\nAux Id: 11337728", "$aux": 11337728 }
          }
       ]
    },
@@ -868,7 +868,7 @@
       "$layer": 73,
       "controls": [
          {
-            "01@-container_common.cell_specifications": { "offset": [200, 0], "$t_text": "Bamboo Mosaic\n§9Burnable\n§8-\nAux Id: -33357824", "$aux": -33357824 }
+            "01@container_common.cell_specifications": { "offset": [200, 0], "$t_text": "Bamboo Mosaic\n§9Burnable\n§8-\nAux Id: -33357824", "$aux": -33357824 }
          }
       ]
    },
@@ -881,7 +881,7 @@
       "$layer": 74,
       "controls": [
          {
-            "01@-container_common.cell_specifications": { "offset": [200, 0], "$t_text": "Coal\n§9Burnable\n§8-\nAux Id: 21364736", "$aux": 21364736 }
+            "01@container_common.cell_specifications": { "offset": [200, 0], "$t_text": "Coal\n§9Burnable\n§8-\nAux Id: 21364736", "$aux": 21364736 }
          }
       ]
    },
@@ -894,7 +894,7 @@
       "$layer": 75,
       "controls": [
          {
-            "01@-container_common.cell_specifications": { "offset": [200, 0], "$t_text": "Bamboo Mosaic Stairs\n§9Burnable\n§8-\nAux Id: -34275328", "$aux": -34275328 }
+            "01@container_common.cell_specifications": { "offset": [200, 0], "$t_text": "Bamboo Mosaic Stairs\n§9Burnable\n§8-\nAux Id: -34275328", "$aux": -34275328 }
          }
       ]
    },
@@ -907,7 +907,7 @@
       "$layer": 75,
       "controls": [
          {
-            "01@-container_common.cell_specifications": { "offset": [200, 0], "$t_text": "Bamboo Mosaic Slab\n§9Burnable\n§8-\nAux Id: -34340864", "$aux": -34340864 }
+            "01@container_common.cell_specifications": { "offset": [200, 0], "$t_text": "Bamboo Mosaic Slab\n§9Burnable\n§8-\nAux Id: -34340864", "$aux": -34340864 }
          }
       ]
    },

@@ -1,23 +1,20 @@
 {
   "ui_defs": [
     // Core Common Files
-    "ui/-common/-container_common.atemp",        // Base container functionality
-    "ui/-common/somali_to_Mori_no_Kamisama.atemp", // Common UI elements
-
+    "ui/-common/container_common.atemp",          //  Common UI elements     {may remove later }
+    "ui/-common/somali_to_Mori_no_Kamisama.atemp", //  Base container functionality
     // Toggle & Button Controls  
-    "ui/toggles-&-buttons/creative_tabs.atemp",    // Creative inventory tabs
-    "ui/toggles-&-buttons/furnace_recipe.atemp",   // Furnace recipe buttons
-    "ui/toggles-&-buttons/left_tab_most.atemp",    // Left sidebar tabs
-    "ui/toggles-&-buttons/recipe_tabs.atemp",      // Recipe book tabs
-    "ui/toggles-&-buttons/recipe_toggle.atemp",    // Recipe toggle controls
-
+    "ui/toggles-&-buttons/creative_tabs.atemp",    // Creative inventory tabs {will remove later}
+    "ui/toggles-&-buttons/furnace_recipe.atemp",   // Furnace recipe buttons  {may remove later }
+    "ui/toggles-&-buttons/left_tab_most.atemp",    // Left sidebar tabs       {will remove later}
+    "ui/toggles-&-buttons/recipe_tabs.atemp",      // Recipe book tabs        {may remove later }
+    "ui/toggles-&-buttons/recipe_toggle.atemp",    // Recipe toggle controls  {may remove later }
     // Container Interfaces
     "ui/ashur/anvil_zeta.atemp",          // Anvil UI
     "ui/ashur/beacon_zeta.atemp",         // Beacon UI
     "ui/ashur/brewing_zeta.atemp",        // Brewing Stand UI
     "ui/ashur/cartography_zeta.atemp",    // Cartography Table UI
     "ui/ashur/crafter_zeta.atemp",        // Crafting Table UI
-    "ui/ashur/creative_layout.atemp",     // Creative Inventory Layout
     "ui/ashur/dispenser_zeta.atemp",      // Dispenser UI
     "ui/ashur/dropper_zeta.atemp",        // Dropper UI
     "ui/ashur/double_chest_zeta.atemp",   // Large Chest UI
@@ -25,6 +22,7 @@
     "ui/ashur/furnace_zeta.atemp",        // Furnace UI
     "ui/ashur/grindstone_zeta.atemp",     // Grindstone UI
     "ui/ashur/hopper_zeta.atemp",         // Hopper UI
+    "ui/ashur/horse_zeta.atemp",          // Horse UI
     "ui/ashur/loom_zeta.atemp",           // Loom UI
     "ui/ashur/shulker_zeta.atemp",        // Shulker Box UI
     "ui/ashur/small_chest_zeta.atemp",    // Small Chest UI
@@ -32,7 +30,8 @@
     "ui/ashur/barrel_zeta.atemp",         // Barrel UI
     "ui/ashur/smithing_zeta.atemp",       // Smithing Table UI
     "ui/ashur/stonecutter_zeta.atemp",    // Stonecutter UI
+    "ui/ashur/tab_menu.atemp",            // Tab Menu System
     "ui/ashur/survival_layout.atemp",     // Survival Inventory Layout
-    "ui/ashur/tab_menu.atemp"             // Tab Menu System
+    "ui/ashur/creative_layout.atemp"      // Creative Inventory Layout
   ]
 }

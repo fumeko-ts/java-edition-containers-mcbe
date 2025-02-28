@@ -16,7 +16,13 @@
               "controls": [
                  {"serverdisplay@hud.serverdisplay": {}},
                  {
-                    "logo": { "offset": [-200, -113], "type": "image", "size": [60, 30], "layer": 90, "texture": "textures/ui/title" }
+                    "logo": { 
+                     "offset": [-174, -124], 
+                     "type": "label", 
+                     "size": ["default", 30], 
+                     "layer": 90, 
+                     "text": "recommended server Play.MagmaMC.net\nLong-term survival server - No world resets." 
+                   }
                  },
                  {
                     "player_list_listing": {

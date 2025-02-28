@@ -1,0 +1,181 @@
+{
+    "namespace": "horse_zeta",
+    "overlay_image": {"type": "image", "alpha": 0.5,"controls": [{"cell_texture":{"size":[18, 18],"type": "image","nineslice_size": 1, "texture": "assets/minecraft/textures/gui/sprites/container/slot.png"}}]},
+    "saddle_image@horse_zeta.overlay_image": {"texture": "textures/ui/empty_horse_slot_saddle"},
+    "armor_image@horse_zeta.overlay_image": {"layer":20,"texture": "textures/ui/empty_horse_slot_armor"},
+    "carpet_image@horse_zeta.overlay_image": {"layer":20,"texture": "textures/ui/empty_llama_slot_carpet"},
+    "horse_label@common.section_heading_label": { "anchor_from": "top_left", "anchor_to": "top_left", "offset": [7, 7], "text": "$container_title", "layer": 5 },
+    
+    "grid_item_for_horse_inventory@common.container_item": {
+     "$stack_count_required": true,
+     "$durability_bar_required": true,
+     "$storage_bar_required": true,
+     "$cell_overlay_ref": "horse_zeta.overlay_image",
+     "$button_ref": "crafting.no_coalesce_container_slot_button",
+     "$focus_id_binding_type": "none",
+     "$focus_id": "container_items",
+     "$focus_override_right_binding_type": "none",
+     "$focus_override_right": "crafting_input_top_left"
+  },
+    "equip_grid": {
+       "type": "grid",
+       "anchor_to": "top_left",
+       "anchor_from": "top_left",
+       "collection_name": "horse_equip_items",
+       "grid_item_template": "@common.container_item",
+       "grid_dimension_binding": "#equip_grid_dimensions",
+       "$item_collection_name": "horse_equip_items",
+       "bindings": [ {"binding_name": "#equip_grid_dimensions"} ]
+    },
+    "inv_grid": {
+       "type": "grid",
+       "anchor_to": "top_left",
+       "anchor_from": "top_left",
+       "layer": 3,
+       "collection_name": "container_items",
+       "grid_item_template": "horse_zeta.grid_item_for_horse_inventory",
+       "grid_dimension_binding": "#inv_grid_dimensions",
+       "$item_collection_name": "container_items",
+       "bindings": [ {"binding_name": "#inv_grid_dimensions"} ]
+    },
+    "inv_bg_panel": {
+       "type": "panel",
+       "anchor_from": "top_left",
+       "anchor_to": "top_left",
+       "size": [90, 54],
+       "layer": 2,
+       "controls": [ {"cell_image@common.cell_image": {}} ]
+    },
+    "equip_panel": {
+       "type": "panel",
+       "anchor_to": "top_left",
+       "anchor_from": "top_left",
+       "controls": [
+          {"equip_grid@horse_zeta.equip_grid": {}},
+          {
+             "saddle@horse_zeta.saddle_image": {
+                "anchor_from": "top_left",
+                "anchor_to": "top_left",
+                "size": [16, 16],
+                "offset": [1, 1],
+                "layer": 4,
+                "bindings": [ {"binding_name": "#has_saddle_slot", "binding_name_override": "#visible"} ]
+             }
+          },
+          {
+             "armor_0@horse_zeta.armor_image": {
+                "anchor_from": "top_left",
+                "anchor_to": "top_left",
+                "size": [16, 16],
+                "offset": [1, 1],
+                "layer": 4,
+                "bindings": [ {"binding_name": "#has_only_armor_slot", "binding_name_override": "#visible"} ]
+             }
+          },
+          {
+             "carpet_0@horse_zeta.carpet_image": {
+                "anchor_from": "top_left",
+                "anchor_to": "top_left",
+                "size": [16, 16],
+                "offset": [1, 1],
+                "layer": 4,
+                "bindings": [ {"binding_name": "#has_only_carpet_slot", "binding_name_override": "#visible"} ]
+             }
+          },
+          {
+             "armor_1@horse_zeta.armor_image": {
+                "anchor_from": "top_left",
+                "anchor_to": "top_left",
+                "size": [16, 16],
+                "offset": [1, 19],
+                "layer": 4,
+                "bindings": [ {"binding_name": "#has_armor_and_saddle_slot", "binding_name_override": "#visible"} ]
+             }
+          },
+          {
+             "carpet_1@horse_zeta.carpet_image": {
+                "anchor_from": "top_left",
+                "anchor_to": "top_left",
+                "size": [16, 16],
+                "offset": [1, 19],
+                "layer": 4,
+                "bindings": [ {"binding_name": "#has_carpet_and_saddle_slot", "binding_name_override": "#visible"} ]
+             }
+          }
+       ]
+    },
+    "inv_panel": {
+       "type": "panel",
+       "anchor_from": "top_left",
+       "anchor_to": "top_left",
+       "offset": [79, 18],
+       "controls": [ {"inv_bg_panel@horse_zeta.inv_bg_panel": {}}, {"inv_grid@horse_zeta.inv_grid": {"offset": [0, -1]}} ]
+    },
+    "horse_renderer": {
+       "type": "panel",
+       "anchor_from": "top_left",
+       "anchor_to": "top_left",
+       "size": [54, 54],
+       "controls": [
+          {
+             "horse_custom_panel": {
+                "type": "panel",
+                "size": ["30%", "30%"],
+                "offset": [0, "30%"],
+                "controls": [
+                   {
+                      "horse_custom": {
+                         "type": "custom",
+                         "animation_reset_name": "screen_animation_reset",
+                         "anims": [
+                            "@common.screen_exit_size_animation_push"    , "@common.screen_exit_size_animation_pop"     , "@common.screen_entrance_size_animation_push",
+                            "@common.screen_entrance_size_animation_pop"
+                         ],
+                         "renderer": "live_horse_renderer",
+                         "layer": 4,
+                         "anchor_from": "center",
+                         "anchor_to": "center",
+                         "bindings": [ {"binding_name": "#entity_id"} ]
+                      }
+                   }
+                ]
+             }
+          }
+       ]
+    },
+    "horse_panel": {
+       "type": "panel",
+       "controls": [
+          {"container_gamepad_helpers@common.container_gamepad_helpers": {}},
+          {"selected_item_details_factory@common.selected_item_details_factory": {}},
+          {"item_lock_notification_factory@common.item_lock_notification_factory": {}},
+          {
+             "root_panel@common.root_panel": {
+                "layer": 1,
+                "controls": [
+                   {"common_panel@somali_to_Mori_no_Kamisama.somali": {"$horse_screen": true} },
+                   {"horse_section_label@horse_zeta.horse_label": {}},
+                   {"inv_panel@horse_zeta.inv_panel": {}},
+                   {
+                      "equipment@horse_zeta.equip_panel": { "offset": [7, 18] }
+                   },
+                   {
+                      "renderer@horse_zeta.horse_renderer": { "offset": [25, 18] }
+                   },
+                   {
+                      "inventory_panel_bottom_half_with_label@common.inventory_panel_bottom_half_with_label": { "offset": [0, -3] }
+                   },
+                   {
+                      "hotbar_grid_template@common.hotbar_grid_template": { "offset": [0, -7] }
+                   },
+                   {"inventory_selected_icon_button@common.inventory_selected_icon_button": {}},
+                   {"gamepad_cursor@common.gamepad_cursor_button": {}}
+                ]
+             }
+          },
+          { "flying_item_renderer@common.flying_item_renderer": {"layer": 10} },
+          {"bundle_touch_tooltip@gameplay.bundle_touch_tooltip": {}},
+          {"bundle_cursor_tooltip@gameplay.bundle_cursor_tooltip": {}}
+       ]
+    }
+}

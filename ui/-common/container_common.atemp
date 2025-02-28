@@ -1,5 +1,13 @@
 {
-   "namespace": "-container_common",
+   "namespace": "container_common",
+   "common_toggle@common_toggles.light_text_toggle": {
+      "$button_text": "",
+      "$toggle_trigger_name": "+ashur_",
+      "$toggle_name": "$toggle_trigger_name",
+      "$toggle_view_binding_name": "$toggle_trigger_name",
+      "offset": [0, -20],
+      "size": [25, 25]
+    },
    "toggle": {
       "type": "toggle",
       "$focus_id|default": "",
@@ -127,7 +135,7 @@
          {"binding_type": "$toggle_tts_enabled_binding_type", "binding_name": "#tts_enabled", "binding_name_override": "#focus_enabled"}
       ]
    },
-   "cell_specifications@-container_common.toggle": {
+   "cell_specifications@container_common.toggle": {
       "$toggle_name": "recipe_toggle",
       "$focus_enabled": false,
       "size": [25, 25],

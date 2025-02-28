@@ -32,7 +32,7 @@
   "$hud_item_delta": "hud.item_renderer",
   "$10x10": [10, 10],
   "$pane_bg": "textures/ui/pane_bg",
-  "$Exit_panel_enabled": true,
+  "$Exit_panel_enabled": false,
   "$output": false,
   "$loom_screen": false,
   "$creative_layout": false,
