@@ -39,19 +39,20 @@
       "texture": "$map_texture",
       "bindings": [ {"binding_name": "$map_binding_name", "binding_name_override": "#visible"} ]
    },
-   "map_image_panel": {
-      "type": "panel",
-      "size": [53, 53],
-      "controls": [
-         { "none_map@cartography_zeta.map_image": {"$map_texture": "textures/ui/cartography_table_empty", "$map_binding_name": "#is_none_mode"} }        ,
-         { "copy_map@cartography_zeta.map_image": {"$map_texture": "textures/ui/cartography_table_copy", "$map_binding_name": "#is_clone_mode"} }        ,
-         { "rename_map@cartography_zeta.map_image": {"$map_texture": "textures/ui/cartography_table_map", "$map_binding_name": "#is_rename_mode"} }      ,
-         { "map@cartography_zeta.map_image": {"$map_texture": "textures/ui/cartography_table_map", "$map_binding_name": "#is_basic_map_mode"} }          ,
-         { "locator_map@cartography_zeta.map_image": {"$map_texture": "textures/ui/cartography_table_map", "$map_binding_name": "#is_locator_map_mode"} },
-         { "zoom_map@cartography_zeta.map_image": {"$map_texture": "textures/ui/cartography_table_zoom", "$map_binding_name": "#is_extend_mode"} }       ,
-         { "lock_map@cartography_zeta.map_image": {"$map_texture": "textures/ui/cartography_table_glass", "$map_binding_name": "#is_locked_mode"} }
-      ]
-   },
+"map_image_panel": {
+   "type": "panel",
+   "size": [53, 53],
+   "controls": [
+      { "none_map@cartography_zeta.map_image": {"$map_texture": "assets/minecraft/textures/gui/sprites/container/cartography_table/map", "$map_binding_name": "#is_none_mode"} },
+      { "copy_map@cartography_zeta.map_image": {"$map_texture": "assets/minecraft/textures/gui/sprites/container/cartography_table/duplicated_map", "$map_binding_name": "#is_clone_mode"} },
+      { "rename_map@cartography_zeta.map_image": {"$map_texture": "assets/minecraft/textures/gui/sprites/container/cartography_table/map", "$map_binding_name": "#is_rename_mode"} },
+      { "map@cartography_zeta.map_image": {"$map_texture": "assets/minecraft/textures/gui/sprites/container/cartography_table/map", "$map_binding_name": "#is_basic_map_mode"} },
+      { "locator_map@cartography_zeta.map_image": {"$map_texture": "assets/minecraft/textures/gui/sprites/container/cartography_table/map", "$map_binding_name": "#is_locator_map_mode"} },
+      { "zoom_map@cartography_zeta.map_image": {"$map_texture": "assets/minecraft/textures/gui/sprites/container/cartography_table/scaled_map", "$map_binding_name": "#is_extend_mode"} },
+      { "lock_map@cartography_zeta.map_image": {"$map_texture": "assets/minecraft/textures/gui/sprites/container/cartography_table/map", "$map_binding_name": "#is_locked_mode"} }
+   ]
+},
+
    "input_slots": {
       "type": "stack_panel",
       "size": [18, "default"],

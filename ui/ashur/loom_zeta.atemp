@@ -342,7 +342,7 @@
      "$scroll_view_port_offset": [0, 0],
      "$scroll_view_port_size": [56, 60],
      "$scrolling_pane_size": ["100%", "100%"],
-     "$misc_scroller_offset": [-0.6, 1],
+     "$misc_scroller_offset": [-0.2, 1],
      "$scrolling_content": "loom_zeta.scroll_grid_panel",
      "$scroll_track_image_control": "common.empty_panel",
      "$scroll_box_mouse_image_control": "somali_to_Mori_no_Kamisama.scroll_box_image",

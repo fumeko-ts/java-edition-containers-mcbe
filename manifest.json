@@ -2,7 +2,7 @@
    "format_version": 2,
    "header": {    
       "name": "§r§lJava Containers §8[§aLight Mode§8]",
-      "description": "Made by. @Ashura_tepes   /   @Ashura_temps\n\n§fJoin the discord for updates §bhttps://discord.gg/88edDyeEvz.",
+      "description": "Made by. @Ashura_tepes   /   @Ashura_temps\nOffical download: https://www.planetminecraft.com/texture-pack/java-containers-6490069/\n§fJoin the discord for updates §bhttps://discord.gg/88edDyeEvz.",
       "uuid": "c7cb0e6f-faa5-4c04-83ec-84624879dce5",
       "version": [1, 0, 0],
       "min_engine_version": [1, 16, 0]
@@ -18,12 +18,12 @@
    "subpacks": [
       {
        "folder_name": "1",
-       "name": "§cExit buttons enabled.\n\n§3[on by default for pocket edition users]",
+       "name": "§cExit buttons enabled.\n\n§3[exit buttons are enabled by default for pocket edition users]",
        "memory_tier": 0
       },
       {
        "folder_name": "2",                                     
-       "name": "§cExit buttons disabled.\n\n§3[Exit buttons enabled by default for pocket edition users]",
+       "name": "§cExit buttons disabled.\n\n§3[exit buttons are enabled by default for pocket edition users]",
        "memory_tier": 0
       }
     ],

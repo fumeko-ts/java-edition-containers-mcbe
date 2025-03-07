@@ -10,7 +10,7 @@
       "absorbs_input": false,
       "is_showing_menu": true,
       "$uses_bundle_tooltip": true,
-      "$screen_content": "crafting.recipe_inventory_screen_content",
+      "$screen_content": "crafting.crafting_screen_content",
       "$screen_bg_content": "common.screen_background",
       "$top_half_variant": "survival_layout.crafting_panel_top_half",
       "$close_on_player_hurt|default": true,
@@ -27,7 +27,7 @@
       "absorbs_input": true,
       "is_showing_menu": true,
       "$uses_bundle_tooltip": true,
-      "$screen_content": "crafting.recipe_inventory_screen_content",
+      "$screen_content": "crafting.survival_screen_content",
       "$screen_bg_content": "common.screen_background",
       "$screen_background_alpha": 0.4,
       "$top_half_variant": "survival_layout.survival_panel_top_half"
@@ -105,7 +105,7 @@
       "size": [176, 166],
       "controls": [ {"creative_menu@creative_layout.creative_content": {}} ]
      },
-     "recipe_inventory_screen_content": {
+     "survival_screen_content": {
 
       "type": "panel",
       "controls": [
@@ -137,6 +137,44 @@
            }
           }
          ]
+        }
+       },
+       {"inventory_take_progress_icon_button@common.inventory_take_progress_icon_button": {}},
+       {"inventory_selected_icon_button@common.inventory_selected_icon_button": {}},
+       {"hold_icon@common.inventory_take_progress_icon_button": {}},
+       {
+        "controller_gamepad_helpers_stack_panel": {
+         "type": "stack_panel",
+         "anchor_from": "bottom_middle",
+         "anchor_to": "bottom_middle",
+         "controls": [
+          {"container_gamepad_helpers_second_row@crafting.container_gamepad_helpers_second_row": {}},
+          {
+           "container_gamepad_helpers@common.container_gamepad_helpers": {
+            "$helper_x_control": "crafting.inventory_x_gamepad_helper",
+            "$helper_y_control": "crafting.inventory_y_gamepad_helper",
+            "$helper_a_control": "crafting.inventory_a_gamepad_helper"
+           }
+          }
+         ],
+         "bindings": [
+          {"binding_name": "#gamepad_helper_visible", "binding_name_override": "#visible"}
+         ]
+        }
+       },
+       {"selected_item_details_factory@common.selected_item_details_factory": {"layer": 4000}},
+       {"item_lock_notification_factory@common.item_lock_notification_factory": {}},
+       { "flying_item_renderer@common.flying_item_renderer": {"layer": 4000} }
+      ]
+     },
+     "crafting_screen_content": {
+      "type": "panel",
+      "controls": [
+       {
+        "content_stack_panel": {
+         "type": "panel",
+         "size": [326, 166],
+         "controls": [{"survival_mode@crafting.survival_mode": {} }]
         }
        },
        {"inventory_take_progress_icon_button@common.inventory_take_progress_icon_button": {}},

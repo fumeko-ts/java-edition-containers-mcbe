@@ -3,6 +3,7 @@
   "$bypass": "#visiblex",
   "$selected_stack_panel": true,
   "$dev": false,
+  "$creative_recipe_book": false,
   "$25x25_slot": false,
   "$title_text_color": [0.25, 0.25, 0.25, 1.0],
   "$top_left": "top_left",

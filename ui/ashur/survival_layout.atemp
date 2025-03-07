@@ -65,6 +65,18 @@
             }
          },
          {
+            "recipe_book_item_group@survival_layout.slot_craftable": {
+               "bindings": [
+                  {
+                     "binding_name"           : "(#container_item_background_texture = 'textures/ui/recipe_book_group_bg' or 'textures/ui/recipe_book_group_expanded' or 'textures/ui/recipe_book_group_collapsed')",
+                     "binding_name_override"  : "#visible"                                                                ,
+                     "binding_type"           : "collection"                                                              ,
+                     "binding_collection_name": "$item_collection_name"
+                  }
+               ]
+            }
+         },
+         {
             "recipe_book_red_button@survival_layout.slot_uncraftable": {
                "bindings": [
                   {
@@ -1085,8 +1097,8 @@
                         "$hover_border_visible": false,
                         "anchor_from": "top_right",
                         "anchor_to": "top_right",
-                        "size": [28, 18],
-                        "offset": [-6.8, 11],
+                        "size": [26, 16],
+                        "offset": [-7.8, 12],
                         "layer": 4,
                         "$default_texture": "assets/minecraft/textures/gui/sprites/recipe_book/filter_disabled",
                         "$hover_texture": "assets/minecraft/textures/gui/sprites/recipe_book/filter_enabled",
