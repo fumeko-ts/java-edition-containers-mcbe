@@ -348,16 +348,16 @@
       "layer": 60,
       "$layer": 55,
       "controls": [
-         { "01@container_common.cell_specifications": {"offset": "@furnace_recipe.offset_combined_10", "$t_text": "Oak Log\n§9Burnable\n§8-\nAux Id: 1114112", "$aux": 1114112} }             ,
-         { "02@container_common.cell_specifications": {"offset": "@furnace_recipe.offset_placeholder1_10", "$t_text": "Dark Oak Log\n§9Burnable\n§8-\nAux Id: -37486592", "$aux": -37486592} },
-         { "03@container_common.cell_specifications": {"offset": "@furnace_recipe.offset_placeholder2_10", "$t_text": "Pale Oak Log\n§9Burnable\n§8-\nAux Id: -65208320", "$aux": -65208320} },
-         { "04@container_common.cell_specifications": {"offset": "@furnace_recipe.offset_placeholder3_10", "$t_text": "Birch Log\n§9Burnable\n§8-\nAux Id: -37355520", "$aux": -37355520} }   ,
-         { "05@container_common.cell_specifications": {"offset": "@furnace_recipe.offset_placeholder4_10", "$t_text": "Spruce Log\n§9Burnable\n§8-\nAux Id: -37289984", "$aux": -37289984} }  ,
-         { "06@container_common.cell_specifications": {"offset": "@furnace_recipe.offset_placeholder5_10", "$t_text": "Acacia Log\n§9Burnable\n§8-\nAux Id: 10616832", "$aux": 10616832} }    ,
-         { "07@container_common.cell_specifications": {"offset": "@furnace_recipe.offset_placeholder6_10", "$t_text": "Jungle Log\n§9Burnable\n§8-\nAux Id: -37421056", "$aux": -37421056} }  ,
-         { "08@container_common.cell_specifications": {"offset": "@furnace_recipe.offset_placeholder7_10", "$t_text": "Mangrove Log\n§9Burnable\n§8-\nAux Id: -31719424", "$aux": -31719424} },
-         { "09@container_common.cell_specifications": {"offset": "@furnace_recipe.offset_placeholder8_10", "$t_text": "Cherry Log\n§9Burnable\n§8-\nAux Id: -35127296", "$aux": -35127296} }  ,
-         { "10@container_common.cell_specifications": {"offset": "@furnace_recipe.offset_placeholder9_10", "$t_text": "Bamboo\n§9Burnable\n§8-\nAux Id: -10682368", "$aux": -10682368} }
+         { "01@container_common.cell_specifications": {"offset":"@furnace_recipe_items.offset_combined_10"} },
+         { "02@container_common.cell_specifications": {"offset": "@furnace_recipe_items.offset_placeholder1_10"} },
+         { "03@container_common.cell_specifications": {"offset": "@furnace_recipe_items.offset_placeholder2_10"} },
+         { "04@container_common.cell_specifications": {"offset": "@furnace_recipe_items.offset_placeholder3_10"} },
+         { "05@container_common.cell_specifications": {"offset": "@furnace_recipe_items.offset_placeholder4_10"} },
+         { "06@container_common.cell_specifications": {"offset": "@furnace_recipe_items.offset_placeholder5_10"} },
+         { "07@container_common.cell_specifications": {"offset": "@furnace_recipe_items.offset_placeholder6_10"} },
+         { "08@container_common.cell_specifications": {"offset": "@furnace_recipe_items.offset_placeholder7_10"} },
+         { "09@container_common.cell_specifications": {"offset": "@furnace_recipe_items.offset_placeholder8_10"} },
+         { "10@container_common.cell_specifications": {"offset": "@furnace_recipe_items.offset_placeholder9_10"} }
       ]
    },
    "stripped_logs_panel": {

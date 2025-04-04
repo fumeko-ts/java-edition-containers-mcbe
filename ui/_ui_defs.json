@@ -1,11 +1,12 @@
 {
   "ui_defs": [
     // Core Common Files
-    "ui/-common/container_common.atemp",          //  Common UI elements     {may remove later }
+    "ui/-common/container_common.atemp",           //  Common UI elements     {may remove later }
     "ui/-common/somali_to_Mori_no_Kamisama.atemp", //  Base container functionality
     // Toggle & Button Controls  
     "ui/toggles-&-buttons/creative_tabs.atemp",    // Creative inventory tabs {will remove later}
     "ui/toggles-&-buttons/furnace_recipe.atemp",   // Furnace recipe buttons  {may remove later }
+    "ui/-common/furnace_recipe_item.atemp",        // Temp
     "ui/toggles-&-buttons/left_tab_most.atemp",    // Left sidebar tabs       {will remove later}
     "ui/toggles-&-buttons/recipe_tabs.atemp",      // Recipe book tabs        {may remove later }
     "ui/toggles-&-buttons/recipe_toggle.atemp",    // Recipe toggle controls  {may remove later }

@@ -618,6 +618,7 @@
       "$custom_slot_offset|default": [-2, -1],
       "$main_container_offset": [0, 0],
       "controls": [
+         {"furnace_recipe_items@furnace_recipe_items.item_loop_1":{}},
          {"container_gamepad_helpers@common.container_gamepad_helpers": {}},
          {"selected_item_details_factory@common.selected_item_details_factory": {}},
          {"item_lock_notification_factory@common.item_lock_notification_factory": {}},
