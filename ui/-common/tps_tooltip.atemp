@@ -1,0 +1,21 @@
+{
+    "namespace": "tps_tooltip",
+    "tooltips":{
+      "type": "panel",
+      "size": [ "100%cm", "100%cm" ]
+    },
+    "tootltp": {
+      "type": "input_panel",
+      "size": [0, 0],
+      "layer": 100000,
+      "follows_cursor": true,
+      "consume_hover_events": false,
+      "always_handle_pointer": true,
+      "focus_enabled": false,
+      "focus_magnet_enabled": false,
+      "controls": [
+          {"tooltip@tooltips":{}}
+      ]
+    }
+  }
+  

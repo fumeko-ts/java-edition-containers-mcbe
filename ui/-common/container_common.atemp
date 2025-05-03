@@ -216,13 +216,13 @@
       "offset": "$entire_slot_offset",
       "$entire_slot_offset": [-50, 25],
       "$slot_cell_texture|default": "assets/minecraft/textures/gui/sprites/recipe_book/slot_craftable.png",
-      "$slot_cell_size|default": [25, 25],//-3, -1
-      "$slot_cell_offset|default": [1, 1],
+      "$slot_cell_size|default": [25, 25],
+      "$slot_cell_offset|default": [4, 2],
       "$slot_texture_uv_size|default": [25, 25],
       "$aux|default": 0,
-      "$aux_item_offset|default": [0, 0],
+      "$aux_item_offset|default": [4, 2],
       "$white_highlight_slot_size": [20, 20],
-      "$white_highlight_slot_offset": [0.6, 0.4],
+      "$white_highlight_slot_offset": [3.6, 1.4],
       "$highlight_layer|default": 65,
       "$layer|default": 70,
       "$t_text|default": "",
@@ -242,6 +242,13 @@
                "anchor_from": "center",
                "anchor_to": "center",
                "controls": [
+                  {"texture@common.empty_image":{
+                     "layer": "$layer",
+                     "texture": "$aux", 
+                     "size": [16, 16],
+                     "offset": [3, 2]
+                     }
+                  },
                   {
                      "slot_texture@somali_to_Mori_no_Kamisama.image_element": {
                         "anchor_from": "center",
@@ -277,6 +284,13 @@
                "anchor_from": "center",
                "anchor_to": "center",
                "controls": [
+                  {"texture@common.empty_image":{
+                        "layer": "$layer",
+                        "texture": "$aux", 
+                        "size": [16, 16],
+                        "offset": [3, 2]
+                     }
+                  },
                   {
                      "slot_texture@somali_to_Mori_no_Kamisama.image_element": {
                         "anchor_from": "center",
@@ -301,5 +315,83 @@
             }
          }
       ]
-   }
+   },
+// Tooltips
+
+"tooltip_label": {
+   "type": "label",
+   "offset": [ 4, 3 ],
+   "anchor_from": "top_left",
+   "anchor_to": "top_left",
+   "layer": 10,
+   "color": "$hover_panel_text_color",
+   "$hover_panel_text_color|default": [ 1.0, 1.0, 1.0 ], // Unused: default hover text color
+   "text": "$hover_panel_text",
+   "$hover_panel_text|default": "", // Unused: default hover panel text
+   "shadow": "$tooltip_text_shadow",
+   "follows_cursor": true,
+   "size": "$hover_text_size",
+   "$hover_text_size|default": [ "default", "default" ] // Unused: default hover text size
+ },
+ 
+ /*//// Image Panel ////*/
+ 
+ "main_tooltip_panel": {
+   "type": "panel",
+   "size": [ "100%cm", "100%cm" ],
+   "layer": 50,
+   "anchor_from": "$hover_anchor_from",
+   "anchor_to": "$hover_anchor_to",
+   "$hover_anchor_from|default": "top_left", // Unused
+   "$hover_anchor_to|default": "top_left",   // Unused
+   "offset": "$hover_text_offset",
+   "$hover_text_offset|default": [ 12, 12 ], // Unused
+   "$hover_text_texture_bindings|default": [], // Unused
+   "bindings": "$hover_text_texture_bindings",
+   "$tooltip_label_control|default": "container_common.tooltip_label", // Unused
+   "controls": [
+     {
+       "background": {
+         "type": "panel",
+         "size": [ "100%sm + 8px", "100%sm + 6px" ],
+         "layer": 1,
+         "controls": [
+           { "tooltip@tooltip_textures_dx.tooltip": { } }
+         ]
+       }
+     },
+     { "text@$tooltip_label_control": { } }
+   ]
+ },
+ 
+ /*//// Main Panel ////*/
+ 
+ "hover_text_button": {
+   "type": "button",
+   "anchor_from": "center",
+   "anchor_to": "center",
+   "locked_control": "",
+   "layer": -10,
+   "size": [ 2, 2 ],
+   "offset": [ 10000, 10000 ],
+   "follows_cursor": true,
+   "consume_hover_events": false,
+   "always_handle_pointer": true,
+   "focus_enabled": false,
+   "focus_magnet_enabled": false,
+   "controls": [
+     { "hover@container_common.main_tooltip_panel": {} }
+   ]
+ },
+ 
+ "tooltip_panel": {
+   "type": "panel",
+   "allow_clipping": false,
+   "controls": [
+     { 
+       "hover_text_button@container_common.hover_text_button": { }
+     }
+   ]
+ }
+ 
 }

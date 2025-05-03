@@ -1,12 +1,18 @@
 {
   "ui_defs": [
+    //rendom files i use to test code and stuff below
+    "ui/ashur/trade_exp.atemp",
+    "ui/ashur/base_page_content.atemp",
+    //furnace recipe
+    "ui/-common/furnace_recipe_anims.atemp",
+    "ui/-common/tps_tooltip.atemp",
+    "ui/furnace_items/recipe_performant.atemp",
     // Core Common Files
-    "ui/-common/container_common.atemp",           //  Common UI elements     {may remove later }
+    "ui/-common/container_common.atemp",          //  Common UI elements     {may remove later }
     "ui/-common/somali_to_Mori_no_Kamisama.atemp", //  Base container functionality
     // Toggle & Button Controls  
     "ui/toggles-&-buttons/creative_tabs.atemp",    // Creative inventory tabs {will remove later}
     "ui/toggles-&-buttons/furnace_recipe.atemp",   // Furnace recipe buttons  {may remove later }
-    "ui/-common/furnace_recipe_item.atemp",        // Temp
     "ui/toggles-&-buttons/left_tab_most.atemp",    // Left sidebar tabs       {will remove later}
     "ui/toggles-&-buttons/recipe_tabs.atemp",      // Recipe book tabs        {may remove later }
     "ui/toggles-&-buttons/recipe_toggle.atemp",    // Recipe toggle controls  {may remove later }
@@ -29,6 +35,7 @@
     "ui/ashur/small_chest_zeta.atemp",    // Small Chest UI
     "ui/ashur/ender_chest_zeta.atemp",    // Ender Chest UI
     "ui/ashur/barrel_zeta.atemp",         // Barrel UI
+    "ui/ashur/trade_zeta.atemp",          // Trade UI
     "ui/ashur/smithing_zeta.atemp",       // Smithing Table UI
     "ui/ashur/stonecutter_zeta.atemp",    // Stonecutter UI
     "ui/ashur/tab_menu.atemp",            // Tab Menu System

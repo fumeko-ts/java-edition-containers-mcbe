@@ -1,1 +1,6 @@
-{"namespace": "smoker", "smoker_screen@furnace.furnace_screen": {}}
+{
+    "namespace": "smoker", 
+    "smoker_screen@furnace.furnace_screen": {
+    "$container_title": "Smoker"
+    }
+}

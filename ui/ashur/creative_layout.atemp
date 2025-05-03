@@ -116,6 +116,13 @@
       "$not_bottom_tab|default": true,
       "$item_aux": "",
       "variables": [
+         {"requires": "($is_search_tab and $is_unchecked_hover or ($is_search_tab and $is_checked_hover))","$tab_type": "Search Items"},
+         {"requires": "($is_inventory_tab and $is_unchecked_hover or ($is_inventory_tab and $is_checked_hover))","$tab_type": "Survival Inventory"},
+         {"requires": "($is_construction_tab and $is_unchecked_hover or ($is_construction_tab and $is_checked_hover))","$tab_type": "Construction Items"},
+         {"requires": "($is_equipment_tab and $is_unchecked_hover or ($is_equipment_tab and $is_checked_hover))","$tab_type": "Equipment Items"},
+         {"requires": "($is_nature_tab and $is_unchecked_hover or ($is_nature_tab and $is_checked_hover))","$tab_type": "Nature Items"},
+         {"requires": "($is_items_tab and $is_unchecked_hover or ($is_items_tab and $is_checked_hover))","$tab_type": "Misc Items"},
+
          {"requires": "($is_inventory_tab = true)", "$item_aux": 3538946},
          {"requires": "($is_search_tab = true)", "$item_aux": 27328512},
          {"requires": "($is_construction_tab = true)", "$item_aux": 2949120},
@@ -161,7 +168,11 @@
             "$hover_tab_offset": [0, -2]
          }
       ],
+      "$tab_type": "",
       "$tab_texture_controlers": [
+         {
+            "1@common.hover_text": {"layer":1000000,"property_bag": {"#hover_text": "$tab_type"}}
+         },
          {
             "icon": {
                "anchor_from": "center",

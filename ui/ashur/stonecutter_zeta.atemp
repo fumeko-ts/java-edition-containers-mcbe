@@ -11,7 +11,15 @@
       "collection_name": "$collection_name",
       "grid_rescaling_type": "horizontal",
       "grid_item_template": "$grid_item_template",
-      "bindings": [ {"binding_name": "#stone_selector_total_items", "binding_name_override": "#maximum_grid_items", "binding_condition": "$binding_condition", "binding_type": "collection", "binding_collection_name": "$collection_name"} ]
+      "bindings": [
+         {
+            "binding_name"           : "#stone_selector_total_items",
+            "binding_name_override"  : "#maximum_grid_items"        ,
+            "binding_condition"      : "$binding_condition"         ,
+            "binding_type"           : "collection"                 ,
+            "binding_collection_name": "$collection_name"
+         }
+      ]
    },
    "scroll_panel@common.common_container_scrolling_panel": {
       "$collection_name": "stones",
@@ -32,22 +40,54 @@
    "locked_scroll_box@somali_to_Mori_no_Kamisama.scroll_box_image_disabled": {
       "anchor_to": "center",
       "anchor_from": "center",
-      "offset": [39, 95],
-      "bindings": [ {"binding_name": "(#stone_selector_total_items < 13)", "binding_name_override": "#visible", "binding_type": "collection", "binding_collection_name": "stones"} ]
+      "offset": [39, -58],
+      "bindings": [
+         {
+            "binding_name"           : "(#stone_selector_total_items < 13)",
+            "binding_name_override"  : "#visible"                          ,
+            "binding_type"           : "collection"                        ,
+            "binding_collection_name": "stones"
+         }
+      ]
    },
-   "stonecutter_label": { "type": "label", "offset": [1, -9], "anchor_from": "top_left", "anchor_to": "top_left", "text": "$container_title", "$container_title": "Stonecutter", "color": "$title_text_color", "layer": 2 },
+   "stonecutter_label": {
+      "type": "label",
+      "offset": [1, -9],
+      "anchor_from": "top_left",
+      "anchor_to": "top_left",
+      "text": "$container_title",
+      "$container_title": "Stonecutter",
+      "color": "$title_text_color",
+      "layer": 2
+   },
    "arrow_icon": { "type": "image", "texture": "textures/ui/arrow_large", "size": [26, 0] },
    "stone_cell_image": {
       "type": "image",
       "layer": 1,
-      "bindings": [ {"binding_name": "#stone_cell_background_texture", "binding_name_override": "#texture", "binding_type": "collection", "binding_collection_name": "$collection_name", "binding_condition": "always_when_visible"} ]
+      "bindings": [
+         {
+            "binding_name"           : "#stone_cell_background_texture",
+            "binding_name_override"  : "#texture"                      ,
+            "binding_type"           : "collection"                    ,
+            "binding_collection_name": "$collection_name"              ,
+            "binding_condition"      : "always_when_visible"
+         }
+      ]
    },
    "container_cell_image": {
       "type": "image",
       "$cell_images_binding_condition|default": "visible",
       "size": "$cell_image_size",
       "$cell_image_size|default": ["default", "default"],
-      "bindings": [ {"binding_name": "#container_cell_background_texture", "binding_name_override": "#texture", "binding_type": "collection", "binding_collection_name": "$item_collection_name", "binding_condition": "$cell_images_binding_condition"} ]
+      "bindings": [
+         {
+            "binding_name"           : "#container_cell_background_texture",
+            "binding_name_override"  : "#texture"                          ,
+            "binding_type"           : "collection"                        ,
+            "binding_collection_name": "$item_collection_name"             ,
+            "binding_condition"      : "$cell_images_binding_condition"
+         }
+      ]
    },
    "item_panel": {
       "type": "panel",
@@ -61,12 +101,27 @@
                "$item_renderer_size|default": [16, 16],
                "size": "$item_renderer_size",
                "layer": 1,
-               "bindings": [ {"binding_name": "#item_id_aux", "binding_condition": "visible", "binding_type": "collection", "binding_collection_name": "$item_collection_name"} ],
+               "bindings": [
+                  {
+                     "binding_name"           : "#item_id_aux"         ,
+                     "binding_condition"      : "visible"              ,
+                     "binding_type"           : "collection"           ,
+                     "binding_collection_name": "$item_collection_name"
+                  }
+               ],
                "controls": [
                   {
                      "stack_count_label@common.stack_count_label": {
                         "layer": 2,
-                        "bindings": [ {"binding_name": "#item_stack_count", "binding_name_override": "#inventory_stack_count", "binding_condition": "visible", "binding_type": "collection", "binding_collection_name": "$item_collection_name"} ]
+                        "bindings": [
+                           {
+                              "binding_name"           : "#item_stack_count"     ,
+                              "binding_name_override"  : "#inventory_stack_count",
+                              "binding_condition"      : "visible"               ,
+                              "binding_type"           : "collection"            ,
+                              "binding_collection_name": "$item_collection_name"
+                           }
+                        ]
                      }
                   }
                ]
@@ -79,7 +134,14 @@
       "renderer": "inventory_item_renderer",
       "size": [16, 16],
       "layer": 5,
-      "bindings": [ {"binding_name": "#item_id_aux", "binding_condition": "visible", "binding_type": "collection", "binding_collection_name": "$item_collection_name"} ]
+      "bindings": [
+         {
+            "binding_name"           : "#item_id_aux"         ,
+            "binding_condition"      : "visible"              ,
+            "binding_type"           : "collection"           ,
+            "binding_collection_name": "$item_collection_name"
+         }
+      ]
    },
    "recipe_panel": {
       "type": "input_panel",
@@ -95,16 +157,41 @@
                "hover_control": "hover",
                "pressed_control": "pressed",
                "locked_control": "pressed",
-               "controls": [ {"default@stonecutter_zeta.recipe_normal": {}}, {"hover@stonecutter_zeta.recipe_highlighted": {}}, {"pressed@stonecutter_zeta.recipe_selected": {}} ]
+               "controls": [
+                  {"default@stonecutter_zeta.recipe_normal": {}}   ,
+                  {"hover@stonecutter_zeta.recipe_highlighted": {}},
+                  {"pressed@stonecutter_zeta.recipe_selected": {}}
+               ]
             }
          }
       ]
    },
-   "recipe_highlighted@common.empty_image": { "texture": "assets/minecraft/textures/gui/sprites/container/stonecutter/recipe_highlighted", "nineslice_size": [2, 2, 2, 2] },
-   "recipe_normal@common.empty_image": { "texture": "assets/minecraft/textures/gui/sprites/container/stonecutter/recipe", "nineslice_size": [2, 2, 2, 2] },
-   "recipe_selected@common.empty_image": { "texture": "assets/minecraft/textures/gui/sprites/container/stonecutter/recipe_selected", "nineslice_size": [2, 2, 2, 2] },
-   "input_item_slot@common.container_item": {"anchor_from": "center", "anchor_to": "center", "$item_collection_name": "stonecutter_input_items"},
-   "result_item_slot@common.container_item": { "$25x25_slot": true, "anchor_from": "center", "anchor_to": "center", "$item_collection_name": "stonecutter_result_items", "$button_ref": "stonecutter.result_slot_button", "$cell_image_size": [26, 26], "size": [26, 26] },
+   "recipe_highlighted@common.empty_image": {
+      "texture": "assets/minecraft/textures/gui/sprites/container/stonecutter/recipe_highlighted",
+      "nineslice_size": [2, 2, 2, 2]
+   },
+   "recipe_normal@common.empty_image": {
+      "texture": "assets/minecraft/textures/gui/sprites/container/stonecutter/recipe",
+      "nineslice_size": [2, 2, 2, 2]
+   },
+   "recipe_selected@common.empty_image": {
+      "texture": "assets/minecraft/textures/gui/sprites/container/stonecutter/recipe_selected",
+      "nineslice_size": [2, 2, 2, 2]
+   },
+   "input_item_slot@common.container_item": {
+      "anchor_from"          : "center"                 ,
+      "anchor_to"            : "center"                 ,
+      "$item_collection_name": "stonecutter_input_items"
+   },
+   "result_item_slot@common.container_item": {
+      "$25x25_slot": true,
+      "anchor_from": "center",
+      "anchor_to": "center",
+      "$item_collection_name": "stonecutter_result_items",
+      "$button_ref": "stonecutter.result_slot_button",
+      "$cell_image_size": [26, 26],
+      "size": [26, 26]
+   },
    "input_slots_stack_panel": {
       "type": "stack_panel",
       "orientation": "horizontal",
@@ -139,7 +226,9 @@
                "type": "panel",
                "size": ["100%c", "100%c"],
                "inherit_max_sibling_height": true,
-               "controls": [ {"input_slots_stack_panel@stonecutter_zeta.input_slots_stack_panel": {}} ]
+               "controls": [
+                  {"input_slots_stack_panel@stonecutter_zeta.input_slots_stack_panel": {}}
+               ]
             }
          },
          {
@@ -175,7 +264,9 @@
                "controls": [
                   {"top_half_panel@stonecutter_zeta.top_half_panel": {}},
                   {
-                     "inventory_panel_bottom_half_with_label@common.inventory_panel_bottom_half_with_label": { "offset": [0, -1] }
+                     "inventory_panel_bottom_half_with_label@common.inventory_panel_bottom_half_with_label": {
+                        "offset": [0, -1]
+                     }
                   },
                   {"hotbar_grid@common.hotbar_grid_template": {}}
                ]
@@ -187,7 +278,11 @@
       "size": [4, 166],
       "controls": [
          {
-            "center_bg": { "type": "image", "texture": "textures/ui/recipe_back_panel", "size": [0, 0] }
+            "center_bg": {
+               "type": "image",
+               "texture": "textures/ui/recipe_back_panel",
+               "size": [0, 0]
+            }
          }
       ]
    },
@@ -195,7 +290,10 @@
       "type": "stack_panel",
       "orientation": "horizontal",
       "size": ["100%c", "100%cm"],
-      "controls": [ {"center_fold@stonecutter_zeta.center_fold": {}}, {"right_panel@stonecutter_zeta.right_panel": {}} ]
+      "controls": [
+         {"center_fold@stonecutter_zeta.center_fold": {}},
+         {"right_panel@stonecutter_zeta.right_panel": {}}
+      ]
    },
    "stonecutter_panel": {
       "type": "panel",
