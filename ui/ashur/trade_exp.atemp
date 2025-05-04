@@ -1,68 +1,69 @@
 {
-    "namespace": "trade_exp",
-    "villager_name_text": {
-      "type": "label",
-      "anchor_from": "center",
-      "anchor_to": "center",
-      "offset": [ 0, 67 ],
-      "layer": 10,
-      "text": "#name_label",
-      "bindings": [
-        {
-          "binding_name": "#name_label",
-          "binding_condition": "always_when_visible"
-        }
-      ]
-    },
-    "trades_text": {
-      "type": "label",
-      "text": "Trades",
-      "offset": [ -135, 67 ],
-      "anchor_from": "center",
-      "anchor_to": "center",
-      "layer": 10
-    },
-    "white_progress_bar": {
-      "type": "image",
-      "texture": "assets/minecraft/textures/gui/sprites/container/villager/experience_bar_current.png",
-      "clip_direction": "left",
-      "clip_pixelperfect": false
-    },
-    "empty_progress_bar": {
-      "type": "image",
-      "texture": "assets/minecraft/textures/gui/sprites/container/villager/experience_bar_background.png"
-    },
-    "exp_progress_bar": {
-      "type": "panel",
-      "size": [102, 5],
-      "anchor_from": "center",
-      "anchor_to": "center",
-      "offset": [-20, -140],
-      "controls": [
-        {"trades_text@trade_exp.trades_text":{}},
-        {"trades_text@trade_exp.villager_name_text":{}},
-        {
-          "empty_progress_bar@trade_exp.empty_progress_bar": {
-            "layer": 1,
-            "offset": [-1, 78],
-            "controls": [
-              {
-                "white_progress_bar@trade_exp.white_progress_bar": {
-                  "layer": 2,
-                  "bindings": [
-                    {
-                      "binding_name"         : "#exp_possible_progress",
-                      "binding_name_override": "#clip_ratio"           ,
-                      "binding_type"         : "global"                ,
-                      "binding_condition"    : "always_when_visible"
-                    }
-                  ]
-                }
+  "namespace": "trade_exp",
+  "villager_name_text": {
+    "type": "label",
+    "anchor_from": "center",
+    "anchor_to": "center",
+    "offset": [ 0, 67 ],
+    "color": "$title_text_color",
+    "layer": 10,
+    "text": "#name_label",
+    "bindings": [
+      {
+        "binding_name": "#name_label",
+        "binding_condition": "always_when_visible"
+      }
+    ]
+  },
+  "trades_text": {
+    "type": "label",
+    "text": "Trades",
+    "color": "$title_text_color",
+    "offset": [ -135, 67 ],
+    "anchor_from": "center",
+    "anchor_to": "center",
+    "layer": 10
+  },
+  "white_progress_bar": {
+    "type": "image",
+    "texture": "assets/minecraft/textures/gui/sprites/container/villager/experience_bar_current.png",
+    "clip_direction": "left",
+    "clip_pixelperfect": false
+  },
+  "empty_progress_bar": {
+    "type": "image",
+    "texture": "assets/minecraft/textures/gui/sprites/container/villager/experience_bar_background.png"
+  },
+  "exp_progress_bar": {
+    "type": "panel",
+    "size": [102, 5],
+    "anchor_from": "center",
+    "anchor_to": "center",
+    "offset": [-20, -140],
+    "controls": [
+      {"trades_text@trade_exp.trades_text":{}},
+      {"trades_text@trade_exp.villager_name_text":{}},
+      {
+        "empty_progress_bar@trade_exp.empty_progress_bar": {
+          "layer": 1,
+          "offset": [-1, 78],
+          "controls": [
+            {
+              "white_progress_bar@trade_exp.white_progress_bar": {
+                "layer": 2,
+                "bindings": [
+                  {
+                    "binding_name"         : "#exp_possible_progress",
+                    "binding_name_override": "#clip_ratio"           ,
+                    "binding_type"         : "global"                ,
+                    "binding_condition"    : "always_when_visible"
+                  }
+                ]
               }
-            ]
-          }
+            }
+          ]
         }
-      ]
-    }
+      }
+    ]
   }
-  
+}

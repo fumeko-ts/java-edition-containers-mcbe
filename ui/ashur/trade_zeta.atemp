@@ -84,7 +84,7 @@
     ]
   },
   "trade_result_item_slot_button@common.container_slot_button_prototype": {
-    "size": [26, 26],
+    "size": [16, 16],
     "button_mappings": [
       {
         "from_button_id": "button.menu_select"             ,
@@ -145,7 +145,7 @@
       {"to_button_id": "button.container_slot_hovered", "mapping_type": "pressed"}
     ]
   },
-  "red_cell_image": {"type": "image", "texture": "textures/ui/cell_image_red"},
+  "red_cell_image": {"type": "image", "alpha": 0, "texture": "textures/ui/cell_image_red"},
   "container_cell_image": {
     "type": "panel",
     "$cell_image_binding_condition|default": "none",
@@ -196,8 +196,8 @@
     "anchor_to": "center",
     "size": [26, 26],
     "$cell_image_size": [26, 26],
-    "$item_renderer_panel_size": [26, 26],
-    "$item_renderer_size": [26, 26],
+    "$item_renderer_panel_size": [18, 18],
+    "$item_renderer_size": [18, 18],
     "$background_images": "trade_zeta.container_cell_image",
     "$item_renderer_binding_condition": "always_when_visible",
     "$stack_count_binding_condition": "always_when_visible",
@@ -644,9 +644,9 @@
     "controls": [
       {
         "toggle_checked_normal@trade_zeta.button_state_common": {
-          "$image_texture|default": "assets/minecraft/textures/gui/sprites/widget/button.png",
+          "$image_texture|default": "assets/minecraft/textures/gui/sprites/widget/button",
           "$image_size": [200, 20],
-          "layer": 3,
+          "layer": 4,
           "bindings": [
             {"binding_type": "collection_details"}                                  ,
             {"binding_name": "#trade_possible", "binding_name_override": "#visible"}
@@ -655,9 +655,9 @@
       },
       {
         "toggle_checked_red@trade_zeta.button_state_common": {
-          "$image_texture|default": "assets/minecraft/textures/gui/sprites/widget/button.png",
+          "$image_texture|default": "assets/minecraft/textures/gui/sprites/widget/button",
           "$image_size": [200, 20],
-          "layer": 3,
+          "layer": 4,
           "bindings": [
             {"binding_type": "collection_details"}                                        ,
             {"binding_name": "(not #trade_possible)", "binding_name_override": "#visible"}
@@ -671,8 +671,8 @@
     "controls": [
       {
         "toggle_checked_normal@trade_zeta.button_state_common": {
-          "$image_texture|default": "assets/minecraft/textures/gui/sprites/widget/button.png",
-          "layer": 3,
+          "$image_texture|default": "assets/minecraft/textures/gui/sprites/widget/button_highlighted",
+          "layer": 4,
           "bindings": [
             {"binding_type": "collection_details"}                                  ,
             {"binding_name": "#trade_possible", "binding_name_override": "#visible"}
@@ -681,8 +681,8 @@
       },
       {
         "toggle_checked_red@trade_zeta.button_state_common": {
-          "$image_texture|default": "assets/minecraft/textures/gui/sprites/widget/button.png",
-          "layer": 3,
+          "$image_texture|default": "assets/minecraft/textures/gui/sprites/widget/button_highlighted",
+          "layer": 4,
           "bindings": [
             {"binding_type": "collection_details"}                                        ,
             {"binding_name": "(not #trade_possible)", "binding_name_override": "#visible"}
