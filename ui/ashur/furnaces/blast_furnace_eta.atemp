@@ -1,3 +1,9 @@
+// -------------------------------------------------------------------------
+// JAVA CONTAINERS BEDROCK
+// -------------------------------------------------------------------------
+// Please see license details here:
+// https://github.com/fumeko-ts/java-edition-containers-mcbe#java-containers-license
+// ------------------------------------------------------------------------- 
 {
   "namespace": "blast_furnace_eta",
   "flame_panel": {
