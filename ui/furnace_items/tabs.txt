@@ -1,0 +1,59 @@
+// #food_tab_result
+source$ potato                  // id 302   | result$ baked potato                       // id 303
+source$ raw beef                // id 295   | result$ cooked beef/steak                  // id 296
+source$ raw chicken             // id 297   | result$ cooked chicken                     // id 298
+source$ raw cod                 // id 286   | result$ cooked cod                         // id 290
+source$ raw mutton              // id 583   | result$ cooked mutton                      // id 584
+source$ raw porkchop            // id 284   | result$ cooked porkchop                    // id 285
+source$ raw rabbit              // id 310   | result$ cooked rabbit                      // id 311
+source$ raw salmon              // id 287   | result$ cooked salmon                      // id 291
+source$ kelp                    // id 408   | result$ dried kelp                         // id 292
+
+#misc_tab_result
+source$ white_terracotta        // id 159   | result$ white_glazed_terracotta            // id 220
+source$ orange_terracotta       // id -724  | result$ orange_glazed_terracotta           // id 221
+source$ magenta_terracotta      // id -725  | result$ magenta_glazed_terracotta          // id 222
+source$ light_blue_terracotta   // id -726  | result$ light_blue_glazed_terracotta       // id 223
+source$ yellow_terracotta       // id -727  | result$ yellow_glazed_terracotta           // id 224
+source$ lime_terracotta         // id -728  | result$ lime_glazed_terracotta             // id 225
+source$ pink_terracotta         // id -729  | result$ pink_glazed_terracotta             // id 226
+source$ gray_terracotta         // id -730  | result$ gray_glazed_terracotta             // id 227
+source$ light_gray_terracotta   // id -731  | result$ light_gray_glazed_terracotta       // id 228
+source$ cyan_terracotta         // id -732  | result$ cyan_glazed_terracotta             // id 229
+source$ purple_terracotta       // id -733  | result$ purple_glazed_terracotta           // id 219
+source$ blue_terracotta         // id -734  | result$ blue_glazed_terracotta             // id 231
+source$ brown_terracotta        // id -735  | result$ brown_glazed_terracotta            // id 232
+source$ green_terracotta        // id -736  | result$ green_glazed_terracotta            // id 233
+source$ red_terracotta          // id -737  | result$ red_glazed_terracotta              // id 234
+source$ black_terracotta        // id -738  | result$ black_glazed_terracotta            // id 235
+source$ deepslate_bricks        // id -391  | result$ cracked deepslate bricks           // id -410
+source$ deepslate_tiles         // id -387  | result$ cracked deepslate tiles            // id -409
+source$ nether_bricks           // id 112   | result$ cracked nether bricks              // id -303
+source$ polished_blackstone_bricks // id -274 | result$ cracked polished blackstone bricks // id -280
+source$ stone_bricks            // id 98    | result$ cracked stone bricks               // id -869
+source$ cobbled_deepslate       // id -379  | result$ deepslate                          // id -378
+source$ sand                    // id 12    | result$ glass                              // id 20
+source$ leaves                  // id 18    | result$ leaf litter                        // id -1026
+source$ redstone_ore            // id  73   | result$ redstone dust                      // id 398
+source$ basalt                  // id -234  | result$ smooth basalt                      // id -377
+source$ block_of_quartz         // id 155   | result$ smooth quarts block                // id -955
+source$ red_sandstone           // id 179   | result$ smooth red sandstone               // id -958
+source$ sandstone               // id 24    | result$ smooth sandstone                   // id -946
+source$ stone                   // id 1     | result$ smooth stone                       // id -183
+source$ wet_sponge              // id -984  | result$ sponge                             // id 19
+source$ cobblestone             // id 4     | result$ stone                              // id 1
+
+#fuel_tab_result
+source$ clay_ball               // id 410   | result$ brick                              // id 409 
+source$ log                     // id 17    | result$ charcoal                           // id 327
+source$ coal_ore                // id 16    | result$ coal                               // id 329
+source$ raw_copper              // id 541   | result$ copper ingot                       // id 538
+source$ diamond_ore             // id 56    | result$ diamond                            // id 328
+source$ iron_ore                // id 15    | result$ iron nugget                        // id 602
+source$ lapis_ore               // id 21    | result$ lapiz lazuli                       // id 440
+source$ cactus                  // id 81    | result$ lime dye                           // id -156
+source$ netherrack              // id 87    | result$ nether brick                       // id 556
+source$ ancient_debris          // id -271  | result$ netherite scrap                    // id 650
+source$ chorus_fruit            // id 591   | result$ popped corus fruit                 // id 582
+source$ nether_quartz_ore       // id 153   | result$ nether quarts                      // id 557
+source$ resin_clump             // id -1022 | result$ resin brick                        // id 748

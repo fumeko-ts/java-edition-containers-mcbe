@@ -36,27 +36,27 @@
   },
   "exp_progress_bar": {
     "type": "panel",
-    "size": [102, 5],
+    "size": [ 102, 5 ],
     "anchor_from": "center",
     "anchor_to": "center",
-    "offset": [-20, -140],
+    "offset": [ -20, -140 ],
     "controls": [
-      {"trades_text@trade_exp.trades_text":{}},
-      {"trades_text@trade_exp.villager_name_text":{}},
+      { "trades_text@trade_exp.trades_text": {  } },
+      { "trades_text@trade_exp.villager_name_text": {  } },
       {
         "empty_progress_bar@trade_exp.empty_progress_bar": {
           "layer": 1,
-          "offset": [-1, 78],
+          "offset": [ -1, 78 ],
           "controls": [
             {
               "white_progress_bar@trade_exp.white_progress_bar": {
                 "layer": 2,
                 "bindings": [
                   {
-                    "binding_name"         : "#exp_possible_progress",
-                    "binding_name_override": "#clip_ratio"           ,
-                    "binding_type"         : "global"                ,
-                    "binding_condition"    : "always_when_visible"
+                    "binding_name": "#exp_possible_progress",
+                    "binding_name_override": "#clip_ratio",
+                    "binding_type": "global",
+                    "binding_condition": "always_when_visible"
                   }
                 ]
               }

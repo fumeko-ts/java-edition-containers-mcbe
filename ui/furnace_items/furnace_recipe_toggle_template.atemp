@@ -1,0 +1,53 @@
+{
+  "namespace": "furnace_recipe_toggle_template",
+  "base": {
+    "type": "image",
+    "size": [ 25, 25 ],
+    "offset": [ 2, 1 ],
+    "$is_hover|default": false,
+    "controls": [
+      {
+        "hover_text@tooltip_renderer_desktop.hover_text_button_no_collection": {
+          "layer": 9,
+          "ignored": "($is_hover = false)",
+          "$hover_text": "$t_text" 
+        }
+      },
+      {
+        "hover@common.highlight_slot": {
+          "ignored": "($is_hover = false)",
+          "layer": 5,
+          "anchor_to": "center",
+          "anchor_from": "center",
+          "$white_highlight_slot_offset": [ -0.6, -0.6 ],
+          "$white_highlight_slot_size": [ 20, 20 ],
+          "size": [ 20, 20 ]
+        }
+      },
+      {
+        "item@beacon.item_renderer": {
+          "layer": 6,
+          "anchor_to": "center",
+          "offset": [ -1, -1 ],
+          "anchor_from": "center",
+          "property_bag": { "#item_id_aux": "($aux_id_base * 65536)" }
+        }
+      }
+    ]
+  },
+  "default@furnace_recipe_toggle_template.base": {
+    "layer": 4,
+    "$is_hover": false,
+    "texture": "assets/minecraft/textures/gui/sprites/recipe_book/slot_craftable.png"
+  },
+  "hover@furnace_recipe_toggle_template.base": {
+    "$is_hover": true,
+    "layer": 4,
+    "texture": "assets/minecraft/textures/gui/sprites/recipe_book/slot_craftable.png"
+  },
+  "pressed@furnace_recipe_toggle_template.base": {
+    "layer": 4,
+    "$is_hover": false,
+    "texture": "assets/minecraft/textures/gui/sprites/recipe_book/slot_craftable.png"
+  }
+}

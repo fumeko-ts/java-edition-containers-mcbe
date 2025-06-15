@@ -1,0 +1,18 @@
+{
+  "namespace": "furnace_recipe_book",
+  "furnace_recipe_panel": {
+    "type": "panel",
+    "layer": 4,
+    "controls": [
+      {
+        "recipe_bg@screen_content.recipe_book": { "anchor_to": "center", "anchor_from": "center" }
+      },
+      {
+        "page_content@base_recipe_pages.max_page_is_28": {
+          "$page_content|default": "furnace_recipe_toggle_controler.base_panel",
+          "$max_tepes_offset_furnace": 4
+        }
+      }
+    ]
+  }
+}

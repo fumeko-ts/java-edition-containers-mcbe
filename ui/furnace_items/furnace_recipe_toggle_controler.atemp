@@ -1,0 +1,423 @@
+{
+  "namespace": "furnace_recipe_toggle_controler",
+  "test": {
+    "type": "image",
+    "texture": "textures/items/apple",
+    "size": [ 16, 16 ],
+    "offset": [ 0, 20 ],
+    "layer": 200000,
+    "bindings": [
+      {
+        "binding_type": "view",
+        "source_control_name": "trigger_1",
+        "source_property_name": "#toggle_state",
+        "target_property_name": "#visible"
+      }
+    ]
+  },
+  "base_panel": {
+    "type": "panel",
+    "layer": 2000,
+    "controls": [
+      { "test@test": {  } },
+      { "1@1": {  } },
+      { "2@2": {  } },
+      { "3@3": {  } },
+      { "4@4": {  } },
+      { "5@5": {  } },
+      { "6@6": {  } },
+      { "7@7": {  } },
+      { "8@8": {  } },
+      { "9@9": {  } },
+      { "10@10": {  } },
+      { "11@11": {  } },
+      { "12@12": {  } },
+      { "13@13": {  } },
+      { "14@14": {  } },
+      { "15@15": {  } },
+      { "16@16": {  } },
+      { "17@17": {  } },
+      { "18@18": {  } },
+      { "19@19": {  } },
+      { "20@20": {  } },
+      { "21@21": {  } },
+      { "22@22": {  } },
+      { "23@23": {  } },
+      { "24@24": {  } },
+      { "25@25": {  } },
+      { "26@26": {  } },
+      { "27@27": {  } },
+      { "28@28": {  } },
+      { "29@29": {  } },
+      { "30@30": {  } },
+      { "31@31": {  } },
+      { "32@32": {  } },
+      { "33@33": {  } },
+      { "34@34": {  } },
+      { "35@35": {  } },
+      { "36@36": {  } },
+      { "37@37": {  } },
+      { "38@38": {  } },
+      { "39@39": {  } },
+      { "40@40": {  } },
+      { "41@41": {  } },
+      { "42@42": {  } },
+      { "43@43": {  } },
+      { "44@44": {  } },
+      { "45@45": {  } },
+      { "46@46": {  } },
+      { "47@47": {  } },
+      { "48@48": {  } },
+      { "49@49": {  } },
+      { "50@50": {  } },
+      { "51@51": {  } },
+      { "52@52": {  } },
+      { "53@53": {  } },
+      { "54@54": {  } }
+    ]
+  },
+  "template@common_toggles.light_template_toggle": {
+    "$unchecked_control|default": "furnace_recipe_toggle_template.default",
+    "$checked_control|default": "furnace_recipe_toggle_template.pressed",
+    "$unchecked_hover_control|default": "furnace_recipe_toggle_template.hover",
+    "$checked_hover_control|default": "furnace_recipe_toggle_template.hover",
+    "$unchecked_locked_control|default": "furnace_recipe_toggle_template.default",
+    "$unchecked_locked_hover_control|default": "furnace_recipe_toggle_template.hover",
+    "$checked_locked_control|default": "furnace_recipe_toggle_template.pressed",
+    "$checked_locked_hover_control|default": "furnace_recipe_toggle_template.hover",
+    "$toggle_binding_type|default": "none"
+  },
+  "base@common_toggles.light_text_toggle": {
+    "size": [ 25, 25 ],
+    "$template_toggle": "furnace_recipe_toggle_controler.template",
+    "$index|default": 10,
+    "$t_text|default": "",
+    "$aux_id_base|default": 0,
+    "$toggle_name": "('toggle_name_' + $index)",
+    "$toggle_view_binding_name": "('trigger_' + $index)"
+  },
+  "1@furnace_recipe_toggle_controler.base": {
+    "$index": 1,
+    "offset": [ 0, 0 ],
+    "$aux_id_base": 302,
+    "$t_text": "Potato"
+  },
+  "2@furnace_recipe_toggle_controler.base": {
+    "$index": 2,
+    "offset": [ 25, 0 ],
+    "$aux_id_base": 295,
+    "$t_text": "Raw Beef"
+  },
+  "3@furnace_recipe_toggle_controler.base": {
+    "$index": 3,
+    "offset": [ 50, 0 ],
+    "$aux_id_base": 297,
+    "$t_text": "Raw Chicken"
+  },
+  "4@furnace_recipe_toggle_controler.base": {
+    "$index": 4,
+    "offset": [ 75, 0 ],
+    "$aux_id_base": 286,
+    "$t_text": "Raw Cod"
+  },
+  "5@furnace_recipe_toggle_controler.base": {
+    "$index": 5,
+    "offset": [ 100, 0 ],
+    "$aux_id_base": 583,
+    "$t_text": "Raw Mutton"
+  },
+  "6@furnace_recipe_toggle_controler.base": {
+    "$index": 6,
+    "offset": [ 0, 25 ],
+    "$aux_id_base": 284,
+    "$t_text": "Raw Porkchop"
+  },
+  "7@furnace_recipe_toggle_controler.base": {
+    "$index": 7,
+    "offset": [ 25, 25 ],
+    "$aux_id_base": 310,
+    "$t_text": "Raw Rabbit"
+  },
+  "8@furnace_recipe_toggle_controler.base": {
+    "$index": 8,
+    "offset": [ 50, 25 ],
+    "$aux_id_base": 287,
+    "$t_text": "Raw Salmon"
+  },
+  "9@furnace_recipe_toggle_controler.base": {
+    "$index": 9,
+    "offset": [ 75, 25 ],
+    "$aux_id_base": 408,
+    "$t_text": "Kelp"
+  },
+  "10@furnace_recipe_toggle_controler.base": {
+    "$index": 10,
+    "offset": [ 100, 25 ],
+    "$aux_id_base": 159,
+    "$t_text": "White Terracotta"
+  },
+  "11@furnace_recipe_toggle_controler.base": {
+    "$index": 11,
+    "offset": [ 0, 50 ],
+    "$aux_id_base": -724,
+    "$t_text": "Orange Terracotta"
+  },
+  "12@furnace_recipe_toggle_controler.base": {
+    "$index": 12,
+    "offset": [ 25, 50 ],
+    "$aux_id_base": -725,
+    "$t_text": "Magenta Terracotta"
+  },
+  "13@furnace_recipe_toggle_controler.base": {
+    "$index": 13,
+    "offset": [ 50, 50 ],
+    "$aux_id_base": -726,
+    "$t_text": "Light Blue Terracotta"
+  },
+  "14@furnace_recipe_toggle_controler.base": {
+    "$index": 14,
+    "offset": [ 75, 50 ],
+    "$aux_id_base": -727,
+    "$t_text": "Yellow Terracotta"
+  },
+  "15@furnace_recipe_toggle_controler.base": {
+    "$index": 15,
+    "offset": [ 100, 50 ],
+    "$aux_id_base": -728,
+    "$t_text": "Lime Terracotta"
+  },
+  "16@furnace_recipe_toggle_controler.base": {
+    "$index": 16,
+    "offset": [ 0, 75 ],
+    "$aux_id_base": -729,
+    "$t_text": "Pink Terracotta"
+  },
+  "17@furnace_recipe_toggle_controler.base": {
+    "$index": 17,
+    "offset": [ 25, 75 ],
+    "$aux_id_base": -730,
+    "$t_text": "Gray Terracotta"
+  },
+  "18@furnace_recipe_toggle_controler.base": {
+    "$index": 18,
+    "offset": [ 50, 75 ],
+    "$aux_id_base": -731,
+    "$t_text": "Light Gray Terracotta"
+  },
+  "19@furnace_recipe_toggle_controler.base": {
+    "$index": 19,
+    "offset": [ 75, 75 ],
+    "$aux_id_base": -732,
+    "$t_text": "Cyan Terracotta"
+  },
+  "20@furnace_recipe_toggle_controler.base": {
+    "$index": 20,
+    "offset": [ 100, 75 ],
+    "$aux_id_base": -733,
+    "$t_text": "Purple Terracotta"
+  },
+  "21@furnace_recipe_toggle_controler.base": {
+    "$index": 21,
+    "offset": [ 0, 100 ],
+    "$aux_id_base": -734,
+    "$t_text": "Blue Terracotta"
+  },
+  "22@furnace_recipe_toggle_controler.base": {
+    "$index": 22,
+    "offset": [ 25, 100 ],
+    "$aux_id_base": -735,
+    "$t_text": "Brown Terracotta"
+  },
+  "23@furnace_recipe_toggle_controler.base": {
+    "$index": 23,
+    "offset": [ 50, 100 ],
+    "$aux_id_base": -736,
+    "$t_text": "Green Terracotta"
+  },
+  "24@furnace_recipe_toggle_controler.base": {
+    "$index": 24,
+    "offset": [ 75, 100 ],
+    "$aux_id_base": -737,
+    "$t_text": "Red Terracotta"
+  },
+  "25@furnace_recipe_toggle_controler.base": {
+    "$index": 25,
+    "offset": [ 100, 100 ],
+    "$aux_id_base": -738,
+    "$t_text": "Black Terracotta"
+  },
+  "26@furnace_recipe_toggle_controler.base": {
+    "$index": 26,
+    "offset": [ 0, 125 ],
+    "$aux_id_base": -391,
+    "$t_text": "Deepslate Bricks"
+  },
+  "27@furnace_recipe_toggle_controler.base": {
+    "$index": 27,
+    "offset": [ 25, 125 ],
+    "$aux_id_base": -387,
+    "$t_text": "Deepslate Tiles"
+  },
+  "28@furnace_recipe_toggle_controler.base": {
+    "$index": 28,
+    "offset": [ 50, 125 ],
+    "$aux_id_base": 112,
+    "$t_text": "Nether Bricks"
+  },
+  "29@furnace_recipe_toggle_controler.base": {
+    "$index": 29,
+    "offset": [ 75, 125 ],
+    "$aux_id_base": -274,
+    "$t_text": "Polished Blackstone Bricks"
+  },
+  "30@furnace_recipe_toggle_controler.base": {
+    "$index": 30,
+    "offset": [ 100, 125 ],
+    "$aux_id_base": 98,
+    "$t_text": "Stone Bricks"
+  },
+  "31@furnace_recipe_toggle_controler.base": {
+    "$index": 31,
+    "offset": [ 0, 150 ],
+    "$aux_id_base": -379,
+    "$t_text": "Cobbled Deepslate"
+  },
+  "32@furnace_recipe_toggle_controler.base": {
+    "$index": 32,
+    "offset": [ 25, 150 ],
+    "$aux_id_base": 12,
+    "$t_text": "Sand"
+  },
+  "33@furnace_recipe_toggle_controler.base": {
+    "$index": 33,
+    "offset": [ 50, 150 ],
+    "$aux_id_base": 18,
+    "$t_text": "Leaves"
+  },
+  "34@furnace_recipe_toggle_controler.base": {
+    "$index": 34,
+    "offset": [ 75, 150 ],
+    "$aux_id_base": 73,
+    "$t_text": "Redstone Ore"
+  },
+  "35@furnace_recipe_toggle_controler.base": {
+    "$index": 35,
+    "offset": [ 100, 150 ],
+    "$aux_id_base": -234,
+    "$t_text": "Basalt"
+  },
+  "36@furnace_recipe_toggle_controler.base": {
+    "$index": 36,
+    "offset": [ 0, 175 ],
+    "$aux_id_base": 155,
+    "$t_text": "Block of Quartz"
+  },
+  "37@furnace_recipe_toggle_controler.base": {
+    "$index": 37,
+    "offset": [ 25, 175 ],
+    "$aux_id_base": 179,
+    "$t_text": "Red Sandstone"
+  },
+  "38@furnace_recipe_toggle_controler.base": {
+    "$index": 38,
+    "offset": [ 50, 175 ],
+    "$aux_id_base": 24,
+    "$t_text": "Sandstone"
+  },
+  "39@furnace_recipe_toggle_controler.base": {
+    "$index": 39,
+    "offset": [ 75, 175 ],
+    "$aux_id_base": 1,
+    "$t_text": "Stone"
+  },
+  "40@furnace_recipe_toggle_controler.base": {
+    "$index": 40,
+    "offset": [ 100, 175 ],
+    "$aux_id_base": -984,
+    "$t_text": "Wet Sponge"
+  },
+  "41@furnace_recipe_toggle_controler.base": {
+    "$index": 41,
+    "offset": [ 0, 200 ],
+    "$aux_id_base": 4,
+    "$t_text": "Cobblestone"
+  },
+  "42@furnace_recipe_toggle_controler.base": {
+    "$index": 42,
+    "offset": [ 25, 200 ],
+    "$aux_id_base": 410,
+    "$t_text": "Clay Ball"
+  },
+  "43@furnace_recipe_toggle_controler.base": {
+    "$index": 43,
+    "offset": [ 50, 200 ],
+    "$aux_id_base": 17,
+    "$t_text": "Log"
+  },
+  "44@furnace_recipe_toggle_controler.base": {
+    "$index": 44,
+    "offset": [ 75, 200 ],
+    "$aux_id_base": 16,
+    "$t_text": "Coal Ore"
+  },
+  "45@furnace_recipe_toggle_controler.base": {
+    "$index": 45,
+    "offset": [ 100, 200 ],
+    "$aux_id_base": 541,
+    "$t_text": "Raw Copper"
+  },
+  "46@furnace_recipe_toggle_controler.base": {
+    "$index": 46,
+    "offset": [ 0, 225 ],
+    "$aux_id_base": 56,
+    "$t_text": "Diamond Ore"
+  },
+  "47@furnace_recipe_toggle_controler.base": {
+    "$index": 47,
+    "offset": [ 25, 225 ],
+    "$aux_id_base": 15,
+    "$t_text": "Iron Ore"
+  },
+  "48@furnace_recipe_toggle_controler.base": {
+    "$index": 48,
+    "offset": [ 50, 225 ],
+    "$aux_id_base": 21,
+    "$t_text": "Lapis Ore"
+  },
+  "49@furnace_recipe_toggle_controler.base": {
+    "$index": 49,
+    "offset": [ 75, 225 ],
+    "$aux_id_base": 81,
+    "$t_text": "Cactus"
+  },
+  "50@furnace_recipe_toggle_controler.base": {
+    "$index": 50,
+    "offset": [ 100, 225 ],
+    "$aux_id_base": 87,
+    "$t_text": "Netherrack"
+  },
+  "51@furnace_recipe_toggle_controler.base": {
+    "$index": 51,
+    "offset": [ 0, 250 ],
+    "$aux_id_base": -271,
+    "$t_text": "Ancient Debris"
+  },
+  "52@furnace_recipe_toggle_controler.base": {
+    "$index": 52,
+    "offset": [ 25, 250 ],
+    "$aux_id_base": 591,
+    "$t_text": "Chorus Fruit"
+  },
+  "53@furnace_recipe_toggle_controler.base": {
+    "$index": 53,
+    "offset": [ 50, 250 ],
+    "$aux_id_base": 153,
+    "$t_text": "Nether Quartz Ore"
+  },
+  "54@furnace_recipe_toggle_controler.base": {
+    "$index": 54,
+    "offset": [ 75, 250 ],
+    "$aux_id_base": -1022,
+    "$t_text": "Resin Clump"
+  }
+}

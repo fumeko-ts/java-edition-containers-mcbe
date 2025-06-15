@@ -1,0 +1,239 @@
+{
+  "namespace": "tooltip_renderer_desktop",
+  "anim_actionbar_text_background_alpha_out": {
+    "anim_type": "alpha",
+    "easing": "in_expo",
+    "duration": 3,
+    "from": 0,
+    "to": 1
+  },
+  "tdrp": {
+    "type": "panel",
+    "anchor_from": "top_left",
+    "anchor_to": "top_left",
+    "allow_clipping": false,
+    "size": [ "100%cm", "100%cm" ],
+    "offset": [ 9, 9 ],
+    "anims": [
+      "@tooltip_renderer_desktop.anim_actionbar_text_background_alpha_out"
+    ],
+    "controls": [
+      {
+        "tooltip_solid_bg@tooltip_renderer_desktop.tooltip_solid_bg": {
+          "layer": 199,
+          "allow_clipping": false,
+          "size": [ "100%sm + 8px", "100%sm + 8px" ]
+        }
+      },
+      {
+        "tooltip_text_float@tooltip_renderer_desktop.tooltip_text_float": {  }
+      }
+    ]
+  },
+  "tooltip_solid_bg": {
+    "type": "panel",
+    "controls": [
+      {
+        "default1": { "type": "image", "texture": "textures/ui/purpleBorder" }
+      },
+      {
+        "default2": { "type": "image", "texture": "textures/ui/purpleBorder" }
+      },
+      {
+        "default3": { "type": "image", "texture": "textures/ui/purpleBorder" }
+      },
+      {
+        "default4": { "type": "image", "texture": "textures/ui/purpleBorder" }
+      }
+    ]
+  },
+  "tooltip_text_float": {
+    "type": "label",
+    "text": "#hover_text",
+    "layer": 200,
+    "allow_clipping": false,
+    "$hover_text_binding_name|default": "#hover_text",
+    "bindings": "$bindings_for_recipe",
+    "property_bag": {
+      "force_update": true,
+      "#start": 0,
+      "#slash": "/",
+      "#result": 0
+    },
+    "variables": [
+      {
+        "requires": "($recipe_book = true or $creative_recipe_book = true)",
+        "$bindings_for_recipe": [
+          {
+            "binding_name": "$hover_text_binding_name",
+            "binding_name_override": "#hover_text_binding",
+            "binding_type": "collection",
+            "binding_collection_name": "$item_collection_name"
+          },
+          {
+            "binding_type": "view",
+            "source_property_name": "#hover_text_binding",
+            "target_property_name": "#hover_text",
+            "binding_condition": "always_when_visible"
+          },
+          {
+            "binding_type": "view",
+            "source_property_name": "(#hover_text  - '\n\u00a79\u00a79craftingScreen.tab.equipment\u00a7r' - '\n\u00a79\u00a79craftingScreen.tab.construction\u00a7r' - '\n\u00a79\u00a79craftingScreen.tab.nature\u00a7r' - '\n\u00a79\u00a79craftingScreen.tab.items\u00a7r' - '\n\u00a79\u00a79craftingScreen.tab.commandsl\u00a7r')",
+            "target_property_name": "#hover_text",
+            "binding_condition": "once"
+          }
+        ]
+      }
+    ],
+    "$bindings_for_recipe": [
+      {
+        "binding_name": "$hover_text_binding_name",
+        "binding_name_override": "#hover_text_binding",
+        "binding_type": "collection",
+        "binding_collection_name": "$item_collection_name"
+      },
+      {
+        "binding_name": "#item_durability_total_amount",
+        "binding_type": "collection",
+        "binding_collection_name": "$item_collection_name"
+      },
+      {
+        "binding_name": "#item_durability_current_amount",
+        "binding_type": "collection",
+        "binding_collection_name": "$item_collection_name"
+      },
+      {
+        "binding_type": "view",
+        "source_property_name": "(#result + ((#item_durability_total_amount > #result) - (#item_durability_total_amount < #result)))",
+        "target_property_name": "#result",
+        "binding_condition": "always"
+      },
+      {
+        "binding_type": "view",
+        "source_property_name": "(#start + ((#item_durability_current_amount > #start) - (#item_durability_current_amount < #start)))",
+        "target_property_name": "#start",
+        "binding_condition": "always"
+      },
+      {
+        "binding_type": "view",
+        "source_property_name": "(#hover_text_binding + ('\u00a77\nDurability: ' + #start + #slash + #result) - '\u00a77\nDurability: 0/0')",
+        "target_property_name": "#hover_text",
+        "binding_condition": "always"
+      },
+      {
+        "binding_type": "view",
+        "source_property_name": "(#hover_text  - '\n\u00a79\u00a79craftingScreen.tab.equipment\u00a7r' - '\n\u00a79\u00a79craftingScreen.tab.construction\u00a7r' - '\n\u00a79\u00a79craftingScreen.tab.nature\u00a7r' - '\n\u00a79\u00a79craftingScreen.tab.items\u00a7r' - '\n\u00a79\u00a79craftingScreen.tab.commandsl\u00a7r')",
+        "target_property_name": "#hover_text",
+        "binding_condition": "once"
+      }
+    ]
+  },
+  "hover_text_button": {
+    "type": "button",
+    "size": [ 0, 0 ],
+    "offset": [ 1, 1 ],
+    "layer": -10,
+    "anchor_from": "center",
+    "anchor_to": "center",
+    "locked_control": "",
+    "always_listen_to_input": true,
+    "follows_cursor": true,
+    "always_handle_pointer": true,
+    "consume_hover_events": false,
+    "focus_enabled": false,
+    "focus_magnet_enabled": false,
+    "bindings": [
+      {
+        "binding_name": "#hover_text",
+        "binding_name_override": "#hover_text_binding",
+        "binding_type": "collection",
+        "binding_collection_name": "$item_collection_name"
+      },
+      {
+        "binding_type": "view",
+        "source_property_name": "(not #hover_text_binding = '')",
+        "target_property_name": "#visible"
+      }
+    ],
+    "controls": [ { "hover@tooltip_renderer_desktop.tdrp": {} } ]
+  },
+
+
+
+
+
+
+
+
+
+    "tdrp_no_collection": {
+    "type": "panel",
+    "anchor_from": "top_left",
+    "anchor_to": "top_left",
+    "allow_clipping": false,
+    "size": [ "100%cm", "100%cm" ],
+    "offset": [ 9, 9 ],
+    "anims": [
+      "@tooltip_renderer_desktop.anim_actionbar_text_background_alpha_out"
+    ],
+    "controls": [
+      {
+        "tooltip_solid_bg@tooltip_renderer_desktop.tooltip_solid_bg": {
+          "layer": 199,
+          "allow_clipping": false,
+          "size": [ "100%sm + 8px", "100%sm + 8px" ]
+        }
+      },
+      {
+        "tooltip_text_float@tooltip_renderer_desktop.tooltip_text_float_no_collection": {  }
+      }
+    ]
+  },
+  "tooltip_text_float_no_collection": {
+    "type": "label",
+    "text": "#label_text",
+    "layer": 200,
+    "allow_clipping": false,
+    "$hover_text|default": "",
+    "property_bag": {"#hover_text": "$hover_text"},
+    "bindings": [
+      {
+        "binding_name": "#hover_text"
+      },
+      {
+        "source_property_name": "#hover_text",
+        "target_property_name": "#label_text",
+        "binding_type": "view",
+        "binding_condition": "always"
+      }
+    ]
+  },
+  "hover_text_button_no_collection": {
+    "type": "button",
+    "size": [ 0, 0 ],
+    "offset": [ 1, 1 ],
+    "layer": -10,
+    "anchor_from": "center",
+    "anchor_to": "center",
+    "locked_control": "",
+    "always_listen_to_input": true,
+    "follows_cursor": true,
+    "always_handle_pointer": true,
+    "consume_hover_events": false,
+    "focus_enabled": false,
+    "focus_magnet_enabled": false,
+    "bindings": [
+      {
+        "binding_name": "#hover_text",
+        "binding_name_override": "#hover_text_binding",
+        "binding_type": "global"
+      },
+      {
+        "binding_type": "view",
+        "source_property_name": "(not #hover_text_binding = '')",
+        "target_property_name": "#visible"
+      }
+    ], 
+    "controls": [ { "hover@tooltip_renderer_desktop.tdrp_no_collection": {} } ]
+  }
+}

@@ -1,6 +1,4 @@
 {
-    "namespace": "blast_furnace", 
-    "blast_furnace_screen@furnace.furnace_screen": {
-    "$container_title": "Blast furnace"
-    }
+  "namespace": "blast_furnace",
+  "blast_furnace_screen@furnace.furnace_screen": { "$is_blast_furnace": true }
 }

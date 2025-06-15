@@ -1,45 +1,66 @@
 {
   "ui_defs": [
-    //rendom files i use to test code and stuff below
+    "ui/anvil_screen.json",
+    "ui/beacon_screen.json",
+    "ui/blast_furnace_screen.json",
+    "ui/brewing_stand_screen.json",
+    "ui/cartography_screen.json",
+    "ui/chest_screen.json",
+    "ui/enchanting_screen.json",
+    "ui/furnace_screen.json",
+    "ui/grindstone_screen.json",
+    "ui/horse_screen.json",
+    "ui/hud_screen.json",
+    "ui/inventory_screen.json",
+    "ui/inventory_screen_pocket.json",
+    "ui/loom_screen.json",
+    "ui/pause_screen.json",
+    "ui/redstone_screen.json",
+    "ui/smithing_table_screen.json",
+    "ui/smoker_screen.json",
+    "ui/stonecutter_screen.json",
+    "ui/tooltip_eta.atemp",
+    "ui/trade_2_screen.json",
+    "ui/ui_common.json",
+    "ui/-common/container_common.atemp",
+    "ui/-common/pagination.atemp",
+    "ui/-common/screen_content.atemp",
+    "ui/ashur/anvil_eta.atemp",
+    "ui/ashur/barrel_eta.atemp",
+    "ui/ashur/base_recipe_pages.atemp",
+    "ui/ashur/beacon_eta.atemp",
+    "ui/ashur/brewing_eta.atemp",
+    "ui/ashur/cartography_eta.atemp",
+    "ui/ashur/crafter_eta.atemp",
+    "ui/ashur/creative_inventory.atemp",
+    "ui/ashur/dispenser_eta.atemp",
+    "ui/ashur/double_chest_eta.atemp",
+    "ui/ashur/dropper_eta.atemp",
+    "ui/ashur/enchanting_eta.atemp",
+    "ui/ashur/ender_chest_eta.atemp",
+    "ui/ashur/grindstone_eta.atemp",
+    "ui/ashur/hopper_eta.atemp",
+    "ui/ashur/horse_eta.atemp",
+    "ui/ashur/loom_eta.atemp",
+    "ui/ashur/shulker_eta.atemp",
+    "ui/ashur/small_chest_eta.atemp",
+    "ui/ashur/smithing_eta.atemp",
+    "ui/ashur/stonecutter_eta.atemp",
+    "ui/ashur/survival_inventory.atemp",
+    "ui/ashur/tab_menu_desktop.atemp",
+    "ui/ashur/trade_eta.atemp",
     "ui/ashur/trade_exp.atemp",
-    "ui/ashur/base_page_content.atemp",
-    //furnace recipe
-    "ui/-common/furnace_recipe_anims.atemp",
-    "ui/-common/tps_tooltip.atemp",
-    "ui/furnace_items/recipe_performant.atemp",
-    // Core Common Files
-    "ui/-common/container_common.atemp",          //  Common UI elements     {may remove later }
-    "ui/-common/somali_to_Mori_no_Kamisama.atemp", //  Base container functionality
-    // Toggle & Button Controls  
-    "ui/toggles-&-buttons/creative_tabs.atemp",    // Creative inventory tabs {will remove later}
-    "ui/toggles-&-buttons/furnace_recipe.atemp",   // Furnace recipe buttons  {may remove later }
-    "ui/toggles-&-buttons/left_tab_most.atemp",    // Left sidebar tabs       {will remove later}
-    "ui/toggles-&-buttons/recipe_tabs.atemp",      // Recipe book tabs        {may remove later }
-    "ui/toggles-&-buttons/recipe_toggle.atemp",    // Recipe toggle controls  {may remove later }
-    // Container Interfaces
-    "ui/ashur/anvil_zeta.atemp",          // Anvil UI
-    "ui/ashur/beacon_zeta.atemp",         // Beacon UI
-    "ui/ashur/brewing_zeta.atemp",        // Brewing Stand UI
-    "ui/ashur/cartography_zeta.atemp",    // Cartography Table UI
-    "ui/ashur/crafter_zeta.atemp",        // Crafting Table UI
-    "ui/ashur/dispenser_zeta.atemp",      // Dispenser UI
-    "ui/ashur/dropper_zeta.atemp",        // Dropper UI
-    "ui/ashur/double_chest_zeta.atemp",   // Large Chest UI
-    "ui/ashur/enchanting_zeta.atemp",     // Enchanting Table UI
-    "ui/ashur/furnace_zeta.atemp",        // Furnace UI
-    "ui/ashur/grindstone_zeta.atemp",     // Grindstone UI
-    "ui/ashur/hopper_zeta.atemp",         // Hopper UI
-    "ui/ashur/horse_zeta.atemp",          // Horse UI
-    "ui/ashur/loom_zeta.atemp",           // Loom UI
-    "ui/ashur/shulker_zeta.atemp",        // Shulker Box UI
-    "ui/ashur/small_chest_zeta.atemp",    // Small Chest UI
-    "ui/ashur/ender_chest_zeta.atemp",    // Ender Chest UI
-    "ui/ashur/barrel_zeta.atemp",         // Barrel UI
-    "ui/ashur/trade_zeta.atemp",          // Trade UI
-    "ui/ashur/smithing_zeta.atemp",       // Smithing Table UI
-    "ui/ashur/stonecutter_zeta.atemp",    // Stonecutter UI
-    "ui/ashur/tab_menu.atemp",            // Tab Menu System
-    "ui/ashur/survival_layout.atemp",     // Survival Inventory Layout
-    "ui/ashur/creative_layout.atemp"      // Creative Inventory Layout
+    "ui/ashur/furnaces/blast_furnace_eta.atemp",
+    "ui/ashur/furnaces/furnace_eta.atemp",
+    "ui/ashur/furnaces/smoker_eta.atemp",
+    "ui/ashur/misc/crafting_textures.atemp",
+    "ui/ashur/misc/furnace_recipe_book.atemp",
+    "ui/ashur/misc/global.atemp",
+    "ui/ashur/misc/tooltip_renderer_desktop.atemp",
+    "ui/ashur/misc/screen_anims/container_anims.atemp",
+    "ui/furnace_items/furnace_recipe_toggle_controler.atemp",
+    "ui/furnace_items/furnace_recipe_toggle_template.atemp",
+    "ui/toggles-&-buttons/recipe_tabs.atemp",
+    "ui/toggles-&-buttons/recipe_toggle.atemp"
   ]
 }

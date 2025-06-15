@@ -16,7 +16,6 @@
       "@common.screen_entrance_animation_push_fade",
       "@common.screen_entrance_animation_pop_fade"
     ],
-
     "button_mappings": [
       {
         "from_button_id": "button.menu_cancel",
@@ -47,7 +46,6 @@
         "scope": "view"
       }
     ],
-
     "variables": [
       {
         "requires": "$ignore_edu_pause",

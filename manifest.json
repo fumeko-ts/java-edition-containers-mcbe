@@ -3,7 +3,7 @@
    "header": {    
       "name": "§k.§r §lJava Containers §k.§r",
       "description": "Made by. @Ashura_tepes / @Ashura_temps\nOffical download: https://www.planetminecraft.com/texture-pack/java-containers-6490069/\n§fJoin the discord for updates §bhttps://discord.gg/88edDyeEvz.",
-      "uuid": "c7cb0e6f-faa5-4c04-83ec-84624879dce5",
+      "uuid": "d889d73f-42ab-42f9-b79f-47d3e406084f",
       "version": [1, 0, 0],
       "min_engine_version": [1, 16, 0]
    },
@@ -11,7 +11,7 @@
       {
          "type": "resources",
          "description": "Created by Ashura_temps",
-         "uuid": "ab2f6906-18be-4bdd-8c6b-b9a4075d82c7",
+         "uuid": "cbfbad52-3c2f-416e-834a-ccb68e874bd9",
          "version": [1, 0, 0]
       }
    ],
