@@ -1,9 +1,3 @@
-// -------------------------------------------------------------------------
-// JAVA CONTAINERS BEDROCK
-// -------------------------------------------------------------------------
-// Please see license details here:
-// https://github.com/fumeko-ts/java-edition-containers-mcbe#java-containers-license
-// ------------------------------------------------------------------------- 
 {
   "namespace": "global",
   "grid_item@common.container_item": { "$grid_item_collection_name": "hotbar_items" },
@@ -329,6 +323,101 @@
         "durability_bar_grabbed@common.durability_bar_grabbed": {  }
       },
       { "storage_bar_grabbed@common.storage_bar_grabbed": {  } }
+    ]
+  },
+  "root_panel": {
+    "type": "input_panel",
+    "size": [ 176, 166 ],
+    "layer": 1,
+    "anchor_from": "center",
+    "anchor_to": "center",
+    "button_mappings": [
+      {
+        "from_button_id": "button.menu_select",
+        "to_button_id": "button.container_reset_held",
+        "mapping_type": "pressed"
+      },
+      {
+        "from_button_id": "button.menu_secondary_select",
+        "to_button_id": "button.container_reset_held",
+        "mapping_type": "pressed"
+      },
+      {
+        "from_button_id": "button.menu_ok",
+        "to_button_id": "button.container_reset_held",
+        "mapping_type": "pressed"
+      },
+      {
+        "from_button_id": "button.return",
+        "to_button_id": "button.return",
+        "mapping_type": "global"
+      },
+      {
+        "from_button_id": "button.arrow_up",
+        "to_button_id": "button.arrow_key",
+        "mapping_type": "global"
+      },
+      {
+        "from_button_id": "button.arrow_down",
+        "to_button_id": "button.arrow_key",
+        "mapping_type": "global"
+      },
+      {
+        "from_button_id": "button.arrow_left",
+        "to_button_id": "button.arrow_key",
+        "mapping_type": "global"
+      },
+      {
+        "from_button_id": "button.arrow_right",
+        "to_button_id": "button.arrow_key",
+        "mapping_type": "global"
+      },
+      {
+        "from_button_id": "button.controller_back",
+        "to_button_id": "button.container_reset_held",
+        "mapping_type": "pressed",
+        "ignored": "(not $is_ps4)"
+      },
+      {
+        "from_button_id": "button.controller_select",
+        "to_button_id": "button.container_reset_held",
+        "mapping_type": "pressed"
+      },
+      {
+        "from_button_id": "button.controller_secondary_select",
+        "to_button_id": "button.container_reset_held",
+        "mapping_type": "pressed"
+      },
+      {
+        "from_button_id": "button.turn_up",
+        "to_button_id": "button.scroll_up",
+        "mapping_type": "global"
+      },
+      {
+        "from_button_id": "button.turn_down",
+        "to_button_id": "button.scroll_down",
+        "mapping_type": "global"
+      },
+      {
+        "from_button_id": "button.turn_left",
+        "to_button_id": "button.scroll_left",
+        "mapping_type": "global"
+      },
+      {
+        "from_button_id": "button.turn_right",
+        "to_button_id": "button.scroll_right",
+        "mapping_type": "global"
+      },
+      {
+        "from_button_id": "button.inventory_left",
+        "to_button_id": "button.inventory_left",
+        "mapping_type": "global"
+      },
+      {
+        "from_button_id": "button.inventory_right",
+        "to_button_id": "button.inventory_right",
+        "mapping_type": "global"
+      }
     ]
   },
   "spacing_1v": {

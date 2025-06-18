@@ -1,9 +1,3 @@
-// -------------------------------------------------------------------------
-// JAVA CONTAINERS BEDROCK
-// -------------------------------------------------------------------------
-// Please see license details here:
-// https://github.com/fumeko-ts/java-edition-containers-mcbe#java-containers-license
-// ------------------------------------------------------------------------- 
 {
   "namespace": "survival_inventory",
   "recipe_button": {
@@ -265,8 +259,7 @@
   "filter_disabled_highlighted@global.empty_image": {
     "controls": [
       {
-        "hover@tooltip_renderer_desktop.hover_text_button_no_collection": { "$hover_text":  "Showing All" 
-        }
+        "hover@tooltip_renderer_desktop.hover_text_button_no_collection": { "$hover_text": "Showing All" }
       }
     ],
     "texture": "assets/minecraft/textures/gui/sprites/recipe_book/filter_disabled_highlighted.png"
@@ -612,9 +605,11 @@
         "recipe_book@screen_content.recipe_book": { "offset": [ 2, 0 ] }
       },
       {
-        "base_tepes_offset@base_recipe_pages.max_page_is_28": {
+        "base_tepes_offset@pagination.max_page_is_28": {
           "$is_in_recipe_inventory": true,
           "$max_ashur_page": 28,
+          "$left_button_offset_recipe": [ -89.4, 136.5 ],
+          "$right_button_offset_recipe": [ -34.4, 136.5 ],
           "$page_content": "survival_inventory.recipe_dat"
         }
       }

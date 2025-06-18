@@ -1,9 +1,3 @@
-// -------------------------------------------------------------------------
-// JAVA CONTAINERS BEDROCK
-// -------------------------------------------------------------------------
-// Please see license details here:
-// https://github.com/fumeko-ts/java-edition-containers-mcbe#java-containers-license
-// ------------------------------------------------------------------------- 
 {
   "namespace": "beacon_eta",
   "selected_item_details@common.selected_item_details": { "offset": [ 0, 0 ] },

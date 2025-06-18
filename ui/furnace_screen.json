@@ -11,10 +11,10 @@
     "is_showing_menu": true,
     "close_on_player_hurt": false,
     "$is_blast_furnace|default": false,
-    "$is_smoker|default": true,
+    "$is_smoker|default": false,
     "variables": [
       {
-        "requires": "($desktop_screen or $pocket_screen)",
+        "requires": "($is_blast_furnace = false or $is_smoker = false)",
         "$screen_content": "furnace_eta.furnace_panel",
         "$screen_bg_content": "common.screen_background"
       },

@@ -1,9 +1,3 @@
-// -------------------------------------------------------------------------
-// JAVA CONTAINERS BEDROCK
-// -------------------------------------------------------------------------
-// Please see license details here:
-// https://github.com/fumeko-ts/java-edition-containers-mcbe#java-containers-license
-// ------------------------------------------------------------------------- 
 {
   "namespace": "recipe_tabs",
   "empty_tab_content": { "type": "panel", "size": [ 0, 0 ] },
@@ -72,8 +66,9 @@
           "tts_ignore_count": "$tab_ignore_count",
           "$toggle_tts_enabled_binding_type": "global",
           "$toggle_reset_on_focus_lost|default": true,
+          "radio_toggle_group": true,
           "reset_on_focus_lost": "$toggle_reset_on_focus_lost",
-          "$toggle_group_default_selected": "$search_index",
+          "$toggle_group_default_selected": 0,
           "$allow_controller_back_button_mapping": "$allow_controller_back_button_mapping",
           "controls": [
             {

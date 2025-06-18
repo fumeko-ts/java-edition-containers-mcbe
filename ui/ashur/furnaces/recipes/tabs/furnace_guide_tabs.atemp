@@ -1,0 +1,66 @@
+{
+  "namespace": "furnace_guide_tabs",
+  "icon_control@screen_content.image_element": {
+    "texture": "$icon_for_tab",
+    "$icon_for_tab": "",
+    "size": "$tab_icon_size",
+    "$tab_icon_size": [ 17, 17 ],
+    "variables": [
+      {
+        "requires": "($tab_view_binding_name = furnace_search_tab)",
+        "$tab_icon_size": [ 25, 16 ],
+        "$icon_for_tab": "textures/atemp/ui/item/compass_28.png"
+      },
+      {
+        "requires": "($tab_view_binding_name = furnace_food_tab)",
+        "$tab_icon_size": [ 28, 19 ],
+        "$icon_for_tab": "textures/atemp/ui/item/porkchop.png"
+      },
+      {
+        "requires": "($tab_view_binding_name = furnace_blocks_tab)",
+        "$tab_icon_size": [ 25, 16 ],
+        "$icon_for_tab": "textures/atemp/ui/block/stone.png"
+      },
+      {
+        "requires": "($tab_view_binding_name = furnace_ores_tab)",
+        "$tab_icon_size": [ 22, 14 ],
+        "$icon_for_tab": "textures/atemp/ui/fuel.png"
+      }
+    ]
+  },
+  "icon_holder": {
+    "type": "panel",
+    "size": [ 24, 25 ],
+    "controls": [ { "img@$tab_icon": {  } } ]
+  },
+  "top_tab@recipe_tabs.tab_left": {
+    "$toggle_binding_type": "global",
+    "$toggle_focus_enabled": false,
+    "type": "panel",
+    "size": [ 35, 27 ],
+    "$toggle_name": "navigation_tab",
+    "$tab_icon": "furnace_guide_tabs.icon_control",
+    "$toggle_state_binding_name": "#toggle_state",
+    "$tab_content": "furnace_guide_tabs.icon_holder"
+  },
+  "search_tab@furnace_guide_tabs.top_tab": {
+    "$tab_view_binding_name": "furnace_search_tab",
+    "$toggle_binding_type": "global",
+    "$toggle_group_forced_index": 0
+  },
+  "food_tab@furnace_guide_tabs.top_tab": {
+    "$tab_view_binding_name": "furnace_food_tab",
+    "$toggle_binding_type": "global",
+    "$toggle_group_forced_index": 1
+  },
+  "blocks_tab@furnace_guide_tabs.top_tab": {
+    "$tab_view_binding_name": "furnace_blocks_tab",
+    "$toggle_binding_type": "global",
+    "$toggle_group_forced_index": 2
+  },
+  "ores_tab@furnace_guide_tabs.top_tab": {
+    "$tab_view_binding_name": "furnace_ores_tab",
+    "$toggle_binding_type": "global",
+    "$toggle_group_forced_index": 3
+  }
+}

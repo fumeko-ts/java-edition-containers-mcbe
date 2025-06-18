@@ -1,9 +1,3 @@
-// -------------------------------------------------------------------------
-// JAVA CONTAINERS BEDROCK
-// -------------------------------------------------------------------------
-// Please see license details here:
-// https://github.com/fumeko-ts/java-edition-containers-mcbe#java-containers-license
-// ------------------------------------------------------------------------- 
 {
   "namespace": "barrel_eta",
   "barrel_label": {
@@ -80,9 +74,7 @@
       {
         "container_gamepad_helpers@common.container_gamepad_helpers": {  }
       },
-      {
-        "pagination@pagination.ashur_pages":{}
-      },
+      { "pagination@pagination.ashur_pages": {  } },
       {
         "selected_item_details_factory@common.selected_item_details_factory": {  }
       },

@@ -1,18 +1,5 @@
-// -------------------------------------------------------------------------
-// JAVA CONTAINERS BEDROCK
-// -------------------------------------------------------------------------
-// Please see license details here:
-// https://github.com/fumeko-ts/java-edition-containers-mcbe#java-containers-license
-// ------------------------------------------------------------------------- 
 {
   "namespace": "tooltip_renderer_desktop",
-  "anim_actionbar_text_background_alpha_out": {
-    "anim_type": "alpha",
-    "easing": "in_expo",
-    "duration": 3,
-    "from": 0,
-    "to": 1
-  },
   "tdrp": {
     "type": "panel",
     "anchor_from": "top_left",
@@ -20,9 +7,6 @@
     "allow_clipping": false,
     "size": [ "100%cm", "100%cm" ],
     "offset": [ 9, 9 ],
-    "anims": [
-      "@tooltip_renderer_desktop.anim_actionbar_text_background_alpha_out"
-    ],
     "controls": [
       {
         "tooltip_solid_bg@tooltip_renderer_desktop.tooltip_solid_bg": {
@@ -137,7 +121,6 @@
   "hover_text_button": {
     "type": "button",
     "size": [ 0, 0 ],
-    "offset": [ 1, 1 ],
     "layer": -10,
     "anchor_from": "center",
     "anchor_to": "center",
@@ -161,27 +144,15 @@
         "target_property_name": "#visible"
       }
     ],
-    "controls": [ { "hover@tooltip_renderer_desktop.tdrp": {} } ]
+    "controls": [ { "hover@tooltip_renderer_desktop.tdrp": {  } } ]
   },
-
-
-
-
-
-
-
-
-
-    "tdrp_no_collection": {
+  "tdrp_no_collection": {
     "type": "panel",
     "anchor_from": "top_left",
     "anchor_to": "top_left",
     "allow_clipping": false,
     "size": [ "100%cm", "100%cm" ],
     "offset": [ 9, 9 ],
-    "anims": [
-      "@tooltip_renderer_desktop.anim_actionbar_text_background_alpha_out"
-    ],
     "controls": [
       {
         "tooltip_solid_bg@tooltip_renderer_desktop.tooltip_solid_bg": {
@@ -201,11 +172,9 @@
     "layer": 200,
     "allow_clipping": false,
     "$hover_text|default": "",
-    "property_bag": {"#hover_text": "$hover_text"},
+    "property_bag": { "#hover_text": "$hover_text" },
     "bindings": [
-      {
-        "binding_name": "#hover_text"
-      },
+      { "binding_name": "#hover_text" },
       {
         "source_property_name": "#hover_text",
         "target_property_name": "#label_text",
@@ -217,7 +186,6 @@
   "hover_text_button_no_collection": {
     "type": "button",
     "size": [ 0, 0 ],
-    "offset": [ 1, 1 ],
     "layer": -10,
     "anchor_from": "center",
     "anchor_to": "center",
@@ -239,7 +207,11 @@
         "source_property_name": "(not #hover_text_binding = '')",
         "target_property_name": "#visible"
       }
-    ], 
-    "controls": [ { "hover@tooltip_renderer_desktop.tdrp_no_collection": {} } ]
+    ],
+    "controls": [
+      {
+        "hover@tooltip_renderer_desktop.tdrp_no_collection": {  }
+      }
+    ]
   }
 }
