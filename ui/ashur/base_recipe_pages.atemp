@@ -1,0 +1,271 @@
+{
+    "namespace": "base_page_content",
+    "tepes_prev": {
+      "type": "image",
+      "texture": "assets/minecraft/textures/gui/sprites/recipe_book/page_backward",
+      "size": [12, 17],
+      "layer": 2
+    },
+    "tepes_prev_hover": {
+      "type": "image",
+      "texture": "assets/minecraft/textures/gui/sprites/recipe_book/page_backward_highlighted",
+      "size": [12, 17],
+      "layer": 2
+    },
+    "tepes_next": {
+      "type": "image",
+      "texture": "assets/minecraft/textures/gui/sprites/recipe_book/page_forward",
+      "size": [12, 17],
+      "layer": 2
+    },
+    "tepes_next_hover": {
+      "type": "image",
+      "texture": "assets/minecraft/textures/gui/sprites/recipe_book/page_forward_highlighted",
+      "size": [12, 17],
+      "layer": 2
+    },
+    "base_toggle_button": {
+      "type": "panel",
+      "anchor_from": "top_left",
+      "anchor_to": "top_left",
+      "size": [20, 18],
+      "layer": 4,
+      "controls": [
+        {
+          "$toggle_control_name@common.toggle": {
+            "radio_toggle_group":true,
+            "controls": [
+              {"unchecked@$unchecked_bg": {}},
+              {"unchecked_hover@$unchecked_hov_bg": {} },
+              {"checked@$checked_bg": {}},
+              {"checked_hover@$checked_hov_bg": {} }
+            ]
+          }
+        }
+      ]
+    },
+    "alpha_tepes_offset_template": {
+      "offset": [2.6, -1.8],
+      "type": "panel",
+      "clips_children": true,
+      "size": [126, 100],
+      "controls": [
+        {
+          "text_edit_control@survival_layout.text_edit_control": {
+                "allow_clipping": false,
+                "offset": [-8.4, -61.2],
+                "ignored": "($is_in_recipe_inventory = false)",
+                "layer": 11
+            }
+        },
+        { "grid@$page_content": {"offset": "$ov", "layer": 30} },
+        {
+          "label": {
+            "allow_clipping": false,
+            "offset": "$lo",
+            "layer": 40,
+            "type": "label",
+            "color": "white",
+            "text": "$tepes_offset_label",
+            "anchor_from": "center",
+            "anchor_to": "center"
+          }
+        }
+      ]
+    },
+    "alpha_tepes_offset_1_content@alpha_tepes_offset_template": {"$ov": [0, 0], "$lo": "$no"},
+    "alpha_tepes_offset_2_content@alpha_tepes_offset_template": {"$ov": [0, -100], "$lo": "$no"},
+    "alpha_tepes_offset_3_content@alpha_tepes_offset_template": {"$ov": [0, -200], "$lo": "$no"},
+    "alpha_tepes_offset_4_content@alpha_tepes_offset_template": {"$ov": [0, -300], "$lo": "$no"},
+    "alpha_tepes_offset_5_content@alpha_tepes_offset_template": {"$ov": [0, -400], "$lo": "$no"},
+    "alpha_tepes_offset_6_content@alpha_tepes_offset_template": {"$ov": [0, -500], "$lo": "$no"},
+    "alpha_tepes_offset_7_content@alpha_tepes_offset_template": {"$ov": [0, -600], "$lo": "$no"},
+    "alpha_tepes_offset_8_content@alpha_tepes_offset_template": {"$ov": [0, -700], "$lo": "$no"},
+    "alpha_tepes_offset_9_content@alpha_tepes_offset_template": {"$ov": [0, -800], "$lo": "$no"},
+    "alpha_tepes_offset_10_content@alpha_tepes_offset_template": {"$ov": [0, -900], "$lo": "$uh"},
+    "alpha_tepes_offset_11_content@alpha_tepes_offset_template": {"$ov": [0, -1000], "$lo": "$uh"},
+    "alpha_tepes_offset_12_content@alpha_tepes_offset_template": {"$ov": [0, -1100], "$lo": "$uh"},
+    "alpha_tepes_offset_13_content@alpha_tepes_offset_template": {"$ov": [0, -1200], "$lo": "$uh"},
+    "alpha_tepes_offset_14_content@alpha_tepes_offset_template": {"$ov": [0, -1300], "$lo": "$uh"},
+    "alpha_tepes_offset_15_content@alpha_tepes_offset_template": {"$ov": [0, -1400], "$lo": "$uh"},
+    "alpha_tepes_offset_16_content@alpha_tepes_offset_template": {"$ov": [0, -1500], "$lo": "$uh"},
+    "alpha_tepes_offset_17_content@alpha_tepes_offset_template": {"$ov": [0, -1600], "$lo": "$uh"},
+    "alpha_tepes_offset_18_content@alpha_tepes_offset_template": {"$ov": [0, -1700], "$lo": "$uh"},
+    "alpha_tepes_offset_19_content@alpha_tepes_offset_template": {"$ov": [0, -1800], "$lo": "$uh"},
+    "alpha_tepes_offset_20_content@alpha_tepes_offset_template": {"$ov": [0, -1900], "$lo": "$uh"},
+    "alpha_tepes_offset_21_content@alpha_tepes_offset_template": {"$ov": [0, -2000], "$lo": "$uh"},
+    "alpha_tepes_offset_22_content@alpha_tepes_offset_template": {"$ov": [0, -2100], "$lo": "$uh"},
+    "alpha_tepes_offset_23_content@alpha_tepes_offset_template": {"$ov": [0, -2200], "$lo": "$uh"},
+    "alpha_tepes_offset_24_content@alpha_tepes_offset_template": {"$ov": [0, -2300], "$lo": "$uh"},
+    "alpha_tepes_offset_25_content@alpha_tepes_offset_template": {"$ov": [0, -2400], "$lo": "$uh"},
+    "alpha_tepes_offset_26_content@alpha_tepes_offset_template": {"$ov": [0, -2500], "$lo": "$uh"},
+    "alpha_tepes_offset_27_content@alpha_tepes_offset_template": {"$ov": [0, -2600], "$lo": "$uh"},
+    "alpha_tepes_offset_28_content@alpha_tepes_offset_template": {"$ov": [0, -2600], "$lo": "$uh"},
+    "base_tepes_offset_panel": {
+      "type": "panel",
+      "$tepes_offset_content|default": "$ep",
+      "$ignore_prev_button|default": false,
+      "$ignore_next_button|default": false,
+      "controls": [
+        {
+          "offset_content@$tepes_offset_content": {
+            "property_bag": {
+              "#offset_total"       : "$tepes_num"         ,
+              "#offset_itchigo"     : "$tepes_marin"       ,
+              "#offset_number_label": "$tepes_offset_label"
+            }
+          }
+        },
+        {
+          "tepes_previos_button@base_toggle_button": {
+            "offset": [-89.4, 136.5],
+            "focus_container": true,
+            "use_last_focus": true,
+            "ignored": "$ignore_prev_button",
+            "anchor_from": "top_right",
+            "anchor_to": "top_right",
+            "layer": 10,
+            "$toggle_group_forced_index": 0,
+            "$toggle_control_name": "$tepes_prev_ctrl_numb3r",
+            "$toggle_name": "$tepes_prev_raiden_numb3r",
+            "$unchecked_bg": "base_page_content.tepes_prev",
+            "$unchecked_hov_bg": "base_page_content.tepes_prev_hover",
+            "$checked_bg": "base_page_content.tepes_prev",
+            "$checked_hov_bg": "base_page_content.tepes_prev_hover"
+          }
+        },
+        {
+          "tepes_next_button@base_toggle_button": {
+            "offset": [-34.4, 136.5],
+            "focus_container": true,
+            "use_last_focus": true,
+            "ignored": "$ignore_next_button",
+            "anchor_from": "top_right",
+            "anchor_to": "top_right",
+            "layer": 10,
+            "$toggle_group_forced_index": 1,
+            "$toggle_control_name": "$tepes_next_ctrl_numb3r",
+            "$toggle_name": "$tepes_next_raiden_numb3r",
+            "$unchecked_bg": "base_page_content.tepes_next",
+            "$unchecked_hov_bg": "base_page_content.tepes_next_hover",
+            "$checked_bg": "base_page_content.tepes_next",
+            "$checked_hov_bg": "base_page_content.tepes_next_hover"
+          }
+        }
+      ],
+      "$itchigo_offset": 1,
+      "$prev_offset": "($itchigo_offset - 1)",
+      "$next_offset": "($itchigo_offset + 1)",
+      "$tepes_prev_ctrl_numb3r": "('alpha_tepes_offset_' + $prev_offset + '_button')",
+      "$tepes_prev_raiden_numb3r": "('alpha_tepes_offset' + $prev_offset + '_' + $itchigo_offset)",
+      "$tepes_next_ctrl_numb3r": "('alpha_tepes_offset_' + $next_offset + '_button')",
+      "$tepes_next_raiden_numb3r": "('alpha_tepes_offset' + $itchigo_offset + '_' + $next_offset)",
+      "$tepes_marin": "('§r' + $itchigo_offset)",
+      "$tepes_num": "('§r' + $max_tepes_offset_furnace)",
+      "$tepes_offset_label": "($tepes_marin + '/' + $tepes_num)",
+      "bindings": [
+        {
+          "binding_type"        : "view"                                                        ,
+          "source_control_name" : "('alpha_tepes_offset_' + $next_offset + '_button')",
+          "source_property_name": "(not #toggle_state)"                                         ,
+          "target_property_name": "#visible"
+        }
+      ],
+      "variables": [
+        {"requires": "($itchigo_tepes_offset = 1)", "$tepes_bindings": []},
+        {
+          "requires": "(not $offset_x)",
+          "$tepes_controls": [
+            {
+              "tepes_offset@base_tepes_offset_panel": {
+                "$tepes_offset_content": "('alpha_tepes_offset_' + $itchigo_tepes_offset + '_content')",
+                "$itchigo_offset": "$itchigo_tepes_offset",
+                "$ignore_prev_button|default": "(not $offset_z)",
+                "$ignore_next_button|default": "(not $offset_x)"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    "base_tepes_offset": {
+      "type": "panel",
+      "$next_tepes_offset": "($itchigo_tepes_offset + 1)",
+      "$next_tepes_offset_control": "('alpha_tepes_offset_' + $next_tepes_offset)",
+      "$offset_z": "(not ($itchigo_tepes_offset = 1))",
+      "$offset_x": "(not ($itchigo_tepes_offset = $max_tepes_offset_furnace))",
+      "bindings": "$tepes_bindings",
+      "controls": "$tepes_controls",
+      "$tepes_controls|default": [
+        {
+          "tepes_offset@base_tepes_offset_panel": {
+            "$tepes_offset_content": "('alpha_tepes_offset_' + $itchigo_tepes_offset + '_content')",
+            "$itchigo_offset": "$itchigo_tepes_offset",
+            "$ignore_prev_button": "(not $offset_z)",
+            "$ignore_next_button": "(not $offset_x)"
+          }
+        },
+        { "tepes_offset_next@$next_tepes_offset_control": {"ignored": "(not $offset_x)"} }
+      ],
+      "$tepes_bindings": [
+        {
+          "binding_type": "view",
+          "source_control_name": "('alpha_tepes_offset_' + $itchigo_tepes_offset + '_button')",
+          "source_property_name": "#toggle_state",
+          "target_property_name": "#visible"
+        }
+      ],
+      "variables": [
+        {"requires": "($itchigo_tepes_offset = 1)", "$tepes_bindings": []},
+        {
+          "requires": "(not $offset_x)",
+          "$tepes_controls": [
+            {
+              "tepes_offset@base_tepes_offset_panel": {
+                "$tepes_offset_content": "('alpha_tepes_offset_' + $itchigo_tepes_offset + '_content')",
+                "$itchigo_offset": "$itchigo_tepes_offset",
+                "$ignore_prev_button|default": "(not $offset_z)",
+                "$ignore_next_button|default": "(not $offset_x)"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    "alpha_tepes_offset_1@base_tepes_offset": {"$itchigo_tepes_offset": 1},
+    "alpha_tepes_offset_2@base_tepes_offset": {"$itchigo_tepes_offset": 2},
+    "alpha_tepes_offset_3@base_tepes_offset": {"$itchigo_tepes_offset": 3},
+    "alpha_tepes_offset_4@base_tepes_offset": {"$itchigo_tepes_offset": 4},
+    "alpha_tepes_offset_5@base_tepes_offset": {"$itchigo_tepes_offset": 5},
+    "alpha_tepes_offset_6@base_tepes_offset": {"$itchigo_tepes_offset": 6},
+    "alpha_tepes_offset_7@base_tepes_offset": {"$itchigo_tepes_offset": 7},
+    "alpha_tepes_offset_8@base_tepes_offset": {"$itchigo_tepes_offset": 8},
+    "alpha_tepes_offset_9@base_tepes_offset": {"$itchigo_tepes_offset": 9},
+    "alpha_tepes_offset_10@base_tepes_offset": {"$itchigo_tepes_offset": 10},
+    "alpha_tepes_offset_11@base_tepes_offset": {"$itchigo_tepes_offset": 11},
+    "alpha_tepes_offset_12@base_tepes_offset": {"$itchigo_tepes_offset": 12},
+    "alpha_tepes_offset_13@base_tepes_offset": {"$itchigo_tepes_offset": 13},
+    "alpha_tepes_offset_14@base_tepes_offset": {"$itchigo_tepes_offset": 14},
+    "alpha_tepes_offset_15@base_tepes_offset": {"$itchigo_tepes_offset": 15},
+    "alpha_tepes_offset_16@base_tepes_offset": {"$itchigo_tepes_offset": 16},
+    "alpha_tepes_offset_17@base_tepes_offset": {"$itchigo_tepes_offset": 17},
+    "alpha_tepes_offset_18@base_tepes_offset": {"$itchigo_tepes_offset": 18},
+    "alpha_tepes_offset_19@base_tepes_offset": {"$itchigo_tepes_offset": 19},
+    "alpha_tepes_offset_20@base_tepes_offset": {"$itchigo_tepes_offset": 20},
+    "alpha_tepes_offset_21@base_tepes_offset": {"$itchigo_tepes_offset": 21},
+    "alpha_tepes_offset_22@base_tepes_offset": {"$itchigo_tepes_offset": 22},
+    "alpha_tepes_offset_23@base_tepes_offset": {"$itchigo_tepes_offset": 23},
+    "alpha_tepes_offset_24@base_tepes_offset": {"$itchigo_tepes_offset": 24},
+    "alpha_tepes_offset_25@base_tepes_offset": {"$itchigo_tepes_offset": 25},
+    "alpha_tepes_offset_26@base_tepes_offset": {"$itchigo_tepes_offset": 26},
+    "alpha_tepes_offset_27@base_tepes_offset": {"$itchigo_tepes_offset": 27},
+    "alpha_tepes_offset_28@base_tepes_offset": {"$itchigo_tepes_offset": 28},
+
+    "max_page_is_28@base_tepes_offset": {
+      "$is_in_recipe_inventory|default": false,
+      "$page_content|default": "somali_to_Mori_no_Kamisama.recipe_book",
+      "$itchigo_tepes_offset": 1,
+      "$max_tepes_offset_furnace": 8
+  }
+}
+  

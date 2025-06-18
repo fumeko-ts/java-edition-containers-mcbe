@@ -608,8 +608,6 @@
         "base_tepes_offset@pagination.max_page_is_28": {
           "$is_in_recipe_inventory": true,
           "$max_ashur_page": 28,
-          "$left_button_offset_recipe": [ -89.4, 136.5 ],
-          "$right_button_offset_recipe": [ -34.4, 136.5 ],
           "$page_content": "survival_inventory.recipe_dat"
         }
       }
