@@ -1,5 +1,5 @@
 {
-    "namespace": "base_page_content",
+    "namespace": "base_page_content"/*,
     "tepes_prev": {
       "type": "image",
       "texture": "assets/minecraft/textures/gui/sprites/recipe_book/page_backward",
@@ -266,6 +266,6 @@
       "$page_content|default": "somali_to_Mori_no_Kamisama.recipe_book",
       "$itchigo_tepes_offset": 1,
       "$max_tepes_offset_furnace": 8
-  }
+  }*/
 }
   

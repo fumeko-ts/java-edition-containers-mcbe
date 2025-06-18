@@ -1,6 +1,6 @@
 {
-  "namespace": "base_recipe_pages",
-  "page_template": {
+  "namespace": "pagination",
+  "alpha_tepes_offset_template": {
     "offset": [ 2.6, -1.8 ],
     "type": "panel",
     "clips_children": true,
@@ -14,82 +14,93 @@
           "layer": 11
         }
       },
-      { "grid@$page_content": { "offset": "$ov", "layer": 30 } },
-      {
-        "label": {
-          "type": "label",
-          "text": "$ashur_page_label",
-          "color": "white",
-          "offset": "$lo",
-          "layer": 40,
-          "allow_clipping": false,
-          "anchor_from": "center",
-          "anchor_to": "center"
-        }
-      }
+      { "grid@$page_content": { "offset": "$ov", "layer": 30 } }
     ]
   },
-  "page_1_content@page_template":{"$ov":[0,0],"$lo":"$no"},
-  "page_2_content@page_template":{"$ov":[0,-100],"$lo":"$no"},
-  "page_3_content@page_template":{"$ov":[0,-200],"$lo":"$no"},
-  "page_4_content@page_template":{"$ov":[0,-300],"$lo":"$no"},
-  "page_5_content@page_template":{"$ov":[0,-400],"$lo":"$no"},
-  "page_6_content@page_template":{"$ov":[0,-500],"$lo":"$no"},
-  "page_7_content@page_template":{"$ov":[0,-600],"$lo":"$no"},
-  "page_8_content@page_template":{"$ov":[0,-700],"$lo":"$no"},
-  "page_9_content@page_template":{"$ov":[0,-800],"$lo":"$no"},
-  "page_10_content@page_template":{"$ov":[0,-900],"$lo":"$uh"},
-  "page_11_content@page_template":{"$ov":[0,-1000],"$lo":"$uh"},
-  "page_12_content@page_template":{"$ov":[0,-1100],"$lo":"$uh"},
-  "page_13_content@page_template":{"$ov":[0,-1200],"$lo":"$uh"},
-  "page_14_content@page_template":{"$ov":[0,-1300],"$lo":"$uh"},
-  "page_15_content@page_template":{"$ov":[0,-1400],"$lo":"$uh"},
-  "page_16_content@page_template":{"$ov":[0,-1500],"$lo":"$uh"},
-  "page_17_content@page_template":{"$ov":[0,-1600],"$lo":"$uh"},
-  "page_18_content@page_template":{"$ov":[0,-1700],"$lo":"$uh"},
-  "page_19_content@page_template":{"$ov":[0,-1800],"$lo":"$uh"},
-  "page_20_content@page_template":{"$ov":[0,-1900],"$lo":"$uh"},
-  "page_21_content@page_template":{"$ov":[0,-2000],"$lo":"$uh"},
-  "page_22_content@page_template":{"$ov":[0,-2100],"$lo":"$uh"},
-  "page_23_content@page_template":{"$ov":[0,-2200],"$lo":"$uh"},
-  "page_24_content@page_template":{"$ov":[0,-2300],"$lo":"$uh"},
-  "page_25_content@page_template":{"$ov":[0,-2400],"$lo":"$uh"},
-  "page_26_content@page_template":{"$ov":[0,-2500],"$lo":"$uh"},
-  "page_27_content@page_template":{"$ov":[0,-2600],"$lo":"$uh"},
-  "page_28_content@page_template":{"$ov":[0,-2600],"$lo":"$uh"},
-  "base_page_panel": {
+  "page_1_content@alpha_tepes_offset_template" : { "$ov": [ 0,    0  ]},
+  "page_2_content@alpha_tepes_offset_template" : { "$ov": [ 0, -100  ]},
+  "page_3_content@alpha_tepes_offset_template" : { "$ov": [ 0, -200  ]},
+  "page_4_content@alpha_tepes_offset_template" : { "$ov": [ 0, -300  ]},
+  "page_5_content@alpha_tepes_offset_template" : { "$ov": [ 0, -400  ]},
+  "page_6_content@alpha_tepes_offset_template" : { "$ov": [ 0, -500  ]},
+  "page_7_content@alpha_tepes_offset_template" : { "$ov": [ 0, -600  ]},
+  "page_8_content@alpha_tepes_offset_template" : { "$ov": [ 0, -700  ]},
+  "page_9_content@alpha_tepes_offset_template" : { "$ov": [ 0, -800  ]},
+  "page_10_content@alpha_tepes_offset_template": { "$ov": [ 0, -900  ]},
+  "page_11_content@alpha_tepes_offset_template": { "$ov": [ 0, -1000 ]},
+  "page_12_content@alpha_tepes_offset_template": { "$ov": [ 0, -1100 ]},
+  "page_13_content@alpha_tepes_offset_template": { "$ov": [ 0, -1200 ]},
+  "page_14_content@alpha_tepes_offset_template": { "$ov": [ 0, -1300 ]},
+  "page_15_content@alpha_tepes_offset_template": { "$ov": [ 0, -1400 ]},
+  "page_16_content@alpha_tepes_offset_template": { "$ov": [ 0, -1500 ]},
+  "page_17_content@alpha_tepes_offset_template": { "$ov": [ 0, -1600 ]},
+  "page_18_content@alpha_tepes_offset_template": { "$ov": [ 0, -1700 ]},
+  "page_19_content@alpha_tepes_offset_template": { "$ov": [ 0, -1800 ]},
+  "page_20_content@alpha_tepes_offset_template": { "$ov": [ 0, -1900 ]},
+  "page_21_content@alpha_tepes_offset_template": { "$ov": [ 0, -2000 ]},
+  "page_22_content@alpha_tepes_offset_template": { "$ov": [ 0, -2100 ]},
+  "page_23_content@alpha_tepes_offset_template": { "$ov": [ 0, -2200 ]},
+  "page_24_content@alpha_tepes_offset_template": { "$ov": [ 0, -2300 ]},
+  "page_25_content@alpha_tepes_offset_template": { "$ov": [ 0, -2400 ]},
+  "page_26_content@alpha_tepes_offset_template": { "$ov": [ 0, -2500 ]},
+  "page_27_content@alpha_tepes_offset_template": { "$ov": [ 0, -2600 ]},
+  "page_28_content@alpha_tepes_offset_template": { "$ov": [ 0, -2600 ]},
+  "base_content": {
     "type": "panel",
     "$current_page": 1,
-    "$left_button_offset_recipe": [ -89.4, 136.5 ],
-    "$right_button_offset_recipe": [ -34.4, 136.5 ],
     "$ashur_page_label": "(('\u00a7r' + $current_page) + '/' + ('\u00a7r' + $max_ashur_page))",
-    "$ashur_page_content": "('base_recipe_pages.page_' + $current_page + '_content')",
+    "$ashur_page_content": "('pagination.page_' + $current_page + '_content')",
     "controls": [
-      { "offset_content@$ashur_page_content": {  } },
+      { "offset_content@$ashur_page_content":{}},
       {
-        "tepes_previos_button@base_recipe_pages.base_toggle_button": {
-          "ignored": "($current_page = 1)",
-          "offset": "$left_button_offset_recipe",
-          "$toggle_group_forced_index": 0,
-          "$toggle_control_name": "('page_' + ($current_page - 1) + '_button')",
-          "$toggle_name": "('ashur_page' + ($current_page - 1) + '_' + $current_page)",
-          "$checked_bg": "base_recipe_pages.tepes_prev",
-          "$unchecked_bg": "base_recipe_pages.tepes_prev",
-          "$checked_hov_bg": "base_recipe_pages.tepes_previos_hover",
-          "$unchecked_hov_bg": "base_recipe_pages.tepes_previos_hover"
-        }
-      },
-      {
-        "tepes_next_button@base_recipe_pages.base_toggle_button": {
-          "ignored": "($current_page = $max_ashur_page)",
-          "offset": "$right_button_offset_recipe",
-          "$toggle_group_forced_index": 1,
-          "$toggle_control_name": "('page_' + ($current_page + 1) + '_button')",
-          "$toggle_name": "('ashur_page' + $current_page + '_' + ($current_page + 1))",
-          "$checked_bg": "base_recipe_pages.tepes_next",
-          "$unchecked_bg": "base_recipe_pages.tepes_next",
-          "$checked_hov_bg": "base_recipe_pages.tepes_next_hover",
-          "$unchecked_hov_bg": "base_recipe_pages.tepes_next_hover"
+        "stack@global.empty_stack_panel":{
+          "orientation": "horizontal",
+          "size": [65, 17],
+          "layer": 20,
+          "controls":[
+            {"buffer":{"type":"panel","size":[12, 0],"ignored": "(not ($current_page = 1))"}},
+            {
+              "tepes_left_button@pagination.base_toggle_button": {
+                "ignored": "($current_page = 1)",
+                "$toggle_group_forced_index": 0,
+                "$toggle_control_name": "('page_' + ($current_page - 1) + '_button')",
+                "$toggle_name": "('ashur_page' + ($current_page - 1) + '_' + $current_page)",
+                "$unchecked_bg": "pagination.tepes_left",
+                "$unchecked_hov_bg": "pagination.tepes_left_hover",
+                "$checked_bg": "pagination.tepes_left",
+                "$checked_hov_bg": "pagination.tepes_left_hover"
+              }
+            },
+            {
+              "buffer1":{
+                "type":"panel",
+                "size":[43, 17],
+                "controls":[      
+                  {
+                    "label": {
+                      "type": "label",
+                      "color": "white",
+                      "text": "$ashur_page_label",
+                      "anchor_from":"center",
+                      "anchor_to": "center"
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "tepes_right_button@pagination.base_toggle_button": {
+                "ignored": "($current_page = $max_ashur_page)",
+                "$toggle_group_forced_index": 1,
+                "$toggle_control_name": "('page_' + ($current_page + 1) + '_button')",
+                "$toggle_name": "('ashur_page' + $current_page + '_' + ($current_page + 1))",
+                "$unchecked_bg": "pagination.tepes_right",
+                "$unchecked_hov_bg": "pagination.tepes_right_hover",
+                "$checked_bg": "pagination.tepes_right",
+                "$checked_hov_bg": "pagination.tepes_right_hover"
+              }
+            }
+          ]
         }
       }
     ],
@@ -102,21 +113,23 @@
       }
     ]
   },
-  "base_page": {
+  "base_page_logic": {
     "type": "panel",
-    "$next-control": "('base_recipe_pages.page_' + ($current_page + 1))",
-    "controls": [
-      {"bypass@base_recipe_pages.base_page_panel":{"$current_page":"$current_page"}},
-      {"next@$next-control":{}}
-    ],
+    "$current_page": 1,
+    "$page_counter": "('pagination.page_' + ($current_page + 1))",
     "variables": [
       {
         "requires": "($current_page = $max_ashur_page)",
-        "$next-control": "global.empty_panel"
+        "$page_counter": "global.empty_panel"
       }
+    ],
+    "controls": [
+      {"link@pagination.base_content": {"$current_page": "$current_page"}},
+      {"numbers@$page_counter": {}}
     ],
     "bindings": [
       {
+        "ignored": "($current_page = 1)",
         "binding_type": "view",
         "source_control_name": "('page_' + $current_page + '_button')",
         "source_property_name": "#toggle_state",
@@ -124,84 +137,64 @@
       }
     ]
   },
-  "max_page_is_28@base_recipe_pages.base_page": {
-    "$is_in_recipe_inventory|default": false,
-    "$current_page": 1,
-    "$page_content|default": "screen_content.recipe_book",
-    "$max_ashur_page": 8
-  },
-  "page_2@base_recipe_pages.base_page": { "$current_page": 2 },
-  "page_3@base_recipe_pages.base_page": { "$current_page": 3 },
-  "page_4@base_recipe_pages.base_page": { "$current_page": 4 },
-  "page_5@base_recipe_pages.base_page": { "$current_page": 5 },
-  "page_6@base_recipe_pages.base_page": { "$current_page": 6 },
-  "page_7@base_recipe_pages.base_page": { "$current_page": 7 },
-  "page_8@base_recipe_pages.base_page": { "$current_page": 8 },
-  "page_9@base_recipe_pages.base_page": { "$current_page": 9 },
-  "page_10@base_recipe_pages.base_page": { "$current_page": 10 },
-  "page_11@base_recipe_pages.base_page": { "$current_page": 11 },
-  "page_12@base_recipe_pages.base_page": { "$current_page": 12 },
-  "page_13@base_recipe_pages.base_page": { "$current_page": 13 },
-  "page_14@base_recipe_pages.base_page": { "$current_page": 14 },
-  "page_15@base_recipe_pages.base_page": { "$current_page": 15 },
-  "page_16@base_recipe_pages.base_page": { "$current_page": 16 },
-  "page_17@base_recipe_pages.base_page": { "$current_page": 17 },
-  "page_18@base_recipe_pages.base_page": { "$current_page": 18 },
-  "page_19@base_recipe_pages.base_page": { "$current_page": 19 },
-  "page_20@base_recipe_pages.base_page": { "$current_page": 20 },
-  "page_21@base_recipe_pages.base_page": { "$current_page": 21 },
-  "page_22@base_recipe_pages.base_page": { "$current_page": 22 },
-  "page_23@base_recipe_pages.base_page": { "$current_page": 23 },
-  "page_24@base_recipe_pages.base_page": { "$current_page": 24 },
-  "page_25@base_recipe_pages.base_page": { "$current_page": 25 },
-  "page_26@base_recipe_pages.base_page": { "$current_page": 26 },
-  "page_27@base_recipe_pages.base_page": { "$current_page": 27 },
-  "page_28@base_recipe_pages.base_page": { "$current_page": 28 },
-  "tepes_prev": {
-    "type": "image",
-    "texture": "assets/minecraft/textures/gui/sprites/recipe_book/page_backward",
-    "size": [ 12, 17 ],
-    "layer": 2
-  },
-  "tepes_previos_hover": {
-    "type": "image",
-    "texture": "assets/minecraft/textures/gui/sprites/recipe_book/page_backward_highlighted",
-    "size": [ 12, 17 ],
-    "layer": 2
-  },
-  "tepes_next": {
-    "type": "image",
-    "texture": "assets/minecraft/textures/gui/sprites/recipe_book/page_forward",
-    "size": [ 12, 17 ],
-    "layer": 2
-  },
-  "tepes_next_hover": {
-    "type": "image",
-    "texture": "assets/minecraft/textures/gui/sprites/recipe_book/page_forward_highlighted",
-    "size": [ 12, 17 ],
-    "layer": 2
-  },
+  "page_2@pagination.base_page_logic": { "$current_page": 2 },
+  "page_3@pagination.base_page_logic": { "$current_page": 3 },
+  "page_4@pagination.base_page_logic": { "$current_page": 4 },
+  "page_5@pagination.base_page_logic": { "$current_page": 5 },
+  "page_6@pagination.base_page_logic": { "$current_page": 6 },
+  "page_7@pagination.base_page_logic": { "$current_page": 7 },
+  "page_8@pagination.base_page_logic": { "$current_page": 8 },
+  "page_9@pagination.base_page_logic": { "$current_page": 9 },
+  "page_10@pagination.base_page_logic": { "$current_page": 10 },
+  "page_11@pagination.base_page_logic": { "$current_page": 11 },
+  "page_12@pagination.base_page_logic": { "$current_page": 12 },
+  "page_13@pagination.base_page_logic": { "$current_page": 13 },
+  "page_14@pagination.base_page_logic": { "$current_page": 14 },
+  "page_15@pagination.base_page_logic": { "$current_page": 15 },
+  "page_16@pagination.base_page_logic": { "$current_page": 16 },
+  "page_17@pagination.base_page_logic": { "$current_page": 17 },
+  "page_18@pagination.base_page_logic": { "$current_page": 18 },
+  "page_19@pagination.base_page_logic": { "$current_page": 19 },
+  "page_20@pagination.base_page_logic": { "$current_page": 20 },
+  "page_21@pagination.base_page_logic": { "$current_page": 21 },
+  "page_22@pagination.base_page_logic": { "$current_page": 22 },
+  "page_23@pagination.base_page_logic": { "$current_page": 23 },
+  "page_24@pagination.base_page_logic": { "$current_page": 24 },
+  "page_25@pagination.base_page_logic": { "$current_page": 25 },
+  "page_26@pagination.base_page_logic": { "$current_page": 26 },
+  "page_27@pagination.base_page_logic": { "$current_page": 27 },
+  "page_28@pagination.base_page_logic": { "$current_page": 28 },
+  "texture_base@screen_content.image_element":{"offset":[1,1],"size":[12,17],"layer":2},
+  "tepes_left@texture_base"       :{"texture":"assets/minecraft/textures/gui/sprites/recipe_book/page_backward"},
+  "tepes_left_hover@texture_base" :{"texture":"assets/minecraft/textures/gui/sprites/recipe_book/page_backward_highlighted"},
+  "tepes_right@texture_base"      :{"texture":"assets/minecraft/textures/gui/sprites/recipe_book/page_forward"},
+  "tepes_right_hover@texture_base":{"texture":"assets/minecraft/textures/gui/sprites/recipe_book/page_forward_highlighted"},
   "base_toggle_button": {
     "type": "panel",
     "anchor_from": "center",
     "anchor_to": "center",
-    "size": [ 18, 20 ],
+    "size": [ 12, 17 ],
     "layer": 4,
     "controls": [
       {
         "$toggle_control_name@common.toggle": {
+          "offset":[-1, -1],
           "radio_toggle_group": true,
+          "focus_container": true,//im ngl the only one of these actually needed is the radio_toggle_group one
           "use_last_focus": true,
-          "focus_container": true,
-          "layer": 10,
           "controls": [
-            { "unchecked@$unchecked_bg": {  } },
-            { "unchecked_hover@$unchecked_hov_bg": {  } },
-            { "checked@$checked_bg": {  } },
-            { "checked_hover@$checked_hov_bg": {  } }
+            { "unchecked@$unchecked_bg"          : {} },
+            { "unchecked_hover@$unchecked_hov_bg": {} },
+            { "checked@$checked_bg"              : {} },
+            { "checked_hover@$checked_hov_bg"    : {} }
           ]
         }
       }
     ]
+  },
+  "max_page_is_28@pagination.base_page_logic": {
+    "$is_in_recipe_inventory|default": false,
+    "$page_content|default": "screen_content.recipe_book",
+    "$max_ashur_page": 8
   }
 }

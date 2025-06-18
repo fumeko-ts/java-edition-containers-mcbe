@@ -39,8 +39,6 @@
             {"2@pagination.max_page_is_28": {
                  "$max_ashur_page": 2,
                  "$page_content": "furnace_tab_blocks.base_panel",
-                 "$left_button_offset_recipe": [ -107.4, 135.5 ],
-                 "$right_button_offset_recipe": [ -52.4, 135.5 ],
                  "bindings": [ 
                   {
                     "binding_type": "view", 
