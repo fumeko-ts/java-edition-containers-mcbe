@@ -1,3 +1,23 @@
+// -------------------------------------------------------------------------
+// JAVA CONTAINERS BEDROCK license info
+// -------------------------------------------------------------------------
+// © 2025 Ashura Temps. All rights reserved.
+// 
+// YOU MAY:
+// - Use this pack normally in gameplay
+// - Modify vanilla textures (Mojang-owned)
+//
+// YOU MAY NOT:
+// - Reuse /ui or /atemp files and their contents in other packs 
+// - use this pack for porting purpose's or eanything of the sort
+// - use this as a base for a "client"
+// - Upload to Marketplace
+// - Post on MCPEDL without code obfuscation
+//
+// Full terms: https://github.com/fumeko-ts/java-edition-containers-mcbe
+// Vanilla assets remain Mojang AB property.
+// -------------------------------------------------------------------------
+
 {
   "namespace": "furnace_tab_blocks",
   "base_panel": {
@@ -7,43 +27,274 @@
     "anchor_from": "top_left",
     "controls": [
       {
-        "controls":{
+        "controls": {
           "type": "panel",
-          "offset": [-52, -38.6],
+          "offset": [ -52, -38.6 ],
           "controls": [
-                  {":1@cell_toggle.base": { "$index": 10, "offset": [0, 0], "$item": "block/black_glazed_terracotta", "$label": "Black Glazed Terracotta" }},
-                  {":2@cell_toggle.base": { "$index": 11, "offset": [25, 0], "$item": "block/blue_glazed_terracotta", "$label": "Blue Glazed Terracotta" }},
-                  {":3@cell_toggle.base": { "$index": 12, "offset": [50, 0], "$item": "block/brown_glazed_terracotta", "$label": "Brown Glazed Terracotta" }},
-                  {":4@cell_toggle.base": { "$index": 13, "offset": [75, 0], "$item": "block/cracked_deepslate_bricks", "$label": "Cracked Deepslate Bricks" }},
-                  {":5@cell_toggle.base": { "$index": 14, "offset": [100, 0], "$item": "block/cracked_deepslate_tiles", "$label": "Cracked Deepslate Tiles" }},
-                  {":6@cell_toggle.base": { "$index": 15, "offset": [0, 25], "$item": "block/cracked_nether_bricks", "$label": "Cracked Nether Bricks" }},
-                  {":7@cell_toggle.base": { "$index": 16, "offset": [25, 25], "$item": "block/cracked_polished_blackstone_bricks", "$label": "Cracked Polished Blackstone Bricks" }},
-                  {":8@cell_toggle.base": { "$index": 17, "offset": [50, 25], "$item": "block/cracked_stone_bricks", "$label": "Cracked Stone Bricks" }},
-                  {":9@cell_toggle.base": { "$index": 18, "offset": [75, 25], "$item": "block/cyan_glazed_terracotta", "$label": "Cyan Glazed Terracotta" }},
-                  {":10@cell_toggle.base": { "$index": 19, "offset": [100, 25], "$item": "block/deepslate", "$label": "Deepslate" }},
-                  {":11@cell_toggle.base": { "$index": 20, "offset": [0, 50], "$item": "block/glass", "$label": "Glass" }},
-                  {":12@cell_toggle.base": { "$index": 21, "offset": [25, 50], "$item": "block/gray_glazed_terracotta", "$label": "Gray Glazed Terracotta" }},
-                  {":13@cell_toggle.base": { "$index": 22, "offset": [50, 50], "$item": "block/green_glazed_terracotta", "$label": "Green Glazed Terracotta" }},
-                  {":14@cell_toggle.base": { "$index": 23, "offset": [75, 50], "$item": "item/leaf_litter", "$label": "Leaf Litter" }},
-                  {":15@cell_toggle.base": { "$index": 24, "offset": [100, 50], "$item": "block/light_blue_glazed_terracotta", "$label": "Light Blue Glazed Terracotta" }},
-                  {":16@cell_toggle.base": { "$index": 25, "offset": [0, 75], "$item": "block/light_gray_glazed_terracotta", "$label": "Light Gray Glazed Terracotta" }},
-                  {":17@cell_toggle.base": { "$index": 26, "offset": [25, 75], "$item": "block/lime_glazed_terracotta", "$label": "Lime Glazed Terracotta" }},
-                  {":18@cell_toggle.base": { "$index": 27, "offset": [50, 75], "$item": "block/magenta_glazed_terracotta", "$label": "Magenta Glazed Terracotta" }},
-                  {":19@cell_toggle.base": { "$index": 28, "offset": [75, 75], "$item": "block/orange_glazed_terracotta", "$label": "Orange Glazed Terracotta" }},
-                  {":20@cell_toggle.base": { "$index": 29, "offset": [100, 75], "$item": "block/pink_glazed_terracotta", "$label": "Pink Glazed Terracotta" }},
-                  {":21@cell_toggle.base": { "$index": 30, "offset": [0, 100], "$item": "block/purple_glazed_terracotta", "$label": "Purple Glazed Terracotta" }},
-                  {":22@cell_toggle.base": { "$index": 31, "offset": [25, 100], "$item": "block/red_glazed_terracotta", "$label": "Red Glazed Terracotta" }},
-                  {":23@cell_toggle.base": { "$index": 32, "offset": [50, 100], "$item": "item/redstone", "$label": "Redstone Dust" }},
-                  {":24@cell_toggle.base": { "$index": 33, "offset": [75, 100], "$item": "block/smooth_basalt", "$label": "Smooth Basalt" }},
-                  {":25@cell_toggle.base": { "$index": 34, "offset": [100, 100], "$item": "block/smooth_quartz_block", "$label": "Smooth Quartz Block" }},
-                  {":26@cell_toggle.base": { "$index": 35, "offset": [0, 125], "$item": "block/smooth_red_sandstone", "$label": "Smooth Red Sandstone" }},
-                  {":27@cell_toggle.base": { "$index": 36, "offset": [25, 125], "$item": "block/smooth_sandstone", "$label": "Smooth Sandstone" }},
-                  {":28@cell_toggle.base": { "$index": 37, "offset": [50, 125], "$item": "block/smooth_stone", "$label": "Smooth Stone" }},
-                  {":29@cell_toggle.base": { "$index": 38, "offset": [75, 125], "$item": "block/sponge", "$label": "Sponge" }},
-                  {":30@cell_toggle.base": { "$index": 39, "offset": [100, 125], "$item": "block/stone", "$label": "Stone" }},
-                  {":31@cell_toggle.base": { "$index": 40, "offset": [0, 150], "$item": "block/terracotta", "$label": "Terracotta" }},
-                  {":32@cell_toggle.base": { "$index": 41, "offset": [25, 150], "$item": "block/white_glazed_terracotta", "$label": "White Glazed Terracotta" }},
-                  {":33@cell_toggle.base": { "$index": 42, "offset": [50, 150], "$item": "block/yellow_glazed_terracotta", "$label": "Yellow Glazed Terracotta" }}
+            {
+              ":1@cell_toggle.base": {
+                "$index": 10,
+                "offset": [ 0, 0 ],
+                "$item": "block/black_glazed_terracotta",
+                "$label": "Black Glazed Terracotta"
+              }
+            },
+            {
+              ":2@cell_toggle.base": {
+                "$index": 11,
+                "offset": [ 25, 0 ],
+                "$item": "block/blue_glazed_terracotta",
+                "$label": "Blue Glazed Terracotta"
+              }
+            },
+            {
+              ":3@cell_toggle.base": {
+                "$index": 12,
+                "offset": [ 50, 0 ],
+                "$item": "block/brown_glazed_terracotta",
+                "$label": "Brown Glazed Terracotta"
+              }
+            },
+            {
+              ":4@cell_toggle.base": {
+                "$index": 13,
+                "offset": [ 75, 0 ],
+                "$item": "block/cracked_deepslate_bricks",
+                "$label": "Cracked Deepslate Bricks"
+              }
+            },
+            {
+              ":5@cell_toggle.base": {
+                "$index": 14,
+                "offset": [ 100, 0 ],
+                "$item": "block/cracked_deepslate_tiles",
+                "$label": "Cracked Deepslate Tiles"
+              }
+            },
+            {
+              ":6@cell_toggle.base": {
+                "$index": 15,
+                "offset": [ 0, 25 ],
+                "$item": "block/cracked_nether_bricks",
+                "$label": "Cracked Nether Bricks"
+              }
+            },
+            {
+              ":7@cell_toggle.base": {
+                "$index": 16,
+                "offset": [ 25, 25 ],
+                "$item": "block/cracked_polished_blackstone_bricks",
+                "$label": "Cracked Polished Blackstone Bricks"
+              }
+            },
+            {
+              ":8@cell_toggle.base": {
+                "$index": 17,
+                "offset": [ 50, 25 ],
+                "$item": "block/cracked_stone_bricks",
+                "$label": "Cracked Stone Bricks"
+              }
+            },
+            {
+              ":9@cell_toggle.base": {
+                "$index": 18,
+                "offset": [ 75, 25 ],
+                "$item": "block/cyan_glazed_terracotta",
+                "$label": "Cyan Glazed Terracotta"
+              }
+            },
+            {
+              ":10@cell_toggle.base": {
+                "$index": 19,
+                "offset": [ 100, 25 ],
+                "$item": "block/deepslate",
+                "$label": "Deepslate"
+              }
+            },
+            {
+              ":11@cell_toggle.base": {
+                "$index": 20,
+                "offset": [ 0, 50 ],
+                "$item": "block/glass",
+                "$label": "Glass"
+              }
+            },
+            {
+              ":12@cell_toggle.base": {
+                "$index": 21,
+                "offset": [ 25, 50 ],
+                "$item": "block/gray_glazed_terracotta",
+                "$label": "Gray Glazed Terracotta"
+              }
+            },
+            {
+              ":13@cell_toggle.base": {
+                "$index": 22,
+                "offset": [ 50, 50 ],
+                "$item": "block/green_glazed_terracotta",
+                "$label": "Green Glazed Terracotta"
+              }
+            },
+            {
+              ":14@cell_toggle.base": {
+                "$index": 23,
+                "offset": [ 75, 50 ],
+                "$item": "item/leaf_litter",
+                "$label": "Leaf Litter"
+              }
+            },
+            {
+              ":15@cell_toggle.base": {
+                "$index": 24,
+                "offset": [ 100, 50 ],
+                "$item": "block/light_blue_glazed_terracotta",
+                "$label": "Light Blue Glazed Terracotta"
+              }
+            },
+            {
+              ":16@cell_toggle.base": {
+                "$index": 25,
+                "offset": [ 0, 75 ],
+                "$item": "block/light_gray_glazed_terracotta",
+                "$label": "Light Gray Glazed Terracotta"
+              }
+            },
+            {
+              ":17@cell_toggle.base": {
+                "$index": 26,
+                "offset": [ 25, 75 ],
+                "$item": "block/lime_glazed_terracotta",
+                "$label": "Lime Glazed Terracotta"
+              }
+            },
+            {
+              ":18@cell_toggle.base": {
+                "$index": 27,
+                "offset": [ 50, 75 ],
+                "$item": "block/magenta_glazed_terracotta",
+                "$label": "Magenta Glazed Terracotta"
+              }
+            },
+            {
+              ":19@cell_toggle.base": {
+                "$index": 28,
+                "offset": [ 75, 75 ],
+                "$item": "block/orange_glazed_terracotta",
+                "$label": "Orange Glazed Terracotta"
+              }
+            },
+            {
+              ":20@cell_toggle.base": {
+                "$index": 29,
+                "offset": [ 100, 75 ],
+                "$item": "block/pink_glazed_terracotta",
+                "$label": "Pink Glazed Terracotta"
+              }
+            },
+            {
+              ":21@cell_toggle.base": {
+                "$index": 30,
+                "offset": [ 0, 100 ],
+                "$item": "block/purple_glazed_terracotta",
+                "$label": "Purple Glazed Terracotta"
+              }
+            },
+            {
+              ":22@cell_toggle.base": {
+                "$index": 31,
+                "offset": [ 25, 100 ],
+                "$item": "block/red_glazed_terracotta",
+                "$label": "Red Glazed Terracotta"
+              }
+            },
+            {
+              ":23@cell_toggle.base": {
+                "$index": 32,
+                "offset": [ 50, 100 ],
+                "$item": "item/redstone",
+                "$label": "Redstone Dust"
+              }
+            },
+            {
+              ":24@cell_toggle.base": {
+                "$index": 33,
+                "offset": [ 75, 100 ],
+                "$item": "block/smooth_basalt",
+                "$label": "Smooth Basalt"
+              }
+            },
+            {
+              ":25@cell_toggle.base": {
+                "$index": 34,
+                "offset": [ 100, 100 ],
+                "$item": "block/smooth_quartz_block",
+                "$label": "Smooth Quartz Block"
+              }
+            },
+            {
+              ":26@cell_toggle.base": {
+                "$index": 35,
+                "offset": [ 0, 125 ],
+                "$item": "block/smooth_red_sandstone",
+                "$label": "Smooth Red Sandstone"
+              }
+            },
+            {
+              ":27@cell_toggle.base": {
+                "$index": 36,
+                "offset": [ 25, 125 ],
+                "$item": "block/smooth_sandstone",
+                "$label": "Smooth Sandstone"
+              }
+            },
+            {
+              ":28@cell_toggle.base": {
+                "$index": 37,
+                "offset": [ 50, 125 ],
+                "$item": "block/smooth_stone",
+                "$label": "Smooth Stone"
+              }
+            },
+            {
+              ":29@cell_toggle.base": {
+                "$index": 38,
+                "offset": [ 75, 125 ],
+                "$item": "block/sponge",
+                "$label": "Sponge"
+              }
+            },
+            {
+              ":30@cell_toggle.base": {
+                "$index": 39,
+                "offset": [ 100, 125 ],
+                "$item": "block/stone",
+                "$label": "Stone"
+              }
+            },
+            {
+              ":31@cell_toggle.base": {
+                "$index": 40,
+                "offset": [ 0, 150 ],
+                "$item": "block/terracotta",
+                "$label": "Terracotta"
+              }
+            },
+            {
+              ":32@cell_toggle.base": {
+                "$index": 41,
+                "offset": [ 25, 150 ],
+                "$item": "block/white_glazed_terracotta",
+                "$label": "White Glazed Terracotta"
+              }
+            },
+            {
+              ":33@cell_toggle.base": {
+                "$index": 42,
+                "offset": [ 50, 150 ],
+                "$item": "block/yellow_glazed_terracotta",
+                "$label": "Yellow Glazed Terracotta"
+              }
+            }
           ]
         }
       }

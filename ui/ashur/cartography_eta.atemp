@@ -1,3 +1,23 @@
+// -------------------------------------------------------------------------
+// JAVA CONTAINERS BEDROCK license info
+// -------------------------------------------------------------------------
+// © 2025 Ashura Temps. All rights reserved.
+// 
+// YOU MAY:
+// - Use this pack normally in gameplay
+// - Modify vanilla textures (Mojang-owned)
+//
+// YOU MAY NOT:
+// - Reuse /ui or /atemp files and their contents in other packs 
+// - use this pack for porting purpose's or eanything of the sort
+// - use this as a base for a "client"
+// - Upload to Marketplace
+// - Post on MCPEDL without code obfuscation
+//
+// Full terms: https://github.com/fumeko-ts/java-edition-containers-mcbe
+// Vanilla assets remain Mojang AB property.
+// -------------------------------------------------------------------------
+
 {
   "namespace": "cartography_eta",
   "cartography_label": {
@@ -231,10 +251,8 @@
       },
       {
         "result_item_slot@cartography_eta.cartography_item_slot": {
-          "$25x25_slot": true,
           "anchor_from": "right_middle",
           "anchor_to": "right_middle",
-          "$output": true,
           "$item_collection_name": "cartography_result_items",
           "$button_ref": "cartography.cartography_output_slot_button",
           "size": [ 25, 25 ],

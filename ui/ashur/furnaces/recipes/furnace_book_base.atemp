@@ -1,3 +1,23 @@
+// -------------------------------------------------------------------------
+// JAVA CONTAINERS BEDROCK license info
+// -------------------------------------------------------------------------
+// © 2025 Ashura Temps. All rights reserved.
+// 
+// YOU MAY:
+// - Use this pack normally in gameplay
+// - Modify vanilla textures (Mojang-owned)
+//
+// YOU MAY NOT:
+// - Reuse /ui or /atemp files and their contents in other packs 
+// - use this pack for porting purpose's or eanything of the sort
+// - use this as a base for a "client"
+// - Upload to Marketplace
+// - Post on MCPEDL without code obfuscation
+//
+// Full terms: https://github.com/fumeko-ts/java-edition-containers-mcbe
+// Vanilla assets remain Mojang AB property.
+// -------------------------------------------------------------------------
+
 {
   "namespace": "furnace_book_base",
   "recipe_book": {
@@ -15,50 +35,57 @@
           "anchor_to": "top_left",
           "anchor_from": "top_left",
           "controls": [
-            { "search@furnace_guide_tabs.search_tab": {} },
-            { "atemp@furnace_guide_tabs.food_tab": {} },
-            { "equipment_tab@furnace_guide_tabs.blocks_tab": {} },
-            { "nature_tab@furnace_guide_tabs.ores_tab": {} }
+            { "search@furnace_guide_tabs.search_tab": {  } },
+            { "atemp@furnace_guide_tabs.food_tab": {  } },
+            { "equipment_tab@furnace_guide_tabs.blocks_tab": {  } },
+            { "nature_tab@furnace_guide_tabs.ores_tab": {  } }
           ]
         }
       },
       {
-        "root_panel@global.root_panel": { // im ngl i have 0 clue why i set no size to this but it seems to work so im just leaving it as is
+        "root_panel@global.root_panel": {
           "$is_in_recipe_inventory": false,
           "controls": [
-            {"1@furnace_tab_food.base_panel": {
-                 "bindings": [ 
+            {
+              "1@furnace_tab_food.base_panel": {
+                "bindings": [
                   {
-                    "binding_type": "view", 
-                    "source_control_name": "furnace_food_tab", 
-                    "source_property_name": "#toggle_state", 
+                    "binding_type": "view",
+                    "source_control_name": "furnace_food_tab",
+                    "source_property_name": "#toggle_state",
                     "target_property_name": "#visible"
-                  } 
-                ]} 
+                  }
+                ]
+              }
             },
-            {"2@pagination.max_page_is_28": {
-                 "$max_ashur_page": 2,
-                 "$page_content": "furnace_tab_blocks.base_panel",
-                 "bindings": [ 
+            {
+              "2@pagination.max_page_is_28": {
+                "offset": [-1, 0],
+                "$max_ashur_page": 2,
+                "$page_content": "furnace_tab_blocks.base_panel",
+                "bindings": [
                   {
-                    "binding_type": "view", 
-                    "source_control_name": "furnace_blocks_tab", 
-                    "source_property_name": "#toggle_state", 
+                    "binding_type": "view",
+                    "source_control_name": "furnace_blocks_tab",
+                    "source_property_name": "#toggle_state",
                     "target_property_name": "#visible"
-                  } 
-                ]} 
+                  }
+                ]
+              }
             },
-            {"3@furnace_tab_ores.base_panel": {
-                 "bindings": [ 
+            {
+              "3@furnace_tab_ores.base_panel": {
+                "bindings": [
                   {
-                    "binding_type": "view", 
-                    "source_control_name": "furnace_ores_tab", 
-                    "source_property_name": "#toggle_state", 
+                    "binding_type": "view",
+                    "source_control_name": "furnace_ores_tab",
+                    "source_property_name": "#toggle_state",
                     "target_property_name": "#visible"
-                  } 
-                ]} 
+                  }
+                ]
+              }
             },
-            {"3@screen_content.recipe_book": { "layer": 1 } }
+            { "3@screen_content.recipe_book": { "layer": 1 } }
           ]
         }
       }
