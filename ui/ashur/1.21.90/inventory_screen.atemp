@@ -1,0 +1,64 @@
+{
+  "namespace": "inventory_screen",
+  "screen_base@global.root_panel": {
+    "controls": [
+      {
+        "base_horizontal_Stack@global.empty_stack_panel": {
+          "orientation": "horizontal",
+          "anchor_to": "center",
+          "anchor_from": "center",
+          "size": [355, 166],
+          "layer": 1,
+          "controls": [
+            {"recipe_book@inventory_screen.recipe_book": {}},
+            {
+              "buffer_1": { "type": "panel", "size": [2, "default"] }
+            },
+            {"inventory@inventory_screen.inventory": {}}
+          ]
+        }
+      }
+    ]
+  },
+  "inventory": {
+    "type": "panel",
+    "size": [176, 166],
+    "controls": [
+      {
+        "root_panel@global.root_panel": {
+          "controls": [
+            {
+              "container@screen_content.somali": {
+                "$inventory_screen": true,
+                "contained"        : true
+              }
+            },
+            {"equipment_panel@inventory_top_half.player_equipment_panel":{}},
+            {"container_grid@inventory_compressed_stack.inventory_grid_stack":{}}
+          ]
+        }
+      }
+    ]
+  },
+  "recipe_book": {
+    "type": "panel",
+    "size": [147, 166],
+    "controls": [
+      {"tab_stack@crafting_tab_stack.tab_stack": {}},
+      {
+        "root_panel@global.root_panel": {
+          "controls": [
+            { "recipe_base@screen_content.recipe_book": {"layer": 1} },
+            {
+              "base_page_control@pagination.max_page_is_28": {
+                "$is_in_recipe_inventory": true,
+                "$max_ashur_page": 28,
+                "$page_content": "recipe_grid.recipe_grid"
+              }
+            }
+          ]
+        }
+      }
+    ]
+  }
+}

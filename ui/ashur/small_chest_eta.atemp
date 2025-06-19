@@ -1,108 +1,74 @@
-// -------------------------------------------------------------------------
-// JAVA CONTAINERS BEDROCK license info
-// -------------------------------------------------------------------------
-// © 2025 Ashura Temps. All rights reserved.
-// 
-// YOU MAY:
-// - Use this pack normally in gameplay
-// - Modify vanilla textures (Mojang-owned)
-//
-// YOU MAY NOT:
-// - Reuse /ui or /atemp files and their contents in other packs 
-// - use this pack for porting purpose's or eanything of the sort
-// - use this as a base for a "client"
-// - Upload to Marketplace
-// - Post on MCPEDL without code obfuscation
-//
-// Full terms: https://github.com/fumeko-ts/java-edition-containers-mcbe
-// Vanilla assets remain Mojang AB property.
-// -------------------------------------------------------------------------
-
 {
   "namespace": "small_chest_eta",
-  "small_chest_label": {
-    "type": "label",
-    "offset": [ -65.8, 5 ],
-    "anchor_from": "top_middle",
-    "anchor_to": "top_middle",
-    "text": "$container_title",
-    "$container_title": "Chest",
-    "color": "$title_text_color",
-    "layer": 12
+
+  "chest_grid_item@common.container_item": {
+    "$item_collection_name": "container_items"
   },
-  "chest_grid_item@common.container_item": { "$item_collection_name": "container_items" },
-  "small_chest_grid": {
-    "type": "grid",
-    "size": [ 162, 54 ],
-    "anchor_from": "top_left",
-    "anchor_to": "top_left",
-    "grid_dimensions": [ 9, 3 ],
-    "grid_item_template": "small_chest_eta.chest_grid_item",
-    "collection_name": "container_items"
-  },
-  "small_chest_panel_top_half": {
-    "type": "panel",
-    "size": [ "100%", "50%" ],
-    "offset": [ 0, 8 ],
-    "anchor_to": "top_left",
-    "anchor_from": "top_left",
-    "controls": [
-      {
-        "small_chest_grid@small_chest_eta.small_chest_grid": { "offset": [ 7, 9 ] }
-      }
-    ]
-  },
-  "chest_panel": {
-    "type": "panel",
-    "layer": 5,
-    "controls": [
-      {
-        "small_chest_panel_top_half@small_chest_eta.small_chest_panel_top_half": {  }
-      },
-      {
-        "inventory_panel_bottom_half_with_label@common.inventory_panel_bottom_half_with_label": { "offset": [ 0, -3 ] }
-      },
-      {
-        "hotbar_grid@common.hotbar_grid_template": { "offset": [ 0, -7 ] }
-      },
-      {
-        "inventory_take_progress_icon_button@common.inventory_take_progress_icon_button": {  }
-      },
-      {
-        "flying_item_renderer@common.flying_item_renderer": { "layer": 15 }
-      }
-    ]
-  },
-  "root_panel@common.empty_panel": {
-    "size": [ 176, 166 ],
-    "layer": 1,
-    "controls": [
-      {
-        "small_chest_label@small_chest_eta.small_chest_label": {  }
-      },
-      {
-        "common_panel@screen_content.somali": { "$barrel_screen": true }
-      },
-      { "chest_panel@chest_panel": {  } },
-      {
-        "inventory_selected_icon_button@global.inventory_selected_icon_button": {  }
-      },
-      { "gamepad_cursor@common.gamepad_cursor_button": {  } }
-    ]
-  },
+
   "small_chest_panel": {
     "type": "panel",
     "controls": [
+      { "container_gamepad_helpers@common.container_gamepad_helpers": {} },
+      { "selected_item_details_factory@common.selected_item_details_factory": {} },
+      { "item_lock_notification_factory@common.item_lock_notification_factory": {} },
       {
-        "container_gamepad_helpers@common.container_gamepad_helpers": {  }
-      },
-      {
-        "selected_item_details_factory@common.selected_item_details_factory": {  }
-      },
-      {
-        "item_lock_notification_factory@common.item_lock_notification_factory": {  }
-      },
-      { "root_panel@root_panel": {  } }
+        "root_panel@common.empty_panel": {
+          "size": [176, 166],
+          "layer": 1,
+          "controls": [
+            {
+              "small_chest_label": {
+                "type": "label",
+                "offset": [-65.8, 5],
+                "anchor_from": "top_middle",
+                "anchor_to": "top_middle",
+                "text": "$container_title",
+                "$container_title": "Chest",
+                "color": "$title_text_color",
+                "layer": 12
+              }
+            },
+            {"common_panel@screen_content.somali": {"$barrel_screen": true}},
+            {
+              "chest_panel": {
+                "type": "panel",
+                "layer": 5,
+                "controls": [
+                  {
+                    "small_chest_panel_top_half": {
+                      "type": "panel",
+                      "size": ["100%", "50%"],
+                      "offset": [0, 8],
+                      "anchor_to": "top_left",
+                      "anchor_from": "top_left",
+                      "controls": [
+                        {
+                          "small_chest_grid": {
+                            "type": "grid",
+                            "size": [162, 54],
+                            "offset": [7, 9],
+                            "anchor_from": "top_left",
+                            "anchor_to": "top_left",
+                            "grid_dimensions": [9, 3],
+                            "grid_item_template": "small_chest_eta.chest_grid_item",
+                            "collection_name": "container_items"
+                          }
+                        }
+                      ]
+                    }
+                  },
+                  {"inventory_panel_bottom_half_with_label@common.inventory_panel_bottom_half_with_label": {"offset": [0, -3]}},
+                  {"hotbar_grid@common.hotbar_grid_template": {"offset": [0, -7]}},
+                  {"inventory_take_progress_icon_button@common.inventory_take_progress_icon_button": {}},
+                  {"flying_item_renderer@common.flying_item_renderer": {"layer": 15}}
+                ]
+              }
+            },
+            {"inventory_selected_icon_button@global.inventory_selected_icon_button": {}},
+            {"gamepad_cursor@common.gamepad_cursor_button": {}}
+          ]
+        }
+      }
     ]
   }
 }

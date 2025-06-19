@@ -208,7 +208,7 @@
         "selected_item_lock_overlay@common.inventory_selected_item_lock_overlay": {  }
       },
       {
-        "hover_text@tooltip_renderer_desktop.hover_text_button_no_collection": {
+        "hover_text@global.hover_text": {
           "layer": 59,
           "bindings": [
             {
@@ -439,6 +439,14 @@
         "mapping_type": "global"
       }
     ]
+  },
+  "hover_text": {
+    "$hover_text_max_width|default": 0, 
+    "type": "custom",
+    "renderer": "hover_text_renderer",
+    "hover_text_max_width": "$hover_text_max_width",
+    "layer": 5,
+    "allow_clipping": false
   },
   "spacing_1v": {
     "type": "panel",

@@ -1,0 +1,32 @@
+{
+  "namespace": "inventory_compressed_stack",
+  "inventory_grid_stack": {
+    "type": "panel",
+    "size": [176, 166],
+    "controls": [
+      {
+        "cell_stack@global.empty_stack_panel": {
+          "orientation": "vertical",
+          "size": [162, 83],
+          "anchor_to": "bottom_middle",
+          "anchor_from":"bottom_middle",
+          "controls": [
+            {
+              "inventory_grid": {
+                "type": "grid",
+                "size": [162, 54],
+                "grid_dimensions": [9, 3],
+                "$item_collection_name": "inventory_items",
+                "grid_item_template": "global.grid_item",
+                "collection_name": "inventory_items"
+              }
+            },
+            {"buffer_2": {"type": "panel","size": ["default", 4]}},
+            {"hotbar@global.hotbar": {}},
+            {"buffer_3": {"type": "panel","size": ["default", 7]}}
+          ]
+        }
+      }
+    ]
+  }
+}

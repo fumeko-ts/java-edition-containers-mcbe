@@ -27,10 +27,9 @@
     "$is_hover|default": false,
     "controls": [
       {
-        "hover_text@tooltip_renderer_desktop.hover_text_button_no_collection": {
+        "hover_text@global.hover_text": { "property_bag":{"#over_text": "$label"},
           "layer": 9,
-          "ignored": "($is_hover = false)",
-          "$hover_text": "$label"
+          "ignored": "($is_hover = false)"
         }
       },
       {

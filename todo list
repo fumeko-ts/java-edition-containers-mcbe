@@ -1,71 +1,14 @@
-(tab catagory) all
-'contains all the below'
+survival inventory
+search | 17
+wepons | 2
+construction | 5
+nature | 4
+redstone | 8
 
-(tab catagory) food tab
 
-baked potato
-steak
-cooked chicken
-cooked cod
-cooked mutton
-cooked porkchop
-cooked rabbit
-cooked salmon
-dried kelp
-
-(tab catagory) blocks
-
-black glazed terracota
-blue glazed terracota
-brown glazed terracota
-cracked deepslate bricks
-cracked deepslate tiles
-cracked nether bricks
-cracked polished blackstone bricks
-cracked stone bricks
-cyan glazed terracota
-deepslate
-glass
-gray glazed terracota
-green glazed terracota
-leaf litter
-light blue glazed terracota
-light gray glazed terracota
-lime glazed terracota
-magenta glazed terracota
-orange glazed terracota
-pink glazed terracota
-purple glazed terracota
-red glazed terracota
-redstone dust
-smooth basalt
-smooth quarts block
-smooth red sandstone
-smooth sandstone
-smooth stone 
-sponge
-stone
-terracotta
-white glazed terracota
-yellow glazed terracota
-
-(tab catagory) materials
-
-brick
-charcoal
-coal 
-copper ingot
-diamond
-emerald
-gold ingot
-gold nugget
-green dye
-iron ingot
-iron nugget
-lapis lazuli
-lime dye
-nether brick
-netherite scrap
-popped chorus fruit
-nether quartz
-resin brick
+survival crafting table
+search | 28
+wepons | 8
+construction | 21
+nature | 4
+redstone | 15
