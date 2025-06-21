@@ -7,37 +7,76 @@
           "orientation": "horizontal",
           "anchor_to": "center",
           "anchor_from": "center",
-          "size": [355, 166],
+          "min_size": [176, 166],
+          "max_size": [325, 166],
           "layer": 1,
           "controls": [
-            {"recipe_book@inventory_screen.recipe_book": {}},
             {
-              "buffer_1": { "type": "panel", "size": [2, "default"] }
+              "recipe_book@inventory_screen.recipe_book": {
+                "bindings":[
+                  {
+                    "binding_type": "global",
+                    "binding_name": "(not #is_survival_layout)",
+                    "binding_name_override": "#visible"
+                  }
+                ]
+              }
+            },
+            {
+              "buffer_1": { 
+                "type": "panel", 
+                "size": [2, "default"],
+                "bindings":[
+                  {
+                    "binding_type": "global",
+                    "binding_name": "(not #is_survival_layout)",
+                    "binding_name_override": "#visible"
+                  }
+                ]
+              }
             },
             {"inventory@inventory_screen.inventory": {}}
-          ]
+          ],
+          "bindings": [
+              {
+                "binding_type": "global",
+                "binding_name": "(not #is_creative_mode)",
+                "binding_name_override": "#visible"
+              }
+           ]
         }
-      }
+      },
+      /*{
+         "creative@creative_inventory.creative_content":{
+            "bindings": [
+              {
+                "binding_type": "global",
+                "binding_name": "#is_creative_mode",
+                "binding_name_override": "#visible"
+              }
+           ]
+         }
+      },*/
+      { "flying_item_renderer@common.flying_item_renderer": { "layer": 21 } },
+      { "bundle_touch_tooltip@gameplay.bundle_touch_tooltip": {} },
+      { "bundle_cursor_tooltip@gameplay.bundle_cursor_tooltip": {} },
+      { "red_hold_icon@common.inventory_take_progress_icon_button": {} },
+      { "red_icon@global.inventory_selected_icon_button": {} },
+      { "gamepad_cursor@common.gamepad_cursor_button": {} }
     ]
   },
-  "inventory": {
-    "type": "panel",
+  "inventory@global.root_panel": {
     "size": [176, 166],
     "controls": [
       {
-        "root_panel@global.root_panel": {
-          "controls": [
-            {
-              "container@screen_content.somali": {
-                "$inventory_screen": true,
-                "contained"        : true
-              }
-            },
-            {"equipment_panel@inventory_top_half.player_equipment_panel":{}},
-            {"container_grid@inventory_compressed_stack.inventory_grid_stack":{}}
-          ]
+        "container@screen_content.somali": {
+          "$inventory_screen": true,
+          "contained"        : true
         }
-      }
+      },
+      {"inventory_crafting_stack@inventory_specific.inventory_crafting_stack":{}},
+      {"equipment_panel@inventory_top_half.player_equipment_panel":{}},
+      {"container_grid@inventory_compressed_stack.inventory_grid_stack":{}}
     ]
   },
   "recipe_book": {

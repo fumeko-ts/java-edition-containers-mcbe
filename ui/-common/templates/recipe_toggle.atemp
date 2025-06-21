@@ -29,19 +29,17 @@
     "$template_toggle": "survival_inventory.layout_template_toggle",
     "$allow_controller_back_button_mapping": "$is_ps4"
   },
-  "toggle_panel": {
+  "recipe_layout_toggle": {
     "type": "panel",
     "size": [ 22, 20 ],
-    "anchor_to": "top_left",
-    "anchor_from": "top_left",
     "layer": 10,
     "controls": [
       {
         "recipe_toggle": {
           "type": "panel",
           "size": [ 22, 20 ],
-          "anchor_to": "top_left",
-          "anchor_from": "top_left",
+          "anchor_to": "center",
+          "anchor_from": "center",
           "controls": [
             {
               "recipe_book_layout_toggle@recipe_toggle.layout_toggle": {
@@ -67,8 +65,8 @@
         "survival_toggle": {
           "type": "panel",
           "size": [ 22, 20 ],
-          "anchor_to": "top_left",
-          "anchor_from": "top_left",
+          "anchor_to": "center",
+          "anchor_from": "center",
           "controls": [
             {
               "survival_inventory_toggle@recipe_toggle.layout_toggle": {

@@ -909,7 +909,6 @@
     ]
   },
   "survival_container_slot_button@common.container_slot_button_prototype": {
-    "$recipe_book": true,
     "$button_take_half_place_one|default": "button.container_take_half_place_one",
     "$button_auto_place|default": "button.container_auto_place",
     "$button_take_all_place_all|default": "button.container_take_all_place_all",

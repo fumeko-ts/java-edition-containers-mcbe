@@ -16,6 +16,35 @@
     ]
   },
 
+  "page_1_content@page_offset_template": { "$ov": [0, 0] },
+  "page_2_content@page_offset_template": { "$ov": [0, -100] },
+  "page_3_content@page_offset_template": { "$ov": [0, -200] },
+  "page_4_content@page_offset_template": { "$ov": [0, -300] },
+  "page_5_content@page_offset_template": { "$ov": [0, -400] },
+  "page_6_content@page_offset_template": { "$ov": [0, -500] },
+  "page_7_content@page_offset_template": { "$ov": [0, -600] },
+  "page_8_content@page_offset_template": { "$ov": [0, -700] },
+  "page_9_content@page_offset_template": { "$ov": [0, -800] },
+  "page_10_content@page_offset_template": { "$ov": [0, -900] },
+  "page_11_content@page_offset_template": { "$ov": [0, -1000] },
+  "page_12_content@page_offset_template": { "$ov": [0, -1100] },
+  "page_13_content@page_offset_template": { "$ov": [0, -1200] },
+  "page_14_content@page_offset_template": { "$ov": [0, -1300] },
+  "page_15_content@page_offset_template": { "$ov": [0, -1400] },
+  "page_16_content@page_offset_template": { "$ov": [0, -1500] },
+  "page_17_content@page_offset_template": { "$ov": [0, -1600] },
+  "page_18_content@page_offset_template": { "$ov": [0, -1700] },
+  "page_19_content@page_offset_template": { "$ov": [0, -1800] },
+  "page_20_content@page_offset_template": { "$ov": [0, -1900] },
+  "page_21_content@page_offset_template": { "$ov": [0, -2000] },
+  "page_22_content@page_offset_template": { "$ov": [0, -2100] },
+  "page_23_content@page_offset_template": { "$ov": [0, -2200] },
+  "page_24_content@page_offset_template": { "$ov": [0, -2300] },
+  "page_25_content@page_offset_template": { "$ov": [0, -2400] },
+  "page_26_content@page_offset_template": { "$ov": [0, -2500] },
+  "page_27_content@page_offset_template": { "$ov": [0, -2600] },
+  "page_28_content@page_offset_template": { "$ov": [0, -2600] },
+
   "base_content": {
     "type": "panel",
     "$current_page": 1,
@@ -32,7 +61,7 @@
           "size": [111, 30],
           "offset": [8, 0],
           "controls": [
-            {"buffer_5":{"type":"panel","size": [111, 11]}},
+            {"buffer_1":{"type":"panel","size": [111, 11]}},
             { 
               "search_and_filter@global.empty_stack_panel":{
                 "orientation": "horizontal",
@@ -54,7 +83,7 @@
                       ]
                     }
                   },
-                  {"buffer_1": {"type": "panel","size": [4, "default"]}},
+                  {"buffer_2": {"type": "panel","size": [4, "default"]}},
                   {"filter@crafting_common.filter_toggle":{}}
                 ]
               }
@@ -67,17 +96,17 @@
           "orientation": "vertical",
           "anchor_to": "bottom_middle",
           "anchor_from": "bottom_middle",
-          "size": [65, 30],
+          "size": [77, 30],
           "controls": [
             {
               "stack@global.empty_stack_panel": {
                 "orientation": "horizontal",
-                "size": [65, 17],
+                "size": [77, 17],
                 "anchor_to": "bottom_middle",
                 "anchor_from": "bottom_middle",
                 "layer": 20,
                 "controls": [
-                  { "buffer": { "type": "panel", "size": [12, 0], "ignored": "(not ($current_page = 1))" } },
+                  { "buffer": { "type": "panel", "size": [18, 0], "ignored": "(not ($current_page = 1))" } },
                   {
                     "tepes_left_button@pagination.base_toggle_button": {
                       "ignored": "($current_page = 1)",
@@ -160,12 +189,6 @@
       }
     ]
   },
-  "max_page_is_28@pagination.base_page_logic": {
-    "$is_in_recipe_inventory|default": false,
-    "$max_ashur_page": 28,
-    "$page_content": "global.empty_panel"
-  },
-
  /* "test": {
     "type": "panel",
     "bindings": [
@@ -194,7 +217,7 @@
     "type": "panel",
     "anchor_from": "center",
     "anchor_to": "center",
-    "size": [12, 17],
+    "size": [18, 17],
     "layer": 4,
     "controls": [
       {
@@ -213,35 +236,6 @@
       }
     ]
   },
-
-  "page_1_content@page_offset_template": { "$ov": [0, 0] },
-  "page_2_content@page_offset_template": { "$ov": [0, -100] },
-  "page_3_content@page_offset_template": { "$ov": [0, -200] },
-  "page_4_content@page_offset_template": { "$ov": [0, -300] },
-  "page_5_content@page_offset_template": { "$ov": [0, -400] },
-  "page_6_content@page_offset_template": { "$ov": [0, -500] },
-  "page_7_content@page_offset_template": { "$ov": [0, -600] },
-  "page_8_content@page_offset_template": { "$ov": [0, -700] },
-  "page_9_content@page_offset_template": { "$ov": [0, -800] },
-  "page_10_content@page_offset_template": { "$ov": [0, -900] },
-  "page_11_content@page_offset_template": { "$ov": [0, -1000] },
-  "page_12_content@page_offset_template": { "$ov": [0, -1100] },
-  "page_13_content@page_offset_template": { "$ov": [0, -1200] },
-  "page_14_content@page_offset_template": { "$ov": [0, -1300] },
-  "page_15_content@page_offset_template": { "$ov": [0, -1400] },
-  "page_16_content@page_offset_template": { "$ov": [0, -1500] },
-  "page_17_content@page_offset_template": { "$ov": [0, -1600] },
-  "page_18_content@page_offset_template": { "$ov": [0, -1700] },
-  "page_19_content@page_offset_template": { "$ov": [0, -1800] },
-  "page_20_content@page_offset_template": { "$ov": [0, -1900] },
-  "page_21_content@page_offset_template": { "$ov": [0, -2000] },
-  "page_22_content@page_offset_template": { "$ov": [0, -2100] },
-  "page_23_content@page_offset_template": { "$ov": [0, -2200] },
-  "page_24_content@page_offset_template": { "$ov": [0, -2300] },
-  "page_25_content@page_offset_template": { "$ov": [0, -2400] },
-  "page_26_content@page_offset_template": { "$ov": [0, -2500] },
-  "page_27_content@page_offset_template": { "$ov": [0, -2600] },
-  "page_28_content@page_offset_template": { "$ov": [0, -2600] },
 
   "page_2@pagination.base_page_logic": { "$current_page": 2 },
   "page_3@pagination.base_page_logic": { "$current_page": 3 },
@@ -269,5 +263,10 @@
   "page_25@pagination.base_page_logic": { "$current_page": 25 },
   "page_26@pagination.base_page_logic": { "$current_page": 26 },
   "page_27@pagination.base_page_logic": { "$current_page": 27 },
-  "page_28@pagination.base_page_logic": { "$current_page": 28 }
+  "page_28@pagination.base_page_logic": { "$current_page": 28 },
+  "max_page_is_28@pagination.base_page_logic": {
+    "$is_in_recipe_inventory|default": false,
+    "$max_ashur_page": 28,
+    "$page_content": "global.empty_panel"
+  }
 }

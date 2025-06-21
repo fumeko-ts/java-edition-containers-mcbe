@@ -24,23 +24,23 @@
     "texture": "assets/minecraft/textures/gui/sprites/recipe_book/filter_disabled.png"
   },
   "filter_disabled_highlighted@global.empty_image": {
+    "texture": "assets/minecraft/textures/gui/sprites/recipe_book/filter_disabled_highlighted.png",
     "controls": [
       {
-        "hover@global.hover_text": { "property_bag":{"#hover_text": "Showing All"} }
+        "hover@global.hover_text": { "layer":20000,"property_bag":{"#hover_text": "Showing All"} }
       }
-    ],
-    "texture": "assets/minecraft/textures/gui/sprites/recipe_book/filter_disabled_highlighted.png"
+    ]
   },
   "filter_enabled@global.empty_image": {
     "texture": "assets/minecraft/textures/gui/sprites/recipe_book/filter_enabled.png"
   },
   "filter_enabled_highlighted@global.empty_image": {
+    "texture": "assets/minecraft/textures/gui/sprites/recipe_book/filter_enabled_highlighted.png",
     "controls": [
       {
-        "hover@global.hover_text": { "property_bag":{"#hover_text": "Showing Craftable"} }
+        "hover@global.hover_text": { "layer":20000, "property_bag":{"#hover_text": "Showing Craftable"} }
       }
-    ],
-    "texture": "assets/minecraft/textures/gui/sprites/recipe_book/filter_enabled_highlighted.png"
+    ]
   },
   "filter_toggle@common_toggles.switch_toggle": {
     "size": [ 26, 18 ],

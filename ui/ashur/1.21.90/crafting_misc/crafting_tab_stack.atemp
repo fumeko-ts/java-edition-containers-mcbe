@@ -20,6 +20,7 @@
     "$icon_for_tab": "",
     "size": "$tab_icon_size",
     "$tab_icon_size": [17, 17],
+    "keep_ratio": true,
     "variables": [
       {
         "requires": "($tab_view_binding_name = search_tab_toggle)",
@@ -28,23 +29,23 @@
       },
       {
         "requires": "($tab_view_binding_name = equipment_tab_toggle)",
-        "$tab_icon_size": [28, 19],
-        "$icon_for_tab": "textures/atemp/ui/item/porkchop.png"
+        "$tab_icon_size": [25, 16],
+        "$icon_for_tab": "textures/atemp/ui/icon_recipe_equipment"
       },
       {
         "requires": "($tab_view_binding_name = nature_tab_toggle)",
-        "$tab_icon_size": [25, 16],
-        "$icon_for_tab": "textures/atemp/ui/block/stone.png"
+        "$tab_icon_size": [15, 16],
+        "$icon_for_tab": "textures/atemp/ui/icon_recipe_construction"
       },
       {
         "requires": "($tab_view_binding_name = items_tab_toggle)",
         "$tab_icon_size": [22, 14],
-        "$icon_for_tab": "textures/atemp/ui/fuel.png"
+        "$icon_for_tab": "textures/atemp/ui/icon_recipe_nature"
       },
       {
         "requires": "($tab_view_binding_name = construction_tab_toggle)",
-        "$tab_icon_size": [22, 14],
-        "$icon_for_tab": "textures/atemp/ui/fuel.png"
+        "$tab_icon_size": [16, 16],
+        "$icon_for_tab": "textures/atemp/ui/item/redstone"
       }
     ]
   },

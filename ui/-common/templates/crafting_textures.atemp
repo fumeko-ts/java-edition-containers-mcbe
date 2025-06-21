@@ -1,209 +1,84 @@
-// -------------------------------------------------------------------------
-// JAVA CONTAINERS BEDROCK license info
-// -------------------------------------------------------------------------
-// © 2025 Ashura Temps. All rights reserved.
-// 
-// YOU MAY:
-// - Use this pack normally in gameplay
-// - Modify vanilla textures (Mojang-owned)
-//
-// YOU MAY NOT:
-// - Reuse /ui or /atemp files and their contents in other packs 
-// - use this pack for porting purpose's or eanything of the sort
-// - use this as a base for a "client"
-// - Upload to Marketplace
-// - Post on MCPEDL without code obfuscation
-//
-// Full terms: https://github.com/fumeko-ts/java-edition-containers-mcbe
-// Vanilla assets remain Mojang AB property.
-// -------------------------------------------------------------------------
-
 {
   "namespace": "crafting_textures",
+  "empty_image@global.empty_image":{
+    "bindings":[
+      {
+        "binding_type": "view",
+        "source_control_name": "$background_image_control_name",
+        "resolve_sibling_scope": true,
+        "source_property_name": "(#container_item_background = $texture_index)",
+        "target_property_name": "#visible"
+      }
+    ]
+  },
   "main_cell_panel": {
     "type": "image",
     "size": "$item_renderer_panel_size",
-    "$texture_index|default": 0,
     "$cell_images_binding_condition|default": "visible",
+    "$cell_image_size|default": ["default", "default"],
     "controls": [
       {
-        "cell_image_classic@global.empty_image": {
-          "$cell_image_size|default": [ "default", "default" ],
-          "size": "$cell_image_size",
-          "controls": [
-            {
-              "item_render@common.item_renderer": {
-                "size": "$item_renderer_size",
-                "offset": "$item_renderer_offset",
-                "anchor_to": "center",
-                "anchor_from": "center",
-                "alpha": 1,
-                "layer": 12
-              }
-            }
-          ],
-          "bindings": [
-            {
-              "binding_type": "view",
-              "source_control_name": "$background_image_control_name",
-              "resolve_sibling_scope": true,
-              "source_property_name": "(#container_item_background = 0)",
-              "target_property_name": "#visible"
-            }
-          ]
+        "item_render@common.item_renderer": {
+          "layer": 16,
+          "size"       : "$item_renderer_size",
+          "offset"     : "$item_renderer_offset",
+          "anchor_to"  : "center",
+          "anchor_from": "center"
         }
       },
+      {"stack_count@common.stack_count_label" : {"layer": 20} },
+      {"cell_image_classic@crafting_textures.empty_image" : {"size": "$cell_image_size","$texture_index": 0}},
+      {"cell_image_normal@crafting_textures.empty_image"  : {"size": "$cell_image_size","$texture_index": 1}},
+      {"cell_image_invert@crafting_textures.empty_image"  : {"size": "$cell_image_size","$texture_index": 2}},     
+      {"cell_image_selected@crafting_textures.empty_image": {"size": "$cell_image_size","$texture_index": 4}},
       {
-        "cell_image_normal@global.empty_image": {
-          "$cell_image_size|default": [ "default", "default" ],
-          "size": "$cell_image_size",
-          "controls": [
-            {
-              "item_render@common.item_renderer": {
-                "size": "$item_renderer_size",
-                "offset": "$item_renderer_offset",
-                "anchor_to": "center",
-                "anchor_from": "center",
-                "alpha": 1,
-                "layer": 12
-              }
-            }
-          ],
-          "bindings": [
-            {
-              "binding_type": "view",
-              "source_control_name": "$background_image_control_name",
-              "resolve_sibling_scope": true,
-              "source_property_name": "(#container_item_background = 1)",
-              "target_property_name": "#visible"
-            }
-          ]
-        }
-      },
-      {
-        "cell_image_invert@global.empty_image": {
-          "$cell_image_size|default": [ "default", "default" ],
-          "size": "$cell_image_size",
-          "controls": [
-            {
-              "item_render@common.item_renderer": {
-                "size": "$item_renderer_size",
-                "offset": "$item_renderer_offset",
-                "anchor_to": "center",
-                "anchor_from": "center",
-                "alpha": 1,
-                "layer": 12
-              }
-            }
-          ],
-          "bindings": [
-            {
-              "binding_type": "view",
-              "source_control_name": "$background_image_control_name",
-              "resolve_sibling_scope": true,
-              "source_property_name": "(#container_item_background = 2)",
-              "target_property_name": "#visible"
-            }
-          ]
-        }
-      },
-      {
-        "cell_image_red@global.empty_image": {
-          "nineslice_size": [ 1, 1, 1, 1 ],
+        "cell_image_red@crafting_textures.empty_image": {"nineslice_size": [1, 1, 1, 1],
           "texture": "textures/atemp/ui/cell_transparent_image_red.png",
-          "$cell_image_size|default": [ "default", "default" ],
           "size": "$cell_image_size",
-          "$renderer_alpha_cell_var": 10,
+          "$texture_index": 3,
           "layer": 10,
           "controls": [
             {
-              "item_render@common.item_renderer": {
-                "size": "$item_renderer_size",
-                "offset": "$item_renderer_offset",
+              "white@global.empty_image": {
+                "texture": "textures/atemp/ui/white",
+                "size": ["100% - 1px", "100% - 1px"],
                 "anchor_to": "center",
                 "anchor_from": "center",
-                "alpha": 0.7,
+                "alpha": 0.2,
                 "layer": 12
               }
-            }
-          ],
-          "bindings": [
-            {
-              "binding_type": "view",
-              "source_control_name": "$background_image_control_name",
-              "resolve_sibling_scope": true,
-              "source_property_name": "(#container_item_background = 3)",
-              "target_property_name": "#visible"
             }
           ]
         }
       },
       {
-        "cell_image_selected@global.empty_image": {
-          "$cell_image_size|default": [ "default", "default" ],
-          "size": "$cell_image_size",
-          "controls": [
-            {
-              "item_render@common.item_renderer": {
-                "size": "$item_renderer_size",
-                "offset": "$item_renderer_offset",
-                "anchor_to": "center",
-                "anchor_from": "center",
-                "alpha": 1,
-                "layer": 12
-              }
-            }
-          ],
-          "bindings": [
-            {
-              "binding_type": "view",
-              "source_control_name": "$background_image_control_name",
-              "resolve_sibling_scope": true,
-              "source_property_name": "(#container_item_background = 4)",
-              "target_property_name": "#visible"
-            }
-          ]
-        }
-      },
-      {
-        "cell_image_darkgrey@global.empty_image": {
-          "nineslice_size": [ 1, 1, 1, 1 ],
+        "cell_image_darkgrey@crafting_textures.empty_image": {
+          "nineslice_size": [1, 1, 1, 1],
           "texture": "textures/atemp/ui/cell_transparent_image_red.png",
-          "$cell_image_size|default": [ "default", "default" ],
           "size": "$cell_image_size",
-          "$renderer_alpha_cell_var": 10,
+          "$texture_index": 7,
           "layer": 10,
           "controls": [
             {
-              "item_render@common.item_renderer": {
-                "size": "$item_renderer_size",
-                "offset": "$item_renderer_offset",
+              "white@global.empty_image": {
+                "texture": "textures/atemp/ui/white",
+                "size": ["100% - 1px", "100% - 1px"],
                 "anchor_to": "center",
                 "anchor_from": "center",
-                "alpha": 0.7,
+                "alpha": 0.2,
                 "layer": 12
               }
             }
-          ],
-          "bindings": [
-            {
-              "binding_type": "view",
-              "source_control_name": "$background_image_control_name",
-              "resolve_sibling_scope": true,
-              "source_property_name": "(#container_item_background = 7)",
-              "target_property_name": "#visible"
-            }
           ]
         }
-      },
-      { "stack_count@common.stack_count_label": { "layer": 20 } }
+      }
     ],
     "bindings": [
       {
-        "binding_name": "#container_item_background",
-        "binding_type": "collection",
+        "binding_name"           : "#container_item_background",
+        "binding_type"           : "collection",
         "binding_collection_name": "$item_collection_name",
-        "binding_condition": "$cell_images_binding_condition"
+        "binding_condition"      : "$cell_images_binding_condition"
       }
     ]
   },
@@ -213,5 +88,7 @@
     "$item_renderer_binding_condition": "always",
     "$button_ref": "crafting.inventory_container_slot_button"
   },
-  "output_cell_textures@crafting_textures.main_cell_panel": { "$cell_images_binding_condition": "always" }
+  "output_cell_textures@crafting_textures.main_cell_panel": {
+    "$cell_images_binding_condition": "always"
+  }
 }

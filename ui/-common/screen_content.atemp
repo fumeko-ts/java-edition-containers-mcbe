@@ -440,7 +440,6 @@
   "crafting@image_element": {
     "uv_size": [ 176, 166 ],
     "texture": "assets/minecraft/textures/gui/container/crafting_table",
-    "offset": [ 307, 84 ],
     "controls": [
       {
         "exit@close_button": { "$current_panel_offset|default": [ 100.8, -74 ] }
@@ -450,7 +449,6 @@
   "inventory@image_element": {
     "uv_size": [ 176, 166 ],
     "texture": "assets/minecraft/textures/gui/container/inventory",
-    "offset": [ 0, 0 ],
     "controls": [
       {
         "exit@close_button": { "$current_panel_offset|default": [ 100.8, -74 ] }
