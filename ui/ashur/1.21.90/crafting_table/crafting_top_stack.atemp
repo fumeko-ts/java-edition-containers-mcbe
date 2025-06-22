@@ -5,61 +5,81 @@
     "size": [176, 166],
     "controls": [
       {
-        "stack_top_buffer_stack@global.empty_stack_panel": {
+        "crafting_stack_wrapper@global.empty_stack_panel": {
           "orientation": "vertical",
           "anchor_to": "top_left",
           "anchor_from": "top_left",
           "size": [176, 70],
           "controls": [
-            {"buffer_1": { "type": "panel", "size": ["default", 4] }},
+            { "label_top_margin@global.empty_panel": { "type": "panel", "size": ["default", 4] }},
             {
-              "cell_stack@global.empty_stack_panel": {
+              "crafting_label_row@global.empty_stack_panel": {
                 "orientation": "horizontal",
                 "size": [176, 12],
                 "controls": [
-                   {"buffer_3": { "type": "panel", "size": [29, "default"] }},
-                   {
-                    "label_holder@global.empty_panel":{
-                        "size": [54, "default"],
-                        "controls":[
-                            {
-                              "inventory_label": {
-                                 "type":"label",
-                                 "anchor_from": "left_middle",
-                                 "anchor_to": "left_middle",
-                                 "layer": 2,
-                                 "size": [ "100%", 10 ],
-                                 "color": "$title_text_color", 
-                                 "text": "container.crafting"
-                               }
-                            }
-                         ]
-                      }
-                   },
-                   {"buffer_3": { "type": "panel", "size": [93, "default"] }}
+                  { "label_left_padding@global.empty_panel": { "type": "panel", "size": [29, "default"] }},
+                  {
+                    "label_container@global.empty_panel": {
+                      "size": [54, "default"],
+                      "controls": [
+                        {
+                          "inventory_label": {
+                            "type": "label",
+                            "anchor_from": "left_middle",
+                            "anchor_to": "left_middle",
+                            "layer": 2,
+                            "size": [ "100%", 10 ],
+                            "color": "$title_text_color",
+                            "text": "container.crafting"
+                          }
+                        }
+                      ]
+                    }
+                  },
+                  { "label_right_padding@global.empty_panel": { "type": "panel", "size": [93, "default"] }}
                 ]
               }
             },
             {
-              "cell_stack@global.empty_stack_panel": {
+              "crafting_body_row@global.empty_stack_panel": {
                 "orientation": "horizontal",
                 "size": [176, 54],
                 "controls": [
-                   {"buffer_2": { "type": "panel", "size": [29, "default"] }},
-                   {"crafting_3x3@crafting_top_stack.crafting_3x3_grid":{}},
-                   {"buffer_3": { "type": "panel", "size": [36, "default"] }},
-                   {
-                    "cell_stack@global.empty_stack_panel": {
+                  {
+                    "left_column_stack@global.empty_stack_panel": {
                       "orientation": "vertical",
-                      "size": [26, 54],
+                      "size": [29, 54],
                       "controls": [
-                         {"buffer_4": { "type": "panel", "size": ["default", 14] }},
-                         {"crafting_3x3@crafting_top_stack.output_grid_3x3":{}},
-                         {"buffer_5": { "type": "panel", "size": ["default", 14] }}
+                        { "toggle_top_spacing@global.empty_panel": { "type": "panel", "size": ["default", 18] }},
+                        {
+                          "toggle_row@global.empty_stack_panel": {
+                            "orientation": "horizontal",
+                            "size": [29, 18],
+                            "controls": [
+                              { "toggle_left_margin@global.empty_panel": { "type": "panel", "size": [5, "default"] }},
+                              { "recipe_toggle@recipe_toggle.recipe_layout_toggle": {} },
+                              { "toggle_right_margin@global.empty_panel": { "type": "panel", "size": [4, "default"] }}
+                            ]
+                          }
+                        },
+                        { "toggle_bottom_spacing@global.empty_panel": { "type": "panel", "size": ["default", 18] }}
                       ]
                     }
                   },
-                  {"buffer_6": { "type": "panel", "size": [31, "default"] }}
+                  { "crafting_grid_panel@crafting_top_stack.crafting_3x3_grid": {} },
+                  { "between_grid_output_spacing@global.empty_panel": { "type": "panel", "size": [36, "default"] }},
+                  {
+                    "output_stack@global.empty_stack_panel": {
+                      "orientation": "vertical",
+                      "size": [26, 54],
+                      "controls": [
+                        { "output_top_spacing@global.empty_panel": { "type": "panel", "size": ["default", 14] }},
+                        { "output_grid@crafting_top_stack.output_grid_3x3": {} },
+                        { "output_bottom_spacing@global.empty_panel": { "type": "panel", "size": ["default", 14] }}
+                      ]
+                    }
+                  },
+                  { "final_buffer_spacing@global.empty_panel": { "type": "panel", "size": [31, "default"] }}
                 ]
               }
             }
@@ -68,6 +88,7 @@
       }
     ]
   },
+
   "crafting_3x3_grid": {
     "type": "grid",
     "size": [54, 54],
@@ -76,29 +97,30 @@
     "grid_dimensions": [3, 3],
     "collection_name": "crafting_input_items",
     "controls": [
-      {"crafting_input_item_top_left@crafting_textures.crafting_input_grid_item": {"grid_position": [0, 0]}},
-      {"crafting_input_item_top_mid@crafting_textures.crafting_input_grid_item": {"grid_position": [1, 0]}},
-      {"crafting_input_item_top_right@crafting_textures.crafting_input_grid_item": {"grid_position": [2, 0]}},
-      {"crafting_input_item_mid_left@crafting_textures.crafting_input_grid_item": {"grid_position": [0, 1]}},
-      {"crafting_input_item_middle@crafting_textures.crafting_input_grid_item": {"grid_position": [1, 1]}},
-      {"crafting_input_item_mid_right@crafting_textures.crafting_input_grid_item": {"grid_position": [2, 1]}},
-      {"crafting_input_item_bot_left@crafting_textures.crafting_input_grid_item": {"grid_position": [0, 2]}},
-      {"crafting_input_item_bot_mid@crafting_textures.crafting_input_grid_item": {"grid_position": [1, 2]}},
-      {"crafting_input_item_bot_right@crafting_textures.crafting_input_grid_item": {"grid_position": [2, 2]}}
+      { "input_top_left@crafting_textures.crafting_input_grid_item": { "grid_position": [0, 0] }},
+      { "input_top_center@crafting_textures.crafting_input_grid_item": { "grid_position": [1, 0] }},
+      { "input_top_right@crafting_textures.crafting_input_grid_item": { "grid_position": [2, 0] }},
+      { "input_mid_left@crafting_textures.crafting_input_grid_item": { "grid_position": [0, 1] }},
+      { "input_center@crafting_textures.crafting_input_grid_item": { "grid_position": [1, 1] }},
+      { "input_mid_right@crafting_textures.crafting_input_grid_item": { "grid_position": [2, 1] }},
+      { "input_bottom_left@crafting_textures.crafting_input_grid_item": { "grid_position": [0, 2] }},
+      { "input_bottom_center@crafting_textures.crafting_input_grid_item": { "grid_position": [1, 2] }},
+      { "input_bottom_right@crafting_textures.crafting_input_grid_item": { "grid_position": [2, 2] }}
     ]
   },
+
   "output_grid_3x3": {
     "type": "grid",
-    "grid_dimensions": [ 1, 1 ],
+    "grid_dimensions": [1, 1],
     "collection_name": "crafting_output_items",
     "anchor_from": "top_left",
     "anchor_to": "top_left",
-    "size": [ 26, 26 ],
+    "size": [26, 26],
     "controls": [
       {
-        "work_bench_output@crafting.inventory_container_item": {
-          "size": [ 26, 26 ],
-          "$cell_image_size": [ 26, 26 ],
+        "output_item@crafting.inventory_container_item": {
+          "size": [26, 26],
+          "$cell_image_size": [26, 26],
           "$item_collection_name": "crafting_output_items",
           "$button_ref": "crafting.output_no_coalesce_container_slot_button",
           "$stack_count_binding_condition": "always",

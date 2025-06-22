@@ -1,57 +1,31 @@
-// -------------------------------------------------------------------------
-// JAVA CONTAINERS BEDROCK license info
-// -------------------------------------------------------------------------
-// © 2025 Ashura Temps. All rights reserved.
-// 
-// YOU MAY:
-// - Use this pack normally in gameplay
-// - Modify vanilla textures (Mojang-owned)
-//
-// YOU MAY NOT:
-// - Reuse /ui or /atemp files and their contents in other packs 
-// - use this pack for porting purpose's or eanything of the sort
-// - use this as a base for a "client"
-// - Upload to Marketplace
-// - Post on MCPEDL without code obfuscation
-//
-// Full terms: https://github.com/fumeko-ts/java-edition-containers-mcbe
-// Vanilla assets remain Mojang AB property.
-// -------------------------------------------------------------------------
-
 {
   "namespace": "recipe_toggle",
   "layout_toggle@common_toggles.light_image_toggle": {
-    "size": [ 22, 20 ],
     "$hover_border_visible": false,
     "$default_border_visible": false,
+    "$toggle_binding_type": "global",
+    "$icon_control": "global.empty_image",
     "$button_content": "crafting.layout_toggle_content",
     "$toggle_name": "layout_toggle",
-    "$template_toggle": "survival_inventory.layout_template_toggle",
-    "$allow_controller_back_button_mapping": "$is_ps4"
+    "$template_toggle": "survival_inventory.layout_template_toggle"
+  },
+  "layout_template_toggle@recipe_toggle.light_template_toggle": {
+    "$focus_override_up": "FOCUS_OVERRIDE_STOP",
+    "$default_texture": "assets/minecraft/textures/gui/sprites/recipe_book/button",
+    "$hover_texture": "assets/minecraft/textures/gui/sprites/recipe_book/button_highlighted",
+    "$pressed_texture": "assets/minecraft/textures/gui/sprites/recipe_book/button_highlighted",
+    "$pressed_no_hover_texture": "assets/minecraft/textures/gui/sprites/recipe_book/button"
   },
   "recipe_layout_toggle": {
     "type": "panel",
-    "size": [ 22, 20 ],
+    "size": [ 20, 18 ],
     "layer": 10,
     "controls": [
       {
-        "recipe_toggle": {
-          "type": "panel",
-          "size": [ 22, 20 ],
-          "anchor_to": "center",
-          "anchor_from": "center",
-          "controls": [
-            {
-              "recipe_book_layout_toggle@recipe_toggle.layout_toggle": {
-                "$icon_control": "global.empty_image",
-                "$toggle_group_forced_index": "$recipe_book_layout_index",
-                "$toggle_binding_type": "global",
-                "$toggle_state_binding_name": "#is_recipe_book_layout",
-                "$focus_id": "recipe_book_layout_toggle",
-                "$toggle_tts_header": "accessibility.button.recipebook.layout"
-              }
-            }
-          ],
+        "recipe_book_layout_toggle@recipe_toggle.layout_toggle": {
+          "size": [ 20, 18 ],
+          "$toggle_group_forced_index": "$recipe_book_layout_index",
+          "$toggle_state_binding_name": "#is_recipe_book_layout",
           "bindings": [
             {
               "binding_type": "global",
@@ -62,22 +36,10 @@
         }
       },
       {
-        "survival_toggle": {
-          "type": "panel",
-          "size": [ 22, 20 ],
-          "anchor_to": "center",
-          "anchor_from": "center",
-          "controls": [
-            {
-              "survival_inventory_toggle@recipe_toggle.layout_toggle": {
-                "$icon_control": "global.empty_image",
-                "$toggle_group_forced_index": "$survival_layout_index",
-                "$toggle_binding_type": "global",
-                "$toggle_state_binding_name": "#is_survival_layout",
-                "$toggle_tts_header": "accessibility.button.survival.layout"
-              }
-            }
-          ],
+        "survival_inventory_toggle@recipe_toggle.layout_toggle": {
+          "size": [ 20, 18 ],
+          "$toggle_group_forced_index": "$survival_layout_index",
+          "$toggle_state_binding_name": "#is_survival_layout",
           "bindings": [
             {
               "binding_type": "global",

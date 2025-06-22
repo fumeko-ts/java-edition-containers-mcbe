@@ -1,23 +1,3 @@
-// -------------------------------------------------------------------------
-// JAVA CONTAINERS BEDROCK license info
-// -------------------------------------------------------------------------
-// © 2025 Ashura Temps. All rights reserved.
-// 
-// YOU MAY:
-// - Use this pack normally in gameplay
-// - Modify vanilla textures (Mojang-owned)
-//
-// YOU MAY NOT:
-// - Reuse /ui or /atemp files and their contents in other packs 
-// - use this pack for porting purpose's or eanything of the sort
-// - use this as a base for a "client"
-// - Upload to Marketplace
-// - Post on MCPEDL without code obfuscation
-//
-// Full terms: https://github.com/fumeko-ts/java-edition-containers-mcbe
-// Vanilla assets remain Mojang AB property.
-// -------------------------------------------------------------------------
-
 {
   "namespace": "global",
   "grid_item@common.container_item": { "$grid_item_collection_name": "hotbar_items" },
@@ -441,7 +421,7 @@
     ]
   },
   "hover_text": {
-    "$hover_text_max_width|default": 0, 
+    "$hover_text_max_width|default": 0,
     "type": "custom",
     "renderer": "hover_text_renderer",
     "hover_text_max_width": "$hover_text_max_width",

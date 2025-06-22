@@ -4,48 +4,56 @@
   "barrel_chest_panel": {
     "type": "panel",
     "controls": [
-      { "container_gamepad_helpers@common.container_gamepad_helpers": {} },
-      { "selected_item_details_factory@common.selected_item_details_factory": {} },
-      { "item_lock_notification_factory@common.item_lock_notification_factory": {} },
+      {
+        "container_gamepad_helpers@common.container_gamepad_helpers": {  }
+      },
+      {
+        "selected_item_details_factory@common.selected_item_details_factory": {  }
+      },
+      {
+        "item_lock_notification_factory@common.item_lock_notification_factory": {  }
+      },
       {
         "root_panel@common.empty_panel": {
-          "size": [176, 166], 
+          "size": [ 176, 166 ],
           "layer": 1,
           "controls": [
             {
               "barrel_label": {
                 "type": "label",
-                "offset": [-63.4, 5],
-                "anchor_from": "top_middle", 
+                "offset": [ -63.4, 5 ],
+                "anchor_from": "top_middle",
                 "anchor_to": "top_middle",
-                "text": "$container_title", 
+                "text": "$container_title",
                 "$container_title": "Barrel",
-                "color": "$title_text_color", 
+                "color": "$title_text_color",
                 "layer": 12
               }
             },
-            { "common_panel@screen_content.somali": { "$barrel_screen": true } },
+            {
+              "common_panel@screen_content.somali": { "$barrel_screen": true }
+            },
             {
               "barrel_panel": {
-                "type": "panel", 
+                "type": "panel",
                 "layer": 5,
                 "controls": [
                   {
                     "barrel_chest_panel_top_half": {
-                      "type": "panel", 
-                      "size": ["100%", "50%"],
-                      "offset": [0, 8],
-                      "anchor_to": "top_left", 
+                      "type": "panel",
+                      "size": [ "100%", "50%" ],
+                      "offset": [ 0, 8 ],
+                      "anchor_to": "top_left",
                       "anchor_from": "top_left",
                       "controls": [
                         {
                           "barrel_chest_grid": {
                             "type": "grid",
-                            "size": [162, 54], 
-                            "offset": [7, 9],
-                            "anchor_from": "top_left", 
+                            "size": [ 162, 54 ],
+                            "offset": [ 7, 9 ],
+                            "anchor_from": "top_left",
                             "anchor_to": "top_left",
-                            "grid_dimensions": [9, 3],
+                            "grid_dimensions": [ 9, 3 ],
                             "grid_item_template": "barrel_eta.chest_grid_item",
                             "collection_name": "container_items"
                           }
@@ -53,15 +61,25 @@
                       ]
                     }
                   },
-                  { "inventory_panel_bottom_half_with_label@common.inventory_panel_bottom_half_with_label": { "offset": [0, -3] } },
-                  { "hotbar_grid@common.hotbar_grid_template": { "offset": [0, -7] } },
-                  { "inventory_take_progress_icon_button@common.inventory_take_progress_icon_button": {} },
-                  { "flying_item_renderer@common.flying_item_renderer": { "layer": 15 } }
+                  {
+                    "inventory_panel_bottom_half_with_label@common.inventory_panel_bottom_half_with_label": { "offset": [ 0, -3 ] }
+                  },
+                  {
+                    "hotbar_grid@common.hotbar_grid_template": { "offset": [ 0, -7 ] }
+                  },
+                  {
+                    "inventory_take_progress_icon_button@common.inventory_take_progress_icon_button": {  }
+                  },
+                  {
+                    "flying_item_renderer@common.flying_item_renderer": { "layer": 15 }
+                  }
                 ]
               }
             },
-            { "inventory_selected_icon_button@global.inventory_selected_icon_button": {} },
-            { "gamepad_cursor@common.gamepad_cursor_button": {} }
+            {
+              "inventory_selected_icon_button@global.inventory_selected_icon_button": {  }
+            },
+            { "gamepad_cursor@common.gamepad_cursor_button": {  } }
           ]
         }
       }

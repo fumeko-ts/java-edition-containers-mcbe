@@ -53,7 +53,7 @@
     "size": [ 24, 25 ],
     "controls": [ { "img@$tab_icon": {  } } ]
   },
-  "top_tab@recipe_tabs.tab_left": {
+  "top_tab@toggle.tab_left": {
     "$toggle_binding_type": "global",
     "$toggle_focus_enabled": false,
     "type": "panel",
