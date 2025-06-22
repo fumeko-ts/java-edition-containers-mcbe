@@ -1,150 +1,41 @@
 {
   "namespace": "screen_content",
-  "somali": {
-    "type": "panel",
-    "size": "$size",
-    "offset": [ 0, 0 ],
-    "$current_panel_offset|default": [ 20, -20 ],
-    "variables": [
-      {
-        "requires": "($anvil_screen = true)",
-        "$size": [ 176, 166 ],
-        "$current_panel_offset|default": [ 100.8, -74 ],
-        "$ep": "anvil"
-      },
-      {
-        "requires": "($barrel_screen = true)",
-        "$size": [ 176, 166 ],
-        "$current_panel_offset|default": [ 100.8, -74 ],
-        "$ep": "barrel"
-      },
-      {
-        "requires": "($beacon_screen = true)",
-        "$size": [ 230, 219 ],
-        "$current_panel_offset|default": [ 126.8, -100 ],
-        "$ep": "beacon"
-      },
-      {
-        "requires": "($blast_furnace_screen = true)",
-        "$size": [ 176, 166 ],
-        "$current_panel_offset|default": [ 100.8, -74 ],
-        "$ep": "blast_furnace"
-      },
-      {
-        "requires": "($brewing_stand_screen = true)",
-        "$size": [ 176, 166 ],
-        "$current_panel_offset|default": [ 100.8, -71 ],
-        "$ep": "brewing_stand"
-      },
-      {
-        "requires": "($cartography_screen = true)",
-        "$size": [ 176, 166 ],
-        "$current_panel_offset|default": [ 100.8, -71 ],
-        "$ep": "cartography"
-      },
-      {
-        "requires": "($crafting_screen = true)",
-        "$size": [ 176, 166 ],
-        "$current_panel_offset|default": [ 100.8, -74 ],
-        "$ep": "crafting"
-      },
-      {
-        "requires": "($crafter_screen = true)",
-        "$size": [ 176, 166 ],
-        "$current_panel_offset|default": [ 100.8, -70 ],
-        "$ep": "crafter"
-      },
-      {
-        "requires": "($dispenser_screen = true)",
-        "$size": [ 176, 166 ],
-        "$current_panel_offset|default": [ 100.8, -74 ],
-        "$ep": "dispenser"
-      },
-      {
-        "requires": "($enchanting_screen = true)",
-        "$size": [ 176, 166 ],
-        "$current_panel_offset|default": [ 100.8, -71 ],
-        "$ep": "enchanting"
-      },
-      {
-        "requires": "($furnace_screen = true)",
-        "$size": [ 176, 166 ],
-        "$current_panel_offset|default": [ 100.8, -74 ],
-        "$ep": "furnace"
-      },
-      {
-        "requires": "($double_chest_container = true)",
-        "$size": [ 176, 222 ],
-        "$current_panel_offset|default": [ 100.8, -100 ],
-        "$ep": "double_chest"
-      },
-      {
-        "requires": "($grindstone_screen = true)",
-        "$size": [ 176, 166 ],
-        "$current_panel_offset|default": [ 100.8, -72 ],
-        "$ep": "grindstone"
-      },
-      {
-        "requires": "($hopper_screen = true)",
-        "$size": [ 176, 133 ],
-        "$current_panel_offset|default": [ 100.8, -57 ],
-        "$ep": "hopper"
-      },
-      {
-        "requires": "($horse_screen = true)",
-        "$size": [ 176, 166 ],
-        "$current_panel_offset|default": [ 100.8, -74 ],
-        "$ep": "horse"
-      },
-      {
-        "requires": "($loom_screen = true)",
-        "$size": [ 176, 166 ],
-        "$current_panel_offset|default": [ 100.8, -70 ],
-        "$ep": "loom"
-      },
-      {
-        "requires": "($shulker_screen = true)",
-        "$size": [ 176, 166 ],
-        "$current_panel_offset|default": [ 100.8, -74 ],
-        "$ep": "shulker_box"
-      },
-      {
-        "requires": "($smithing_screen = true)",
-        "$size": [ 176, 166 ],
-        "$current_panel_offset|default": [ 100.8, -74 ],
-        "$ep": "smithing"
-      },
-      {
-        "requires": "($smoker_screen = true)",
-        "$size": [ 176, 166 ],
-        "$current_panel_offset|default": [ 100.8, -74 ],
-        "$ep": "smoker"
-      },
-      {
-        "requires": "($stonecutter_screen = true)",
-        "$size": [ 176, 166 ],
-        "$current_panel_offset|default": [ 100.8, -73 ],
-        "$ep": "stonecutter"
-      },
-      {
-        "requires": "($main_trade_screen = true)",
-        "$size": [ 276, 166 ],
-        "$current_panel_offset|default": [ 80.8, -74 ],
-        "$ep": "trade"
-      },
-      {
-        "requires": "($inventory_screen = true)",
-        "$size": [ 176, 166 ],
-        "$current_panel_offset|default": [ 100.8, -74 ],
-        "$ep": "inventory"
-      }
-    ],
-    "$text_offset": [ 0, 0 ],
-    "controls": [
-      { "close_button@close_button": {  } },
-      { "all_misc@$ep": {  } }
-    ]
-  },
+"somali": {
+  "type": "panel",
+  "size": "$size",
+  "offset": [ 0, 0 ],
+  "$size": [ 176, 166 ],
+  "$current_panel_offset|default": [ 100.8, -74 ],
+  "variables"                     : [
+    { "requires": "($anvil_screen = true)"             , "$ep": "anvil"           },
+    { "requires": "($barrel_screen = true)"            , "$ep": "barrel"          },
+    { "requires": "($beacon_screen = true)"            , "$ep": "beacon"           , "$size": [ 230, 219 ]            , "$current_panel_offset|default": [ 126.8, -100 ] },
+    { "requires": "($blast_furnace_screen = true)"     , "$ep": "blast_furnace"   },
+    { "requires": "($brewing_stand_screen = true)"     , "$ep": "brewing_stand"    , "$current_panel_offset|default": [ 100.8, -71 ]  },
+    { "requires": "($cartography_screen = true)"       , "$ep": "cartography"      , "$current_panel_offset|default": [ 100.8, -71 ]  },
+    { "requires": "($crafting_screen = true)"          , "$ep": "crafting"        },
+    { "requires": "($crafter_screen = true)"           , "$ep": "crafter"          , "$current_panel_offset|default": [ 100.8, -70 ]  },
+    { "requires": "($dispenser_screen = true)"         , "$ep": "dispenser"       },
+    { "requires": "($enchanting_screen = true)"        , "$ep": "enchanting"       , "$current_panel_offset|default": [ 100.8, -71 ]  },
+    { "requires": "($furnace_screen = true)"           , "$ep": "furnace"         },
+    { "requires": "($double_chest_container = true)"   , "$ep": "double_chest"     , "$size": [ 176, 222 ]            , "$current_panel_offset|default": [ 100.8, -100 ] },
+    { "requires": "($grindstone_screen = true)"        , "$ep": "grindstone"       , "$current_panel_offset|default": [ 100.8, -72 ]  },
+    { "requires": "($hopper_screen = true)"            , "$ep": "hopper"           , "$size": [ 176, 133 ]            , "$current_panel_offset|default": [ 100.8, -57 ]  },
+    { "requires": "($horse_screen = true)"             , "$ep": "horse"           },
+    { "requires": "($loom_screen = true)"              , "$ep": "loom"             , "$current_panel_offset|default": [ 100.8, -70 ]  },
+    { "requires": "($shulker_screen = true)"           , "$ep": "shulker_box"     },
+    { "requires": "($smithing_screen = true)"          , "$ep": "smithing"        },
+    { "requires": "($smoker_screen = true)"            , "$ep": "smoker"          },
+    { "requires": "($stonecutter_screen = true)"       , "$ep": "stonecutter"      , "$current_panel_offset|default": [ 100.8, -73 ]  },
+    { "requires": "($main_trade_screen = true)"        , "$ep": "trade"            , "$size": [ 276, 166 ]            , "$current_panel_offset|default": [ 80.8, -74 ]   },
+    { "requires": "($inventory_screen = true)"         , "$ep": "inventory"       }
+  ],
+  "controls": [
+    { "close_button@close_button": {} },
+    { "all_misc@$ep"             : {} }
+  ]
+}
+,
   "label": {
     "type": "label",
     "offset": "$text_offset",
@@ -163,16 +54,10 @@
     "$exit_panel": "common.empty_panel",
     "anchor_from": "center",
     "anchor_to": "center",
-    "bindings": [
-      {
-        "binding_name": "#close_button_visible",
-        "binding_name_override": "#visible"
-      }
-    ],
     "variables": [
       {
         "requires": "($Exit_panel_enabled = true)",
-        "$exit_panel": "common.light_close_button_sucrose"
+        "$exit_panel": "exit_button_template.light_close_button_sucrose"
       }
     ],
     "controls": [

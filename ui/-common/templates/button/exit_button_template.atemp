@@ -1,0 +1,10 @@
+{
+  "namespace": "exit_button_template",
+  "light_close_button_sucrose@common.close_button": {
+    "controls": [
+      {"default@common.close_button_panel": {"$close_button_texture": "textures/atemp/ui/pane_default"}},
+      {"hover@common.close_button_panel": { "$close_button_texture": "textures/atemp/ui/pane_hover" }},
+      {"pressed@common.close_button_panel": {"$close_button_texture": "textures/atemp/ui/pane_pressed"}}
+    ]
+  }
+}

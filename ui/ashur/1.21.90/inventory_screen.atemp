@@ -36,26 +36,8 @@
               }
             },
             {"inventory@inventory_screen.inventory": {}}
-          ],
-          "bindings": [
-              {
-                "binding_type": "global",
-                "binding_name": "(not #is_creative_mode)",
-                "binding_name_override": "#visible"
-              }
-           ]
+          ]
         }
-      },
-      {
-         "creative@creative_inventory.creative_content":{
-            "bindings": [
-              {
-                "binding_type": "global",
-                "binding_name": "#is_creative_mode",
-                "binding_name_override": "#visible"
-              }
-           ]
-         }
       },
       { "flying_item_renderer@common.flying_item_renderer": { "layer": 21 } },
       { "bundle_touch_tooltip@gameplay.bundle_touch_tooltip": {} },

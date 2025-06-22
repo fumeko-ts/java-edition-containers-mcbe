@@ -362,23 +362,6 @@
       { "pressed@$text_background_hover": {  } }
     ]
   },
-  "light_close_button_sucrose@close_button": {
-    "controls": [
-      {
-        "default@common.close_button_panel": {
-          "$close_button_texture": "textures/atemp/ui/pane_default"
-        }
-      },
-      {
-        "hover@common.close_button_panel": { "$close_button_texture": "textures/atemp/ui/pane_hover" }
-      },
-      {
-        "pressed@common.close_button_panel": {
-          "$close_button_texture": "textures/atemp/ui/pane_pressed"
-        }
-      }
-    ]
-  },
   "screen_background": {
     "type": "image",
     "texture": "textures/ui/screen_background",

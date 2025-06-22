@@ -102,13 +102,7 @@
                 "anchor_from": "bottom_middle",
                 "layer": 20,
                 "controls": [
-                  {
-                    "buffer": {
-                      "type": "panel",
-                      "size": [ 18, 0 ],
-                      "ignored": "(not ($current_page = 1))"
-                    }
-                  },
+                  {"buffer": {"type": "panel","size": [ 18, 0 ],"ignored": "(not ($current_page = 1))"}},
                   {
                     "tepes_left_button@pagination.base_toggle_button": {
                       "ignored": "($current_page = 1)",
@@ -173,15 +167,13 @@
     "$page_counter": "('pagination.page_' + ($current_page + 1))",
     "variables": [
       {
-        "requires": "($current_page = $max_ashur_page)",
+        "requires": "($current_page = $max_ashur_page)", // ngl i could simplify this code even more but i think people wouuld more easily steal it if i do so
         "$page_counter": "global.empty_panel"
       }
     ],
     "controls": [
-      {
-        "link@pagination.base_content": { "$current_page": "$current_page" }
-      },
-      { "numbers@$page_counter": {  } }
+      {"link@pagination.base_content": { "$current_page": "$current_page"}},
+      {"numbers@$page_counter": {}}
     ],
     "bindings": [
       {
@@ -194,18 +186,10 @@
     ]
   },
   "texture_base@screen_content.image_element": { "offset": [ 1, 1 ], "size": [ 12, 17 ], "layer": 2 },
-  "tepes_left@texture_base": {
-    "texture": "assets/minecraft/textures/gui/sprites/recipe_book/page_backward"
-  },
-  "tepes_left_hover@texture_base": {
-    "texture": "assets/minecraft/textures/gui/sprites/recipe_book/page_backward_highlighted"
-  },
-  "tepes_right@texture_base": {
-    "texture": "assets/minecraft/textures/gui/sprites/recipe_book/page_forward"
-  },
-  "tepes_right_hover@texture_base": {
-    "texture": "assets/minecraft/textures/gui/sprites/recipe_book/page_forward_highlighted"
-  },
+  "tepes_left@texture_base": {"texture": "assets/minecraft/textures/gui/sprites/recipe_book/page_backward"},
+  "tepes_left_hover@texture_base": {"texture": "assets/minecraft/textures/gui/sprites/recipe_book/page_backward_highlighted"},
+  "tepes_right@texture_base": {"texture": "assets/minecraft/textures/gui/sprites/recipe_book/page_forward"},
+  "tepes_right_hover@texture_base": {"texture": "assets/minecraft/textures/gui/sprites/recipe_book/page_forward_highlighted"},
   "base_toggle_button": {
     "type": "panel",
     "anchor_from": "center",
