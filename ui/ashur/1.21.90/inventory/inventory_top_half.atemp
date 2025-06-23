@@ -48,7 +48,7 @@
       {
         "offhand_grid_item@common.container_item": {
           "grid_position": [0, 0],
-          "$cell_overlay_ref": "survival_inventory.armor_overlay_shield",
+          "$cell_overlay_ref": "screen_content.armor_overlay_shield",
           "$button_ref": "crafting.no_coalesce_container_slot_button",
           "$focus_override_left_binding_type": "none",
           "$focus_override_left": "armor_item_feet"
@@ -98,7 +98,7 @@
       {
         "head_grid_item@common.container_item": {
           "grid_position": [0, 0],
-          "$cell_overlay_ref": "survival_inventory.armor_overlay_helmet",
+          "$cell_overlay_ref": "screen_content.armor_overlay_helmet",
           "$button_ref": "crafting.no_coalesce_container_slot_button",
           "$focus_id_binding_type": "none",
           "$focus_id": "armor_item_head",
@@ -109,7 +109,7 @@
       {
         "chest_grid_item@common.container_item": {
           "grid_position": [0, 1],
-          "$cell_overlay_ref": "survival_inventory.armor_overlay_chest",
+          "$cell_overlay_ref": "screen_content.armor_overlay_chest",
           "$button_ref": "crafting.no_coalesce_container_slot_button",
           "$focus_id_binding_type": "none",
           "$focus_id": "armor_item_chest",
@@ -120,7 +120,7 @@
       {
         "legs_grid_item@common.container_item": {
           "grid_position": [0, 2],
-          "$cell_overlay_ref": "survival_inventory.armor_overlay_legs",
+          "$cell_overlay_ref": "screen_content.armor_overlay_legs",
           "$button_ref": "crafting.no_coalesce_container_slot_button",
           "$focus_id_binding_type": "none",
           "$focus_id": "armor_item_legs",
@@ -131,7 +131,7 @@
       {
         "feet_grid_item@common.container_item": {
           "grid_position": [0, 3],
-          "$cell_overlay_ref": "survival_inventory.armor_image_feet",
+          "$cell_overlay_ref": "screen_content.armor_image_feet",
           "$button_ref": "crafting.no_coalesce_container_slot_button",
           "$focus_id_binding_type": "none",
           "$focus_id": "armor_item_feet",

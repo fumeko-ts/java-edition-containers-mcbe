@@ -1,0 +1,135 @@
+{
+  "namespace": "text_edit_box",
+  "text_field@common.text_edit_box": {
+    "$text_clear_button_enabled|default": false,
+    "$text_panel_size_minus_1px|default": [80, 14],
+    "$text_background_default": "screen_content.text_field",
+    "$text_background_hover": "screen_content.text_field_highlighted",
+    "controls": [
+      {
+        "text_box_panel": {
+          "type": "panel",
+          "size": "$text_panel_size",
+          "$text_panel_size": [81, 14],
+          "controls": [
+            {
+              "delete_text_button": {
+                "type": "panel",
+                "size": [14, 14],
+                "anchor_to": "right_middle",
+                "anchor_from": "right_middle",
+                "visible": "$text_clear_button_enabled",
+                "controls": [
+                  {"delete_text_button@common.clear_text_button": {"layer": 10}}
+                ],
+                "bindings": [
+                  {
+                    "binding_type": "global",
+                    "binding_name": "#show_clear_text_button",
+                    "binding_name_override": "#visible"
+                  }
+                ]
+              }
+            },
+            {
+              "clipper_panel": {
+                "type": "panel",
+                "clips_children": true,
+                "size": "$text_panel_size_minus_1px",
+                "controls": [
+                  {
+                    "$text_edit_text_control@global.empty_label": {
+                      "layer": 4,
+                      "$locked_color|default": [1.0, 1.0, 1.0, 1.0],
+                      "alpha": 1.0,
+                      "locked_alpha": 0.5,
+                      "font_scale_factor": 1.0,
+                      "line_padding": -1.2,
+                      "size": "$text_edit_box_label_size",
+                      "offset": "$text_edit_box_label_offset",
+                      "min_size": "$text_edit_box_label_min_size",
+                      "color": "$text_box_text_color",
+                      "locked_color": "$locked_color",
+                      "font_size": "normal",
+                      "text_alignment": "left",
+                      "property_bag": {
+                        "#property_field": "#item_name"
+                      },
+                      "$text_edit_box_content_binding_type|default": "global",
+                      "$text_edit_box_content_binding_name|default": "#text_box_item_name",
+                      "$text_edit_box_binding_condition|default": "visible",
+                      "text": "#item_name",
+                      "enable_profanity_filter": false,
+                      "localize": false,
+                      "bindings": [
+                        {
+                          "binding_type": "$text_edit_box_content_binding_type",
+                          "binding_condition": "$text_edit_box_binding_condition",
+                          "binding_collection_name": "$text_edit_box_grid_collection_name",
+                          "binding_name": "$text_edit_box_content_binding_name",
+                          "binding_name_override": "#item_name"
+                        },
+                        {"binding_name": "#newline_refresh"}
+                      ]
+                    }
+                  },
+                  {
+                    "visibility_panel": {
+                      "type": "panel",
+                      "controls": [{"place_holder_control@text_edit_box.text_field_place_holder_label": {}}],
+                      "bindings": [
+                        {
+                          "binding_type": "view",
+                          "source_control_name": "$text_edit_text_control",
+                          "source_property_name": "(#item_name = '')",
+                          "target_property_name": "#visible",
+                          "resolve_sibling_scope": true
+                        }
+                      ]
+                    }
+                  }
+                ]
+              }
+            },
+            {"default@text_edit_box.control_panel_template": {"controls": [{"texture@$text_background_default": {}}]}},
+            {"hover@text_edit_box.control_panel_template"  : {"controls": [{"texture@$text_background_hover"  : {}}]}},
+            {"pressed@text_edit_box.control_panel_template": {"controls": [{"texture@$text_background_default": {}}]}},
+            {"locked@text_edit_box.control_panel_template" : {"controls": [{"texture@$text_background_default" : {}}]}}
+          ]
+        }
+      }
+    ]
+  },
+  "control_panel_template@global.empty_panel":{"layer":3},
+  "text_field_place_holder_label@global.empty_label": {
+    "alpha": 1.0,
+    "locked_alpha": 0.5,
+    "font_scale_factor": 1.0,
+    "line_padding": -1.2,
+    "color": "$place_holder_text_color",
+    "locked_color": "$text_box_locked_text_color",
+    "text": "$place_holder_text",
+    "offset": "$text_edit_box_label_offset",
+    "font_size": "normal",
+    "text_alignment": "left",
+    "$text_edit_box_placeholder_content_binding_type|default": "global",
+    "$text_edit_box_placeholder_content_binding_name|default": "#text_box_item_name",
+    "$text_edit_box_placeholder_binding_condition|default": "visible",
+    "$place_holder_text|default": "",
+    "localize": true,
+    "layer": 4,
+    "size": "$text_edit_box_label_size",
+    "min_size": "$text_edit_box_label_min_size",
+    "$text_alpha|default": "$alpha",
+    "$locked_text_alpha|default": "$disabled_alpha",
+    "shadow": true,
+    "bindings": [
+      {
+        "binding_type": "$text_edit_box_placeholder_content_binding_type",
+        "binding_condition": "$text_edit_box_placeholder_binding_condition",
+        "binding_collection_name": "$text_edit_box_grid_collection_name",
+        "binding_name": "$text_edit_box_placeholder_content_binding_name"
+      }
+    ]
+  }
+}

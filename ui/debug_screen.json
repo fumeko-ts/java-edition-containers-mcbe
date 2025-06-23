@@ -1,5 +1,5 @@
 {
-  "namespace": "debug_screen",
+  "namespace": "debug_screen"/*,
   "debug_screen@common.base_screen": { "$screen_content": "debug_screen.warning" },
   "warning@common.empty_panel": {
     "controls": [
@@ -86,5 +86,5 @@
     "from": [ 0, 0 ],
     "duration": 0.3,
     "destroy_at_end": "warning"
-  }
+  }*/
 }

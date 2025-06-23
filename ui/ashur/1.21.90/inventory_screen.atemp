@@ -11,37 +11,31 @@
           "max_size": [325, 166],
           "layer": 1,
           "controls": [
+            {"recipe_book@inventory_screen.recipe_book":{"bindings":[{"binding_type":"global","binding_name":"(not #is_survival_layout)","binding_name_override":"#visible"}]}},
+            {"buffer_1":{"type":"panel","size":[2,"default"],"bindings":[{"binding_type":"global","binding_name":"(not #is_survival_layout)","binding_name_override":"#visible"}]}},
+            {"inventory@inventory_screen.inventory":{}}
+          ],
+          "bindings":[
             {
-              "recipe_book@inventory_screen.recipe_book": {
-                "bindings":[
-                  {
-                    "binding_type": "global",
-                    "binding_name": "(not #is_survival_layout)",
-                    "binding_name_override": "#visible"
-                  }
-                ]
-              }
-            },
+              "binding_type": "global",
+              "binding_name": "(not #is_creative_mode)",
+              "binding_name_override": "#visible"
+            }
+          ]
+        }
+      },
+      { 
+        "creative_mode@creative_inventory.screen_base":{
+          "bindings":[
             {
-              "buffer_1": { 
-                "type": "panel", 
-                "size": [2, "default"],
-                "bindings":[
-                  {
-                    "binding_type": "global",
-                    "binding_name": "(not #is_survival_layout)",
-                    "binding_name_override": "#visible"
-                  }
-                ]
-              }
-            },
-            {"inventory@inventory_screen.inventory": {}}
+              "binding_type": "global",
+              "binding_name": "#is_creative_mode",
+              "binding_name_override": "#visible"
+            }
           ]
         }
       },
       { "flying_item_renderer@common.flying_item_renderer": { "layer": 21 } },
-      { "bundle_touch_tooltip@gameplay.bundle_touch_tooltip": {} },
-      { "bundle_cursor_tooltip@gameplay.bundle_cursor_tooltip": {} },
       { "red_hold_icon@common.inventory_take_progress_icon_button": {} },
       { "red_icon@global.inventory_selected_icon_button": {} },
       { "gamepad_cursor@common.gamepad_cursor_button": {} }
@@ -53,7 +47,7 @@
       {
         "container@screen_content.somali": {
           "$inventory_screen": true,
-          "contained"        : true
+          "contained"        : true// im sure this is not needed but im keeping it eanyway cause it looks like a cool property and i want to use it
         }
       },
       {"inventory_crafting_stack@inventory_specific.inventory_crafting_stack":{}},

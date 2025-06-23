@@ -10,9 +10,9 @@
     "controls": [
       {"search@crafting_tab_stack.search_tab": {}},
       {"equipment@crafting_tab_stack.equipment_tab": {}},
+      {"construction@crafting_tab_stack.construction_tab": {}},
       {"nature@crafting_tab_stack.nature_tab": {}},
-      {"items@crafting_tab_stack.items_tab": {}},
-      {"construction@crafting_tab_stack.construction_tab": {}}
+      {"items@crafting_tab_stack.items_tab": {}}
     ]
   },
   "icon_control@screen_content.image_element": {
@@ -34,18 +34,18 @@
       },
       {
         "requires": "($tab_view_binding_name = nature_tab_toggle)",
-        "$tab_icon_size": [15, 16],
-        "$icon_for_tab": "textures/atemp/ui/icon_recipe_construction"
-      },
-      {
-        "requires": "($tab_view_binding_name = items_tab_toggle)",
         "$tab_icon_size": [22, 14],
         "$icon_for_tab": "textures/atemp/ui/icon_recipe_nature"
       },
       {
-        "requires": "($tab_view_binding_name = construction_tab_toggle)",
+        "requires": "($tab_view_binding_name = items_tab_toggle)",
         "$tab_icon_size": [16, 16],
         "$icon_for_tab": "textures/atemp/ui/item/redstone"
+      },
+      {
+        "requires": "($tab_view_binding_name = construction_tab_toggle)",
+        "$tab_icon_size": [15, 16],
+        "$icon_for_tab": "textures/atemp/ui/icon_recipe_construction"
       }
     ]
   },

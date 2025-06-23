@@ -7,9 +7,9 @@
     "$icon_control": "global.empty_image",
     "$button_content": "crafting.layout_toggle_content",
     "$toggle_name": "layout_toggle",
-    "$template_toggle": "survival_inventory.layout_template_toggle"
+    "$template_toggle": "recipe_toggle.layout_template_toggle"
   },
-  "layout_template_toggle@recipe_toggle.light_template_toggle": {
+  "layout_template_toggle@common_toggles.light_template_toggle": {
     "$focus_override_up": "FOCUS_OVERRIDE_STOP",
     "$default_texture": "assets/minecraft/textures/gui/sprites/recipe_book/button",
     "$hover_texture": "assets/minecraft/textures/gui/sprites/recipe_book/button_highlighted",

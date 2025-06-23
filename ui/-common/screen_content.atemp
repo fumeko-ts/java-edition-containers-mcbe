@@ -192,6 +192,26 @@
     "type": "image",
     "texture": "assets/minecraft/textures/gui/sprites/container/anvil/text_field"
   },
+"armor_overlay_helmet@crafting.armor_overlay": {
+    "alpha": 0.6,
+    "texture": "textures/ui/empty_armor_slot_helmet"
+  },
+  "armor_overlay_chest@crafting.armor_overlay": {
+    "alpha": 0.6,
+    "texture": "textures/ui/empty_armor_slot_chestplate"
+  },
+  "armor_overlay_legs@crafting.armor_overlay": {
+    "alpha": 0.6,
+    "texture": "textures/ui/empty_armor_slot_leggings"
+  },
+  "armor_image_feet@crafting.armor_overlay": {
+    "alpha": 0.6,
+    "texture": "textures/ui/empty_armor_slot_boots"
+  },
+  "armor_overlay_shield@crafting.offhand_overlay": {
+    "alpha": 0.6,
+    "texture": "textures/ui/empty_armor_slot_shield"
+  },
   "scroll_box_image": {
     "type": "panel",
     "size": [ "100% - 2px", "100% - 2px" ],

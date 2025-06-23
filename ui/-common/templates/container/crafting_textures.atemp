@@ -26,19 +26,11 @@
           "anchor_from": "center"
         }
       },
-      { "stack_count@common.stack_count_label": { "layer": 20 } },
-      {
-        "cell_image_classic@crafting_textures.empty_image": { "size": "$cell_image_size", "$texture_index": 0 }
-      },
-      {
-        "cell_image_normal@crafting_textures.empty_image": { "size": "$cell_image_size", "$texture_index": 1 }
-      },
-      {
-        "cell_image_invert@crafting_textures.empty_image": { "size": "$cell_image_size", "$texture_index": 2 }
-      },
-      {
-        "cell_image_selected@crafting_textures.empty_image": { "size": "$cell_image_size", "$texture_index": 4 }
-      },
+      {"stack_count@common.stack_count_label": { "layer": 20 } },
+      {"cell_image_classic@crafting_textures.empty_image": { "size": "$cell_image_size", "$texture_index": 0 }},
+      {"cell_image_normal@crafting_textures.empty_image": { "size": "$cell_image_size", "$texture_index": 1 }},
+      {"cell_image_invert@crafting_textures.empty_image": { "size": "$cell_image_size", "$texture_index": 2 }},
+      {"cell_image_selected@crafting_textures.empty_image": { "size": "$cell_image_size", "$texture_index": 4 }},
       {
         "cell_image_red@crafting_textures.empty_image": {
           "nineslice_size": [ 1, 1, 1, 1 ],

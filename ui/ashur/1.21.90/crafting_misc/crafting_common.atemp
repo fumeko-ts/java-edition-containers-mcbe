@@ -1,48 +1,25 @@
 {
   "namespace": "crafting_common",
-  "text_edit_control@common.text_edit_box_beta": {
+  "text_edit_control@text_edit_box.text_field": {
     "size": [81, 14],
+    "$text_panel_size": [81, 14],
+    "$text_background_default": "screen_content.text_field",
+    "$text_background_hover": "screen_content.text_field_highlighted",
+    "$text_edit_box_label_offset": [3, 0],
     "property_bag": {"#property_field": "#item_name"},
     "$shadow": true,
-    "offset": "$text_box_ashur_offset",
-    "$text_box_ashur_offset": [0, 0],
+    "$text_clear_button_enabled" : true,
+    "focus_wrap_enabled": false,
     "max_length": 30,
     "$text_edit_binding_name": "#text_box_item_name",
     "$text_edit_box_label_size": ["default", 8],
-    "$place_holder_text": "\u00a7o\u00a78\u00a77Search...",
-    "$text_edit_box_label_offset": [1, -1],
-    "$text_edit_box_hovered_button_id": "button.search_bar_hovered",
-    "$text_edit_box_clear_to_button_id": "button.search_bar_clear",
-    "$text_edit_box_selected_to_button_id": "button.search_bar_selected",
-    "$text_edit_box_deselected_to_button_id": "button.search_bar_deselected",
-    "$text_clear_button_enabled": true,
-    "$text_clear_button_size": [15, 15],
-    "$text_clear_button_offset": [2, 0],
-    "focus_wrap_enabled": false
+    "$place_holder_text": "\u00a7o\u00a78\u00a77Search..."
   },
-  "filter_disabled@global.empty_image": {
-    "texture": "assets/minecraft/textures/gui/sprites/recipe_book/filter_disabled.png"
-  },
-  "filter_disabled_highlighted@global.empty_image": {
-    "texture": "assets/minecraft/textures/gui/sprites/recipe_book/filter_disabled_highlighted.png",
-    "controls": [
-      {
-        "hover@global.hover_text": { "layer":20000,"property_bag":{"#hover_text": "Showing All"} }
-      }
-    ]
-  },
-  "filter_enabled@global.empty_image": {
-    "texture": "assets/minecraft/textures/gui/sprites/recipe_book/filter_enabled.png"
-  },
-  "filter_enabled_highlighted@global.empty_image": {
-    "texture": "assets/minecraft/textures/gui/sprites/recipe_book/filter_enabled_highlighted.png",
-    "controls": [
-      {
-        "hover@global.hover_text": { "layer":20000, "property_bag":{"#hover_text": "Showing Craftable"} }
-      }
-    ]
-  },
-  "filter_toggle@common_toggles.switch_toggle": {
+  "filter_disabled@global.empty_image"            : {"texture": "assets/minecraft/textures/gui/sprites/recipe_book/filter_disabled.png"},
+  "filter_disabled_highlighted@global.empty_image": {"texture": "assets/minecraft/textures/gui/sprites/recipe_book/filter_disabled_highlighted.png","controls": [{"hover@global.hover_text": { "layer":20000,"property_bag":{"#hover_text": "Showing All"} }}]},
+  "filter_enabled@global.empty_image"             : {"texture": "assets/minecraft/textures/gui/sprites/recipe_book/filter_enabled.png"},
+  "filter_enabled_highlighted@global.empty_image" : {"texture": "assets/minecraft/textures/gui/sprites/recipe_book/filter_enabled_highlighted.png" ,"controls": [{"hover@global.hover_text": { "layer":20000, "property_bag":{"#hover_text": "Showing Craftable"} }}]},
+  "filter_toggle@common_toggles.switch_toggle"    : {
     "size": [ 26, 18 ],
     "$unchecked_control": "crafting_common.filter_disabled",
     "$unchecked_hover_control": "crafting_common.filter_disabled_highlighted",
