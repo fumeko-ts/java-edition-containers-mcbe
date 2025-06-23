@@ -30,4 +30,3 @@ If you want to reuse some of my UI code, please send me a message on Planet Mine
 - Where you’ll be adding my credit
 - and a conformation that you will not:
 - - - - POST EANY TEXTURE PACKS OR OTHER THINGS USEING MY CODE ON MCPEDL.
-- - - - # unless you obfuscate the code by useing [https://tools.pixelpoly.co/obfuscator](https://tools.pixelpoly.co/obfuscator)
