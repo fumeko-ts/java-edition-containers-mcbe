@@ -1,0 +1,24 @@
+ {
+ "namespace": "creative_inventory",
+  "screen_base@global.root_panel": {
+    "size": [195, 192],
+    "controls": [
+      {
+        "tabs@creative_tabs.tab_stack":{"$is_creative": true}
+      },
+      {
+        "inventory@inventory_tab_creative.base_panel":{
+          "bindings":[
+            {
+              "binding_type": "view",
+              "source_control_name": "tab",
+              "source_property_name": "#toggle_state",
+              "target_property_name": "#visible"
+            }
+          ]
+        }
+      },
+      {"inventory_tab@creative_tabs.inventory_tab":{"anchor_to": "bottom_right","anchor_from": "bottom_right"}}
+    ]
+  }
+}

@@ -1,6 +1,0 @@
- {
- "namespace": "creative_inventory",
-  "screen_base@global.root_panel": {
-    "controls": []
-  }
-}

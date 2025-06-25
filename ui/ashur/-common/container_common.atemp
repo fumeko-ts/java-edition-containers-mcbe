@@ -10,16 +10,11 @@
   },
   "item_remover@common.button": {
     "size": [ 16, 16 ],
-    "layer": 17,
-    "offset": [ 81.6, 51 ],
     "sound_volume": 0.0,
     "sound_pitch": 0.0,
     "default_control": "default",
     "hover_control": "hover",
     "pressed_control": "hover",
-    "anchor_from": "center",
-    "anchor_to": "center",
-    "$white_highlight_slot_offset": [ 2, 1 ],
     "controls": [
       {
         "hover": {
@@ -27,7 +22,7 @@
           "size": [ 16, 16 ],
           "layer": 14,
           "controls": [
-            { "highlight@common.highlight_slot": { "layer": 9 } },
+            { "highlight@common.highlight_slot": {} },
             {
               "tooltip@common.hover_text": {
                 "layer": 100,

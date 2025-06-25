@@ -38,6 +38,7 @@
       { "flying_item_renderer@common.flying_item_renderer": { "layer": 21 } },
       { "red_hold_icon@common.inventory_take_progress_icon_button": {} },
       { "red_icon@global.inventory_selected_icon_button": {} },
+    ///  { "tooltip@inventory_screen.tooltip_test": {} },
       { "gamepad_cursor@common.gamepad_cursor_button": {} }
     ]
   },
@@ -75,5 +76,39 @@
         }
       }
     ]
-  }
+  }/*,
+  "tooltip_test": {
+    "type": "button",
+    "size": [ "100%cm", "100%cm" ],
+    "layer": 100,
+    "locked_control": "",
+    "always_listen_to_input": true,
+    "follows_cursor_inside_parent": true,
+    "always_handle_pointer": true,
+    "controls": [
+      {
+        "default@common.empty_panel": {
+          "size": [ 0, 0 ]
+        }
+      },
+      {
+        "pressed@common.empty_panel": {
+          "size": [ 0, 0 ]
+        }
+      },
+      { "hover@inventory_screen.tooltip": {} }
+    ]
+  },
+  "tooltip": {
+    "type": "panel",
+    "size": [ "100%cm", "100%cm" ],
+    "anchor_to": "bottom_left",
+    "anchor_from": "bottom_left",
+    "min_size": [50, 50],
+    "controls": [
+      {"test@global.empty_image":{"texture": "atemp/ui/white","size": [50, 50]}}
+    ],
+    "layer": 50,
+    "bindings": []
+  }*/
 }

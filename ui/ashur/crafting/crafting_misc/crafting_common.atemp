@@ -15,6 +15,37 @@
     "$text_edit_box_label_size": ["default", 8],
     "$place_holder_text": "\u00a7o\u00a78\u00a77Search..."
   },
+  "player_renderer_panel":{
+    "type": "panel",
+    "size": [34, 45],
+    "controls":[
+      {
+        "float": {
+          "type": "panel",
+          "anchor_from": "center",
+          "anchor_to": "center",
+          "size": [34, 20],
+          "offset": [0, -10],
+          "controls": [
+            {
+              "player_renderer": {
+                "type": "custom",
+                "renderer": "live_player_renderer",
+                "property_bag": {"#look_at_cursor": true},
+                "animation_reset_name": "screen_animation_reset",
+                "anims": [
+                  "@common.screen_exit_size_animation_push",
+                  "@common.screen_exit_size_animation_pop",
+                  "@common.screen_entrance_size_animation_push",
+                  "@common.screen_entrance_size_animation_pop"
+                ]
+              }
+            }
+          ]
+        }
+      }
+    ]
+  },
   "filter_disabled@global.empty_image"            : {"texture": "assets/minecraft/textures/gui/sprites/recipe_book/filter_disabled.png"},
   "filter_disabled_highlighted@global.empty_image": {"texture": "assets/minecraft/textures/gui/sprites/recipe_book/filter_disabled_highlighted.png","controls": [{"hover@global.hover_text": { "layer":20000,"property_bag":{"#hover_text": "Showing All"} }}]},
   "filter_enabled@global.empty_image"             : {"texture": "assets/minecraft/textures/gui/sprites/recipe_book/filter_enabled.png"},

@@ -2,11 +2,11 @@
   "namespace": "crafting_tab_stack",
   "tab_stack@global.empty_stack_panel": {
     "orientation": "vertical",
-    "layer": 2,
     "size": [35, 135],
     "offset": [ -29, 3 ],
     "anchor_to": "top_left",
     "anchor_from": "top_left",
+    "layer": 2,
     "controls": [
       {"search@crafting_tab_stack.search_tab": {}},
       {"equipment@crafting_tab_stack.equipment_tab": {}},
@@ -17,36 +17,16 @@
   },
   "icon_control@screen_content.image_element": {
     "texture": "$icon_for_tab",
-    "$icon_for_tab": "",
     "size": "$tab_icon_size",
+    "$icon_for_tab": "",
+    "keep_ratio": true,//this makes sure the img dosent look wonky
     "$tab_icon_size": [17, 17],
-    "keep_ratio": true,
     "variables": [
-      {
-        "requires": "($tab_view_binding_name = search_tab_toggle)",
-        "$tab_icon_size": [25, 16],
-        "$icon_for_tab": "textures/atemp/ui/item/compass_28.png"
-      },
-      {
-        "requires": "($tab_view_binding_name = equipment_tab_toggle)",
-        "$tab_icon_size": [25, 16],
-        "$icon_for_tab": "textures/atemp/ui/icon_recipe_equipment"
-      },
-      {
-        "requires": "($tab_view_binding_name = nature_tab_toggle)",
-        "$tab_icon_size": [22, 14],
-        "$icon_for_tab": "textures/atemp/ui/icon_recipe_nature"
-      },
-      {
-        "requires": "($tab_view_binding_name = items_tab_toggle)",
-        "$tab_icon_size": [16, 16],
-        "$icon_for_tab": "textures/atemp/ui/item/redstone"
-      },
-      {
-        "requires": "($tab_view_binding_name = construction_tab_toggle)",
-        "$tab_icon_size": [15, 16],
-        "$icon_for_tab": "textures/atemp/ui/icon_recipe_construction"
-      }
+      {"requires": "($tab_view_binding_name = search_tab_toggle)"       ,"$tab_icon_size": [25, 16],"$icon_for_tab": "textures/atemp/ui/item/compass_28.png"     },
+      {"requires": "($tab_view_binding_name = equipment_tab_toggle)"    ,"$tab_icon_size": [25, 16],"$icon_for_tab": "textures/atemp/ui/icon_recipe_equipment"   },
+      {"requires": "($tab_view_binding_name = nature_tab_toggle)"       ,"$tab_icon_size": [22, 14],"$icon_for_tab": "textures/atemp/ui/icon_recipe_nature"      },
+      {"requires": "($tab_view_binding_name = items_tab_toggle)"        ,"$tab_icon_size": [16, 16],"$icon_for_tab": "textures/atemp/ui/item/redstone"           },
+      {"requires": "($tab_view_binding_name = construction_tab_toggle)" ,"$tab_icon_size": [15, 16],"$icon_for_tab": "textures/atemp/ui/icon_recipe_construction"}
     ]
   },
   "icon_holder": {

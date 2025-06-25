@@ -72,7 +72,6 @@
   },
   "image_element": {
     "type": "image",
-    "clip_pixelperfect": true,
     "grayscale": true,
     "alpha": 1
   },
@@ -83,6 +82,11 @@
     "uv": [ 1, 1 ],
     "offset": [ 1, 0 ],
     "layer": 9
+  },
+  "creative_inventory@image_element":{
+    "uv_size": [195, 136],
+    "texture": "assets/minecraft/textures/gui/container/creative_inventory/tab_inventory.png",
+    "offset": [ 0, 0 ]
   },
   "anvil@image_element": {
     "uv_size": [ 176, 166 ],
