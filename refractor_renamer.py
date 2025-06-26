@@ -9,35 +9,67 @@ def remove_json_comments(text):
     text = re.sub(r'/\*.*?\*/', '', text, flags=re.DOTALL)
     return text
 
-def json_compact(obj, indent=2, level=0, max_inline_len=60):
-    space = ' ' * indent * level
+def json_compact(obj, indent=2, level=0, max_inline_len=100):
+    space = ' ' * (indent * level)
+    next_space = ' ' * (indent * (level + 1))
+
+    def is_primitive(val):
+        return isinstance(val, (str, int, float, bool)) or val is None
+
+    def is_simple(val):
+        # Simple = primitive, or dict with primitive values only
+        if is_primitive(val):
+            return True
+        if isinstance(val, dict) and all(is_primitive(v) for v in val.values()):
+            return True
+        return False
+
     if isinstance(obj, dict):
+        if not obj:
+            return '{}'
+
+        # Inline dict if simple and fits length
         items = []
         for k, v in obj.items():
+            if is_primitive(v):
+                items.append(f'{json.dumps(k)}: {json.dumps(v)}')
+            else:
+                items.append(f'{json.dumps(k)}: {json_compact(v, indent, level + 1)}')
+        inline = '{' + ', '.join(items) + '}'
+        if len(inline) <= max_inline_len:
+            return inline
+
+        # multiline dict
+        lines = []
+        for k, v in obj.items():
             val = json_compact(v, indent, level + 1, max_inline_len)
-            items.append(f'"{k}": {val}')
-        one_liner = '{ ' + ', '.join(items) + ' }'
-        if len(one_liner) <= max_inline_len:
-            return one_liner
-        else:
-            lines = []
-            for k, v in obj.items():
-                val = json_compact(v, indent, level + 1, max_inline_len)
-                lines.append(f'{space}{" " * indent}"{k}": {val}')
-            return '{\n' + ',\n'.join(lines) + '\n' + space + '}'
+            lines.append(f'{next_space}{json.dumps(k)}: {val}')
+        return '{\n' + ',\n'.join(lines) + '\n' + space + '}'
+
     elif isinstance(obj, list):
-        items = [json_compact(i, indent, level + 1, max_inline_len) for i in obj]
-        one_liner = '[ ' + ', '.join(items) + ' ]'
-        if len(one_liner) <= max_inline_len:
-            return one_liner
-        else:
-            lines = []
-            for i in obj:
-                val = json_compact(i, indent, level + 1, max_inline_len)
-                lines.append(f'{space}{" " * indent}{val}')
-            return '[\n' + ',\n'.join(lines) + '\n' + space + ']'
+        if not obj:
+            return '[]'
+
+        # All simple dicts? Put in one line with space after commas
+        if all(isinstance(i, dict) and is_simple(i) for i in obj):
+            inline_items = [json_compact(i, indent, level + 1, max_inline_len) for i in obj]
+            inline = '[ ' + ', '.join(inline_items) + ' ]'
+            if len(inline) <= max_inline_len:
+                return inline
+
+        # All primitives? Inline spaced
+        if all(is_primitive(i) for i in obj):
+            inline = '[ ' + ', '.join(json.dumps(i) for i in obj) + ' ]'
+            if len(inline) <= max_inline_len:
+                return inline
+
+        # Multiline list
+        lines = [f'{next_space}{json_compact(i, indent, level + 1, max_inline_len)}' for i in obj]
+        return '[\n' + ',\n'.join(lines) + '\n' + space + ']'
+
     else:
         return json.dumps(obj)
+
 
 def replace_multiple_texts(obj, replacements):
     if isinstance(obj, dict):
@@ -105,7 +137,7 @@ def refactor_text_in_files(root_dir, replacements):
             print(f"Skipping invalid JSON file: {file_path}\n  Error: {e}")
             continue
 
-         # Backup original file before modification
+        # Backup original file before modification
         backup_path = file_path + ".bak_refractor"
         shutil.copyfile(file_path, backup_path)
         backups.append((file_path, backup_path))

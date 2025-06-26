@@ -19,17 +19,17 @@
                 "size": [18, 45],
                 "controls": [
                   {"buffer_1": {"type": "panel","size": ["default", 14]}},
-                  {"offhand_slot@armor_cells.offhand_slot": {}},//18, 45
+                  {"offhand_slot@crafting_common.offhand_slot_creative": {}},//18, 45
                   {"buffer_1": {"type": "panel","size": ["default", 13]}}
                 ]
               }
             },
             {"buffer_2": { "type": "panel", "size": [1, "default"] }},
-            {"head_and_chest@armor_cells.head_and_chest": {}},//18, 45
+            {"head_and_chest@crafting_common.head_and_chest_creative": {}},//18, 45
             {"buffer_3": { "type": "panel", "size": [1, "default"] }},
             {"player_renderer_panel@crafting_common.player_renderer_panel":{}},//34, 45
             {"buffer_4": { "type": "panel", "size": [1, "default"] }},
-            {"legs_and_boots@armor_cells.legs_and_boots":{}}//18, 45
+            {"legs_and_boots@crafting_common.legs_and_boots_creative":{}}//18, 45
           ]
         }
       }

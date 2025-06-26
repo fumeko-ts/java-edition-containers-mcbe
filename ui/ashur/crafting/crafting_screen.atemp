@@ -65,7 +65,7 @@
     "type": "panel",
     "size": [147, 166],
     "controls": [
-      {"tab_stack@crafting_tab_stack.tab_stack": {}},//32px
+      {"tab_stack@crafting_common.crafting_survival_tabs": {}},//32px
       {
         "root_panel@global.root_panel": {
           "controls": [
