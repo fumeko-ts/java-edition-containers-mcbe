@@ -1,20 +1,23 @@
 {
   "namespace": "recipe_toggle",
-  "layout_toggle@common_toggles.light_image_toggle": {
-    "$hover_border_visible": false,
-    "$default_border_visible": false,
+  "toggle_base@toggle.toggle": {
+    "type": "panel",
+    "size": [20, 18],
+    "$unchecked_default_image"            : "assets/minecraft/textures/gui/sprites/recipe_book/button"            ,
+    "$unchecked_hover_image"              : "assets/minecraft/textures/gui/sprites/recipe_book/button_highlighted",
+    "$unchecked_locked_image"             : "assets/minecraft/textures/gui/sprites/recipe_book/button_highlighted",
+    "$unchecked_locked_hover_image"       : "assets/minecraft/textures/gui/sprites/recipe_book/button_highlighted",
+    "$checked_default_image|default"      : "assets/minecraft/textures/gui/sprites/recipe_book/button"            ,
+    "$checked_hover_image|default"        : "assets/minecraft/textures/gui/sprites/recipe_book/button_highlighted",
+    "$checked_locked_image|default"       : "assets/minecraft/textures/gui/sprites/recipe_book/button_highlighted",
+    "$checked_locked_hover_image|default" : "assets/minecraft/textures/gui/sprites/recipe_book/button_highlighted",
+    "$is_tab": false,
+    "$recipe_inventory": true,
+    "$texture_sould_keep_ratio": true,
     "$toggle_binding_type": "global",
-    "$icon_control": "global.empty_image",
-    "$button_content": "crafting.layout_toggle_content",
     "$toggle_name": "layout_toggle",
-    "$template_toggle": "recipe_toggle.layout_template_toggle"
-  },
-  "layout_template_toggle@common_toggles.light_template_toggle": {
-    "$focus_override_up": "FOCUS_OVERRIDE_STOP",
-    "$default_texture": "assets/minecraft/textures/gui/sprites/recipe_book/button",
-    "$hover_texture": "assets/minecraft/textures/gui/sprites/recipe_book/button_highlighted",
-    "$pressed_texture": "assets/minecraft/textures/gui/sprites/recipe_book/button_highlighted",
-    "$pressed_no_hover_texture": "assets/minecraft/textures/gui/sprites/recipe_book/button"
+    "$tab_view_binding_name"    : "inventory_layout",
+    "$toggle_state_binding_name": "#toggle_state"
   },
   "recipe_layout_toggle": {
     "type": "panel",
@@ -22,8 +25,7 @@
     "layer": 10,
     "controls": [
       {
-        "recipe_book_layout_toggle@recipe_toggle.layout_toggle": {
-          "size": [ 20, 18 ],
+        "recipe_book_layout_toggle@recipe_toggle.toggle_base": {
           "$toggle_group_forced_index": "$recipe_book_layout_index",
           "$toggle_state_binding_name": "#is_recipe_book_layout",
           "bindings": [
@@ -36,8 +38,7 @@
         }
       },
       {
-        "survival_inventory_toggle@recipe_toggle.layout_toggle": {
-          "size": [ 20, 18 ],
+        "survival_inventory_toggle@recipe_toggle.toggle_base": {
           "$toggle_group_forced_index": "$survival_layout_index",
           "$toggle_state_binding_name": "#is_survival_layout",
           "bindings": [

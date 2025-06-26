@@ -50,19 +50,19 @@
                       "orientation": "vertical",
                       "size": [29, 54],
                       "controls": [
-                        { "toggle_top_spacing@global.empty_panel": { "type": "panel", "size": ["default", 18] }},
+                        { "toggle_top_spacing@global.empty_panel": { "type": "panel", "size": ["default", 17] }},
                         {
                           "toggle_row@global.empty_stack_panel": {
                             "orientation": "horizontal",
                             "size": [29, 18],
                             "controls": [
-                              { "toggle_left_margin@global.empty_panel": { "type": "panel", "size": [5, "default"] }},
+                              { "toggle_left_margin@global.empty_panel": { "type": "panel", "size": [4, "default"] }},
                               { "recipe_toggle@recipe_toggle.recipe_layout_toggle": {} },
-                              { "toggle_right_margin@global.empty_panel": { "type": "panel", "size": [4, "default"] }}
+                              { "toggle_right_margin@global.empty_panel": { "type": "panel", "size": [5, "default"] }}
                             ]
                           }
                         },
-                        { "toggle_bottom_spacing@global.empty_panel": { "type": "panel", "size": ["default", 18] }}
+                        { "toggle_bottom_spacing@global.empty_panel": { "type": "panel", "size": ["default", 19] }}
                       ]
                     }
                   },

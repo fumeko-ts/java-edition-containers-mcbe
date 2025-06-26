@@ -70,6 +70,8 @@
     "ui/ashur/crafting/inventory/inventory_top_half.atemp",
     "ui/ashur/crafting/inventory_creative/inventory_tab_creative.atemp",
     "ui/ashur/crafting/inventory_creative/inventory_top_half_creative.atemp",
+    "ui/ashur/crafting/inventory_creative/misc_tabs_creative.atemp",
+    "ui/ashur/crafting/inventory_creative/search_tabs_creative.atemp",
     "ui/ashur/furnaces/blast_furnace_eta.atemp",
     "ui/ashur/furnaces/furnace_eta.atemp",
     "ui/ashur/furnaces/smoker_eta.atemp",

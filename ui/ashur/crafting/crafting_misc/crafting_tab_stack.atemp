@@ -34,11 +34,12 @@
     "size": [24, 25],
     "controls": [ {"img@$tab_icon": {}} ]
   },
-  "top_tab@toggle.tab_left": {
+  "top_tab@toggle.toggle": {
     "type": "panel",
     "size": [35, 27],
     "$toggle_binding_type": "global",
     "$toggle_focus_enabled": false,
+    "$is_left_tab": true,
     "$toggle_name": "navigation_tab",
     "$tab_icon": "crafting_tab_stack.icon_control",
     "$toggle_state_binding_name": "#toggle_state",

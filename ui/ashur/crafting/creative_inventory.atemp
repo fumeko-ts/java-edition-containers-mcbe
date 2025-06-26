@@ -18,6 +18,66 @@
           ]
         }
       },
+      {
+        "items@misc_tabs_creative.base_panel":{
+          "bindings":[
+            {
+              "binding_type": "view",
+              "source_control_name": "construction_tab_toggle",
+              "source_property_name": "#toggle_state",
+              "target_property_name": "#visible"
+            }
+          ]
+        }
+      },
+      {
+        "items@misc_tabs_creative.base_panel":{
+          "bindings":[
+            {
+              "binding_type": "view",
+              "source_control_name": "equipment_tab_toggle",
+              "source_property_name": "#toggle_state",
+              "target_property_name": "#visible"
+            }
+          ]
+        }
+      },
+      {
+        "items@misc_tabs_creative.base_panel":{
+          "bindings":[
+            {
+              "binding_type": "view",
+              "source_control_name": "nature_tab_toggle",
+              "source_property_name": "#toggle_state",
+              "target_property_name": "#visible"
+            }
+          ]
+        }
+      },
+      {
+        "items@misc_tabs_creative.base_panel":{
+          "bindings":[
+            {
+              "binding_type": "view",
+              "source_control_name": "items_tab_toggle",
+              "source_property_name": "#toggle_state",
+              "target_property_name": "#visible"
+            }
+          ]
+        }
+      },
+      {
+        "items@search_tabs_creative.base_panel":{
+          "bindings":[
+            {
+              "binding_type": "view",
+              "source_control_name": "search_tab_toggle",
+              "source_property_name": "#toggle_state",
+              "target_property_name": "#visible"
+            }
+          ]
+        }
+      },
       {"inventory_tab@creative_tabs.inventory_tab":{"anchor_to": "bottom_right","anchor_from": "bottom_right"}}
     ]
   }

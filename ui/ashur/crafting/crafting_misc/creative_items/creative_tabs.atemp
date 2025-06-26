@@ -37,7 +37,7 @@
     "size": [24, 25],
     "controls": [ {"img@$tab_icon": {}} ]
   },
-  "top_tab@toggle.tab": {
+  "top_tab@toggle.toggle": {
     "type": "panel",
     "size": [26, 32],
     "$toggle_binding_type": "global",
@@ -50,35 +50,33 @@
   "search_tab@creative_tabs.top_tab": {
     "$is_top_right_tab": true,
     "$tab_view_binding_name"    : "search_tab_toggle",
-    "$toggle_group_forced_index": "$search_index",
+    "$toggle_group_forced_index": "$search_index",// index num 5
     "$toggle_state_binding_name": "#is_left_tab_search"
   },
   "equipment_tab@creative_tabs.top_tab": {
     "$tab_view_binding_name"    : "equipment_tab_toggle",
-    "$toggle_group_forced_index": "$equipment_index",
+    "$toggle_group_forced_index": "$equipment_index",// index num 2
     "$toggle_state_binding_name": "#is_left_tab_equipment"
   },
   "nature_tab@creative_tabs.top_tab": {
     "$tab_view_binding_name"    : "nature_tab_toggle",
-    "$toggle_group_forced_index": "$nature_index",
+    "$toggle_group_forced_index": "$nature_index",// index num 4
     "$toggle_state_binding_name": "#is_left_tab_nature"
   },
   "items_tab@creative_tabs.top_tab": {
     "$tab_view_binding_name"    : "items_tab_toggle",
-    "$toggle_group_forced_index": "$items_index",
+    "$toggle_group_forced_index": "$items_index",// index num 3
     "$toggle_state_binding_name": "#is_left_tab_items"
   },
   "construction_tab@creative_tabs.top_tab": {
     "$is_top_left_tab": true,
     "$tab_view_binding_name"    : "construction_tab_toggle",
-    "$toggle_group_forced_index": "$construction_index",
+    "$toggle_group_forced_index": "$construction_index",// index num 1
     "$toggle_state_binding_name": "#is_left_tab_construct"
   },
-
-
-
   "inventory_tab@creative_tabs.top_tab": {
     "$is_bottom_right_tab": true,
-    "$toggle_group_forced_index": "($search_index + 1)"
+    "$is_creative": true,
+    "$toggle_group_forced_index": "($search_index + 1)"// index num 6 // thers no index 0
   }
 }

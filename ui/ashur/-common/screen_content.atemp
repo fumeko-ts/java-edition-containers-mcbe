@@ -88,6 +88,16 @@
     "texture": "assets/minecraft/textures/gui/container/creative_inventory/tab_inventory.png",
     "offset": [ 0, 0 ]
   },
+  "creative_inventory_misc@image_element":{
+    "uv_size": [195, 136],
+    "texture": "assets/minecraft/textures/gui/container/creative_inventory/tab_items.png",
+    "offset": [ 0, 0 ]
+  },
+  "creative_inventory_search@image_element":{
+    "uv_size": [195, 136],
+    "texture": "assets/minecraft/textures/gui/container/creative_inventory/tab_item_search.png",
+    "offset": [ 0, 0 ]
+  },
   "anvil@image_element": {
     "uv_size": [ 176, 166 ],
     "texture": "assets/minecraft/textures/gui/container/anvil",
