@@ -395,18 +395,18 @@
           "size": "$scroll_size",
           "anchor_from": "$bar_and_track_anchor_from",
           "anchor_to": "$bar_and_track_anchor_to",
-          "$bar_side|default": "scroll_right",
+          "$scroll_bar_anchor|default": "right",
           "offset": "$scroll_track_offset",
           "variables": [
             {
-              "requires": "($bar_side = scroll_left)",
-              "$bar_and_track_anchor_from": "top_left",
-              "$bar_and_track_anchor_to": "top_left"
-            },
-            {
-              "requires": "($bar_side = scroll_right)",
+              "requires": "($scroll_bar_anchor = right)",
               "$bar_and_track_anchor_from": "top_right",
               "$bar_and_track_anchor_to": "top_right"
+            },
+            {
+              "requires": "($scroll_bar_anchor = left)",
+              "$bar_and_track_anchor_from": "top_left",
+              "$bar_and_track_anchor_to": "top_left"
             }
           ],
           "controls": [

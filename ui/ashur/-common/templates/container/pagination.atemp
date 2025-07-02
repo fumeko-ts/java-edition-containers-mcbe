@@ -36,7 +36,7 @@
   "page_25_content@page_offset_template": { "$ov": [ 0, -2400 ] },
   "page_26_content@page_offset_template": { "$ov": [ 0, -2500 ] },
   "page_27_content@page_offset_template": { "$ov": [ 0, -2600 ] },
-  "page_28_content@page_offset_template": { "$ov": [ 0, -2600 ] },
+  "page_28_content@page_offset_template": { "$ov": [ 0, -2700 ] },
   "base_content": {
     "type": "panel",
     "$current_page": 1,

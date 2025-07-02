@@ -222,14 +222,14 @@ def search_text_in_files(root_dir, search_text):
         print(f"No occurrences of '{search_text}' found in any files.")
 
 def run_ui_defs():
-    ui_script_path = os.path.join("ui", "refractor_renamer.py")
+    ui_script_path = os.path.join("_ui_defs-updater.py")
     if os.path.isfile(ui_script_path):
         print(f"Running {ui_script_path} ...")
         try:
             subprocess.run([os.sys.executable, ui_script_path], check=True)
-            print("refractor_renamer.py completed successfully.")
+            print("_ui_defs-updater.py completed successfully.")
         except subprocess.CalledProcessError as e:
-            print(f"refractor_renamer.py failed with error: {e}")
+            print(f"_ui_defs-updater.py failed with error: {e}")
     else:
         print(f"{ui_script_path} not found, skipping run.")
 

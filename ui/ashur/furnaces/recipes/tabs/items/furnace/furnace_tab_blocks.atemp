@@ -29,7 +29,7 @@
       {
         "controls": {
           "type": "panel",
-          "offset": [ -52, -38.6 ],
+          "offset": [ -51, -38.2 ],
           "controls": [
             {
               ":1@cell_toggle.base": {

@@ -160,6 +160,8 @@
   "container@common.empty_panel": {
     "size": [ 176, 166 ],
     "layer": 1,
+    "anchor_to": "center",
+    "anchor_from": "center",
     "controls": [
       {
         "common_panel@screen_content.somali": { "$furnace_screen": true }
@@ -209,11 +211,12 @@
       },
       {
         "recipe_and_container_stack@global.empty_stack_panel": {
-          "size": [ 332, 166 ],
+          "max_size": [ 332, 166 ],
+          "min_size": [ 176, 166 ],
           "orientation": "horizontal",
           "controls": [
-            { "recipe_book@furnace_book_base.recipe_book": {  } },
-            { "buffer@global.empty_panel": { "size": [ 3, "100%" ] } },
+          //  { "recipe_book@furnace_book_base.recipe_book": {  } },
+           // { "buffer@global.empty_panel": { "size": [ 3, "100%" ] } },
             { "container@furnace_eta.container": {  } }
           ]
         }

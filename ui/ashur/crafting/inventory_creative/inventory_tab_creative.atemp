@@ -14,7 +14,7 @@
     "controls": [
       {"inventory_top_half@inventory_top_half_creative.inventory_top_half_creative":{}},
       {
-        "inventory_cells@crafting_inventory_stack.inventory_bottom_half_with_label": {
+        "inventory_cells@crafting_screen.inventory_bottom_half_with_label": {
             "$grid_cell_offset": [8, 0],
             "$inventory_panel_offset": "bottom_left"
         }
