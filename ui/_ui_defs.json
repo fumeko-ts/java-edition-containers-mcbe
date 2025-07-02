@@ -17,7 +17,7 @@
     "ui/ashur/horse_screen.atemp",
     "ui/ashur/loom_screen.atemp",
     "ui/ashur/shulker_screen.atemp",
-    "('ui/ashur/small_chest' + '_screen.atemp')",
+    "ui/ashur/small_chest_screen.atemp",
     "ui/ashur/smithing_table_screen.atemp",
     "ui/ashur/stonecutter_screen.atemp",
     "ui/ashur/trade_2_screen.atemp",

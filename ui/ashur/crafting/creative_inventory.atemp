@@ -79,6 +79,13 @@
       {
         "inventory_tab@creative_tabs.inventory_tab": {"anchor_to": "bottom_right", "anchor_from": "bottom_right"}
       }
-    ]
+    ],
+                          "bindings": [
+                        {
+                          "binding_type": "global", 
+                          "binding_name": "#is_creative_mode", 
+                          "binding_name_override": "#visible"
+                        }
+                      ]
   }
 }
