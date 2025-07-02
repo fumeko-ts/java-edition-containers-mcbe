@@ -26,11 +26,19 @@
           "anchor_from": "center"
         }
       },
-      {"stack_count@common.stack_count_label": { "layer": 20 } },
-      {"cell_image_classic@crafting_textures.empty_image": { "size": "$cell_image_size", "$texture_index": 0 }},
-      {"cell_image_normal@crafting_textures.empty_image": { "size": "$cell_image_size", "$texture_index": 1 }},
-      {"cell_image_invert@crafting_textures.empty_image": { "size": "$cell_image_size", "$texture_index": 2 }},
-      {"cell_image_selected@crafting_textures.empty_image": { "size": "$cell_image_size", "$texture_index": 4 }},
+      {"stack_count@common.stack_count_label": {"layer": 20}},
+      {
+        "cell_image_classic@crafting_textures.empty_image": {"size": "$cell_image_size", "$texture_index": 0}
+      },
+      {
+        "cell_image_normal@crafting_textures.empty_image": {"size": "$cell_image_size", "$texture_index": 1}
+      },
+      {
+        "cell_image_invert@crafting_textures.empty_image": {"size": "$cell_image_size", "$texture_index": 2}
+      },
+      {
+        "cell_image_selected@crafting_textures.empty_image": {"size": "$cell_image_size", "$texture_index": 4}
+      },
       {
         "cell_image_red@crafting_textures.empty_image": {
           "nineslice_size": [ 1, 1, 1, 1 ],
@@ -89,5 +97,5 @@
     "$item_renderer_binding_condition": "always",
     "$button_ref": "crafting.inventory_container_slot_button"
   },
-  "output_cell_textures@crafting_textures.main_cell_panel": { "$cell_images_binding_condition": "always" }
+  "output_cell_textures@crafting_textures.main_cell_panel": {"$cell_images_binding_condition": "always"}
 }

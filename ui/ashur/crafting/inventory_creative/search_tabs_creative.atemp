@@ -1,16 +1,11 @@
 {
   "namespace": "search_tabs_creative",
-  "base_panel@global.empty_panel":{
+  "base_panel@global.empty_panel": {
     "$is_creative_survival_tab": true,
-    "size":[195, 136],
+    "size": [ 195, 136 ],
     "controls": [
-      {
-        "inventory@search_tabs_creative.survival_tab_base":{}
-      }
+      {"inventory@search_tabs_creative.survival_tab_base": {}}
     ]
   },
-  "survival_tab_base@screen_content.creative_inventory_search":{
-    "size":[195, 136],
-    "controls": []
-  }
+  "survival_tab_base@screen_content.creative_inventory_search": {"size": [ 195, 136 ], "controls": []}
 }

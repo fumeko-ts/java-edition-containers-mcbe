@@ -1,64 +1,62 @@
 {
-  "namespace": "double_chest_eta",
-
-  "chest_grid_item@common.container_item": {
-    "$item_collection_name": "container_items"
-  },
-
-  "double_chest_panel": {
+  "namespace": "ender_chest_screen",
+  "chest_grid_item@common.container_item": {"$item_collection_name": "container_items"},
+  "ender_chest_panel": {
     "type": "panel",
     "controls": [
-      {"container_gamepad_helpers@common.container_gamepad_helpers": {} },
-      {"selected_item_details_factory@common.selected_item_details_factory"  : {"control_name": "@chest.selected_item_details"}},
-      {"item_lock_notification_factory@common.item_lock_notification_factory": {"control_name": "@common.item_lock_notification"}},
+      {"container_gamepad_helpers@common.container_gamepad_helpers": {}},
+      {"selected_item_details_factory@common.selected_item_details_factory": {}},
+      {"item_lock_notification_factory@common.item_lock_notification_factory": {}},
       {
         "root_panel@common.empty_panel": {
-          "size": [176, 220],
+          "size": [ 176, 166 ],
           "layer": 1,
           "controls": [
             {
-              "double_chest_label": {
+              "ender_chest_label": {
                 "type": "label",
-                "offset": [-49.2, 4.6],
+                "offset": [ -49, 5 ],
                 "anchor_from": "top_middle",
                 "anchor_to": "top_middle",
                 "text": "$container_title",
-                "$container_title": "Large Chest",
+                "$container_title": "Ender Chest",
                 "color": "$title_text_color",
                 "layer": 12
               }
             },
-            {"common_panel@screen_content.somali": {"$double_chest_container": true}},
+            {"common_panel@screen_content.somali": {"$barrel_screen": true}},
             {
-              "chest_panel": {
+              "ender_chest_panel": {
                 "type": "panel",
                 "layer": 5,
                 "controls": [
                   {
-                    "double_chest_eta_panel_top_half": {
+                    "ender_chest_panel_top_half": {
                       "type": "panel",
-                      "size": ["100%", 132],
-                      "offset": [0, 7],
+                      "size": [ "100%", "50%" ],
+                      "offset": [ 0, 8 ],
                       "anchor_to": "top_left",
                       "anchor_from": "top_left",
                       "controls": [
                         {
-                          "double_chest_eta_grid": {
+                          "ender_chest_grid": {
                             "type": "grid",
-                            "size": [162, 108],
-                            "offset": [7, 10],
+                            "size": [ 162, 54 ],
+                            "offset": [ 7, 9 ],
                             "anchor_from": "top_left",
                             "anchor_to": "top_left",
-                            "grid_dimensions": [9, 6],
-                            "grid_item_template": "double_chest_eta.chest_grid_item",
+                            "grid_dimensions": [ 9, 3 ],
+                            "grid_item_template": "ender_chest_screen.chest_grid_item",
                             "collection_name": "container_items"
                           }
                         }
                       ]
                     }
                   },
-                  {"inventory_panel_bottom_half_with_label@common.inventory_panel_bottom_half_with_label": {"offset": [0, -1]}},
-                  {"hotbar_grid@common.hotbar_grid_template": {}},
+                  {
+                    "inventory_panel_bottom_half_with_label@common.inventory_panel_bottom_half_with_label": {"offset": [ 0, -3 ]}
+                  },
+                  {"hotbar_grid@common.hotbar_grid_template": {"offset": [ 0, -7 ]}},
                   {"inventory_take_progress_icon_button@common.inventory_take_progress_icon_button": {}},
                   {"flying_item_renderer@common.flying_item_renderer": {"layer": 15}}
                 ]

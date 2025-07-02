@@ -14,7 +14,7 @@
     "variables": [
       {
         "requires": "($desktop_screen or $pocket_screen)",
-        "$screen_content": "anvil_eta.anvil_panel",
+        "$screen_content": "anvil_screen.anvil_panel",
         "$screen_bg_content": "common.screen_background",
         "$screen_background_alpha": 0.6
       }

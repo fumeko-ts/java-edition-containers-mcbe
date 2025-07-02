@@ -2,34 +2,34 @@
   "namespace": "inventory_top_half_creative",
   "inventory_top_half_creative@global.empty_stack_panel": {
     "orientation": "vertical",
-    "size": [125, 50],
+    "size": [ 125, 50 ],
     "anchor_to": "top_left",
     "anchor_from": "top_left",
     "controls": [
-      {"buffer_1": { "type": "panel", "size": ["default", 5] }},
+      {"buffer_1": {"type": "panel", "size": [ "default", 5 ]}},
       {
         "stack_1@global.empty_stack_panel": {
           "orientation": "horizontal",
-          "size": [125, 45],
+          "size": [ 125, 45 ],
           "controls": [
-            {"buffer_1": { "type": "panel", "size": [34, "default"] }},
+            {"buffer_1": {"type": "panel", "size": [ 34, "default" ]}},
             {
               "stack_2@global.empty_stack_panel": {
                 "orientation": "vertical",
-                "size": [18, 45],
+                "size": [ 18, 45 ],
                 "controls": [
-                  {"buffer_1": {"type": "panel","size": ["default", 14]}},
-                  {"offhand_slot@crafting_common.offhand_slot_creative": {}},//18, 45
-                  {"buffer_1": {"type": "panel","size": ["default", 13]}}
+                  {"buffer_1": {"type": "panel", "size": [ "default", 14 ]}},
+                  {"offhand_slot@crafting_common.offhand_slot_creative": {}},
+                  {"buffer_1": {"type": "panel", "size": [ "default", 13 ]}}
                 ]
               }
             },
-            {"buffer_2": { "type": "panel", "size": [1, "default"] }},
-            {"head_and_chest@crafting_common.head_and_chest_creative": {}},//18, 45
-            {"buffer_3": { "type": "panel", "size": [1, "default"] }},
-            {"player_renderer_panel@crafting_common.player_renderer_panel":{}},//34, 45
-            {"buffer_4": { "type": "panel", "size": [1, "default"] }},
-            {"legs_and_boots@crafting_common.legs_and_boots_creative":{}}//18, 45
+            {"buffer_2": {"type": "panel", "size": [ 1, "default" ]}},
+            {"head_and_chest@crafting_common.head_and_chest_creative": {}},
+            {"buffer_3": {"type": "panel", "size": [ 1, "default" ]}},
+            {"player_renderer_panel@crafting_common.player_renderer_panel": {}},
+            {"buffer_4": {"type": "panel", "size": [ 1, "default" ]}},
+            {"legs_and_boots@crafting_common.legs_and_boots_creative": {}}
           ]
         }
       }

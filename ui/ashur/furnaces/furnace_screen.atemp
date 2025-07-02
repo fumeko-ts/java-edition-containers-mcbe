@@ -1,31 +1,11 @@
-// -------------------------------------------------------------------------
-// JAVA CONTAINERS BEDROCK license info
-// -------------------------------------------------------------------------
-// © 2025 Ashura Temps. All rights reserved.
-// 
-// YOU MAY:
-// - Use this pack normally in gameplay
-// - Modify vanilla textures (Mojang-owned)
-//
-// YOU MAY NOT:
-// - Reuse /ui or /atemp files and their contents in other packs 
-// - use this pack for porting purpose's or eanything of the sort
-// - use this as a base for a "client"
-// - Upload to Marketplace
-// - Post on MCPEDL without code obfuscation
-//
-// Full terms: https://github.com/fumeko-ts/java-edition-containers-mcbe
-// Vanilla assets remain Mojang AB property.
-// -------------------------------------------------------------------------
-
 {
-  "namespace": "furnace_eta",
+  "namespace": "furnace_screen",
   "flame_panel": {
     "type": "panel",
     "size": [ 13, 13 ],
     "offset": [ -21, 0 ],
     "controls": [
-      { "flame_full_image@furnace_eta.flame_full_image": {  } }
+      {"flame_full_image@furnace_screen.flame_full_image": {}}
     ]
   },
   "furnace_arrow_full_image": {
@@ -80,13 +60,9 @@
           "anchor_from": "right_middle",
           "anchor_to": "right_middle",
           "controls": [
-            {
-              "furnace_ingredient_panel@furnace_ingredient_panel": { "offset": [ -15, -17.4 ] }
-            },
-            { "flame_panel@flame_panel": { "offset": [ -16.6, 1 ] } },
-            {
-              "furnace_fuel_panel@furnace_fuel_panel": { "offset": [ -15, 18.5 ] }
-            }
+            {"furnace_ingredient_panel@furnace_ingredient_panel": {"offset": [ -15, -17.4 ]}},
+            {"flame_panel@flame_panel": {"offset": [ -16.6, 1 ]}},
+            {"furnace_fuel_panel@furnace_fuel_panel": {"offset": [ -15, 18.5 ]}}
           ]
         }
       }
@@ -163,9 +139,7 @@
     "anchor_to": "center",
     "anchor_from": "center",
     "controls": [
-      {
-        "common_panel@screen_content.somali": { "$furnace_screen": true }
-      },
+      {"common_panel@screen_content.somali": {"$furnace_screen": true}},
       {
         "furnace_panel_top_half": {
           "type": "panel",
@@ -174,28 +148,18 @@
           "anchor_to": "top_left",
           "anchor_from": "top_left",
           "controls": [
-            { "furnace_label@furnace_label": {  } },
-            { "input@furnace_input_panel": {  } },
-            {
-              "furnace_arrow_full_image@furnace_arrow_full_image": {  }
-            },
-            { "output@furnace_output_panel": {  } }
+            {"furnace_label@furnace_label": {}},
+            {"input@furnace_input_panel": {}},
+            {"furnace_arrow_full_image@furnace_arrow_full_image": {}},
+            {"output@furnace_output_panel": {}}
           ]
         }
       },
-      {
-        "inventory_panel_bottom_half@common.inventory_panel_bottom_half_with_label": { "offset": [ 0, -3 ] }
-      },
-      {
-        "hotbar_grid@common.hotbar_grid_template": { "offset": [ 0, -7 ] }
-      },
-      {
-        "take_progress_icon_button@common.inventory_take_progress_icon_button": {  }
-      },
-      {
-        "inventory_selected_icon_button@global.inventory_selected_icon_button": {  }
-      },
-      { "gamepad_cursor@common.gamepad_cursor_button": {  } }
+      {"inventory_panel_bottom_half@common.inventory_panel_bottom_half_with_label": {"offset": [ 0, -3 ]}},
+      {"hotbar_grid@common.hotbar_grid_template": {"offset": [ 0, -7 ]}},
+      {"take_progress_icon_button@common.inventory_take_progress_icon_button": {}},
+      {"inventory_selected_icon_button@global.inventory_selected_icon_button": {}},
+      {"gamepad_cursor@common.gamepad_cursor_button": {}}
     ]
   },
   "furnace_panel": {
@@ -203,30 +167,20 @@
     "anchor_from": "center",
     "anchor_to": "center",
     "controls": [
-      {
-        "container_gamepad_helpers@common.container_gamepad_helpers": {  }
-      },
-      {
-        "selected_item_details_factory@common.selected_item_details_factory": {  }
-      },
+      {"container_gamepad_helpers@common.container_gamepad_helpers": {}},
+      {"selected_item_details_factory@common.selected_item_details_factory": {}},
       {
         "recipe_and_container_stack@global.empty_stack_panel": {
           "max_size": [ 332, 166 ],
           "min_size": [ 176, 166 ],
           "orientation": "horizontal",
           "controls": [
-          //  { "recipe_book@furnace_book_base.recipe_book": {  } },
-           // { "buffer@global.empty_panel": { "size": [ 3, "100%" ] } },
-            { "container@furnace_eta.container": {  } }
+            {"container@furnace_screen.container": {}}
           ]
         }
       },
-      {
-        "item_lock_notification_factory@common.item_lock_notification_factory": {  }
-      },
-      {
-        "flying_item_renderer@common.flying_item_renderer": { "layer": 15 }
-      }
+      {"item_lock_notification_factory@common.item_lock_notification_factory": {}},
+      {"flying_item_renderer@common.flying_item_renderer": {"layer": 15}}
     ]
   }
 }

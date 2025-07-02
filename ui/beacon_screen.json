@@ -14,7 +14,7 @@
     "variables": [
       {
         "requires": "($desktop_screen or $pocket_screen)",
-        "$screen_content": "beacon_eta.beacon_panel",
+        "$screen_content": "beacon_screen.beacon_panel",
         "$screen_bg_content": "common.screen_background",
         "$screen_background_alpha": 0.6
       }

@@ -1,6 +1,6 @@
 {
   "namespace": "chest",
-  "selected_item_details@common.selected_item_details": { "offset": [ 0, 0 ] },
+  "selected_item_details@common.selected_item_details": {"offset": [ 0, 0 ]},
   "small_chest_screen@global.inventory_screen_common": {
     "$close_on_player_hurt|default": true,
     "send_telemetry": false,
@@ -15,7 +15,7 @@
     "variables": [
       {
         "requires": "($desktop_screen or $pocket_screen)",
-        "$screen_content": "small_chest_eta.small_chest_panel",
+        "$screen_content": "small_chest_screen.small_chest_panel",
         "$screen_bg_content": "common.screen_background",
         "$screen_background_alpha": 0.6
       }
@@ -35,7 +35,7 @@
     "variables": [
       {
         "requires": "($desktop_screen or $pocket_screen)",
-        "$screen_content": "double_chest_eta.double_chest_panel",
+        "$screen_content": "double_chest_screen.double_chest_panel",
         "$screen_bg_content": "common.screen_background",
         "$screen_background_alpha": 0.6
       }
@@ -55,7 +55,7 @@
     "variables": [
       {
         "requires": "($desktop_screen or $pocket_screen)",
-        "$screen_content": "ender_chest_eta.ender_chest_panel",
+        "$screen_content": "ender_chest_screen.ender_chest_panel",
         "$screen_bg_content": "common.screen_background",
         "$screen_background_alpha": 0.6
       }
@@ -75,7 +75,7 @@
     "variables": [
       {
         "requires": "($desktop_screen or $pocket_screen)",
-        "$screen_content": "shulker_eta.shulker_panel",
+        "$screen_content": "shulker_screen.shulker_panel",
         "$screen_bg_content": "common.screen_background",
         "$screen_background_alpha": 0.6
       }
@@ -94,7 +94,7 @@
     "variables": [
       {
         "requires": "($desktop_screen or $pocket_screen)",
-        "$screen_content": "barrel_eta.barrel_chest_panel",
+        "$screen_content": "barrel_screen.barrel_chest_panel",
         "$screen_bg_content": "common.screen_background",
         "$screen_background_alpha": 0.6
       }

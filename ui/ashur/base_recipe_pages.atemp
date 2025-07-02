@@ -35,10 +35,10 @@
         "$toggle_control_name@common.toggle": {
           "radio_toggle_group": true,
           "controls": [
-            { "unchecked@$unchecked_bg": {  } },
-            { "unchecked_hover@$unchecked_hov_bg": {  } },
-            { "checked@$checked_bg": {  } },
-            { "checked_hover@$checked_hov_bg": {  } }
+            {"unchecked@$unchecked_bg": {}},
+            {"unchecked_hover@$unchecked_hov_bg": {}},
+            {"checked@$checked_bg": {}},
+            {"checked_hover@$checked_hov_bg": {}}
           ]
         }
       }
@@ -58,7 +58,7 @@
           "layer": 11
         }
       },
-      { "grid@$page_content": { "offset": "$ov", "layer": 30 } },
+      {"grid@$page_content": {"offset": "$ov", "layer": 30}},
       {
         "label": {
           "allow_clipping": false,
@@ -73,34 +73,34 @@
       }
     ]
   },
-  "alpha_tepes_offset_1_content@alpha_tepes_offset_template": { "$ov": [ 0, 0 ], "$lo": "$no" },
-  "alpha_tepes_offset_2_content@alpha_tepes_offset_template": { "$ov": [ 0, -100 ], "$lo": "$no" },
-  "alpha_tepes_offset_3_content@alpha_tepes_offset_template": { "$ov": [ 0, -200 ], "$lo": "$no" },
-  "alpha_tepes_offset_4_content@alpha_tepes_offset_template": { "$ov": [ 0, -300 ], "$lo": "$no" },
-  "alpha_tepes_offset_5_content@alpha_tepes_offset_template": { "$ov": [ 0, -400 ], "$lo": "$no" },
-  "alpha_tepes_offset_6_content@alpha_tepes_offset_template": { "$ov": [ 0, -500 ], "$lo": "$no" },
-  "alpha_tepes_offset_7_content@alpha_tepes_offset_template": { "$ov": [ 0, -600 ], "$lo": "$no" },
-  "alpha_tepes_offset_8_content@alpha_tepes_offset_template": { "$ov": [ 0, -700 ], "$lo": "$no" },
-  "alpha_tepes_offset_9_content@alpha_tepes_offset_template": { "$ov": [ 0, -800 ], "$lo": "$no" },
-  "alpha_tepes_offset_10_content@alpha_tepes_offset_template": { "$ov": [ 0, -900 ], "$lo": "$uh" },
-  "alpha_tepes_offset_11_content@alpha_tepes_offset_template": { "$ov": [ 0, -1000 ], "$lo": "$uh" },
-  "alpha_tepes_offset_12_content@alpha_tepes_offset_template": { "$ov": [ 0, -1100 ], "$lo": "$uh" },
-  "alpha_tepes_offset_13_content@alpha_tepes_offset_template": { "$ov": [ 0, -1200 ], "$lo": "$uh" },
-  "alpha_tepes_offset_14_content@alpha_tepes_offset_template": { "$ov": [ 0, -1300 ], "$lo": "$uh" },
-  "alpha_tepes_offset_15_content@alpha_tepes_offset_template": { "$ov": [ 0, -1400 ], "$lo": "$uh" },
-  "alpha_tepes_offset_16_content@alpha_tepes_offset_template": { "$ov": [ 0, -1500 ], "$lo": "$uh" },
-  "alpha_tepes_offset_17_content@alpha_tepes_offset_template": { "$ov": [ 0, -1600 ], "$lo": "$uh" },
-  "alpha_tepes_offset_18_content@alpha_tepes_offset_template": { "$ov": [ 0, -1700 ], "$lo": "$uh" },
-  "alpha_tepes_offset_19_content@alpha_tepes_offset_template": { "$ov": [ 0, -1800 ], "$lo": "$uh" },
-  "alpha_tepes_offset_20_content@alpha_tepes_offset_template": { "$ov": [ 0, -1900 ], "$lo": "$uh" },
-  "alpha_tepes_offset_21_content@alpha_tepes_offset_template": { "$ov": [ 0, -2000 ], "$lo": "$uh" },
-  "alpha_tepes_offset_22_content@alpha_tepes_offset_template": { "$ov": [ 0, -2100 ], "$lo": "$uh" },
-  "alpha_tepes_offset_23_content@alpha_tepes_offset_template": { "$ov": [ 0, -2200 ], "$lo": "$uh" },
-  "alpha_tepes_offset_24_content@alpha_tepes_offset_template": { "$ov": [ 0, -2300 ], "$lo": "$uh" },
-  "alpha_tepes_offset_25_content@alpha_tepes_offset_template": { "$ov": [ 0, -2400 ], "$lo": "$uh" },
-  "alpha_tepes_offset_26_content@alpha_tepes_offset_template": { "$ov": [ 0, -2500 ], "$lo": "$uh" },
-  "alpha_tepes_offset_27_content@alpha_tepes_offset_template": { "$ov": [ 0, -2600 ], "$lo": "$uh" },
-  "alpha_tepes_offset_28_content@alpha_tepes_offset_template": { "$ov": [ 0, -2600 ], "$lo": "$uh" },
+  "alpha_tepes_offset_1_content@alpha_tepes_offset_template": {"$ov": [ 0, 0 ], "$lo": "$no"},
+  "alpha_tepes_offset_2_content@alpha_tepes_offset_template": {"$ov": [ 0, -100 ], "$lo": "$no"},
+  "alpha_tepes_offset_3_content@alpha_tepes_offset_template": {"$ov": [ 0, -200 ], "$lo": "$no"},
+  "alpha_tepes_offset_4_content@alpha_tepes_offset_template": {"$ov": [ 0, -300 ], "$lo": "$no"},
+  "alpha_tepes_offset_5_content@alpha_tepes_offset_template": {"$ov": [ 0, -400 ], "$lo": "$no"},
+  "alpha_tepes_offset_6_content@alpha_tepes_offset_template": {"$ov": [ 0, -500 ], "$lo": "$no"},
+  "alpha_tepes_offset_7_content@alpha_tepes_offset_template": {"$ov": [ 0, -600 ], "$lo": "$no"},
+  "alpha_tepes_offset_8_content@alpha_tepes_offset_template": {"$ov": [ 0, -700 ], "$lo": "$no"},
+  "alpha_tepes_offset_9_content@alpha_tepes_offset_template": {"$ov": [ 0, -800 ], "$lo": "$no"},
+  "alpha_tepes_offset_10_content@alpha_tepes_offset_template": {"$ov": [ 0, -900 ], "$lo": "$uh"},
+  "alpha_tepes_offset_11_content@alpha_tepes_offset_template": {"$ov": [ 0, -1000 ], "$lo": "$uh"},
+  "alpha_tepes_offset_12_content@alpha_tepes_offset_template": {"$ov": [ 0, -1100 ], "$lo": "$uh"},
+  "alpha_tepes_offset_13_content@alpha_tepes_offset_template": {"$ov": [ 0, -1200 ], "$lo": "$uh"},
+  "alpha_tepes_offset_14_content@alpha_tepes_offset_template": {"$ov": [ 0, -1300 ], "$lo": "$uh"},
+  "alpha_tepes_offset_15_content@alpha_tepes_offset_template": {"$ov": [ 0, -1400 ], "$lo": "$uh"},
+  "alpha_tepes_offset_16_content@alpha_tepes_offset_template": {"$ov": [ 0, -1500 ], "$lo": "$uh"},
+  "alpha_tepes_offset_17_content@alpha_tepes_offset_template": {"$ov": [ 0, -1600 ], "$lo": "$uh"},
+  "alpha_tepes_offset_18_content@alpha_tepes_offset_template": {"$ov": [ 0, -1700 ], "$lo": "$uh"},
+  "alpha_tepes_offset_19_content@alpha_tepes_offset_template": {"$ov": [ 0, -1800 ], "$lo": "$uh"},
+  "alpha_tepes_offset_20_content@alpha_tepes_offset_template": {"$ov": [ 0, -1900 ], "$lo": "$uh"},
+  "alpha_tepes_offset_21_content@alpha_tepes_offset_template": {"$ov": [ 0, -2000 ], "$lo": "$uh"},
+  "alpha_tepes_offset_22_content@alpha_tepes_offset_template": {"$ov": [ 0, -2100 ], "$lo": "$uh"},
+  "alpha_tepes_offset_23_content@alpha_tepes_offset_template": {"$ov": [ 0, -2200 ], "$lo": "$uh"},
+  "alpha_tepes_offset_24_content@alpha_tepes_offset_template": {"$ov": [ 0, -2300 ], "$lo": "$uh"},
+  "alpha_tepes_offset_25_content@alpha_tepes_offset_template": {"$ov": [ 0, -2400 ], "$lo": "$uh"},
+  "alpha_tepes_offset_26_content@alpha_tepes_offset_template": {"$ov": [ 0, -2500 ], "$lo": "$uh"},
+  "alpha_tepes_offset_27_content@alpha_tepes_offset_template": {"$ov": [ 0, -2600 ], "$lo": "$uh"},
+  "alpha_tepes_offset_28_content@alpha_tepes_offset_template": {"$ov": [ 0, -2600 ], "$lo": "$uh"},
   "base_tepes_offset_panel": {
     "type": "panel",
     "$tepes_offset_content|default": "$ep",
@@ -172,10 +172,7 @@
       }
     ],
     "variables": [
-      {
-        "requires": "($itchigo_tepes_offset = 1)",
-        "$tepes_bindings": [  ]
-      },
+      {"requires": "($itchigo_tepes_offset = 1)", "$tepes_bindings": []},
       {
         "requires": "(not $offset_x)",
         "$tepes_controls": [
@@ -208,9 +205,7 @@
           "$ignore_next_button": "(not $offset_x)"
         }
       },
-      {
-        "tepes_offset_next@$next_tepes_offset_control": { "ignored": "(not $offset_x)" }
-      }
+      {"tepes_offset_next@$next_tepes_offset_control": {"ignored": "(not $offset_x)"}}
     ],
     "$tepes_bindings": [
       {
@@ -221,10 +216,7 @@
       }
     ],
     "variables": [
-      {
-        "requires": "($itchigo_tepes_offset = 1)",
-        "$tepes_bindings": [  ]
-      },
+      {"requires": "($itchigo_tepes_offset = 1)", "$tepes_bindings": []},
       {
         "requires": "(not $offset_x)",
         "$tepes_controls": [
@@ -240,34 +232,34 @@
       }
     ]
   },
-  "alpha_tepes_offset_1@base_tepes_offset": { "$itchigo_tepes_offset": 1 },
-  "alpha_tepes_offset_2@base_tepes_offset": { "$itchigo_tepes_offset": 2 },
-  "alpha_tepes_offset_3@base_tepes_offset": { "$itchigo_tepes_offset": 3 },
-  "alpha_tepes_offset_4@base_tepes_offset": { "$itchigo_tepes_offset": 4 },
-  "alpha_tepes_offset_5@base_tepes_offset": { "$itchigo_tepes_offset": 5 },
-  "alpha_tepes_offset_6@base_tepes_offset": { "$itchigo_tepes_offset": 6 },
-  "alpha_tepes_offset_7@base_tepes_offset": { "$itchigo_tepes_offset": 7 },
-  "alpha_tepes_offset_8@base_tepes_offset": { "$itchigo_tepes_offset": 8 },
-  "alpha_tepes_offset_9@base_tepes_offset": { "$itchigo_tepes_offset": 9 },
-  "alpha_tepes_offset_10@base_tepes_offset": { "$itchigo_tepes_offset": 10 },
-  "alpha_tepes_offset_11@base_tepes_offset": { "$itchigo_tepes_offset": 11 },
-  "alpha_tepes_offset_12@base_tepes_offset": { "$itchigo_tepes_offset": 12 },
-  "alpha_tepes_offset_13@base_tepes_offset": { "$itchigo_tepes_offset": 13 },
-  "alpha_tepes_offset_14@base_tepes_offset": { "$itchigo_tepes_offset": 14 },
-  "alpha_tepes_offset_15@base_tepes_offset": { "$itchigo_tepes_offset": 15 },
-  "alpha_tepes_offset_16@base_tepes_offset": { "$itchigo_tepes_offset": 16 },
-  "alpha_tepes_offset_17@base_tepes_offset": { "$itchigo_tepes_offset": 17 },
-  "alpha_tepes_offset_18@base_tepes_offset": { "$itchigo_tepes_offset": 18 },
-  "alpha_tepes_offset_19@base_tepes_offset": { "$itchigo_tepes_offset": 19 },
-  "alpha_tepes_offset_20@base_tepes_offset": { "$itchigo_tepes_offset": 20 },
-  "alpha_tepes_offset_21@base_tepes_offset": { "$itchigo_tepes_offset": 21 },
-  "alpha_tepes_offset_22@base_tepes_offset": { "$itchigo_tepes_offset": 22 },
-  "alpha_tepes_offset_23@base_tepes_offset": { "$itchigo_tepes_offset": 23 },
-  "alpha_tepes_offset_24@base_tepes_offset": { "$itchigo_tepes_offset": 24 },
-  "alpha_tepes_offset_25@base_tepes_offset": { "$itchigo_tepes_offset": 25 },
-  "alpha_tepes_offset_26@base_tepes_offset": { "$itchigo_tepes_offset": 26 },
-  "alpha_tepes_offset_27@base_tepes_offset": { "$itchigo_tepes_offset": 27 },
-  "alpha_tepes_offset_28@base_tepes_offset": { "$itchigo_tepes_offset": 28 },
+  "alpha_tepes_offset_1@base_tepes_offset": {"$itchigo_tepes_offset": 1},
+  "alpha_tepes_offset_2@base_tepes_offset": {"$itchigo_tepes_offset": 2},
+  "alpha_tepes_offset_3@base_tepes_offset": {"$itchigo_tepes_offset": 3},
+  "alpha_tepes_offset_4@base_tepes_offset": {"$itchigo_tepes_offset": 4},
+  "alpha_tepes_offset_5@base_tepes_offset": {"$itchigo_tepes_offset": 5},
+  "alpha_tepes_offset_6@base_tepes_offset": {"$itchigo_tepes_offset": 6},
+  "alpha_tepes_offset_7@base_tepes_offset": {"$itchigo_tepes_offset": 7},
+  "alpha_tepes_offset_8@base_tepes_offset": {"$itchigo_tepes_offset": 8},
+  "alpha_tepes_offset_9@base_tepes_offset": {"$itchigo_tepes_offset": 9},
+  "alpha_tepes_offset_10@base_tepes_offset": {"$itchigo_tepes_offset": 10},
+  "alpha_tepes_offset_11@base_tepes_offset": {"$itchigo_tepes_offset": 11},
+  "alpha_tepes_offset_12@base_tepes_offset": {"$itchigo_tepes_offset": 12},
+  "alpha_tepes_offset_13@base_tepes_offset": {"$itchigo_tepes_offset": 13},
+  "alpha_tepes_offset_14@base_tepes_offset": {"$itchigo_tepes_offset": 14},
+  "alpha_tepes_offset_15@base_tepes_offset": {"$itchigo_tepes_offset": 15},
+  "alpha_tepes_offset_16@base_tepes_offset": {"$itchigo_tepes_offset": 16},
+  "alpha_tepes_offset_17@base_tepes_offset": {"$itchigo_tepes_offset": 17},
+  "alpha_tepes_offset_18@base_tepes_offset": {"$itchigo_tepes_offset": 18},
+  "alpha_tepes_offset_19@base_tepes_offset": {"$itchigo_tepes_offset": 19},
+  "alpha_tepes_offset_20@base_tepes_offset": {"$itchigo_tepes_offset": 20},
+  "alpha_tepes_offset_21@base_tepes_offset": {"$itchigo_tepes_offset": 21},
+  "alpha_tepes_offset_22@base_tepes_offset": {"$itchigo_tepes_offset": 22},
+  "alpha_tepes_offset_23@base_tepes_offset": {"$itchigo_tepes_offset": 23},
+  "alpha_tepes_offset_24@base_tepes_offset": {"$itchigo_tepes_offset": 24},
+  "alpha_tepes_offset_25@base_tepes_offset": {"$itchigo_tepes_offset": 25},
+  "alpha_tepes_offset_26@base_tepes_offset": {"$itchigo_tepes_offset": 26},
+  "alpha_tepes_offset_27@base_tepes_offset": {"$itchigo_tepes_offset": 27},
+  "alpha_tepes_offset_28@base_tepes_offset": {"$itchigo_tepes_offset": 28},
   "max_page_is_28@base_tepes_offset": {
     "$is_in_recipe_inventory|default": false,
     "$page_content|default": "somali_to_Mori_no_Kamisama.recipe_book",

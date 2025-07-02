@@ -8,11 +8,7 @@
     "$is_hover|default": false,
     "controls": [
       {
-        "hover_text@global.hover_text": {
-          "property_bag": { "#hover_text": "$label" },
-          "layer": 9,
-          "ignored": "($is_hover = false)"
-        }
+        "hover_text@global.hover_text": {"property_bag": {"#hover_text": "$label"}, "layer": 9, "ignored": "($is_hover = false)"}
       },
       {
         "hover@common.highlight_slot": {
@@ -38,7 +34,16 @@
       }
     ]
   },
-  "default@cell_template.base": {"$is_hover": false,"texture": "assets/minecraft/textures/gui/sprites/recipe_book/slot_craftable.png"},
-  "hover@cell_template.base"  : {"$is_hover": true ,"texture": "assets/minecraft/textures/gui/sprites/recipe_book/slot_craftable.png"},
-  "pressed@cell_template.base": {"$is_hover": false,"texture": "assets/minecraft/textures/gui/sprites/recipe_book/slot_craftable.png"}
+  "default@cell_template.base": {
+    "$is_hover": false,
+    "texture": "assets/minecraft/textures/gui/sprites/recipe_book/slot_craftable.png"
+  },
+  "hover@cell_template.base": {
+    "$is_hover": true,
+    "texture": "assets/minecraft/textures/gui/sprites/recipe_book/slot_craftable.png"
+  },
+  "pressed@cell_template.base": {
+    "$is_hover": false,
+    "texture": "assets/minecraft/textures/gui/sprites/recipe_book/slot_craftable.png"
+  }
 }

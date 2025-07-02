@@ -14,7 +14,7 @@
     "variables": [
       {
         "requires": "($desktop_screen or $pocket_screen)",
-        "$screen_content": "hopper_eta.hopper_panel",
+        "$screen_content": "hopper_screen.hopper_panel",
         "$screen_bg_content": "common.screen_background",
         "$screen_background_alpha": 0.6
       }
@@ -34,7 +34,7 @@
     "variables": [
       {
         "requires": "($desktop_screen or $pocket_screen)",
-        "$screen_content": "dispenser_eta.dispenser_panel",
+        "$screen_content": "dispenser_screen.dispenser_panel",
         "$screen_bg_content": "common.screen_background",
         "$screen_background_alpha": 0.6
       }
@@ -54,7 +54,7 @@
     "variables": [
       {
         "requires": "($desktop_screen or $pocket_screen)",
-        "$screen_content": "dropper_eta.dropper_panel",
+        "$screen_content": "dropper_screen.dropper_panel",
         "$screen_bg_content": "common.screen_background",
         "$screen_background_alpha": 0.6
       }
@@ -74,7 +74,7 @@
     "variables": [
       {
         "requires": "($desktop_screen or $pocket_screen)",
-        "$screen_content": "crafter_eta.panel_crafter",
+        "$screen_content": "crafter_screen.panel_crafter",
         "$screen_bg_content": "common.screen_background",
         "$screen_background_alpha": 0.6
       }

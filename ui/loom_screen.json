@@ -13,12 +13,7 @@
     "$screen_bg_content": "common.screen_background",
     "$screen_background_alpha": 0.6,
     "button_mappings": "$button_mappings",
-    "variables": [
-      {
-        "requires": "($desktop_screen or $pocket_screen)",
-        "$screen_content": "loom_eta.loom_panel"
-      }
-    ],
+    "variables": [ {"requires": "($desktop_screen or $pocket_screen)", "$screen_content": "loom_screen.loom_panel"} ],
     "$button_mappings|default": [
       {
         "from_button_id": "button.menu_cancel",
@@ -95,11 +90,7 @@
         "to_button_id": "button.focus_right",
         "mapping_type": "global"
       },
-      {
-        "from_button_id": "button.chat",
-        "to_button_id": "button.chat",
-        "mapping_type": "global"
-      }
+      {"from_button_id": "button.chat", "to_button_id": "button.chat", "mapping_type": "global"}
     ]
   }
 }

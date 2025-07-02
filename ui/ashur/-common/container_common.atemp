@@ -22,17 +22,12 @@
           "size": [ 16, 16 ],
           "layer": 14,
           "controls": [
-            { "highlight@common.highlight_slot": {} },
-            {
-              "tooltip@common.hover_text": {
-                "layer": 100,
-                "property_bag": { "#hover_text": "destroy item" }
-              }
-            }
+            {"highlight@common.highlight_slot": {}},
+            {"tooltip@common.hover_text": {"layer": 100, "property_bag": {"#hover_text": "destroy item"}}}
           ]
         }
       },
-      { "default@global.empty_image": {  } }
+      {"default@global.empty_image": {}}
     ],
     "button_mappings": [
       {

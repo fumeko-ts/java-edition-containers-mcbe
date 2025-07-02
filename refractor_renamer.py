@@ -17,7 +17,6 @@ def json_compact(obj, indent=2, level=0, max_inline_len=100):
         return isinstance(val, (str, int, float, bool)) or val is None
 
     def is_simple(val):
-        # Simple = primitive, or dict with primitive values only
         if is_primitive(val):
             return True
         if isinstance(val, dict) and all(is_primitive(v) for v in val.values()):
@@ -28,7 +27,6 @@ def json_compact(obj, indent=2, level=0, max_inline_len=100):
         if not obj:
             return '{}'
 
-        # Inline dict if simple and fits length
         items = []
         for k, v in obj.items():
             if is_primitive(v):
@@ -39,7 +37,6 @@ def json_compact(obj, indent=2, level=0, max_inline_len=100):
         if len(inline) <= max_inline_len:
             return inline
 
-        # multiline dict
         lines = []
         for k, v in obj.items():
             val = json_compact(v, indent, level + 1, max_inline_len)
@@ -50,26 +47,22 @@ def json_compact(obj, indent=2, level=0, max_inline_len=100):
         if not obj:
             return '[]'
 
-        # All simple dicts? Put in one line with space after commas
         if all(isinstance(i, dict) and is_simple(i) for i in obj):
             inline_items = [json_compact(i, indent, level + 1, max_inline_len) for i in obj]
             inline = '[ ' + ', '.join(inline_items) + ' ]'
             if len(inline) <= max_inline_len:
                 return inline
 
-        # All primitives? Inline spaced
         if all(is_primitive(i) for i in obj):
             inline = '[ ' + ', '.join(json.dumps(i) for i in obj) + ' ]'
             if len(inline) <= max_inline_len:
                 return inline
 
-        # Multiline list
         lines = [f'{next_space}{json_compact(i, indent, level + 1, max_inline_len)}' for i in obj]
         return '[\n' + ',\n'.join(lines) + '\n' + space + ']'
 
     else:
         return json.dumps(obj)
-
 
 def replace_multiple_texts(obj, replacements):
     if isinstance(obj, dict):
@@ -137,13 +130,11 @@ def refactor_text_in_files(root_dir, replacements):
             print(f"Skipping invalid JSON file: {file_path}\n  Error: {e}")
             continue
 
-        # Backup original file before modification
         backup_path = file_path + ".bak_refractor"
         shutil.copyfile(file_path, backup_path)
         backups.append((file_path, backup_path))
 
         new_data = replace_multiple_texts(data, replacements)
-
         formatted_json = json_compact(new_data, indent=2)
 
         with open(file_path, "w", encoding="utf-8") as f:
@@ -233,36 +224,81 @@ def run_ui_defs():
     else:
         print(f"{ui_script_path} not found, skipping run.")
 
+def load_rr_config(config_path="rr.config"):
+    if not os.path.exists(config_path):
+        print(f"Config file '{config_path}' not found.")
+        return True, []
+
+    with open(config_path, "r", encoding="utf-8") as f:
+        raw_lines = f.readlines()
+
+    replacements = []
+    rename = True
+    cleaned_lines = []
+
+    for line in raw_lines:
+        line = re.sub(r'//.*$', '', line).strip()
+        if line:
+            cleaned_lines.append(line)
+
+    if not cleaned_lines:
+        return rename, []
+
+    if cleaned_lines[0].lower() == "rename = false":
+        rename = False
+        cleaned_lines = cleaned_lines[1:]
+    elif cleaned_lines[0].lower() == "rename = true":
+        rename = True
+        cleaned_lines = cleaned_lines[1:]
+
+    it = iter(cleaned_lines)
+    try:
+        while True:
+            find = next(it).strip()
+            replace = next(it).strip()
+            replacements.append((find, replace))
+    except StopIteration:
+        pass
+
+    return rename, replacements
+
 if __name__ == "__main__":
     root_dir = "."
 
-    while True:
-        mode = input("Do you want to perform a search-only? (y/N): ").strip().lower()
-        if mode == 'y':
-            search_text = input("Enter the text to search for: ").strip()
-            if not search_text:
-                print("Empty search text, aborting search.")
-                continue
-            search_text_in_files(root_dir, search_text)
-            print("Search complete.\n")
+    use_config = input("Use rr.config? (y/N): ").strip().lower() == 'y'
+    if use_config:
+        rename, replacements = load_rr_config()
+        if not replacements:
+            print("No valid replacements found in config. Exiting.")
         else:
-            # Rename mode with multiple replacements
-            replacements = []
-            while True:
-                target_text = input("Enter the text to find: ").strip()
-                if not target_text:
-                    print("Empty input. Skipping.")
+            refactor_text_in_files(root_dir, replacements)
+    else:
+        while True:
+            mode = input("Do you want to perform a search-only? (y/N): ").strip().lower()
+            if mode == 'y':
+                search_text = input("Enter the text to search for: ").strip()
+                if not search_text:
+                    print("Empty search text, aborting search.")
                     continue
+                search_text_in_files(root_dir, search_text)
+                print("Search complete.\n")
+            else:
+                replacements = []
+                while True:
+                    target_text = input("Enter the text to find: ").strip()
+                    if not target_text:
+                        print("Empty input. Skipping.")
+                        continue
 
-                replacement_text = input("Enter the replacement text: ").strip()
-                replacements.append((target_text, replacement_text))
+                    replacement_text = input("Enter the replacement text: ").strip()
+                    replacements.append((target_text, replacement_text))
 
-                more = input("Do you want to add another rename rule? (y/N): ").strip().lower()
-                if more != 'y':
-                    break
+                    more = input("Do you want to add another rename rule? (y/N): ").strip().lower()
+                    if more != 'y':
+                        break
 
-            if replacements:
-                refactor_text_in_files(root_dir, replacements)
-            break  # After rename, exit loop
+                if replacements:
+                    refactor_text_in_files(root_dir, replacements)
+                break
 
     run_ui_defs()

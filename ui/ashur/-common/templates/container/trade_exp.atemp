@@ -2,17 +2,17 @@
   "namespace": "trade_exp",
   "exp_progress_bar": {
     "type": "panel",
-    "size": [102, 5],
+    "size": [ 102, 5 ],
     "anchor_from": "center",
     "anchor_to": "center",
-    "offset": [-20, -140],
+    "offset": [ -20, -140 ],
     "controls": [
       {
         "trades_text": {
           "type": "label",
           "text": "Trades",
           "color": "$title_text_color",
-          "offset": [-135, 67],
+          "offset": [ -135, 67 ],
           "anchor_from": "center",
           "anchor_to": "center",
           "layer": 10
@@ -23,16 +23,11 @@
           "type": "label",
           "anchor_from": "center",
           "anchor_to": "center",
-          "offset": [0, 67],
+          "offset": [ 0, 67 ],
           "color": "$title_text_color",
           "layer": 10,
           "text": "#name_label",
-          "bindings": [
-            {
-              "binding_name"     : "#name_label",
-              "binding_condition": "always_when_visible"
-            }
-          ]
+          "bindings": [ {"binding_name": "#name_label", "binding_condition": "always_when_visible"} ]
         }
       },
       {
@@ -40,7 +35,7 @@
           "type": "image",
           "texture": "assets/minecraft/textures/gui/sprites/container/villager/experience_bar_background.png",
           "layer": 1,
-          "offset": [-1, 78],
+          "offset": [ -1, 78 ],
           "controls": [
             {
               "white_progress_bar": {

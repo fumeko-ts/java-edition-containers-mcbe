@@ -1,25 +1,22 @@
 {
   "namespace": "inventory_tab_creative",
-  "base_panel@global.empty_panel":{
+  "base_panel@global.empty_panel": {
     "$is_creative_survival_tab": true,
-    "size":[195, 136],
+    "size": [ 195, 136 ],
     "controls": [
-      {
-        "inventory@inventory_tab_creative.survival_tab_base":{}
-      }
+      {"inventory@inventory_tab_creative.survival_tab_base": {}}
     ]
   },
-  "survival_tab_base@screen_content.creative_inventory":{
-    "size":[195, 136],
+  "survival_tab_base@screen_content.creative_inventory": {
+    "size": [ 195, 136 ],
     "controls": [
-      {"inventory_top_half@inventory_top_half_creative.inventory_top_half_creative":{}},
+      {"inventory_top_half@inventory_top_half_creative.inventory_top_half_creative": {}},
       {
-        "inventory_cells@crafting_screen.inventory_bottom_half_with_label": {
-            "$grid_cell_offset": [8, 0],
-            "$inventory_panel_offset": "bottom_left"
-        }
+        "inventory_cells@crafting_screen.inventory_bottom_half_with_label": {"$grid_cell_offset": [ 8, 0 ], "$inventory_panel_offset": "bottom_left"}
       },
-      {"item_remover@container_common.item_remover":{"offset":[-6, -8],/*haha almost 9*/"anchor_to":"bottom_right","anchor_from":"bottom_right"}}
+      {
+        "item_remover@container_common.item_remover": {"offset": [ -6, -8 ], "anchor_to": "bottom_right", "anchor_from": "bottom_right"}
+      }
     ]
   }
 }

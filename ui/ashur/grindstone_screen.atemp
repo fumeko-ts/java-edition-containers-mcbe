@@ -1,25 +1,5 @@
-// -------------------------------------------------------------------------
-// JAVA CONTAINERS BEDROCK license info
-// -------------------------------------------------------------------------
-// © 2025 Ashura Temps. All rights reserved.
-// 
-// YOU MAY:
-// - Use this pack normally in gameplay
-// - Modify vanilla textures (Mojang-owned)
-//
-// YOU MAY NOT:
-// - Reuse /ui or /atemp files and their contents in other packs 
-// - use this pack for porting purpose's or eanything of the sort
-// - use this as a base for a "client"
-// - Upload to Marketplace
-// - Post on MCPEDL without code obfuscation
-//
-// Full terms: https://github.com/fumeko-ts/java-edition-containers-mcbe
-// Vanilla assets remain Mojang AB property.
-// -------------------------------------------------------------------------
-
 {
-  "namespace": "grindstone_eta",
+  "namespace": "grindstone_screen",
   "title_label": {
     "type": "label",
     "anchor_from": "top_left",
@@ -39,12 +19,7 @@
     "texture": "textures/ui/crossout",
     "size": [ 15, 15 ],
     "offset": [ 1, -1 ],
-    "bindings": [
-      {
-        "binding_name": "#cross_out_icon",
-        "binding_name_override": "#visible"
-      }
-    ]
+    "bindings": [ {"binding_name": "#cross_out_icon", "binding_name_override": "#visible"} ]
   },
   "grindstone_output_slot_button@common.container_slot_button_prototype": {
     "button_mappings": [
@@ -104,19 +79,14 @@
         "to_button_id": "button.grindstone_coalesce_stack",
         "mapping_type": "double_pressed"
       },
-      {
-        "to_button_id": "button.container_slot_hovered",
-        "mapping_type": "pressed"
-      }
+      {"to_button_id": "button.container_slot_hovered", "mapping_type": "pressed"}
     ]
   },
   "grindstone_item_slot": {
     "type": "panel",
     "size": [ "100%c", "100%c" ],
     "controls": [
-      {
-        "container_item@common.container_item": { "anchor_to": "center", "anchor_from": "center" }
-      }
+      {"container_item@common.container_item": {"anchor_to": "center", "anchor_from": "center"}}
     ]
   },
   "grindstone_middle_panel": {
@@ -124,7 +94,7 @@
     "size": [ 18, 41 ],
     "controls": [
       {
-        "input_item_slot@grindstone_eta.grindstone_item_slot": {
+        "input_item_slot@grindstone_screen.grindstone_item_slot": {
           "anchor_from": "top_middle",
           "anchor_to": "top_middle",
           "offset": [ -8, -4 ],
@@ -138,7 +108,7 @@
         }
       },
       {
-        "additional_item_slot@grindstone_eta.grindstone_item_slot": {
+        "additional_item_slot@grindstone_screen.grindstone_item_slot": {
           "anchor_from": "bottom_middle",
           "anchor_to": "bottom_middle",
           "offset": [ -8, -6 ],
@@ -158,7 +128,7 @@
     "size": [ 90, 56 ],
     "controls": [
       {
-        "grindstone_middle_panel@grindstone_eta.grindstone_middle_panel": { "anchor_from": "left_middle", "anchor_to": "left_middle" }
+        "grindstone_middle_panel@grindstone_screen.grindstone_middle_panel": {"anchor_from": "left_middle", "anchor_to": "left_middle"}
       },
       {
         "yields": {
@@ -167,20 +137,18 @@
           "anchor_to": "center",
           "size": [ 22, 15 ],
           "controls": [
-            { "arrow_icon@grindstone_eta.arrow_icon": {  } },
-            {
-              "cross_out_icon@grindstone_eta.cross_out_icon": { "layer": 1 }
-            }
+            {"arrow_icon@grindstone_screen.arrow_icon": {}},
+            {"cross_out_icon@grindstone_screen.cross_out_icon": {"layer": 1}}
           ]
         }
       },
       {
-        "result_item_slot@grindstone_eta.grindstone_item_slot": {
+        "result_item_slot@grindstone_screen.grindstone_item_slot": {
           "offset": [ 0, -0.2 ],
           "anchor_from": "right_middle",
           "anchor_to": "right_middle",
           "$item_collection_name": "grindstone_result_items",
-          "$button_ref": "grindstone_eta.grindstone_output_slot_button",
+          "$button_ref": "grindstone_screen.grindstone_output_slot_button",
           "$focus_id_binding_type": "none",
           "$focus_id": "grindstone_result",
           "$focus_override_left_binding_type": "none",
@@ -196,68 +164,42 @@
     "size": [ "100% - 8px", "50% - 8px" ],
     "offset": [ 17, 4 ],
     "controls": [
-      {
-        "title_label@grindstone_eta.title_label": { "offset": [ -9, 4 ] }
-      },
-      {
-        "grindstone_slots_panel@grindstone_eta.grindstone_slots_panel": { "offset": [ 0, 4 ] }
-      }
+      {"title_label@grindstone_screen.title_label": {"offset": [ -9, 4 ]}},
+      {"grindstone_slots_panel@grindstone_screen.grindstone_slots_panel": {"offset": [ 0, 4 ]}}
     ]
   },
   "grindstone_panel": {
     "type": "panel",
     "controls": [
-      {
-        "container_gamepad_helpers@common.container_gamepad_helpers": {  }
-      },
-      {
-        "selected_item_details_factory@common.selected_item_details_factory": {  }
-      },
-      {
-        "item_lock_notification_factory@common.item_lock_notification_factory": {  }
-      },
+      {"container_gamepad_helpers@common.container_gamepad_helpers": {}},
+      {"selected_item_details_factory@common.selected_item_details_factory": {}},
+      {"item_lock_notification_factory@common.item_lock_notification_factory": {}},
       {
         "root_panel@common.empty_panel": {
           "size": [ 176, 166 ],
           "layer": 1,
           "controls": [
-            {
-              "common_panel@screen_content.somali": { "$grindstone_screen": true }
-            },
+            {"common_panel@screen_content.somali": {"$grindstone_screen": true}},
             {
               "grindstone_screen_inventory": {
                 "type": "panel",
                 "layer": 2,
                 "controls": [
-                  { "top_half_panel@grindstone_eta.top_half_panel": {  } },
-                  {
-                    "inventory_panel_bottom_half_with_label@common.inventory_panel_bottom_half_with_label": {  }
-                  },
-                  {
-                    "hotbar_grid@common.hotbar_grid_template": { "offset": [ 0, -4 ] }
-                  },
-                  {
-                    "inventory_take_progress_icon_button@common.inventory_take_progress_icon_button": {  }
-                  }
+                  {"top_half_panel@grindstone_screen.top_half_panel": {}},
+                  {"inventory_panel_bottom_half_with_label@common.inventory_panel_bottom_half_with_label": {}},
+                  {"hotbar_grid@common.hotbar_grid_template": {"offset": [ 0, -4 ]}},
+                  {"inventory_take_progress_icon_button@common.inventory_take_progress_icon_button": {}}
                 ]
               }
             },
-            {
-              "inventory_selected_icon_button@global.inventory_selected_icon_button": {  }
-            },
-            { "gamepad_cursor@common.gamepad_cursor_button": {  } }
+            {"inventory_selected_icon_button@global.inventory_selected_icon_button": {}},
+            {"gamepad_cursor@common.gamepad_cursor_button": {}}
           ]
         }
       },
-      {
-        "flying_item_renderer@common.flying_item_renderer": { "layer": 15 }
-      },
-      {
-        "bundle_touch_tooltip@gameplay.bundle_touch_tooltip": {  }
-      },
-      {
-        "bundle_cursor_tooltip@gameplay.bundle_cursor_tooltip": {  }
-      }
+      {"flying_item_renderer@common.flying_item_renderer": {"layer": 15}},
+      {"bundle_touch_tooltip@gameplay.bundle_touch_tooltip": {}},
+      {"bundle_cursor_tooltip@gameplay.bundle_cursor_tooltip": {}}
     ]
   }
 }

@@ -14,12 +14,12 @@
     "variables": [
       {
         "requires": "$desktop_screen",
-        "$screen_content": "horse_eta.horse_panel",
+        "$screen_content": "horse_screen.horse_panel",
         "$screen_bg_content": "common.screen_background"
       },
       {
         "requires": "$pocket_screen",
-        "$screen_content": "horse_eta.horse_panel",
+        "$screen_content": "horse_screen.horse_panel",
         "$screen_bg_content": "common.screen_background",
         "$close_on_player_hurt": true
       }

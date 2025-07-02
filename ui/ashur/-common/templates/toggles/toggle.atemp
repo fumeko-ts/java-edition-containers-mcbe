@@ -1,6 +1,5 @@
 {
   "namespace": "toggle",
-
   "tab_panel": {
     "type": "panel",
     "$tab_content|default": "global.empty_panel",
@@ -20,14 +19,16 @@
           "type": "panel",
           "$tab_content_size|default": [ "100% - 4px", "100% - 4px" ],
           "size": "$tab_content_size",
-          "controls": [ { "tab_content@$tab_content": { "layer": 3 } } ]
+          "controls": [
+            {"tab_content@$tab_content": {"layer": 3}}
+          ]
         }
       }
     ]
   },
   "tab_toggle": {
     "type": "panel",
-    "anchor_to"  : "center",
+    "anchor_to": "center",
     "anchor_from": "center",
     "$tab_panel|default": "toggle.tab_panel",
     "$is_tab|default": true,
@@ -37,33 +38,49 @@
     "controls": [
       {
         "$tab_view_binding_name@common.toggle": {
-          "$toggle_tts_enabled_binding_type"   : "global",
+          "$toggle_tts_enabled_binding_type": "global",
           "$toggle_reset_on_focus_lost|default": true,
-          "radio_toggle_group" : true,
+          "radio_toggle_group": true,
           "reset_on_focus_lost": "$toggle_reset_on_focus_lost",
           "variables": [
             {
               "requires": "(($is_tab = false) or ($is_creative = true))",
-              "$checked_offset|default"  : [ 0, 0 ],
+              "$checked_offset|default": [ 0, 0 ],
               "$unchecked_offset|default": [ 0, 0 ]
             },
             {
               "requires": "($recipe_inventory = true)",
-              "$checked_offset|default"  : [ 1, 1 ],
+              "$checked_offset|default": [ 1, 1 ],
               "$unchecked_offset|default": [ 1, 1 ]
             }
           ],
-          "$checked_offset|default"  : [ -2, 0 ],
+          "$checked_offset|default": [ -2, 0 ],
           "$unchecked_offset|default": [ 0.4, 0 ],
           "controls": [
-            {"unchecked@$tab_panel"              : {"offset":"$unchecked_offset" , "$tab_texture":"$unchecked_default_image"      , "layer":-5}},
-            {"unchecked_hover@$tab_panel"        : {"offset":"$unchecked_offset" , "$tab_texture":"$unchecked_hover_image"        , "layer":-5}},
-            {"unchecked_locked@$tab_panel"       : {"offset":"$unchecked_offset" , "$tab_texture":"$unchecked_locked_image"       , "layer":-5}},
-            {"unchecked_locked_hover@$tab_panel" : {"offset":"$unchecked_offset" , "$tab_texture":"$unchecked_locked_hover_image" , "layer":-5}},
-            {"checked@$tab_panel"                : {"offset":"$checked_offset"   , "$tab_texture":"$checked_default_image"        , "layer":2 }},
-            {"checked_hover@$tab_panel"          : {"offset":"$checked_offset"   , "$tab_texture":"$checked_hover_image"          , "layer":2 }},
-            {"checked_locked@$tab_panel"         : {"offset":"$checked_offset"   , "$tab_texture":"$checked_locked_image"         , "layer":2 }},
-            {"checked_locked_hover@$tab_panel"   : {"offset":"$checked_offset"   , "$tab_texture":"$checked_locked_hover_image"   , "layer":2 }}
+            {
+              "unchecked@$tab_panel": {"offset": "$unchecked_offset", "$tab_texture": "$unchecked_default_image", "layer": -5}
+            },
+            {
+              "unchecked_hover@$tab_panel": {"offset": "$unchecked_offset", "$tab_texture": "$unchecked_hover_image", "layer": -5}
+            },
+            {
+              "unchecked_locked@$tab_panel": {"offset": "$unchecked_offset", "$tab_texture": "$unchecked_locked_image", "layer": -5}
+            },
+            {
+              "unchecked_locked_hover@$tab_panel": {"offset": "$unchecked_offset", "$tab_texture": "$unchecked_locked_hover_image", "layer": -5}
+            },
+            {
+              "checked@$tab_panel": {"offset": "$checked_offset", "$tab_texture": "$checked_default_image", "layer": 2}
+            },
+            {
+              "checked_hover@$tab_panel": {"offset": "$checked_offset", "$tab_texture": "$checked_hover_image", "layer": 2}
+            },
+            {
+              "checked_locked@$tab_panel": {"offset": "$checked_offset", "$tab_texture": "$checked_locked_image", "layer": 2}
+            },
+            {
+              "checked_locked_hover@$tab_panel": {"offset": "$checked_offset", "$tab_texture": "$checked_locked_hover_image", "layer": 2}
+            }
           ]
         }
       }
@@ -74,58 +91,58 @@
     "$is_top_right_tab|default": false,
     "$is_bottom_right_tab|default": false,
     "$is_left_tab|default": false,
-    "$unchecked_default_image"            : "assets/minecraft/textures/gui/sprites/container/creative_inventory/tab_top_unselected_2.png"         ,
-    "$unchecked_hover_image"              : "assets/minecraft/textures/gui/sprites/container/creative_inventory/tab_top_unselected_2.png"         ,
-    "$unchecked_locked_image"             : "assets/minecraft/textures/gui/sprites/container/creative_inventory/tab_top_unselected_2.png"         ,
-    "$unchecked_locked_hover_image"       : "assets/minecraft/textures/gui/sprites/container/creative_inventory/tab_top_unselected_2.png"         ,
-    "$checked_default_image|default"      : "assets/minecraft/textures/gui/sprites/container/creative_inventory/tab_top_selected_2.png",
-    "$checked_hover_image|default"        : "assets/minecraft/textures/gui/sprites/container/creative_inventory/tab_top_selected_2.png",
-    "$checked_locked_image|default"       : "assets/minecraft/textures/gui/sprites/container/creative_inventory/tab_top_selected_2.png",
-    "$checked_locked_hover_image|default" : "assets/minecraft/textures/gui/sprites/container/creative_inventory/tab_top_selected_2.png",
+    "$unchecked_default_image": "assets/minecraft/textures/gui/sprites/container/creative_inventory/tab_top_unselected_2.png",
+    "$unchecked_hover_image": "assets/minecraft/textures/gui/sprites/container/creative_inventory/tab_top_unselected_2.png",
+    "$unchecked_locked_image": "assets/minecraft/textures/gui/sprites/container/creative_inventory/tab_top_unselected_2.png",
+    "$unchecked_locked_hover_image": "assets/minecraft/textures/gui/sprites/container/creative_inventory/tab_top_unselected_2.png",
+    "$checked_default_image|default": "assets/minecraft/textures/gui/sprites/container/creative_inventory/tab_top_selected_2.png",
+    "$checked_hover_image|default": "assets/minecraft/textures/gui/sprites/container/creative_inventory/tab_top_selected_2.png",
+    "$checked_locked_image|default": "assets/minecraft/textures/gui/sprites/container/creative_inventory/tab_top_selected_2.png",
+    "$checked_locked_hover_image|default": "assets/minecraft/textures/gui/sprites/container/creative_inventory/tab_top_selected_2.png",
     "variables": [
       {
         "requires": "($is_top_left_tab = true)",
-        "$unchecked_default_image"            : "assets/minecraft/textures/gui/sprites/container/creative_inventory/tab_top_unselected_1.png"         ,
-        "$unchecked_hover_image"              : "assets/minecraft/textures/gui/sprites/container/creative_inventory/tab_top_unselected_1.png"         ,
-        "$unchecked_locked_image"             : "assets/minecraft/textures/gui/sprites/container/creative_inventory/tab_top_unselected_1.png"         ,
-        "$unchecked_locked_hover_image"       : "assets/minecraft/textures/gui/sprites/container/creative_inventory/tab_top_unselected_1.png"         ,
-        "$checked_default_image|default"      : "assets/minecraft/textures/gui/sprites/container/creative_inventory/tab_top_selected_1.png",
-        "$checked_hover_image|default"        : "assets/minecraft/textures/gui/sprites/container/creative_inventory/tab_top_selected_1.png",
-        "$checked_locked_image|default"       : "assets/minecraft/textures/gui/sprites/container/creative_inventory/tab_top_selected_1.png", 
-        "$checked_locked_hover_image|default" : "assets/minecraft/textures/gui/sprites/container/creative_inventory/tab_top_selected_1.png"
+        "$unchecked_default_image": "assets/minecraft/textures/gui/sprites/container/creative_inventory/tab_top_unselected_1.png",
+        "$unchecked_hover_image": "assets/minecraft/textures/gui/sprites/container/creative_inventory/tab_top_unselected_1.png",
+        "$unchecked_locked_image": "assets/minecraft/textures/gui/sprites/container/creative_inventory/tab_top_unselected_1.png",
+        "$unchecked_locked_hover_image": "assets/minecraft/textures/gui/sprites/container/creative_inventory/tab_top_unselected_1.png",
+        "$checked_default_image|default": "assets/minecraft/textures/gui/sprites/container/creative_inventory/tab_top_selected_1.png",
+        "$checked_hover_image|default": "assets/minecraft/textures/gui/sprites/container/creative_inventory/tab_top_selected_1.png",
+        "$checked_locked_image|default": "assets/minecraft/textures/gui/sprites/container/creative_inventory/tab_top_selected_1.png",
+        "$checked_locked_hover_image|default": "assets/minecraft/textures/gui/sprites/container/creative_inventory/tab_top_selected_1.png"
       },
       {
         "requires": "($is_top_right_tab = true)",
-        "$unchecked_default_image"            : "assets/minecraft/textures/gui/sprites/container/creative_inventory/tab_top_unselected_7.png"         ,
-        "$unchecked_hover_image"              : "assets/minecraft/textures/gui/sprites/container/creative_inventory/tab_top_unselected_7.png"         ,
-        "$unchecked_locked_image"             : "assets/minecraft/textures/gui/sprites/container/creative_inventory/tab_top_unselected_7.png"         ,
-        "$unchecked_locked_hover_image"       : "assets/minecraft/textures/gui/sprites/container/creative_inventory/tab_top_unselected_7.png"         ,
-        "$checked_default_image|default"      : "assets/minecraft/textures/gui/sprites/container/creative_inventory/tab_top_selected_7.png",
-        "$checked_hover_image|default"        : "assets/minecraft/textures/gui/sprites/container/creative_inventory/tab_top_selected_7.png",
-        "$checked_locked_image|default"       : "assets/minecraft/textures/gui/sprites/container/creative_inventory/tab_top_selected_7.png", 
-        "$checked_locked_hover_image|default" : "assets/minecraft/textures/gui/sprites/container/creative_inventory/tab_top_selected_7.png"
+        "$unchecked_default_image": "assets/minecraft/textures/gui/sprites/container/creative_inventory/tab_top_unselected_7.png",
+        "$unchecked_hover_image": "assets/minecraft/textures/gui/sprites/container/creative_inventory/tab_top_unselected_7.png",
+        "$unchecked_locked_image": "assets/minecraft/textures/gui/sprites/container/creative_inventory/tab_top_unselected_7.png",
+        "$unchecked_locked_hover_image": "assets/minecraft/textures/gui/sprites/container/creative_inventory/tab_top_unselected_7.png",
+        "$checked_default_image|default": "assets/minecraft/textures/gui/sprites/container/creative_inventory/tab_top_selected_7.png",
+        "$checked_hover_image|default": "assets/minecraft/textures/gui/sprites/container/creative_inventory/tab_top_selected_7.png",
+        "$checked_locked_image|default": "assets/minecraft/textures/gui/sprites/container/creative_inventory/tab_top_selected_7.png",
+        "$checked_locked_hover_image|default": "assets/minecraft/textures/gui/sprites/container/creative_inventory/tab_top_selected_7.png"
       },
       {
         "requires": "($is_bottom_right_tab = true)",
-        "$unchecked_default_image"            : "assets/minecraft/textures/gui/sprites/container/creative_inventory/tab_bottom_unselected_7.png"         ,
-        "$unchecked_hover_image"              : "assets/minecraft/textures/gui/sprites/container/creative_inventory/tab_bottom_unselected_7.png"         ,
-        "$unchecked_locked_image"             : "assets/minecraft/textures/gui/sprites/container/creative_inventory/tab_bottom_unselected_7.png"         ,
-        "$unchecked_locked_hover_image"       : "assets/minecraft/textures/gui/sprites/container/creative_inventory/tab_bottom_unselected_7.png"         ,
-        "$checked_default_image|default"      : "assets/minecraft/textures/gui/sprites/container/creative_inventory/tab_bottom_selected_7.png",
-        "$checked_hover_image|default"        : "assets/minecraft/textures/gui/sprites/container/creative_inventory/tab_bottom_selected_7.png",
-        "$checked_locked_image|default"       : "assets/minecraft/textures/gui/sprites/container/creative_inventory/tab_bottom_selected_7.png", 
-        "$checked_locked_hover_image|default" : "assets/minecraft/textures/gui/sprites/container/creative_inventory/tab_bottom_selected_7.png"
+        "$unchecked_default_image": "assets/minecraft/textures/gui/sprites/container/creative_inventory/tab_bottom_unselected_7.png",
+        "$unchecked_hover_image": "assets/minecraft/textures/gui/sprites/container/creative_inventory/tab_bottom_unselected_7.png",
+        "$unchecked_locked_image": "assets/minecraft/textures/gui/sprites/container/creative_inventory/tab_bottom_unselected_7.png",
+        "$unchecked_locked_hover_image": "assets/minecraft/textures/gui/sprites/container/creative_inventory/tab_bottom_unselected_7.png",
+        "$checked_default_image|default": "assets/minecraft/textures/gui/sprites/container/creative_inventory/tab_bottom_selected_7.png",
+        "$checked_hover_image|default": "assets/minecraft/textures/gui/sprites/container/creative_inventory/tab_bottom_selected_7.png",
+        "$checked_locked_image|default": "assets/minecraft/textures/gui/sprites/container/creative_inventory/tab_bottom_selected_7.png",
+        "$checked_locked_hover_image|default": "assets/minecraft/textures/gui/sprites/container/creative_inventory/tab_bottom_selected_7.png"
       },
       {
         "requires": "($is_left_tab = true)",
-        "$unchecked_default_image"            : "assets/minecraft/textures/gui/sprites/recipe_book/tab.png"         ,
-        "$unchecked_hover_image"              : "assets/minecraft/textures/gui/sprites/recipe_book/tab.png"         ,
-        "$unchecked_locked_image"             : "assets/minecraft/textures/gui/sprites/recipe_book/tab.png"         ,
-        "$unchecked_locked_hover_image"       : "assets/minecraft/textures/gui/sprites/recipe_book/tab.png"         ,
-        "$checked_default_image|default"      : "assets/minecraft/textures/gui/sprites/recipe_book/tab_selected.png",
-        "$checked_hover_image|default"        : "assets/minecraft/textures/gui/sprites/recipe_book/tab_selected.png",
-        "$checked_locked_image|default"       : "assets/minecraft/textures/gui/sprites/recipe_book/tab_selected.png", 
-        "$checked_locked_hover_image|default" : "assets/minecraft/textures/gui/sprites/recipe_book/tab_selected.png"
+        "$unchecked_default_image": "assets/minecraft/textures/gui/sprites/recipe_book/tab.png",
+        "$unchecked_hover_image": "assets/minecraft/textures/gui/sprites/recipe_book/tab.png",
+        "$unchecked_locked_image": "assets/minecraft/textures/gui/sprites/recipe_book/tab.png",
+        "$unchecked_locked_hover_image": "assets/minecraft/textures/gui/sprites/recipe_book/tab.png",
+        "$checked_default_image|default": "assets/minecraft/textures/gui/sprites/recipe_book/tab_selected.png",
+        "$checked_hover_image|default": "assets/minecraft/textures/gui/sprites/recipe_book/tab_selected.png",
+        "$checked_locked_image|default": "assets/minecraft/textures/gui/sprites/recipe_book/tab_selected.png",
+        "$checked_locked_hover_image|default": "assets/minecraft/textures/gui/sprites/recipe_book/tab_selected.png"
       }
     ]
   }

@@ -1,6 +1,6 @@
 {
-  "namespace": "dropper_eta",
-  "dropper_panel": {
+  "namespace": "dispenser_screen",
+  "dispenser_panel": {
     "type": "panel",
     "controls": [
       {"container_gamepad_helpers@common.container_gamepad_helpers": {}},
@@ -9,7 +9,7 @@
       {
         "root_panel@common.empty_panel": {
           "layer": 1,
-          "size": [176, 166],
+          "size": [ 176, 166 ],
           "controls": [
             {"common_panel@screen_content.somali": {"$dispenser_screen": true}},
             {
@@ -18,13 +18,13 @@
                 "layer": 5,
                 "controls": [
                   {
-                    "dropper_label": {
+                    "dispenser_label": {
                       "type": "label",
-                      "offset": [0, 5],
+                      "offset": [ 0, 5 ],
                       "anchor_from": "top_middle",
                       "anchor_to": "top_middle",
                       "text": "$container_title",
-                      "$container_title": "Dropper",
+                      "$container_title": "Dispenser",
                       "color": "$title_text_color",
                       "layer": 2
                     }
@@ -32,8 +32,8 @@
                   {
                     "redstone_panel_top_half": {
                       "type": "panel",
-                      "size": ["100%", "50% - 12px"],
-                      "offset": [0, 7.6],
+                      "size": [ "100%", "50% - 12px" ],
+                      "offset": [ 0, 7.6 ],
                       "anchor_to": "top_left",
                       "anchor_from": "top_left",
                       "controls": [
@@ -42,8 +42,8 @@
                             "type": "grid",
                             "anchor_from": "center",
                             "anchor_to": "center",
-                            "offset": [0, 0],
-                            "grid_dimensions": [3, 3],
+                            "offset": [ 0, 0 ],
+                            "grid_dimensions": [ 3, 3 ],
                             "collection_name": "container_items",
                             "grid_item_template": "common.container_item",
                             "$item_collection_name": "container_items"
@@ -52,8 +52,8 @@
                       ]
                     }
                   },
-                  {"red_bottom_half@common.inventory_panel_bottom_half_with_label": {"offset": [0, -3]}},
-                  {"hotbar_grid@common.hotbar_grid_template": {"offset": [0, -7]}},
+                  {"red_bottom_half@common.inventory_panel_bottom_half_with_label": {"offset": [ 0, -3 ]}},
+                  {"hotbar_grid@common.hotbar_grid_template": {"offset": [ 0, -7 ]}},
                   {"red_hold_icon@common.inventory_take_progress_icon_button": {}}
                 ]
               }

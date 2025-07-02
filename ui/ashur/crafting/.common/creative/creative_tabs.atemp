@@ -2,19 +2,19 @@
   "namespace": "creative_tabs",
   "tab_stack@global.empty_stack_panel": {
     "orientation": "horizontal",
-    "size": [195, 32],
+    "size": [ 195, 32 ],
     "anchor_to": "top_middle",
     "anchor_from": "top_middle",
     "layer": 2,
     "controls": [
       {"construction@creative_tabs.construction_tab": {}},
-      {"buffer_1":{"type": "panel","size": [1, "default"]}},
+      {"buffer_1": {"type": "panel", "size": [ 1, "default" ]}},
       {"equipment@creative_tabs.equipment_tab": {}},
-      {"buffer_2":{"type": "panel","size": [1, "default"]}},
+      {"buffer_2": {"type": "panel", "size": [ 1, "default" ]}},
       {"nature@creative_tabs.nature_tab": {}},
-      {"buffer_3":{"type": "panel","size": [1, "default"]}},
+      {"buffer_3": {"type": "panel", "size": [ 1, "default" ]}},
       {"items@creative_tabs.items_tab": {}},
-      {"buffer_4":{"type": "panel","size": [62, "default"]}},
+      {"buffer_4": {"type": "panel", "size": [ 62, "default" ]}},
       {"search_tab@creative_tabs.search_tab": {}}
     ]
   },
@@ -22,24 +22,42 @@
     "texture": "$icon_for_tab",
     "size": "$tab_icon_size",
     "$icon_for_tab": "",
-    "keep_ratio": true,//this makes sure the img dosent look wonky
-    "$tab_icon_size": [17, 17],
+    "keep_ratio": true,
+    "$tab_icon_size": [ 17, 17 ],
     "variables": [
-      {"requires": "($tab_view_binding_name = search_tab_toggle)"       ,"$tab_icon_size": [25, 16],"$icon_for_tab": "textures/atemp/ui/item/compass_28.png"     },
-      {"requires": "($tab_view_binding_name = equipment_tab_toggle)"    ,"$tab_icon_size": [25, 16],"$icon_for_tab": "textures/atemp/ui/icon_recipe_equipment"   },
-      {"requires": "($tab_view_binding_name = nature_tab_toggle)"       ,"$tab_icon_size": [22, 14],"$icon_for_tab": "textures/atemp/ui/icon_recipe_nature"      },
-      {"requires": "($tab_view_binding_name = items_tab_toggle)"        ,"$tab_icon_size": [16, 16],"$icon_for_tab": "textures/atemp/ui/item/redstone"           },
-      {"requires": "($tab_view_binding_name = construction_tab_toggle)" ,"$tab_icon_size": [15, 16],"$icon_for_tab": "textures/atemp/ui/icon_recipe_construction"}
+      {
+        "requires": "($tab_view_binding_name = search_tab_toggle)",
+        "$tab_icon_size": [ 25, 16 ],
+        "$icon_for_tab": "textures/atemp/ui/item/compass_28.png"
+      },
+      {
+        "requires": "($tab_view_binding_name = equipment_tab_toggle)",
+        "$tab_icon_size": [ 25, 16 ],
+        "$icon_for_tab": "textures/atemp/ui/icon_recipe_equipment"
+      },
+      {
+        "requires": "($tab_view_binding_name = nature_tab_toggle)",
+        "$tab_icon_size": [ 22, 14 ],
+        "$icon_for_tab": "textures/atemp/ui/icon_recipe_nature"
+      },
+      {
+        "requires": "($tab_view_binding_name = items_tab_toggle)",
+        "$tab_icon_size": [ 16, 16 ],
+        "$icon_for_tab": "textures/atemp/ui/item/redstone"
+      },
+      {
+        "requires": "($tab_view_binding_name = construction_tab_toggle)",
+        "$tab_icon_size": [ 15, 16 ],
+        "$icon_for_tab": "textures/atemp/ui/icon_recipe_construction"
+      }
     ]
   },
-  "icon_holder": {
-    "type": "panel",
-    "size": [24, 25],
-    "controls": [ {"img@$tab_icon": {}} ]
-  },
+  "icon_holder": {"type": "panel", "size": [ 24, 25 ], "controls": [
+      {"img@$tab_icon": {}}
+    ]},
   "top_tab@toggle.toggle": {
     "type": "panel",
-    "size": [26, 32],
+    "size": [ 26, 32 ],
     "$toggle_binding_type": "global",
     "$toggle_focus_enabled": false,
     "$toggle_name": "navigation_tab",
@@ -49,34 +67,34 @@
   },
   "search_tab@creative_tabs.top_tab": {
     "$is_top_right_tab": true,
-    "$tab_view_binding_name"    : "search_tab_toggle",
-    "$toggle_group_forced_index": "$search_index",// index num 5
+    "$tab_view_binding_name": "search_tab_toggle",
+    "$toggle_group_forced_index": "$search_index",
     "$toggle_state_binding_name": "#is_left_tab_search"
   },
   "equipment_tab@creative_tabs.top_tab": {
-    "$tab_view_binding_name"    : "equipment_tab_toggle",
-    "$toggle_group_forced_index": "$equipment_index",// index num 2
+    "$tab_view_binding_name": "equipment_tab_toggle",
+    "$toggle_group_forced_index": "$equipment_index",
     "$toggle_state_binding_name": "#is_left_tab_equipment"
   },
   "nature_tab@creative_tabs.top_tab": {
-    "$tab_view_binding_name"    : "nature_tab_toggle",
-    "$toggle_group_forced_index": "$nature_index",// index num 4
+    "$tab_view_binding_name": "nature_tab_toggle",
+    "$toggle_group_forced_index": "$nature_index",
     "$toggle_state_binding_name": "#is_left_tab_nature"
   },
   "items_tab@creative_tabs.top_tab": {
-    "$tab_view_binding_name"    : "items_tab_toggle",
-    "$toggle_group_forced_index": "$items_index",// index num 3
+    "$tab_view_binding_name": "items_tab_toggle",
+    "$toggle_group_forced_index": "$items_index",
     "$toggle_state_binding_name": "#is_left_tab_items"
   },
   "construction_tab@creative_tabs.top_tab": {
     "$is_top_left_tab": true,
-    "$tab_view_binding_name"    : "construction_tab_toggle",
-    "$toggle_group_forced_index": "$construction_index",// index num 1
+    "$tab_view_binding_name": "construction_tab_toggle",
+    "$toggle_group_forced_index": "$construction_index",
     "$toggle_state_binding_name": "#is_left_tab_construct"
   },
   "inventory_tab@creative_tabs.top_tab": {
     "$is_bottom_right_tab": true,
     "$is_creative": true,
-    "$toggle_group_forced_index": "($search_index + 1)"// index num 6 // thers no index 0
+    "$toggle_group_forced_index": "($search_index + 1)"
   }
 }

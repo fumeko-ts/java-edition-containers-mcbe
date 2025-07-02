@@ -4,12 +4,7 @@
     "type": "panel",
     "$white_highlight_offset": [ 0, 0 ],
     "$slot_vars": "common.highlight_slot",
-    "variables": [
-      {
-        "requires": "($recipe_book = true)",
-        "$slot_vars": "common.empty_panel"
-      }
-    ],
+    "variables": [ {"requires": "($recipe_book = true)", "$slot_vars": "common.empty_panel"} ],
     "controls": [
       {
         "highlight@$slot_vars": {
@@ -30,12 +25,7 @@
               }
             }
           ],
-          "bindings": [
-            {
-              "binding_name": "#show_persistent_bundle_hover_text",
-              "binding_name_override": "#visible"
-            }
-          ]
+          "bindings": [ {"binding_name": "#show_persistent_bundle_hover_text", "binding_name_override": "#visible"} ]
         }
       }
     ]
@@ -49,22 +39,13 @@
     "$white_highlight_slot_size|default": [ 16, 16 ],
     "alpha": 0.45
   },
-  "screen_background": {
-    "type": "image",
-    "texture": "textures/ui/screen_background",
-    "layer": -1000,
-    "alpha": 0.7
-  },
+  "screen_background": {"type": "image", "texture": "textures/ui/screen_background", "layer": -1000, "alpha": 0.7},
   "screen_panel": {
     "type": "panel",
     "size": [ "100%", "fill" ],
     "controls": [
-      {
-        "screen_namespace_or_refrence_is_incorrect@$screen_content": {  }
-      },
-      {
-        "additional_screen_content@$additional_screen_content": {  }
-      },
+      {"screen_namespace_or_refrence_is_incorrect@$screen_content": {}},
+      {"additional_screen_content@$additional_screen_content": {}},
       {
         "popup_dialog_factory": {
           "type": "factory",
@@ -75,9 +56,7 @@
           }
         }
       },
-      {
-        "bundle_hover_tooltip@common.bundle_tooltip_wrapper": {  }
-      }
+      {"bundle_hover_tooltip@common.bundle_tooltip_wrapper": {}}
     ]
   },
   "container_item": {
@@ -117,18 +96,14 @@
           "size": "$cell_image_size",
           "layer": 0,
           "controls": [
-            {
-              "$background_image_control_name@$background_images": { "layer": 1 }
-            },
+            {"$background_image_control_name@$background_images": {"layer": 1}},
             {
               "item": {
                 "type": "panel",
                 "size": "$item_renderer_panel_size",
                 "layer": 0,
                 "controls": [
-                  {
-                    "stack_count_label@common.stack_count_label": { "layer": 27 }
-                  },
+                  {"stack_count_label@common.stack_count_label": {"layer": 27}},
                   {
                     "$item_renderer@$item_renderer": {
                       "size": "$item_renderer_size",
@@ -141,24 +116,15 @@
                 ]
               }
             },
-            { "durability_bar@common.durability_bar": { "layer": 20 } },
-            { "storage_bar@common.storage_bar": { "layer": 20 } }
+            {"durability_bar@common.durability_bar": {"layer": 20}},
+            {"storage_bar@common.storage_bar": {"layer": 20}}
           ]
         }
       },
+      {"item_cell_overlay_ref@$cell_overlay_ref": {"layer": 3}},
+      {"item_selected_image@common.slot_selected": {"layer": 4}},
       {
-        "item_cell_overlay_ref@$cell_overlay_ref": { "layer": 3 }
-      },
-      {
-        "item_selected_image@common.slot_selected": { "layer": 4 }
-      },
-      {
-        "item_button_ref@$button_ref": {
-          "tts_ignore_count": true,
-          "tts_skip_message": true,
-          "tts_inherit_siblings": true,
-          "layer": 5
-        }
+        "item_button_ref@$button_ref": {"tts_ignore_count": true, "tts_skip_message": true, "tts_inherit_siblings": true, "layer": 5}
       },
       {
         "container_item_lock_overlay@common.container_item_lock_overlay": {
@@ -169,12 +135,8 @@
           "layer": 6
         }
       },
-      {
-        "item_lock_cell_image@common.item_lock_cell_image": { "layer": 2 }
-      },
-      {
-        "bundle_slot_panel@gameplay.bundle_slot_panel": { "layer": 10 }
-      }
+      {"item_lock_cell_image@common.item_lock_cell_image": {"layer": 2}},
+      {"bundle_slot_panel@gameplay.bundle_slot_panel": {"layer": 10}}
     ]
   },
   "container_slot_button_prototype": {
@@ -305,18 +267,12 @@
         "to_button_id": "button.coalesce_stack",
         "mapping_type": "double_pressed"
       },
-      {
-        "to_button_id": "button.shape_drawing",
-        "mapping_type": "pressed"
-      },
-      {
-        "to_button_id": "button.container_slot_hovered",
-        "mapping_type": "pressed"
-      }
+      {"to_button_id": "button.shape_drawing", "mapping_type": "pressed"},
+      {"to_button_id": "button.container_slot_hovered", "mapping_type": "pressed"}
     ],
     "controls": [
-      { "hover@$highlight_control": { "offset": [ 1, 1 ] } },
-      { "presed@$highlight_control": { "offset": [ 1, 1 ] } }
+      {"hover@$highlight_control": {"offset": [ 1, 1 ]}},
+      {"presed@$highlight_control": {"offset": [ 1, 1 ]}}
     ]
   },
   "common_container_scrolling_panel@common.scrolling_panel": {
@@ -326,10 +282,7 @@
     "$scroll_box_touch_image_control": "$scroll_box_image_control",
     "controls": [
       {
-        "scroll_base@common.common_container_scrolling_panel_base": {
-          "size": "$scrolling_pane_size",
-          "offset": "$scrolling_pane_offset"
-        }
+        "scroll_base@common.common_container_scrolling_panel_base": {"size": "$scrolling_pane_size", "offset": "$scrolling_pane_offset"}
       }
     ]
   },
@@ -346,10 +299,8 @@
                 "$view_port_size|default": [ "100%", "100%" ],
                 "clips_children": true,
                 "controls": [
-                  { "viewport@common.common_container_viewport": {  } },
-                  {
-                    "bar_and_track@common.common_container_bar_and_track": {  }
-                  }
+                  {"viewport@common.common_container_viewport": {}},
+                  {"bar_and_track@common.common_container_bar_and_track": {}}
                 ]
               }
             }
@@ -410,20 +361,8 @@
             }
           ],
           "controls": [
-            {
-              "track@common.scrollbar_track": {
-                "layer": 4,
-                "anchor_from": "center",
-                "anchor_to": "center"
-              }
-            },
-            {
-              "scroll_box@common.scroll_box": {
-                "layer": 5,
-                "anchor_from": "center",
-                "anchor_to": "center"
-              }
-            }
+            {"track@common.scrollbar_track": {"layer": 4, "anchor_from": "center", "anchor_to": "center"}},
+            {"scroll_box@common.scroll_box": {"layer": 5, "anchor_from": "center", "anchor_to": "center"}}
           ]
         }
       }

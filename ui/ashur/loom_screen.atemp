@@ -1,25 +1,5 @@
-// -------------------------------------------------------------------------
-// JAVA CONTAINERS BEDROCK license info
-// -------------------------------------------------------------------------
-// © 2025 Ashura Temps. All rights reserved.
-// 
-// YOU MAY:
-// - Use this pack normally in gameplay
-// - Modify vanilla textures (Mojang-owned)
-//
-// YOU MAY NOT:
-// - Reuse /ui or /atemp files and their contents in other packs 
-// - use this pack for porting purpose's or eanything of the sort
-// - use this as a base for a "client"
-// - Upload to Marketplace
-// - Post on MCPEDL without code obfuscation
-//
-// Full terms: https://github.com/fumeko-ts/java-edition-containers-mcbe
-// Vanilla assets remain Mojang AB property.
-// -------------------------------------------------------------------------
-
 {
-  "namespace": "loom_eta",
+  "namespace": "loom_screen",
   "loom_label": {
     "type": "label",
     "offset": [ -66, 89.4 ],
@@ -30,34 +10,24 @@
     "color": "$title_text_color",
     "layer": 2
   },
-  "arrow_icon": {
-    "type": "image",
-    "texture": "textures/ui/arrow_large",
-    "size": [ 18, 0 ]
-  },
-  "banner_outline": {
-    "type": "image",
-    "texture": "textures/ui/Banners",
-    "alpha": 0
-  },
+  "arrow_icon": {"type": "image", "texture": "textures/ui/arrow_large", "size": [ 18, 0 ]},
+  "banner_outline": {"type": "image", "texture": "textures/ui/Banners", "alpha": 0},
   "input_slots_stack_panel": {
     "type": "stack_panel",
     "orientation": "horizontal",
     "size": [ "100%c", "100%cm" ],
     "controls": [
-      { "input_item_slot@loom_eta.input_item_slot": {  } },
-      { "padding_1": { "type": "panel", "size": [ 2, 0 ] } },
-      { "dye_item_slot@loom_eta.dye_item_slot": {  } },
-      { "padding_2": { "type": "panel", "size": [ 2, 0 ] } }
+      {"input_item_slot@loom_screen.input_item_slot": {}},
+      {"padding_1": {"type": "panel", "size": [ 2, 0 ]}},
+      {"dye_item_slot@loom_screen.dye_item_slot": {}},
+      {"padding_2": {"type": "panel", "size": [ 2, 0 ]}}
     ]
   },
   "misc_slot_input": {
     "type": "panel",
     "size": [ "100%c", "100%cm" ],
     "controls": [
-      {
-        "material_item_slot@loom_eta.material_item_slot": { "offset": [ -10, 19 ] }
-      }
+      {"material_item_slot@loom_screen.material_item_slot": {"offset": [ -10, 19 ]}}
     ]
   },
   "main_top_half_stack": {
@@ -71,29 +41,31 @@
           "size": [ "100%c", "100%c" ],
           "inherit_max_sibling_height": true,
           "controls": [
-            {
-              "input_slots_stack_panel@loom_eta.input_slots_stack_panel": { "offset": [ -9, 0 ] }
-            },
-            { "misc_slot_input@loom_eta.misc_slot_input": {  } }
+            {"input_slots_stack_panel@loom_screen.input_slots_stack_panel": {"offset": [ -9, 0 ]}},
+            {"misc_slot_input@loom_screen.misc_slot_input": {}}
           ]
         }
       },
-      { "padding_1": { "type": "panel", "size": [ 6, 0 ] } },
+      {"padding_1": {"type": "panel", "size": [ 6, 0 ]}},
       {
         "arrow_holder": {
           "type": "panel",
           "size": [ "100%c", "100%c" ],
           "inherit_max_sibling_height": true,
-          "controls": [ { "arrow_icon@loom_eta.arrow_icon": {  } } ]
+          "controls": [
+            {"arrow_icon@loom_screen.arrow_icon": {}}
+          ]
         }
       },
-      { "padding_2": { "type": "panel", "size": [ 6, 0 ] } },
+      {"padding_2": {"type": "panel", "size": [ 6, 0 ]}},
       {
         "result_item_slot_holder": {
           "type": "panel",
           "size": [ "100%c", "100%c" ],
           "inherit_max_sibling_height": true,
-          "controls": [ { "result_item_slot@loom_eta.result_item_slot": {  } } ]
+          "controls": [
+            {"result_item_slot@loom_screen.result_item_slot": {}}
+          ]
         }
       }
     ]
@@ -102,15 +74,13 @@
     "type": "panel",
     "size": [ "100%c", "100%cm" ],
     "controls": [
-      { "padding_3": { "type": "panel", "size": [ 6, 0 ] } },
+      {"padding_3": {"type": "panel", "size": [ 6, 0 ]}},
       {
-        "result_banner_outline@loom_eta.banner_outline": {
+        "result_banner_outline@loom_screen.banner_outline": {
           "size": [ "100%c + 2px", "100%c + 2px" ],
           "layer": 1,
           "controls": [
-            {
-              "result_banner_renderer@loom_eta.result_banner_renderer": { "layer": 1 }
-            }
+            {"result_banner_renderer@loom_screen.result_banner_renderer": {"layer": 1}}
           ]
         }
       }
@@ -123,35 +93,25 @@
     "size": [ "100% - 14px", "50% - 22px" ],
     "offset": [ 0, 15 ],
     "controls": [
-      {
-        "main_top_half_stack@loom_eta.main_top_half_stack": { "offset": [ -10, 0 ] }
-      },
-      {
-        "result_slot_holder@loom_eta.result_slot_holder": { "offset": [ 73.4, -5 ] }
-      }
+      {"main_top_half_stack@loom_screen.main_top_half_stack": {"offset": [ -10, 0 ]}},
+      {"result_slot_holder@loom_screen.result_slot_holder": {"offset": [ 73.4, -5 ]}}
     ]
   },
   "right_panel@common.empty_panel": {
     "layer": 1,
     "size": [ 176, 166 ],
     "controls": [
-      {
-        "common_panel@screen_content.somali": { "$loom_screen": true }
-      },
+      {"common_panel@screen_content.somali": {"$loom_screen": true}},
       {
         "loom_screen_inventory": {
           "type": "panel",
           "layer": 2,
           "controls": [
+            {"top_half_panel@loom_screen.top_half_panel": {"offset": [ -9, 8 ]}},
             {
-              "top_half_panel@loom_eta.top_half_panel": { "offset": [ -9, 8 ] }
+              "inventory_panel_bottom_half_with_label@common.inventory_panel_bottom_half_with_label": {"offset": [ 0, 1.4 ]}
             },
-            {
-              "inventory_panel_bottom_half_with_label@common.inventory_panel_bottom_half_with_label": { "offset": [ 0, 1.4 ] }
-            },
-            {
-              "hotbar_grid@common.hotbar_grid_template": { "offset": [ 0, -2.6 ] }
-            }
+            {"hotbar_grid@common.hotbar_grid_template": {"offset": [ 0, -2.6 ]}}
           ]
         }
       }
@@ -161,11 +121,7 @@
     "size": [ 4, 166 ],
     "controls": [
       {
-        "center_bg": {
-          "type": "image",
-          "texture": "textures/ui/recipe_back_panel",
-          "size": [ "100% + 8px", 0 ]
-        }
+        "center_bg": {"type": "image", "texture": "textures/ui/recipe_back_panel", "size": [ "100% + 8px", 0 ]}
       }
     ]
   },
@@ -174,8 +130,8 @@
     "orientation": "horizontal",
     "size": [ "100%c", "100%cm" ],
     "controls": [
-      { "center_fold@loom_eta.center_fold": {  } },
-      { "right_panel@loom_eta.right_panel": {  } }
+      {"center_fold@loom_screen.center_fold": {}},
+      {"right_panel@loom_screen.right_panel": {}}
     ]
   },
   "pattern": {
@@ -236,23 +192,14 @@
         "to_button_id": "button.drop_all",
         "mapping_type": "pressed"
       },
-      {
-        "to_button_id": "button.container_slot_hovered",
-        "mapping_type": "pressed"
-      }
+      {"to_button_id": "button.container_slot_hovered", "mapping_type": "pressed"}
     ]
   },
-  "input_item_slot@common.container_item": {
-    "$item_collection_name": "loom_input_items",
-    "$cell_overlay_ref": "loom_eta.banner_empty_image"
-  },
-  "dye_item_slot@common.container_item": {
-    "$item_collection_name": "loom_dye_items",
-    "$cell_overlay_ref": "loom_eta.dye_empty_image"
-  },
+  "input_item_slot@common.container_item": {"$item_collection_name": "loom_input_items", "$cell_overlay_ref": "loom_screen.banner_empty_image"},
+  "dye_item_slot@common.container_item": {"$item_collection_name": "loom_dye_items", "$cell_overlay_ref": "loom_screen.dye_empty_image"},
   "material_item_slot@common.container_item": {
     "$item_collection_name": "loom_material_items",
-    "$cell_overlay_ref": "loom_eta.pattern_item_empty_image",
+    "$cell_overlay_ref": "loom_screen.pattern_item_empty_image",
     "$item_renderer_binding_condition": "always_when_visible"
   },
   "result_item_slot@common.container_item": {
@@ -262,7 +209,7 @@
     "$cell_image_size": [ 26, 26 ],
     "size": [ 26, 26 ],
     "offset": [ 38, 31 ],
-    "$button_ref": "loom_eta.result_slot_button"
+    "$button_ref": "loom_screen.result_slot_button"
   },
   "item_empty_image": {
     "type": "image",
@@ -280,13 +227,13 @@
       }
     ]
   },
-  "banner_empty_image@loom_eta.item_empty_image": {
+  "banner_empty_image@loom_screen.item_empty_image": {
     "$current_cell_texture|default": "assets/minecraft/textures/gui/sprites/container/loom/banner_slot.png"
   },
-  "dye_empty_image@loom_eta.item_empty_image": {
+  "dye_empty_image@loom_screen.item_empty_image": {
     "$current_cell_texture|default": "assets/minecraft/textures/gui/sprites/container/loom/dye_slot.png"
   },
-  "pattern_item_empty_image@loom_eta.item_empty_image": {
+  "pattern_item_empty_image@loom_screen.item_empty_image": {
     "$current_cell_texture|default": "assets/minecraft/textures/gui/sprites/container/loom/pattern_slot.png"
   },
   "result_banner_renderer": {
@@ -322,7 +269,7 @@
           "pressed_control": "pressed",
           "controls": [
             {
-              "default@loom_eta.pattern": {
+              "default@loom_screen.pattern": {
                 "controls": [
                   {
                     "banner_pattern": {
@@ -349,7 +296,7 @@
               }
             },
             {
-              "hover@loom_eta.pattern_highlighted": {
+              "hover@loom_screen.pattern_highlighted": {
                 "controls": [
                   {
                     "banner_pattern": {
@@ -376,7 +323,7 @@
               }
             },
             {
-              "pressed@loom_eta.pattern_selected": {
+              "pressed@loom_screen.pattern_selected": {
                 "controls": [
                   {
                     "banner_pattern": {
@@ -429,16 +376,14 @@
     "layer": 2,
     "type": "input_panel",
     "size": [ 13.75, 14 ],
-    "$button_ref|default": "loom_eta.pattern_slot_button",
-    "$banner_pattern_ref|default": "loom_eta.banner_pattern",
+    "$button_ref|default": "loom_screen.pattern_slot_button",
+    "$banner_pattern_ref|default": "loom_screen.banner_pattern",
     "$background_images|default": "none",
     "$background_image_control_name|default": "bg",
     "controls": [
-      {
-        "$background_image_control_name@$background_images": { "layer": 1 }
-      },
-      { "banner_pattern@$banner_pattern_ref": { "layer": 10 } },
-      { "item_button_ref@$button_ref": {  } }
+      {"$background_image_control_name@$background_images": {"layer": 1}},
+      {"banner_pattern@$banner_pattern_ref": {"layer": 10}},
+      {"item_button_ref@$button_ref": {}}
     ]
   },
   "scroll_grid": {
@@ -448,7 +393,7 @@
     "anchor_to": "center",
     "anchor_from": "center",
     "$binding_condition|default": "visible",
-    "$grid_item_template|default": "loom_eta.pattern_panel",
+    "$grid_item_template|default": "loom_screen.pattern_panel",
     "collection_name": "$collection_name",
     "grid_rescaling_type": "horizontal",
     "grid_item_template": "$grid_item_template",
@@ -467,7 +412,9 @@
     "anchor_to": "center",
     "anchor_from": "center",
     "size": [ 56, "100%c" ],
-    "controls": [ { "grid@loom_eta.scroll_grid": {  } } ]
+    "controls": [
+      {"grid@loom_screen.scroll_grid": {}}
+    ]
   },
   "scroll_panel@common.container_scroll_panel": {
     "$scroll_bar_size": [ 14, "100%" ],
@@ -480,7 +427,7 @@
     "$scroll_view_port_size": [ 56, 60 ],
     "$scrolling_pane_size": [ "100%", "100%" ],
     "$misc_scroller_offset": [ -0.2, 1 ],
-    "$scrolling_content": "loom_eta.scroll_grid_panel",
+    "$scrolling_content": "loom_screen.scroll_grid_panel",
     "$scroll_track_image_control": "common.empty_panel",
     "$scroll_box_mouse_image_control": "screen_content.scroll_box_image",
     "$scroll_box_touch_image_control": "screen_content.scroll_box_image",
@@ -492,7 +439,7 @@
     "anchor_to": "center",
     "anchor_from": "center",
     "controls": [
-      { "loom_label@loom_eta.loom_label": {  } },
+      {"loom_label@loom_screen.loom_label": {}},
       {
         "loom_scroll": {
           "type": "panel",
@@ -500,34 +447,20 @@
           "anchor_to": "center",
           "anchor_from": "center",
           "offset": [ -50, -50.6 ],
-          "controls": [ { "scroll_panel@loom_eta.scroll_panel": {  } } ]
+          "controls": [
+            {"scroll_panel@loom_screen.scroll_panel": {}}
+          ]
         }
       },
-      { "screen_stack_panel@loom_eta.screen_stack_panel": {  } },
-      {
-        "container_gamepad_helpers@common.container_gamepad_helpers": {  }
-      },
-      {
-        "selected_item_details_factory@common.selected_item_details_factory": {  }
-      },
-      {
-        "item_lock_notification_factory@common.item_lock_notification_factory": {  }
-      },
-      {
-        "inventory_selected_icon_button@global.inventory_selected_icon_button": {  }
-      },
-      {
-        "inventory_take_progress_icon_button@common.inventory_take_progress_icon_button": {  }
-      },
-      {
-        "flying_item_renderer@common.flying_item_renderer": { "layer": 15 }
-      },
-      {
-        "bundle_touch_tooltip@gameplay.bundle_touch_tooltip": {  }
-      },
-      {
-        "bundle_cursor_tooltip@gameplay.bundle_cursor_tooltip": {  }
-      }
+      {"screen_stack_panel@loom_screen.screen_stack_panel": {}},
+      {"container_gamepad_helpers@common.container_gamepad_helpers": {}},
+      {"selected_item_details_factory@common.selected_item_details_factory": {}},
+      {"item_lock_notification_factory@common.item_lock_notification_factory": {}},
+      {"inventory_selected_icon_button@global.inventory_selected_icon_button": {}},
+      {"inventory_take_progress_icon_button@common.inventory_take_progress_icon_button": {}},
+      {"flying_item_renderer@common.flying_item_renderer": {"layer": 15}},
+      {"bundle_touch_tooltip@gameplay.bundle_touch_tooltip": {}},
+      {"bundle_cursor_tooltip@gameplay.bundle_cursor_tooltip": {}}
     ]
   }
 }

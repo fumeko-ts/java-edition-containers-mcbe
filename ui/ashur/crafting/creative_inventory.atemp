@@ -1,14 +1,12 @@
- {
- "namespace": "creative_inventory",
+{
+  "namespace": "creative_inventory",
   "screen_base@global.root_panel": {
-    "size": [195, 192],
+    "size": [ 195, 192 ],
     "controls": [
+      {"tabs@creative_tabs.tab_stack": {"$is_creative": true}},
       {
-        "tabs@creative_tabs.tab_stack":{"$is_creative": true}
-      },
-      {
-        "inventory@inventory_tab_creative.base_panel":{
-          "bindings":[
+        "inventory@inventory_tab_creative.base_panel": {
+          "bindings": [
             {
               "binding_type": "view",
               "source_control_name": "tab",
@@ -19,8 +17,8 @@
         }
       },
       {
-        "items@misc_tabs_creative.base_panel":{
-          "bindings":[
+        "items@misc_tabs_creative.base_panel": {
+          "bindings": [
             {
               "binding_type": "view",
               "source_control_name": "construction_tab_toggle",
@@ -31,8 +29,8 @@
         }
       },
       {
-        "items@misc_tabs_creative.base_panel":{
-          "bindings":[
+        "items@misc_tabs_creative.base_panel": {
+          "bindings": [
             {
               "binding_type": "view",
               "source_control_name": "equipment_tab_toggle",
@@ -43,8 +41,8 @@
         }
       },
       {
-        "items@misc_tabs_creative.base_panel":{
-          "bindings":[
+        "items@misc_tabs_creative.base_panel": {
+          "bindings": [
             {
               "binding_type": "view",
               "source_control_name": "nature_tab_toggle",
@@ -55,8 +53,8 @@
         }
       },
       {
-        "items@misc_tabs_creative.base_panel":{
-          "bindings":[
+        "items@misc_tabs_creative.base_panel": {
+          "bindings": [
             {
               "binding_type": "view",
               "source_control_name": "items_tab_toggle",
@@ -67,8 +65,8 @@
         }
       },
       {
-        "items@search_tabs_creative.base_panel":{
-          "bindings":[
+        "items@search_tabs_creative.base_panel": {
+          "bindings": [
             {
               "binding_type": "view",
               "source_control_name": "search_tab_toggle",
@@ -78,7 +76,9 @@
           ]
         }
       },
-      {"inventory_tab@creative_tabs.inventory_tab":{"anchor_to": "bottom_right","anchor_from": "bottom_right"}}
+      {
+        "inventory_tab@creative_tabs.inventory_tab": {"anchor_to": "bottom_right", "anchor_from": "bottom_right"}
+      }
     ]
   }
 }

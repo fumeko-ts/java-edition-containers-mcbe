@@ -1,6 +1,6 @@
 {
   "namespace": "global",
-  "grid_item@common.container_item": { "$grid_item_collection_name": "hotbar_items" },
+  "grid_item@common.container_item": {"$grid_item_collection_name": "hotbar_items"},
   "hotbar": {
     "type": "grid",
     "size": [ 162, 18 ],
@@ -25,30 +25,17 @@
           "size": "$cell_image_size",
           "layer": 0,
           "controls": [
-            {
-              "$background_image_control_name@$background_images": { "layer": 1 }
-            },
-            { "durability_bar@common.durability_bar": { "layer": 22 } },
-            { "storage_bar@common.storage_bar": { "layer": 8 } },
-            {
-              "$overlay_image_control_name@$overlay_images": { "layer": 9 }
-            }
+            {"$background_image_control_name@$background_images": {"layer": 1}},
+            {"durability_bar@common.durability_bar": {"layer": 22}},
+            {"storage_bar@common.storage_bar": {"layer": 8}},
+            {"$overlay_image_control_name@$overlay_images": {"layer": 9}}
           ]
         }
       },
+      {"item_cell_overlay_ref@$cell_overlay_ref": {"layer": 3}},
+      {"item_selected_image@common.slot_selected": {"layer": 4}},
       {
-        "item_cell_overlay_ref@$cell_overlay_ref": { "layer": 3 }
-      },
-      {
-        "item_selected_image@common.slot_selected": { "layer": 4 }
-      },
-      {
-        "item_button_ref@$button_ref": {
-          "tts_ignore_count": true,
-          "tts_skip_message": true,
-          "tts_inherit_siblings": true,
-          "layer": 5
-        }
+        "item_button_ref@$button_ref": {"tts_ignore_count": true, "tts_skip_message": true, "tts_inherit_siblings": true, "layer": 5}
       },
       {
         "container_item_lock_overlay@common.container_item_lock_overlay": {
@@ -59,12 +46,8 @@
           "layer": 6
         }
       },
-      {
-        "item_lock_cell_image@common.item_lock_cell_image": { "layer": 2 }
-      },
-      {
-        "bundle_slot_panel@gameplay.bundle_slot_panel": { "layer": 10 }
-      }
+      {"item_lock_cell_image@common.item_lock_cell_image": {"layer": 2}},
+      {"bundle_slot_panel@gameplay.bundle_slot_panel": {"layer": 10}}
     ]
   },
   "inventory_panel_bottom_half_with_label@global.empty_panel": {
@@ -169,34 +152,17 @@
     "color": "$selected_item_stack_count_color",
     "text": "#inventory_selected_item_stack_count",
     "bindings": [
-      {
-        "binding_name": "#inventory_selected_item_stack_count",
-        "binding_condition": "always_when_visible"
-      }
+      {"binding_name": "#inventory_selected_item_stack_count", "binding_condition": "always_when_visible"}
     ]
   },
   "inventory_icon_panel": {
     "type": "panel",
     "controls": [
+      {"selected_item_icon@global.inventory_selected_icon": {}},
+      {"selected_stack_size_text@global.inventory_selected_stack_size_text": {}},
+      {"selected_item_lock_overlay@common.inventory_selected_item_lock_overlay": {}},
       {
-        "selected_item_icon@global.inventory_selected_icon": {  }
-      },
-      {
-        "selected_stack_size_text@global.inventory_selected_stack_size_text": {  }
-      },
-      {
-        "selected_item_lock_overlay@common.inventory_selected_item_lock_overlay": {  }
-      },
-      {
-        "hover_text@global.hover_text": {
-          "layer": 59,
-          "bindings": [
-            {
-              "binding_name": "#using_touch",
-              "binding_name_override": "#visible"
-            }
-          ]
-        }
+        "hover_text@global.hover_text": {"layer": 59, "bindings": [ {"binding_name": "#using_touch", "binding_name_override": "#visible"} ]}
       }
     ]
   },
@@ -291,11 +257,7 @@
         "to_button_id": "button.focus_right",
         "mapping_type": "global"
       },
-      {
-        "from_button_id": "button.chat",
-        "to_button_id": "button.chat",
-        "mapping_type": "global"
-      }
+      {"from_button_id": "button.chat", "to_button_id": "button.chat", "mapping_type": "global"}
     ]
   },
   "inventory_selected_icon_button": {
@@ -316,13 +278,11 @@
     "$durability_bar_required|default": true,
     "$storage_bar_required|default": true,
     "controls": [
-      { "default@global.inventory_icon_panel": {  } },
-      { "pressed@global.inventory_icon_panel": {  } },
-      { "hover@global.inventory_icon_panel": {  } },
-      {
-        "durability_bar_grabbed@common.durability_bar_grabbed": {  }
-      },
-      { "storage_bar_grabbed@common.storage_bar_grabbed": {  } }
+      {"default@global.inventory_icon_panel": {}},
+      {"pressed@global.inventory_icon_panel": {}},
+      {"hover@global.inventory_icon_panel": {}},
+      {"durability_bar_grabbed@common.durability_bar_grabbed": {}},
+      {"storage_bar_grabbed@common.storage_bar_grabbed": {}}
     ]
   },
   "root_panel": {
@@ -347,16 +307,8 @@
         "to_button_id": "button.container_reset_held",
         "mapping_type": "pressed"
       },
-      {
-        "from_button_id": "button.return",
-        "to_button_id": "button.return",
-        "mapping_type": "global"
-      },
-      {
-        "from_button_id": "button.arrow_up",
-        "to_button_id": "button.arrow_key",
-        "mapping_type": "global"
-      },
+      {"from_button_id": "button.return", "to_button_id": "button.return", "mapping_type": "global"},
+      {"from_button_id": "button.arrow_up", "to_button_id": "button.arrow_key", "mapping_type": "global"},
       {
         "from_button_id": "button.arrow_down",
         "to_button_id": "button.arrow_key",
@@ -388,11 +340,7 @@
         "to_button_id": "button.container_reset_held",
         "mapping_type": "pressed"
       },
-      {
-        "from_button_id": "button.turn_up",
-        "to_button_id": "button.scroll_up",
-        "mapping_type": "global"
-      },
+      {"from_button_id": "button.turn_up", "to_button_id": "button.scroll_up", "mapping_type": "global"},
       {
         "from_button_id": "button.turn_down",
         "to_button_id": "button.scroll_down",
@@ -428,14 +376,9 @@
     "layer": 5,
     "allow_clipping": false
   },
-  "spacing_1v": {
-    "type": "panel",
-    "anchor_to": "center",
-    "anchor_from": "center",
-    "size": [ "fill", "0px" ]
-  },
-  "empty_panel": { "type": "panel" },
-  "empty_label": { "type": "label" },
-  "empty_image": { "type": "image" },
-  "empty_stack_panel": { "type": "stack_panel" }
+  "spacing_1v": {"type": "panel", "anchor_to": "center", "anchor_from": "center", "size": [ "fill", "0px" ]},
+  "empty_panel": {"type": "panel"},
+  "empty_label": {"type": "label"},
+  "empty_image": {"type": "image"},
+  "empty_stack_panel": {"type": "stack_panel"}
 }
