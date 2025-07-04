@@ -39,6 +39,7 @@
     "ui/ashur/crafting/inventory_screen.atemp",
     "ui/ashur/crafting/.common/.crafting_common.atemp",
     "ui/ashur/crafting/.common/recipe_grid.atemp",
+    "ui/ashur/crafting/.common/creative/creative_recipe_item.atemp",
     "ui/ashur/crafting/.common/creative/creative_tabs.atemp",
     "ui/ashur/crafting/inventory_creative/inventory_tab_creative.atemp",
     "ui/ashur/crafting/inventory_creative/inventory_top_half_creative.atemp",

@@ -1,91 +1,129 @@
 {
   "namespace": "creative_inventory",
   "screen_base@global.root_panel": {
-    "size": [ 195, 192 ],
+    "size": [195, 192],
     "controls": [
-      {"tabs@creative_tabs.tab_stack": {"$is_creative": true}},
+      { "tabs@creative_tabs.tab_stack": {"$is_creative": true} },
+      { "inventory@creative_inventory.passthrew_inventory": {"$tab_trigger_name": "tab"} },
       {
-        "inventory@inventory_tab_creative.base_panel": {
+        "items@creative_inventory.passthrew_vanilla": {
+          "$tab_trigger_name": "construction_tab_toggle"
+        }
+      },
+      {
+        "items@creative_inventory.passthrew_vanilla": {"$tab_trigger_name": "equipment_tab_toggle"}
+      },
+      { "items@creative_inventory.passthrew_vanilla": {"$tab_trigger_name": "nature_tab_toggle"} },
+      { "items@creative_inventory.passthrew_vanilla": {"$tab_trigger_name": "items_tab_toggle"} },
+      { "items@creative_inventory.passthrew_search": {"$tab_trigger_name": "search_tab_toggle"} },
+      {
+        "inventory_tab@creative_tabs.inventory_tab": {
+          "anchor_to": "bottom_right",
+          "anchor_from": "bottom_right"
+        }
+      },
+      {
+        "scroll_panel@creative_inventory.scroll_panel": {
+          "size": [180, 112],
           "bindings": [
             {
               "binding_type": "view",
               "source_control_name": "tab",
-              "source_property_name": "#toggle_state",
+              "source_property_name": "(not #toggle_state)",
               "target_property_name": "#visible"
             }
           ]
         }
-      },
-      {
-        "items@misc_tabs_creative.base_panel": {
-          "bindings": [
-            {
-              "binding_type": "view",
-              "source_control_name": "construction_tab_toggle",
-              "source_property_name": "#toggle_state",
-              "target_property_name": "#visible"
-            }
-          ]
-        }
-      },
-      {
-        "items@misc_tabs_creative.base_panel": {
-          "bindings": [
-            {
-              "binding_type": "view",
-              "source_control_name": "equipment_tab_toggle",
-              "source_property_name": "#toggle_state",
-              "target_property_name": "#visible"
-            }
-          ]
-        }
-      },
-      {
-        "items@misc_tabs_creative.base_panel": {
-          "bindings": [
-            {
-              "binding_type": "view",
-              "source_control_name": "nature_tab_toggle",
-              "source_property_name": "#toggle_state",
-              "target_property_name": "#visible"
-            }
-          ]
-        }
-      },
-      {
-        "items@misc_tabs_creative.base_panel": {
-          "bindings": [
-            {
-              "binding_type": "view",
-              "source_control_name": "items_tab_toggle",
-              "source_property_name": "#toggle_state",
-              "target_property_name": "#visible"
-            }
-          ]
-        }
-      },
-      {
-        "items@search_tabs_creative.base_panel": {
-          "bindings": [
-            {
-              "binding_type": "view",
-              "source_control_name": "search_tab_toggle",
-              "source_property_name": "#toggle_state",
-              "target_property_name": "#visible"
-            }
-          ]
-        }
-      },
-      {
-        "inventory_tab@creative_tabs.inventory_tab": {"anchor_to": "bottom_right", "anchor_from": "bottom_right"}
       }
     ],
-                          "bindings": [
-                        {
-                          "binding_type": "global", 
-                          "binding_name": "#is_creative_mode", 
-                          "binding_name_override": "#visible"
-                        }
-                      ]
+    "bindings": [
+      {
+        "binding_type": "global",
+        "binding_name": "#is_creative_mode",
+        "binding_name_override": "#visible"
+      }
+    ]
+  },
+  "passthrew_vanilla@misc_tabs_creative.base_panel": {
+    "$tab_trigger_name|default": "",
+    "bindings": [
+      {
+        "binding_type": "view",
+        "source_control_name": "$tab_trigger_name",
+        "source_property_name": "#toggle_state",
+        "target_property_name": "#visible"
+      }
+    ]
+  },
+  "passthrew_inventory@inventory_tab_creative.base_panel": {
+    "$tab_trigger_name|default": "",
+    "bindings": [
+      {
+        "binding_type": "view",
+        "source_control_name": "$tab_trigger_name",
+        "source_property_name": "#toggle_state",
+        "target_property_name": "#visible"
+      }
+    ]
+  },
+  "passthrew_search@search_tabs_creative.base_panel": {
+    "$tab_trigger_name|default": "",
+    "bindings": [
+      {
+        "binding_type": "view",
+        "source_control_name": "$tab_trigger_name",
+        "source_property_name": "#toggle_state",
+        "target_property_name": "#visible"
+      }
+    ]
+  },
+  "scroll_panel@common.common_container_scrolling_panel": {
+    "anchor_to": "center",
+    "offset": [0.4, 5.4],
+    "anchor_from": "center",      
+    "$scroll_size": [12, "110px - 4px"],"size": [181, 112],
+    "$scroll_view_port_size": [180, 90.2],
+    "$scrolling_pane_size": ["100%", "100%"],
+    "$scroll_box_mouse_image_control": "screen_content.scroll_box_image",
+    "$scroll_box_touch_image_control": "screen_content.scroll_box_image",
+    "$scrolling_content": "creative_inventory.scroll_grid_holder"
+  },
+  "scroll_grid_holder": {
+    "type": "panel",
+    "size": [162, "100%cm"],
+    "anchor_to": "left_middle",
+    "anchor_from": "left_middle",
+    "controls": [
+      {
+        "scroll_buffer@global.empty_image": {
+          "alpha": 0.1,
+          "texture": "textures/atemp/ui/white_slot",
+          "size": [162, "100%sm"]
+        }
+      },
+      {
+        "scroll_grid": {
+          "type": "grid",
+          "size": [162, "default"],
+          "offset": [0, -0.8], // this is to account for the fact that the grids size is not the name at all times 
+          "$binding_condition|default": "visible",
+          "$grid_item_template|default": "creative_recipe_item.recipe_container_item",
+          "collection_name": "$collection_name",
+          "$collection_name": "recipe_book",
+          "grid_rescaling_type": "horizontal",
+          "grid_fill_direction": "vertical",
+          "grid_item_template": "$grid_item_template",
+          "bindings": [
+            {
+              "binding_name": "#recipe_book_total_items",
+              "binding_name_override": "#maximum_grid_items",
+              "binding_condition": "$binding_condition",
+              "binding_type": "collection",
+              "binding_collection_name": "recipe_book"
+            }
+          ]
+        }
+      }
+    ]
   }
 }
