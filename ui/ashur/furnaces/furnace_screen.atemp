@@ -158,7 +158,7 @@
       {"inventory_panel_bottom_half@common.inventory_panel_bottom_half_with_label": {"offset": [ 0, -3 ]}},
       {"hotbar_grid@common.hotbar_grid_template": {"offset": [ 0, -7 ]}},
       {"take_progress_icon_button@common.inventory_take_progress_icon_button": {}},
-      {"inventory_selected_icon_button@global.inventory_selected_icon_button": {}},
+      {"inventory_selected_icon_button@common.inventory_selected_icon_button": {}},
       {"gamepad_cursor@common.gamepad_cursor_button": {}}
     ]
   },

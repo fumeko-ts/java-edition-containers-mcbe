@@ -670,7 +670,7 @@
       {"disabled_box@trade_2_screen.disabled_box": {}},
       {"selected_item_details_factory@common.selected_item_details_factory": {"layer": 6}},
       {"item_lock_notification_factory@common.item_lock_notification_factory": {}},
-      {"inventory_selected_icon_button@global.inventory_selected_icon_button": {}},
+      {"inventory_selected_icon_button@common.inventory_selected_icon_button": {}},
       {"inventory_take_progress_icon_button@common.inventory_take_progress_icon_button": {}},
       {"flying_item_renderer@common.flying_item_renderer": {"layer": 6}}
     ]

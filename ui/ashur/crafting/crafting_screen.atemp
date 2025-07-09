@@ -38,13 +38,7 @@
             {"inventory@crafting_screen.inventory": {}}
           ]
         }
-      },
-      {"flying_item_renderer@common.flying_item_renderer": {"layer": 21}},
-      {"bundle_touch_tooltip@gameplay.bundle_touch_tooltip": {}},
-      {"bundle_cursor_tooltip@gameplay.bundle_cursor_tooltip": {}},
-      {"red_hold_icon@common.inventory_take_progress_icon_button": {}},
-      {"red_icon@global.inventory_selected_icon_button": {}},
-      {"gamepad_cursor@common.gamepad_cursor_button": {}}
+      }
     ]
   },
   "inventory@global.root_panel": {

@@ -27,7 +27,7 @@
                   {
                     "hotbar_grid_template@common.hotbar_grid_template": {"offset": [ 0, -7.4 ], "$button_ref": "beacon.hotbar_slot_button"}
                   },
-                  {"inventory_selected_icon_button@global.inventory_selected_icon_button": {}},
+                  {"inventory_selected_icon_button@common.inventory_selected_icon_button": {}},
                   {"gamepad_cursor@common.gamepad_cursor_button": {}}
                 ]
               }

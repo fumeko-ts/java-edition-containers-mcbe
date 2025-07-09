@@ -67,6 +67,8 @@
       },
       {
         "creative_mode@creative_inventory.screen_base": {
+          "anchor_to": "center",
+          "anchor_from": "center",
           "bindings": [
             {
               "binding_type"         : "global",
@@ -75,11 +77,7 @@
             }
           ]
         }
-      },
-      { "flying_item_renderer@common.flying_item_renderer": {"layer": 21} },
-      {"red_hold_icon@common.inventory_take_progress_icon_button": {}},
-      {"red_icon@global.inventory_selected_icon_button": {}},
-      {"gamepad_cursor@common.gamepad_cursor_button": {}}
+      }
     ]
   },
   "inventory@global.root_panel": {

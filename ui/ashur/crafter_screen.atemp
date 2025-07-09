@@ -252,7 +252,7 @@
                 ]
               }
             },
-            {"red_icon@global.inventory_selected_icon_button": {}},
+            {"red_icon@common.inventory_selected_icon_button": {}},
             {"gamepad_cursor@common.gamepad_cursor_button": {}}
           ]
         }

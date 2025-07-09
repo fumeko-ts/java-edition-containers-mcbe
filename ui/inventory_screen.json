@@ -1,27 +1,12 @@
-{
-  "crafting_screen@crafting.inventory_screen_base": {
-    "$screen_content": "crafting_screen.screen_base",
+ {
+  "crafting_screen@crafting.inventory_screen_repl" : {"$is_crafting_table|default": true},
+  "inventory_screen@crafting.inventory_screen_repl": {"$is_crafting_table|default": false},
+  // i forgot what i was going to say so you will just need to theorise
+  "inventory_screen_repl@crafting.inventory_screen_base":{
+    "$screen_content": "crafting.crafting_screens",
     "cache_screen": true,
-    "$inventory_gui": false,
     "send_telemetry": false,
     "load_screen_immediately": true,
-    "$use_loading_bars": false,
-    "low_frequency_rendering": true,
-    "render_game_behind": true,
-    "force_render_below": true,
-    "absorbs_input": false,
-    "is_showing_menu": true,
-    "$uses_bundle_tooltip": true,
-    "$screen_bg_content": "common.screen_background",
-    "close_on_player_hurt": false
-  },
-  "inventory_screen@crafting.inventory_screen_base": {
-    "$screen_content": "inventory_screen.screen_base",
-    "cache_screen": true,
-    "$inventory_gui": true,
-    "send_telemetry": false,
-    "load_screen_immediately": true,
-    "$use_loading_bars": false,
     "low_frequency_rendering": true,
     "render_game_behind": true,
     "force_render_below": true,
@@ -30,5 +15,29 @@
     "$uses_bundle_tooltip": true,
     "$screen_bg_content": "common.screen_background",
     "close_on_player_hurt": false
+  },
+  "crafting_screens@global.empty_panel":{
+     "$current_screen|default": "",
+     "variables": [
+        {
+          "requires": "($is_crafting_table = true)",
+          "$current_screen|default": "crafting_screen.screen_base"
+        },
+        {
+          "requires": "($is_crafting_table = false)",
+          "$current_screen|default": "inventory_screen.screen_base"
+        }
+     ],
+     "controls": [
+      {
+        "screen@$current_screen":{}
+      },
+      {"selected_item_details_factory@common.selected_item_details_factory": {}},
+      {"item_lock_notification_factory@common.item_lock_notification_factory": {}},
+      {"inventory_take_progress_icon_button@common.inventory_take_progress_icon_button": {}},
+      {"flying_item_renderer@common.flying_item_renderer": {"layer": 15}},
+      {"inventory_selected_icon_button@common.inventory_selected_icon_button": {}},
+      {"gamepad_cursor@common.gamepad_cursor_button": {}}
+    ]
   }
 }
