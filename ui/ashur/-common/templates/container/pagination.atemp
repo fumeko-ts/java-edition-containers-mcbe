@@ -9,41 +9,40 @@
       {"grid@$page_content": {"offset": "$ov", "layer": 4}}
     ]
   },
-  "page_1_content@page_offset_template": {"$ov": [ 0, 0 ]},
-  "page_2_content@page_offset_template": {"$ov": [ 0, -100 ]},
-  "page_3_content@page_offset_template": {"$ov": [ 0, -200 ]},
-  "page_4_content@page_offset_template": {"$ov": [ 0, -300 ]},
-  "page_5_content@page_offset_template": {"$ov": [ 0, -400 ]},
-  "page_6_content@page_offset_template": {"$ov": [ 0, -500 ]},
-  "page_7_content@page_offset_template": {"$ov": [ 0, -600 ]},
-  "page_8_content@page_offset_template": {"$ov": [ 0, -700 ]},
-  "page_9_content@page_offset_template": {"$ov": [ 0, -800 ]},
-  "page_10_content@page_offset_template": {"$ov": [ 0, -900 ]},
-  "page_11_content@page_offset_template": {"$ov": [ 0, -1000 ]},
-  "page_12_content@page_offset_template": {"$ov": [ 0, -1100 ]},
-  "page_13_content@page_offset_template": {"$ov": [ 0, -1200 ]},
-  "page_14_content@page_offset_template": {"$ov": [ 0, -1300 ]},
-  "page_15_content@page_offset_template": {"$ov": [ 0, -1400 ]},
-  "page_16_content@page_offset_template": {"$ov": [ 0, -1500 ]},
-  "page_17_content@page_offset_template": {"$ov": [ 0, -1600 ]},
-  "page_18_content@page_offset_template": {"$ov": [ 0, -1700 ]},
-  "page_19_content@page_offset_template": {"$ov": [ 0, -1800 ]},
-  "page_20_content@page_offset_template": {"$ov": [ 0, -1900 ]},
-  "page_21_content@page_offset_template": {"$ov": [ 0, -2000 ]},
-  "page_22_content@page_offset_template": {"$ov": [ 0, -2100 ]},
-  "page_23_content@page_offset_template": {"$ov": [ 0, -2200 ]},
-  "page_24_content@page_offset_template": {"$ov": [ 0, -2300 ]},
-  "page_25_content@page_offset_template": {"$ov": [ 0, -2400 ]},
-  "page_26_content@page_offset_template": {"$ov": [ 0, -2500 ]},
-  "page_27_content@page_offset_template": {"$ov": [ 0, -2600 ]},
-  "page_28_content@page_offset_template": {"$ov": [ 0, -2700 ]},
+  "page_1@page_offset_template": {"$ov": [ 0, 0 ]},
+  "page_2@page_offset_template": {"$ov": [ 0, -100 ]},
+  "page_3@page_offset_template": {"$ov": [ 0, -200 ]},
+  "page_4@page_offset_template": {"$ov": [ 0, -300 ]},
+  "page_5@page_offset_template": {"$ov": [ 0, -400 ]},
+  "page_6@page_offset_template": {"$ov": [ 0, -500 ]},
+  "page_7@page_offset_template": {"$ov": [ 0, -600 ]},
+  "page_8@page_offset_template": {"$ov": [ 0, -700 ]},
+  "page_9@page_offset_template": {"$ov": [ 0, -800 ]},
+  "page_10@page_offset_template": {"$ov": [ 0, -900 ]},
+  "page_11@page_offset_template": {"$ov": [ 0, -1000 ]},
+  "page_12@page_offset_template": {"$ov": [ 0, -1100 ]},
+  "page_13@page_offset_template": {"$ov": [ 0, -1200 ]},
+  "page_14@page_offset_template": {"$ov": [ 0, -1300 ]},
+  "page_15@page_offset_template": {"$ov": [ 0, -1400 ]},
+  "page_16@page_offset_template": {"$ov": [ 0, -1500 ]},
+  "page_17@page_offset_template": {"$ov": [ 0, -1600 ]},
+  "page_18@page_offset_template": {"$ov": [ 0, -1700 ]},
+  "page_19@page_offset_template": {"$ov": [ 0, -1800 ]},
+  "page_20@page_offset_template": {"$ov": [ 0, -1900 ]},
+  "page_21@page_offset_template": {"$ov": [ 0, -2000 ]},
+  "page_22@page_offset_template": {"$ov": [ 0, -2100 ]},
+  "page_23@page_offset_template": {"$ov": [ 0, -2200 ]},
+  "page_24@page_offset_template": {"$ov": [ 0, -2300 ]},
+  "page_25@page_offset_template": {"$ov": [ 0, -2400 ]},
+  "page_26@page_offset_template": {"$ov": [ 0, -2500 ]},
+  "page_27@page_offset_template": {"$ov": [ 0, -2600 ]},
+  "page_28@page_offset_template": {"$ov": [ 0, -2700 ]},
   "base_content": {
     "type": "panel",
     "$current_page": 1,
-    "$ashur_page_label": "(('\u00a7r' + $current_page) + '/' + ('\u00a7r' + $max_ashur_page))",
-    "$ashur_page_content": "('pagination.page_' + $current_page + '_content')",
+    "$page_contents": "('pagination.page_' + $current_page)",
     "controls": [
-      {"offset_content@$ashur_page_content": {"offset": [ 1.6, -2 ]}},
+      {"offset_content@$page_contents": {"offset": [ 1.6, -2 ]}},
       {
         "holder@global.empty_stack_panel": {
           "orientation": "vertical",
@@ -99,12 +98,9 @@
                     "tepes_left_button@pagination.base_toggle_button": {
                       "ignored": "($current_page = 1)",
                       "$toggle_group_forced_index": 0,
-                      "$toggle_control_name": "('page_' + ($current_page - 1) + '_button')",
-                      "$toggle_name": "('ashur_page' + ($current_page - 1) + '_' + $current_page)",
-                      "$unchecked_bg": "pagination.tepes_left",
-                      "$unchecked_hov_bg": "pagination.tepes_left_hover",
-                      "$checked_bg": "pagination.tepes_left",
-                      "$checked_hov_bg": "pagination.tepes_left_hover"
+                      "$direction": "left",
+                      "$toggle_control_name": "('page_' + $current_page)",
+                      "$toggle_name": "('ashur' + ($current_page - 1))"
                     }
                   },
                   {
@@ -116,7 +112,7 @@
                           "label": {
                             "type": "label",
                             "color": "white",
-                            "text": "$ashur_page_label",
+                            "text": "(('\u00a7r' + $current_page) + '/' + ('\u00a7r' + $max_ashur_page))",
                             "anchor_from": "center",
                             "anchor_to": "center"
                           }
@@ -128,12 +124,9 @@
                     "tepes_right_button@pagination.base_toggle_button": {
                       "ignored": "($current_page = $max_ashur_page)",
                       "$toggle_group_forced_index": 1,
-                      "$toggle_control_name": "('page_' + ($current_page + 1) + '_button')",
-                      "$toggle_name": "('ashur_page' + $current_page + '_' + ($current_page + 1))",
-                      "$unchecked_bg": "pagination.tepes_right",
-                      "$unchecked_hov_bg": "pagination.tepes_right_hover",
-                      "$checked_bg": "pagination.tepes_right",
-                      "$checked_hov_bg": "pagination.tepes_right_hover"
+                      "$direction": "right",// not needed since its in global variables
+                      "$toggle_control_name": "('page_' + ($current_page + 1))",
+                      "$toggle_name": "('ashur' + $current_page)"
                     }
                   }
                 ]
@@ -147,7 +140,7 @@
     "bindings": [
       {
         "binding_type": "view",
-        "source_control_name": "('page_' + ($current_page + 1) + '_button')",
+        "source_control_name": "('page_' + ($current_page + 1))",
         "source_property_name": "(not #toggle_state)",
         "target_property_name": "#visible"
       }
@@ -156,7 +149,7 @@
   "base_page_logic": {
     "type": "panel",
     "$current_page": 1,
-    "$page_counter": "('pagination.page_' + ($current_page + 1))",
+    "$page_counter": "('pagination.page_num_' + ($current_page + 1))",
     "variables": [ {"requires": "($current_page = $max_ashur_page)", "$page_counter": "global.empty_panel"} ],
     "controls": [
       {"link@pagination.base_content": {"$current_page": "$current_page"}},
@@ -166,7 +159,7 @@
       {
         "ignored": "($current_page = 1)",
         "binding_type": "view",
-        "source_control_name": "('page_' + $current_page + '_button')",
+        "source_control_name": "('page_' + $current_page)",
         "source_property_name": "#toggle_state",
         "target_property_name": "#visible"
       }
@@ -183,6 +176,10 @@
     "anchor_to": "center",
     "size": [ 18, 17 ],
     "layer": 4,
+    "$unchecked_bg|default": "('pagination.tepes_' + $direction)",
+    "$unchecked_hov_bg|default": "('pagination.tepes_' + $direction + '_hover')",
+    "$checked_bg|default": "('pagination.tepes_' + $direction)",
+    "$checked_hov_bg|default": "('pagination.tepes_' + $direction + '_hover')",
     "controls": [
       {
         "$toggle_control_name@common.toggle": {
@@ -200,33 +197,33 @@
       }
     ]
   },
-  "page_2@pagination.base_page_logic": {"$current_page": 2},
-  "page_3@pagination.base_page_logic": {"$current_page": 3},
-  "page_4@pagination.base_page_logic": {"$current_page": 4},
-  "page_5@pagination.base_page_logic": {"$current_page": 5},
-  "page_6@pagination.base_page_logic": {"$current_page": 6},
-  "page_7@pagination.base_page_logic": {"$current_page": 7},
-  "page_8@pagination.base_page_logic": {"$current_page": 8},
-  "page_9@pagination.base_page_logic": {"$current_page": 9},
-  "page_10@pagination.base_page_logic": {"$current_page": 10},
-  "page_11@pagination.base_page_logic": {"$current_page": 11},
-  "page_12@pagination.base_page_logic": {"$current_page": 12},
-  "page_13@pagination.base_page_logic": {"$current_page": 13},
-  "page_14@pagination.base_page_logic": {"$current_page": 14},
-  "page_15@pagination.base_page_logic": {"$current_page": 15},
-  "page_16@pagination.base_page_logic": {"$current_page": 16},
-  "page_17@pagination.base_page_logic": {"$current_page": 17},
-  "page_18@pagination.base_page_logic": {"$current_page": 18},
-  "page_19@pagination.base_page_logic": {"$current_page": 19},
-  "page_20@pagination.base_page_logic": {"$current_page": 20},
-  "page_21@pagination.base_page_logic": {"$current_page": 21},
-  "page_22@pagination.base_page_logic": {"$current_page": 22},
-  "page_23@pagination.base_page_logic": {"$current_page": 23},
-  "page_24@pagination.base_page_logic": {"$current_page": 24},
-  "page_25@pagination.base_page_logic": {"$current_page": 25},
-  "page_26@pagination.base_page_logic": {"$current_page": 26},
-  "page_27@pagination.base_page_logic": {"$current_page": 27},
-  "page_28@pagination.base_page_logic": {"$current_page": 28},
+  "page_num_2@pagination.base_page_logic": {"$current_page": 2},
+  "page_num_3@pagination.base_page_logic": {"$current_page": 3},
+  "page_num_4@pagination.base_page_logic": {"$current_page": 4},
+  "page_num_5@pagination.base_page_logic": {"$current_page": 5},
+  "page_num_6@pagination.base_page_logic": {"$current_page": 6},
+  "page_num_7@pagination.base_page_logic": {"$current_page": 7},
+  "page_num_8@pagination.base_page_logic": {"$current_page": 8},
+  "page_num_9@pagination.base_page_logic": {"$current_page": 9},
+  "page_num_10@pagination.base_page_logic": {"$current_page": 10},
+  "page_num_11@pagination.base_page_logic": {"$current_page": 11},
+  "page_num_12@pagination.base_page_logic": {"$current_page": 12},
+  "page_num_13@pagination.base_page_logic": {"$current_page": 13},
+  "page_num_14@pagination.base_page_logic": {"$current_page": 14},
+  "page_num_15@pagination.base_page_logic": {"$current_page": 15},
+  "page_num_16@pagination.base_page_logic": {"$current_page": 16},
+  "page_num_17@pagination.base_page_logic": {"$current_page": 17},
+  "page_num_18@pagination.base_page_logic": {"$current_page": 18},
+  "page_num_19@pagination.base_page_logic": {"$current_page": 19},
+  "page_num_20@pagination.base_page_logic": {"$current_page": 20},
+  "page_num_21@pagination.base_page_logic": {"$current_page": 21},
+  "page_num_22@pagination.base_page_logic": {"$current_page": 22},
+  "page_num_23@pagination.base_page_logic": {"$current_page": 23},
+  "page_num_24@pagination.base_page_logic": {"$current_page": 24},
+  "page_num_25@pagination.base_page_logic": {"$current_page": 25},
+  "page_num_26@pagination.base_page_logic": {"$current_page": 26},
+  "page_num_27@pagination.base_page_logic": {"$current_page": 27},
+  "page_num_28@pagination.base_page_logic": {"$current_page": 28},
   "max_page_is_28@pagination.base_page_logic": {
     "$is_in_recipe_inventory|default": false,
     "$max_ashur_page": 28,
