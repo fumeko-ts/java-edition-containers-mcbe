@@ -27,6 +27,7 @@
     "ui/ashur/-common/templates/button/exit_button_template.atemp",
     "ui/ashur/-common/templates/container/cell_toggle.atemp",
     "ui/ashur/-common/templates/container/crafting_textures.atemp",
+    "ui/ashur/-common/templates/container/page_count.atemp",
     "ui/ashur/-common/templates/container/pagination.atemp",
     "ui/ashur/-common/templates/container/recipe_toggle.atemp",
     "ui/ashur/-common/templates/container/trade_exp.atemp",

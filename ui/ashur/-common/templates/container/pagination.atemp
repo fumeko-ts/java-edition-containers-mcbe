@@ -1,180 +1,22 @@
 {
   "namespace": "pagination",
-  "page_offset_template": {
-    "type": "panel",
-    "clips_children": true,
-    "size": [ 126, 100 ],
-    "clip_offset": [ 0, 0.2 ],
-    "controls": [
-      {"grid@$page_content": {"offset": "$ov", "layer": 4}}
-    ]
+  "texture_base@screen_content.image_element": { "offset": [1, 1], "size": [12, 17], "layer": 2 },
+  "tepes_left@texture_base": {
+    "texture": "assets/minecraft/textures/gui/sprites/recipe_book/page_backward"
   },
-  "page_1@page_offset_template": {"$ov": [ 0, 0 ]},
-  "page_2@page_offset_template": {"$ov": [ 0, -100 ]},
-  "page_3@page_offset_template": {"$ov": [ 0, -200 ]},
-  "page_4@page_offset_template": {"$ov": [ 0, -300 ]},
-  "page_5@page_offset_template": {"$ov": [ 0, -400 ]},
-  "page_6@page_offset_template": {"$ov": [ 0, -500 ]},
-  "page_7@page_offset_template": {"$ov": [ 0, -600 ]},
-  "page_8@page_offset_template": {"$ov": [ 0, -700 ]},
-  "page_9@page_offset_template": {"$ov": [ 0, -800 ]},
-  "page_10@page_offset_template": {"$ov": [ 0, -900 ]},
-  "page_11@page_offset_template": {"$ov": [ 0, -1000 ]},
-  "page_12@page_offset_template": {"$ov": [ 0, -1100 ]},
-  "page_13@page_offset_template": {"$ov": [ 0, -1200 ]},
-  "page_14@page_offset_template": {"$ov": [ 0, -1300 ]},
-  "page_15@page_offset_template": {"$ov": [ 0, -1400 ]},
-  "page_16@page_offset_template": {"$ov": [ 0, -1500 ]},
-  "page_17@page_offset_template": {"$ov": [ 0, -1600 ]},
-  "page_18@page_offset_template": {"$ov": [ 0, -1700 ]},
-  "page_19@page_offset_template": {"$ov": [ 0, -1800 ]},
-  "page_20@page_offset_template": {"$ov": [ 0, -1900 ]},
-  "page_21@page_offset_template": {"$ov": [ 0, -2000 ]},
-  "page_22@page_offset_template": {"$ov": [ 0, -2100 ]},
-  "page_23@page_offset_template": {"$ov": [ 0, -2200 ]},
-  "page_24@page_offset_template": {"$ov": [ 0, -2300 ]},
-  "page_25@page_offset_template": {"$ov": [ 0, -2400 ]},
-  "page_26@page_offset_template": {"$ov": [ 0, -2500 ]},
-  "page_27@page_offset_template": {"$ov": [ 0, -2600 ]},
-  "page_28@page_offset_template": {"$ov": [ 0, -2700 ]},
-  "base_content": {
-    "type": "panel",
-    "$current_page": 1,
-    "$page_contents": "('pagination.page_' + $current_page)",
-    "controls": [
-      {"offset_content@$page_contents": {"offset": [ 1.6, -2 ]}},
-      {
-        "holder@global.empty_stack_panel": {
-          "orientation": "vertical",
-          "ignored": "($is_in_recipe_inventory = false)",
-          "anchor_to": "top_middle",
-          "anchor_from": "top_middle",
-          "size": [ 111, 30 ],
-          "offset": [ 8, 0 ],
-          "controls": [
-            {"buffer_1": {"type": "panel", "size": [ 111, 11 ]}},
-            {
-              "search_and_filter@global.empty_stack_panel": {
-                "orientation": "horizontal",
-                "size": [ 111, 18 ],
-                "controls": [
-                  {
-                    "holder": {
-                      "type": "panel",
-                      "size": [ 81, 18 ],
-                      "contained": true,
-                      "controls": [
-                        {
-                          "search_box@crafting_common.text_edit_control": {"anchor_to": "center", "anchor_from": "center", "layer": 2}
-                        }
-                      ]
-                    }
-                  },
-                  {"buffer_2": {"type": "panel", "size": [ 4, "default" ]}},
-                  {"filter@crafting_common.filter_toggle": {}}
-                ]
-              }
-            }
-          ]
-        }
-      },
-      {
-        "stack_holder@global.empty_stack_panel": {
-          "orientation": "vertical",
-          "anchor_to": "bottom_middle",
-          "anchor_from": "bottom_middle",
-          "size": [ 77, 30 ],
-          "controls": [
-            {
-              "stack@global.empty_stack_panel": {
-                "orientation": "horizontal",
-                "size": [ 77, 17 ],
-                "anchor_to": "bottom_middle",
-                "anchor_from": "bottom_middle",
-                "layer": 20,
-                "controls": [
-                  {"buffer": {"type": "panel", "size": [ 18, 0 ], "ignored": "(not ($current_page = 1))"}},
-                  {
-                    "tepes_left_button@pagination.base_toggle_button": {
-                      "ignored": "($current_page = 1)",
-                      "$toggle_group_forced_index": 0,
-                      "$direction": "left",
-                      "$toggle_control_name": "('page_' + $current_page)",
-                      "$toggle_name": "('ashur' + ($current_page - 1))"
-                    }
-                  },
-                  {
-                    "buffer1": {
-                      "type": "panel",
-                      "size": [ 43, 17 ],
-                      "controls": [
-                        {
-                          "label": {
-                            "type": "label",
-                            "color": "white",
-                            "text": "(('\u00a7r' + $current_page) + '/' + ('\u00a7r' + $max_ashur_page))",
-                            "anchor_from": "center",
-                            "anchor_to": "center"
-                          }
-                        }
-                      ]
-                    }
-                  },
-                  {
-                    "tepes_right_button@pagination.base_toggle_button": {
-                      "ignored": "($current_page = $max_ashur_page)",
-                      "$toggle_group_forced_index": 1,
-                      "$direction": "right",// not needed since its in global variables
-                      "$toggle_control_name": "('page_' + ($current_page + 1))",
-                      "$toggle_name": "('ashur' + $current_page)"
-                    }
-                  }
-                ]
-              }
-            },
-            {"buffer_fill_1": {"type": "panel", "size": [ 65, 13 ]}}
-          ]
-        }
-      }
-    ],
-    "bindings": [
-      {
-        "binding_type": "view",
-        "source_control_name": "('page_' + ($current_page + 1))",
-        "source_property_name": "(not #toggle_state)",
-        "target_property_name": "#visible"
-      }
-    ]
+  "tepes_left_hover@texture_base": {
+    "texture": "assets/minecraft/textures/gui/sprites/recipe_book/page_backward_highlighted"
   },
-  "base_page_logic": {
-    "type": "panel",
-    "$current_page": 1,
-    "$page_counter": "('pagination.page_num_' + ($current_page + 1))",
-    "variables": [ {"requires": "($current_page = $max_ashur_page)", "$page_counter": "global.empty_panel"} ],
-    "controls": [
-      {"link@pagination.base_content": {"$current_page": "$current_page"}},
-      {"numbers@$page_counter": {}}
-    ],
-    "bindings": [
-      {
-        "ignored": "($current_page = 1)",
-        "binding_type": "view",
-        "source_control_name": "('page_' + $current_page)",
-        "source_property_name": "#toggle_state",
-        "target_property_name": "#visible"
-      }
-    ]
+  "tepes_right@texture_base": {
+    "texture": "assets/minecraft/textures/gui/sprites/recipe_book/page_forward"
   },
-  "texture_base@screen_content.image_element": {"offset": [ 1, 1 ], "size": [ 12, 17 ], "layer": 2},
-  "tepes_left@texture_base": {"texture": "assets/minecraft/textures/gui/sprites/recipe_book/page_backward"},
-  "tepes_left_hover@texture_base": {"texture": "assets/minecraft/textures/gui/sprites/recipe_book/page_backward_highlighted"},
-  "tepes_right@texture_base": {"texture": "assets/minecraft/textures/gui/sprites/recipe_book/page_forward"},
-  "tepes_right_hover@texture_base": {"texture": "assets/minecraft/textures/gui/sprites/recipe_book/page_forward_highlighted"},
-  "base_toggle_button": {
-    "type": "panel",
+  "tepes_right_hover@texture_base": {
+    "texture": "assets/minecraft/textures/gui/sprites/recipe_book/page_forward_highlighted"
+  },
+  "base_toggle_button@global.empty_panel": {
     "anchor_from": "center",
     "anchor_to": "center",
-    "size": [ 18, 17 ],
+    "size": [18, 17],
     "layer": 4,
     "$unchecked_bg|default": "('pagination.tepes_' + $direction)",
     "$unchecked_hov_bg|default": "('pagination.tepes_' + $direction + '_hover')",
@@ -183,7 +25,7 @@
     "controls": [
       {
         "$toggle_control_name@common.toggle": {
-          "offset": [ -1, -1 ],
+          "offset": [-1, -1],
           "radio_toggle_group": true,
           "focus_container": true,
           "use_last_focus": true,
@@ -194,6 +36,192 @@
             {"checked_hover@$checked_hov_bg": {}}
           ]
         }
+      }
+    ]
+  },
+  "page_template@global.empty_panel": {
+    "clips_children": true,
+    "size": [126, 100],
+    "clip_offset": [0, 0.2],
+    "controls": [
+      { "grid@$page_content": {"offset": "$ov", "layer": 4} }
+    ]
+  },
+  "page_1@page_template": { "$ov": [0, 0] },
+  "page_2@page_template": { "$ov": [0, -100] },
+  "page_3@page_template": { "$ov": [0, -200] },
+  "page_4@page_template": { "$ov": [0, -300] },
+  "page_5@page_template": { "$ov": [0, -400] },
+  "page_6@page_template": { "$ov": [0, -500] },
+  "page_7@page_template": { "$ov": [0, -600] },
+  "page_8@page_template": { "$ov": [0, -700] },
+  "page_9@page_template": { "$ov": [0, -800] },
+  "page_10@page_template": { "$ov": [0, -900] },
+  "page_11@page_template": { "$ov": [0, -1000] },
+  "page_12@page_template": { "$ov": [0, -1100] },
+  "page_13@page_template": { "$ov": [0, -1200] },
+  "page_14@page_template": { "$ov": [0, -1300] },
+  "page_15@page_template": { "$ov": [0, -1400] },
+  "page_16@page_template": { "$ov": [0, -1500] },
+  "page_17@page_template": { "$ov": [0, -1600] },
+  "page_18@page_template": { "$ov": [0, -1700] },
+  "page_19@page_template": { "$ov": [0, -1800] },
+  "page_20@page_template": { "$ov": [0, -1900] },
+  "page_21@page_template": { "$ov": [0, -2000] },
+  "page_22@page_template": { "$ov": [0, -2100] },
+  "page_23@page_template": { "$ov": [0, -2200] },
+  "page_24@page_template": { "$ov": [0, -2300] },
+  "page_25@page_template": { "$ov": [0, -2400] },
+  "page_26@page_template": { "$ov": [0, -2500] },
+  "page_27@page_template": { "$ov": [0, -2600] },
+  "page_28@page_template": { "$ov": [0, -2700] },
+  "base_page_logic": {
+    "type": "panel",
+    "$current_page": 1,
+    "$max_ashur_page": 28,
+    "$page_counter": "('pagination.page_num_' + ($current_page + 1))",
+    "$page_contents": "('pagination.page_' + $current_page)",
+    "$crafting_max": false,
+    "variables": [
+      {
+        "requires"       : "(($current_page = $max_ashur_page) or ($crafting_max = true))",
+        "$page_counter"  : "global.empty_panel",
+        "$max_ashur_page": "$current_page"
+      }
+    ],
+    "controls": [
+      {
+        "base_content": {
+          "type": "panel",
+          "controls": [
+            {
+              "offset_content@$page_contents": { "offset": [1.6, -2] }
+            },
+            {
+              "holder@global.empty_stack_panel": {
+                "orientation": "vertical",
+                "ignored": "($is_in_recipe_inventory = false)",
+                "anchor_to": "top_middle",
+                "anchor_from": "top_middle",
+                "size": [111, 30],
+                "offset": [8, 0],
+                "controls": [
+                  {
+                    "buffer_1": { "type": "panel", "size": [111, 11] }
+                  },
+                  {
+                    "search_and_filter@global.empty_stack_panel": {
+                      "orientation": "horizontal",
+                      "size": [111, 18],
+                      "controls": [
+                        {
+                          "holder": {
+                            "type": "panel",
+                            "size": [81, 18],
+                            "contained": true,
+                            "controls": [
+                              {
+                                "search_box@crafting_common.text_edit_control": {
+                                  "anchor_to": "center",
+                                  "anchor_from": "center",
+                                  "layer": 2
+                                }
+                              }
+                            ]
+                          }
+                        },
+                        {
+                          "buffer_2": { "type": "panel", "size": [4, "default"] }
+                        },
+                        {"filter@crafting_common.filter_toggle": {}}
+                      ]
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "stack_holder@global.empty_stack_panel": {
+                "orientation": "vertical",
+                "anchor_to": "bottom_middle",
+                "anchor_from": "bottom_middle",
+                "size": [77, 30],
+                "controls": [
+                  {
+                    "stack@global.empty_stack_panel": {
+                      "orientation": "horizontal",
+                      "size": [77, 17],
+                      "anchor_to": "bottom_middle",
+                      "anchor_from": "bottom_middle",
+                      "layer": 20,
+                      "controls": [
+                        {
+                          "buffer@global.empty_panel": {
+                            "size": [18, 0],
+                            "ignored": "(not ($current_page = 1))"
+                          }
+                        },
+                        {
+                          "tepes_left_button@pagination.base_toggle_button": {
+                            "ignored": "($current_page = 1)",
+                            "$toggle_group_forced_index": 0,
+                            "$direction": "left",
+                            "$toggle_control_name": "('page_' + $max_ashur_page + $current_page)",
+                            "$toggle_name": "('ashur' + $max_ashur_page + ($current_page - 1))"
+                          }
+                        },
+                        {
+                          "buffer1@global.empty_panel": {
+                            "size": [43, 17],
+                            "controls": [
+                              {
+                                "label@global.empty_label": {
+                                  "color": "white",
+                                  "text": "('\u00a7r' + $current_page + '/' + $max_ashur_page)",
+                                  "anchor_from": "center",
+                                  "anchor_to": "center"
+                                }
+                              }
+                            ]
+                          }
+                        },
+                        {
+                          "tepes_right_button@pagination.base_toggle_button": {
+                            "ignored": "($current_page = $max_ashur_page)",
+                            "$toggle_group_forced_index": 1,
+                            "$direction": "right",
+                            "$toggle_control_name": "('page_' + $max_ashur_page + ($current_page + 1))",
+                            "$toggle_name": "('ashur' + $max_ashur_page + $current_page)"
+                          }
+                        }
+                      ]
+                    }
+                  },
+                  {
+                    "buffer_fill_1@global.empty_panel": { "size": [65, 13] }
+                  }
+                ]
+              }
+            }
+          ],
+          "bindings": [
+            {
+              "binding_type"        : "view",
+              "source_control_name" : "('page_' + $max_ashur_page + ($current_page + 1))",
+              "source_property_name": "(not #toggle_state)",
+              "target_property_name": "#visible"
+            }
+          ]
+        }
+      },
+      {"numbers@$page_counter": {}}
+    ],
+    "bindings": [
+      {
+        "binding_type"        : "view",
+        "source_control_name" : "('page_' + $max_ashur_page + $current_page)",
+        "source_property_name": "#toggle_state",
+        "target_property_name": "#visible"
       }
     ]
   },
@@ -226,7 +254,6 @@
   "page_num_28@pagination.base_page_logic": {"$current_page": 28},
   "max_page_is_28@pagination.base_page_logic": {
     "$is_in_recipe_inventory|default": false,
-    "$max_ashur_page": 28,
     "$page_content": "global.empty_panel"
   }
 }

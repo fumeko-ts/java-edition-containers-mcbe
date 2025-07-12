@@ -1,0 +1,37 @@
+{
+  "namespace": "page_count",
+  "page": {
+    "type": "panel",
+    "controls": [
+      { 
+        "page@pagination.max_page_is_28": { 
+          "$is_in_recipe_inventory": true, 
+          "$page_content": "recipe_grid.recipe_grid" 
+        } 
+      }
+    ]
+  }
+  /*,
+  "label@global.empty_label": {
+    "text": "#test",
+    "size": [40, 40],
+    "offset": [0, 6],
+    "color": "purple",
+    "layer": 2000,
+    "bindings": [
+      {
+        "binding_name"           : "#recipe_book_total_items",
+        "binding_name_override"  : "#maximum_grid_items",
+        "binding_condition"      : "visible",
+        "binding_type"           : "collection",
+        "binding_collection_name": "recipe_book"
+      },
+      {
+        "binding_type"        : "view",
+        "binding_condition"   : "always",
+        "source_property_name": "('§z' + ((#maximum_grid_items / 20) + 1) + '§z')",
+        "target_property_name": "#test"
+      }
+    ]
+  }*/
+}

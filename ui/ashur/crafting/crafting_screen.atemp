@@ -58,9 +58,7 @@
         "root_panel@global.root_panel": {
           "controls": [
             {"recipe_base@screen_content.recipe_book": {"layer": 1}},
-            {
-              "base_page_control@pagination.max_page_is_28": {"$is_in_recipe_inventory": true, "$max_ashur_page": 28, "$page_content": "recipe_grid.recipe_grid"}
-            }
+            {"base_page_control@page_count.page": {}}
           ]
         }
       }
