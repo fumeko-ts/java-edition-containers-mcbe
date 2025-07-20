@@ -1,12 +1,12 @@
 {
-  "namespace": "smoker_screen",
+  "namespace": "blast_furnace_screen",
   "flame_panel": {
     "type": "panel",
     "size": [ 13, 13 ],
     "offset": [ -21, 0 ],
     "controls": [
-      {"flame_empty_image@smoker_screen.flame_empty_image": {}},
-      {"flame_full_image@smoker_screen.flame_full_image": {}}
+      {"flame_empty_image@blast_furnace_screen.flame_empty_image": {}},
+      {"flame_full_image@blast_furnace_screen.flame_full_image": {}}
     ]
   },
   "furnace_arrow_empty_image": {
@@ -143,7 +143,7 @@
       }
     ]
   },
-  "smoker_panel_top_half": {
+  "furnace_panel_top_half": {
     "type": "panel",
     "size": [ "100%", "50% - 12px" ],
     "offset": [ 0, 7 ],
@@ -165,7 +165,7 @@
     "type": "panel",
     "layer": 5,
     "controls": [
-      {"smoker_panel_top_half@smoker_screen.smoker_panel_top_half": {}},
+      {"furnace_panel_top_half@blast_furnace_screen.furnace_panel_top_half": {}},
       {"inventory_panel_bottom_half@common.inventory_panel_bottom_half_with_label": {"offset": [ 0, -3 ]}},
       {"hotbar_grid@common.hotbar_grid_template": {"offset": [ 0, -7 ]}},
       {"take_progress_icon_button@common.inventory_take_progress_icon_button": {}}
@@ -175,13 +175,13 @@
     "size": [ 176, 166 ],
     "layer": 1,
     "controls": [
-      {"common_panel@screen_content.somali": {"$furnace_screen": true}},
+      {"common_panel@screen_content.container_base": {"$furnace_screen": true}},
       {"furnace_screen_inventory@furnace_screen_inventory": {}},
       {"inventory_selected_icon_button@common.inventory_selected_icon_button": {}},
       {"gamepad_cursor@common.gamepad_cursor_button": {}}
     ]
   },
-  "smoker_panel": {
+  "blast_furnace_panel": {
     "type": "panel",
     "anchor_from": "right_middle",
     "anchor_to": "right_middle",

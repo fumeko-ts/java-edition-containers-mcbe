@@ -296,10 +296,18 @@
       {"storage_bar_grabbed@common.storage_bar_grabbed": {}}
     ]
   },
+  "hover_text": {
+    "$hover_text_max_width|default": 0,
+    "type": "custom",
+    "renderer": "hover_text_renderer",
+    "hover_text_max_width": "$hover_text_max_width",
+    "layer": 5,
+    "allow_clipping": false
+  },
   "root_panel": {
     "type": "input_panel",
-    "size": [ 176, 166 ],
-    "layer": 1,
+    "size": "$size",
+    "$size": [ 176, 166 ],
     "anchor_from": "center",
     "anchor_to": "center",
     "button_mappings": [
@@ -378,14 +386,6 @@
         "mapping_type": "global"
       }
     ]
-  },
-  "hover_text": {
-    "$hover_text_max_width|default": 0,
-    "type": "custom",
-    "renderer": "hover_text_renderer",
-    "hover_text_max_width": "$hover_text_max_width",
-    "layer": 5,
-    "allow_clipping": false
   },
   "spacing_1v": {"type": "panel", "anchor_to": "center", "anchor_from": "center", "size": [ "fill", "0px" ]},
   "empty_panel": {"type": "panel"},

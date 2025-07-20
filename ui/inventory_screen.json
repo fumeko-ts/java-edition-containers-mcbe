@@ -106,7 +106,7 @@
       }
     ]
   },
-  "crafting_screens@global.empty_panel": {
+  "crafting_screens@container_common.container_details": {
     "$current_screen|default": "",
     "variables": [
       {
@@ -118,14 +118,8 @@
         "$current_screen|default": "inventory_screen.screen_base"
       }
     ],
-    "controls": [
-      {"screen@$current_screen": {}},
-      {"selected_item_details_factory@common.selected_item_details_factory": {}},
-      {"item_lock_notification_factory@common.item_lock_notification_factory": {}},
-      {"inventory_take_progress_icon_button@common.inventory_take_progress_icon_button": {}},
-      {"flying_item_renderer@common.flying_item_renderer": {"layer": 15}},
-      {"inventory_selected_icon_button@common.inventory_selected_icon_button": {}},
-      {"gamepad_cursor@common.gamepad_cursor_button": {}}
+    "$screen_controls": [
+      {"screen@$current_screen": {}}
     ]
   }
 }

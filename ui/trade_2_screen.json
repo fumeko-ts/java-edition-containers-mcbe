@@ -1,4 +1,4 @@
 {
   "namespace": "trade2",
-  "trade_screen@global.inventory_screen_common": {"$screen_content": "trade_2_screen.screen_panel"}
+  "trade_screen@global.inventory_screen_common": {"$screen_content": "tradeing_screen.screen_panel"}
 }

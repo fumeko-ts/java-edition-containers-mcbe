@@ -5,8 +5,7 @@
     "controls": [
       {
         "page@pagination.max_page_is_28": {"$is_in_recipe_inventory": true, "$page_content": "recipe_grid.recipe_grid"}
-      }//,
-     // {"render_page_count@page_count.label": {}}
+      }
     ]
   },
   "label@global.empty_label": {

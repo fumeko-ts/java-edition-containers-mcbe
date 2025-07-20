@@ -1,7 +1,7 @@
 {
-  "small_chest_screen@global.inventory_screen_common" : {"$screen_content": "small_chest_screen.small_chest"},
-  "large_chest_screen@global.inventory_screen_common" : {"$screen_content": "double_chest_screen.double_chest"},
-  "ender_chest_screen@global.inventory_screen_common" : {"$screen_content": "ender_chest_screen.ender_chest"},
-  "shulker_box_screen@global.inventory_screen_common" : {"$screen_content": "shulker_screen.shulker"},
-  "barrel_screen@global.inventory_screen_common"      : {"$screen_content": "barrel_screen.barrel"}
+  "small_chest_screen@global.inventory_screen_common": {"$screen_content": "small_chest_screen.small_chest"},
+  "large_chest_screen@global.inventory_screen_common": {"$screen_content": "double_chest_screen.double_chest"},
+  "ender_chest_screen@global.inventory_screen_common": {"$screen_content": "ender_chest_screen.ender_chest"},
+  "shulker_box_screen@global.inventory_screen_common": {"$screen_content": "shulker_screen.shulker"},
+  "barrel_screen@global.inventory_screen_common": {"$screen_content": "barrel_screen.barrel"}
 }

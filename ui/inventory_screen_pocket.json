@@ -1,5 +1,5 @@
 {
-    "inventory_screen_pocket_base@global.inventory_screen_common": {
+  "inventory_screen_pocket_base@global.inventory_screen_common": {
     "button_mappings": [
       {
         "from_button_id": "button.menu_cancel",
@@ -92,7 +92,6 @@
       }
     ]
   },
-
   "crafting_screen_pocket@crafting_pocket.inventory_screen_pocket_base": {"$screen_content": "crafting_screen.screen_base", "$inventory_gui": false},
   "inventory_screen_pocket@crafting_pocket.inventory_screen_pocket_base": {"$screen_content": "inventory_screen.screen_base", "$inventory_gui": true}
 }

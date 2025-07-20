@@ -365,40 +365,17 @@
       {"recipe_panel@smithing_table_screen.recipe_panel": {}}
     ]
   },
-  "smithing_table_panel": {
+  "smithing_table_panel@container_common.container_details": {
     "type": "panel",
-    "controls": [
-      {"container_gamepad_helpers@common.container_gamepad_helpers": {}},
-      {"selected_item_details_factory@common.selected_item_details_factory": {}},
-      {"item_lock_notification_factory@common.item_lock_notification_factory": {}},
+    "layer": 2,
+    "size": [ 176, 166 ],
+    "$screen_controls": [
+      {"common_panel@screen_content.container_base": {"$smithing_screen": true}},
+      {"top_half_panel@smithing_table_screen.top_half_panel": {}},
       {
-        "empty_panel@common.empty_panel": {
-          "size": [ 176, 166 ],
-          "layer": 1,
-          "controls": [
-            {"common_panel@screen_content.somali": {"$smithing_screen": true}},
-            {
-              "smithing_table_screen_inventory": {
-                "type": "panel",
-                "layer": 2,
-                "controls": [
-                  {"top_half_panel@smithing_table_screen.top_half_panel": {}},
-                  {
-                    "inventory_panel_bottom_half_with_label@common.inventory_panel_bottom_half_with_label": {"offset": [ 0, -3 ]}
-                  },
-                  {"hotbar_grid@common.hotbar_grid_template": {"offset": [ 0, -7 ]}},
-                  {"inventory_take_progress_icon_button@common.inventory_take_progress_icon_button": {}}
-                ]
-              }
-            },
-            {"inventory_selected_icon_button@common.inventory_selected_icon_button": {}},
-            {"gamepad_cursor@common.gamepad_cursor_button": {}}
-          ]
-        }
+        "inventory_panel_bottom_half_with_label@common.inventory_panel_bottom_half_with_label": {"offset": [ 0, -3 ]}
       },
-      {"flying_item_renderer@common.flying_item_renderer": {"layer": 15}},
-      {"bundle_touch_tooltip@gameplay.bundle_touch_tooltip": {}},
-      {"bundle_cursor_tooltip@gameplay.bundle_cursor_tooltip": {}}
+      {"hotbar_grid@common.hotbar_grid_template": {"offset": [ 0, -7 ]}}
     ]
   }
 }

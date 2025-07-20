@@ -1,21 +1,30 @@
 {
-  "namespace": "furnace_screen",
+  "namespace": "smoker_screen",
   "flame_panel": {
     "type": "panel",
     "size": [ 13, 13 ],
     "offset": [ -21, 0 ],
     "controls": [
-      {"flame_full_image@furnace_screen.flame_full_image": {}}
+      {"flame_empty_image@smoker_screen.flame_empty_image": {}},
+      {"flame_full_image@smoker_screen.flame_full_image": {}}
     ]
+  },
+  "furnace_arrow_empty_image": {
+    "type": "image",
+    "layer": 1,
+    "texture": "textures/ui/arrow_inactive",
+    "anchor_from": "top_left",
+    "anchor_to": "top_left",
+    "size": [ 22, 16 ],
+    "alpha": 0
   },
   "furnace_arrow_full_image": {
     "type": "image",
     "layer": 3,
-    "texture": "assets/minecraft/textures/gui/sprites/container/furnace/burn_progress.png",
-    "anchor_to": "center",
-    "anchor_from": "center",
-    "offset": [ 3, 0.6 ],
-    "size": [ 25, 16 ],
+    "texture": "textures/ui/arrow_active",
+    "anchor_from": "top_left",
+    "anchor_to": "top_left",
+    "size": [ 22, 15 ],
     "clip_direction": "left",
     "bindings": [
       {
@@ -25,9 +34,10 @@
       }
     ]
   },
+  "flame_empty_image": {"type": "image", "texture": "textures/ui/flame_empty_image", "alpha": 0, "layer": 2},
   "flame_full_image": {
     "type": "image",
-    "texture": "assets/minecraft/textures/gui/sprites/container/furnace/lit_progress.png",
+    "texture": "textures/ui/flame_full_image",
     "layer": 3,
     "clip_direction": "down",
     "bindings": [
@@ -122,7 +132,7 @@
           "anchor_to": "left_middle",
           "size": [ 26, 26 ],
           "$cell_image_size": [ 26, 26 ],
-          "offset": [ 23, 0.6 ],
+          "offset": [ 20, 0 ],
           "$item_collection_name": "furnace_output_items",
           "$focus_id": "furnace_output_item",
           "$focus_override_right_binding_type": "none",
@@ -133,52 +143,52 @@
       }
     ]
   },
-  "container@common.empty_panel": {
-    "size": [ 176, 166 ],
-    "layer": 1,
-    "anchor_to": "center",
-    "anchor_from": "center",
+  "smoker_panel_top_half": {
+    "type": "panel",
+    "size": [ "100%", "50% - 12px" ],
+    "offset": [ 0, 7 ],
+    "anchor_to": "top_left",
+    "anchor_from": "top_left",
     "controls": [
-      {"common_panel@screen_content.somali": {"$furnace_screen": true}},
+      {"furnace_label@furnace_label": {}},
+      {"input@furnace_input_panel": {}},
       {
-        "furnace_panel_top_half": {
-          "type": "panel",
-          "size": [ "100%", "50% - 12px" ],
-          "offset": [ 0, 7 ],
-          "anchor_to": "top_left",
-          "anchor_from": "top_left",
-          "controls": [
-            {"furnace_label@furnace_label": {}},
-            {"input@furnace_input_panel": {}},
-            {"furnace_arrow_full_image@furnace_arrow_full_image": {}},
-            {"output@furnace_output_panel": {}}
-          ]
-        }
+        "furnace_arrow_empty_image@furnace_arrow_empty_image": {"anchor_to": "center", "anchor_from": "center", "offset": [ 3, 0 ]}
       },
+      {
+        "furnace_arrow_full_image@furnace_arrow_full_image": {"anchor_to": "center", "anchor_from": "center", "offset": [ 3, 0 ]}
+      },
+      {"output@furnace_output_panel": {"offset": [ 3, 0.6 ]}}
+    ]
+  },
+  "furnace_screen_inventory": {
+    "type": "panel",
+    "layer": 5,
+    "controls": [
+      {"smoker_panel_top_half@smoker_screen.smoker_panel_top_half": {}},
       {"inventory_panel_bottom_half@common.inventory_panel_bottom_half_with_label": {"offset": [ 0, -3 ]}},
       {"hotbar_grid@common.hotbar_grid_template": {"offset": [ 0, -7 ]}},
-      {"take_progress_icon_button@common.inventory_take_progress_icon_button": {}},
+      {"take_progress_icon_button@common.inventory_take_progress_icon_button": {}}
+    ]
+  },
+  "root_panel@common.empty_panel": {
+    "size": [ 176, 166 ],
+    "layer": 1,
+    "controls": [
+      {"common_panel@screen_content.container_base": {"$furnace_screen": true}},
+      {"furnace_screen_inventory@furnace_screen_inventory": {}},
       {"inventory_selected_icon_button@common.inventory_selected_icon_button": {}},
       {"gamepad_cursor@common.gamepad_cursor_button": {}}
     ]
   },
-  "furnace_panel": {
+  "smoker_panel": {
     "type": "panel",
-    "anchor_from": "center",
-    "anchor_to": "center",
+    "anchor_from": "right_middle",
+    "anchor_to": "right_middle",
     "controls": [
       {"container_gamepad_helpers@common.container_gamepad_helpers": {}},
       {"selected_item_details_factory@common.selected_item_details_factory": {}},
-      {
-        "recipe_and_container_stack@global.empty_stack_panel": {
-          "max_size": [ 332, 166 ],
-          "min_size": [ 176, 166 ],
-          "orientation": "horizontal",
-          "controls": [
-            {"container@furnace_screen.container": {}}
-          ]
-        }
-      },
+      {"root_panel@root_panel": {}},
       {"item_lock_notification_factory@common.item_lock_notification_factory": {}},
       {"flying_item_renderer@common.flying_item_renderer": {"layer": 15}}
     ]

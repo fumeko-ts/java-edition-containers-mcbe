@@ -44,7 +44,7 @@
   "inventory@global.root_panel": {
     "size": [ 176, 166 ],
     "controls": [
-      {"container@screen_content.somali": {"$crafting_screen": true, "contained": true}},
+      {"container@screen_content.container_base": {"$crafting_screen": true, "contained": true}},
       {"crafting_recipe_grids@crafting_screen.crafting_top_stack": {}},
       {"container_grid@crafting_screen.inventory_grid_stack": {}}
     ]

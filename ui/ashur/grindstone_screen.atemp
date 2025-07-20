@@ -168,38 +168,14 @@
       {"grindstone_slots_panel@grindstone_screen.grindstone_slots_panel": {"offset": [ 0, 4 ]}}
     ]
   },
-  "grindstone_panel": {
-    "type": "panel",
-    "controls": [
-      {"container_gamepad_helpers@common.container_gamepad_helpers": {}},
-      {"selected_item_details_factory@common.selected_item_details_factory": {}},
-      {"item_lock_notification_factory@common.item_lock_notification_factory": {}},
-      {
-        "root_panel@common.empty_panel": {
-          "size": [ 176, 166 ],
-          "layer": 1,
-          "controls": [
-            {"common_panel@screen_content.somali": {"$grindstone_screen": true}},
-            {
-              "grindstone_screen_inventory": {
-                "type": "panel",
-                "layer": 2,
-                "controls": [
-                  {"top_half_panel@grindstone_screen.top_half_panel": {}},
-                  {"inventory_panel_bottom_half_with_label@common.inventory_panel_bottom_half_with_label": {}},
-                  {"hotbar_grid@common.hotbar_grid_template": {"offset": [ 0, -4 ]}},
-                  {"inventory_take_progress_icon_button@common.inventory_take_progress_icon_button": {}}
-                ]
-              }
-            },
-            {"inventory_selected_icon_button@common.inventory_selected_icon_button": {}},
-            {"gamepad_cursor@common.gamepad_cursor_button": {}}
-          ]
-        }
-      },
-      {"flying_item_renderer@common.flying_item_renderer": {"layer": 15}},
-      {"bundle_touch_tooltip@gameplay.bundle_touch_tooltip": {}},
-      {"bundle_cursor_tooltip@gameplay.bundle_cursor_tooltip": {}}
+  "grindstone_panel@container_common.container_details": {
+    "size": [ 176, 166 ],
+    "layer": 2,
+    "$screen_controls": [
+      {"common_panel@screen_content.container_base": {"$grindstone_screen": true}},
+      {"top_half_panel@grindstone_screen.top_half_panel": {}},
+      {"inventory_panel_bottom_half_with_label@common.inventory_panel_bottom_half_with_label": {}},
+      {"hotbar_grid@common.hotbar_grid_template": {"offset": [ 0, -4 ]}}
     ]
   }
 }

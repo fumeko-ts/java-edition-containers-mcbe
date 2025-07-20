@@ -74,10 +74,8 @@
       }
     ]
   },
-  "stonecutter_panel": {
-    "type": "panel",
-    "offset": [ 0, 0 ],
-    "controls": [
+  "stonecutter_panel@container_common.container_details": {
+    "$screen_controls": [
       {
         "locked_scroll_box@screen_content.scroll_box_image_disabled": {
           "anchor_to": "center",
@@ -123,7 +121,7 @@
                 "layer": 1,
                 "size": [ 176, 166 ],
                 "controls": [
-                  {"common_panel@screen_content.somali": {"$stonecutter_screen": true}},
+                  {"common_panel@screen_content.container_base": {"$stonecutter_screen": true}},
                   {
                     "stonecutter_screen_inventory": {
                       "type": "panel",
@@ -226,15 +224,7 @@
             }
           ]
         }
-      },
-      {"container_gamepad_helpers@common.container_gamepad_helpers": {}},
-      {"selected_item_details_factory@common.selected_item_details_factory": {}},
-      {"item_lock_notification_factory@common.item_lock_notification_factory": {}},
-      {"inventory_selected_icon_button@common.inventory_selected_icon_button": {}},
-      {"inventory_take_progress_icon_button@common.inventory_take_progress_icon_button": {}},
-      {"flying_item_renderer@common.flying_item_renderer": {"layer": 15}},
-      {"bundle_touch_tooltip@gameplay.bundle_touch_tooltip": {}},
-      {"bundle_cursor_tooltip@gameplay.bundle_cursor_tooltip": {}}
+      }
     ]
   }
 }

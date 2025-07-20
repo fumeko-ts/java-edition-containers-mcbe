@@ -262,7 +262,7 @@
   "alpha_tepes_offset_28@base_tepes_offset": {"$itchigo_tepes_offset": 28},
   "max_page_is_28@base_tepes_offset": {
     "$is_in_recipe_inventory|default": false,
-    "$page_content|default": "somali_to_Mori_no_Kamisama.recipe_book",
+    "$page_content|default": "container_base_to_Mori_no_Kamisama.recipe_book",
     "$itchigo_tepes_offset": 1,
     "$max_tepes_offset_furnace": 8
   }

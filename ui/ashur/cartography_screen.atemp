@@ -1,15 +1,5 @@
 {
   "namespace": "cartography_screen",
-  "cartography_label": {
-    "type": "label",
-    "offset": [ -6, -12 ],
-    "anchor_from": "top_left",
-    "anchor_to": "top_left",
-    "text": "$container_title",
-    "$container_title": "Cartography Table",
-    "color": "$title_text_color",
-    "layer": 2
-  },
   "arrow_icon": {"type": "image", "texture": "textures/ui/arrow", "alpha": 0, "size": [ 22, 15 ]},
   "plus_sign_icon": {"type": "image", "texture": "textures/ui/anvil-plus", "alpha": 0, "size": [ 13, 13 ]},
   "cartography_output_slot_button@common.no_coalesce_container_slot_button": {
@@ -181,7 +171,18 @@
     "type": "panel",
     "size": [ 162, "100%cm" ],
     "controls": [
-      {"label@cartography_label": {}},
+      {
+        "cartography_label": {
+          "type": "label",
+          "offset": [ -6, -12 ],
+          "anchor_from": "top_left",
+          "anchor_to": "top_left",
+          "text": "$container_title",
+          "$container_title": "Cartography Table",
+          "color": "$title_text_color",
+          "layer": 2
+        }
+      },
       {
         "input_slots@cartography_screen.input_slots": {"anchor_from": "left_middle", "anchor_to": "left_middle"}
       },
@@ -217,9 +218,7 @@
     "anchor_to": "top_middle",
     "size": [ "100% - 12px", "100% - 90px" ],
     "controls": [
-      {"padding1": {"type": "panel", "size": [ "100%", 6 ]}},
-      {"padding2": {"type": "panel", "size": [ "100%", 4 ]}},
-      {"padding3": {"type": "panel", "size": [ "100%", 4 ]}},
+      {"padding2": {"type": "panel", "size": [ "100%", 14 ]}},
       {"padding4": {"type": "panel", "size": [ "100%", "fill" ]}},
       {
         "main_panel_wrap": {
@@ -234,41 +233,18 @@
       {"padding5": {"type": "panel", "size": [ "100%", "fill" ]}}
     ]
   },
-  "cartography_panel": {
+  "cartography_panel@container_common.container_details": {
     "type": "panel",
-    "controls": [
-      {"container_gamepad_helpers@common.container_gamepad_helpers": {}},
-      {"selected_item_details_factory@common.selected_item_details_factory": {}},
-      {"item_lock_notification_factory@common.item_lock_notification_factory": {}},
+    "size": [ 176, 220 ],
+    "layer": 2,
+    "$screen_controls": [
+      {"common_panel@screen_content.container_base": {"$cartography_screen": true}},
+      {"top_half_panel@cartography_screen.top_half_panel": {"offset": [ 7, 4.6 ]}},
       {
-        "empty_panel@common.empty_panel": {
-          "size": [ "100% - 44px", "100%" ],
-          "max_size": [ 176, 220 ],
-          "layer": 1,
-          "controls": [
-            {"common_panel@screen_content.somali": {"$cartography_screen": true}},
-            {
-              "cartography_screen_inventory": {
-                "type": "panel",
-                "layer": 2,
-                "controls": [
-                  {"top_half_panel@cartography_screen.top_half_panel": {"offset": [ 7, 4.6 ]}},
-                  {
-                    "inventory_panel_bottom_half_with_label@common.inventory_panel_bottom_half_with_label": {"offset": [ 0, -27 ]}
-                  },
-                  {"hotbar_grid@common.hotbar_grid_template": {"offset": [ 0, -31 ]}},
-                  {"inventory_take_progress_icon_button@common.inventory_take_progress_icon_button": {}}
-                ]
-              }
-            },
-            {"inventory_selected_icon_button@common.inventory_selected_icon_button": {}},
-            {"gamepad_cursor@common.gamepad_cursor_button": {}}
-          ]
-        }
+        "inventory_panel_bottom_half_with_label@common.inventory_panel_bottom_half_with_label": {"offset": [ 0, -27 ]}
       },
-      {"flying_item_renderer@common.flying_item_renderer": {"layer": 15}},
-      {"bundle_touch_tooltip@gameplay.bundle_touch_tooltip": {}},
-      {"bundle_cursor_tooltip@gameplay.bundle_cursor_tooltip": {}}
+      {"hotbar_grid@common.hotbar_grid_template": {"offset": [ 0, -31 ]}},
+      {"inventory_take_progress_icon_button@common.inventory_take_progress_icon_button": {}}
     ]
   }
 }

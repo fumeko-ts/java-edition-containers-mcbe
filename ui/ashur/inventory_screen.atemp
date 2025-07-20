@@ -73,7 +73,7 @@
   "inventory@global.root_panel": {
     "size": [ 176, 166 ],
     "controls": [
-      {"container@screen_content.somali": {"$inventory_screen": true, "contained": true}},
+      {"container@screen_content.container_base": {"$inventory_screen": true, "contained": true}},
       {
         "inventory_crafting_stack": {
           "type": "panel",

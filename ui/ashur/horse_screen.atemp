@@ -168,33 +168,22 @@
       }
     ]
   },
-  "horse_panel": {
+  "horse_panel@container_common.container_details": {
     "type": "panel",
-    "controls": [
-      {"container_gamepad_helpers@common.container_gamepad_helpers": {}},
-      {"selected_item_details_factory@common.selected_item_details_factory": {}},
-      {"item_lock_notification_factory@common.item_lock_notification_factory": {}},
+    "layer": 1,
+    "size": [ 176, 166 ],
+    "anchor_from": "center",
+    "anchor_to": "center",
+    "$screen_controls": [
+      {"common_panel@screen_content.container_base": {"$horse_screen": true}},
+      {"horse_section_label@horse_screen.horse_label": {}},
+      {"inv_panel@horse_screen.inv_panel": {}},
+      {"equipment@horse_screen.equip_panel": {"offset": [ 7, 18 ]}},
+      {"renderer@horse_screen.horse_renderer": {"offset": [ 25, 18 ]}},
       {
-        "root_panel@common.root_panel": {
-          "layer": 1,
-          "controls": [
-            {"common_panel@screen_content.somali": {"$horse_screen": true}},
-            {"horse_section_label@horse_screen.horse_label": {}},
-            {"inv_panel@horse_screen.inv_panel": {}},
-            {"equipment@horse_screen.equip_panel": {"offset": [ 7, 18 ]}},
-            {"renderer@horse_screen.horse_renderer": {"offset": [ 25, 18 ]}},
-            {
-              "inventory_panel_bottom_half_with_label@common.inventory_panel_bottom_half_with_label": {"offset": [ 0, -3 ]}
-            },
-            {"hotbar_grid_template@common.hotbar_grid_template": {"offset": [ 0, -7 ]}},
-            {"inventory_selected_icon_button@common.inventory_selected_icon_button": {}},
-            {"gamepad_cursor@common.gamepad_cursor_button": {}}
-          ]
-        }
+        "inventory_panel_bottom_half_with_label@common.inventory_panel_bottom_half_with_label": {"offset": [ 0, -3 ]}
       },
-      {"flying_item_renderer@common.flying_item_renderer": {"layer": 10}},
-      {"bundle_touch_tooltip@gameplay.bundle_touch_tooltip": {}},
-      {"bundle_cursor_tooltip@gameplay.bundle_cursor_tooltip": {}}
+      {"hotbar_grid_template@common.hotbar_grid_template": {"offset": [ 0, -7 ]}}
     ]
   }
 }

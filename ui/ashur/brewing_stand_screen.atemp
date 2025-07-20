@@ -5,190 +5,172 @@
     "$cell_overlay_ref": "global.empty_image",
     "$item_collection_name": "brewing_result_items"
   },
-  "brewing_panel": {
+  "brewing_panel@container_common.container_details": {
     "type": "panel",
-    "controls": [
-      {"container_gamepad_helpers@common.container_gamepad_helpers": {}},
-      {"selected_item_details_factory@common.selected_item_details_factory": {}},
-      {"item_lock_notification_factory@common.item_lock_notification_factory": {}},
+    "layer": 5,
+    "size": [ 176, 166 ],
+    "anchor_from": "center",
+    "anchor_to": "center",
+    "$screen_controls": [
+      {"common_panel@screen_content.container_base": {"$brewing_stand_screen": true}},
       {
-        "root_panel@common.root_panel": {
-          "layer": 1,
+        "brewing_panel_top_half": {
+          "type": "panel",
+          "size": [ "100%", "50% - 12px" ],
+          "offset": [ 0, 7 ],
+          "anchor_to": "top_middle",
+          "anchor_from": "top_middle",
           "controls": [
-            {"common_panel@screen_content.somali": {"$brewing_stand_screen": true}},
             {
-              "brewing_misc": {
+              "brewing_label": {
+                "type": "label",
+                "offset": [ 0, 1 ],
+                "anchor_from": "top_middle",
+                "anchor_to": "top_middle",
+                "text": "$container_title",
+                "color": "$title_text_color",
+                "layer": 2
+              }
+            },
+            {
+              "brewing_stand_pictogram": {
                 "type": "panel",
-                "layer": 5,
+                "size": [ "40%", "80%" ],
                 "controls": [
                   {
-                    "brewing_panel_top_half": {
+                    "brewing_input_slot": {
                       "type": "panel",
-                      "size": [ "100%", "50% - 12px" ],
-                      "offset": [ 0, 7 ],
-                      "anchor_to": "top_middle",
-                      "anchor_from": "top_middle",
+                      "size": [ 18, 18 ],
+                      "offset": [ -1, -14.2 ],
                       "controls": [
                         {
-                          "brewing_label": {
-                            "type": "label",
-                            "offset": [ 0, 1 ],
-                            "anchor_from": "top_middle",
-                            "anchor_to": "top_middle",
-                            "text": "$container_title",
-                            "color": "$title_text_color",
-                            "layer": 2
+                          "input_grid_item@common.container_item": {
+                            "$item_collection_name": "brewing_input_item",
+                            "$focus_override_left_binding_type": "none",
+                            "$focus_override_left": "brewing_fuel"
                           }
-                        },
+                        }
+                      ]
+                    }
+                  },
+                  {
+                    "brewing_output_slots": {
+                      "type": "grid",
+                      "size": [ 54, 18 ],
+                      "offset": [ -1, 26.6 ],
+                      "grid_dimensions": [ 3, 1 ],
+                      "collection_name": "brewing_result_items",
+                      "controls": [
                         {
-                          "brewing_stand_pictogram": {
+                          "left_offset": {
                             "type": "panel",
-                            "size": [ "40%", "80%" ],
+                            "grid_position": [ 0, 0 ],
                             "controls": [
                               {
-                                "brewing_input_slot": {
-                                  "type": "panel",
-                                  "size": [ 18, 18 ],
-                                  "offset": [ -1, -14.2 ],
-                                  "controls": [
-                                    {
-                                      "input_grid_item@common.container_item": {
-                                        "$item_collection_name": "brewing_input_item",
-                                        "$focus_override_left_binding_type": "none",
-                                        "$focus_override_left": "brewing_fuel"
-                                      }
-                                    }
-                                  ]
-                                }
-                              },
-                              {
-                                "brewing_output_slots": {
-                                  "type": "grid",
-                                  "size": [ 54, 18 ],
-                                  "offset": [ -1, 26.6 ],
-                                  "grid_dimensions": [ 3, 1 ],
-                                  "collection_name": "brewing_result_items",
-                                  "controls": [
-                                    {
-                                      "left_offset": {
-                                        "type": "panel",
-                                        "grid_position": [ 0, 0 ],
-                                        "controls": [
-                                          {
-                                            "output_grid_item1@brewing_stand_screen.brewingstand_output_item": {
-                                              "offset": [ -5, -7 ],
-                                              "$focus_override_left_binding_type": "none",
-                                              "$focus_override_left": "brewing_fuel"
-                                            }
-                                          }
-                                        ]
-                                      }
-                                    },
-                                    {"output_grid_item2@brewing_stand_screen.brewingstand_output_item": {"grid_position": [ 1, 0 ]}},
-                                    {
-                                      "right_offset": {
-                                        "type": "panel",
-                                        "grid_position": [ 2, 0 ],
-                                        "controls": [
-                                          {"output_grid_item3@brewing_stand_screen.brewingstand_output_item": {"offset": [ 5, -7 ]}}
-                                        ]
-                                      }
-                                    }
-                                  ]
-                                }
-                              },
-                              {
-                                "brewing_fuel_slot": {
-                                  "type": "panel",
-                                  "size": [ 18, 18 ],
-                                  "offset": [ -62.8, -14.2 ],
-                                  "controls": [
-                                    {
-                                      "fuel_grid_item@common.container_item": {
-                                        "$cell_overlay_ref": "global.empty_image",
-                                        "$item_collection_name": "brewing_fuel_item",
-                                        "$focus_id_binding_type": "none",
-                                        "$focus_id": "brewing_fuel",
-                                        "$focus_override_right_binding_type": "none",
-                                        "$focus_override_right": "brewing_input_item0"
-                                      }
-                                    }
-                                  ]
-                                }
-                              },
-                              {
-                                "brewing_arrow_full_image": {
-                                  "type": "image",
-                                  "layer": 3,
-                                  "texture": "assets/minecraft/textures/gui/sprites/container/brewing_stand/brew_progress.png",
-                                  "anchor_from": "center",
-                                  "anchor_to": "center",
-                                  "offset": [ 13.8, -9.4 ],
-                                  "size": [ 9, 28 ],
-                                  "clip_direction": "up",
-                                  "bindings": [
-                                    {
-                                      "binding_name": "#brewing_arrow_ratio",
-                                      "binding_name_override": "#clip_ratio",
-                                      "binding_condition": "always"
-                                    }
-                                  ]
-                                }
-                              },
-                              {
-                                "brewing_fuel_bar_full_image": {
-                                  "type": "image",
-                                  "layer": 3,
-                                  "texture": "assets/minecraft/textures/gui/sprites/container/brewing_stand/fuel_length.png",
-                                  "anchor_from": "center",
-                                  "anchor_to": "center",
-                                  "offset": [ -19, 6.8 ],
-                                  "size": [ 18, 4 ],
-                                  "clip_direction": "left",
-                                  "bindings": [
-                                    {
-                                      "binding_name": "#brewing_fuel_ratio",
-                                      "binding_name_override": "#clip_ratio",
-                                      "binding_condition": "always"
-                                    }
-                                  ]
-                                }
-                              },
-                              {
-                                "bubbles_full_image": {
-                                  "type": "image",
-                                  "texture": "assets/minecraft/textures/gui/sprites/container/brewing_stand/bubbles.png",
-                                  "layer": 3,
-                                  "offset": [ -19, -11 ],
-                                  "size": [ 12, 29 ],
-                                  "clip_direction": "down",
-                                  "bindings": [
-                                    {
-                                      "binding_name": "#brewing_bubbles_ratio",
-                                      "binding_name_override": "#clip_ratio",
-                                      "binding_condition": "always"
-                                    }
-                                  ]
+                                "output_grid_item1@brewing_stand_screen.brewingstand_output_item": {
+                                  "offset": [ -5, -7 ],
+                                  "$focus_override_left_binding_type": "none",
+                                  "$focus_override_left": "brewing_fuel"
                                 }
                               }
+                            ]
+                          }
+                        },
+                        {"output_grid_item2@brewing_stand_screen.brewingstand_output_item": {"grid_position": [ 1, 0 ]}},
+                        {
+                          "right_offset": {
+                            "type": "panel",
+                            "grid_position": [ 2, 0 ],
+                            "controls": [
+                              {"output_grid_item3@brewing_stand_screen.brewingstand_output_item": {"offset": [ 5, -7 ]}}
                             ]
                           }
                         }
                       ]
                     }
                   },
-                  {"inventory_panel_bottom_half_with_label@common.inventory_panel_bottom_half_with_label": {}},
-                  {"hotbar_grid@global.hotbar": {}},
-                  {"inventory_take_progress_icon_button@common.inventory_take_progress_icon_button": {}}
+                  {
+                    "brewing_fuel_slot": {
+                      "type": "panel",
+                      "size": [ 18, 18 ],
+                      "offset": [ -62.8, -14.2 ],
+                      "controls": [
+                        {
+                          "fuel_grid_item@common.container_item": {
+                            "$cell_overlay_ref": "global.empty_image",
+                            "$item_collection_name": "brewing_fuel_item",
+                            "$focus_id_binding_type": "none",
+                            "$focus_id": "brewing_fuel",
+                            "$focus_override_right_binding_type": "none",
+                            "$focus_override_right": "brewing_input_item0"
+                          }
+                        }
+                      ]
+                    }
+                  },
+                  {
+                    "brewing_arrow_full_image": {
+                      "type": "image",
+                      "layer": 3,
+                      "texture": "assets/minecraft/textures/gui/sprites/container/brewing_stand/brew_progress.png",
+                      "anchor_from": "center",
+                      "anchor_to": "center",
+                      "offset": [ 13.8, -9.4 ],
+                      "size": [ 9, 28 ],
+                      "clip_direction": "up",
+                      "bindings": [
+                        {
+                          "binding_name": "#brewing_arrow_ratio",
+                          "binding_name_override": "#clip_ratio",
+                          "binding_condition": "always"
+                        }
+                      ]
+                    }
+                  },
+                  {
+                    "brewing_fuel_bar_full_image": {
+                      "type": "image",
+                      "layer": 3,
+                      "texture": "assets/minecraft/textures/gui/sprites/container/brewing_stand/fuel_length.png",
+                      "anchor_from": "center",
+                      "anchor_to": "center",
+                      "offset": [ -19, 6.8 ],
+                      "size": [ 18, 4 ],
+                      "clip_direction": "left",
+                      "bindings": [
+                        {
+                          "binding_name": "#brewing_fuel_ratio",
+                          "binding_name_override": "#clip_ratio",
+                          "binding_condition": "always"
+                        }
+                      ]
+                    }
+                  },
+                  {
+                    "bubbles_full_image": {
+                      "type": "image",
+                      "texture": "assets/minecraft/textures/gui/sprites/container/brewing_stand/bubbles.png",
+                      "layer": 3,
+                      "offset": [ -19, -11 ],
+                      "size": [ 12, 29 ],
+                      "clip_direction": "down",
+                      "bindings": [
+                        {
+                          "binding_name": "#brewing_bubbles_ratio",
+                          "binding_name_override": "#clip_ratio",
+                          "binding_condition": "always"
+                        }
+                      ]
+                    }
+                  }
                 ]
               }
-            },
-            {"inventory_selected_icon_button@common.inventory_selected_icon_button": {}},
-            {"gamepad_cursor@common.gamepad_cursor_button": {}}
+            }
           ]
         }
       },
-      {"flying_item_renderer@common.flying_item_renderer": {"layer": 15}}
+      {"inventory_panel_bottom_half_with_label@common.inventory_panel_bottom_half_with_label": {}},
+      {"hotbar_grid@global.hotbar": {}}
     ]
   }
 }
