@@ -35,6 +35,7 @@
     "ui/ashur/-common/templates/text_edit_box/text_edit_box.atemp",
     "ui/ashur/-common/templates/toggles/cell_template.atemp",
     "ui/ashur/-common/templates/toggles/toggle.atemp",
+    "ui/ashur/-common/templates/bars/common_bars.atemp",
     "ui/ashur/crafting/crafting_screen.atemp",
     "ui/ashur/crafting/creative_inventory.atemp",
     "ui/ashur/crafting/inventory_screen.atemp",

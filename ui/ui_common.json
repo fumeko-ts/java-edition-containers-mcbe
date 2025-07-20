@@ -1,21 +1,13 @@
 {
   "namespace": "common",
-  "pocket_ui_container_slot/hover":{
+  "pocket_ui_container_slot/hover": {
     "type": "panel",
     "controls": [
-       {
-        "highlight@common.highlight_slot":{}
-       }
+      {"highlight@common.highlight_slot": {}}
     ],
     "visible": false,
-    "bindings": [ 
-      {
-        "binding_name": "#show_hovered_selected_inventory_slot", 
-        "binding_name_override": "#visible"
-      } 
-    ]
+    "bindings": [ {"binding_name": "#show_hovered_selected_inventory_slot", "binding_name_override": "#visible"} ]
   },
-
   "slot_selected": {"ignored": true},
   "highlight_slot_panel": {
     "type": "panel",
@@ -55,26 +47,6 @@
     "$white_highlight_slot_offset|default": [ 0, 0 ],
     "$white_highlight_slot_size|default": [ 16, 16 ],
     "alpha": 0.45
-  },
-  "screen_background": {"type": "image", "texture": "textures/ui/screen_background", "layer": -1000, "alpha": 0.7},
-  "screen_panel": {
-    "type": "panel",
-    "size": [ "100%", "fill" ],
-    "controls": [
-      {"screen_namespace_or_refrence_is_incorrect@$screen_content": {}},
-      {"additional_screen_content@$additional_screen_content": {}},
-      {
-        "popup_dialog_factory": {
-          "type": "factory",
-          "control_ids": {
-            "modal_dialog_popup": "@popup_dialog.modal_dialog_popup",
-            "storage_dependency_popup": "@storage_management_popup.storage_dependency_modal",
-            "storage_sharing_popup": "@storage_management_popup.sharing_popup_content"
-          }
-        }
-      },
-      {"bundle_hover_tooltip@common.bundle_tooltip_wrapper": {}}
-    ]
   },
   "container_slot_button_prototype": {
     "type": "button",

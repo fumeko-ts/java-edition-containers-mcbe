@@ -1,37 +1,125 @@
- {
-  "crafting_screen@crafting.inventory_screen_repl" : {"$is_crafting_table|default": true},
+{
+  "crafting_screen@crafting.inventory_screen_repl": {"$is_crafting_table|default": true},
   "inventory_screen@crafting.inventory_screen_repl": {"$is_crafting_table|default": false},
-  // i forgot what i was going to say so you will just need to theorise
-  "inventory_screen_repl@crafting.inventory_screen_base":{
+  "inventory_screen_repl@global.inventory_screen_common": {
     "$screen_content": "crafting.crafting_screens",
-    "cache_screen": true,
-    "send_telemetry": false,
-    "load_screen_immediately": true,
-    "low_frequency_rendering": true,
-    "render_game_behind": true,
-    "force_render_below": true,
-    "absorbs_input": true,
-    "is_showing_menu": true,
-    "$uses_bundle_tooltip": true,
-    "$screen_bg_content": "common.screen_background",
-    "close_on_player_hurt": false
-  },
-  "crafting_screens@global.empty_panel":{
-     "$current_screen|default": "",
-     "variables": [
-        {
-          "requires": "($is_crafting_table = true)",
-          "$current_screen|default": "crafting_screen.screen_base"
-        },
-        {
-          "requires": "($is_crafting_table = false)",
-          "$current_screen|default": "inventory_screen.screen_base"
-        }
-     ],
-     "controls": [
+    "button_mappings": [
       {
-        "screen@$current_screen":{}
+        "from_button_id": "button.menu_cancel",
+        "to_button_id": "button.menu_exit",
+        "mapping_type": "global"
       },
+      {
+        "from_button_id": "button.menu_inventory_cancel",
+        "to_button_id": "button.menu_exit",
+        "mapping_type": "global"
+      },
+      {
+        "from_button_id": "button.menu_up",
+        "to_button_id": "button.menu_up",
+        "mapping_type": "global",
+        "scope": "view"
+      },
+      {
+        "from_button_id": "button.menu_down",
+        "to_button_id": "button.menu_down",
+        "mapping_type": "global",
+        "scope": "view"
+      },
+      {
+        "from_button_id": "button.menu_left",
+        "to_button_id": "button.menu_left",
+        "mapping_type": "global",
+        "scope": "view"
+      },
+      {
+        "from_button_id": "button.menu_right",
+        "to_button_id": "button.menu_right",
+        "mapping_type": "global",
+        "scope": "view"
+      },
+      {
+        "from_button_id": "button.menu_select",
+        "to_button_id": "button.cursor_drop_all",
+        "mapping_type": "pressed"
+      },
+      {
+        "from_button_id": "button.menu_secondary_select",
+        "to_button_id": "button.cursor_drop_one",
+        "mapping_type": "pressed"
+      },
+      {
+        "from_button_id": "button.menu_ok",
+        "to_button_id": "button.cursor_drop_all",
+        "mapping_type": "pressed"
+      },
+      {
+        "from_button_id": "button.controller_back",
+        "to_button_id": "button.cursor_drop_all",
+        "mapping_type": "pressed",
+        "ignored": "(not $is_ps4)"
+      },
+      {
+        "from_button_id": "button.controller_select",
+        "to_button_id": "button.clear_hotbar_or_drop",
+        "mapping_type": "pressed"
+      },
+      {
+        "from_button_id": "button.controller_secondary_select",
+        "to_button_id": "button.cursor_drop_all",
+        "mapping_type": "pressed"
+      },
+      {
+        "from_button_id": "button.menu_clear",
+        "to_button_id": "button.menu_clear",
+        "mapping_type": "focused"
+      },
+      {
+        "from_button_id": "button.menu_tab_left",
+        "to_button_id": "button.left_panel_tab_decrement",
+        "mapping_type": "global"
+      },
+      {
+        "from_button_id": "button.menu_tab_right",
+        "to_button_id": "button.left_panel_tab_increment",
+        "mapping_type": "global"
+      },
+      {
+        "from_button_id": "button.menu_alternate_tab_left",
+        "to_button_id": "button.layout_increment",
+        "mapping_type": "global"
+      },
+      {
+        "from_button_id": "button.menu_alternate_tab_right",
+        "to_button_id": "button.layout_decrement",
+        "mapping_type": "global"
+      },
+      {
+        "from_button_id": "button.controller_secondary_select_left",
+        "to_button_id": "button.shift_pane_focus",
+        "mapping_type": "global"
+      },
+      {
+        "from_button_id": "button.controller_secondary_select_right",
+        "to_button_id": "button.clear_selected_recipe",
+        "mapping_type": "global"
+      }
+    ]
+  },
+  "crafting_screens@global.empty_panel": {
+    "$current_screen|default": "",
+    "variables": [
+      {
+        "requires": "($is_crafting_table = true)",
+        "$current_screen|default": "crafting_screen.screen_base"
+      },
+      {
+        "requires": "($is_crafting_table = false)",
+        "$current_screen|default": "inventory_screen.screen_base"
+      }
+    ],
+    "controls": [
+      {"screen@$current_screen": {}},
       {"selected_item_details_factory@common.selected_item_details_factory": {}},
       {"item_lock_notification_factory@common.item_lock_notification_factory": {}},
       {"inventory_take_progress_icon_button@common.inventory_take_progress_icon_button": {}},

@@ -1,33 +1,18 @@
 {
   "namespace": "furnace",
   "furnace_screen@global.inventory_screen_common": {
-    "send_telemetry": false,
-    "load_screen_immediately": true,
-    "$use_loading_bars": false,
-    "low_frequency_rendering": true,
-    "render_game_behind": true,
-    "force_render_below": true,
-    "absorbs_input": true,
-    "is_showing_menu": true,
-    "close_on_player_hurt": false,
     "$is_blast_furnace|default": false,
     "$is_smoker|default": false,
     "variables": [
       {
         "requires": "($is_blast_furnace = false or $is_smoker = false)",
-        "$screen_content": "furnace_screen.furnace_panel",
-        "$screen_bg_content": "common.screen_background"
+        "$screen_content": "furnace_screen.furnace_panel"
       },
       {
         "requires": "($is_blast_furnace = true)",
-        "$screen_content": "blast_furnace_screen.blast_furnace_panel",
-        "$screen_bg_content": "common.screen_background"
+        "$screen_content": "blast_furnace_screen.blast_furnace_panel"
       },
-      {
-        "requires": "($is_smoker = true)",
-        "$screen_content": "smoker_screen.smoker_panel",
-        "$screen_bg_content": "common.screen_background"
-      }
+      {"requires": "($is_smoker = true)", "$screen_content": "smoker_screen.smoker_panel"}
     ]
   }
 }
