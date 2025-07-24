@@ -30,7 +30,6 @@
     "ui/ashur/-common/container_common.atemp",
     "ui/ashur/-common/crafting_common.atemp",
     "ui/ashur/-common/global.atemp",
-    "ui/ashur/-common/container_items.atemp",
     "ui/ashur/-common/screen_content.atemp",
     "ui/ashur/-common/templates/bars/common_bars.atemp",
     "ui/ashur/-common/templates/container/cell_toggle.atemp",

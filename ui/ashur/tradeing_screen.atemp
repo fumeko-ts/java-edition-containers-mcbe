@@ -75,7 +75,7 @@
     "$default_text_color": "$enchantment_button_default_text_color",
     "bindings": [ {"binding_name": "#enchantment_details_button_visible", "binding_name_override": "#visible"} ]
   },
-  "trade_result_item_slot_button@common.container_slot_button_prototype": {
+  "trade_result_item_slot_button@global.cell_button_prototype": {
     "size": [ 16, 16 ],
     "button_mappings": [
       {

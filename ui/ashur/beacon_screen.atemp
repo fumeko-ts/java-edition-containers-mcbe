@@ -15,14 +15,14 @@
       }
     ]
   },
-  "inventory_slot_button@common.container_slot_button_prototype": {
+  "inventory_slot_button@global.cell_button_prototype": {
     "focus_mapping": [
       {"focus_identifier": "inventory_items8", "focus_change_right": "FOCUS_OVERRIDE_STOP"},
       {"focus_identifier": "inventory_items17", "focus_change_right": "FOCUS_OVERRIDE_STOP"},
       {"focus_identifier": "inventory_items26", "focus_change_right": "FOCUS_OVERRIDE_STOP"}
     ]
   },
-  "hotbar_slot_button@common.container_slot_button_prototype": {
+  "hotbar_slot_button@global.cell_button_prototype": {
     "focus_mapping": [ {"focus_identifier": "hotbar_items8", "focus_change_right": "FOCUS_OVERRIDE_STOP"} ]
   },
   "image_atlas": {"type": "image"},

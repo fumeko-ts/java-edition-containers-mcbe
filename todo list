@@ -14,24 +14,11 @@
 - Nature: 4
 - Redstone: 15
 
----
-
-## Bugs to Fix
-- Fix durability bug
-- Fix bundle bug
-
----
 
 ## UI Files Review
 
 **loom_screen.atemp** (lines 1–20):  
 - Rename padding panels for clarity and reuse.
-
-**creative_inventory.atemp** (lines 1–30):  
-- Standardize tab/panel naming and add comments for bindings.
-
-**inventory_screen.atemp** (lines 1–40):  
-- Flatten nested panels where possible for readability.
 
 **tradeing_screen.atemp** (lines 1–20):  
 - Rename to trading_screen.atemp and document button mapping logic.
@@ -44,9 +31,6 @@
 
 **stonecutter_screen.atemp** (lines 1–25):  
 - Document grid binding logic and check dynamic sizing.
-
-**hopper_screen.atemp** (lines 1–20):  
-- Allow for dynamic grid sizing and review panel structure.
 
 **cartography_screen.atemp** (lines 1–40):  
 - Centralize button mappings and add comments.

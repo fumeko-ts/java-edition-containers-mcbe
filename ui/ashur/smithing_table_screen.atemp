@@ -155,7 +155,7 @@
       }
     ]
   },
-  "smithing_table_output_slot_button@common.container_slot_button_prototype": {
+  "smithing_table_output_slot_button@global.cell_button_prototype": {
     "button_mappings": [
       {
         "from_button_id": "button.menu_select",

@@ -85,7 +85,7 @@
     "offset": [ 21, 4 ],
     "bindings": [ {"binding_name": "#cross_out_icon", "binding_name_override": "#visible"} ]
   },
-  "anvil_output_slot_button@common.container_slot_button_prototype": {
+  "anvil_output_slot_button@global.cell_button_prototype": {
     "button_mappings": [
       {
         "from_button_id": "button.menu_select",

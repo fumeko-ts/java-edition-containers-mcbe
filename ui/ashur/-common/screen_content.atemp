@@ -33,24 +33,7 @@
       {"requires": "($inventory_screen = true)", "$container|default": "inventory"}
     ],
     "controls": [
-      {
-        "compact_close@common.close_button": {
-          "layer": 20,
-          "size": [ 14, 14 ],
-          "anchor_to": "top_right",
-          "anchor_from": "top_right",
-          "offset": [ -1, 1 ],
-          "$close_button_panel_size|default": [ 14, 14 ],
-          "controls": [
-            {"default@global.close_button_panel": {"$close_button_texture": "textures/atemp/close_button.png"}},
-            {
-              "hover@global.close_button_panel": {"$close_button_texture": "textures/atemp/close_button_hover.png"}
-            },
-            {"pressed@global.close_button_panel": {"$close_button_texture": "textures/atemp/close_button.png"}}
-          ],
-          "ignored": "($Exit_panel_enabled = false)"
-        }
-      },
+      {"close@global.close_button": {}},
       {"all_misc@$container": {}}
     ]
   },
@@ -124,6 +107,14 @@
   "armor_overlay_legs@crafting.armor_overlay": {"alpha": 0.6, "texture": "textures/ui/empty_armor_slot_leggings"},
   "armor_image_feet@crafting.armor_overlay": {"alpha": 0.6, "texture": "textures/ui/empty_armor_slot_boots"},
   "armor_overlay_shield@crafting.offhand_overlay": {"alpha": 0.6, "texture": "textures/ui/empty_armor_slot_shield"},
+  "crafter_disabled_slot@screen_content.image_element":{
+    "size": [18, 18],
+    "nineslice_size": 1,
+    "offset": [1, 1],
+    "texture": "assets/minecraft/textures/gui/sprites/container/crafter/disabled_slot"
+  },
+
+  "redstone_activated_bindings@screen_content.image_element":{"size": [16, 16],"layer": 12,"texture": "$arrow_texture"},
   "scroll_box_image@global.empty_panel": {
     "size": [ "100% - 2px", "100% - 2px" ],
     "offset": "$misc_scroller_offset",

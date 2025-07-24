@@ -1,249 +1,219 @@
 {
   "namespace": "crafter_screen",
-  "crafter_label": {
-    "type": "label",
-    "offset": [ -0.4, 9.4 ],
-    "anchor_from": "top_middle",
-    "anchor_to": "top_middle",
-    "text": "$container_title",
-    "$container_title": "Crafter",
-    "color": "$title_text_color",
-    "layer": 2
-  },
-  "crafter_input_grid": {
-    "type": "grid",
-    "anchor_from": "center",
-    "anchor_to": "center",
-    "offset": [ 0, 0 ],
-    "grid_dimensions": [ 3, 3 ],
-    "collection_name": "container_items",
-    "grid_item_template": "crafter_screen.crafter_enabled_slot_template",
-    "$item_collection_name": "container_items"
-  },
-  "crafter_container_slot_button_prototype@common.container_slot_button_prototype": {"$highlight_control|default": "crafter_screen.crafter_highlight_slot_panel"},
-  "crafter_highlight_slot_panel": {
-    "type": "panel",
-    "controls": [
+  "panel_crafter@container_common.container_details": {
+    "layer": 1,
+    "size": [176, 166],
+    "$screen_controls": [
+      { "base_panel@screen_content.container_base": {"$crafter_screen": true} },
       {
-        "highlight@common.highlight_slot": {
+        "main_vertical_stack@global.empty_stack_panel": {
+          "orientation": "vertical",
+          "size": [176, 70],
+          "anchor_to": "top_middle",
+          "anchor_from": "top_middle",
           "controls": [
+            {"vertical_filler_top@global.empty_panel": { "size": ["fill", 6]}},
             {
-              "hover_text@common.hover_text": {
-                "layer": 29,
-                "$hover_text_binding_name|default": "#hover_text",
-                "bindings": [
+              "title_row_stack@global.empty_stack_panel": {
+                "orientation": "horizontal",
+                "size": [176, 7],
+                "controls": [
+                  {"left_filler@global.empty_panel": { "size": [68, "fill"]}},
                   {
-                    "binding_name": "$hover_text_binding_name",
-                    "binding_name_override": "#hover_text",
-                    "binding_type": "collection",
-                    "binding_collection_name": "$item_collection_name"
+                    "crafter_title_label": {
+                      "type" : "label",
+                      "text" : "$container_title",
+                      "color": "$title_text_color"
+                    }
+                  },
+                  {"right_filler@global.empty_panel": { "size": [70, "fill"]}}
+                ]
+              }
+            },
+            {"vertical_filler_between@global.empty_panel": { "size": ["fill", 3]}},
+            {
+              "input_and_output_row@global.empty_stack_panel": {
+                "orientation": "horizontal",
+                "size": [176, 54],
+                "controls": [
+                  {"input_left_filler@global.empty_panel": { "size": [25, "fill"]}},
+                  {"input_grid@crafter_screen.input_panel_holder": {}},
+                  {
+                    "redstone_detector_stack@global.empty_stack_panel": {
+                      "orientation": "horizontal",
+                      "size": [54, 54],
+                      "controls": [
+                        {"redstone_filler@global.empty_panel": { "size": [18, "fill"]}},
+                        {
+                          "redstone_arrow_stack@global.empty_stack_panel": {
+                            "orientation": "vertical",
+                            "size": [16, 54],
+                            "controls": [
+                              {"top_filler@global.empty_panel": { "size": ["fill", 19]}},
+                              {"arrow@crafter_screen.redstone_detector": {}},
+                              {"bottom_filler@global.empty_panel": { "size": ["fill", 19]}}
+                            ]
+                          }
+                        }
+                      ]
+                    }
+                  },
+                  {
+                    "output_stack@global.empty_stack_panel": {
+                      "orientation": "horizontal",
+                      "size": [43, 54],
+                      "controls": [
+                        {
+                          "output_vertical_stack@global.empty_stack_panel": {
+                            "orientation": "vertical",
+                            "size": [18, 54],
+                            "controls": [
+                              {"output_top_filler@global.empty_panel": { "size": ["fill", 18]}},
+                              {"crafter_output@crafter_screen.crafter_output_button": {}},
+                              {"output_bottom_filler@global.empty_panel": { "size": ["fill", 18]}}
+                            ]
+                          }
+                        },
+                        {"output_right_filler@global.empty_panel": { "size": [25, "fill"]}}
+                      ]
+                    }
                   }
                 ]
               }
             }
-          ],
-          "bindings": [ {"binding_name": "#show_persistent_bundle_hover_text", "binding_name_override": "#visible"} ]
-        }
-      }
-    ]
-  },
-  "crafter_enabled_slot_template@common.container_item": {
-    "$background_images|default": "global.empty_image",
-    "$button_ref|default": "crafter_screen.crafter_container_slot_button_prototype"
-  },
-  "crafter_disabled_slot@common.button": {
-    "type": "button",
-    "anchor_from": "center",
-    "anchor_to": "center",
-    "hover_control": "hover",
-    "size": [ 18, 18 ],
-    "layer": 20,
-    "controls": [
-      {
-        "default": {
-          "type": "image",
-          "texture": "assets/minecraft/textures/gui/sprites/container/crafter/disabled_slot"
-        }
-      },
-      {
-        "hover": {
-          "type": "image",
-          "texture": "assets/minecraft/textures/gui/sprites/container/crafter/disabled_slot",
-          "controls": [
-            {"highlight@common.highlight_slot": {}}
           ]
         }
       },
       {
-        "pressed": {
-          "type": "image",
-          "texture": "assets/minecraft/textures/gui/sprites/container/crafter/disabled_slot"
+        "bottom@crafting_screen.inventory_bottom_half_with_label": {
+          "anchor_to"  : "bottom_middle",
+          "anchor_from": "bottom_middle"
         }
       }
     ]
   },
-  "output_slot_hover_info": {
-    "type": "button",
-    "layer": 1,
-    "anchor_from": "center",
-    "anchor_to": "center",
-    "hover_control": "hover",
-    "size": [ 18, 18 ],
-    "offset": [ 54, -36 ],
-    "$stack_count_required": true,
+  "input_panel_holder": {
+    "type": "input_panel",
+    "contained": true,
+    "size": [54, 54],
+    "layer": 5,
     "controls": [
       {
-        "hover@common.hover_text": {
-          "layer": 29,
-          "bindings": [ {"binding_name": "#crafting_preview_info", "binding_name_override": "#hover_text"} ]
+        "disabled_buttons_grid": {
+          "type": "grid",
+          "layer": 5,
+          "size": [54, 54],
+          "grid_dimensions": [3, 3],
+          "offset": [-1, -1],
+          "controls": [
+            {"disabled_button_0@crafter_screen.disabled_button_grid_bindings": {"grid_position": [0, 0],"$crafter_button_index": 0}},
+            {"disabled_button_1@crafter_screen.disabled_button_grid_bindings": {"grid_position": [1, 0],"$crafter_button_index": 1}},
+            {"disabled_button_2@crafter_screen.disabled_button_grid_bindings": {"grid_position": [2, 0],"$crafter_button_index": 2}},
+            {"disabled_button_3@crafter_screen.disabled_button_grid_bindings": {"grid_position": [0, 1],"$crafter_button_index": 3}},
+            {"disabled_button_4@crafter_screen.disabled_button_grid_bindings": {"grid_position": [1, 1],"$crafter_button_index": 4}},
+            {"disabled_button_5@crafter_screen.disabled_button_grid_bindings": {"grid_position": [2, 1],"$crafter_button_index": 5}},
+            {"disabled_button_6@crafter_screen.disabled_button_grid_bindings": {"grid_position": [0, 2],"$crafter_button_index": 6}},
+            {"disabled_button_7@crafter_screen.disabled_button_grid_bindings": {"grid_position": [1, 2],"$crafter_button_index": 7}},
+            {"disabled_button_8@crafter_screen.disabled_button_grid_bindings": {"grid_position": [2, 2],"$crafter_button_index": 8}}
+          ]
         }
       },
       {
-        "output_slot@common.item_renderer": {
-          "size": [ 16, 16 ],
+        "input_items_grid": {
+          "type": "grid",
+          "layer": 2,
+          "size": [54, 54],
+          "grid_dimensions": [3, 3],
+          "$item_collection_name": "container_items",
+          "$background_images|default": "global.empty_image",
+          "collection_name": "container_items",
+          "grid_item_template": "common.container_item"
+        }
+      }
+    ]
+  },
+  "redstone_detector": {
+    "type": "input_panel",
+    "contained": true,
+    "size": [16, 16],
+    "layer": 2,
+    "controls": [
+      {
+        "redstone_activated@screen_content.redstone_activated_bindings": {
+          "$arrow_texture": "assets/minecraft/textures/gui/sprites/container/crafter/powered_redstone",
+          "bindings": [{
+            "binding_name": "(#redstone_arrow_texture = 'textures/ui/redstone_arrow_powered')",
+            "binding_name_override": "#visible"}
+          ]
+        }
+      },
+      {
+        "redstone_deactivated@screen_content.redstone_activated_bindings": {
+          "$arrow_texture": "assets/minecraft/textures/gui/sprites/container/crafter/unpowered_redstone",
+          "bindings": [{
+            "binding_name": "(#redstone_arrow_texture = 'textures/ui/redstone_arrow_unpowered')",
+            "binding_name_override": "#visible"}
+          ]
+        }
+      }
+    ]
+  },
+  "crafter_output_button": {
+    "type": "button",
+    "hover_control": "hover",
+    "size": [18, 18],
+    "controls": [
+      {"hover@global.hover_text": {"$hover_text": "#crafting_preview_info", "layer": 209} },
+      {
+        "output_item_renderer@common.item_renderer": {
+          "size": [16, 16],
           "bindings": [
-            {"binding_name": "#crafter_output_item", "binding_name_override": "#item_id_aux"},
-            {"binding_name": "#crafter_output_item_color", "binding_name_override": "#item_custom_color"},
+            {"binding_name": "#crafter_output_item","binding_name_override": "#item_id_aux"},
+            {"binding_name": "#crafter_output_item_color","binding_name_override": "#item_custom_color"},
+            {"binding_name": "#crafter_output_item_banner_patterns","binding_name_override": "#banner_patterns"},
+            {"binding_name": "#crafter_output_item_selected_banner_type","binding_name_override": "#banner_type"},
+            {"binding_name": "#crafter_output_item_selected_banner_colors","binding_name_override": "#banner_colors"},
+            {"binding_name": "#crafter_output_item_shield_base_color_hovered","binding_name_override": "#shield_base_color"},
+            {"binding_name": "#crafter_output_item_selected_decorated_pot_sherds","binding_name_override": "#decorated_pot_sherds"}
+          ]
+        }
+      },
+      {
+        "output_stack_count_label@global.stack_count_label": {
+          "layer": 20,
+          "bindings": [
             {
-              "binding_name": "#crafter_output_item_shield_base_color_hovered",
-              "binding_name_override": "#shield_base_color"
-            },
-            {
-              "binding_name": "#crafter_output_item_banner_patterns",
-              "binding_name_override": "#banner_patterns"
-            },
-            {
-              "binding_name": "#crafter_output_item_selected_banner_colors",
-              "binding_name_override": "#banner_colors"
-            },
-            {
-              "binding_name": "#crafter_output_item_selected_banner_type",
-              "binding_name_override": "#banner_type"
-            },
-            {
-              "binding_name": "#crafter_output_item_selected_decorated_pot_sherds",
-              "binding_name_override": "#decorated_pot_sherds"
+              "binding_name"         : "#output_stack_count",
+              "binding_name_override": "#inventory_stack_count"
             }
           ]
         }
-      },
-      {"output_slot_border@global.empty_image": {"size": [ 26, 26 ]}},
+      }
+    ]
+  },
+  "disabled_button_grid_bindings@common.button": {
+    "type": "button",
+    "anchor_from": "center",
+    "anchor_to": "center",
+    "hover_control": "hover",
+    "layer": 20,
+    "size": [18, 18],
+    "$pressed_button_name": "('disabled_button' + $crafter_button_index)",
+    "bindings": [
       {
-        "output_count@common.stack_count_label": {
-          "layer": 20,
-          "size": [ 18, 18 ],
-          "offset": [ 14.1, 11.2 ],
-          "anchor_from": "center",
-          "anchor_to": "center",
-          "bindings": [ {"binding_name": "#output_stack_count", "binding_name_override": "#inventory_stack_count"} ]
+        "binding_name"         : "('#button_visible' + $crafter_button_index)",
+        "binding_name_override": "#visible"
+      }
+    ],
+    "controls": [
+      {"default@screen_content.crafter_disabled_slot": {}},
+      {"pressed@screen_content.crafter_disabled_slot": {}},
+      {
+        "hover@screen_content.crafter_disabled_slot": {
+          "controls": [ {"highlight@screen_content.highlight_slot": {}} ]
         }
       }
     ]
   },
-  "panel_crafter@container_common.container_details": {
-    "layer": 1,
-    "size": [ 176, 166 ],
-    "$screen_controls": [
-      {"common_panel@screen_content.container_base": {"$crafter_screen": true}},
-      {
-        "disabled_slot_0_button@crafter_screen.crafter_disabled_slot": {
-          "offset": [ -53.9, -57.6 ],
-          "$pressed_button_name": "disabled_button0",
-          "bindings": [ {"binding_name": "#button_visible0", "binding_name_override": "#visible"} ]
-        }
-      },
-      {
-        "disabled_slot_1_button@crafter_screen.crafter_disabled_slot": {
-          "offset": [ -36, -57.6 ],
-          "$pressed_button_name": "disabled_button1",
-          "bindings": [ {"binding_name": "#button_visible1", "binding_name_override": "#visible"} ]
-        }
-      },
-      {
-        "disabled_slot_2_button@crafter_screen.crafter_disabled_slot": {
-          "offset": [ -18, -57.6 ],
-          "$pressed_button_name": "disabled_button2",
-          "bindings": [ {"binding_name": "#button_visible2", "binding_name_override": "#visible"} ]
-        }
-      },
-      {
-        "disabled_slot_3_button@crafter_screen.crafter_disabled_slot": {
-          "offset": [ -53.9, -39.6 ],
-          "$pressed_button_name": "disabled_button3",
-          "bindings": [ {"binding_name": "#button_visible3", "binding_name_override": "#visible"} ]
-        }
-      },
-      {
-        "disabled_slot_4_button@crafter_screen.crafter_disabled_slot": {
-          "offset": [ -36, -39.6 ],
-          "$pressed_button_name": "disabled_button4",
-          "bindings": [ {"binding_name": "#button_visible4", "binding_name_override": "#visible"} ]
-        }
-      },
-      {
-        "disabled_slot_5_button@crafter_screen.crafter_disabled_slot": {
-          "offset": [ -18, -39.6 ],
-          "$pressed_button_name": "disabled_button5",
-          "bindings": [ {"binding_name": "#button_visible5", "binding_name_override": "#visible"} ]
-        }
-      },
-      {
-        "disabled_slot_6_button@crafter_screen.crafter_disabled_slot": {
-          "offset": [ -53.9, -21.7 ],
-          "$pressed_button_name": "disabled_button6",
-          "bindings": [ {"binding_name": "#button_visible6", "binding_name_override": "#visible"} ]
-        }
-      },
-      {
-        "disabled_slot_7_button@crafter_screen.crafter_disabled_slot": {
-          "offset": [ -36, -21.7 ],
-          "$pressed_button_name": "disabled_button7",
-          "bindings": [ {"binding_name": "#button_visible7", "binding_name_override": "#visible"} ]
-        }
-      },
-      {
-        "disabled_slot_8_button@crafter_screen.crafter_disabled_slot": {
-          "offset": [ -18, -21.7 ],
-          "$pressed_button_name": "disabled_button8",
-          "bindings": [ {"binding_name": "#button_visible8", "binding_name_override": "#visible"} ]
-        }
-      },
-      {
-        "redstone_screen_inventory": {
-          "type": "panel",
-          "layer": 5,
-          "offset": [ 0, -4 ],
-          "controls": [
-            {"crafter_label@crafter_screen.crafter_label": {}},
-            {
-              "crafting_grid": {
-                "type": "panel",
-                "size": [ "100%", "50% - 12px" ],
-                "offset": [ -36, 12 ],
-                "anchor_to": "top_left",
-                "anchor_from": "top_left",
-                "controls": [
-                  {"crafter_input_grid@crafter_screen.crafter_input_grid": {}}
-                ]
-              }
-            },
-            {"red_bottom_half@common.inventory_panel_bottom_half_with_label": {"offset": [ 0, 1.4 ]}},
-            {"hotbar_grid@common.hotbar_grid_template": {"offset": [ 0, -2.4 ]}},
-            {
-              "redstone_wire_line": {
-                "type": "image",
-                "layer": 3,
-                "size": [ 18, 18 ],
-                "anchor_from": "top_left",
-                "anchor_to": "top_left",
-                "offset": [ 95, 38 ],
-                "bindings": [ {"binding_name": "#redstone_arrow_texture", "binding_name_override": "#texture"} ]
-              }
-            },
-            {"crafter_output@crafter_screen.output_slot_hover_info": {}}
-          ]
-        }
-      }
-    ]
-  }
+  "crafter_input_item@common.container_item": { "size": [18, 18]}
 }

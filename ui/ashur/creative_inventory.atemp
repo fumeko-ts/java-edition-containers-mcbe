@@ -221,6 +221,7 @@
           "anchor_to": "center",
           "anchor_from": "center",
           "controls": [
+      {"close@global.close_button": {}},
             {
               "inventory_top_half_creative@global.empty_stack_panel": {
                 "orientation": "vertical",
@@ -277,6 +278,7 @@
           "anchor_from": "center",
           "size": [ 195, 136 ],
           "controls": [
+      {"close@global.close_button": {}},
             {
               "stack_1@global.empty_stack_panel": {
                 "orientation": "horizontal",
@@ -341,6 +343,7 @@
           "anchor_from": "center",
           "size": [ 195, 136 ],
           "controls": [
+      {"close@global.close_button": {}},
             {
               "stack_1@global.empty_stack_panel": {
                 "orientation": "horizontal",

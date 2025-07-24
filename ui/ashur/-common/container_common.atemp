@@ -12,7 +12,6 @@
     "type": "panel",
     "controls": [
       {"screen@global.empty_panel": {"controls": "$screen_controls"}},
-      {"1@common.container_gamepad_helpers": {}},
       {"2@common.selected_item_details_factory": {}},
       {"3@common.item_lock_notification_factory": {}},
       {"4@common.flying_item_renderer": {"layer": 12}},
@@ -136,7 +135,7 @@
     "$white_highlight_slot_offset": [ 1, 1 ],
     "controls": [
       {
-        "hover@common.highlight_slot": {
+        "hover@screen_content.highlight_slot": {
           "size": [ 16, 16 ],
           "controls": [
             {"tooltip@common.hover_text": {"layer": 100, "property_bag": {"#hover_text": "destroy item"}}}

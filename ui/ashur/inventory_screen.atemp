@@ -18,7 +18,7 @@
                 "controls": [
                   {"tab_stack@crafting_common.crafting_survival_tabs": {}},
                   {
-                    "root_panel@global.root_panel": {
+                    "recipe_book@global.root_panel": {
                       "controls": [
                         {"recipe_base@screen_content.recipe_book": {"layer": 1}},
                         {"base_page_control@page_count.page": {}}
