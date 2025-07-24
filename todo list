@@ -1,18 +1,55 @@
-survival inventory
-search | 17
-wepons | 2
-construction | 5
-nature | 4
-redstone | 8
 
 
-survival crafting table
-search | 28
-wepons | 8
-construction | 21
-nature | 4
-redstone | 15
+## Survival Inventory Tabs
+- Search: 17
+- Weapons: 2
+- Construction: 5
+- Nature: 4
+- Redstone: 8
 
-///////////////////////////////////
+## Survival Crafting Table Tabs
+- Search: 28
+- Weapons: 8
+- Construction: 21
+- Nature: 4
+- Redstone: 15
 
-fix durability and bundle bug
+---
+
+## Bugs to Fix
+- Fix durability bug
+- Fix bundle bug
+
+---
+
+## UI Files Review
+
+**loom_screen.atemp** (lines 1–20):  
+- Rename padding panels for clarity and reuse.
+
+**creative_inventory.atemp** (lines 1–30):  
+- Standardize tab/panel naming and add comments for bindings.
+
+**inventory_screen.atemp** (lines 1–40):  
+- Flatten nested panels where possible for readability.
+
+**tradeing_screen.atemp** (lines 1–20):  
+- Rename to trading_screen.atemp and document button mapping logic.
+
+**anvil_screen.atemp** (lines 1–30):  
+- Document edit box settings and validate texture paths.
+
+**crafter_screen.atemp** (lines 1–40):  
+- Reuse slot templates for enabled/disabled states.
+
+**stonecutter_screen.atemp** (lines 1–25):  
+- Document grid binding logic and check dynamic sizing.
+
+**hopper_screen.atemp** (lines 1–20):  
+- Allow for dynamic grid sizing and review panel structure.
+
+**cartography_screen.atemp** (lines 1–40):  
+- Centralize button mappings and add comments.
+
+**horse_screen.atemp** (lines 1–30):  
+- Document grid dimension bindings and verify all textures.
