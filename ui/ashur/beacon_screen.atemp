@@ -5,13 +5,13 @@
     "size": [ 256, 219 ],
     "$screen_controls": [
       {"common_panel@screen_content.container_base": {"$beacon_screen": true}},
-      {"beacon_inner_panel@beacon_screen.beacon_inner_panel": {"offset": [ -1, 4 ]}},
-      {"payment_panel@beacon_screen.payment_panel": {"offset": [ 0, 8 ]}},
+      {"beacon_inner_panel@beacon_screen.beacon_inner_panel": {"offset": [ 1, 4.2 ]}},
+      {"payment_panel@beacon_screen.payment_panel": {"offset": [ 1, 8.2 ]}},
       {
-        "inventory_panel_bottom_half@common.inventory_panel_bottom_half": {"offset": [ 0, -3.4 ], "$button_ref": "beacon.inventory_slot_button"}
+        "inventory_panel_bottom_half@common.inventory_panel_bottom_half": {"offset": [ 1, -3.2 ], "$button_ref": "beacon.inventory_slot_button"}
       },
       {
-        "hotbar_grid_template@common.hotbar_grid_template": {"offset": [ 0, -7.4 ], "$button_ref": "beacon.hotbar_slot_button"}
+        "hotbar_grid_template@common.hotbar_grid_template": {"offset": [ 1, -7.2 ], "$button_ref": "beacon.hotbar_slot_button"}
       }
     ]
   },

@@ -20,7 +20,6 @@
     "grid_item_template": "crafter_screen.crafter_enabled_slot_template",
     "$item_collection_name": "container_items"
   },
-  "cell_image": {"type": "image", "texture": "textures/ui/slot_enabled", "layer": 1},
   "crafter_container_slot_button_prototype@common.container_slot_button_prototype": {"$highlight_control|default": "crafter_screen.crafter_highlight_slot_panel"},
   "crafter_highlight_slot_panel": {
     "type": "panel",
@@ -49,7 +48,7 @@
     ]
   },
   "crafter_enabled_slot_template@common.container_item": {
-    "$background_images|default": "crafter_screen.cell_image",
+    "$background_images|default": "global.empty_image",
     "$button_ref|default": "crafter_screen.crafter_container_slot_button_prototype"
   },
   "crafter_disabled_slot@common.button": {
@@ -148,63 +147,63 @@
       {"common_panel@screen_content.container_base": {"$crafter_screen": true}},
       {
         "disabled_slot_0_button@crafter_screen.crafter_disabled_slot": {
-          "offset": [ -53.9, -53.4 ],
+          "offset": [ -53.9, -57.6 ],
           "$pressed_button_name": "disabled_button0",
           "bindings": [ {"binding_name": "#button_visible0", "binding_name_override": "#visible"} ]
         }
       },
       {
         "disabled_slot_1_button@crafter_screen.crafter_disabled_slot": {
-          "offset": [ -36, -53.4 ],
+          "offset": [ -36, -57.6 ],
           "$pressed_button_name": "disabled_button1",
           "bindings": [ {"binding_name": "#button_visible1", "binding_name_override": "#visible"} ]
         }
       },
       {
         "disabled_slot_2_button@crafter_screen.crafter_disabled_slot": {
-          "offset": [ -18, -53.4 ],
+          "offset": [ -18, -57.6 ],
           "$pressed_button_name": "disabled_button2",
           "bindings": [ {"binding_name": "#button_visible2", "binding_name_override": "#visible"} ]
         }
       },
       {
         "disabled_slot_3_button@crafter_screen.crafter_disabled_slot": {
-          "offset": [ -53.9, -35.4 ],
+          "offset": [ -53.9, -39.6 ],
           "$pressed_button_name": "disabled_button3",
           "bindings": [ {"binding_name": "#button_visible3", "binding_name_override": "#visible"} ]
         }
       },
       {
         "disabled_slot_4_button@crafter_screen.crafter_disabled_slot": {
-          "offset": [ -36, -35.4 ],
+          "offset": [ -36, -39.6 ],
           "$pressed_button_name": "disabled_button4",
           "bindings": [ {"binding_name": "#button_visible4", "binding_name_override": "#visible"} ]
         }
       },
       {
         "disabled_slot_5_button@crafter_screen.crafter_disabled_slot": {
-          "offset": [ -18, -35.4 ],
+          "offset": [ -18, -39.6 ],
           "$pressed_button_name": "disabled_button5",
           "bindings": [ {"binding_name": "#button_visible5", "binding_name_override": "#visible"} ]
         }
       },
       {
         "disabled_slot_6_button@crafter_screen.crafter_disabled_slot": {
-          "offset": [ -53.9, -17.5 ],
+          "offset": [ -53.9, -21.7 ],
           "$pressed_button_name": "disabled_button6",
           "bindings": [ {"binding_name": "#button_visible6", "binding_name_override": "#visible"} ]
         }
       },
       {
         "disabled_slot_7_button@crafter_screen.crafter_disabled_slot": {
-          "offset": [ -36, -17.5 ],
+          "offset": [ -36, -21.7 ],
           "$pressed_button_name": "disabled_button7",
           "bindings": [ {"binding_name": "#button_visible7", "binding_name_override": "#visible"} ]
         }
       },
       {
         "disabled_slot_8_button@crafter_screen.crafter_disabled_slot": {
-          "offset": [ -18, -17.5 ],
+          "offset": [ -18, -21.7 ],
           "$pressed_button_name": "disabled_button8",
           "bindings": [ {"binding_name": "#button_visible8", "binding_name_override": "#visible"} ]
         }
@@ -213,6 +212,7 @@
         "redstone_screen_inventory": {
           "type": "panel",
           "layer": 5,
+          "offset": [ 0, -4 ],
           "controls": [
             {"crafter_label@crafter_screen.crafter_label": {}},
             {

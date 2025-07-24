@@ -13,7 +13,7 @@
     "controls": [
       {
         "bg@global.empty_image": {
-          "texture": "textures/atemp/ui/durability_underlay",
+          "texture": "textures/atemp/durability_underlay",
           "layer": -1,
           "offset": [ 0, 1 ],
           "size": [ "default", "default" ],
@@ -58,7 +58,7 @@
     "controls": [
       {
         "bg@global.empty_image": {
-          "texture": "textures/atemp/ui/durability_underlay",
+          "texture": "textures/atemp/durability_underlay",
           "layer": -1,
           "offset": [ 0, 1 ],
           "size": [ "default", "default" ],

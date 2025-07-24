@@ -373,9 +373,8 @@
       {"common_panel@screen_content.container_base": {"$smithing_screen": true}},
       {"top_half_panel@smithing_table_screen.top_half_panel": {}},
       {
-        "inventory_panel_bottom_half_with_label@common.inventory_panel_bottom_half_with_label": {"offset": [ 0, -3 ]}
-      },
-      {"hotbar_grid@common.hotbar_grid_template": {"offset": [ 0, -7 ]}}
+        "bottom@crafting_screen.inventory_bottom_half_with_label": {"anchor_to": "bottom_middle", "anchor_from": "bottom_middle"}
+      }
     ]
   }
 }

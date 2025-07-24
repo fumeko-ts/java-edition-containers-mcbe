@@ -9,22 +9,22 @@
       {
         "requires": "($tab_view_binding_name = furnace_search_tab)",
         "$tab_icon_size": [ 25, 16 ],
-        "$icon_for_tab": "textures/atemp/ui/item/compass_28.png"
+        "$icon_for_tab": "textures/atemp/item/compass_28.png"
       },
       {
         "requires": "($tab_view_binding_name = furnace_food_tab)",
         "$tab_icon_size": [ 28, 19 ],
-        "$icon_for_tab": "textures/atemp/ui/item/porkchop.png"
+        "$icon_for_tab": "textures/atemp/item/porkchop.png"
       },
       {
         "requires": "($tab_view_binding_name = furnace_blocks_tab)",
         "$tab_icon_size": [ 25, 16 ],
-        "$icon_for_tab": "textures/atemp/ui/block/stone.png"
+        "$icon_for_tab": "textures/atemp/block/stone.png"
       },
       {
         "requires": "($tab_view_binding_name = furnace_ores_tab)",
         "$tab_icon_size": [ 22, 14 ],
-        "$icon_for_tab": "textures/atemp/ui/fuel.png"
+        "$icon_for_tab": "textures/atemp/fuel.png"
       }
     ]
   },

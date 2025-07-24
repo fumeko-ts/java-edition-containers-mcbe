@@ -285,23 +285,16 @@
       {"top_half_stack_panel@tradeing_screen.top_half_stack_panel": {}}
     ]
   },
-  "right_panel@common.root_panel": {
-    "layer": 1,
+  "trade_screen_inventory@common.root_panel": {
+    "type": "panel",
+    "layer": 2,
     "controls": [
-      {"common_panel@screen_content.container_base": {"$main_trade_screen": true}},
+      {"common_panel@screen_content.container_base": {"offset": [ -70, 0 ], "$main_trade_screen": true}},
+      {"top_half_panel@tradeing_screen.top_half_panel": {}},
       {
-        "trade_screen_inventory": {
-          "type": "panel",
-          "layer": 2,
-          "controls": [
-            {"top_half_panel@tradeing_screen.top_half_panel": {}},
-            {
-              "inventory_panel_bottom_half_with_label@common.inventory_panel_bottom_half_with_label": {"offset": [ -20, -3 ]}
-            },
-            {"hotbar_grid@common.hotbar_grid_template": {"offset": [ -20, -7 ]}}
-          ]
-        }
-      }
+        "inventory_panel_bottom_half_with_label@common.inventory_panel_bottom_half_with_label": {"offset": [ -20, -3 ]}
+      },
+      {"hotbar_grid@common.hotbar_grid_template": {"offset": [ -20, -7 ]}}
     ]
   },
   "trade_scroll": {
@@ -315,7 +308,7 @@
       {"trade_scroll_panel@tradeing_screen.trade_scroll_panel": {}}
     ]
   },
-  "trade_scroll_panel@common.common_container_scrolling_panel": {
+  "trade_scroll_panel@scroll_panel.common_container_scrolling_panel": {
     "$scrolling_content": "tradeing_screen.scroll_inner_input_panel",
     "$collection_name": "trade_tiers",
     "offset": [ 111, 78 ],
@@ -662,8 +655,11 @@
   },
   "screen_panel@container_common.container_details": {
     "offset": [ 70, 0 ],
+    "size": [ 276, 166 ],
+    "anchor_to": "center",
+    "anchor_from": "center",
     "$screen_controls": [
-      {"right_panel@tradeing_screen.right_panel": {}},
+      {"trade_screen_inventory@tradeing_screen.trade_screen_inventory": {}},
       {"trade_exp@trade_exp.exp_progress_bar": {}},
       {"trade_scroll@tradeing_screen.trade_scroll": {}},
       {"disabled_box@tradeing_screen.disabled_box": {}}

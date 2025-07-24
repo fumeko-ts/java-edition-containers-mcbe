@@ -8,7 +8,7 @@
           "anchor_to": "center",
           "anchor_from": "center",
           "min_size": [ 176, 166 ],
-          "max_size": [ 325, 166 ],
+          "max_size": [ 326, 166 ],
           "layer": 1,
           "controls": [
             {

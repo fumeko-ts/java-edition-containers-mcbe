@@ -1,6 +1,6 @@
 {
   "namespace": "crafting_textures",
-  "empty_image@global.empty_image": {
+  "empty_image@screen_content.image_element": {
     "bindings": [
       {
         "binding_type": "view",
@@ -27,29 +27,21 @@
         }
       },
       {"stack_count@common.stack_count_label": {"layer": 20}},
-      {
-        "cell_image_classic@crafting_textures.empty_image": {"size": "$cell_image_size", "$texture_index": 0}
-      },
-      {
-        "cell_image_normal@crafting_textures.empty_image": {"size": "$cell_image_size", "$texture_index": 1}
-      },
-      {
-        "cell_image_invert@crafting_textures.empty_image": {"size": "$cell_image_size", "$texture_index": 2}
-      },
-      {
-        "cell_image_selected@crafting_textures.empty_image": {"size": "$cell_image_size", "$texture_index": 4}
-      },
+      {"cell_image_classic@crafting_textures.empty_image": {"$texture_index": 0}},
+      {"cell_image_normal@crafting_textures.empty_image": {"$texture_index": 1}},
+      {"cell_image_invert@crafting_textures.empty_image": {"$texture_index": 2}},
+      {"cell_image_selected@crafting_textures.empty_image": {"$texture_index": 4}},
       {
         "cell_image_red@crafting_textures.empty_image": {
           "nineslice_size": [ 1, 1, 1, 1 ],
-          "texture": "textures/atemp/ui/cell_transparent_image_red.png",
+          "texture": "textures/atemp/cell_transparent_image_red.png",
           "size": "$cell_image_size",
           "$texture_index": 3,
           "layer": 10,
           "controls": [
             {
               "white@global.empty_image": {
-                "texture": "textures/atemp/ui/white",
+                "texture": "textures/atemp/white",
                 "size": [ "100% - 1px", "100% - 1px" ],
                 "anchor_to": "center",
                 "anchor_from": "center",
@@ -63,14 +55,14 @@
       {
         "cell_image_darkgrey@crafting_textures.empty_image": {
           "nineslice_size": [ 1, 1, 1, 1 ],
-          "texture": "textures/atemp/ui/cell_transparent_image_red.png",
+          "texture": "textures/atemp/cell_transparent_image_red.png",
           "size": "$cell_image_size",
           "$texture_index": 7,
           "layer": 10,
           "controls": [
             {
               "white@global.empty_image": {
-                "texture": "textures/atemp/ui/white",
+                "texture": "textures/atemp/white",
                 "size": [ "100% - 1px", "100% - 1px" ],
                 "anchor_to": "center",
                 "anchor_from": "center",

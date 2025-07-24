@@ -1,9 +1,46 @@
 {
-  "$ep": "common.emptagsdgds_panel",
+                                                                                                                                                                                                                                                                                                                                                                                                                  /*
+  valid options are as follows 
+  
+   oak_leaves
+   spruce_leaves
+   acacia_leaves
+   azalea_leaves
+   birch_leaves
+   cherry_leaves
+   dark_oak_leaves
+   flowering_azalea_leaves
+   jungle_leaves
+   mangrove_leaves
+
+   note they are required to be all lowercase
+
+
+  pick a option then just replace the text below with your pick
+  for example if i chose cherry_leaves $nature_tab_texture would look like
+
+  "$nature_tab_texture": "cherry_leaves",                                                                                                                                                                                                                                                                                                                                */
+  
+  "$nature_tab_texture": "birch_leaves",
+  
+
+  // this toggles the visibility of the exit buttons ingame in the containers 
+  // possible values true/false note they are required to be all lowercase
+  "$Exit_panel_enabled": true,
+  
+
+  // this configures the transparency of most container uis
+  // valid valies are like 1, 0.9, 0.8, 0.7, 0.6, 0.5, 0.4, 0.3, 0.2, 0.1, or just 0 or like 0.75, ect just not above 1 and not below 0
+  "$container_opacity": 1,
+
+
+
+  // you can ignore everything below because they are not configured to be customised unlike the above
+
+  
   "$creative_recipe_book": false,
   "$title_text_color": [ 0.15, 0.15, 0.15, 1.0 ],
   "$direction": "right",
-  "$Exit_panel_enabled": false,
   "$loom_screen": false,
   "$anvil_screen": false,
   "$barrel_screen": false,
@@ -27,7 +64,7 @@
   "$stonecutter_screen": false,
   "$main_trade_screen": false,
   "$recipe_book": false,
-  "$jc:dev": true,
+  "$jc:dev": true, // this dose nothing yet
   "$recipe_book_contents": [
     {"offset_content@$page_contents": {"offset": [ 1.6, -2 ]}},
     {

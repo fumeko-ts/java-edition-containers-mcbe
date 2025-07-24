@@ -235,16 +235,14 @@
   },
   "cartography_panel@container_common.container_details": {
     "type": "panel",
-    "size": [ 176, 220 ],
+    "size": [ 176, 166 ],
     "layer": 2,
     "$screen_controls": [
       {"common_panel@screen_content.container_base": {"$cartography_screen": true}},
-      {"top_half_panel@cartography_screen.top_half_panel": {"offset": [ 7, 4.6 ]}},
+      {"top_half_panel@cartography_screen.top_half_panel": {"offset": [ 7, 1.6 ]}},
       {
-        "inventory_panel_bottom_half_with_label@common.inventory_panel_bottom_half_with_label": {"offset": [ 0, -27 ]}
-      },
-      {"hotbar_grid@common.hotbar_grid_template": {"offset": [ 0, -31 ]}},
-      {"inventory_take_progress_icon_button@common.inventory_take_progress_icon_button": {}}
+        "bottom@crafting_screen.inventory_bottom_half_with_label": {"anchor_to": "bottom_middle", "anchor_from": "bottom_middle"}
+      }
     ]
   }
 }

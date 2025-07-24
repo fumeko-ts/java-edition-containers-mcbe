@@ -17,7 +17,7 @@
         "brewing_panel_top_half": {
           "type": "panel",
           "size": [ "100%", "50% - 12px" ],
-          "offset": [ 0, 7 ],
+          "offset": [ 0, 4 ],
           "anchor_to": "top_middle",
           "anchor_from": "top_middle",
           "controls": [
@@ -169,8 +169,9 @@
           ]
         }
       },
-      {"inventory_panel_bottom_half_with_label@common.inventory_panel_bottom_half_with_label": {}},
-      {"hotbar_grid@global.hotbar": {}}
+      {
+        "bottom@crafting_screen.inventory_bottom_half_with_label": {"anchor_to": "bottom_middle", "anchor_from": "bottom_middle"}
+      }
     ]
   }
 }

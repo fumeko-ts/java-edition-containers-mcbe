@@ -41,8 +41,9 @@
           ]
         }
       },
-      {"red_bottom_half@common.inventory_panel_bottom_half_with_label": {"offset": [ 0, -3 ]}},
-      {"hotbar_grid@common.hotbar_grid_template": {"offset": [ 0, -7 ]}}
+      {
+        "bottom@crafting_screen.inventory_bottom_half_with_label": {"anchor_to": "bottom_middle", "anchor_from": "bottom_middle"}
+      }
     ]
   }
 }

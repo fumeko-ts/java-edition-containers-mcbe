@@ -34,7 +34,7 @@
         "empty_progress_bar": {
           "type": "image",
           "texture": "assets/minecraft/textures/gui/sprites/container/villager/experience_bar_background.png",
-          "layer": 1,
+          "layer": 7,
           "offset": [ -1, 78 ],
           "controls": [
             {
@@ -43,7 +43,7 @@
                 "texture": "assets/minecraft/textures/gui/sprites/container/villager/experience_bar_current.png",
                 "clip_direction": "left",
                 "clip_pixelperfect": false,
-                "layer": 2,
+                "layer": 8,
                 "bindings": [
                   {
                     "binding_name": "#exp_possible_progress",

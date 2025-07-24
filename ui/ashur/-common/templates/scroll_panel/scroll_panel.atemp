@@ -1,1 +1,115 @@
-{"namespace": "scroll_panel"}
+{
+  "namespace": "scroll_panel",
+  "common_container_scrolling_panel@common.scrolling_panel": {
+    "$scroll_track_offset": [ 0, 0 ],
+    "$scroll_track_image_control": "common.empty_panel",
+    "$scroll_box_mouse_image_control": "$scroll_box_image_control",
+    "$scroll_box_touch_image_control": "$scroll_box_image_control",
+    "controls": [
+      {
+        "scroll_base@scroll_panel.common_container_scrolling_panel_base": {"size": "$scrolling_pane_size", "offset": "$scrolling_pane_offset"}
+      }
+    ]
+  },
+  "common_container_scrolling_panel_base@common.scrolling_panel_base": {
+    "controls": [
+      {
+        "$scroll_view_name@common.scroll_view_control": {
+          "controls": [
+            {
+              "panel": {
+                "type": "panel",
+                "anchor_to": "top_left",
+                "anchor_from": "top_left",
+                "$view_port_size|default": [ "100%", "100%" ],
+                "clips_children": true,
+                "controls": [
+                  {"viewport@scroll_panel.common_container_viewport": {}},
+                  {"bar_and_track@scroll_panel.common_container_bar_and_track": {}}
+                ]
+              }
+            }
+          ]
+        }
+      }
+    ]
+  },
+  "common_container_viewport@common.scroll_background_and_viewport": {
+    "controls": [
+      {
+        "scrolling_view_port": {
+          "layer": 1,
+          "type": "panel",
+          "anchor_from": "top_left",
+          "anchor_to": "top_left",
+          "clips_children": true,
+          "offset": "$scroll_view_port_offset",
+          "size": "$scroll_view_port_size",
+          "controls": [
+            {
+              "scrolling_content@$scrolling_content": {
+                "layer": 2,
+                "$scrolling_content_anchor_from|default": "top_left",
+                "$scrolling_content_anchor_to|default": "top_left",
+                "anchor_from": "$scrolling_content_anchor_from",
+                "anchor_to": "$scrolling_content_anchor_to"
+              }
+            }
+          ]
+        }
+      }
+    ]
+  },
+  "scrollbar_track": {
+    "type": "scroll_track",
+    "$focus_for_tts_enabled|default": true,
+    "focus_enabled": "$focus_for_tts_enabled",
+    "$scrollbar_tts_name|default": "accessibility.scrollbar.tts.title",
+    "tts_name": "$scrollbar_tts_name",
+    "size": "$scroll_track_sise",
+    "$scroll_track_sise|default": [ "default", "default" ],
+    "button_mappings": [
+      {
+        "from_button_id": "button.menu_select",
+        "to_button_id": "button.scrollbar_skip_track",
+        "mapping_type": "pressed"
+      }
+    ],
+    "controls": [
+      {"bar_indent@$scroll_track_image_control": {"visible": "$scroll_box_visible"}}
+    ]
+  },
+  "common_container_bar_and_track@common.scroll_bar_and_track": {
+    "size": "$scrolling_pane_size",
+    "anchor_from": "center",
+    "anchor_to": "center",
+    "controls": [
+      {
+        "centered_panel": {
+          "type": "panel",
+          "size": "$scroll_size",
+          "anchor_from": "$bar_and_track_anchor_from",
+          "anchor_to": "$bar_and_track_anchor_to",
+          "$scroll_bar_anchor|default": "right",
+          "offset": "$scroll_track_offset",
+          "variables": [
+            {
+              "requires": "($scroll_bar_anchor = right)",
+              "$bar_and_track_anchor_from": "top_right",
+              "$bar_and_track_anchor_to": "top_right"
+            },
+            {
+              "requires": "($scroll_bar_anchor = left)",
+              "$bar_and_track_anchor_from": "top_left",
+              "$bar_and_track_anchor_to": "top_left"
+            }
+          ],
+          "controls": [
+            {"track@scroll_panel.scrollbar_track": {"layer": 4, "anchor_from": "center", "anchor_to": "center"}},
+            {"scroll_box@common.scroll_box": {"layer": 5, "anchor_from": "center", "anchor_to": "center"}}
+          ]
+        }
+      }
+    ]
+  }
+}

@@ -80,7 +80,7 @@
         "locked_scroll_box@screen_content.scroll_box_image_disabled": {
           "anchor_to": "center",
           "anchor_from": "center",
-          "offset": [ 37, -58.2 ],
+          "offset": [ 37, -60.2 ],
           "bindings": [
             {
               "binding_name": "(#stone_selector_total_items < 13)",
@@ -92,7 +92,7 @@
         }
       },
       {
-        "scroll_panel@common.common_container_scrolling_panel": {
+        "scroll_panel@scroll_panel.common_container_scrolling_panel": {
           "$collection_name": "stones",
           "anchor_to": "center",
           "anchor_from": "center",
@@ -100,7 +100,7 @@
           "$scrolling_pane_size": [ "100%", "100%" ],
           "$scroll_size": [ 14, 54 ],
           "$misc_scroller_offset": [ 0, 0.8 ],
-          "offset": [ 4, -40.2 ],
+          "offset": [ 4, -42.2 ],
           "size": [ 80, 55 ],
           "layer": 2,
           "$scroll_view_port_offset": [ 0, 2 ],
@@ -126,6 +126,7 @@
                     "stonecutter_screen_inventory": {
                       "type": "panel",
                       "layer": 2,
+                      "offset": [ 0, -2 ],
                       "controls": [
                         {
                           "top_half_panel": {

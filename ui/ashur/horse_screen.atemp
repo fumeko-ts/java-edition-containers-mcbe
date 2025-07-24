@@ -181,9 +181,8 @@
       {"equipment@horse_screen.equip_panel": {"offset": [ 7, 18 ]}},
       {"renderer@horse_screen.horse_renderer": {"offset": [ 25, 18 ]}},
       {
-        "inventory_panel_bottom_half_with_label@common.inventory_panel_bottom_half_with_label": {"offset": [ 0, -3 ]}
-      },
-      {"hotbar_grid_template@common.hotbar_grid_template": {"offset": [ 0, -7 ]}}
+        "bottom@crafting_screen.inventory_bottom_half_with_label": {"anchor_to": "bottom_middle", "anchor_from": "bottom_middle"}
+      }
     ]
   }
 }

@@ -205,7 +205,7 @@
   "enchanting_panel_top_half": {
     "type": "panel",
     "size": [ "100%", "50% - 12px" ],
-    "offset": [ 0, 7 ],
+    "offset": [ 0, 4 ],
     "anchor_to": "top_left",
     "anchor_from": "top_left",
     "controls": [
@@ -311,8 +311,9 @@
     "$screen_controls": [
       {"common_panel@screen_content.container_base": {"$enchanting_screen": true}},
       {"enchanting_panel_top_half@enchanting_screen.enchanting_panel_top_half": {}},
-      {"inventory_panel_bottom_half_with_label@common.inventory_panel_bottom_half_with_label": {}},
-      {"hotbar_grid@common.hotbar_grid_template": {"offset": [ 0, -4 ]}}
+      {
+        "bottom@crafting_screen.inventory_bottom_half_with_label": {"anchor_to": "bottom_middle", "anchor_from": "bottom_middle"}
+      }
     ]
   }
 }

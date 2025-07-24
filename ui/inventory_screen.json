@@ -1,6 +1,9 @@
 {
-  "crafting_screen@crafting.inventory_screen_repl": {"$is_crafting_table|default": true},
-  "inventory_screen@crafting.inventory_screen_repl": {"$is_crafting_table|default": false},
+  "crafting_screen@crafting.inventory_screen_repl": {"$current_screen|default": "crafting_screen.screen_base"},
+  "inventory_screen@crafting.inventory_screen_repl": {"$current_screen|default": "inventory_screen.screen_base"},
+  "crafting_screens@container_common.container_details": {"$screen_controls": [
+      {"screen@$current_screen": {}}
+    ]},
   "inventory_screen_repl@global.inventory_screen_common": {
     "$screen_content": "crafting.crafting_screens",
     "button_mappings": [
@@ -104,22 +107,6 @@
         "to_button_id": "button.clear_selected_recipe",
         "mapping_type": "global"
       }
-    ]
-  },
-  "crafting_screens@container_common.container_details": {
-    "$current_screen|default": "",
-    "variables": [
-      {
-        "requires": "($is_crafting_table = true)",
-        "$current_screen|default": "crafting_screen.screen_base"
-      },
-      {
-        "requires": "($is_crafting_table = false)",
-        "$current_screen|default": "inventory_screen.screen_base"
-      }
-    ],
-    "$screen_controls": [
-      {"screen@$current_screen": {}}
     ]
   }
 }

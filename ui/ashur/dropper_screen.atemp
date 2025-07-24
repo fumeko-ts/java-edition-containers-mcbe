@@ -2,7 +2,6 @@
   "namespace": "dropper_screen",
   "dropper_panel@container_common.container_details": {
     "type": "panel",
-    "layer": 5,
     "size": [ 176, 166 ],
     "$screen_controls": [
       {"common_panel@screen_content.container_base": {"$dispenser_screen": true}},
@@ -41,8 +40,9 @@
           ]
         }
       },
-      {"red_bottom_half@common.inventory_panel_bottom_half_with_label": {"offset": [ 0, -3 ]}},
-      {"hotbar_grid@common.hotbar_grid_template": {"offset": [ 0, -7 ]}}
+      {
+        "bottom@crafting_screen.inventory_bottom_half_with_label": {"anchor_to": "bottom_middle", "anchor_from": "bottom_middle"}
+      }
     ]
   }
 }

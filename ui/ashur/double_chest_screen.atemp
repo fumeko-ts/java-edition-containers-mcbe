@@ -9,7 +9,7 @@
       {
         "double_chest_label": {
           "type": "label",
-          "offset": [ -49.2, 4.6 ],
+          "offset": [ -49.2, 3.6 ],
           "anchor_from": "top_middle",
           "anchor_to": "top_middle",
           "text": "$container_title",
@@ -23,7 +23,7 @@
         "double_chest_screen_panel_top_half": {
           "type": "panel",
           "size": [ "100%", 132 ],
-          "offset": [ 0, 7 ],
+          "offset": [ 0, 6 ],
           "anchor_to": "top_left",
           "anchor_from": "top_left",
           "controls": [
@@ -43,9 +43,8 @@
         }
       },
       {
-        "inventory_panel_bottom_half_with_label@common.inventory_panel_bottom_half_with_label": {"offset": [ 0, -1 ]}
-      },
-      {"hotbar_grid@common.hotbar_grid_template": {}}
+        "bottom@crafting_screen.inventory_bottom_half_with_label": {"offset": [ 0, 1 ], "anchor_to": "bottom_middle", "anchor_from": "bottom_middle"}
+      }
     ]
   }
 }

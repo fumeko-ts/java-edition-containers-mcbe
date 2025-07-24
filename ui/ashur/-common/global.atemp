@@ -1,5 +1,35 @@
 {
   "namespace": "global",
+  "highlight_slot": {
+    "type": "panel",
+    "$white_highlight_offset": [ 0, 0 ],
+    "$slot_vars": "screen_content.highlight_slot",
+    "variables": {"requires": "($recipe_book = true)", "$slot_vars": "common.empty_panel"},
+    "controls": [
+      {
+        "highlight@$slot_vars": {
+          "offset": "$white_highlight_offset",
+          "controls": [
+            {
+              "hover_text@common.hover_text": {
+                "layer": 29,
+                "$hover_text_binding_name|default": "#hover_text",
+                "bindings": [
+                  {
+                    "binding_name": "$hover_text_binding_name",
+                    "binding_name_override": "#hover_text",
+                    "binding_condition": "always",
+                    "binding_type": "collection",
+                    "binding_collection_name": "$item_collection_name"
+                  }
+                ]
+              }
+            }
+          ]
+        }
+      }
+    ]
+  },
   "grid_item@common.container_item": {"$grid_item_collection_name": "hotbar_items"},
   "hotbar": {
     "type": "grid",
@@ -142,6 +172,15 @@
       }
     ]
   },
+  "close_button_panel": {
+    "type": "panel",
+    "layer": 1,
+    "size": "$close_button_panel_size",
+    "$button_alpha|default": 1,
+    "controls": [
+      {"close_button_image@screen_content.close_button_image": {"alpha": "$button_alpha"}}
+    ]
+  },
   "inventory_selected_stack_size_text": {
     "type": "label",
     "offset": [ 0, 1 ],
@@ -167,21 +206,8 @@
     ]
   },
   "inventory_screen_common@common.base_screen": {
-    "$screen_bg_content": "common.screen_background",
-    "cache_screen": true,
-    "$close_on_player_hurt|default": true,
-    "send_telemetry": false,
-    "load_screen_immediately": true,
-    "$use_loading_bars": false,
-    "low_frequency_rendering": true,
-    "render_game_behind": true,
-    "force_render_below": true,
-    "absorbs_input": true,
-    "is_showing_menu": true,
-    "close_on_player_hurt": "$close_on_player_hurt",
+    "$screen_bg_content": "screen_content.screen_background",
     "$additional_screen_content": "common.stack_splitting_overlay",
-    "$gamepad_cursor|default": true,
-    "gamepad_cursor": "$gamepad_cursor",
     "$screen_animations|default": [
       "@common.container_screen_exit_animation_push",
       "@common.container_screen_exit_animation_pop",
@@ -192,6 +218,17 @@
       "@common.screen_entrance_animation_push_fade",
       "@common.screen_entrance_animation_pop_fade"
     ],
+    "$use_loading_bars": false,
+    "cache_screen": true,
+    "send_telemetry": false,
+    "load_screen_immediately": true,
+    "low_frequency_rendering": true,
+    "render_game_behind": true,
+    "force_render_below": true,
+    "absorbs_input": true,
+    "is_showing_menu": true,
+    "close_on_player_hurt": true,
+    "gamepad_cursor": true,
     "button_mappings": [
       {
         "from_button_id": "button.menu_cancel",

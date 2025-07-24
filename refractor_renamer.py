@@ -4,14 +4,16 @@ import re
 import subprocess
 import shutil
 
+
 def remove_json_comments(text):
-    text = re.sub(r'//.*?$', '', text, flags=re.MULTILINE)
-    text = re.sub(r'/\*.*?\*/', '', text, flags=re.DOTALL)
+    text = re.sub(r"//.*?$", "", text, flags=re.MULTILINE)
+    text = re.sub(r"/\*.*?\*/", "", text, flags=re.DOTALL)
     return text
 
+
 def json_compact(obj, indent=2, level=0, max_inline_len=100):
-    space = ' ' * (indent * level)
-    next_space = ' ' * (indent * (level + 1))
+    space = " " * (indent * level)
+    next_space = " " * (indent * (level + 1))
 
     def is_primitive(val):
         return isinstance(val, (str, int, float, bool)) or val is None
@@ -25,44 +27,50 @@ def json_compact(obj, indent=2, level=0, max_inline_len=100):
 
     if isinstance(obj, dict):
         if not obj:
-            return '{}'
+            return "{}"
 
         items = []
         for k, v in obj.items():
             if is_primitive(v):
-                items.append(f'{json.dumps(k)}: {json.dumps(v)}')
+                items.append(f"{json.dumps(k)}: {json.dumps(v)}")
             else:
-                items.append(f'{json.dumps(k)}: {json_compact(v, indent, level + 1)}')
-        inline = '{' + ', '.join(items) + '}'
+                items.append(f"{json.dumps(k)}: {json_compact(v, indent, level + 1)}")
+        inline = "{" + ", ".join(items) + "}"
         if len(inline) <= max_inline_len:
             return inline
 
         lines = []
         for k, v in obj.items():
             val = json_compact(v, indent, level + 1, max_inline_len)
-            lines.append(f'{next_space}{json.dumps(k)}: {val}')
-        return '{\n' + ',\n'.join(lines) + '\n' + space + '}'
+            lines.append(f"{next_space}{json.dumps(k)}: {val}")
+        return "{\n" + ",\n".join(lines) + "\n" + space + "}"
 
     elif isinstance(obj, list):
         if not obj:
-            return '[]'
+            return "[]"
 
         if all(isinstance(i, dict) and is_simple(i) for i in obj):
-            inline_items = [json_compact(i, indent, level + 1, max_inline_len) for i in obj]
-            inline = '[ ' + ', '.join(inline_items) + ' ]'
+            inline_items = [
+                json_compact(i, indent, level + 1, max_inline_len) for i in obj
+            ]
+            inline = "[ " + ", ".join(inline_items) + " ]"
             if len(inline) <= max_inline_len:
                 return inline
 
         if all(is_primitive(i) for i in obj):
-            inline = '[ ' + ', '.join(json.dumps(i) for i in obj) + ' ]'
+            inline = "[ " + ", ".join(json.dumps(i) for i in obj) + " ]"
             if len(inline) <= max_inline_len:
                 return inline
 
-        lines = [f'{next_space}{json_compact(i, indent, level + 1, max_inline_len)}' for i in obj]
-        return '[\n' + ',\n'.join(lines) + '\n' + space + ']'
+        lines = [
+            f"{next_space}{json_compact(i, indent, level + 1, max_inline_len)}"
+            for i in obj
+        ]
+        return "[\n" + ",\n".join(lines) + "\n" + space + "]"
 
     else:
         return json.dumps(obj)
+
 
 def replace_multiple_texts(obj, replacements):
     if isinstance(obj, dict):
@@ -72,7 +80,7 @@ def replace_multiple_texts(obj, replacements):
                 new_obj[k] = v
                 continue
 
-            if '#' in k or '$' in k or k.startswith('$'):
+            if "#" in k or "$" in k or k.startswith("$"):
                 new_key = k
             else:
                 new_key = k
@@ -80,7 +88,7 @@ def replace_multiple_texts(obj, replacements):
                     new_key = new_key.replace(target_text, replacement_text)
 
             if isinstance(v, str):
-                if '#' in v or '$' in v or v.startswith('$'):
+                if "#" in v or "$" in v or v.startswith("$"):
                     new_val = v
                 else:
                     new_val = v
@@ -96,7 +104,7 @@ def replace_multiple_texts(obj, replacements):
         return [replace_multiple_texts(i, replacements) for i in obj]
 
     elif isinstance(obj, str):
-        if '#' in obj or '$' in obj or obj.startswith('$'):
+        if "#" in obj or "$" in obj or obj.startswith("$"):
             return obj
         else:
             new_str = obj
@@ -115,12 +123,31 @@ def refactor_text_in_files(root_dir, replacements):
             if any(file.endswith(ext) for ext in valid_extensions):
                 files_to_process.append(os.path.join(root, file))
 
-    print(f"Found {len(files_to_process)} JSON/ATEMP files.")
-
-    total_updated = 0
     backups = []
+    total_updated = 0
 
     for file_path in files_to_process:
+        filename = os.path.basename(file_path)
+
+        if filename == "_global_variables.json":
+            with open(file_path, "r", encoding="utf-8") as f:
+                content = f.read()
+
+            modified_content = content
+            for target_text, replacement_text in replacements:
+                modified_content = modified_content.replace(target_text, replacement_text)
+
+            backup_path = file_path + ".bak_refractor"
+            shutil.copyfile(file_path, backup_path)
+            backups.append((file_path, backup_path))
+
+            with open(file_path, "w", encoding="utf-8") as f:
+                f.write(modified_content)
+
+            print(f"Refactored without formatting: {file_path}")
+            total_updated += 1
+            continue
+
         with open(file_path, "r", encoding="utf-8") as f:
             content = f.read()
         cleaned_content = remove_json_comments(content)
@@ -163,7 +190,7 @@ def refactor_text_in_files(root_dir, replacements):
 
     if total_updated > 0:
         answer = input("Do you want to revert the changes? (y/N): ").strip().lower()
-        if answer == 'y':
+        if answer == "y":
             for orig_file, backup_file in backups:
                 try:
                     shutil.copyfile(backup_file, orig_file)
@@ -178,6 +205,7 @@ def refactor_text_in_files(root_dir, replacements):
                     os.remove(backup_file)
                 except:
                     pass
+
 
 def search_text_in_files(root_dir, search_text):
     valid_extensions = {".json", ".atemp"}
@@ -212,6 +240,7 @@ def search_text_in_files(root_dir, search_text):
     if not found_any:
         print(f"No occurrences of '{search_text}' found in any files.")
 
+
 def run_ui_defs():
     ui_script_path = os.path.join("_ui_defs-updater.py")
     if os.path.isfile(ui_script_path):
@@ -223,6 +252,7 @@ def run_ui_defs():
             print(f"_ui_defs-updater.py failed with error: {e}")
     else:
         print(f"{ui_script_path} not found, skipping run.")
+
 
 def load_rr_config(config_path="rr.config"):
     if not os.path.exists(config_path):
@@ -237,7 +267,7 @@ def load_rr_config(config_path="rr.config"):
     cleaned_lines = []
 
     for line in raw_lines:
-        line = re.sub(r'//.*$', '', line).strip()
+        line = re.sub(r"//.*$", "", line).strip()
         if line:
             cleaned_lines.append(line)
 
@@ -262,10 +292,11 @@ def load_rr_config(config_path="rr.config"):
 
     return rename, replacements
 
+
 if __name__ == "__main__":
     root_dir = "."
 
-    use_config = input("Use rr.config? (y/N): ").strip().lower() == 'y'
+    use_config = input("Use rr.config? (y/N): ").strip().lower() == "y"
     if use_config:
         rename, replacements = load_rr_config()
         if not replacements:
@@ -274,8 +305,10 @@ if __name__ == "__main__":
             refactor_text_in_files(root_dir, replacements)
     else:
         while True:
-            mode = input("Do you want to perform a search-only? (y/N): ").strip().lower()
-            if mode == 'y':
+            mode = (
+                input("Do you want to perform a search-only? (y/N): ").strip().lower()
+            )
+            if mode == "y":
                 search_text = input("Enter the text to search for: ").strip()
                 if not search_text:
                     print("Empty search text, aborting search.")
@@ -293,8 +326,12 @@ if __name__ == "__main__":
                     replacement_text = input("Enter the replacement text: ").strip()
                     replacements.append((target_text, replacement_text))
 
-                    more = input("Do you want to add another rename rule? (y/N): ").strip().lower()
-                    if more != 'y':
+                    more = (
+                        input("Do you want to add another rename rule? (y/N): ")
+                        .strip()
+                        .lower()
+                    )
+                    if more != "y":
                         break
 
                 if replacements:

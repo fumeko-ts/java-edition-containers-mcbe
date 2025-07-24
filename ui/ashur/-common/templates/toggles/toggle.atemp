@@ -10,8 +10,9 @@
           "anchor_to": "center",
           "anchor_from": "center",
           "texture": "$tab_texture",
-          "keep_ratio": "$texture_sould_keep_ratio",
-          "layer": 2
+          "offset": "$toggle_offset",
+          "layer": "$tab_content_layer",
+          "keep_ratio": "$texture_sould_keep_ratio"
         }
       },
       {
@@ -20,7 +21,7 @@
           "$tab_content_size|default": [ "100% - 4px", "100% - 4px" ],
           "size": "$tab_content_size",
           "controls": [
-            {"tab_content@$tab_content": {"layer": 3}}
+            {"tab_content@$tab_content": {"offset": "$tab_content_offset", "layer": 6}}
           ]
         }
       }
@@ -33,53 +34,85 @@
     "$tab_panel|default": "toggle.tab_panel",
     "$is_tab|default": true,
     "$is_creative|default": false,
+    "$is_radio_toggle|default": true,
     "$recipe_inventory|default": false,
+    "$toggle_reset_on_focus_lost|default": true,
     "$tab_view_binding_name|default": "tab",
+    "$unchecked_offset|default": [ 0, 0 ],
+    "$checked_offset|default": [ 0, -2 ],
+    "$toggle_base_offset_checked|default": [ 0, 0 ],
+    "$toggle_base_offset_unchecked|default": [ 0, 0 ],
+    "$toggle_tts_enabled_binding_type": "global",
     "controls": [
       {
         "$tab_view_binding_name@common.toggle": {
-          "$toggle_tts_enabled_binding_type": "global",
-          "$toggle_reset_on_focus_lost|default": true,
-          "radio_toggle_group": true,
+          "radio_toggle_group": "$is_radio_toggle",
           "reset_on_focus_lost": "$toggle_reset_on_focus_lost",
-          "variables": [
-            {
-              "requires": "(($is_tab = false) or ($is_creative = true))",
-              "$checked_offset|default": [ 0, 0 ],
-              "$unchecked_offset|default": [ 0, 0 ]
-            },
-            {
-              "requires": "($recipe_inventory = true)",
-              "$checked_offset|default": [ 1, 1 ],
-              "$unchecked_offset|default": [ 1, 1 ]
-            }
-          ],
-          "$checked_offset|default": [ -2, 0 ],
-          "$unchecked_offset|default": [ 0.4, 0 ],
+          "variables": {"requires": "($is_tab = false)", "$tab_content_offset|default": [ 0, 0 ]},
           "controls": [
             {
-              "unchecked@$tab_panel": {"offset": "$unchecked_offset", "$tab_texture": "$unchecked_default_image", "layer": -5}
+              "unchecked@$tab_panel": {
+                "$toggle_offset": "$toggle_base_offset_unchecked",
+                "$tab_content_offset": "$unchecked_offset",
+                "$tab_texture": "$unchecked_default_image",
+                "$tab_content_layer": 1
+              }
             },
             {
-              "unchecked_hover@$tab_panel": {"offset": "$unchecked_offset", "$tab_texture": "$unchecked_hover_image", "layer": -5}
+              "unchecked_hover@$tab_panel": {
+                "$toggle_offset": "$toggle_base_offset_unchecked",
+                "$tab_content_offset": "$unchecked_offset",
+                "$tab_texture": "$unchecked_hover_image",
+                "$tab_content_layer": 1
+              }
             },
             {
-              "unchecked_locked@$tab_panel": {"offset": "$unchecked_offset", "$tab_texture": "$unchecked_locked_image", "layer": -5}
+              "unchecked_locked@$tab_panel": {
+                "$toggle_offset": "$toggle_base_offset_unchecked",
+                "$tab_content_offset": "$unchecked_offset",
+                "$tab_texture": "$unchecked_locked_image",
+                "$tab_content_layer": 1
+              }
             },
             {
-              "unchecked_locked_hover@$tab_panel": {"offset": "$unchecked_offset", "$tab_texture": "$unchecked_locked_hover_image", "layer": -5}
+              "unchecked_locked_hover@$tab_panel": {
+                "$toggle_offset": "$toggle_base_offset_unchecked",
+                "$tab_content_offset": "$unchecked_offset",
+                "$tab_texture": "$unchecked_locked_hover_image",
+                "$tab_content_layer": 1
+              }
             },
             {
-              "checked@$tab_panel": {"offset": "$checked_offset", "$tab_texture": "$checked_default_image", "layer": 2}
+              "checked@$tab_panel": {
+                "$toggle_offset": "$toggle_base_offset_checked",
+                "$tab_content_offset": "$checked_offset",
+                "$tab_texture": "$checked_default_image",
+                "$tab_content_layer": 5
+              }
             },
             {
-              "checked_hover@$tab_panel": {"offset": "$checked_offset", "$tab_texture": "$checked_hover_image", "layer": 2}
+              "checked_hover@$tab_panel": {
+                "$toggle_offset": "$toggle_base_offset_checked",
+                "$tab_content_offset": "$checked_offset",
+                "$tab_texture": "$checked_hover_image",
+                "$tab_content_layer": 5
+              }
             },
             {
-              "checked_locked@$tab_panel": {"offset": "$checked_offset", "$tab_texture": "$checked_locked_image", "layer": 2}
+              "checked_locked@$tab_panel": {
+                "$toggle_offset": "$toggle_base_offset_checked",
+                "$tab_content_offset": "$checked_offset",
+                "$tab_texture": "$checked_locked_image",
+                "$tab_content_layer": 5
+              }
             },
             {
-              "checked_locked_hover@$tab_panel": {"offset": "$checked_offset", "$tab_texture": "$checked_locked_hover_image", "layer": 2}
+              "checked_locked_hover@$tab_panel": {
+                "$toggle_offset": "$toggle_base_offset_checked",
+                "$tab_content_offset": "$checked_offset",
+                "$tab_texture": "$checked_locked_hover_image",
+                "$tab_content_layer": 5
+              }
             }
           ]
         }

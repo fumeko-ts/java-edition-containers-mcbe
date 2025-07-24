@@ -4,16 +4,40 @@
     "size": [ 195, 192 ],
     "anchor_to": "center",
     "anchor_from": "center",
+    "$is_creative_survival_tab": true,
     "controls": [
-      {"tabs@creative_tabs.tab_stack": {"$is_creative": true}},
-      {"inventory@creative_inventory.passthrew_inventory": {"$tab_trigger_name": "tab"}},
-      {"items@creative_inventory.passthrew_vanilla": {"$tab_trigger_name": "construction_tab_toggle"}},
-      {"items@creative_inventory.passthrew_vanilla": {"$tab_trigger_name": "equipment_tab_toggle"}},
-      {"items@creative_inventory.passthrew_vanilla": {"$tab_trigger_name": "nature_tab_toggle"}},
-      {"items@creative_inventory.passthrew_vanilla": {"$tab_trigger_name": "items_tab_toggle"}},
-      {"items@creative_inventory.passthrew_search": {"$tab_trigger_name": "search_tab_toggle"}},
       {
-        "inventory_tab@creative_tabs.inventory_tab": {"anchor_to": "bottom_right", "anchor_from": "bottom_right"}
+        "tab_stack@global.empty_stack_panel": {
+          "orientation": "horizontal",
+          "size": [ 195, 32 ],
+          "anchor_to": "top_middle",
+          "anchor_from": "top_middle",
+          "$is_creative": true,
+          "controls": [
+            {"construction@creative_inventory.construction_tab": {}},
+            {"buffer_1": {"type": "panel", "size": [ 1, "default" ]}},
+            {"equipment@creative_inventory.equipment_tab": {}},
+            {"buffer_2": {"type": "panel", "size": [ 1, "default" ]}},
+            {"nature@creative_inventory.nature_tab": {}},
+            {"buffer_3": {"type": "panel", "size": [ 1, "default" ]}},
+            {"items@creative_inventory.items_tab": {}},
+            {"buffer_4": {"type": "panel", "size": [ 62, "default" ]}},
+            {"search_tab@creative_inventory.search_tab": {}}
+          ]
+        }
+      },
+      {
+        "inventory@creative_inventory.tab_contents": {"$tab_contents_is": "inventory_page", "$tab_binding": "inventory_tab_toggle"}
+      },
+      {"items@creative_inventory.tab_contents": {"$tab_binding": "construction_tab_toggle"}},
+      {"items@creative_inventory.tab_contents": {"$tab_binding": "equipment_tab_toggle"}},
+      {"items@creative_inventory.tab_contents": {"$tab_binding": "nature_tab_toggle"}},
+      {"items@creative_inventory.tab_contents": {"$tab_binding": "items_tab_toggle"}},
+      {
+        "items@creative_inventory.tab_contents": {"$tab_contents_is": "search_page", "$tab_binding": "search_tab_toggle"}
+      },
+      {
+        "inventory_tab@creative_inventory.inventory_tab": {"anchor_to": "bottom_right", "anchor_from": "bottom_right"}
       },
       {
         "scroll_panel@creative_inventory.scroll_panel": {
@@ -23,7 +47,7 @@
           "bindings": [
             {
               "binding_type": "view",
-              "source_control_name": "tab",
+              "source_control_name": "inventory_tab_toggle",
               "source_property_name": "(not #toggle_state)",
               "target_property_name": "#visible"
             }
@@ -35,40 +59,25 @@
       {"binding_type": "global", "binding_name": "#is_creative_mode", "binding_name_override": "#visible"}
     ]
   },
-  "passthrew_vanilla@misc_tabs_creative.base_panel": {
-    "$tab_trigger_name|default": "",
-    "bindings": [
+  "tab_contents@global.empty_panel": {
+    "$tab_contents_is": "misc_page",
+    "$tab_ui|default": "('creative_inventory.' + $tab_contents_is)",
+    "controls": [
       {
-        "binding_type": "view",
-        "source_control_name": "$tab_trigger_name",
-        "source_property_name": "#toggle_state",
-        "target_property_name": "#visible"
+        "page@$tab_ui": {
+          "bindings": [
+            {
+              "binding_type": "view",
+              "source_control_name": "$tab_binding",
+              "source_property_name": "#toggle_state",
+              "target_property_name": "#visible"
+            }
+          ]
+        }
       }
     ]
   },
-  "passthrew_inventory@inventory_tab_creative.base_panel": {
-    "$tab_trigger_name|default": "",
-    "bindings": [
-      {
-        "binding_type": "view",
-        "source_control_name": "$tab_trigger_name",
-        "source_property_name": "#toggle_state",
-        "target_property_name": "#visible"
-      }
-    ]
-  },
-  "passthrew_search@search_tabs_creative.base_panel": {
-    "$tab_trigger_name|default": "",
-    "bindings": [
-      {
-        "binding_type": "view",
-        "source_control_name": "$tab_trigger_name",
-        "source_property_name": "#toggle_state",
-        "target_property_name": "#visible"
-      }
-    ]
-  },
-  "scroll_panel@common.common_container_scrolling_panel": {
+  "scroll_panel@scroll_panel.common_container_scrolling_panel": {
     "offset": [ 0.4, 5.4 ],
     "anchor_to": "center",
     "anchor_from": "center",
@@ -110,6 +119,248 @@
               "binding_condition": "$binding_condition",
               "binding_type": "collection",
               "binding_collection_name": "recipe_book"
+            }
+          ]
+        }
+      }
+    ]
+  },
+  "icon_control@screen_content.image_element": {
+    "texture": "$icon_for_tab",
+    "size": "$tab_icon_size",
+    "$icon_for_tab": "",
+    "keep_ratio": true,
+    "$tab_icon_size": [ 17, 17 ],
+    "offset": [ 0, 1 ],
+    "variables": [
+      {
+        "requires": "($tab_view_binding_name = search_tab_toggle)",
+        "$tab_icon_size": [ 16, 16 ],
+        "$icon_for_tab": "textures/atemp/item/compass_28.png"
+      },
+      {
+        "requires": "($tab_view_binding_name = equipment_tab_toggle)",
+        "$tab_icon_size": [ 16, 16 ],
+        "$icon_for_tab": "textures/atemp/item/iron_sword.png"
+      },
+      {
+        "requires": "($tab_view_binding_name = nature_tab_toggle)",
+        "$tab_icon_size": [ 18, 18 ],
+        "$icon_for_tab": "('textures/atemp/block/' + $nature_tab_texture)"
+      },
+      {
+        "requires": "($tab_view_binding_name = items_tab_toggle)",
+        "$tab_icon_size": [ 16, 16 ],
+        "$icon_for_tab": "textures/atemp/item/redstone"
+      },
+      {
+        "requires": "($tab_view_binding_name = construction_tab_toggle)",
+        "$tab_icon_size": [ 18, 18 ],
+        "$icon_for_tab": "textures/atemp/icon_recipe_construction"
+      },
+      {
+        "requires": "($tab_view_binding_name = inventory_tab_toggle)",
+        "$tab_icon_size": [ 18, 18 ],
+        "$icon_for_tab": "textures/atemp/block/chest"
+      }
+    ]
+  },
+  "icon_holder@global.empty_panel": {"size": [ 24, 25 ], "controls": [
+      {"img@$tab_icon": {}}
+    ]},
+  "top_tab@toggle.toggle": {
+    "type": "panel",
+    "size": [ 26, 32 ],
+    "$toggle_binding_type": "global",
+    "$toggle_focus_enabled": true,
+    "$toggle_name": "navigation_tab",
+    "$tab_icon": "creative_inventory.icon_control",
+    "$toggle_state_binding_name": "#toggle_state",
+    "$tab_content": "creative_inventory.icon_holder"
+  },
+  "search_tab@creative_inventory.top_tab": {
+    "$is_top_right_tab": true,
+    "$tab_view_binding_name": "search_tab_toggle",
+    "$toggle_group_forced_index": "$search_index",
+    "$toggle_state_binding_name": "#is_left_tab_search"
+  },
+  "equipment_tab@creative_inventory.top_tab": {
+    "$tab_view_binding_name": "equipment_tab_toggle",
+    "$toggle_group_forced_index": "$equipment_index",
+    "$toggle_state_binding_name": "#is_left_tab_equipment"
+  },
+  "nature_tab@creative_inventory.top_tab": {
+    "$tab_view_binding_name": "nature_tab_toggle",
+    "$toggle_group_forced_index": "$nature_index",
+    "$toggle_state_binding_name": "#is_left_tab_nature"
+  },
+  "items_tab@creative_inventory.top_tab": {
+    "$tab_view_binding_name": "items_tab_toggle",
+    "$toggle_group_forced_index": "$items_index",
+    "$toggle_state_binding_name": "#is_left_tab_items"
+  },
+  "construction_tab@creative_inventory.top_tab": {
+    "$is_top_left_tab": true,
+    "$tab_view_binding_name": "construction_tab_toggle",
+    "$toggle_group_forced_index": "$construction_index",
+    "$toggle_state_binding_name": "#is_left_tab_construct"
+  },
+  "inventory_tab@creative_inventory.top_tab": {
+    "$is_bottom_right_tab": true,
+    "$unchecked_offset|default": [ 0, -2 ],
+    "$checked_offset|default": [ 0, 2 ],
+    "$tab_view_binding_name": "inventory_tab_toggle",
+    "$toggle_group_forced_index": "($search_index + 1)"
+  },
+  "tab_base_template@global.empty_panel": {"size": [ 195, 136 ], "anchor_to": "center", "anchor_from": "center"},
+  "inventory_page@creative_inventory.tab_base_template": {
+    "controls": [
+      {
+        "inventory_tab_base@screen_content.creative_inventory": {
+          "size": [ 195, 136 ],
+          "anchor_to": "center",
+          "anchor_from": "center",
+          "controls": [
+            {
+              "inventory_top_half_creative@global.empty_stack_panel": {
+                "orientation": "vertical",
+                "size": [ 125, 50 ],
+                "anchor_to": "top_left",
+                "anchor_from": "top_left",
+                "controls": [
+                  {"buffer_1": {"type": "panel", "size": [ "default", 5 ]}},
+                  {
+                    "stack_1@global.empty_stack_panel": {
+                      "orientation": "horizontal",
+                      "size": [ 125, 45 ],
+                      "controls": [
+                        {"buffer_1": {"type": "panel", "size": [ 34, "default" ]}},
+                        {
+                          "stack_2@global.empty_stack_panel": {
+                            "orientation": "vertical",
+                            "size": [ 18, 45 ],
+                            "controls": [
+                              {"buffer_1": {"type": "panel", "size": [ "default", 14 ]}},
+                              {"offhand_slot@crafting_common.offhand_slot_creative": {}},
+                              {"buffer_1": {"type": "panel", "size": [ "default", 13 ]}}
+                            ]
+                          }
+                        },
+                        {"buffer_2": {"type": "panel", "size": [ 1, "default" ]}},
+                        {"head_and_chest@crafting_common.head_and_chest_creative": {}},
+                        {"buffer_3": {"type": "panel", "size": [ 1, "default" ]}},
+                        {"player_renderer_panel@crafting_common.player_renderer_panel": {}},
+                        {"buffer_4": {"type": "panel", "size": [ 1, "default" ]}},
+                        {"legs_and_boots@crafting_common.legs_and_boots_creative": {}}
+                      ]
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "inventory_cells@crafting_screen.inventory_bottom_half_with_label": {"$grid_cell_offset": [ 8, 0 ], "$inventory_panel_offset": "bottom_left"}
+            },
+            {
+              "item_remover@container_common.item_remover": {"offset": [ -6, -8 ], "anchor_to": "bottom_right", "anchor_from": "bottom_right"}
+            }
+          ]
+        }
+      }
+    ]
+  },
+  "misc_page@creative_inventory.tab_base_template": {
+    "controls": [
+      {
+        "misc_tab_base@screen_content.creative_inventory_misc": {
+          "anchor_to": "center",
+          "anchor_from": "center",
+          "size": [ 195, 136 ],
+          "controls": [
+            {
+              "stack_1@global.empty_stack_panel": {
+                "orientation": "horizontal",
+                "size": [ 152, 25 ],
+                "anchor_to": "bottom_left",
+                "anchor_from": "bottom_left",
+                "controls": [
+                  {"buffer_1": {"type": "panel", "size": [ 8, "default" ]}},
+                  {
+                    "stack@global.empty_stack_panel": {
+                      "orientation": "vertical",
+                      "size": [ 144, 25 ],
+                      "controls": [
+                        {"hotbar@global.hotbar": {}},
+                        {"buffer_2": {"type": "panel", "size": [ "default", 9 ]}}
+                      ]
+                    }
+                  }
+                ]
+              }
+            }
+          ]
+        }
+      }
+    ]
+  },
+  "search_page@creative_inventory.tab_base_template": {
+    "controls": [
+      {
+        "search_holder@global.empty_stack_panel": {
+          "orientation": "vertical",
+          "size": [ 116, 16 ],
+          "anchor_to": "top_right",
+          "anchor_from": "top_right",
+          "layer": 20,
+          "controls": [
+            {"filler_1@global.empty_panel": {"size": [ "default", 4 ]}},
+            {
+              "search_extra_padding@global.empty_stack_panel": {
+                "orientation": "horizontal",
+                "size": [ 116, "default" ],
+                "controls": [
+                  {
+                    "search@crafting_common.text_edit_control": {
+                      "$text_box_size": [ 90, 12 ],
+                      "$place_holder_text": "\u00a7z",
+                      "$text_edit_box_label_offset": [ 0, -1 ],
+                      "$text_background_default": "global.empty_image",
+                      "$text_background_hover": "global.empty_image"
+                    }
+                  },
+                  {"filler_2@global.empty_panel": {"size": [ 26, "default" ]}}
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "search_tab_base@screen_content.creative_inventory_search": {
+          "anchor_to": "center",
+          "anchor_from": "center",
+          "size": [ 195, 136 ],
+          "controls": [
+            {
+              "stack_1@global.empty_stack_panel": {
+                "orientation": "horizontal",
+                "size": [ 152, 25 ],
+                "anchor_to": "bottom_left",
+                "anchor_from": "bottom_left",
+                "controls": [
+                  {"buffer_1": {"type": "panel", "size": [ 8, "default" ]}},
+                  {
+                    "stack@global.empty_stack_panel": {
+                      "orientation": "vertical",
+                      "size": [ 144, 25 ],
+                      "controls": [
+                        {"hotbar@global.hotbar": {}},
+                        {"buffer_2": {"type": "panel", "size": [ "default", 9 ]}}
+                      ]
+                    }
+                  }
+                ]
+              }
             }
           ]
         }

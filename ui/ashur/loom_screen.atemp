@@ -101,7 +101,6 @@
     "layer": 1,
     "size": [ 176, 166 ],
     "controls": [
-      {"common_panel@screen_content.container_base": {"$loom_screen": true}},
       {
         "loom_screen_inventory": {
           "type": "panel",
@@ -437,20 +436,28 @@
     "anchor_to": "center",
     "anchor_from": "center",
     "$screen_controls": [
-      {"loom_label@loom_screen.loom_label": {}},
+      {"common_panel@screen_content.container_base": {"$loom_screen": true}},
       {
-        "loom_scroll": {
-          "type": "panel",
-          "size": [ 73, 56 ],
-          "anchor_to": "center",
-          "anchor_from": "center",
-          "offset": [ -50, -50.6 ],
+        "screen_temp_holder@global.empty_panel": {
+          "offset": [ -2, -4 ],
           "controls": [
-            {"scroll_panel@loom_screen.scroll_panel": {}}
+            {"loom_label@loom_screen.loom_label": {}},
+            {
+              "loom_scroll": {
+                "type": "panel",
+                "size": [ 73, 56 ],
+                "anchor_to": "center",
+                "anchor_from": "center",
+                "offset": [ -50, -50.6 ],
+                "controls": [
+                  {"scroll_panel@loom_screen.scroll_panel": {}}
+                ]
+              }
+            },
+            {"screen_stack_panel@loom_screen.screen_stack_panel": {}}
           ]
         }
-      },
-      {"screen_stack_panel@loom_screen.screen_stack_panel": {}}
+      }
     ]
   }
 }

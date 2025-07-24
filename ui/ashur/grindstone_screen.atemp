@@ -157,25 +157,25 @@
       }
     ]
   },
-  "top_half_panel": {
+  "grindstone_content": {
     "type": "panel",
     "anchor_from": "top_left",
     "anchor_to": "top_left",
     "size": [ "100% - 8px", "50% - 8px" ],
     "offset": [ 17, 4 ],
     "controls": [
-      {"title_label@grindstone_screen.title_label": {"offset": [ -9, 4 ]}},
-      {"grindstone_slots_panel@grindstone_screen.grindstone_slots_panel": {"offset": [ 0, 4 ]}}
+      {"title_label@grindstone_screen.title_label": {"offset": [ -9, 1 ]}},
+      {"grindstone_slots_panel@grindstone_screen.grindstone_slots_panel": {"offset": [ 0, 1 ]}}
     ]
   },
   "grindstone_panel@container_common.container_details": {
     "size": [ 176, 166 ],
-    "layer": 2,
     "$screen_controls": [
       {"common_panel@screen_content.container_base": {"$grindstone_screen": true}},
-      {"top_half_panel@grindstone_screen.top_half_panel": {}},
-      {"inventory_panel_bottom_half_with_label@common.inventory_panel_bottom_half_with_label": {}},
-      {"hotbar_grid@common.hotbar_grid_template": {"offset": [ 0, -4 ]}}
+      {"grindstone_content@grindstone_screen.grindstone_content": {}},
+      {
+        "bottom@crafting_screen.inventory_bottom_half_with_label": {"anchor_to": "bottom_middle", "anchor_from": "bottom_middle"}
+      }
     ]
   }
 }
