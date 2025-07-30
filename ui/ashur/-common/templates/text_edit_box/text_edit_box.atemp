@@ -3,26 +3,32 @@
   "text_field@common.text_edit_box": {
     "$text_clear_button_enabled|default": false,
     "$text_panel_size_minus_1px|default": [ 80, 14 ],
-    "$text_background_default": "screen_content.text_field",
+    "$text_panel_size": [ 81, 14 ],
+    "$text_box_bg_offset": [ 0, 0 ],
+    "$text_clear_offset": [ 0, 0 ],
+    "$text_background_default": "screen_content.text_field_highlighted",
     "$text_background_hover": "screen_content.text_field_highlighted",
+    "$text_background_locked": "screen_content.text_field",
     "controls": [
       {
         "text_box_panel": {
           "type": "panel",
           "size": "$text_panel_size",
-          "$text_panel_size": [ 81, 14 ],
           "controls": [
             {
               "delete_text_button": {
                 "type": "panel",
                 "size": [ 14, 14 ],
+                "offset": "$text_clear_offset",
                 "anchor_to": "right_middle",
                 "anchor_from": "right_middle",
                 "visible": "$text_clear_button_enabled",
+                "variables": {"requires": "($text_clear_button_enabled = false)", "$exit_button_bindings": []},
                 "controls": [
                   {"delete_text_button@common.clear_text_button": {"layer": 10}}
                 ],
-                "bindings": [
+                "bindings": "$exit_button_bindings",
+                "$exit_button_bindings": [
                   {
                     "binding_type": "global",
                     "binding_name": "#show_clear_text_button",
@@ -74,6 +80,7 @@
                   {
                     "visibility_panel": {
                       "type": "panel",
+                      "size": "$text_panel_size",
                       "controls": [
                         {"place_holder_control@text_edit_box.text_field_place_holder_label": {}}
                       ],
@@ -92,24 +99,32 @@
               }
             },
             {
-              "default@text_edit_box.control_panel_template": {"controls": [
-                  {"texture@$text_background_default": {}}
-                ]}
+              "default@text_edit_box.control_panel_template": {
+                "controls": [
+                  {"texture@$text_background_default": {"offset": "$text_box_bg_offset"}}
+                ]
+              }
             },
             {
-              "hover@text_edit_box.control_panel_template": {"controls": [
-                  {"texture@$text_background_hover": {}}
-                ]}
+              "hover@text_edit_box.control_panel_template": {
+                "controls": [
+                  {"texture@$text_background_hover": {"offset": "$text_box_bg_offset"}}
+                ]
+              }
             },
             {
-              "pressed@text_edit_box.control_panel_template": {"controls": [
-                  {"texture@$text_background_default": {}}
-                ]}
+              "pressed@text_edit_box.control_panel_template": {
+                "controls": [
+                  {"texture@$text_background_default": {"offset": "$text_box_bg_offset"}}
+                ]
+              }
             },
             {
-              "locked@text_edit_box.control_panel_template": {"controls": [
-                  {"texture@$text_background_default": {}}
-                ]}
+              "locked@text_edit_box.control_panel_template": {
+                "controls": [
+                  {"texture@$text_background_locked": {"offset": "$text_box_bg_offset"}}
+                ]
+              }
             }
           ]
         }

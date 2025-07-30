@@ -80,7 +80,7 @@
   },
   "inventory_container_slot_button@global.cell_button_prototype": {
     "sound_name": "random.click",
-    "sound_volume": 4.0,
+    "sound_volume": 0.0,
     "$button_take_half_place_one|default": "button.container_take_half_place_one",
     "$button_auto_place|default": "button.container_auto_place",
     "$button_take_all_place_all|default": "button.container_take_all_place_all",

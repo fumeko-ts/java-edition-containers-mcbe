@@ -142,8 +142,7 @@
                                   "offset": [ 1, -9 ],
                                   "anchor_from": "top_left",
                                   "anchor_to": "top_left",
-                                  "text": "$container_title",
-                                  "$container_title": "Stonecutter",
+                                  "text": "atemp.container.stonecutter",
                                   "color": "$title_text_color",
                                   "layer": 2
                                 }

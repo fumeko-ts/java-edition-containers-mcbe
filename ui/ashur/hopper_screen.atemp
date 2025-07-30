@@ -7,35 +7,50 @@
     "$screen_controls": [
       {"common_panel@screen_content.container_base": {"$hopper_screen": true}},
       {
-        "item_hopper_label": {
-          "type": "label",
-          "offset": [ 8, 5 ],
-          "anchor_from": "top_left",
-          "anchor_to": "top_left",
-          "text": "$container_title",
-          "$container_title": "Item Hopper",
-          "color": "$title_text_color",
-          "layer": 2
-        }
-      },
-      {
-        "red_panel": {
-          "type": "panel",
-          "size": [ "100%", "50% - 12px" ],
-          "offset": [ 0, 0.6 ],
-          "anchor_to": "top_left",
-          "anchor_from": "top_left",
+        "hopper_top_half@global.empty_stack": {
+          "orientation": "vertical",
+          "size": [ 176, 37 ],
+          "anchor_to": "top_middle",
+          "anchor_from": "top_middle",
           "controls": [
+            {"filler_1@global.empty_panel": {"size": [ "fill", 6 ]}},
             {
-              "redstone_input_grid": {
-                "type": "grid",
-                "anchor_from": "center",
-                "anchor_to": "center",
-                "offset": [ 0, 0 ],
-                "grid_dimensions": [ 5, 1 ],
-                "collection_name": "container_items",
-                "grid_item_template": "common.container_item",
-                "$item_collection_name": "container_items"
+              "hopper_label_holder": {
+                "type": "input_panel",
+                "contained": true,
+                "size": [ 176, 13 ],
+                "controls": [
+                  {
+                    "item_hopper_label": {
+                      "type": "label",
+                      "offset": [ 8, 0 ],
+                      "anchor_from": "top_left",
+                      "anchor_to": "top_left",
+                      "text": "atemp.container.hopper",
+                      "color": "$title_text_color"
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "hopper_grid_holder@global.empty_stack": {
+                "orientation": "horizontal",
+                "size": [ 176, 18 ],
+                "controls": [
+                  {"filler_2@global.empty_panel": {"size": [ 43, "fill" ]}},
+                  {
+                    "hopper_input_grid": {
+                      "type": "grid",
+                      "size": [ 90, 18 ],
+                      "grid_dimensions": [ 5, 1 ],
+                      "collection_name": "container_items",
+                      "grid_item_template": "common.container_item",
+                      "$item_collection_name": "container_items"
+                    }
+                  },
+                  {"filler_3@global.empty_panel": {"size": [ 43, "fill" ]}}
+                ]
               }
             }
           ]

@@ -166,5 +166,20 @@
         "mapping_type": "pressed"
       }
     ]
+  },
+  "base_button@common.button": {
+    "sound_volume": 0.0,
+    "layer": 22,
+    "size": [ 108, 19 ],
+    "bindings": [
+      {"binding_type": "collection_details", "binding_collection_name": "$binding_collection"},
+      {
+        "binding_name": "$visibility_binding_name",
+        "binding_name_override": "#visible",
+        "binding_condition": "always",
+        "binding_collection_name": "$binding_collection",
+        "binding_type": "collection"
+      }
+    ]
   }
 }

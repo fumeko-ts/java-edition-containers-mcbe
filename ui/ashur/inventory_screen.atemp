@@ -3,7 +3,7 @@
   "screen_base@global.root_panel": {
     "controls": [
       {
-        "base_horizontal_Stack@global.empty_stack_panel": {
+        "base_horizontal_Stack@global.empty_stack": {
           "orientation": "horizontal",
           "anchor_to": "center",
           "anchor_from": "center",
@@ -73,14 +73,14 @@
   "inventory@global.root_panel": {
     "size": [ 176, 166 ],
     "controls": [
-      {"container@screen_content.container_base": {"$inventory_screen": true, "contained": true}},
+      {"container@screen_content.container_base": {"$inventory_screen": true}},
       {
         "inventory_crafting_stack": {
           "type": "panel",
           "size": [ 176, 166 ],
           "controls": [
             {
-              "cell_stack@global.empty_stack_panel": {
+              "cell_stack@global.empty_stack": {
                 "orientation": "vertical",
                 "size": [ 79, 79 ],
                 "anchor_to": "top_right",
@@ -95,12 +95,12 @@
                       "layer": 2,
                       "size": [ "100%", 10 ],
                       "color": "$title_text_color",
-                      "text": "container.crafting"
+                      "text": "atemp.container.crafting"
                     }
                   },
                   {"buffer_1": {"type": "panel", "size": [ "default", 2 ]}},
                   {
-                    "cell_stack@global.empty_stack_panel": {
+                    "cell_stack@global.empty_stack": {
                       "orientation": "horizontal",
                       "size": [ 79, 36 ],
                       "controls": [
@@ -150,7 +150,7 @@
                         },
                         {"buffer_2": {"type": "panel", "size": [ 20, 36 ]}},
                         {
-                          "cell_stack@global.empty_stack_panel": {
+                          "cell_stack@global.empty_stack": {
                             "orientation": "vertical",
                             "size": [ 23, 36 ],
                             "controls": [
@@ -189,7 +189,7 @@
                   },
                   {"buffer_1": {"type": "panel", "size": [ "default", 7 ]}},
                   {
-                    "cell_stack@global.empty_stack_panel": {
+                    "cell_stack@global.empty_stack": {
                       "orientation": "horizontal",
                       "size": [ 79, 18 ],
                       "controls": [
@@ -213,7 +213,7 @@
           "size": [ 176, 166 ],
           "controls": [
             {
-              "cell_stack@global.empty_stack_panel": {
+              "cell_stack@global.empty_stack": {
                 "orientation": "vertical",
                 "size": [ 162, 83 ],
                 "anchor_to": "bottom_middle",
@@ -245,7 +245,7 @@
     "size": [ 176, 166 ],
     "controls": [
       {
-        "stack_top_buffer_stack@global.empty_stack_panel": {
+        "stack_top_buffer_stack@global.empty_stack": {
           "orientation": "vertical",
           "anchor_to": "top_left",
           "anchor_from": "top_left",
@@ -253,7 +253,7 @@
           "controls": [
             {"buffer_1": {"type": "panel", "size": [ "default", 7 ]}},
             {
-              "cell_stack@global.empty_stack_panel": {
+              "cell_stack@global.empty_stack": {
                 "orientation": "horizontal",
                 "size": [ 94, 79 ],
                 "controls": [
@@ -261,7 +261,7 @@
                   {"armor_grid@inventory_screen.armor_grid": {}},
                   {"player_renderer_panel@inventory_screen.player_render_float": {}},
                   {
-                    "offhand_stack@global.empty_stack_panel": {
+                    "offhand_stack@global.empty_stack": {
                       "orientation": "vertical",
                       "size": [ 18, 72 ],
                       "controls": [
@@ -386,7 +386,7 @@
     "size": [ 176, 166 ],
     "controls": [
       {
-        "cell_stack@global.empty_stack_panel": {
+        "cell_stack@global.empty_stack": {
           "orientation": "vertical",
           "size": [ 162, 83 ],
           "anchor_to": "bottom_middle",

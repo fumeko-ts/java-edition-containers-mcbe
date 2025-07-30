@@ -33,7 +33,7 @@
   "cell_image_panel/cell_image_selected": {"ignored": true},
   "container_slot_button_prototype": {
     "type": "button",
-    "offset": [-1, -1],
+    "offset": [ -1, -1 ],
     "$focus_id|default": "",
     "$focus_override_down|default": "",
     "$focus_override_up|default": "",
@@ -160,13 +160,12 @@
       {"to_button_id": "button.container_slot_hovered", "mapping_type": "pressed"}
     ],
     "controls": [
-      {"hover@$highlight_control": {"offset": [1,1]}},
-      {"pressed@$highlight_control": {"offset": [1,1]}}
+      {"hover@$highlight_control": {"offset": [ 1, 1 ]}},
+      {"pressed@$highlight_control": {"offset": [ 1, 1 ]}}
     ]
   },
   "container_item": {
     "type": "input_panel",
-    
     "$white_highlight_slot_offset": [ 1, 1 ],
     "size": [ 18, 18 ],
     "layer": 1,
@@ -182,7 +181,6 @@
     "$item_renderer_offset|default": [ 0, 0 ],
     "$background_images|default": "common.cell_image_panel",
     "$background_image_control_name|default": "bg",
-
     "$focus_id|default": "",
     "$focus_override_down|default": "",
     "$focus_override_up|default": "",
@@ -197,7 +195,6 @@
     "focus_wrap_enabled": false,
     "focus_magnet_enabled": true,
     "tts_ignore_count": true,
-
     "controls": [
       {
         "item_cell": {
@@ -205,22 +202,14 @@
           "size": "$cell_image_size",
           "layer": 0,
           "controls": [
-            {
-              "$background_image_control_name@$background_images": {
-                "layer": 1
-              }
-            },
+            {"$background_image_control_name@$background_images": {"layer": 1}},
             {
               "item": {
                 "type": "panel",
                 "size": "$item_renderer_panel_size",
                 "layer": 0,
                 "controls": [
-                  {
-                    "stack_count_label@common.stack_count_label": {
-                      "layer": 27
-                    }
-                  },
+                  {"stack_count_label@common.stack_count_label": {"layer": 27}},
                   {
                     "$item_renderer@$item_renderer": {
                       "size": "$item_renderer_size",
@@ -233,36 +222,15 @@
                 ]
               }
             },
-            {
-              "durability_bar@common.durability_bar": {
-                "layer": 20
-              }
-            },
-            {
-              "storage_bar@common.storage_bar": {
-                "layer": 20
-              }
-            }
+            {"durability_bar@common.durability_bar": {"layer": 20}},
+            {"storage_bar@common.storage_bar": {"layer": 20}}
           ]
         }
       },
+      {"item_cell_overlay_ref@$cell_overlay_ref": {"layer": 3}},
+      {"item_selected_image@common.slot_selected": {"layer": 4}},
       {
-        "item_cell_overlay_ref@$cell_overlay_ref": {
-          "layer": 3
-        }
-      },
-      {
-        "item_selected_image@common.slot_selected": {
-          "layer": 4
-        }
-      },
-      {
-        "item_button_ref@$button_ref": {
-          "tts_ignore_count": true,
-          "tts_skip_message": true,
-          "tts_inherit_siblings": true,
-          "layer": 5
-        }
+        "item_button_ref@$button_ref": {"tts_ignore_count": true, "tts_skip_message": true, "tts_inherit_siblings": true, "layer": 5}
       },
       {
         "container_item_lock_overlay@common.container_item_lock_overlay": {
@@ -273,16 +241,8 @@
           "layer": 6
         }
       },
-      {
-        "item_lock_cell_image@common.item_lock_cell_image": {
-          "layer": 2
-        }
-      },
-      {
-        "bundle_slot_panel@gameplay.bundle_slot_panel": {
-          "layer": 10
-        }
-      }
+      {"item_lock_cell_image@common.item_lock_cell_image": {"layer": 2}},
+      {"bundle_slot_panel@gameplay.bundle_slot_panel": {"layer": 10}}
     ]
   }
 }

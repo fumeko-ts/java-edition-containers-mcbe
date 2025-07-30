@@ -4,7 +4,11 @@
     "type": "panel",
     "$tab_content|default": "global.empty_panel",
     "$texture_sould_keep_ratio|default": false,
+    "$toggle_hover_text|default": "null",
+    "variables": {"requires": "($toggle_hover_text = 'null')", "$hover_path|default": "global.empty_panel"},
+    "$hover_path|default": "global.hover_text",
     "controls": [
+      {"hover_text@$hover_path": {"property_bag": {"#hover_text": "$toggle_hover_texts"}}},
       {
         "tab_image@screen_content.image_element": {
           "anchor_to": "center",
@@ -43,6 +47,8 @@
     "$toggle_base_offset_checked|default": [ 0, 0 ],
     "$toggle_base_offset_unchecked|default": [ 0, 0 ],
     "$toggle_tts_enabled_binding_type": "global",
+    "$toggle_hover_text|default": "null",
+    "$toggle_hover_texts|default": "hover_text_not_set",
     "controls": [
       {
         "$tab_view_binding_name@common.toggle": {
@@ -52,6 +58,7 @@
           "controls": [
             {
               "unchecked@$tab_panel": {
+                "$toggle_hover_text": "null",
                 "$toggle_offset": "$toggle_base_offset_unchecked",
                 "$tab_content_offset": "$unchecked_offset",
                 "$tab_texture": "$unchecked_default_image",
@@ -60,6 +67,7 @@
             },
             {
               "unchecked_hover@$tab_panel": {
+                "$toggle_hover_texts": "$toggle_hover_text",
                 "$toggle_offset": "$toggle_base_offset_unchecked",
                 "$tab_content_offset": "$unchecked_offset",
                 "$tab_texture": "$unchecked_hover_image",
@@ -68,6 +76,7 @@
             },
             {
               "unchecked_locked@$tab_panel": {
+                "$toggle_hover_text": "null",
                 "$toggle_offset": "$toggle_base_offset_unchecked",
                 "$tab_content_offset": "$unchecked_offset",
                 "$tab_texture": "$unchecked_locked_image",
@@ -76,6 +85,7 @@
             },
             {
               "unchecked_locked_hover@$tab_panel": {
+                "$toggle_hover_texts": "$toggle_hover_text",
                 "$toggle_offset": "$toggle_base_offset_unchecked",
                 "$tab_content_offset": "$unchecked_offset",
                 "$tab_texture": "$unchecked_locked_hover_image",
@@ -84,6 +94,7 @@
             },
             {
               "checked@$tab_panel": {
+                "$toggle_hover_text": "null",
                 "$toggle_offset": "$toggle_base_offset_checked",
                 "$tab_content_offset": "$checked_offset",
                 "$tab_texture": "$checked_default_image",
@@ -92,6 +103,7 @@
             },
             {
               "checked_hover@$tab_panel": {
+                "$toggle_hover_texts": "$toggle_hover_text",
                 "$toggle_offset": "$toggle_base_offset_checked",
                 "$tab_content_offset": "$checked_offset",
                 "$tab_texture": "$checked_hover_image",
@@ -100,6 +112,7 @@
             },
             {
               "checked_locked@$tab_panel": {
+                "$toggle_hover_text": "null",
                 "$toggle_offset": "$toggle_base_offset_checked",
                 "$tab_content_offset": "$checked_offset",
                 "$tab_texture": "$checked_locked_image",
@@ -108,6 +121,7 @@
             },
             {
               "checked_locked_hover@$tab_panel": {
+                "$toggle_hover_texts": "$toggle_hover_text",
                 "$toggle_offset": "$toggle_base_offset_checked",
                 "$tab_content_offset": "$checked_offset",
                 "$tab_texture": "$checked_locked_hover_image",

@@ -1,0 +1,420 @@
+Path        : C:\Users\ashur\AppData\Roaming\.minecraft_bedrock\installations\Latest Release\packageData\development_resource_packs\.JavaConta\ui\anvil_screen.json
+Name        : anvil_screen.json
+Size (bytes): 127
+Encoding    : ascii
+Characters  : 124
+----------------------------------------
+Path        : C:\Users\ashur\AppData\Roaming\.minecraft_bedrock\installations\Latest Release\packageData\development_resource_packs\.JavaConta\ui\beacon_screen.json
+Name        : beacon_screen.json
+Size (bytes): 131
+Encoding    : ascii
+Characters  : 128
+----------------------------------------
+Path        : C:\Users\ashur\AppData\Roaming\.minecraft_bedrock\installations\Latest Release\packageData\development_resource_packs\.JavaConta\ui\blast_furnace_screen.json
+Name        : blast_furnace_screen.json
+Size (bytes): 115
+Encoding    : ascii
+Characters  : 112
+----------------------------------------
+Path        : C:\Users\ashur\AppData\Roaming\.minecraft_bedrock\installations\Latest Release\packageData\development_resource_packs\.JavaConta\ui\brewing_stand_screen.json
+Name        : brewing_stand_screen.json
+Size (bytes): 153
+Encoding    : ascii
+Characters  : 150
+----------------------------------------
+Path        : C:\Users\ashur\AppData\Roaming\.minecraft_bedrock\installations\Latest Release\packageData\development_resource_packs\.JavaConta\ui\cartography_screen.json
+Name        : cartography_screen.json
+Size (bytes): 151
+Encoding    : ascii
+Characters  : 148
+----------------------------------------
+Path        : C:\Users\ashur\AppData\Roaming\.minecraft_bedrock\installations\Latest Release\packageData\development_resource_packs\.JavaConta\ui\chest_screen.json
+Name        : chest_screen.json
+Size (bytes): 541
+Encoding    : ascii
+Characters  : 535
+----------------------------------------
+Path        : C:\Users\ashur\AppData\Roaming\.minecraft_bedrock\installations\Latest Release\packageData\development_resource_packs\.JavaConta\ui\enchanting_screen.json
+Name        : enchanting_screen.json
+Size (bytes): 117
+Encoding    : ascii
+Characters  : 115
+----------------------------------------
+Path        : C:\Users\ashur\AppData\Roaming\.minecraft_bedrock\installations\Latest Release\packageData\development_resource_packs\.JavaConta\ui\furnace_screen.json
+Name        : furnace_screen.json
+Size (bytes): 577
+Encoding    : ascii
+Characters  : 560
+----------------------------------------
+Path        : C:\Users\ashur\AppData\Roaming\.minecraft_bedrock\installations\Latest Release\packageData\development_resource_packs\.JavaConta\ui\grindstone_screen.json
+Name        : grindstone_screen.json
+Size (bytes): 147
+Encoding    : ascii
+Characters  : 144
+----------------------------------------
+Path        : C:\Users\ashur\AppData\Roaming\.minecraft_bedrock\installations\Latest Release\packageData\development_resource_packs\.JavaConta\ui\horse_screen.json
+Name        : horse_screen.json
+Size (bytes): 127
+Encoding    : ascii
+Characters  : 124
+----------------------------------------
+Path        : C:\Users\ashur\AppData\Roaming\.minecraft_bedrock\installations\Latest Release\packageData\development_resource_packs\.JavaConta\ui\inventory_screen.json
+Name        : inventory_screen.json
+Size (bytes): 3661
+Encoding    : ascii
+Characters  : 3550
+----------------------------------------
+Path        : C:\Users\ashur\AppData\Roaming\.minecraft_bedrock\installations\Latest Release\packageData\development_resource_packs\.JavaConta\ui\inventory_screen_pocket.json
+Name        : inventory_screen_pocket.json
+Size (bytes): 3199
+Encoding    : ascii
+Characters  : 3103
+----------------------------------------
+Path        : C:\Users\ashur\AppData\Roaming\.minecraft_bedrock\installations\Latest Release\packageData\development_resource_packs\.JavaConta\ui\loom_screen.json
+Name        : loom_screen.json
+Size (bytes): 123
+Encoding    : ascii
+Characters  : 120
+----------------------------------------
+Path        : C:\Users\ashur\AppData\Roaming\.minecraft_bedrock\installations\Latest Release\packageData\development_resource_packs\.JavaConta\ui\pause_screen.json
+Name        : pause_screen.json
+Size (bytes): 1799
+Encoding    : ascii
+Characters  : 1742
+----------------------------------------
+Path        : C:\Users\ashur\AppData\Roaming\.minecraft_bedrock\installations\Latest Release\packageData\development_resource_packs\.JavaConta\ui\redstone_screen.json
+Name        : redstone_screen.json
+Size (bytes): 454
+Encoding    : ascii
+Characters  : 448
+----------------------------------------
+Path        : C:\Users\ashur\AppData\Roaming\.minecraft_bedrock\installations\Latest Release\packageData\development_resource_packs\.JavaConta\ui\smithing_table_screen.json
+Name        : smithing_table_screen.json
+Size (bytes): 163
+Encoding    : ascii
+Characters  : 160
+----------------------------------------
+Path        : C:\Users\ashur\AppData\Roaming\.minecraft_bedrock\installations\Latest Release\packageData\development_resource_packs\.JavaConta\ui\smoker_screen.json
+Name        : smoker_screen.json
+Size (bytes): 85
+Encoding    : ascii
+Characters  : 85
+----------------------------------------
+Path        : C:\Users\ashur\AppData\Roaming\.minecraft_bedrock\installations\Latest Release\packageData\development_resource_packs\.JavaConta\ui\stonecutter_screen.json
+Name        : stonecutter_screen.json
+Size (bytes): 151
+Encoding    : ascii
+Characters  : 148
+----------------------------------------
+Path        : C:\Users\ashur\AppData\Roaming\.minecraft_bedrock\installations\Latest Release\packageData\development_resource_packs\.JavaConta\ui\trade_2_screen.json
+Name        : trade_2_screen.json
+Size (bytes): 132
+Encoding    : ascii
+Characters  : 129
+----------------------------------------
+Path        : C:\Users\ashur\AppData\Roaming\.minecraft_bedrock\installations\Latest Release\packageData\development_resource_packs\.JavaConta\ui\ui_common.json
+Name        : ui_common.json
+Size (bytes): 9620
+Encoding    : ascii
+Characters  : 9333
+----------------------------------------
+Path        : C:\Users\ashur\AppData\Roaming\.minecraft_bedrock\installations\Latest Release\packageData\development_resource_packs\.JavaConta\ui\_global_variables.json
+Name        : _global_variables.json
+Size (bytes): 4696
+Encoding    : utf-8
+Characters  : 4537
+----------------------------------------
+Path        : C:\Users\ashur\AppData\Roaming\.minecraft_bedrock\installations\Latest Release\packageData\development_resource_packs\.JavaConta\ui\_ui_defs.json
+Name        : _ui_defs.json
+Size (bytes): 2371
+Encoding    : ascii
+Characters  : 2321
+----------------------------------------
+Path        : C:\Users\ashur\AppData\Roaming\.minecraft_bedrock\installations\Latest Release\packageData\development_resource_packs\.JavaConta\ui\ashur\anvil_screen.atemp
+Name        : anvil_screen.atemp
+Size (bytes): 9072
+Encoding    : ascii
+Characters  : 8793
+----------------------------------------
+Path        : C:\Users\ashur\AppData\Roaming\.minecraft_bedrock\installations\Latest Release\packageData\development_resource_packs\.JavaConta\ui\ashur\barrel_screen.atemp
+Name        : barrel_screen.atemp
+Size (bytes): 1581
+Encoding    : ascii
+Characters  : 1532
+----------------------------------------
+Path        : C:\Users\ashur\AppData\Roaming\.minecraft_bedrock\installations\Latest Release\packageData\development_resource_packs\.JavaConta\ui\ashur\base_recipe_pages.atemp
+Name        : base_recipe_pages.atemp
+Size (bytes): 12534
+Encoding    : ascii
+Characters  : 12266
+----------------------------------------
+Path        : C:\Users\ashur\AppData\Roaming\.minecraft_bedrock\installations\Latest Release\packageData\development_resource_packs\.JavaConta\ui\ashur\beacon_screen.atemp
+Name        : beacon_screen.atemp
+Size (bytes): 14766
+Encoding    : ascii
+Characters  : 14371
+----------------------------------------
+Path        : C:\Users\ashur\AppData\Roaming\.minecraft_bedrock\installations\Latest Release\packageData\development_resource_packs\.JavaConta\ui\ashur\blast_furnace_screen.atemp
+Name        : blast_furnace_screen.atemp
+Size (bytes): 6499
+Encoding    : ascii
+Characters  : 6304
+----------------------------------------
+Path        : C:\Users\ashur\AppData\Roaming\.minecraft_bedrock\installations\Latest Release\packageData\development_resource_packs\.JavaConta\ui\ashur\brewing_stand_screen.atemp
+Name        : brewing_stand_screen.atemp
+Size (bytes): 7244
+Encoding    : ascii
+Characters  : 7068
+----------------------------------------
+Path        : C:\Users\ashur\AppData\Roaming\.minecraft_bedrock\installations\Latest Release\packageData\development_resource_packs\.JavaConta\ui\ashur\cartography_screen.atemp
+Name        : cartography_screen.atemp
+Size (bytes): 8975
+Encoding    : ascii
+Characters  : 8729
+----------------------------------------
+Path        : C:\Users\ashur\AppData\Roaming\.minecraft_bedrock\installations\Latest Release\packageData\development_resource_packs\.JavaConta\ui\ashur\crafter_screen.atemp
+Name        : crafter_screen.atemp
+Size (bytes): 8986
+Encoding    : ascii
+Characters  : 8774
+----------------------------------------
+Path        : C:\Users\ashur\AppData\Roaming\.minecraft_bedrock\installations\Latest Release\packageData\development_resource_packs\.JavaConta\ui\ashur\crafting_screen.atemp
+Name        : crafting_screen.atemp
+Size (bytes): 9753
+Encoding    : ascii
+Characters  : 9506
+----------------------------------------
+Path        : C:\Users\ashur\AppData\Roaming\.minecraft_bedrock\installations\Latest Release\packageData\development_resource_packs\.JavaConta\ui\ashur\creative_inventory.atemp
+Name        : creative_inventory.atemp
+Size (bytes): 14748
+Encoding    : ascii
+Characters  : 14370
+----------------------------------------
+Path        : C:\Users\ashur\AppData\Roaming\.minecraft_bedrock\installations\Latest Release\packageData\development_resource_packs\.JavaConta\ui\ashur\dispenser_screen.atemp
+Name        : dispenser_screen.atemp
+Size (bytes): 2952
+Encoding    : ascii
+Characters  : 2873
+----------------------------------------
+Path        : C:\Users\ashur\AppData\Roaming\.minecraft_bedrock\installations\Latest Release\packageData\development_resource_packs\.JavaConta\ui\ashur\double_chest_screen.atemp
+Name        : double_chest_screen.atemp
+Size (bytes): 2589
+Encoding    : ascii
+Characters  : 2517
+----------------------------------------
+Path        : C:\Users\ashur\AppData\Roaming\.minecraft_bedrock\installations\Latest Release\packageData\development_resource_packs\.JavaConta\ui\ashur\dropper_screen.atemp
+Name        : dropper_screen.atemp
+Size (bytes): 2819
+Encoding    : ascii
+Characters  : 2746
+----------------------------------------
+Path        : C:\Users\ashur\AppData\Roaming\.minecraft_bedrock\installations\Latest Release\packageData\development_resource_packs\.JavaConta\ui\ashur\enchanting_screen.atemp
+Name        : enchanting_screen.atemp
+Size (bytes): 10769
+Encoding    : ascii
+Characters  : 10498
+----------------------------------------
+Path        : C:\Users\ashur\AppData\Roaming\.minecraft_bedrock\installations\Latest Release\packageData\development_resource_packs\.JavaConta\ui\ashur\ender_chest_screen.atemp
+Name        : ender_chest_screen.atemp
+Size (bytes): 2739
+Encoding    : ascii
+Characters  : 2666
+----------------------------------------
+Path        : C:\Users\ashur\AppData\Roaming\.minecraft_bedrock\installations\Latest Release\packageData\development_resource_packs\.JavaConta\ui\ashur\furnace_screen.atemp
+Name        : furnace_screen.atemp
+Size (bytes): 6080
+Encoding    : ascii
+Characters  : 5895
+----------------------------------------
+Path        : C:\Users\ashur\AppData\Roaming\.minecraft_bedrock\installations\Latest Release\packageData\development_resource_packs\.JavaConta\ui\ashur\grindstone_screen.atemp
+Name        : grindstone_screen.atemp
+Size (bytes): 6224
+Encoding    : ascii
+Characters  : 6044
+----------------------------------------
+Path        : C:\Users\ashur\AppData\Roaming\.minecraft_bedrock\installations\Latest Release\packageData\development_resource_packs\.JavaConta\ui\ashur\hopper_screen.atemp
+Name        : hopper_screen.atemp
+Size (bytes): 2286
+Encoding    : ascii
+Characters  : 2219
+----------------------------------------
+Path        : C:\Users\ashur\AppData\Roaming\.minecraft_bedrock\installations\Latest Release\packageData\development_resource_packs\.JavaConta\ui\ashur\horse_screen.atemp
+Name        : horse_screen.atemp
+Size (bytes): 6318
+Encoding    : ascii
+Characters  : 6131
+----------------------------------------
+Path        : C:\Users\ashur\AppData\Roaming\.minecraft_bedrock\installations\Latest Release\packageData\development_resource_packs\.JavaConta\ui\ashur\inventory_screen.atemp
+Name        : inventory_screen.atemp
+Size (bytes): 16681
+Encoding    : ascii
+Characters  : 16269
+----------------------------------------
+Path        : C:\Users\ashur\AppData\Roaming\.minecraft_bedrock\installations\Latest Release\packageData\development_resource_packs\.JavaConta\ui\ashur\loom_screen.atemp
+Name        : loom_screen.atemp
+Size (bytes): 15757
+Encoding    : ascii
+Characters  : 15296
+----------------------------------------
+Path        : C:\Users\ashur\AppData\Roaming\.minecraft_bedrock\installations\Latest Release\packageData\development_resource_packs\.JavaConta\ui\ashur\shulker_screen.atemp
+Name        : shulker_screen.atemp
+Size (bytes): 2724
+Encoding    : ascii
+Characters  : 2650
+----------------------------------------
+Path        : C:\Users\ashur\AppData\Roaming\.minecraft_bedrock\installations\Latest Release\packageData\development_resource_packs\.JavaConta\ui\ashur\small_chest_screen.atemp
+Name        : small_chest_screen.atemp
+Size (bytes): 2736
+Encoding    : ascii
+Characters  : 2661
+----------------------------------------
+Path        : C:\Users\ashur\AppData\Roaming\.minecraft_bedrock\installations\Latest Release\packageData\development_resource_packs\.JavaConta\ui\ashur\smithing_table_screen.atemp
+Name        : smithing_table_screen.atemp
+Size (bytes): 13109
+Encoding    : ascii
+Characters  : 12730
+----------------------------------------
+Path        : C:\Users\ashur\AppData\Roaming\.minecraft_bedrock\installations\Latest Release\packageData\development_resource_packs\.JavaConta\ui\ashur\smoker_screen.atemp
+Name        : smoker_screen.atemp
+Size (bytes): 6454
+Encoding    : ascii
+Characters  : 6259
+----------------------------------------
+Path        : C:\Users\ashur\AppData\Roaming\.minecraft_bedrock\installations\Latest Release\packageData\development_resource_packs\.JavaConta\ui\ashur\stonecutter_screen.atemp
+Name        : stonecutter_screen.atemp
+Size (bytes): 9794
+Encoding    : ascii
+Characters  : 9565
+----------------------------------------
+Path        : C:\Users\ashur\AppData\Roaming\.minecraft_bedrock\installations\Latest Release\packageData\development_resource_packs\.JavaConta\ui\ashur\tradeing_screen.atemp
+Name        : tradeing_screen.atemp
+Size (bytes): 23990
+Encoding    : ascii
+Characters  : 23323
+----------------------------------------
+Path        : C:\Users\ashur\AppData\Roaming\.minecraft_bedrock\installations\Latest Release\packageData\development_resource_packs\.JavaConta\ui\ashur\-common\container_common.atemp
+Name        : container_common.atemp
+Size (bytes): 6497
+Encoding    : ascii
+Characters  : 6313
+----------------------------------------
+Path        : C:\Users\ashur\AppData\Roaming\.minecraft_bedrock\installations\Latest Release\packageData\development_resource_packs\.JavaConta\ui\ashur\-common\crafting_common.atemp
+Name        : crafting_common.atemp
+Size (bytes): 9874
+Encoding    : ascii
+Characters  : 9619
+----------------------------------------
+Path        : C:\Users\ashur\AppData\Roaming\.minecraft_bedrock\installations\Latest Release\packageData\development_resource_packs\.JavaConta\ui\ashur\-common\global.atemp
+Name        : global.atemp
+Size (bytes): 21453
+Encoding    : ascii
+Characters  : 20843
+----------------------------------------
+Path        : C:\Users\ashur\AppData\Roaming\.minecraft_bedrock\installations\Latest Release\packageData\development_resource_packs\.JavaConta\ui\ashur\-common\screen_content.atemp
+Name        : screen_content.atemp
+Size (bytes): 13912
+Encoding    : ascii
+Characters  : 13621
+----------------------------------------
+Path        : C:\Users\ashur\AppData\Roaming\.minecraft_bedrock\installations\Latest Release\packageData\development_resource_packs\.JavaConta\ui\ashur\-common\texture_common.atemp
+Name        : texture_common.atemp
+Size (bytes): 42
+Encoding    : ascii
+Characters  : 39
+----------------------------------------
+Path        : C:\Users\ashur\AppData\Roaming\.minecraft_bedrock\installations\Latest Release\packageData\development_resource_packs\.JavaConta\ui\ashur\-common\templates\bars\common_bars.atemp
+Name        : common_bars.atemp
+Size (bytes): 3039
+Encoding    : ascii
+Characters  : 2947
+----------------------------------------
+Path        : C:\Users\ashur\AppData\Roaming\.minecraft_bedrock\installations\Latest Release\packageData\development_resource_packs\.JavaConta\ui\ashur\-common\templates\container\cell_toggle.atemp
+Name        : cell_toggle.atemp
+Size (bytes): 968
+Encoding    : ascii
+Characters  : 946
+----------------------------------------
+Path        : C:\Users\ashur\AppData\Roaming\.minecraft_bedrock\installations\Latest Release\packageData\development_resource_packs\.JavaConta\ui\ashur\-common\templates\container\crafting_textures.atemp
+Name        : crafting_textures.atemp
+Size (bytes): 3344
+Encoding    : ascii
+Characters  : 3252
+----------------------------------------
+Path        : C:\Users\ashur\AppData\Roaming\.minecraft_bedrock\installations\Latest Release\packageData\development_resource_packs\.JavaConta\ui\ashur\-common\templates\container\creative_recipe_item.atemp
+Name        : creative_recipe_item.atemp
+Size (bytes): 11955
+Encoding    : ascii
+Characters  : 11627
+----------------------------------------
+Path        : C:\Users\ashur\AppData\Roaming\.minecraft_bedrock\installations\Latest Release\packageData\development_resource_packs\.JavaConta\ui\ashur\-common\templates\container\page_count.atemp
+Name        : page_count.atemp
+Size (bytes): 886
+Encoding    : ascii
+Characters  : 855
+----------------------------------------
+Path        : C:\Users\ashur\AppData\Roaming\.minecraft_bedrock\installations\Latest Release\packageData\development_resource_packs\.JavaConta\ui\ashur\-common\templates\container\pagination.atemp
+Name        : pagination.atemp
+Size (bytes): 7119
+Encoding    : ascii
+Characters  : 6968
+----------------------------------------
+Path        : C:\Users\ashur\AppData\Roaming\.minecraft_bedrock\installations\Latest Release\packageData\development_resource_packs\.JavaConta\ui\ashur\-common\templates\container\recipe_grid.atemp
+Name        : recipe_grid.atemp
+Size (bytes): 12831
+Encoding    : ascii
+Characters  : 12479
+----------------------------------------
+Path        : C:\Users\ashur\AppData\Roaming\.minecraft_bedrock\installations\Latest Release\packageData\development_resource_packs\.JavaConta\ui\ashur\-common\templates\container\recipe_toggle.atemp
+Name        : recipe_toggle.atemp
+Size (bytes): 2266
+Encoding    : ascii
+Characters  : 2212
+----------------------------------------
+Path        : C:\Users\ashur\AppData\Roaming\.minecraft_bedrock\installations\Latest Release\packageData\development_resource_packs\.JavaConta\ui\ashur\-common\templates\container\trade_exp.atemp
+Name        : trade_exp.atemp
+Size (bytes): 1876
+Encoding    : ascii
+Characters  : 1815
+----------------------------------------
+Path        : C:\Users\ashur\AppData\Roaming\.minecraft_bedrock\installations\Latest Release\packageData\development_resource_packs\.JavaConta\ui\ashur\-common\templates\scroll_panel\scroll_panel.atemp
+Name        : scroll_panel.atemp
+Size (bytes): 4014
+Encoding    : ascii
+Characters  : 3900
+----------------------------------------
+Path        : C:\Users\ashur\AppData\Roaming\.minecraft_bedrock\installations\Latest Release\packageData\development_resource_packs\.JavaConta\ui\ashur\-common\templates\text_edit_box\text_edit_box.atemp
+Name        : text_edit_box.atemp
+Size (bytes): 6210
+Encoding    : ascii
+Characters  : 6060
+----------------------------------------
+Path        : C:\Users\ashur\AppData\Roaming\.minecraft_bedrock\installations\Latest Release\packageData\development_resource_packs\.JavaConta\ui\ashur\-common\templates\toggles\cell_template.atemp
+Name        : cell_template.atemp
+Size (bytes): 1516
+Encoding    : ascii
+Characters  : 1468
+----------------------------------------
+Path        : C:\Users\ashur\AppData\Roaming\.minecraft_bedrock\installations\Latest Release\packageData\development_resource_packs\.JavaConta\ui\ashur\-common\templates\toggles\toggle.atemp
+Name        : toggle.atemp
+Size (bytes): 10920
+Encoding    : ascii
+Characters  : 10724
+----------------------------------------
+Path        : C:\Users\ashur\AppData\Roaming\.minecraft_bedrock\installations\Latest Release\packageData\development_resource_packs\.JavaConta\ui\ashur\furnace_recipebook\furnace_items\tabs\furnace\furnace_book_base.atemp
+Name        : furnace_book_base.atemp
+Size (bytes): 2358
+Encoding    : ascii
+Characters  : 2285
+----------------------------------------
+Path        : C:\Users\ashur\AppData\Roaming\.minecraft_bedrock\installations\Latest Release\packageData\development_resource_packs\.JavaConta\ui\ashur\furnace_recipebook\furnace_items\tabs\furnace\furnace_guide_tabs.atemp
+Name        : furnace_guide_tabs.atemp
+Size (bytes): 2204
+Encoding    : ascii
+Characters  : 2140
+----------------------------------------
+Path        : C:\Users\ashur\AppData\Roaming\.minecraft_bedrock\installations\Latest Release\packageData\development_resource_packs\.JavaConta\ui\ashur\furnace_recipebook\furnace_items\tabs\furnace\furnace_recipe_book.atemp
+Name        : furnace_recipe_book.atemp
+Size (bytes): 394
+Encoding    : ascii
+Characters  : 382
+----------------------------------------

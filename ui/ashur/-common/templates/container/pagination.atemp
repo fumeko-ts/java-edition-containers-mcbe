@@ -33,10 +33,14 @@
   },
   "page_template@global.empty_panel": {
     "clips_children": true,
-    "size": [ 126, 100 ],
-    "clip_offset": [ 0, 0.2 ],
+    "size": [ 125, 100.4 ],
     "controls": [
-      {"grid@$page_content": {"offset": "$ov", "layer": 4}}
+      {
+        "grid@$page_content": {
+          "offset": "$ov", 
+          "layer": 4
+        }
+      }
     ]
   },
   "page_1@page_template": {"$ov": [ 0, 0 ]},
@@ -97,7 +101,19 @@
         "source_control_name": "('page_' + $max_ashur_page + $current_page)",
         "source_property_name": "#toggle_state",
         "target_property_name": "#visible"
-      }
+      }/*,
+      {
+        "binding_name": "#recipe_book_total_items",
+        "binding_name_override": "#maximum_grid_items",
+        "binding_type": "collection",
+        "binding_collection_name": "recipe_book"
+      },
+      {
+        "binding_type": "view",
+        "binding_condition": "always",
+        "source_property_name": "(((#maximum_grid_items > 0) * ((#maximum_grid_items / 20) + 1)) = $index)",
+        "target_property_name": "#visible"
+      }*/
     ]
   },
   "page_num_1@pagination.base_page_logic": {"$current_page": 1},
@@ -148,5 +164,8 @@
     "$toggle_control_name": "('page_' + $max_ashur_page + ($current_page + 1))",
     "$toggle_name": "('ashur' + $max_ashur_page + $current_page)"
   },
-  "max_page_is_28@pagination.base_page_logic": {"$is_in_recipe_inventory|default": false, "$page_content": "global.empty_panel"}
+  "max_page_is_28@pagination.base_page_logic": {
+    "$is_in_recipe_inventory|default": false, 
+    "$page_content": "global.empty_panel"
+  }
 }

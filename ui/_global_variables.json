@@ -1,73 +1,93 @@
-{                                                                                                                                                                                                                                                                                                                                                                                                     /*
-  valid options are as follows 
-  
-   oak_leaves
-   spruce_leaves
-   acacia_leaves
-   azalea_leaves
-   birch_leaves
-   cherry_leaves
-   dark_oak_leaves
-   flowering_azalea_leaves
-   jungle_leaves
-   mangrove_leaves
+{
+/*
+  Valid leaf texture options (must be lowercase):
 
-   note they are required to be all lowercase
+  - oak_leaves
+  - spruce_leaves
+  - acacia_leaves
+  - azalea_leaves
+  - birch_leaves
+  - cherry_leaves
+  - dark_oak_leaves
+  - flowering_azalea_leaves
+  - jungle_leaves
+  - mangrove_leaves
+  -- or eany other block really
 
+  example - "$nature_tab_texture": "mangrove_leaves"
+*/
 
-  pick a option then just replace the text below with your pick
-  for example if i chose cherry_leaves $nature_tab_texture would look like
+"$nature_tab_texture": "pearlescent_froglight",
 
-  "$nature_tab_texture": "cherry_leaves",                                                                                                                                                                                                                                                                                                                                */
-  
-  "$nature_tab_texture": "birch_leaves",
-  
+// Show or hide the exit button on container screens (true/false)
+"$Exit_panel_enabled": true,
 
-  // this toggles the visibility of the exit buttons ingame in the containers 
-  // possible values true/false note they are required to be all lowercase
-  "$Exit_panel_enabled": true,
-  
-
-  // this configures the transparency of most container uis
-  // valid valies are like 1, 0.9, 0.8, 0.7, 0.6, 0.5, 0.4, 0.3, 0.2, 0.1, or just 0 or like 0.75, ect just not above 1 and not below 0
-  "$container_opacity": 1,
+// Set container UI transparency (range: 0.0 - 1.0)
+"$container_opacity": 1,
 
 
 
-  // you can ignore everything below because they are not configured to be customised unlike the above
 
-  
-  "$creative_recipe_book": false,
-  "$title_text_color": [ 0.15, 0.15, 0.15, 1.0 ],
-  "$direction": "right",
-  "$loom_screen": false,
-  "$anvil_screen": false,
-  "$barrel_screen": false,
-  "$beacon_screen": false,
-  "$blast_furnace_screen": false,
-  "$brewing_stand_screen": false,
-  "$cartography_screen": false,
-  "$crafting_screen": false,
-  "$crafter_screen": false,
-  "$dispenser_screen": false,
-  "$enchanting_screen": false,
-  "$furnace_screen": false,
-  "$double_chest_container": false,
-  "$grindstone_screen": false,
-  "$hopper_screen": false,
-  "$horse_screen": false,
-  "$inventory_screen": false,
-  "$shulker_screen": false,
-  "$smithing_screen": false,
-  "$smoker_screen": false,
-  "$stonecutter_screen": false,
-  "$main_trade_screen": false,
-  "$recipe_book": false,
-  "$jc:dev": true, // this dose nothing yet
+// --- Read-only below this line ---
+
+
+
+
+
+//this is the container title text i belive its rgba max value is 1.0
+"$title_text_color": [0.247, 0.247, 0.247, 1.0],
+
+// text colors for the button in the enchanting table also rgb and rgba max value is 1.0
+"$enchant_light_green": [0.475, 0.95, 0.11875],
+"$enchant_light_yellow": [1.0, 1.0, 0.5],
+"$enchant_light_brown": [0.392, 0.357, 0.275, 1.0],
+"$enchant_dark_green": [0.318, 0.475, 0.216],
+
+"$direction": "right",
+
+"$creative_recipe_book": false,
+// Required for container textures – do not edit
+"$loom_screen": false,
+"$anvil_screen": false,
+"$barrel_screen": false,
+"$beacon_screen": false,
+"$blast_furnace_screen": false,
+"$brewing_stand_screen": false,
+"$cartography_screen": false,
+"$crafting_screen": false,
+"$crafter_screen": false,
+"$dispenser_screen": false,
+"$dropper_screen": false,
+"$enchanting_screen": false,
+"$furnace_screen": false,
+"$double_chest_container": false,
+"$grindstone_screen": false,
+"$hopper_screen": false,
+"$horse_screen": false,
+"$inventory_screen": false,
+"$shulker_screen": false,
+"$smithing_screen": false,
+"$smoker_screen": false,
+"$stonecutter_screen": false,
+"$main_trade_screen": false,
+"$recipe_book": false,
+
+// Internal use – changing content below will break some UI
+"$jc:dev": true,
+    "$enchant_selectable_button_mappings": [
+      {"from_button_id": "button.menu_select", "to_button_id": "button.menu_ok", "mapping_type": "pressed"},
+      {"from_button_id": "button.menu_ok", "to_button_id": "button.menu_ok", "mapping_type": "focused"},
+      {
+        "from_button_id": "button.controller_back",
+        "to_button_id"  : "button.menu_ok",
+        "mapping_type"  : "focused",
+        "ignored"       : "(not $is_ps4)"
+      }
+    ],
   "$recipe_book_contents": [
-    {"offset_content@$page_contents": {"offset": [ 1.6, -2 ]}},
+    {"offset_content@$page_contents": {"offset": [ 0.9, -1.6 ]}},
     {
-      "holder@global.empty_stack_panel": {
+      "holder@global.empty_stack": {
         "orientation": "vertical",
         "ignored": "($is_in_recipe_inventory = false)",
         "anchor_to": "top_middle",
@@ -77,15 +97,13 @@
         "controls": [
           {"buffer_1": {"type": "panel", "size": [ 111, 11 ]}},
           {
-            "search_and_filter@global.empty_stack_panel": {
+            "search_and_filter@global.empty_stack": {
               "orientation": "horizontal",
               "size": [ 111, 18 ],
               "controls": [
                 {
-                  "holder": {
-                    "type": "panel",
+                  "holder@global.empty_panel": {
                     "size": [ 81, 18 ],
-                    "contained": true,
                     "controls": [
                       {
                         "search_box@crafting_common.text_edit_control": {"anchor_to": "center", "anchor_from": "center", "layer": 2}
@@ -102,14 +120,14 @@
       }
     },
     {
-      "stack_holder@global.empty_stack_panel": {
+      "stack_holder@global.empty_stack": {
         "orientation": "vertical",
         "anchor_to": "bottom_middle",
         "anchor_from": "bottom_middle",
         "size": [ 77, 30 ],
         "controls": [
           {
-            "stack@global.empty_stack_panel": {
+            "stack@global.empty_stack": {
               "orientation": "horizontal",
               "size": [ 77, 17 ],
               "anchor_to": "bottom_middle",

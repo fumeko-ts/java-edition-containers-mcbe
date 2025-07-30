@@ -7,7 +7,7 @@
     "$is_creative_survival_tab": true,
     "controls": [
       {
-        "tab_stack@global.empty_stack_panel": {
+        "tab_stack@global.empty_stack": {
           "orientation": "horizontal",
           "size": [ 195, 32 ],
           "anchor_to": "top_middle",
@@ -180,32 +180,38 @@
   },
   "search_tab@creative_inventory.top_tab": {
     "$is_top_right_tab": true,
+    "$toggle_hover_text": "Search Items",
     "$tab_view_binding_name": "search_tab_toggle",
     "$toggle_group_forced_index": "$search_index",
     "$toggle_state_binding_name": "#is_left_tab_search"
   },
   "equipment_tab@creative_inventory.top_tab": {
+    "$toggle_hover_text": "Equipment Items",
     "$tab_view_binding_name": "equipment_tab_toggle",
     "$toggle_group_forced_index": "$equipment_index",
     "$toggle_state_binding_name": "#is_left_tab_equipment"
   },
   "nature_tab@creative_inventory.top_tab": {
+    "$toggle_hover_text": "Nature Items",
     "$tab_view_binding_name": "nature_tab_toggle",
     "$toggle_group_forced_index": "$nature_index",
     "$toggle_state_binding_name": "#is_left_tab_nature"
   },
   "items_tab@creative_inventory.top_tab": {
+    "$toggle_hover_text": "Misc Items",
     "$tab_view_binding_name": "items_tab_toggle",
     "$toggle_group_forced_index": "$items_index",
     "$toggle_state_binding_name": "#is_left_tab_items"
   },
   "construction_tab@creative_inventory.top_tab": {
+    "$toggle_hover_text": "Construction Items",
     "$is_top_left_tab": true,
     "$tab_view_binding_name": "construction_tab_toggle",
     "$toggle_group_forced_index": "$construction_index",
     "$toggle_state_binding_name": "#is_left_tab_construct"
   },
   "inventory_tab@creative_inventory.top_tab": {
+    "$toggle_hover_text": "Inventory",
     "$is_bottom_right_tab": true,
     "$unchecked_offset|default": [ 0, -2 ],
     "$checked_offset|default": [ 0, 2 ],
@@ -221,9 +227,9 @@
           "anchor_to": "center",
           "anchor_from": "center",
           "controls": [
-      {"close@global.close_button": {}},
+            {"close@global.close_button": {}},
             {
-              "inventory_top_half_creative@global.empty_stack_panel": {
+              "inventory_top_half_creative@global.empty_stack": {
                 "orientation": "vertical",
                 "size": [ 125, 50 ],
                 "anchor_to": "top_left",
@@ -231,13 +237,13 @@
                 "controls": [
                   {"buffer_1": {"type": "panel", "size": [ "default", 5 ]}},
                   {
-                    "stack_1@global.empty_stack_panel": {
+                    "stack_1@global.empty_stack": {
                       "orientation": "horizontal",
                       "size": [ 125, 45 ],
                       "controls": [
                         {"buffer_1": {"type": "panel", "size": [ 34, "default" ]}},
                         {
-                          "stack_2@global.empty_stack_panel": {
+                          "stack_2@global.empty_stack": {
                             "orientation": "vertical",
                             "size": [ 18, 45 ],
                             "controls": [
@@ -278,9 +284,9 @@
           "anchor_from": "center",
           "size": [ 195, 136 ],
           "controls": [
-      {"close@global.close_button": {}},
+            {"close@global.close_button": {}},
             {
-              "stack_1@global.empty_stack_panel": {
+              "stack_1@global.empty_stack": {
                 "orientation": "horizontal",
                 "size": [ 152, 25 ],
                 "anchor_to": "bottom_left",
@@ -288,7 +294,7 @@
                 "controls": [
                   {"buffer_1": {"type": "panel", "size": [ 8, "default" ]}},
                   {
-                    "stack@global.empty_stack_panel": {
+                    "stack@global.empty_stack": {
                       "orientation": "vertical",
                       "size": [ 144, 25 ],
                       "controls": [
@@ -308,7 +314,7 @@
   "search_page@creative_inventory.tab_base_template": {
     "controls": [
       {
-        "search_holder@global.empty_stack_panel": {
+        "search_holder@global.empty_stack": {
           "orientation": "vertical",
           "size": [ 116, 16 ],
           "anchor_to": "top_right",
@@ -317,7 +323,7 @@
           "controls": [
             {"filler_1@global.empty_panel": {"size": [ "default", 4 ]}},
             {
-              "search_extra_padding@global.empty_stack_panel": {
+              "search_extra_padding@global.empty_stack": {
                 "orientation": "horizontal",
                 "size": [ 116, "default" ],
                 "controls": [
@@ -343,9 +349,9 @@
           "anchor_from": "center",
           "size": [ 195, 136 ],
           "controls": [
-      {"close@global.close_button": {}},
+            {"close@global.close_button": {}},
             {
-              "stack_1@global.empty_stack_panel": {
+              "stack_1@global.empty_stack": {
                 "orientation": "horizontal",
                 "size": [ 152, 25 ],
                 "anchor_to": "bottom_left",
@@ -353,7 +359,7 @@
                 "controls": [
                   {"buffer_1": {"type": "panel", "size": [ 8, "default" ]}},
                   {
-                    "stack@global.empty_stack_panel": {
+                    "stack@global.empty_stack": {
                       "orientation": "vertical",
                       "size": [ 144, 25 ],
                       "controls": [
