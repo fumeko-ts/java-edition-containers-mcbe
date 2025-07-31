@@ -187,10 +187,10 @@
       }
     ]
   },
-  "scroll_box_image_disabled": {
+  "scroll_box_image_disabled@global.empty_panel": {
     "anchor_from": "center",
     "anchor_to": "center",
-    "type": "panel",
+    "$misc_scroller_disabled_offset":[0, 0],
     "size": [ "100% - 2px", "100% - 2px" ],
     "offset": "$misc_scroller_disabled_offset",
     "controls": [
