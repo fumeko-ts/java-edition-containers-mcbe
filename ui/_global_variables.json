@@ -1,3 +1,17 @@
+// © 2025 ashura_tepes – All Rights Reserved.
+//
+// This UI is custom-made. You are allowed to use it **only as-is**, inside the game.
+// Do not modify, extract, reuse, or share any part of this UI — including .json, .atemp,
+// layout structure, or design.
+//
+// Not allowed:
+//   - Editing the UI (even for private/personal use)
+//   - Using parts of the code or layout in your own pack
+//   - Reuploading, redistributing, or hosting these files elsewhere
+//   - Converting texture packs to Bedrock using this UI
+//
+// By using it, you agree to these terms.
+
 {
 /*
   Valid leaf texture options (must be lowercase):
@@ -43,6 +57,7 @@
 "$enchant_light_brown": [0.392, 0.357, 0.275, 1.0],
 "$enchant_dark_green": [0.318, 0.475, 0.216],
 
+"$smoker_search_tab_index": 0,
 "$direction": "right",
 
 "$creative_recipe_book": false,
@@ -140,7 +155,8 @@
                   "buffer1@global.empty_panel": {
                     "size": [ 43, 17 ],
                     "controls": [
-                      {"label@pagination.page_count_label": {}}
+                      {"label@pagination.page_count_label": {}},
+                      {"max_page_label@pagination.max_page_label": {}}
                     ]
                   }
                 },

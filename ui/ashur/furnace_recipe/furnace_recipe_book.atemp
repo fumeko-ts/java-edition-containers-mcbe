@@ -1,0 +1,151 @@
+{
+  "namespace": "furnace_recipe_book",
+  //81, 14
+  "recipe_book@global.empty_panel": {
+    "size": [178, 166],
+    "$tab_search_placeholder|default": "  ",
+    "controls": [
+      {
+        "tab_stack@smoker_tab_toggles.tab_stack": {
+          "anchor_to": "top_left",
+          "anchor_from": "top_left"
+        }
+      },
+      {
+        "recipe_book@global.empty_panel": {
+          "size": [147, 166],
+          "anchor_to": "right_middle",
+          "anchor_from": "right_middle",
+          "controls": [
+            {
+              "filter@furnace_recipe_book.filter": {}
+            },
+            {
+              "label@global.empty_image":{
+                "anchor_to": "top_middle",
+                "anchor_from": "top_middle",
+                "offset": [-7, 13],
+                "alpha": 0.7,
+                "texture": "assets/minecraft/textures/gui/sprites/widget/text_field.png",
+                "nineslice_size": 1,
+                "layer": 5,
+                "size": [81, 14],
+                "controls": [
+                  {
+                    "text@global.empty_label":{
+                      "color": "gray",
+                      "size": ["default", 10],
+                      "layer": 7,
+                      "alpha": 0.2,
+                      "text": "$tab_search_placeholder"
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "contents@global.empty_panel":{
+                "anchor_to": "top_left",
+                "anchor_from": "top_left",
+                "size": [138, 81],
+                "controls": [
+                  {"grid@smoker_grid_items.smoker_content":{"offset": [-2, 0]}}
+                ]
+              }
+            },
+            {"img@screen_content.recipe_book":{"layer": 1,"anchor_to": "center","anchor_from": "center"}}
+          ]
+        }
+      }
+    ]
+  },
+
+
+  "furnace_filter_on@global.empty_image":{
+    "offset": [1, 1],
+    "texture": "assets/minecraft/textures/gui/sprites/recipe_book/furnace_filter_disabled.png",
+    "size": ["default", "default"],
+    "layer": 5
+  },
+  "furnace_filter_on_hover@global.empty_image":{
+    "offset": [1, 1],
+    "texture": "assets/minecraft/textures/gui/sprites/recipe_book/furnace_filter_disabled_highlighted.png",
+    "size": ["default", "default"],
+    "layer": 5
+  },
+
+
+  "filter": {
+    "type": "toggle",
+    "size": [26, 16],
+    "anchor_from": "top_right",
+    "anchor_to": "top_right",
+    "offset": [-11, 11],
+    "unchecked_control": "default",
+    "unchecked_hover_control": "default_hover",
+    "controls": [
+      {"default@furnace_recipe_book.furnace_filter_on": {}},
+      {
+        "default_hover@furnace_recipe_book.furnace_filter_on_hover": {
+          "controls": [
+            {
+              "hover_text@common.hover_text": {
+                "layer": 400,
+                "property_bag": {"#hover_text": "§s§oLook but don’t touch."}
+              }
+            }
+          ]
+        }
+      }
+    ]
+  },
+
+
+
+
+  "filler@global.empty_panel":{"size": [25, 25]},
+  
+  "slot_uncraftable": {
+    "type": "image",
+    "size": [25, 25],
+    "anchor_from": "center",
+    "anchor_to": "center",
+    "layer": 5,
+    "offset": [1, 1],
+    "$item_type|default": "item",
+    "texture": "assets/minecraft/textures/gui/sprites/recipe_book/slot_uncraftable" ,   
+    "$texture|default": "('textures/atemp/' + $item_type + '/' + $item)",
+    "controls": [
+      {
+        "item_renderer": {
+          "type": "image",
+          "size": [16, 16],
+          "keep_ratio": true,
+          "anchor_from": "center",
+          "anchor_to": "center",
+          "layer": 6,
+          "texture": "$texture"
+        }
+      },
+      {
+        "hover_text@common.hover_text":{
+          "layer": 400,
+          "property_bag": {"#hover_text": "$hover_info"},
+          "ignored": "($hover = false)"
+        }
+      }
+    ]
+  },
+
+  "toggle": {
+    "type": "toggle",
+    "size": [25, 25],
+    "unchecked_control": "default",
+    "unchecked_hover_control": "default_hover",
+    "$hover|default": false,
+    "controls": [
+      {"default@furnace_recipe_book.slot_uncraftable": {}},
+      {"default_hover@furnace_recipe_book.slot_uncraftable": {"$hover": true}}
+    ]
+  }
+}

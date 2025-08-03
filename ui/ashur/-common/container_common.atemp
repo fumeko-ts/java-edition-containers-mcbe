@@ -1,3 +1,17 @@
+// © 2025 ashura_tepes – All Rights Reserved.
+//
+// This UI is custom-made. You are allowed to use it **only as-is**, inside the game.
+// Do not modify, extract, reuse, or share any part of this UI — including .json, .atemp,
+// layout structure, or design.
+//
+// Not allowed:
+//   - Editing the UI (even for private/personal use)
+//   - Using parts of the code or layout in your own pack
+//   - Reuploading, redistributing, or hosting these files elsewhere
+//   - Converting texture packs to Bedrock using this UI
+//
+// By using it, you agree to these terms.
+
 {
   "namespace": "container_common",
   "common_toggle@common_toggles.light_text_toggle": {
@@ -119,23 +133,17 @@
       {"4@common_bars.storage_bar_grabbed": {"layer": 61}}
     ]
   },
-  "item_remover@common.toggle": {
+  "item_remover": {
+    "type": "toggle",
     "size": [ 18, 18 ],
-    "sound_volume": 0.0,
-    "sound_pitch": 0.0,
-    "checked_control": "default",
     "unchecked_control": "default",
-    "checked_hover_control": "hover",
-    "unchecked_hover_control": "hover",
-    "checked_locked_control": "default",
-    "unchecked_locked_control": "default",
-    "checked_locked_hover_control": "hover",
-    "unchecked_locked_hover_control": "hover",
-    "$toggle_name": "remove_item",
+    "unchecked_hover_control": "default_hover",
+    "checked_control": "default",
+    "checked_hover_control": "default_hover",
     "$white_highlight_slot_offset": [ 1, 1 ],
     "controls": [
       {
-        "hover@screen_content.highlight_slot": {
+        "default_hover@screen_content.highlight_slot": {
           "size": [ 16, 16 ],
           "controls": [
             {"tooltip@common.hover_text": {"layer": 100, "property_bag": {"#hover_text": "destroy item"}}}
@@ -167,6 +175,7 @@
       }
     ]
   },
+
   "base_button@common.button": {
     "sound_volume": 0.0,
     "layer": 22,

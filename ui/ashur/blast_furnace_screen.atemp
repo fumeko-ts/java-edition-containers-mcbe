@@ -1,3 +1,17 @@
+// © 2025 ashura_tepes – All Rights Reserved.
+//
+// This UI is custom-made. You are allowed to use it **only as-is**, inside the game.
+// Do not modify, extract, reuse, or share any part of this UI — including .json, .atemp,
+// layout structure, or design.
+//
+// Not allowed:
+//   - Editing the UI (even for private/personal use)
+//   - Using parts of the code or layout in your own pack
+//   - Reuploading, redistributing, or hosting these files elsewhere
+//   - Converting texture packs to Bedrock using this UI
+//
+// By using it, you agree to these terms.
+
 {
   "namespace": "blast_furnace_screen",
   "blast_furnace_panel@container_common.container_details": {
@@ -72,9 +86,9 @@
                       "orientation": "vertical",
                       "size": [ 24, 54 ],
                       "controls": [
-                        {"filler_1@global.empty_panel": {"size": [ "fill", 19 ]}},
+                        {"filler_1@global.empty_panel": {"size": [ "fill", 18 ]}},
                         {"arrow_progress@blast_furnace_screen.arrow_progress": {}},
-                        {"filler_2@global.empty_panel": {"size": [ "fill", 19 ]}}
+                        {"filler_2@global.empty_panel": {"size": [ "fill", 20 ]}}
                       ]
                     }
                   },

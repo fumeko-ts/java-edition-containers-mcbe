@@ -1,3 +1,17 @@
+// © 2025 ashura_tepes – All Rights Reserved.
+//
+// This UI is custom-made. You are allowed to use it **only as-is**, inside the game.
+// Do not modify, extract, reuse, or share any part of this UI — including .json, .atemp,
+// layout structure, or design.
+//
+// Not allowed:
+//   - Editing the UI (even for private/personal use)
+//   - Using parts of the code or layout in your own pack
+//   - Reuploading, redistributing, or hosting these files elsewhere
+//   - Converting texture packs to Bedrock using this UI
+//
+// By using it, you agree to these terms.
+
 {
   "namespace": "small_chest_screen",
   "small_chest@container_common.container_details": {
@@ -64,8 +78,27 @@
           ]
         }
       },
+      {"search_tab@small_chest_screen.search_tab":{}},
       {
         "bottom@crafting_screen.inventory_bottom_half_with_label": {"anchor_to": "bottom_middle", "anchor_from": "bottom_middle"}
+      }
+    ]
+  },
+  "top_tab@toggle.toggle": {
+    "size": [ 20, 10 ],
+    "$is_tab": false,
+    "$is_radio_toggle": false,
+    "$toggle_name": "navigation_tab"
+  },
+  "search_tab@global.empty_panel":{
+    "size": [60, 100],
+    "controls": [
+      {
+        "search_tab@small_chest_screen.top_tab": {
+          "layer": 40,
+          "$tab_view_binding_name": "smoker_search_tab_toggle",
+          "$toggle_group_forced_index": "$smoker_search_tab_index"
+        }
       }
     ]
   }

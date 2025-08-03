@@ -1,8 +1,22 @@
+// © 2025 ashura_tepes – All Rights Reserved.
+//
+// This UI is custom-made. You are allowed to use it **only as-is**, inside the game.
+// Do not modify, extract, reuse, or share any part of this UI — including .json, .atemp,
+// layout structure, or design.
+//
+// Not allowed:
+//   - Editing the UI (even for private/personal use)
+//   - Using parts of the code or layout in your own pack
+//   - Reuploading, redistributing, or hosting these files elsewhere
+//   - Converting texture packs to Bedrock using this UI
+//
+// By using it, you agree to these terms.
+
 {
   "namespace": "brewing_stand_screen",
   "brewing_panel@container_common.container_details": {
     "size": [176, 166],
-    "$screen_controls": [
+    "$screen_controls": [  
       { "common_panel@screen_content.container_base": {"$brewing_stand_screen": true} },
       {
         "sprite_stack@global.empty_stack": {

@@ -1,3 +1,17 @@
+// © 2025 ashura_tepes – All Rights Reserved.
+//
+// This UI is custom-made. You are allowed to use it **only as-is**, inside the game.
+// Do not modify, extract, reuse, or share any part of this UI — including .json, .atemp,
+// layout structure, or design.
+//
+// Not allowed:
+//   - Editing the UI (even for private/personal use)
+//   - Using parts of the code or layout in your own pack
+//   - Reuploading, redistributing, or hosting these files elsewhere
+//   - Converting texture packs to Bedrock using this UI
+//
+// By using it, you agree to these terms.
+
 {
   "namespace": "pagination",
   "texture_base@screen_content.image_element": {"offset": [ 1, 1 ], "size": [ 12, 17 ], "layer": 2},
@@ -74,10 +88,9 @@
   "base_page_logic": {
     "type": "panel",
     "$current_page": 1,
-    "$max_ashur_page": 28,
     "$page_counter": "('pagination.page_num_' + ($current_page + 1))",
     "$page_contents": "('pagination.page_' + $current_page)",
-    "variables": {"requires": "($current_page = $max_ashur_page)", "$page_counter": "global.empty_panel"},
+    "variables": {"requires": "($current_page = 28)", "$page_counter": "global.empty_panel"},
     "controls": [
       {
         "base_content": {
@@ -86,7 +99,7 @@
           "bindings": [
             {
               "binding_type": "view",
-              "source_control_name": "('page_' + $max_ashur_page + ($current_page + 1))",
+              "source_control_name": "('page' + ($current_page + 1))",
               "source_property_name": "(not #toggle_state)",
               "target_property_name": "#visible"
             }
@@ -98,22 +111,10 @@
     "bindings": [
       {
         "binding_type": "view",
-        "source_control_name": "('page_' + $max_ashur_page + $current_page)",
+        "source_control_name": "('page' + $current_page)",
         "source_property_name": "#toggle_state",
         "target_property_name": "#visible"
-      }/*,
-      {
-        "binding_name": "#recipe_book_total_items",
-        "binding_name_override": "#maximum_grid_items",
-        "binding_type": "collection",
-        "binding_collection_name": "recipe_book"
-      },
-      {
-        "binding_type": "view",
-        "binding_condition": "always",
-        "source_property_name": "(((#maximum_grid_items > 0) * ((#maximum_grid_items / 20) + 1)) = $index)",
-        "target_property_name": "#visible"
-      }*/
+      }
     ]
   },
   "page_num_1@pagination.base_page_logic": {"$current_page": 1},
@@ -146,23 +147,77 @@
   "page_num_28@pagination.base_page_logic": {"$current_page": 28},
   "page_count_label@global.empty_label": {
     "color": "white",
-    "text": "('\u00a7r' + $current_page + '/' + $max_ashur_page)",
+    "text": "#text",
     "anchor_from": "center",
-    "anchor_to": "center"
+    "anchor_to": "center",
+    "property_bag": {"#visible": false},
+    "bindings":[
+      {
+        "binding_name": "#recipe_book_total_items",
+        "binding_type": "collection",
+        "binding_collection_name": "recipe_book"
+      },
+      {
+        "binding_type": "view",
+        "binding_condition": "always",
+        "source_property_name": "(('\u00a7r' + $current_page + '/' + ((#recipe_book_total_items > 0) * ((#recipe_book_total_items / 20) + 1)))",
+        "target_property_name": "#text"
+      },
+      {
+        "binding_type": "view",
+        "binding_condition": "always",
+        "source_property_name": "((((#recipe_book_total_items + 19) / 20) < 27) and (((#recipe_book_total_items + 19) / 20) > 1))",
+        "target_property_name": "#visible"
+      }
+    ]
+  },
+  "max_page_label@global.empty_label": {
+    "color": "white",
+    "text": "('\u00a7r' + $current_page + '/28')",
+    "anchor_from": "center",
+    "anchor_to": "center",
+    "property_bag": {"#visible": false},
+    "bindings":[
+      {
+        "binding_name": "#recipe_book_total_items",
+        "binding_type": "collection",
+        "binding_collection_name": "recipe_book"
+      },
+      {
+        "binding_type": "view",
+        "binding_condition": "always",
+        "source_property_name": "(((#recipe_book_total_items + 19) / 20) > 27)",
+        "target_property_name": "#visible"
+      }
+    ]
   },
   "tepes_left_button@pagination.base_toggle_button": {
     "ignored": "($current_page = 1)",
     "$toggle_group_forced_index": 0,
     "$direction": "left",
-    "$toggle_control_name": "('page_' + $max_ashur_page + $current_page)",
-    "$toggle_name": "('ashur' + $max_ashur_page + ($current_page - 1))"
+    "$toggle_control_name": "('page' + $current_page)",
+    "$toggle_name": "('ashur' + ($current_page - 1))"
   },
   "tepes_right_button@pagination.base_toggle_button": {
-    "ignored": "($current_page = $max_ashur_page)",
+    "ignored": "($current_page = 28)",
     "$toggle_group_forced_index": 1,
     "$direction": "right",
-    "$toggle_control_name": "('page_' + $max_ashur_page + ($current_page + 1))",
-    "$toggle_name": "('ashur' + $max_ashur_page + $current_page)"
+    "$toggle_control_name": "('page' + ($current_page + 1))",
+    "$toggle_name": "('ashur' + $current_page)",
+    "property_bag": {"#visible": false},
+    "bindings":[
+      {
+        "binding_name": "#recipe_book_total_items",
+        "binding_type": "collection",
+        "binding_collection_name": "recipe_book"
+      },
+      {
+        "binding_type": "view",
+        "binding_condition": "always",
+        "source_property_name": "($current_page < ((#recipe_book_total_items + 19) / 20))",
+        "target_property_name": "#visible"
+      }
+    ]
   },
   "max_page_is_28@pagination.base_page_logic": {
     "$is_in_recipe_inventory|default": false, 

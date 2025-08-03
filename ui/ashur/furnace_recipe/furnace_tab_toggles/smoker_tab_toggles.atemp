@@ -1,0 +1,60 @@
+{
+  "namespace": "smoker_tab_toggles",
+  "tab_stack@global.empty_stack":{
+    "orientation": "vertical",
+    "size": [35, 58],
+    "controls": [
+      {"filler_1@global.empty_panel":{"size": ["fill", 3]}},
+      {"search@smoker_tab_toggles.search_tab":{}},
+      {"filler_2@global.empty_panel":{"size": ["fill", 1]}},
+      {"food@smoker_tab_toggles.food_tab":{}}
+    ]
+  },
+  "icon_control@screen_content.image_element": {
+    "texture": "$icon_for_tab",
+    "size": "$tab_icon_size",
+    "$icon_for_tab": "",
+    "keep_ratio": true,
+    "layer": 7,
+    "$tab_icon_size": [ 17, 17 ],
+    "variables":[
+        {
+            "requires": "($toggle_group_forced_index = 0)",
+            "$icon_for_tab": "textures/atemp/item/compass_19"
+        },
+        {
+            "requires": "($toggle_group_forced_index = 1)",
+            "$icon_for_tab": "textures/atemp/item/porkchop"
+        }
+    ]
+  },
+  "icon_holder@global.empty_panel": {
+    "size": [ 24, 25 ], 
+    "controls": [
+      {"img@$tab_icon": {}}
+    ]
+  },
+  "top_tab@toggle.toggle": {
+    "size": [ 35, 27 ],
+    "$toggle_binding_type": "global",
+    "$toggle_focus_enabled": true,
+    "$is_left_tab": true,
+    "$texture_sould_keep_ratio": true,
+    "$toggle_name": "navigation_tab",
+    "$unchecked_offset|default": [ 2, 0 ],
+    "$checked_offset|default": [ 0, 0 ],
+    "$toggle_base_offset_unchecked|default": [ 2, 0 ],
+    "$tab_icon": "smoker_tab_toggles.icon_control",
+    "$toggle_state_binding_name": "#toggle_state",
+    "$tab_content": "smoker_tab_toggles.icon_holder"
+  },
+  "search_tab@smoker_tab_toggles.top_tab": {
+    "$toggle_default_state": true,
+    "$tab_view_binding_name": "smoker_search_tab_toggle",
+    "$toggle_group_forced_index": "$smoker_search_tab_index"
+  },
+  "food_tab@smoker_tab_toggles.top_tab": {
+    "$tab_view_binding_name": "smoker_food_tab_toggle",
+    "$toggle_group_forced_index": 1
+  }
+}

@@ -2,7 +2,7 @@
    "format_version": 2,
    "header": {    
       "name": "§k.§r §lJava Containers §k.§r",
-      "description": "Made by. @Ashura_tepes / @Ashura_temps\nOffical download: https://www.planetminecraft.com/texture-pack/java-containers-6490069/\n§fJoin the discord for updates §bhttps://discord.gg/88edDyeEvz.",
+      "description": "Made by. @Ashura_tepes / @Ashura_temps\nOffical download: https://www.planetminecraft.com/texture-pack/java-containers-6490069/\n§fJoin the discord for updates §bhttps://discord.gg/sFnE7zv75t.",
       "uuid": "d889d73f-42ab-42f9-b79f-47d3e406084f",
       "version": [1, 0, 0],
       "min_engine_version": [1, 16, 0]
@@ -15,18 +15,6 @@
          "version": [1, 0, 0]
       }
    ],
-   "subpacks": [
-      {
-       "folder_name": "1",
-       "name": "§aExit buttons enabled.",
-       "memory_tier": 0
-      },
-      {
-       "folder_name": "2",                                     
-       "name": "§cExit buttons disabled.",
-       "memory_tier": 0
-      }
-    ],
     "metadata": {
       "authors": ["Ashura_temps"],
       "url": "https://discord.gg/88edDyeEvz"

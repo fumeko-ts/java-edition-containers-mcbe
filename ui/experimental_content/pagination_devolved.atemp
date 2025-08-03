@@ -1,0 +1,171 @@
+{
+  "namespace": "pagination_devolved",
+  "texture_base@screen_content.image_element": {"offset": [ 1, 1 ], "size": [ 12, 17 ], "layer": 2},
+  "tepes_left@texture_base": {"texture": "assets/minecraft/textures/gui/sprites/recipe_book/page_backward"},
+  "tepes_left_hover@texture_base": {"texture": "assets/minecraft/textures/gui/sprites/recipe_book/page_backward_highlighted"},
+  "tepes_right@texture_base": {"texture": "assets/minecraft/textures/gui/sprites/recipe_book/page_forward"},
+  "tepes_right_hover@texture_base": {"texture": "assets/minecraft/textures/gui/sprites/recipe_book/page_forward_highlighted"},
+  "base_toggle_button@global.empty_panel": {
+    "anchor_from": "center",
+    "anchor_to": "center",
+    "size": [ 18, 17 ],
+    "layer": 4,
+    "$unchecked|default": "('pagination_devolved.tepes_' + $direction)",
+    "$unchecked_hover|default": "('pagination_devolved.tepes_' + $direction + '_hover')",
+    "$checked|default": "('pagination_devolved.tepes_' + $direction)",
+    "$checked_hover|default": "('pagination_devolved.tepes_' + $direction + '_hover')",
+    "controls": [
+      {
+        "$toggle_control_name@common.toggle": {
+          "offset": [ -1, -1 ],
+          "radio_toggle_group": true,
+          "focus_container": true,
+          "use_last_focus": true,
+          "controls": [
+            {"unchecked@$unchecked": {}},
+            {"unchecked_hover@$unchecked_hover": {}},
+            {"checked@$checked": {}},
+            {"checked_hover@$checked_hover": {}}
+          ]
+        }
+      }
+    ]
+  },
+  "page_template@global.empty_panel": {
+    "clips_children": true,
+    "size": [ 125, 100.4 ],
+    "controls": [
+      {
+        "grid@$page_content": {
+          "offset": "$ov", 
+          "layer": 4
+        }
+      }
+    ]
+  },
+  "page_1@page_template": {"$ov": [ 0, 0 ]},
+  "page_2@page_template": {"$ov": [ 0, -100 ]},
+  "page_3@page_template": {"$ov": [ 0, -200 ]},
+  "page_4@page_template": {"$ov": [ 0, -300 ]},
+  "page_5@page_template": {"$ov": [ 0, -400 ]},
+  "page_6@page_template": {"$ov": [ 0, -500 ]},
+  "page_7@page_template": {"$ov": [ 0, -600 ]},
+  "page_8@page_template": {"$ov": [ 0, -700 ]},
+  "page_9@page_template": {"$ov": [ 0, -800 ]},
+  "page_10@page_template": {"$ov": [ 0, -900 ]},
+  "page_11@page_template": {"$ov": [ 0, -1000 ]},
+  "page_12@page_template": {"$ov": [ 0, -1100 ]},
+  "page_13@page_template": {"$ov": [ 0, -1200 ]},
+  "page_14@page_template": {"$ov": [ 0, -1300 ]},
+  "page_15@page_template": {"$ov": [ 0, -1400 ]},
+  "page_16@page_template": {"$ov": [ 0, -1500 ]},
+  "page_17@page_template": {"$ov": [ 0, -1600 ]},
+  "page_18@page_template": {"$ov": [ 0, -1700 ]},
+  "page_19@page_template": {"$ov": [ 0, -1800 ]},
+  "page_20@page_template": {"$ov": [ 0, -1900 ]},
+  "page_21@page_template": {"$ov": [ 0, -2000 ]},
+  "page_22@page_template": {"$ov": [ 0, -2100 ]},
+  "page_23@page_template": {"$ov": [ 0, -2200 ]},
+  "page_24@page_template": {"$ov": [ 0, -2300 ]},
+  "page_25@page_template": {"$ov": [ 0, -2400 ]},
+  "page_26@page_template": {"$ov": [ 0, -2500 ]},
+  "page_27@page_template": {"$ov": [ 0, -2600 ]},
+  "page_28@page_template": {"$ov": [ 0, -2700 ]},
+  "base_page_logic": {
+    "type": "panel",
+    "$current_page": 1,
+    "$max_ashur_page": 28,
+    "$page_counter": "('pagination_devolved.page_num_' + ($current_page + 1))",
+    "$page_contents": "('pagination_devolved.page_' + $current_page)",
+    "variables": {"requires": "($current_page = $max_ashur_page)", "$page_counter": "global.empty_panel"},
+    "controls": [
+      {
+        "base_content": {
+          "type": "panel",
+          "controls": "$recipe_book_contents",
+          "bindings": [
+            {
+              "binding_type": "view",
+              "source_control_name": "('page_' + $max_ashur_page + ($current_page + 1))",
+              "source_property_name": "(not #toggle_state)",
+              "target_property_name": "#visible"
+            }
+          ]
+        }
+      },
+      {"numbers@$page_counter": {}}
+    ],
+    "bindings": [
+      {
+        "binding_type": "view",
+        "source_control_name": "('page_' + $max_ashur_page + $current_page)",
+        "source_property_name": "#toggle_state",
+        "target_property_name": "#visible"
+      }/*,
+      {
+        "binding_name": "#recipe_book_total_items",
+        "binding_name_override": "#maximum_grid_items",
+        "binding_type": "collection",
+        "binding_collection_name": "recipe_book"
+      },
+      {
+        "binding_type": "view",
+        "binding_condition": "always",
+        "source_property_name": "(((#maximum_grid_items > 0) * ((#maximum_grid_items / 20) + 1)) = $index)",
+        "target_property_name": "#visible"
+      }*/
+    ]
+  },
+  "page_num_1@pagination_devolved.base_page_logic": {"$current_page": 1},
+  "page_num_2@pagination_devolved.base_page_logic": {"$current_page": 2},
+  "page_num_3@pagination_devolved.base_page_logic": {"$current_page": 3},
+  "page_num_4@pagination_devolved.base_page_logic": {"$current_page": 4},
+  "page_num_5@pagination_devolved.base_page_logic": {"$current_page": 5},
+  "page_num_6@pagination_devolved.base_page_logic": {"$current_page": 6},
+  "page_num_7@pagination_devolved.base_page_logic": {"$current_page": 7},
+  "page_num_8@pagination_devolved.base_page_logic": {"$current_page": 8},
+  "page_num_9@pagination_devolved.base_page_logic": {"$current_page": 9},
+  "page_num_10@pagination_devolved.base_page_logic": {"$current_page": 10},
+  "page_num_11@pagination_devolved.base_page_logic": {"$current_page": 11},
+  "page_num_12@pagination_devolved.base_page_logic": {"$current_page": 12},
+  "page_num_13@pagination_devolved.base_page_logic": {"$current_page": 13},
+  "page_num_14@pagination_devolved.base_page_logic": {"$current_page": 14},
+  "page_num_15@pagination_devolved.base_page_logic": {"$current_page": 15},
+  "page_num_16@pagination_devolved.base_page_logic": {"$current_page": 16},
+  "page_num_17@pagination_devolved.base_page_logic": {"$current_page": 17},
+  "page_num_18@pagination_devolved.base_page_logic": {"$current_page": 18},
+  "page_num_19@pagination_devolved.base_page_logic": {"$current_page": 19},
+  "page_num_20@pagination_devolved.base_page_logic": {"$current_page": 20},
+  "page_num_21@pagination_devolved.base_page_logic": {"$current_page": 21},
+  "page_num_22@pagination_devolved.base_page_logic": {"$current_page": 22},
+  "page_num_23@pagination_devolved.base_page_logic": {"$current_page": 23},
+  "page_num_24@pagination_devolved.base_page_logic": {"$current_page": 24},
+  "page_num_25@pagination_devolved.base_page_logic": {"$current_page": 25},
+  "page_num_26@pagination_devolved.base_page_logic": {"$current_page": 26},
+  "page_num_27@pagination_devolved.base_page_logic": {"$current_page": 27},
+  "page_num_28@pagination_devolved.base_page_logic": {"$current_page": 28},
+  "page_count_label@global.empty_label": {
+    "color": "white",
+    "text": "('\u00a7r' + $current_page + '/' + $max_ashur_page)",
+    "anchor_from": "center",
+    "anchor_to": "center"
+  },
+  "tepes_left_button@pagination_devolved.base_toggle_button": {
+    "ignored": "($current_page = 1)",
+    "$toggle_group_forced_index": 0,
+    "$direction": "left",
+    "$toggle_control_name": "('page_' + $max_ashur_page + $current_page)",
+    "$toggle_name": "('ashur' + $max_ashur_page + ($current_page - 1))"
+  },
+  "tepes_right_button@pagination_devolved.base_toggle_button": {
+    "ignored": "($current_page = $max_ashur_page)",
+    "$toggle_group_forced_index": 1,
+    "$direction": "right",
+    "$toggle_control_name": "('page_' + $max_ashur_page + ($current_page + 1))",
+    "$toggle_name": "('ashur' + $max_ashur_page + $current_page)"
+  },
+  "max_page_is_28@pagination_devolved.base_page_logic": {
+    "$is_in_recipe_inventory|default": false, 
+    "$page_content": "global.empty_panel"
+  }
+}
