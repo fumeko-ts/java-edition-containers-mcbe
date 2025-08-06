@@ -76,10 +76,6 @@
   },
   "scrollbar_track": {
     "type": "scroll_track",
-    "$focus_for_tts_enabled|default": true,
-    "focus_enabled": "$focus_for_tts_enabled",
-    "$scrollbar_tts_name|default": "accessibility.scrollbar.tts.title",
-    "tts_name": "$scrollbar_tts_name",
     "size": "$scroll_track_sise",
     "$scroll_track_sise|default": [ "default", "default" ],
     "button_mappings": [

@@ -125,40 +125,10 @@
                             "grid_dimensions": [ 2, 2 ],
                             "collection_name": "crafting_input_items",
                             "controls": [
-                              {
-                                "crafting_input_item_top_left@crafting_textures.crafting_input_grid_item": {
-                                  "grid_position": [ 0, 0 ],
-                                  "$focus_id_binding_type": "none",
-                                  "$focus_id": "crafting_input_top_left",
-                                  "$focus_override_left_binding_type": "none",
-                                  "$focus_override_left": "armor_item_head"
-                                }
-                              },
-                              {
-                                "crafting_input_item_top_right@crafting_textures.crafting_input_grid_item": {
-                                  "grid_position": [ 1, 0 ],
-                                  "$focus_id_binding_type": "none",
-                                  "$focus_id": "crafting_input_top_right",
-                                  "$focus_override_right_binding_type": "none",
-                                  "$focus_override_right": "crafting_output_item"
-                                }
-                              },
-                              {
-                                "crafting_input_item_bot_left@crafting_textures.crafting_input_grid_item": {
-                                  "grid_position": [ 0, 1 ],
-                                  "$focus_id_binding_type": "none",
-                                  "$focus_id": "crafting_input_mid_left",
-                                  "$focus_override_left_binding_type": "none",
-                                  "$focus_override_left": "armor_item_legs"
-                                }
-                              },
-                              {
-                                "crafting_input_item_bot_right@crafting_textures.crafting_input_grid_item": {
-                                  "grid_position": [ 1, 1 ],
-                                  "$focus_override_right_binding_type": "none",
-                                  "$focus_override_right": "crafting_output_item"
-                                }
-                              }
+                              {"crafting_input_item_top_left@crafting_textures.crafting_input_grid_item": {"grid_position": [ 0, 0 ]}},
+                              {"crafting_input_item_top_right@crafting_textures.crafting_input_grid_item": {"grid_position": [ 1, 0 ]}},
+                              {"crafting_input_item_bot_left@crafting_textures.crafting_input_grid_item": {"grid_position": [ 0, 1 ]}},
+                              {"crafting_input_item_bot_right@crafting_textures.crafting_input_grid_item": {"grid_position": [ 1, 1 ]}}
                             ]
                           }
                         },

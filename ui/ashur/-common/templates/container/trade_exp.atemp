@@ -56,7 +56,7 @@
                 "type": "image",
                 "texture": "assets/minecraft/textures/gui/sprites/container/villager/experience_bar_current.png",
                 "clip_direction": "left",
-                "clip_pixelperfect": false,
+                "clip_pixelperfect": true,
                 "layer": 8,
                 "bindings": [
                   {

@@ -8,8 +8,8 @@
     "max_size": [360, 166],
     "$is_smoker_screen|default": true,
     "controls": [
-      {"recipe_book@furnace_recipe_book.recipe_book":{}},
-      {"filler@global.empty_panel": {"size": [2, "fill"] }},
+     // {"recipe_book@furnace_recipe_book.recipe_book":{}},
+    //  {"filler@global.empty_panel": {"size": [2, "fill"] }},
       {
         "main_smoker_contents@container_common.container_details": {
           "size": [176, 166],

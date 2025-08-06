@@ -85,16 +85,13 @@
   "page_26@page_template": {"$ov": [ 0, -2500 ]},
   "page_27@page_template": {"$ov": [ 0, -2600 ]},
   "page_28@page_template": {"$ov": [ 0, -2700 ]},
-  "base_page_logic": {
-    "type": "panel",
+  "base_page_logic@global.empty_panel": {
     "$current_page": 1,
-    "$page_counter": "('pagination.page_num_' + ($current_page + 1))",
+    "$page_counter": "('pagination.index_' + ($current_page + 1))",
     "$page_contents": "('pagination.page_' + $current_page)",
-    "variables": {"requires": "($current_page = 28)", "$page_counter": "global.empty_panel"},
     "controls": [
       {
-        "base_content": {
-          "type": "panel",
+        "base_content@global.empty_panel": {
           "controls": "$recipe_book_contents",
           "bindings": [
             {
@@ -117,40 +114,42 @@
       }
     ]
   },
-  "page_num_1@pagination.base_page_logic": {"$current_page": 1},
-  "page_num_2@pagination.base_page_logic": {"$current_page": 2},
-  "page_num_3@pagination.base_page_logic": {"$current_page": 3},
-  "page_num_4@pagination.base_page_logic": {"$current_page": 4},
-  "page_num_5@pagination.base_page_logic": {"$current_page": 5},
-  "page_num_6@pagination.base_page_logic": {"$current_page": 6},
-  "page_num_7@pagination.base_page_logic": {"$current_page": 7},
-  "page_num_8@pagination.base_page_logic": {"$current_page": 8},
-  "page_num_9@pagination.base_page_logic": {"$current_page": 9},
-  "page_num_10@pagination.base_page_logic": {"$current_page": 10},
-  "page_num_11@pagination.base_page_logic": {"$current_page": 11},
-  "page_num_12@pagination.base_page_logic": {"$current_page": 12},
-  "page_num_13@pagination.base_page_logic": {"$current_page": 13},
-  "page_num_14@pagination.base_page_logic": {"$current_page": 14},
-  "page_num_15@pagination.base_page_logic": {"$current_page": 15},
-  "page_num_16@pagination.base_page_logic": {"$current_page": 16},
-  "page_num_17@pagination.base_page_logic": {"$current_page": 17},
-  "page_num_18@pagination.base_page_logic": {"$current_page": 18},
-  "page_num_19@pagination.base_page_logic": {"$current_page": 19},
-  "page_num_20@pagination.base_page_logic": {"$current_page": 20},
-  "page_num_21@pagination.base_page_logic": {"$current_page": 21},
-  "page_num_22@pagination.base_page_logic": {"$current_page": 22},
-  "page_num_23@pagination.base_page_logic": {"$current_page": 23},
-  "page_num_24@pagination.base_page_logic": {"$current_page": 24},
-  "page_num_25@pagination.base_page_logic": {"$current_page": 25},
-  "page_num_26@pagination.base_page_logic": {"$current_page": 26},
-  "page_num_27@pagination.base_page_logic": {"$current_page": 27},
-  "page_num_28@pagination.base_page_logic": {"$current_page": 28},
-  "page_count_label@global.empty_label": {
+  "index_1@pagination.base_page_logic": {"$current_page": 1},
+  "index_2@pagination.base_page_logic": {"$current_page": 2},
+  "index_3@pagination.base_page_logic": {"$current_page": 3},
+  "index_4@pagination.base_page_logic": {"$current_page": 4},
+  "index_5@pagination.base_page_logic": {"$current_page": 5},
+  "index_6@pagination.base_page_logic": {"$current_page": 6},
+  "index_7@pagination.base_page_logic": {"$current_page": 7},
+  "index_8@pagination.base_page_logic": {"$current_page": 8},
+  "index_9@pagination.base_page_logic": {"$current_page": 9},
+  "index_10@pagination.base_page_logic": {"$current_page": 10},
+  "index_11@pagination.base_page_logic": {"$current_page": 11},
+  "index_12@pagination.base_page_logic": {"$current_page": 12},
+  "index_13@pagination.base_page_logic": {"$current_page": 13},
+  "index_14@pagination.base_page_logic": {"$current_page": 14},
+  "index_15@pagination.base_page_logic": {"$current_page": 15},
+  "index_16@pagination.base_page_logic": {"$current_page": 16},
+  "index_17@pagination.base_page_logic": {"$current_page": 17},
+  "index_18@pagination.base_page_logic": {"$current_page": 18},
+  "index_19@pagination.base_page_logic": {"$current_page": 19},
+  "index_20@pagination.base_page_logic": {"$current_page": 20},
+  "index_21@pagination.base_page_logic": {"$current_page": 21},
+  "index_22@pagination.base_page_logic": {"$current_page": 22},
+  "index_23@pagination.base_page_logic": {"$current_page": 23},
+  "index_24@pagination.base_page_logic": {"$current_page": 24},
+  "index_25@pagination.base_page_logic": {"$current_page": 25},
+  "index_26@pagination.base_page_logic": {"$current_page": 26},
+  "index_27@pagination.base_page_logic": {"$current_page": 27},
+  "index_28@pagination.base_page_logic": {"$current_page": 28, "$page_counter": "global.empty_panel"},
+  "count_template@global.empty_label":{
     "color": "white",
-    "text": "#text",
     "anchor_from": "center",
     "anchor_to": "center",
-    "property_bag": {"#visible": false},
+    "text": "#text",
+    "property_bag": {"#visible": false}
+  },
+  "page_count_label@pagination.count_template": {
     "bindings":[
       {
         "binding_name": "#recipe_book_total_items",
@@ -160,23 +159,19 @@
       {
         "binding_type": "view",
         "binding_condition": "always",
-        "source_property_name": "(('\u00a7r' + $current_page + '/' + ((#recipe_book_total_items > 0) * ((#recipe_book_total_items / 20) + 1)))",
+        "source_property_name": "('\u00a7r' + $current_page + '/' + (((#recipe_book_total_items + 19) / 20)))",
         "target_property_name": "#text"
       },
       {
         "binding_type": "view",
         "binding_condition": "always",
-        "source_property_name": "((((#recipe_book_total_items + 19) / 20) < 27) and (((#recipe_book_total_items + 19) / 20) > 1))",
+        "source_property_name": "((#recipe_book_total_items + 19) / 20 > 1 and (#recipe_book_total_items + 19) / 20 < 27)",
         "target_property_name": "#visible"
       }
     ]
   },
-  "max_page_label@global.empty_label": {
-    "color": "white",
+  "max_page_label@pagination.count_template": {
     "text": "('\u00a7r' + $current_page + '/28')",
-    "anchor_from": "center",
-    "anchor_to": "center",
-    "property_bag": {"#visible": false},
     "bindings":[
       {
         "binding_name": "#recipe_book_total_items",
@@ -186,7 +181,7 @@
       {
         "binding_type": "view",
         "binding_condition": "always",
-        "source_property_name": "(((#recipe_book_total_items + 19) / 20) > 27)",
+        "source_property_name": "((#recipe_book_total_items + 19) / 20 > 27)",
         "target_property_name": "#visible"
       }
     ]

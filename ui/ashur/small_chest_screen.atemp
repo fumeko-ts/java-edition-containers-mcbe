@@ -18,6 +18,7 @@
     "type": "panel",
     "size": [ 176, 166 ],
     "$screen_controls": [
+ 
       {"common_panel@screen_content.container_base": {"$barrel_screen": true}},
       {
         "small_chest_top_half@global.empty_stack": {
@@ -78,27 +79,8 @@
           ]
         }
       },
-      {"search_tab@small_chest_screen.search_tab":{}},
       {
         "bottom@crafting_screen.inventory_bottom_half_with_label": {"anchor_to": "bottom_middle", "anchor_from": "bottom_middle"}
-      }
-    ]
-  },
-  "top_tab@toggle.toggle": {
-    "size": [ 20, 10 ],
-    "$is_tab": false,
-    "$is_radio_toggle": false,
-    "$toggle_name": "navigation_tab"
-  },
-  "search_tab@global.empty_panel":{
-    "size": [60, 100],
-    "controls": [
-      {
-        "search_tab@small_chest_screen.top_tab": {
-          "layer": 40,
-          "$tab_view_binding_name": "smoker_search_tab_toggle",
-          "$toggle_group_forced_index": "$smoker_search_tab_index"
-        }
       }
     ]
   }

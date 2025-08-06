@@ -246,8 +246,9 @@
       }
     ]
   },
+
   "slot_button@loom.pattern_slot_button": {
-    "size": [13.75, 14],
+    "size": [14, 14],
     "default_control": "default",
     "hover_control": "hover",
     "pressed_control": "pressed",
@@ -259,18 +260,18 @@
   },
   "button_template@screen_content.image_element": {
     "texture": "$image_src",
-    "size": [13.4, 14],
+    "size": [14, 14],
     "offset": [1, 0],
     "controls": [
       {
-        "banner_pattern": {
-          "type": "custom",
-          "renderer": "banner_pattern_renderer",
-          "size": [5, 10],
-          "layer": 6,
-          "anchor_to": "bottom_middle",
-          "anchor_from": "bottom_middle",
-          "offset": [0, -2],
+        "banner_template@global.empty_image":{
+          "anchor_to": "center",
+          "anchor_from": "center",
+          "keep_ratio": true,
+          "layer": 10,
+          "texture": "#texture",
+          "offset": [-0.2, -0.2],
+          "size": [6, 12],
           "bindings": [
             {
               "binding_name"           : "#banner_patterns",
@@ -278,11 +279,23 @@
               "binding_collection_name": "patterns"
             },
             {
-              "binding_name"           : "#banner_colors",
-              "binding_type"           : "collection",
-              "binding_collection_name": "patterns"
+              "binding_type": "view",
+              "binding_condition": "always",
+              "source_property_name": "('textures/atemp/banner_patterns/' + #banner_patterns)",
+              "target_property_name": "#texture"
             }
           ]
+        }
+      },
+      {
+        "banner_bg@global.empty_image": {
+          "anchor_to": "center",
+          "anchor_from": "center",
+          "keep_ratio": true,
+          "offset": [-0.2, -0.2],
+          "texture": "textures/atemp/banner_patterns/banner_bg.png",
+          "size": [6, 12],
+          "layer": 6
         }
       }
     ]
@@ -301,18 +314,20 @@
     "$scroll_box_touch_image_control": "screen_content.scroll_box_image",
     "$scrolling_content": "loom_screen.scroll_grid_holder"
   },
+      
+
   "scroll_grid_holder": {
     "type": "panel",
-    "size": [55, "100%cm"],
+    "size": [56, "100%cm"],
     "anchor_to": "center",
     "anchor_from": "center",
+          "offset": [0, -0.4],
     "controls": [
-      {"scroll_buffer@global.empty_panel": { "size": [55, "100%sm"] }},
+      {"scroll_buffer@global.empty_panel": { "size": [56, "100%sm"] }},
       {
         "scroll_grid": {
           "type": "grid",
-          "size": [55, "default"],
-          "offset": [0, -0.4],
+          "size": [56, "default"],
           "$binding_condition|default": "visible",
           "$grid_item_template|default": "loom_screen.slot_button",
           "collection_name": "$collection_name",

@@ -14,6 +14,7 @@
 
 {
   "ui_defs": [
+    "ui/ashur/-common/templates/container/banner.atemp",
     "ui/ashur/furnace_recipe/furnace_tab_toggles/smoker_tab_toggles.atemp",
     "ui/ashur/furnace_recipe/recipe_content/smoker_grid_items.atemp",
     "ui/ashur/furnace_recipe/furnace_recipe_book.atemp",
