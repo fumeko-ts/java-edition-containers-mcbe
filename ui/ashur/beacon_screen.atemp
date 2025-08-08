@@ -14,9 +14,6 @@
 
 {
   "namespace": "beacon_screen",
-  "selected_item_details@common.selected_item_details": {
-    "offset": [0, 0]
-  },
   "beacon_panel@container_common.container_details": {
     "size": [256, 219],
     "$screen_controls": [
@@ -26,13 +23,12 @@
       {"bottom@crafting_screen.inventory_bottom_half_with_label": {"$is_creative_survival_tab": true,"offset": [1, 0.2],"anchor_to": "bottom_middle", "anchor_from": "bottom_middle"}}
     ]
   },
-  "image_atlas": {"type": "image"},
-  "button_unchecked_default@beacon_screen.image_atlas": {"texture": "assets/minecraft/textures/gui/sprites/container/beacon/button.png"},
-  "button_unchecked_hover@beacon_screen.image_atlas": {"size": [22, 22],"texture": "assets/minecraft/textures/gui/sprites/container/beacon/button_highlighted.png","controls": [ {"hover_text@beacon_screen.hover_text": {}} ]},
-  "button_checked_hover@beacon_screen.image_atlas": {"texture": "assets/minecraft/textures/gui/sprites/container/beacon/button_highlighted.png","controls": [ {"hover_text@beacon_screen.hover_text": {}} ]},
-  "button_locked@beacon_screen.image_atlas": {"texture": "assets/minecraft/textures/gui/sprites/container/beacon/button_disabled.png"},
-  "button_locked_hover@beacon_screen.image_atlas": {"texture": "assets/minecraft/textures/gui/sprites/container/beacon/button_disabled.png","controls": [ {"hover_text@beacon_screen.hover_text": {}} ]},
-  "button_checked@beacon_screen.image_atlas": {"texture": "assets/minecraft/textures/gui/sprites/container/beacon/button_selected.png"},
+  "button_unchecked_default@screen_content.image_element": {"texture": "assets/minecraft/textures/gui/sprites/container/beacon/button.png"},
+  "button_unchecked_hover@screen_content.image_element": {"size": [22, 22],"texture": "assets/minecraft/textures/gui/sprites/container/beacon/button_highlighted.png","controls": [ {"hover_text@beacon_screen.hover_text": {}} ]},
+  "button_checked_hover@screen_content.image_element": {"texture": "assets/minecraft/textures/gui/sprites/container/beacon/button_highlighted.png","controls": [ {"hover_text@beacon_screen.hover_text": {}} ]},
+  "button_locked@screen_content.image_element": {"texture": "assets/minecraft/textures/gui/sprites/container/beacon/button_disabled.png"},
+  "button_locked_hover@screen_content.image_element": {"texture": "assets/minecraft/textures/gui/sprites/container/beacon/button_disabled.png","controls": [ {"hover_text@beacon_screen.hover_text": {}} ]},
+  "button_checked@screen_content.image_element": {"texture": "assets/minecraft/textures/gui/sprites/container/beacon/button_selected.png"},
   "item_renderer": {
     "type": "custom",
     "renderer": "inventory_item_renderer",
@@ -136,7 +132,7 @@
       }
     ]
   },
-  "base_image@beacon_screen.image_atlas": {
+  "base_image@screen_content.image_element": {
     "$image_size|default": [18, 18],
     "size": "$image_size",
     "offset": [1, 0],

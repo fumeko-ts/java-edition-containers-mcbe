@@ -14,16 +14,9 @@
 
 {
   "namespace": "container_common",
-  "common_toggle@common_toggles.light_text_toggle": {
-    "$button_text": "",
-    "$toggle_trigger_name": "+ashur_",
-    "$toggle_name": "$toggle_trigger_name",
-    "$toggle_view_binding_name": "$toggle_trigger_name",
-    "offset": [ 0, -20 ],
-    "size": [ 25, 25 ]
-  },
-  "container_details": {
-    "type": "panel",
+  "container_details@global.empty_panel": {
+    "anchor_to": "center",
+    "anchor_from": "center",
     "controls": [
       {"screen@global.empty_panel": {"controls": "$screen_controls"}},
       {"2@common.selected_item_details_factory": {}},
@@ -34,8 +27,7 @@
       {"9@common.inventory_take_progress_icon_button": {}}
     ]
   },
-  "held_flying_renderer": {
-    "type": "panel",
+  "held_flying_renderer@global.empty_panel": {
     "size": [ 18, 18 ],
     "controls": [
       {
@@ -94,8 +86,7 @@
         }
       },
       {
-        "inventory_selected_stack_size_text": {
-          "type": "label",
+        "stack_text@global.empty_label": {
           "anchor_to": "bottom_right",
           "anchor_from": "bottom_right",
           "layer": 53,

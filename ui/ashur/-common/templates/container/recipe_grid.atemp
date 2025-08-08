@@ -51,9 +51,7 @@
           ]
         }
       },
-      {
-        "default_item_bg@recipe_grid.slot_craftable": {"$texture_path": "('textures/ui/recipe_book_item_bg')"}
-      },
+      {"default_item_bg@recipe_grid.slot_craftable": {"$texture_path": "('textures/ui/recipe_book_item_bg')"}},
       {"red_bg@recipe_grid.slot_uncraftable": {"$texture_path": "('textures/ui/recipe_book_red_button')"}},
       {
         "selected@recipe_grid.cell_image": {
@@ -90,14 +88,7 @@
           ]
         }
       },
-      {
-        "item_renderer@common.item_renderer": {
-          "size": [16, 16],
-          "anchor_to": "center",
-          "anchor_from": "center",
-          "layer": 7
-        }
-      },
+      {"item_renderer@common.item_renderer": {"size": [16, 16],"anchor_to": "center","anchor_from": "center","layer": 7}},
       {
        "container_overlay_images@global.empty_panel": {
           "layer": 9,

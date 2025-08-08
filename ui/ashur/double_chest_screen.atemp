@@ -18,7 +18,7 @@
     "type": "panel",
     "size": [ 176, 222 ],
     "$screen_controls": [
-      {"common_panel@screen_content.container_base": {"$double_chest_container": true}},
+      {"common_panel@screen_content.container_base": {"$double_chest_screen": true}},
       {
         "double_chest_top_half@global.empty_stack": {
           "orientation": "vertical",

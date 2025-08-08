@@ -1,0 +1,271 @@
+{
+  "namespace": "trade_global",
+  "toggle_content@global.empty_stack": {
+    "size": [88, 20],
+    "orientation": "horizontal",
+    "controls": [
+      {"filler_1@global.empty_panel":{"size": [4, "fill"]}},
+      {
+        "required_item_1@global.empty_stack": {
+          "orientation": "vertical",
+          "size": [18, 20],
+          "controls": [
+            {"required_item_1@trade_global.item_template": {"collection_name": "trade_item_1"}},
+            {"filler_2@global.empty_panel":{"size": ["fill",2]}} 
+          ]
+        }
+      },
+      {"filler_2@global.empty_panel":{"size": [13, "fill"]}},
+      {
+        "required_item_2@global.empty_stack": {
+          "orientation": "vertical",
+          "size": [18, 20],
+          "controls": [
+            {"required_item_1@trade_global.item_template": {"collection_name": "trade_item_2"}},
+            {"filler_2@global.empty_panel":{"size": ["fill",2]}} 
+          ]
+        }
+      },
+      {"filler_3@global.empty_panel":{"size": [2, "fill"]}},
+      {
+        "arrow_holder@global.empty_stack": {
+          "orientation": "vertical",
+          "size": [10, 20],
+          "controls": [
+            {"filler_1@global.empty_panel":{"size": ["fill", 4]}},
+            {
+              "arrow_holder@global.empty_panel": {
+                "size": [10, 9],
+                "controls": [
+                  {"arrow_default@screen_content.trade_arrow":{}},
+                  {"arrow_deny@screen_content.trade_cross_out":{}}
+                ]
+              }
+            },
+            {"filler_2@global.empty_panel":{"size": ["fill", 7]}}
+          ]
+        }
+      },
+      {"filler_3@global.empty_panel":{"size": [2, "fill"]}},
+      {
+        "item_being_sold@global.empty_stack": {
+          "orientation": "vertical",
+          "size": [18, 20],
+          "controls": [
+            {"required_item_1@trade_global.item_template": {"collection_name": "sell_item"}},
+            {"filler_2@global.empty_panel":{"size": ["fill",2]}} 
+          ]
+        }
+      },
+      {"filler_1@global.empty_panel":{"size": [3, "fill"]}}
+    ]
+  },
+  "item_template": {
+    "type": "grid",
+    "size": [18, 18],
+    "grid_dimensions": [1, 1],
+    "controls": [
+      {
+        "item_with_count@global.empty_panel": {
+          "size": [18, 18],
+          "$stack_count_required": true,
+          "controls": [
+            {
+              "item_renderer@common.item_renderer": {
+                "size": [16, 16],
+                "layer": 1,
+                "bindings": [
+                  {"binding_type": "collection_details"},
+                  {"binding_name": "#item_id_aux"},
+                  {"binding_name": "#item_custom_color"},
+                  {"binding_name": "#item_pickup_time"},
+                  {"binding_name": "#banner_patterns"},
+                  {"binding_name": "#banner_colors"},
+                  {"binding_name": "#banner_type"}
+                ],
+                "controls": [
+                  {
+                    "item_count_text@trade_global.item_count_text": {
+                      "layer": 2,
+                      "text": "#trade_item_count",
+                      "anchor_from": "bottom_right",
+                      "anchor_to": "bottom_right",
+                      "offset": [1, 1],
+                      "bindings": [
+                        {"binding_type": "collection_details"},
+                        {"binding_name": "#trade_item_count"},
+                        {
+                          "binding_name": "(not #trade_price_different)",
+                          "binding_name_override": "#visible"
+                        }
+                      ]
+                    }
+                  },
+                  {
+                    "changed_item_count_label@trade_global.changed_item_count_label": {
+                      "anchor_from": "bottom_right",
+                      "anchor_to": "bottom_right",
+                      "offset": [14, 1],
+                      "bindings": [
+                        {"binding_type": "collection_details"},
+                        {"binding_name": "#trade_item_count"},
+                        {
+                          "binding_name": "#trade_price_different",
+                          "binding_name_override": "#visible"
+                        }
+                      ]
+                    }
+                  },
+                  {
+                    "hover_button": {
+                      "type": "button",
+                      "layer": 500,
+                      "default_focus_precedence": 1,
+                      "hover_control": "hover_text",
+                      "consume_event": false,
+                      "button_mappings": [
+                        {
+                          "to_button_id": "button.container_slot_hovered",
+                          "mapping_type": "pressed",
+                          "consume_event": false
+                        }
+                      ],
+                      "controls": [
+                        {
+                          "hover_text@common.hover_text": {
+                            "bindings": [
+                              {"binding_type": "collection_details"},
+                              {
+                                "binding_name"     : "#hover_text",
+                                "binding_condition": "visible"
+                              }
+                            ]
+                          }
+                        }
+                      ],
+                      "bindings": [
+                        {"binding_type": "collection_details"},
+                        {
+                          "binding_name": "(not #using_touch)",
+                          "binding_name_override": "#visible"
+                        }
+                      ]
+                    }
+                  }
+                ]
+              }
+            }
+          ]
+        }
+      }
+    ]
+  },
+  "trade_toggle@common.toggle": {
+    "button_mappings": [
+      {
+        "from_button_id": "button.menu_select",
+        "to_button_id": "button.trade_select",
+        "mapping_type": "pressed"
+      },
+      {
+        "from_button_id": "button.menu_secondary_select",
+        "to_button_id": "button.trade_secondary_select",
+        "mapping_type": "pressed"
+      },
+      {
+        "from_button_id": "button.menu_ok",
+        "to_button_id": "button.trade_select",
+        "mapping_type": "focused"
+      },
+      {
+        "from_button_id": "button.controller_back",
+        "to_button_id": "button.trade_select",
+        "mapping_type": "focused",
+        "ignored": "(not $is_ps4)"
+      },
+      {
+        "to_button_id": "button.trade_toggle_hovered",
+        "mapping_type": "pressed"
+      }
+    ],
+    "$unchecked_control": "screen_content.trade_toggle_unchecked",
+    "$checked_control": "screen_content.trade_toggle_checked",
+    "$unchecked_hover_control": "screen_content.trade_toggle_hover",
+    "$checked_hover_control": "screen_content.trade_toggle_hover",
+    "$unchecked_locked_control": "global.empty_image",
+    "$unchecked_locked_hover_control": "global.empty_image",
+    "$checked_locked_control": "global.empty_image",
+    "$checked_locked_hover_control": "global.empty_image"
+  },
+  "item_count_text@global.empty_label": {"color": "$item_stack_count_color","shadow": true},
+  "changed_item_count_label@global.empty_stack": {
+    "orientation": "horizontal",
+    "size": [ "100%c", "100%cm" ],
+    "controls": [
+      {
+        "item_count_text@trade_global.item_count_text": {
+          "layer": 2,
+          "text": "#trade_item_count",
+          "bindings": [
+            {"binding_type": "collection_details"},
+            {"binding_name": "#trade_item_count"}
+          ],
+          "controls": [
+            {
+              "red_slash@screen_content.discount_strikethrough": {
+                "size": [ 6, 2 ],
+                "offset": [ 0, -4 ],
+                "anchor_to": "bottom_right",
+                "anchor_from": "bottom_right",
+                "layer": 3,
+                "bindings": [
+                  {"binding_type": "collection_details"},
+                  {
+                    "binding_name": "#single_slash_visible",
+                    "binding_name_override": "#visible"
+                  }
+                ]
+              }
+            },
+            {
+              "red_slash_double@screen_content.discount_strikethrough": {
+                "size": [ 12, 2 ],
+                "offset": [ 0, -4 ],
+                "anchor_to": "bottom_right",
+                "anchor_from": "bottom_right",
+                "layer": 3,
+                "bindings": [
+                  {"binding_type": "collection_details"},
+                  {
+                    "binding_name": "#double_slash_visible",
+                    "binding_name_override": "#visible"
+                  }
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {"filler@global.empty_panel": {"size": [ 2, "fill" ]}},
+      {
+        "second_item_count_text@trade_global.item_count_text": {
+          "layer": 2,
+          "text": "#second_trade_item_count",
+          "bindings": [
+            {"binding_type": "collection_details"},
+            {"binding_name": "#second_trade_item_count"}
+          ]
+        }
+      }
+    ]
+  },
+  "button_state_common@global.empty_image": {
+    "texture": "$image_texture",
+    "nineslice_size": [2, 2, 2, 2],
+    "size": [88, 20],
+    "offset": [1, 1],
+    "controls": [
+      {"button_content_panel@trade_global.toggle_content": {"layer": 3}}
+    ]
+  }
+}
