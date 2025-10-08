@@ -17,3 +17,5 @@
 - "All Rights Reserved" means I retain full copyright control - no one may redistribute, modify, or use my work beyond the permissions explicitly granted above.
   
 - By downloading or useing eany part of this project (not includeing offical minecraft within /assets) you automatically agree to the above terms
+
+`at this time i am not currently accepting requests to port a texture pack or for someone to use my code for that usecase`
