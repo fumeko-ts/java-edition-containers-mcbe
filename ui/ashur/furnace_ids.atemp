@@ -1,5 +1,22 @@
+/**
+// © 2025 ashura_temps,    All Rights Reserved.
+//
+// This UI is custom-made. You are allowed to use it **only as-is**, inside the game.
+// Do not modify, extract, reuse, or share any part of this UI including .json, .atemp files,
+// layout structure, or design.
+//
+// Not allowed:
+//   - Editing the UI (even for private/personal use)
+//   - Using parts of the code or layout in your own pack
+//   - Reuploading, redistributing, or hosting these files elsewhere
+//   - Converting texture packs to Bedrock using this UI
+//
+// By using this project, you agree to these terms.
+*/
+
 {
   "ids": {
+    // Food
     "$raw_mutton_id": 583,
     "$raw_rabbit_id": 310,
     "$potato_id": 302,
@@ -9,6 +26,8 @@
     "$raw_cod_id": 286,
     "$raw_porkchop_id": 284,
     "$kelp_id": 408,
+
+    // Ore
     "$raw_copper_id": 541,
     "$raw_gold_id": 540,
     "$raw_iron_id": 539,
@@ -23,6 +42,8 @@
     "$ancient_debris_id": -271,
     "$copper_ore_id": -311,
     "$lapis_lazuli_ore_id": -400,
+
+    // Block
     "$block_of_quartz_id": 155,
     "$red_sandstone_id": 179,
     "$sandstone_id": 24,
@@ -39,6 +60,8 @@
     "$dyed_terracotta_id": 172,
     "$nether_bricks_id": 112,
     "$stone_id": 1,
+
+    // Other
     "$chorus_fruit_id": 591,
     "$gold_tools_id": 376,
     "$clay_ball_id": 410,
@@ -48,6 +71,8 @@
     "$cactus_id": 81,
     "$wood_id": -212,
     "$sea_pickle_id": -156,
+
+    // Fuel
     "$crossbow_id": 608,
     "$fishing_rod_id": 418,
     "$lava_bucket_id": 388,

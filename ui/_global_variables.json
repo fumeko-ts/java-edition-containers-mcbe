@@ -1,7 +1,8 @@
-// © 2025 ashura_tepes – All Rights Reserved.
+/**
+// © 2025 ashura_temps,    All Rights Reserved.
 //
 // This UI is custom-made. You are allowed to use it **only as-is**, inside the game.
-// Do not modify, extract, reuse, or share any part of this UI — including .json, .atemp,
+// Do not modify, extract, reuse, or share any part of this UI including .json, .atemp files,
 // layout structure, or design.
 //
 // Not allowed:
@@ -10,21 +11,20 @@
 //   - Reuploading, redistributing, or hosting these files elsewhere
 //   - Converting texture packs to Bedrock using this UI
 //
-// By using it, you agree to these terms.
+// By using this project, you agree to these terms.
+*/
 
 {
-  "$nature_tab_texture": "pearlescent_froglight",
-
-  // Set container UI transparency (range: 0.0 - 1.0)
+  // Set container UI transparency (range 0.0 to 1.0)
   "$container_opacity": 1,
 
   "$title_text_color": [0.247, 0.247, 0.247, 1.0],
+
   "$enchant_light_green": [0.475, 0.95, 0.11875],
   "$enchant_light_yellow": [1.0, 1.0, 0.5],
   "$enchant_light_brown": [0.392, 0.357, 0.275, 1.0],
   "$enchant_dark_green": [0.318, 0.475, 0.216],
 
-  "$smoker_search_tab_index": 0,
   "$direction": "right",
 
   "$creative_recipe_book": false,
@@ -52,9 +52,10 @@
   "$stonecutter_screen": false,
   "$main_trade_screen": false,
   "$recipe_book": false,
-
-  // Internal use – changing content below will break some UI
+  
+  "$cb_is_thick_menu_buttons": false,
   "$jc:dev": true,
+  
   "$enchant_selectable_button_mappings": [
     { "from_button_id": "button.menu_select", "to_button_id": "button.menu_ok", "mapping_type": "pressed" },
     { "from_button_id": "button.menu_ok", "to_button_id": "button.menu_ok", "mapping_type": "focused" },

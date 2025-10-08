@@ -1,3 +1,19 @@
+/**
+// © 2025 ashura_temps,    All Rights Reserved.
+//
+// This UI is custom-made. You are allowed to use it **only as-is**, inside the game.
+// Do not modify, extract, reuse, or share any part of this UI including .json, .atemp files,
+// layout structure, or design.
+//
+// Not allowed:
+//   - Editing the UI (even for private/personal use)
+//   - Using parts of the code or layout in your own pack
+//   - Reuploading, redistributing, or hosting these files elsewhere
+//   - Converting texture packs to Bedrock using this UI
+//
+// By using this project, you agree to these terms.
+*/
+
 {
   "namespace": "creative_inventory",
   "screen_base@global.root_panel": {
@@ -179,6 +195,7 @@
   },
   "search_tab@creative_inventory.top_tab": {
     "$is_top_right_tab": true,
+    "$toggle_default_state": true,
     "$toggle_hover_text": "Search Items",
     "$tab_view_binding_name": "search_tab_toggle",
     "$toggle_group_forced_index": "$search_index",
@@ -213,7 +230,6 @@
     "$toggle_hover_text": "Inventory",
     "$is_bottom_right_tab": true,
     "$unchecked_offset|default": [ 0, -2 ],
-    "$toggle_default_state": true,
     "$checked_offset|default": [ 0, 2 ],
     "$tab_view_binding_name": "inventory_tab_toggle",
     "$toggle_group_forced_index": "($search_index + 1)"

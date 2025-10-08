@@ -1,14 +1,30 @@
+/**
+// © 2025 ashura_temps,    All Rights Reserved.
+//
+// This UI is custom-made. You are allowed to use it **only as-is**, inside the game.
+// Do not modify, extract, reuse, or share any part of this UI including .json, .atemp files,
+// layout structure, or design.
+//
+// Not allowed:
+//   - Editing the UI (even for private/personal use)
+//   - Using parts of the code or layout in your own pack
+//   - Reuploading, redistributing, or hosting these files elsewhere
+//   - Converting texture packs to Bedrock using this UI
+//
+// By using this project, you agree to these terms.
+*/
+
 {
   "namespace": "pagination",
-  "texture_base@screen_content.image_element": {"offset": [ 1, 1 ], "size": [ 12, 17 ], "layer": 2},
-  "tepes_left@texture_base": {"texture": "assets/sprites/recipe_book/page_backward"},
-  "tepes_left_hover@texture_base": {"texture": "assets/sprites/recipe_book/page_backward_highlighted"},
-  "tepes_right@texture_base": {"texture": "assets/sprites/recipe_book/page_forward"},
-  "tepes_right_hover@texture_base": {"texture": "assets/sprites/recipe_book/page_forward_highlighted"},
+  "texture_base@screen_content.image_element": { "offset": [1, 1], "size": [12, 17], "layer": 2 },
+  "tepes_left@texture_base": { "texture": "assets/sprites/recipe_book/page_backward" },
+  "tepes_left_hover@texture_base": { "texture": "assets/sprites/recipe_book/page_backward_highlighted" },
+  "tepes_right@texture_base": { "texture": "assets/sprites/recipe_book/page_forward" },
+  "tepes_right_hover@texture_base": { "texture": "assets/sprites/recipe_book/page_forward_highlighted" },
   "base_toggle_button@global.empty_panel": {
     "anchor_from": "center",
     "anchor_to": "center",
-    "size": [ 18, 17 ],
+    "size": [18, 17],
     "layer": 4,
     "$unchecked|default": "('pagination.tepes_' + $direction)",
     "$unchecked_hover|default": "('pagination.tepes_' + $direction + '_hover')",
@@ -17,15 +33,14 @@
     "controls": [
       {
         "$toggle_control_name@common.toggle": {
-          "offset": [ -1, -1 ],
+          "offset": [-1, -1],
           "radio_toggle_group": true,
           "focus_container": true,
-          "use_last_focus": true,
           "controls": [
-            {"unchecked@$unchecked": {}},
-            {"unchecked_hover@$unchecked_hover": {}},
-            {"checked@$checked": {}},
-            {"checked_hover@$checked_hover": {}}
+            { "unchecked@$unchecked": {} },
+            { "unchecked_hover@$unchecked_hover": {} },
+            { "checked@$checked": {} },
+            { "checked_hover@$checked_hover": {} }
           ]
         }
       }
@@ -33,38 +48,36 @@
   },
   "page_template@global.empty_panel": {
     "clips_children": true,
-    "size": [ 125, 100 ],
-    "controls": [
-      {"grid@$page_content": {"offset": "$page_offset"}}
-    ]
+    "size": [125, 100],
+    "controls": [{ "grid@$page_content": { "offset": "$page_offset" } }]
   },
-  "page_1@page_template": {"$page_offset": [ 0, 0 ]},
-  "page_2@page_template": {"$page_offset": [ 0, -100 ]},
-  "page_3@page_template": {"$page_offset": [ 0, -200 ]},
-  "page_4@page_template": {"$page_offset": [ 0, -300 ]},
-  "page_5@page_template": {"$page_offset": [ 0, -400 ]},
-  "page_6@page_template": {"$page_offset": [ 0, -500 ]},
-  "page_7@page_template": {"$page_offset": [ 0, -600 ]},
-  "page_8@page_template": {"$page_offset": [ 0, -700 ]},
-  "page_9@page_template": {"$page_offset": [ 0, -800 ]},
-  "page_10@page_template": {"$page_offset": [ 0, -900 ]},
-  "page_11@page_template": {"$page_offset": [ 0, -1000 ]},
-  "page_12@page_template": {"$page_offset": [ 0, -1100 ]},
-  "page_13@page_template": {"$page_offset": [ 0, -1200 ]},
-  "page_14@page_template": {"$page_offset": [ 0, -1300 ]},
-  "page_15@page_template": {"$page_offset": [ 0, -1400 ]},
-  "page_16@page_template": {"$page_offset": [ 0, -1500 ]},
-  "page_17@page_template": {"$page_offset": [ 0, -1600 ]},
-  "page_18@page_template": {"$page_offset": [ 0, -1700 ]},
-  "page_19@page_template": {"$page_offset": [ 0, -1800 ]},
-  "page_20@page_template": {"$page_offset": [ 0, -1900 ]},
-  "page_21@page_template": {"$page_offset": [ 0, -2000 ]},
-  "page_22@page_template": {"$page_offset": [ 0, -2100 ]},
-  "page_23@page_template": {"$page_offset": [ 0, -2200 ]},
-  "page_24@page_template": {"$page_offset": [ 0, -2300 ]},
-  "page_25@page_template": {"$page_offset": [ 0, -2400 ]},
-  "page_26@page_template": {"$page_offset": [ 0, -2500 ]},
-  "page_27@page_template": {"$page_offset": [ 0, -2600 ]},
+  "page_1@page_template": { "$page_offset": [0, 0] },
+  "page_2@page_template": { "$page_offset": [0, -100] },
+  "page_3@page_template": { "$page_offset": [0, -200] },
+  "page_4@page_template": { "$page_offset": [0, -300] },
+  "page_5@page_template": { "$page_offset": [0, -400] },
+  "page_6@page_template": { "$page_offset": [0, -500] },
+  "page_7@page_template": { "$page_offset": [0, -600] },
+  "page_8@page_template": { "$page_offset": [0, -700] },
+  "page_9@page_template": { "$page_offset": [0, -800] },
+  "page_10@page_template": { "$page_offset": [0, -900] },
+  "page_11@page_template": { "$page_offset": [0, -1000] },
+  "page_12@page_template": { "$page_offset": [0, -1100] },
+  "page_13@page_template": { "$page_offset": [0, -1200] },
+  "page_14@page_template": { "$page_offset": [0, -1300] },
+  "page_15@page_template": { "$page_offset": [0, -1400] },
+  "page_16@page_template": { "$page_offset": [0, -1500] },
+  "page_17@page_template": { "$page_offset": [0, -1600] },
+  "page_18@page_template": { "$page_offset": [0, -1700] },
+  "page_19@page_template": { "$page_offset": [0, -1800] },
+  "page_20@page_template": { "$page_offset": [0, -1900] },
+  "page_21@page_template": { "$page_offset": [0, -2000] },
+  "page_22@page_template": { "$page_offset": [0, -2100] },
+  "page_23@page_template": { "$page_offset": [0, -2200] },
+  "page_24@page_template": { "$page_offset": [0, -2300] },
+  "page_25@page_template": { "$page_offset": [0, -2400] },
+  "page_26@page_template": { "$page_offset": [0, -2500] },
+  "page_27@page_template": { "$page_offset": [0, -2600] },
   "base_page_logic@global.empty_panel": {
     "$current_page": 1,
     "$page_counter": "('pagination.index_' + ($current_page + 1))",
@@ -83,7 +96,7 @@
           ]
         }
       },
-      {"numbers@$page_counter": {}}
+      { "numbers@$page_counter": {} }
     ],
     "bindings": [
       {
@@ -94,39 +107,39 @@
       }
     ]
   },
-  "index_1@pagination.base_page_logic": {"$current_page": 1},
-  "index_2@pagination.base_page_logic": {"$current_page": 2},
-  "index_3@pagination.base_page_logic": {"$current_page": 3},
-  "index_4@pagination.base_page_logic": {"$current_page": 4},
-  "index_5@pagination.base_page_logic": {"$current_page": 5},
-  "index_6@pagination.base_page_logic": {"$current_page": 6},
-  "index_7@pagination.base_page_logic": {"$current_page": 7},
-  "index_8@pagination.base_page_logic": {"$current_page": 8},
-  "index_9@pagination.base_page_logic": {"$current_page": 9},
-  "index_10@pagination.base_page_logic": {"$current_page": 10},
-  "index_11@pagination.base_page_logic": {"$current_page": 11},
-  "index_12@pagination.base_page_logic": {"$current_page": 12},
-  "index_13@pagination.base_page_logic": {"$current_page": 13},
-  "index_14@pagination.base_page_logic": {"$current_page": 14},
-  "index_15@pagination.base_page_logic": {"$current_page": 15},
-  "index_16@pagination.base_page_logic": {"$current_page": 16},
-  "index_17@pagination.base_page_logic": {"$current_page": 17},
-  "index_18@pagination.base_page_logic": {"$current_page": 18},
-  "index_19@pagination.base_page_logic": {"$current_page": 19},
-  "index_20@pagination.base_page_logic": {"$current_page": 20},
-  "index_21@pagination.base_page_logic": {"$current_page": 21},
-  "index_22@pagination.base_page_logic": {"$current_page": 22},
-  "index_23@pagination.base_page_logic": {"$current_page": 23},
-  "index_24@pagination.base_page_logic": {"$current_page": 24},
-  "index_25@pagination.base_page_logic": {"$current_page": 25},
-  "index_26@pagination.base_page_logic": {"$current_page": 26},
-  "index_27@pagination.base_page_logic": {"$current_page": 27, "$page_counter": "global.empty_panel"},
+  "index_1@pagination.base_page_logic": { "$current_page": 1 },
+  "index_2@pagination.base_page_logic": { "$current_page": 2 },
+  "index_3@pagination.base_page_logic": { "$current_page": 3 },
+  "index_4@pagination.base_page_logic": { "$current_page": 4 },
+  "index_5@pagination.base_page_logic": { "$current_page": 5 },
+  "index_6@pagination.base_page_logic": { "$current_page": 6 },
+  "index_7@pagination.base_page_logic": { "$current_page": 7 },
+  "index_8@pagination.base_page_logic": { "$current_page": 8 },
+  "index_9@pagination.base_page_logic": { "$current_page": 9 },
+  "index_10@pagination.base_page_logic": { "$current_page": 10 },
+  "index_11@pagination.base_page_logic": { "$current_page": 11 },
+  "index_12@pagination.base_page_logic": { "$current_page": 12 },
+  "index_13@pagination.base_page_logic": { "$current_page": 13 },
+  "index_14@pagination.base_page_logic": { "$current_page": 14 },
+  "index_15@pagination.base_page_logic": { "$current_page": 15 },
+  "index_16@pagination.base_page_logic": { "$current_page": 16 },
+  "index_17@pagination.base_page_logic": { "$current_page": 17 },
+  "index_18@pagination.base_page_logic": { "$current_page": 18 },
+  "index_19@pagination.base_page_logic": { "$current_page": 19 },
+  "index_20@pagination.base_page_logic": { "$current_page": 20 },
+  "index_21@pagination.base_page_logic": { "$current_page": 21 },
+  "index_22@pagination.base_page_logic": { "$current_page": 22 },
+  "index_23@pagination.base_page_logic": { "$current_page": 23 },
+  "index_24@pagination.base_page_logic": { "$current_page": 24 },
+  "index_25@pagination.base_page_logic": { "$current_page": 25 },
+  "index_26@pagination.base_page_logic": { "$current_page": 26 },
+  "index_27@pagination.base_page_logic": { "$current_page": 27, "$page_counter": "global.empty_panel" },
   "count_template@global.empty_label": {
     "color": "white",
     "anchor_from": "center",
     "anchor_to": "center",
     "text": "#text",
-    "property_bag": {"#visible": false}
+    "visible": false
   },
   "page_count_label@pagination.count_template": {
     "bindings": [
@@ -178,7 +191,7 @@
     "$direction": "right",
     "$toggle_control_name": "('page' + ($current_page + 1))",
     "$toggle_name": "('ashur' + $current_page)",
-    "property_bag": {"#visible": false},
+    "visible": false,
     "bindings": [
       {
         "binding_name": "#recipe_book_total_items",
