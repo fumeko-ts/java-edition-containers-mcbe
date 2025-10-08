@@ -3,7 +3,7 @@
 - Share the pack only by linking to this PMC page
   **https://www.planetminecraft.com/texture-pack/java-containers-6490069/**
 - Create videos/reviews if
-  - Clear credit is given to ashura_tepes
+  - Clear credit is given to me ashura_temps
   - You include the official PMC download link above - *do not use link to my GitHub repo*
 
 ## Not Allowed
@@ -12,7 +12,7 @@
 - Modifying UI files, code
 
 # Legal Notice
-© ashura_tepes, 2025. All Rights Reserved.
+© ashura_temps, 2025. All Rights Reserved.
 
 - "All Rights Reserved" means I retain full copyright control - no one may redistribute, modify, or use my work beyond the permissions explicitly granted above.
   
