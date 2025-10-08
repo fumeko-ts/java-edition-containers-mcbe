@@ -16,38 +16,160 @@
 
 {
   "namespace": "blast_furnace_screen",
-  "blast_furnace_panel@container_common.container_details": {
-    "size": [ 176, 166 ],
-    "$screen_controls": [
-      {"common_panel@screen_content.container_base": {"$blast_furnace_screen": true}},
+  "blast_furnace_panel@global.empty_stack": {
+    "orientation": "horizontal",
+    "anchor_to": "center",
+    "anchor_from": "center",
+    "min_size": [176, 166],
+    "max_size": [360, 166],
+    "$is_blast_furnace_screen|default": true,
+    "controls": [
       {
-        "blast_furnace_top_half@global.empty_stack": {
-          "orientation": "vertical",
-          "size": [ 176, 70 ],
-          "anchor_from": "top_middle",
-          "anchor_to": "top_middle",
+        "recipe_book@global.empty_stack": {
+          "size": [184, 166],
+          "orientation": "horizontal",
           "controls": [
-            {"filler_1@global.empty_panel": {"size": [ "fill", 6 ]}},
             {
-              "label_stack@global.empty_stack": {
-                "orientation": "horizontal",
-                "size": [ 176, 10 ],
+              "tab_stack@furnace_tabs.furnace_tabs": {
+                "$second_tab_icons": [{ "1@furnace_tabs.tab_item_renderer": { "$item_id": 73 } }],
+                "$third_tab_icons": [
+                  { "1@furnace_tabs.tab_item_renderer": { "layer": 7, "offset": [4 , 0], "$item_id": 378 } },
+                  { "2@furnace_tabs.tab_item_renderer": { "layer": 6, "offset": [-7, 0], "$item_id": 320 } }
+                ],
+                "$3_tabs": true
+              }
+            },
+            {
+              "recipe_base@screen_content.recipe_book": {
+                "controls": [{ "pages@blast_furnace_recipe_book.base_page_logic": { "offset": [-1, 0], "layer": 12 } }]
+              }
+            },
+            { "filler@global.empty_panel": { "size": [2, 166] } }
+          ]
+        }
+      },
+      {
+        "main_blast_furnace_contents@container_common.container_details": {
+          "size": [176, 166],
+          "$screen_controls": [
+            { "common_panel@screen_content.container_base": { "$blast_furnace_screen": "$is_blast_furnace_screen" } },
+            {
+              "blast_furnace_top_half@global.empty_stack": {
+                "orientation": "vertical",
+                "size": [176, 70],
+                "anchor_from": "top_middle",
+                "anchor_to": "top_middle",
                 "controls": [
-                  {"filler_1@global.empty_panel": {"size": [ 67, "fill" ]}},
+                  { "filler_1@global.empty_panel": { "size": ["fill", 6] } },
                   {
-                    "label_holder@global.empty_panel": {
-                      "size": [ 109, 10 ],
+                    "label_stack@global.empty_stack": {
+                      "orientation": "horizontal",
+                      "size": [176, 10],
                       "controls": [
+                        { "filler_1@global.empty_panel": { "size": [67, "fill"] } },
                         {
-                          "blast_furnace_title_label": {
-                            "type": "label",
-                            "anchor_to": "top_left",
-                            "anchor_from": "top_left",
-                            "offset": [ -15, -1 ],
-                            "text": "atemp.container.blast_furnace",
-                            "color": "$title_text_color"
+                          "label_holder@global.empty_panel": {
+                            "size": [109, 10],
+                            "controls": [
+                              {
+                                "blast_furnace_title_label": {
+                                  "type": "label",
+                                  "anchor_to": "top_left",
+                                  "anchor_from": "top_left",
+                                  "offset": [-15, -1],
+                                  "text": "atemp.container.blast_furnace",
+                                  "color": "$title_text_color"
+                                }
+                              }
+                            ]
                           }
                         }
+                      ]
+                    }
+                  },
+                  {
+                    "main_content@global.empty_stack": {
+                      "orientation": "horizontal",
+                      "size": [176, 54],
+                      "controls": [
+                        { "filler_1@global.empty_panel": { "size": [55, "fill"] } },
+                        {
+                          "inputs@global.empty_stack": {
+                            "orientation": "vertical",
+                            "size": [18, 54],
+                            "controls": [
+                              {
+                                "smelt_input_item@global.container_item": {
+                                  "$item_collection": "furnace_ingredient_items"
+                                }
+                              },
+                              {
+                                "flame_buffer_and_holder@global.empty_panel": {
+                                  "size": [18, 18],
+                                  "controls": [
+                                    {
+                                      "flame_progress@blast_furnace_screen.blast_furnace_image_controls": {
+                                        "size": [14, 14],
+                                        "offset": [-1, 0],
+                                        "anchor_to": "center",
+                                        "anchor_from": "center",
+                                        "$blast_furnace_sprite": "lit_progress",
+                                        "$source": "#furnace_flame_ratio",
+                                        "$houkou": "down"
+                                      }
+                                    }
+                                  ]
+                                }
+                              },
+                              { "fuel_input_item@global.container_item": { "$item_collection": "furnace_fuel_items" } }
+                            ]
+                          }
+                        },
+                        { "filler_2@global.empty_panel": { "size": [6, "fill"] } },
+                        {
+                          "arrow_holder@global.empty_stack": {
+                            "orientation": "vertical",
+                            "size": [24, 54],
+                            "controls": [
+                              { "filler_1@global.empty_panel": { "size": ["fill", 18] } },
+                              {
+                                "arrow_progress@blast_furnace_screen.blast_furnace_image_controls": {
+                                  "size": [24, 16],
+                                  "$blast_furnace_sprite": "burn_progress",
+                                  "$source": "#furnace_arrow_ratio",
+                                  "$houkou": "left"
+                                }
+                              },
+                              { "filler_2@global.empty_panel": { "size": ["fill", 20] } }
+                            ]
+                          }
+                        },
+                        { "filler_3@global.empty_panel": { "size": [8, "fill"] } },
+                        {
+                          "item_output_holder@global.empty_stack": {
+                            "orientation": "vertical",
+                            "size": [26, 54],
+                            "controls": [
+                              { "filler_1@global.empty_panel": { "size": ["fill", 14] } },
+                              {
+                                "cell_holder@global.empty_panel": {
+                                  "size": [26, 26],
+                                  "controls": [
+                                    {
+                                      "output_item@global.container_item": {
+                                        "anchor_to": "center",
+                                        "anchor_from": "center",
+                                        "$item_collection": "furnace_output_items"
+                                      }
+                                    }
+                                  ]
+                                }
+                              },
+                              { "filler_2@global.empty_panel": { "size": ["fill", 14] } }
+                            ]
+                          }
+                        },
+                        { "filler_4@global.empty_panel": { "size": [35, "fill"] } }
                       ]
                     }
                   }
@@ -55,88 +177,13 @@
               }
             },
             {
-              "main_content@global.empty_stack": {
-                "orientation": "horizontal",
-                "size": [ 176, 54 ],
-                "controls": [
-                  {"filler_1@global.empty_panel": {"size": [ 55, "fill" ]}},
-                  {
-                    "inputs@global.empty_stack": {
-                      "orientation": "vertical",
-                      "size": [ 18, 54 ],
-                      "controls": [
-                        {"smelt_input_item@global.container_item": {"$item_collection": "furnace_ingredient_items"}},
-                        {
-                          "flame_buffer_and_holder@global.empty_panel": {
-                            "size": [ 18, 18 ],
-                            "controls": [
-                              {
-                                "flame_progress@blast_furnace_screen.blast_furnace_image_controls": {
-                                  "size": [ 14, 14 ],
-                                  "offset": [ -1, 0 ],
-                                  "anchor_to": "center",
-                                  "anchor_from": "center",
-                                  "$blast_furnace_sprite": "lit_progress",
-                                  "$source": "#furnace_flame_ratio",
-                                  "$houkou": "down"
-                                }
-                              }
-                            ]
-                          }
-                        },
-                        {"fuel_input_item@global.container_item": {"$item_collection": "furnace_fuel_items"}}
-                      ]
-                    }
-                  },
-                  {"filler_2@global.empty_panel": {"size": [ 6, "fill" ]}},
-                  {
-                    "arrow_holder@global.empty_stack": {
-                      "orientation": "vertical",
-                      "size": [ 24, 54 ],
-                      "controls": [
-                        {"filler_1@global.empty_panel": {"size": [ "fill", 18 ]}},
-                        {
-                          "arrow_progress@blast_furnace_screen.blast_furnace_image_controls": {
-                            "size": [ 24, 16 ],
-                            "$blast_furnace_sprite": "burn_progress",
-                            "$source": "#furnace_arrow_ratio",
-                            "$houkou": "left"
-                          }
-                        },
-                        {"filler_2@global.empty_panel": {"size": [ "fill", 20 ]}}
-                      ]
-                    }
-                  },
-                  {"filler_3@global.empty_panel": {"size": [ 8, "fill" ]}},
-                  {
-                    "item_output_holder@global.empty_stack": {
-                      "orientation": "vertical",
-                      "size": [ 26, 54 ],
-                      "controls": [
-                        {"filler_1@global.empty_panel": {"size": [ "fill", 14 ]}},
-                        {
-                          "cell_holder@global.empty_panel": {
-                            "size": [ 26, 26 ],
-                            "controls": [
-                              {
-                                "output_item@global.container_item": {"anchor_to": "center", "anchor_from": "center", "$item_collection": "furnace_output_items"}
-                              }
-                            ]
-                          }
-                        },
-                        {"filler_2@global.empty_panel": {"size": [ "fill", 14 ]}}
-                      ]
-                    }
-                  },
-                  {"filler_4@global.empty_panel": {"size": [ 35, "fill" ]}}
-                ]
+              "bottom@global.inventory_bottom_half_with_label": {
+                "anchor_to": "bottom_middle",
+                "anchor_from": "bottom_middle"
               }
             }
           ]
         }
-      },
-      {
-        "bottom@global.inventory_bottom_half_with_label": {"anchor_to": "bottom_middle", "anchor_from": "bottom_middle"}
       }
     ]
   },
@@ -147,8 +194,6 @@
     "clip_direction": "$houkou",
     "keep_ratio": true,
     "clip_pixelperfect": true,
-    "bindings": [
-      {"binding_name": "$source", "binding_name_override": "#clip_ratio", "binding_condition": "always"}
-    ]
+    "bindings": [{ "binding_name": "$source", "binding_name_override": "#clip_ratio", "binding_condition": "always" }]
   }
 }
