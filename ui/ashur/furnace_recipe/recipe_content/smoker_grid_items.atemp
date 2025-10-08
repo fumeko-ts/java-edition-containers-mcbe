@@ -1,33 +1,33 @@
 {
   "namespace": "smoker_grid_items",
   "smoker_content@global.empty_stack": {
-    "size": [125, 50],
+    "size": [ 125, 50 ],
     "orientation": "vertical",
     "anchor_to": "bottom_right",
     "anchor_from": "bottom_right",
     "controls": [
       {
         "row_1@global.empty_stack": {
-          "size": [125, 25],
+          "size": [ 125, 25 ],
           "orientation": "horizontal",
           "controls": [
-            {"1@furnace_recipe_book.toggle": {"$hover_info": "Raw Beef"    , "$item": "beef"}},
+            {"1@furnace_recipe_book.toggle": {"$hover_info": "Raw Beef", "$item": "beef"}},
             {"2@furnace_recipe_book.toggle": {"$hover_info": "Raw Porkchop", "$item": "porkchop"}},
-            {"3@furnace_recipe_book.toggle": {"$hover_info": "Raw Chicken" , "$item": "chicken"}},
-            {"4@furnace_recipe_book.toggle": {"$hover_info": "Raw Mutton"  , "$item": "mutton"}},
-            {"5@furnace_recipe_book.toggle": {"$hover_info": "Raw Rabbit"  , "$item": "rabbit"}}
+            {"3@furnace_recipe_book.toggle": {"$hover_info": "Raw Chicken", "$item": "chicken"}},
+            {"4@furnace_recipe_book.toggle": {"$hover_info": "Raw Mutton", "$item": "mutton"}},
+            {"5@furnace_recipe_book.toggle": {"$hover_info": "Raw Rabbit", "$item": "rabbit"}}
           ]
         }
       },
       {
         "row_2@global.empty_stack": {
-          "size": [125, 25],
+          "size": [ 125, 25 ],
           "orientation": "horizontal",
           "controls": [
-            {"1@furnace_recipe_book.toggle": {"$hover_info": "Raw Cod"   , "$item": "cod"}},
+            {"1@furnace_recipe_book.toggle": {"$hover_info": "Raw Cod", "$item": "cod"}},
             {"2@furnace_recipe_book.toggle": {"$hover_info": "Raw Salmon", "$item": "salmon"}},
-            {"3@furnace_recipe_book.toggle": {"$hover_info": "Potato"    , "$item": "potato"}},
-            {"4@furnace_recipe_book.toggle": {"$hover_info": "Kelp"      , "$item": "kelp"}},
+            {"3@furnace_recipe_book.toggle": {"$hover_info": "Potato", "$item": "potato"}},
+            {"4@furnace_recipe_book.toggle": {"$hover_info": "Kelp", "$item": "kelp"}},
             {"5@furnace_recipe_book.filler": {}}
           ]
         }
@@ -35,71 +35,96 @@
     ]
   },
   "furnace_content@global.empty_stack": {
-    "size": [125, 150],
+    "size": [ 125, 150 ],
     "orientation": "vertical",
     "anchor_to": "bottom_right",
     "anchor_from": "bottom_right",
     "controls": [
-      // Raw Materials
       {
         "row_1@global.empty_stack": {
-          "size": [125, 25],
+          "size": [ 125, 25 ],
           "orientation": "horizontal",
           "controls": [
             {"1@furnace_recipe_book.toggle": {"$hover_info": "Raw Iron", "$item": "raw_iron"}},
             {"2@furnace_recipe_book.toggle": {"$hover_info": "Raw Copper", "$item": "raw_copper"}},
             {"3@furnace_recipe_book.toggle": {"$hover_info": "Raw Gold", "$item": "raw_gold"}},
-            {"4@furnace_recipe_book.toggle": {"$item_type": "block","$hover_info": "Ancient Debris", "$item": "ancient_debris"}},
-            {"5@furnace_recipe_book.toggle": {"$item_type": "block","$hover_info": "Nether Gold Ore", "$item": "nether_gold_ore"}}
+            {
+              "4@furnace_recipe_book.toggle": {"$item_type": "block", "$hover_info": "Ancient Debris", "$item": "ancient_debris"}
+            },
+            {
+              "5@furnace_recipe_book.toggle": {"$item_type": "block", "$hover_info": "Nether Gold Ore", "$item": "nether_gold_ore"}
+            }
           ]
         }
       },
-      // Ores
       {
         "row_2@global.empty_stack": {
-          "size": [125, 25],
+          "size": [ 125, 25 ],
           "orientation": "horizontal",
           "controls": [
-            {"1@furnace_recipe_book.toggle": {"$item_type": "block","$hover_info": "Iron Ore", "$item": "iron_ore"}},
-            {"2@furnace_recipe_book.toggle": {"$item_type": "block","$hover_info": "Copper Ore", "$item": "copper_ore"}},
-            {"3@furnace_recipe_book.toggle": {"$item_type": "block","$hover_info": "Gold Ore", "$item": "gold_ore"}},
-            {"4@furnace_recipe_book.toggle": {"$item_type": "block","$hover_info": "Redstone Ore", "$item": "redstone_ore"}},
-            {"5@furnace_recipe_book.toggle": {"$item_type": "block","$hover_info": "Coal Ore", "$item": "coal_ore"}}
+            {
+              "1@furnace_recipe_book.toggle": {"$item_type": "block", "$hover_info": "Iron Ore", "$item": "iron_ore"}
+            },
+            {
+              "2@furnace_recipe_book.toggle": {"$item_type": "block", "$hover_info": "Copper Ore", "$item": "copper_ore"}
+            },
+            {
+              "3@furnace_recipe_book.toggle": {"$item_type": "block", "$hover_info": "Gold Ore", "$item": "gold_ore"}
+            },
+            {
+              "4@furnace_recipe_book.toggle": {"$item_type": "block", "$hover_info": "Redstone Ore", "$item": "redstone_ore"}
+            },
+            {
+              "5@furnace_recipe_book.toggle": {"$item_type": "block", "$hover_info": "Coal Ore", "$item": "coal_ore"}
+            }
           ]
         }
       },
-      // More Ores
       {
         "row_3@global.empty_stack": {
-          "size": [125, 25],
+          "size": [ 125, 25 ],
           "orientation": "horizontal",
           "controls": [
-            {"1@furnace_recipe_book.toggle": {"$item_type": "block","$hover_info": "Emerald Ore", "$item": "emerald_ore"}},
-            {"2@furnace_recipe_book.toggle": {"$item_type": "block","$hover_info": "Lapis Ore", "$item": "lapis_lazuli_ore"}},
-            {"3@furnace_recipe_book.toggle": {"$item_type": "block","$hover_info": "Diamond Ore", "$item": "diamond_ore"}},
-            {"4@furnace_recipe_book.toggle": {"$item_type": "block","$hover_info": "Quartz Ore", "$item": "nether_quartz_ore"}},
-            {"5@furnace_recipe_book.toggle": {"$item_type": "block","$hover_info": "Cobblestone", "$item": "cobblestone"}}
+            {
+              "1@furnace_recipe_book.toggle": {"$item_type": "block", "$hover_info": "Emerald Ore", "$item": "emerald_ore"}
+            },
+            {
+              "2@furnace_recipe_book.toggle": {"$item_type": "block", "$hover_info": "Lapis Ore", "$item": "lapis_lazuli_ore"}
+            },
+            {
+              "3@furnace_recipe_book.toggle": {"$item_type": "block", "$hover_info": "Diamond Ore", "$item": "diamond_ore"}
+            },
+            {
+              "4@furnace_recipe_book.toggle": {"$item_type": "block", "$hover_info": "Quartz Ore", "$item": "nether_quartz_ore"}
+            },
+            {
+              "5@furnace_recipe_book.toggle": {"$item_type": "block", "$hover_info": "Cobblestone", "$item": "cobblestone"}
+            }
           ]
         }
       },
-      // Furnace-Only
       {
         "row_4@global.empty_stack": {
-          "size": [125, 25],
+          "size": [ 125, 25 ],
           "orientation": "horizontal",
           "controls": [
-            {"1@furnace_recipe_book.toggle": {"$item_type": "block","$hover_info": "Sand", "$item": "sand"}},
-            {"2@furnace_recipe_book.toggle": {"$item_type": "block","$hover_info": "Clay", "$item": "clay"}},
-            {"3@furnace_recipe_book.toggle": {"$item_type": "block","$hover_info": "Netherrack", "$item": "netherrack"}},
-            {"4@furnace_recipe_book.toggle": {"$item_type": "block","$hover_info": "Wet Sponge", "$item": "wet_sponge"}},
-            {"5@furnace_recipe_book.toggle": {"$item_type": "block","$hover_info": "Cactus", "$item": "cactus"}}
+            {"1@furnace_recipe_book.toggle": {"$item_type": "block", "$hover_info": "Sand", "$item": "sand"}},
+            {"2@furnace_recipe_book.toggle": {"$item_type": "block", "$hover_info": "Clay", "$item": "clay"}},
+            {
+              "3@furnace_recipe_book.toggle": {"$item_type": "block", "$hover_info": "Netherrack", "$item": "netherrack"}
+            },
+            {
+              "4@furnace_recipe_book.toggle": {"$item_type": "block", "$hover_info": "Wet Sponge", "$item": "wet_sponge"}
+            },
+            {
+              "5@furnace_recipe_book.toggle": {"$item_type": "block", "$hover_info": "Cactus", "$item": "cactus"}
+            }
           ]
         }
       },
-      // Gear
       {
         "row_5@global.empty_stack": {
-          "size": [125, 25],
+          "size": [ 125, 25 ],
           "orientation": "horizontal",
           "controls": [
             {"1@furnace_recipe_book.toggle": {"$hover_info": "Iron Sword", "$item": "iron_sword"}},
@@ -110,13 +135,14 @@
           ]
         }
       },
-      // Fillers
       {
         "row_6@global.empty_stack": {
-          "size": [125, 25],
+          "size": [ 125, 25 ],
           "orientation": "horizontal",
           "controls": [
-            {"1@furnace_recipe_book.toggle": {"$hover_info": "Chainmail Chestplate", "$item": "chainmail_chestplate"}},
+            {
+              "1@furnace_recipe_book.toggle": {"$hover_info": "Chainmail Chestplate", "$item": "chainmail_chestplate"}
+            },
             {"2@furnace_recipe_book.filler": {}},
             {"3@furnace_recipe_book.filler": {}},
             {"4@furnace_recipe_book.filler": {}},

@@ -1,23 +1,7 @@
-// © 2025 ashura_tepes – All Rights Reserved.
-//
-// This UI is custom-made. You are allowed to use it **only as-is**, inside the game.
-// Do not modify, extract, reuse, or share any part of this UI — including .json, .atemp,
-// layout structure, or design.
-//
-// Not allowed:
-//   - Editing the UI (even for private/personal use)
-//   - Using parts of the code or layout in your own pack
-//   - Reuploading, redistributing, or hosting these files elsewhere
-//   - Converting texture packs to Bedrock using this UI
-//
-// By using it, you agree to these terms.
-
 {
   "namespace": "cartography_screen",
   "cartography_panel@container_common.container_details": {
-    "type": "panel",
     "size": [ 176, 166 ],
-    "layer": 2,
     "$screen_controls": [
       {"common_panel@screen_content.container_base": {"$cartography_screen": true}},
       {
@@ -27,24 +11,7 @@
           "anchor_to": "top_middle",
           "anchor_from": "top_middle",
           "controls": [
-            {"filler_1@global.empty_panel": {"size": [ "fill", 4 ]}},
-            {
-              "smithing_label@global.empty_panel": {
-                "size": [ 176, 9 ],
-                "controls": [
-                  {
-                    "sithing_label@global.empty_label": {
-                      "anchor_to": "top_left",
-                      "anchor_from": "top_left",
-                      "offset": [ 8, -1 ],
-                      "layer": 5,
-                      "text": "atemp.container.cartography_table",
-                      "color": "$title_text_color"
-                    }
-                  }
-                ]
-              }
-            },
+            {"filler@global.empty_panel": {"size": [ "fill", 13 ]}},
             {
               "main_stack@global.empty_stack": {
                 "orientation": "horizontal",
@@ -70,61 +37,43 @@
                       "size": [ 66, 66 ],
                       "controls": [
                         {
-                          "1@screen_content.image_element": {
+                          "1@cartography_screen.map_image": {
                             "anchor_from": "top_left",
                             "anchor_to": "top_left",
                             "layer": 3,
-                            "texture": "assets/minecraft/textures/gui/sprites/container/cartography_table/duplicated_map",
+                            "texture": "assets/sprites/container/cartography_table/duplicated_map",
                             "size": [ 50, 66 ],
-                            "bindings": [ {"binding_name": "#is_clone_mode", "binding_name_override": "#visible"} ]
+                            "$mode": "clone"
                           }
                         },
                         {
-                          "2@screen_content.image_element": {
+                          "2@cartography_screen.map_image": {
                             "anchor_from": "top_right",
                             "anchor_to": "top_right",
                             "layer": 5,
                             "offset": [ 0, 14 ],
-                            "texture": "assets/minecraft/textures/gui/sprites/container/cartography_table/duplicated_map",
+                            "texture": "assets/sprites/container/cartography_table/duplicated_map",
                             "size": [ 50, 66 ],
-                            "bindings": [ {"binding_name": "#is_clone_mode", "binding_name_override": "#visible"} ]
+                            "$mode": "clone"
                           }
                         },
                         {
-                          "3@cartography_screen.map_image": {
-                            "$map_src": "assets/minecraft/textures/gui/sprites/container/cartography_table/map",
-                            "$mode": "none"
-                          }
+                          "3@cartography_screen.map_image": {"$map_sprite": "assets/sprites/container/cartography_table/map", "$mode": "none"}
                         },
                         {
-                          "4@cartography_screen.map_image": {
-                            "$map_src": "assets/minecraft/textures/gui/sprites/container/cartography_table/map",
-                            "$mode": "rename"
-                          }
+                          "4@cartography_screen.map_image": {"$map_sprite": "assets/sprites/container/cartography_table/map", "$mode": "rename"}
                         },
                         {
-                          "5@cartography_screen.map_image": {
-                            "$map_src": "assets/minecraft/textures/gui/sprites/container/cartography_table/map",
-                            "$mode": "basic_map"
-                          }
+                          "5@cartography_screen.map_image": {"$map_sprite": "assets/sprites/container/cartography_table/map", "$mode": "basic_map"}
                         },
                         {
-                          "6@cartography_screen.map_image": {
-                            "$map_src": "assets/minecraft/textures/gui/sprites/container/cartography_table/map",
-                            "$mode": "locator_map"
-                          }
+                          "6@cartography_screen.map_image": {"$map_sprite": "assets/sprites/container/cartography_table/map", "$mode": "locator_map"}
                         },
                         {
-                          "7@cartography_screen.map_image": {
-                            "$map_src": "assets/minecraft/textures/gui/sprites/container/cartography_table/scaled_map",
-                            "$mode": "extend"
-                          }
+                          "7@cartography_screen.map_image": {"$map_sprite": "assets/sprites/container/cartography_table/scaled_map", "$mode": "extend"}
                         },
                         {
-                          "8@cartography_screen.map_image": {
-                            "$map_src": "assets/minecraft/textures/gui/sprites/container/cartography_table/map",
-                            "$mode": "locked"
-                          }
+                          "8@cartography_screen.map_image": {"$map_sprite": "assets/sprites/container/cartography_table/locked_map", "$mode": "locked"}
                         }
                       ]
                     }
@@ -154,12 +103,54 @@
         }
       },
       {
-        "bottom@crafting_screen.inventory_bottom_half_with_label": {"anchor_to": "bottom_middle", "anchor_from": "bottom_middle"}
+        "bottom@global.inventory_bottom_half_with_label": {"anchor_to": "bottom_middle", "anchor_from": "bottom_middle"}
+      },
+      {
+        "error_holder@global.empty_panel": {
+          "size": [ 63, 52 ],
+          "anchor_from": "top_left",
+          "anchor_to": "top_left",
+          "controls": [
+            {
+              "error@global.empty_panel": {
+                "size": [ 28, 21 ],
+                "anchor_from": "bottom_right",
+                "anchor_to": "bottom_right",
+                "controls": [
+                  {
+                    "error@screen_content.image_element": {"size": [ 28, 21 ], "layer": 4, "texture": "assets/sprites/container/cartography_table/error.png"}
+                  }
+                ]
+              }
+            }
+          ],
+          "bindings": [
+            {"binding_name": "#is_none_mode"},
+            {
+              "binding_type": "collection",
+              "binding_collection_name": "cartography_additional_items",
+              "binding_name": "#item_id_aux",
+              "binding_name_override": "#second_slot"
+            },
+            {
+              "binding_type": "collection",
+              "binding_collection_name": "cartography_input_items",
+              "binding_name": "#item_id_aux",
+              "binding_name_override": "#first_slot"
+            },
+            {
+              "binding_type": "view",
+              "binding_condition": "always",
+              "source_property_name": "((not (#first_slot = -1)) and (not (#second_slot = -1)) and #is_none_mode)",
+              "target_property_name": "#visible"
+            }
+          ]
+        }
       }
     ]
   },
   "map_image@screen_content.image_element": {
-    "texture": "$map_src",
+    "texture": "$map_sprite",
     "bindings": [ {"binding_name": "('#is_' + $mode + '_mode')", "binding_name_override": "#visible"} ]
   }
 }

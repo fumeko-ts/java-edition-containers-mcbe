@@ -1,27 +1,7 @@
-// © 2025 ashura_tepes – All Rights Reserved.
-//
-// This UI is custom-made. You are allowed to use it **only as-is**, inside the game.
-// Do not modify, extract, reuse, or share any part of this UI — including .json, .atemp,
-// layout structure, or design.
-//
-// Not allowed:
-//   - Editing the UI (even for private/personal use)
-//   - Using parts of the code or layout in your own pack
-//   - Reuploading, redistributing, or hosting these files elsewhere
-//   - Converting texture packs to Bedrock using this UI
-//
-// By using it, you agree to these terms.
-
 {
   "ui_defs": [
-    "ui/ashur/-common/templates/container/trade_global.atemp",
-    "ui/ashur/-common/templates/container/banner.atemp",
-    "ui/ashur/furnace_recipe/furnace_tab_toggles/smoker_tab_toggles.atemp",
-    "ui/ashur/furnace_recipe/recipe_content/smoker_grid_items.atemp",
-    "ui/ashur/furnace_recipe/furnace_recipe_book.atemp",
     "ui/ashur/anvil_screen.atemp",
     "ui/ashur/barrel_screen.atemp",
-    "ui/ashur/base_recipe_pages.atemp",
     "ui/ashur/beacon_screen.atemp",
     "ui/ashur/blast_furnace_screen.atemp",
     "ui/ashur/brewing_stand_screen.atemp",
@@ -34,6 +14,7 @@
     "ui/ashur/dropper_screen.atemp",
     "ui/ashur/enchanting_screen.atemp",
     "ui/ashur/ender_chest_screen.atemp",
+    "ui/ashur/furnace_ids.atemp",
     "ui/ashur/furnace_screen.atemp",
     "ui/ashur/grindstone_screen.atemp",
     "ui/ashur/hopper_screen.atemp",
@@ -46,27 +27,26 @@
     "ui/ashur/smoker_screen.atemp",
     "ui/ashur/stonecutter_screen.atemp",
     "ui/ashur/tradeing_screen.atemp",
-    "ui/ashur/-common/button_mappings.json",
     "ui/ashur/-common/container_common.atemp",
-    "ui/ashur/-common/crafting_common.atemp",
     "ui/ashur/-common/global.atemp",
     "ui/ashur/-common/screen_content.atemp",
-    "ui/ashur/-common/texture_common.atemp",
-    "ui/ashur/-common/templates/bars/common_bars.atemp",
-    "ui/ashur/-common/templates/container/cell_toggle.atemp",
-    "ui/ashur/-common/templates/container/crafting_textures.atemp",
-    "ui/ashur/-common/templates/container/creative_recipe_item.atemp",
-    "ui/ashur/-common/templates/container/page_count.atemp",
-    "ui/ashur/-common/templates/container/pagination.atemp",
-    "ui/ashur/-common/templates/container/recipe_grid.atemp",
-    "ui/ashur/-common/templates/container/recipe_toggle.atemp",
-    "ui/ashur/-common/templates/container/trade_exp.atemp",
-    "ui/ashur/-common/templates/scroll_panel/scroll_panel.atemp",
-    "ui/ashur/-common/templates/text_edit_box/text_edit_box.atemp",
-    "ui/ashur/-common/templates/toggles/cell_template.atemp",
-    "ui/ashur/-common/templates/toggles/toggle.atemp",
-    "ui/ashur/furnace_recipebook/furnace_items/tabs/furnace/furnace_book_base.atemp",
-    "ui/ashur/furnace_recipebook/furnace_items/tabs/furnace/furnace_guide_tabs.atemp",
-    "ui/ashur/furnace_recipebook/furnace_items/tabs/furnace/furnace_recipe_book.atemp"
+    "ui/ashur/-common/misc.unsorted/banner.atemp",
+    "ui/ashur/-common/misc.unsorted/button_mappings.json",
+    "ui/ashur/-common/misc.unsorted/crafting_common.atemp",
+    "ui/ashur/-common/misc.unsorted/crafting_textures.atemp",
+    "ui/ashur/-common/misc.unsorted/creative_recipe_item.atemp",
+    "ui/ashur/-common/misc.unsorted/pagination.atemp",
+    "ui/ashur/-common/misc.unsorted/recipe_grid.atemp",
+    "ui/ashur/-common/misc.unsorted/scroll_panel.atemp",
+    "ui/ashur/-common/misc.unsorted/smithing_animations.atemp",
+    "ui/ashur/-common/misc.unsorted/stack_splitting_overlay.atemp",
+    "ui/ashur/-common/misc.unsorted/text_edit_box.atemp",
+    "ui/ashur/-common/misc.unsorted/toggle.atemp",
+    "ui/ashur/-common/misc.unsorted/trade_exp.atemp",
+    "ui/ashur/beacon/primary_button.atemp",
+    "ui/ashur/beacon/secondary_button.atemp",
+    "ui/ashur/furnace_recipe/furnace_recipe_book.atemp",
+    "ui/ashur/furnace_recipe/furnace_tab_toggles/smoker_tab_toggles.atemp",
+    "ui/ashur/furnace_recipe/recipe_content/smoker_grid_items.atemp"
   ]
 }

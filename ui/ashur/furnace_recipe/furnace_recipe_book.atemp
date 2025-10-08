@@ -1,145 +1,72 @@
 {
   "namespace": "furnace_recipe_book",
-  //81, 14
-  "recipe_book@global.empty_panel": {
-    "size": [178, 166],
-    "$tab_search_placeholder|default": "  ",
-    "controls": [
-      {
-        "tab_stack@smoker_tab_toggles.tab_stack": {
-          "anchor_to": "top_left",
-          "anchor_from": "top_left"
-        }
-      },
-      {
-        "recipe_book@global.empty_panel": {
-          "size": [147, 166],
-          "anchor_to": "right_middle",
-          "anchor_from": "right_middle",
-          "controls": [
-            {
-              "filter@furnace_recipe_book.filter": {}
-            },
-            {
-              "label@global.empty_image":{
-                "anchor_to": "top_middle",
-                "anchor_from": "top_middle",
-                "offset": [-7, 13],
-                "alpha": 0.7,
-                "texture": "assets/minecraft/textures/gui/sprites/widget/text_field.png",
-                "nineslice_size": 1,
-                "layer": 5,
-                "size": [81, 14],
-                "controls": [
-                  {
-                    "text@global.empty_label":{
-                      "color": "gray",
-                      "size": ["default", 10],
-                      "layer": 7,
-                      "alpha": 0.2,
-                      "text": "$tab_search_placeholder"
-                    }
-                  }
-                ]
-              }
-            },
-            {
-              "contents@global.empty_panel":{
-                "anchor_to": "top_left",
-                "anchor_from": "top_left",
-                "size": [138, 81],
-                "controls": [
-                  {"grid@smoker_grid_items.smoker_content":{"offset": [-2, 0]}}
-                ]
-              }
-            },
-            {"img@screen_content.recipe_book":{"layer": 1,"anchor_to": "center","anchor_from": "center"}}
-          ]
-        }
-      }
-    ]
-  },
-
-
-  "furnace_filter_on@global.empty_image":{
-    "offset": [1, 1],
-    "texture": "assets/minecraft/textures/gui/sprites/recipe_book/furnace_filter_disabled.png",
-    "size": ["default", "default"],
-    "layer": 5
-  },
-  "furnace_filter_on_hover@global.empty_image":{
-    "offset": [1, 1],
-    "texture": "assets/minecraft/textures/gui/sprites/recipe_book/furnace_filter_disabled_highlighted.png",
-    "size": ["default", "default"],
-    "layer": 5
-  },
-
-
-  "filter": {
-    "type": "toggle",
-    "size": [26, 16],
-    "anchor_from": "top_right",
-    "anchor_to": "top_right",
-    "offset": [-11, 11],
-    "unchecked_control": "default",
-    "unchecked_hover_control": "default_hover",
-    "controls": [
-      {"default@furnace_recipe_book.furnace_filter_on": {}},
-      {
-        "default_hover@furnace_recipe_book.furnace_filter_on_hover": {
-          "controls": [
-            {
-              "hover_text@common.hover_text": {
-                "layer": 400,
-                "property_bag": {"#hover_text": "§s§oLook but don’t touch."}
-              }
-            }
-          ]
-        }
-      }
-    ]
-  },
-
-
-
-
-  "filler@global.empty_panel":{"size": [25, 25]},
-  
-  "slot_uncraftable": {
-    "type": "image",
-    "size": [25, 25],
+  "test": {
+    "type": "grid",
+    "grid_dimensions": [ 5, 6 ],
+    "size": [ 125, 150 ],
     "anchor_from": "center",
     "anchor_to": "center",
+    "layer": 300,
+    "controls": [
+      {"1@furnace_recipe_book.toggle": {"$item_aux": 608, "$position": [ 0, 0 ]}},
+      {"2@furnace_recipe_book.toggle": {"$item_aux": 418, "$position": [ 1, 0 ]}},
+      {"3@furnace_recipe_book.toggle": {"$item_aux": 388, "$position": [ 2, 0 ]}},
+      {"4@furnace_recipe_book.toggle": {"$item_aux": 384, "$position": [ 3, 0 ]}},
+      {"5@furnace_recipe_book.toggle": {"$item_aux": 383, "$position": [ 4, 0 ]}},
+      {"6@furnace_recipe_book.toggle": {"$item_aux": 324, "$position": [ 0, 1 ]}},
+      {"7@furnace_recipe_book.toggle": {"$item_aux": 326, "$position": [ 1, 1 ]}},
+      {"8@furnace_recipe_book.toggle": {"$item_aux": 327, "$position": [ 2, 1 ]}},
+      {"9@furnace_recipe_book.toggle": {"$item_aux": 346, "$position": [ 3, 1 ]}},
+      {"10@furnace_recipe_book.toggle": {"$item_aux": 345, "$position": [ 4, 1 ]}},
+      {"11@furnace_recipe_book.toggle": {"$item_aux": 401, "$position": [ 0, 2 ]}},
+      {"12@furnace_recipe_book.toggle": {"$item_aux": 58, "$position": [ 1, 2 ]}},
+      {"13@furnace_recipe_book.toggle": {"$item_aux": 53, "$position": [ 2, 2 ]}},
+      {"14@furnace_recipe_book.toggle": {"$item_aux": 173, "$position": [ 3, 2 ]}},
+      {"15@furnace_recipe_book.toggle": {"$item_aux": -218, "$position": [ 4, 2 ]}},
+      {"16@furnace_recipe_book.toggle": {"$item_aux": -219, "$position": [ 0, 3 ]}},
+      {"17@furnace_recipe_book.toggle": {"$item_aux": 17, "$position": [ 1, 3 ]}},
+      {"18@furnace_recipe_book.toggle": {"$item_aux": -212, "$position": [ 2, 3 ]}},
+      {"19@furnace_recipe_book.toggle": {"$item_aux": -500, "$position": [ 3, 3 ]}},
+      {"20@furnace_recipe_book.toggle": {"$item_aux": -527, "$position": [ 4, 3 ]}},
+      {"21@furnace_recipe_book.toggle": {"$item_aux": -526, "$position": [ 0, 4 ]}},
+      {"22@furnace_recipe_book.toggle": {"$item_aux": -163, "$position": [ 1, 4 ]}},
+      {"23@furnace_recipe_book.toggle": {"$item_aux": -165, "$position": [ 2, 4 ]}},
+      {"24@furnace_recipe_book.toggle": {"$item_aux": -337, "$position": [ 3, 4 ]}},
+      {"25@furnace_recipe_book.toggle": {"$item_aux": -1026, "$position": [ 4, 4 ]}},
+      {"26@furnace_recipe_book.toggle": {"$item_aux": -1029, "$position": [ 0, 5 ]}},
+      {"27@furnace_recipe_book.toggle": {"$item_aux": -1028, "$position": [ 1, 5 ]}},
+      {"28@furnace_recipe_book.toggle": {"$item_aux": 32, "$position": [ 2, 5 ]}},
+      {"29@furnace_recipe_book.toggle": {"$item_aux": 6, "$position": [ 3, 5 ]}},
+      {"30@furnace_recipe_book.toggle": {"$item_aux": 449, "$position": [ 4, 5 ]}}
+    ]
+  },
+  "slot_uncraftable@screen_content.image_element": {
+    "size": [ 25, 25 ],
     "layer": 5,
-    "offset": [1, 1],
-    "$item_type|default": "item",
-    "texture": "assets/minecraft/textures/gui/sprites/recipe_book/slot_uncraftable" ,   
-    "$texture|default": "('textures/atemp/' + $item_type + '/' + $item)",
+    "texture": "assets/sprites/recipe_book/slot_uncraftable",
     "controls": [
       {
-        "item_renderer": {
-          "type": "image",
-          "size": [16, 16],
-          "keep_ratio": true,
+        "item_renderer@global.custom_renderer": {
+          "$type": "inventory_item_renderer",
+          "size": [ 16, 16 ],
           "anchor_from": "center",
           "anchor_to": "center",
           "layer": 6,
-          "texture": "$texture"
+          "property_bag": {"#item_id_aux": "($item_aux * 65536)"}
         }
       },
       {
-        "hover_text@common.hover_text":{
+        "hover_text@common.hover_text": {
           "layer": 400,
-          "property_bag": {"#hover_text": "$hover_info"},
-          "ignored": "($hover = false)"
+          "property_bag": {"#hover_text": "('\u00a7z' + $item_aux)"},
+          "ignored": "(not $hover)"
         }
       }
     ]
   },
-
   "toggle": {
     "type": "toggle",
-    "size": [25, 25],
+    "size": [ 25, 25 ],
     "unchecked_control": "default",
     "unchecked_hover_control": "default_hover",
     "$hover|default": false,
@@ -147,5 +74,37 @@
       {"default@furnace_recipe_book.slot_uncraftable": {}},
       {"default_hover@furnace_recipe_book.slot_uncraftable": {"$hover": true}}
     ]
-  }
+  },
+  "item_carosel_test@global.empty_panel": {
+    "size": [ 25, 25 ],
+    "layer": 80,
+    "anchor_from": "center",
+    "anchor_to": "center",
+    "controls": [
+      {
+        "1@furnace_recipe_book.toggle": {"$item_aux": 608, "offset": "@furnace_recipe_book.offset_placeholder1_11"}
+      },
+      {
+        "2@furnace_recipe_book.toggle": {"$item_aux": 418, "offset": "@furnace_recipe_book.offset_placeholder2_11"}
+      },
+      {
+        "3@furnace_recipe_book.toggle": {"$item_aux": 388, "offset": "@furnace_recipe_book.offset_placeholder3_11"}
+      },
+      {
+        "4@furnace_recipe_book.toggle": {"$item_aux": 384, "offset": "@furnace_recipe_book.offset_placeholder4_11"}
+      }
+    ]
+  },
+  "offset_base": {
+    "anim_type": "offset",
+    "easing": "linear",
+    "duration": 2,
+    "next": "$next",
+    "to": "$dframe",
+    "from": "$dframe"
+  },
+  "offset_placeholder1_11@furnace_recipe_book.offset_base": {"$dframe": [ 200, 0 ], "$next": "@furnace_recipe_book.offset_placeholder2_11"},
+  "offset_placeholder2_11@furnace_recipe_book.offset_base": {"$dframe": [ 200, 0 ], "$next": "@furnace_recipe_book.offset_placeholder3_11"},
+  "offset_placeholder3_11@furnace_recipe_book.offset_base": {"$dframe": [ 200, 0 ], "$next": "@furnace_recipe_book.offset_placeholder4_11"},
+  "offset_placeholder4_11@furnace_recipe_book.offset_base": {"$dframe": [ 0, 0 ], "$next": "@furnace_recipe_book.offset_placeholder1_11"}
 }

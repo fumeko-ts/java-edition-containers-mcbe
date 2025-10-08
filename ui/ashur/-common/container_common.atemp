@@ -1,30 +1,17 @@
-// © 2025 ashura_tepes – All Rights Reserved.
-//
-// This UI is custom-made. You are allowed to use it **only as-is**, inside the game.
-// Do not modify, extract, reuse, or share any part of this UI — including .json, .atemp,
-// layout structure, or design.
-//
-// Not allowed:
-//   - Editing the UI (even for private/personal use)
-//   - Using parts of the code or layout in your own pack
-//   - Reuploading, redistributing, or hosting these files elsewhere
-//   - Converting texture packs to Bedrock using this UI
-//
-// By using it, you agree to these terms.
-
 {
   "namespace": "container_common",
   "container_details@global.empty_panel": {
     "anchor_to": "center",
     "anchor_from": "center",
+    "layer": 5,
     "controls": [
-      {"screen@global.empty_panel": {"controls": "$screen_controls"}},
+      {"screen@global.empty_panel": {"size": [ "100%", "100%" ], "controls": "$screen_controls"}},
       {"2@common.selected_item_details_factory": {}},
       {"3@common.item_lock_notification_factory": {}},
       {"4@common.flying_item_renderer": {"layer": 12}},
       {"7@container_common.item_flying_selected": {}},
       {"8@common.gamepad_cursor_button": {}},
-      {"9@common.inventory_take_progress_icon_button": {}}
+      {"10@common.inventory_take_progress_icon_button": {}}
     ]
   },
   "held_flying_renderer@global.empty_panel": {
@@ -120,8 +107,8 @@
       {"1@container_common.held_flying_renderer": {}},
       {"3@container_common.held_flying_renderer": {}},
       {"2@container_common.held_flying_renderer": {}},
-      {"4@common_bars.durability_bar_grabbed": {"layer": 61}},
-      {"4@common_bars.storage_bar_grabbed": {"layer": 61}}
+      {"4@global.durability_bar_grabbed": {"layer": 61}},
+      {"4@global.storage_bar_grabbed": {"layer": 61}}
     ]
   },
   "item_remover": {
@@ -163,22 +150,6 @@
         "from_button_id": "button.menu_auto_place",
         "to_button_id": "button.menu_clear",
         "mapping_type": "pressed"
-      }
-    ]
-  },
-
-  "base_button@common.button": {
-    "sound_volume": 0.0,
-    "layer": 22,
-    "size": [ 108, 19 ],
-    "bindings": [
-      {"binding_type": "collection_details", "binding_collection_name": "$binding_collection"},
-      {
-        "binding_name": "$visibility_binding_name",
-        "binding_name_override": "#visible",
-        "binding_condition": "always",
-        "binding_collection_name": "$binding_collection",
-        "binding_type": "collection"
       }
     ]
   }

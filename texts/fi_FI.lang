@@ -28,4 +28,4 @@ atemp.container.upgrade=Päivitä varusteita
 atemp.entity.minecraft.donkey=Aasi
 atemp.entity.minecraft.horse=Hevonen
 atemp.entity.minecraft.llama=Laama
-atemp.merchant.trades=Vaihtokaupat
+atemp.recipe_book.searchBox=§oHae...

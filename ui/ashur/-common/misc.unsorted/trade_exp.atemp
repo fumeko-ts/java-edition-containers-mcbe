@@ -1,0 +1,62 @@
+{
+  "namespace": "trade_exp",
+  "exp_progress_bar": {
+    "type": "panel",
+    "size": [ 102, 5 ],
+    "anchor_from": "center",
+    "anchor_to": "center",
+    "offset": [ -20, -140 ],
+    "controls": [
+      {
+        "trades_text": {
+          "type": "label",
+          "text": "Trades",
+          "color": "$title_text_color",
+          "offset": [ -135, 67 ],
+          "anchor_from": "center",
+          "anchor_to": "center",
+          "layer": 10
+        }
+      },
+      {
+        "villager_name_text": {
+          "type": "label",
+          "anchor_from": "center",
+          "anchor_to": "center",
+          "offset": [ 0, 67 ],
+          "color": "$title_text_color",
+          "layer": 10,
+          "text": "#name_label",
+          "bindings": [ {"binding_name": "#name_label", "binding_condition": "always_when_visible"} ]
+        }
+      },
+      {
+        "empty_progress_bar": {
+          "type": "image",
+          "texture": "assets/sprites/container/villager/experience_bar_background.png",
+          "layer": 7,
+          "offset": [ -1, 78 ],
+          "controls": [
+            {
+              "white_progress_bar": {
+                "type": "image",
+                "texture": "assets/sprites/container/villager/experience_bar_current.png",
+                "clip_direction": "left",
+                "clip_pixelperfect": true,
+                "layer": 8,
+                "bindings": [
+                  {
+                    "binding_name": "#exp_possible_progress",
+                    "binding_name_override": "#clip_ratio",
+                    "binding_type": "global",
+                    "binding_condition": "always_when_visible"
+                  }
+                ]
+              }
+            }
+          ]
+        }
+      }
+    ]
+  }
+}

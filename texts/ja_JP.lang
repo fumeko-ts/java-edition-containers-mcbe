@@ -28,4 +28,4 @@ atemp.container.upgrade=装備の強化
 atemp.entity.minecraft.donkey=ロバ
 atemp.entity.minecraft.horse=ウマ
 atemp.entity.minecraft.llama=ラマ
-atemp.merchant.trades=取引
+atemp.recipe_book.searchBox=§o検索…

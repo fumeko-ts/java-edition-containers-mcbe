@@ -1,17 +1,3 @@
-// © 2025 ashura_tepes – All Rights Reserved.
-//
-// This UI is custom-made. You are allowed to use it **only as-is**, inside the game.
-// Do not modify, extract, reuse, or share any part of this UI — including .json, .atemp,
-// layout structure, or design.
-//
-// Not allowed:
-//   - Editing the UI (even for private/personal use)
-//   - Using parts of the code or layout in your own pack
-//   - Reuploading, redistributing, or hosting these files elsewhere
-//   - Converting texture packs to Bedrock using this UI
-//
-// By using it, you agree to these terms.
-
 {
   "namespace": "enchanting_screen",
   "enchanting_panel@container_common.container_details": {
@@ -61,7 +47,7 @@
         }
       },
       {
-        "bottom@crafting_screen.inventory_bottom_half_with_label": {"anchor_to": "bottom_middle", "anchor_from": "bottom_middle"}
+        "bottom@global.inventory_bottom_half_with_label": {"anchor_to": "bottom_middle", "anchor_from": "bottom_middle"}
       },
       {
         "lapis_and_book_stack@global.empty_stack": {
@@ -72,9 +58,7 @@
           "controls": [
             {"filler_1@global.empty_panel": {"size": [ "fill", 6 ]}},
             {
-              "label_holder": {
-                "type": "input_panel",
-                "contained": true,
+              "label_holder@global.empty_panel": {
                 "size": [ "fill", 10 ],
                 "controls": [
                   {
@@ -177,8 +161,9 @@
     "size": [ 108, 19 ],
     "$binding_collection|default": "#enchant_buttons",
     "controls": [
+      {"bg@screen_content.enchanting_button_disabled": {"layer": 4}},
       {
-        "unselectable_button@container_common.base_button": {
+        "unselectable_button@enchanting_screen.button_common": {
           "default_control": "default",
           "pressed_control": "default",
           "hover_control": "hover",
@@ -191,9 +176,8 @@
           ]
         }
       },
-      {"bg@screen_content.enchanting_button_disabled": {"layer": 4}},
       {
-        "selectable_button@container_common.base_button": {
+        "selectable_button@enchanting_screen.button_common": {
           "default_control": "default",
           "pressed_control": "default",
           "hover_control": "hover",
@@ -232,8 +216,8 @@
     ]
   },
   "dust_template@global.empty_panel": {
-    "$texture_selectable": "('assets/minecraft/textures/gui/sprites/container/enchanting_table/level_' + $button_index)",
-    "$texture_unselectable": "('assets/minecraft/textures/gui/sprites/container/enchanting_table/level_' + $button_index + '_disabled')",
+    "$texture_selectable": "('assets/sprites/container/enchanting_table/level_' + $button_index)",
+    "$texture_unselectable": "('assets/sprites/container/enchanting_table/level_' + $button_index + '_disabled')",
     "controls": [
       {
         "dust_sel@enchanting_screen.dust_image": {"$button_texture_enchant": "$texture_selectable", "$button_type_enchant": "selectable"}
@@ -293,6 +277,21 @@
       {
         "binding_collection_name": "#enchant_buttons",
         "binding_name": "#runes",
+        "binding_type": "collection"
+      }
+    ]
+  },
+  "button_common@common.button": {
+    "sound_volume": 0.0,
+    "layer": 22,
+    "size": [ 108, 19 ],
+    "bindings": [
+      {"binding_type": "collection_details", "binding_collection_name": "$binding_collection"},
+      {
+        "binding_name": "$visibility_binding_name",
+        "binding_name_override": "#visible",
+        "binding_condition": "always",
+        "binding_collection_name": "$binding_collection",
         "binding_type": "collection"
       }
     ]

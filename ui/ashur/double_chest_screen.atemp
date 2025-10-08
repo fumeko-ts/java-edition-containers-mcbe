@@ -1,24 +1,10 @@
-// © 2025 ashura_tepes – All Rights Reserved.
-//
-// This UI is custom-made. You are allowed to use it **only as-is**, inside the game.
-// Do not modify, extract, reuse, or share any part of this UI — including .json, .atemp,
-// layout structure, or design.
-//
-// Not allowed:
-//   - Editing the UI (even for private/personal use)
-//   - Using parts of the code or layout in your own pack
-//   - Reuploading, redistributing, or hosting these files elsewhere
-//   - Converting texture packs to Bedrock using this UI
-//
-// By using it, you agree to these terms.
-
 {
   "namespace": "double_chest_screen",
   "double_chest@container_common.container_details": {
     "type": "panel",
     "size": [ 176, 222 ],
     "$screen_controls": [
-      {"common_panel@screen_content.container_base": {"$double_chest_screen": true}},
+      {"common_panel@screen_content.container_base": {"$double_chest_container": true}},
       {
         "double_chest_top_half@global.empty_stack": {
           "orientation": "vertical",
@@ -32,9 +18,7 @@
                 "size": [ 176, 17 ],
                 "controls": [
                   {
-                    "chest_label_holder": {
-                      "type": "input_panel",
-                      "contained": true,
+                    "chest_label_holder@global.empty_panel": {
                       "size": [ 176, 17 ],
                       "controls": [
                         {
@@ -77,7 +61,7 @@
         }
       },
       {
-        "bottom@crafting_screen.inventory_bottom_half_with_label": {"anchor_to": "bottom_middle", "anchor_from": "bottom_middle"}
+        "bottom@global.inventory_bottom_half_with_label": {"anchor_to": "bottom_middle", "anchor_from": "bottom_middle"}
       }
     ]
   }

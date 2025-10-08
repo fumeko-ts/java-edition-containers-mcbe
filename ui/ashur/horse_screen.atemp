@@ -1,45 +1,35 @@
-// © 2025 ashura_tepes – All Rights Reserved.
-//
-// This UI is custom-made. You are allowed to use it **only as-is**, inside the game.
-// Do not modify, extract, reuse, or share any part of this UI — including .json, .atemp,
-// layout structure, or design.
-//
-// Not allowed:
-//   - Editing the UI (even for private/personal use)
-//   - Using parts of the code or layout in your own pack
-//   - Reuploading, redistributing, or hosting these files elsewhere
-//   - Converting texture packs to Bedrock using this UI
-//
-// By using it, you agree to these terms.
-
 {
   "namespace": "horse_screen",
   "horse_panel@container_common.container_details": {
-    "size": [176, 166],
+    "size": [ 176, 166 ],
     "$screen_controls": [
       {"common_panel@screen_content.container_base": {"$horse_screen": true}},
       {
         "mount_input_slots@global.empty_stack": {
           "orientation": "vertical",
-          "size": [25, 53],
+          "size": [ 25, 53 ],
           "anchor_to": "top_left",
           "anchor_from": "top_left",
           "controls": [
-            {"filler_1@global.empty_panel": { "size": ["fill", 17] }},
+            {"filler_1@global.empty_panel": {"size": [ "fill", 17 ]}},
             {
               "cell_holder_images@global.empty_stack": {
                 "orientation": "horizontal",
-                "size": [25, 36],
+                "size": [ 25, 36 ],
                 "controls": [
-                  {"filler_1@global.empty_panel": {"size": [7, "fill"]}},
+                  {"filler_1@global.empty_panel": {"size": [ 7, "fill" ]}},
                   {
                     "cell_main@global.empty_stack": {
                       "orientation": "vertical",
-                      "size": [18, 36],
+                      "size": [ 18, 36 ],
                       "controls": [
-                        {"saddle_slot@horse_screen.sprite_bindings": {"$img_src": "saddle","$needs"  : "#has_saddle_slot"}},
-                        {"horse_armor_slot@horse_screen.sprite_bindings": {"$img_src": "horse_armor","$needs"  : "#has_armor_and_saddle_slot"}},
-                        {"llama_armor_slot@horse_screen.sprite_bindings": {"$img_src": "llama_armor","$needs"  : "#has_only_carpet_slot"}}
+                        {"saddle_slot@horse_screen.sprite_bindings": {"$img_src": "saddle", "$needs": "#has_saddle_slot"}},
+                        {
+                          "horse_armor_slot@horse_screen.sprite_bindings": {"$img_src": "horse_armor", "$needs": "#has_armor_and_saddle_slot"}
+                        },
+                        {
+                          "llama_armor_slot@horse_screen.sprite_bindings": {"$img_src": "llama_armor", "$needs": "#has_only_carpet_slot"}
+                        }
                       ]
                     }
                   }
@@ -52,22 +42,22 @@
       {
         "mount_grid@global.empty_stack": {
           "orientation": "vertical",
-          "size": [25, 53],
+          "size": [ 25, 53 ],
           "anchor_to": "top_left",
           "anchor_from": "top_left",
           "controls": [
-            {"filler_1@global.empty_panel": { "size": ["fill", 17] }},
+            {"filler_1@global.empty_panel": {"size": [ "fill", 17 ]}},
             {
               "cell_holder_images@global.empty_stack": {
                 "orientation": "horizontal",
-                "size": [25, 36],
+                "size": [ 25, 36 ],
                 "controls": [
-                  {"filler_1@global.empty_panel": {"size": [7, "fill"]}},
+                  {"filler_1@global.empty_panel": {"size": [ 7, "fill" ]}},
                   {
                     "cell_main@global.empty_stack": {
                       "orientation": "vertical",
-                      "max_size": [18, 36],
-                      "min_size": [18, 18],
+                      "max_size": [ 18, 36 ],
+                      "min_size": [ 18, 18 ],
                       "controls": [
                         {
                           "equip_grid": {
@@ -77,11 +67,7 @@
                             "grid_item_template": "global.container_item",
                             "grid_dimension_binding": "#equip_grid_dimensions",
                             "$item_collection": "horse_equip_items",
-                            "bindings": [
-                              {
-                                "binding_name": "#equip_grid_dimensions"
-                              }
-                            ]
+                            "bindings": [ {"binding_name": "#equip_grid_dimensions"} ]
                           }
                         }
                       ]
@@ -90,13 +76,13 @@
                 ]
               }
             },
-            {"expanding_filler@global.empty_panel": {"size": ["fill", "fill"]}}
+            {"expanding_filler@global.empty_panel": {"size": [ "fill", "fill" ]}}
           ]
         }
       },
       {
         "inventory@global.empty_panel": {
-          "size": [97, 71],
+          "size": [ 97, 71 ],
           "anchor_to": "top_right",
           "anchor_from": "top_right",
           "controls": [
@@ -110,26 +96,24 @@
                 "grid_dimension_binding": "#inv_grid_dimensions",
                 "$cell_overlay_ref": "horse_screen.cell_texture",
                 "$item_collection": "container_items",
-                "bindings": [
-                  {"binding_name": "#inv_grid_dimensions"}
-                ]
+                "bindings": [ {"binding_name": "#inv_grid_dimensions"} ]
               }
             }
           ],
-          "bindings": [{"binding_name"         : "#is_chested","binding_name_override": "#visible"}]
+          "bindings": [ {"binding_name": "#is_chested", "binding_name_override": "#visible"} ]
         }
       },
       {
         "horse_renderer@global.empty_panel": {
-          "offset": [25, 14],
-          "size": [54, 54],
+          "offset": [ 25, 14 ],
+          "size": [ 54, 54 ],
           "anchor_from": "top_left",
           "anchor_to": "top_left",
           "controls": [
             {
               "horse_float@global.empty_panel": {
-                "size": ["30%", "30%"],
-                "offset": [0, "30%"],
+                "size": [ "30%", "30%" ],
+                "offset": [ 0, "30%" ],
                 "controls": [
                   {
                     "horse@global.custom_renderer": {
@@ -155,21 +139,21 @@
       {
         "label_holding_stack@global.empty_stack": {
           "orientation": "vertical",
-          "size": [176, 17],
+          "size": [ 176, 17 ],
           "anchor_to": "top_middle",
           "anchor_from": "top_middle",
           "controls": [
-            {"filler_1@global.empty_panel": { "size": ["fill", 6] }},
+            {"filler_1@global.empty_panel": {"size": [ "fill", 6 ]}},
             {
               "smithing_label@global.empty_panel": {
-                "size": [176, 11],
+                "size": [ 176, 11 ],
                 "controls": [
                   {
                     "sithing_label@global.empty_label": {
                       "anchor_to": "top_left",
                       "anchor_from": "top_left",
                       "layer": 5,
-                      "offset": [8, -1],
+                      "offset": [ 8, -1 ],
                       "text": "$container_title",
                       "color": "$title_text_color"
                     }
@@ -180,17 +164,28 @@
           ]
         }
       },
-      {"bottom@crafting_screen.inventory_bottom_half_with_label": {"anchor_to"  : "bottom_middle","anchor_from": "bottom_middle"}}
+      {
+        "bottom@global.inventory_bottom_half_with_label": {"anchor_to": "bottom_middle", "anchor_from": "bottom_middle"}
+      }
     ]
   },
-  "cell_texture@screen_content.image_element": {"size": [18, 18],"nineslice_size": 1,"texture": "assets/minecraft/textures/gui/sprites/container/slot.png"},
+  "cell_texture@screen_content.image_element": {"size": [ 18, 18 ], "nineslice_size": 1, "texture": "assets/sprites/container/slot.png"},
   "sprite_bindings@global.empty_panel": {
-    "size": [18, 18],
-    "$overlay": "('assets/minecraft/textures/gui/sprites/container/slot/' + $img_src)",
+    "size": [ 18, 18 ],
+    "$overlay": "('assets/sprites/container/slot/' + $img_src)",
     "controls": [
-      {"slot@screen_content.image_element": {"nineslice_size": 1,"texture": "assets/minecraft/textures/gui/sprites/container/slot.png","layer": 3,"size": [18, 18]}},
-      {"saddle_slot@screen_content.image_element": {"texture": "$overlay","layer": 5,"size": [16, 16]}}
+      {
+        "slot@screen_content.image_element": {
+          "nineslice_size": 1,
+          "texture": "assets/sprites/container/slot.png",
+          "layer": 3,
+          "size": [ 18, 18 ]
+        }
+      },
+      {
+        "saddle_slot@screen_content.image_element": {"texture": "$overlay", "layer": 5, "size": [ 16, 16 ]}
+      }
     ],
-    "bindings": [{"binding_name": "$needs", "binding_name_override": "#visible"}]
+    "bindings": [ {"binding_name": "$needs", "binding_name_override": "#visible"} ]
   }
 }

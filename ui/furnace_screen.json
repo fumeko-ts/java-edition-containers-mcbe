@@ -1,32 +1,3 @@
-// © 2025 ashura_tepes – All Rights Reserved.
-//
-// This UI is custom-made. You are allowed to use it **only as-is**, inside the game.
-// Do not modify, extract, reuse, or share any part of this UI — including .json, .atemp,
-// layout structure, or design.
-//
-// Not allowed:
-//   - Editing the UI (even for private/personal use)
-//   - Using parts of the code or layout in your own pack
-//   - Reuploading, redistributing, or hosting these files elsewhere
-//   - Converting texture packs to Bedrock using this UI
-//
-// By using it, you agree to these terms.
-
 {
-  "namespace": "furnace",
-  "furnace_screen@global.inventory_screen_common": {
-    "$is_blast_furnace|default": false,
-    "$is_smoker|default": false,
-    "variables": [
-      {
-        "requires": "($is_blast_furnace = false or $is_smoker = false)",
-        "$screen_content": "furnace_screen.furnace_panel"
-      },
-      {
-        "requires": "($is_blast_furnace = true)",
-        "$screen_content": "blast_furnace_screen.blast_furnace_panel"
-      },
-      {"requires": "($is_smoker = true)", "$screen_content": "smoker_screen.smoker_panel"}
-    ]
-  }
+  "furnace_screen@global.inventory_screen_common": {"$screen_content": "furnace_screen.furnace_panel"}
 }

@@ -28,4 +28,4 @@ atemp.container.upgrade=Opgrader udstyr
 atemp.entity.minecraft.donkey=Æsel
 atemp.entity.minecraft.horse=Hest
 atemp.entity.minecraft.llama=Lama
-atemp.merchant.trades=Handler
+atemp.recipe_book.searchBox=§oSøg ...

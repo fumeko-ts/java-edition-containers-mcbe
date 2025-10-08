@@ -1,35 +1,17 @@
-// © 2025 ashura_tepes – All Rights Reserved.
-//
-// This UI is custom-made. You are allowed to use it **only as-is**, inside the game.
-// Do not modify, extract, reuse, or share any part of this UI — including .json, .atemp,
-// layout structure, or design.
-//
-// Not allowed:
-//   - Editing the UI (even for private/personal use)
-//   - Using parts of the code or layout in your own pack
-//   - Reuploading, redistributing, or hosting these files elsewhere
-//   - Converting texture packs to Bedrock using this UI
-//
-// By using it, you agree to these terms.
-
 {
   "namespace": "grindstone_screen",
   "grindstone_panel@container_common.container_details": {
-    "size": [176, 166],
+    "size": [ 176, 166 ],
     "$screen_controls": [
+      {"common_panel@screen_content.container_base": {"$grindstone_screen": true}},
       {
-        "common_panel@screen_content.container_base": {
-          "$grindstone_screen": true
-        }
-      },
-      {
-        "grindstone_top_stack@global.empty_stack":{
+        "grindstone_top_stack@global.empty_stack": {
           "orientation": "vertical",
-          "size": [176, 57],
+          "size": [ 176, 57 ],
           "anchor_to": "top_middle",
           "anchor_from": "top_middle",
-          "controls":[
-            {"filler_1@global.empty_panel":{"size": ["fill", 6]}},
+          "controls": [
+            {"filler_1@global.empty_panel": {"size": [ "fill", 6 ]}},
             {
               "smithing_label@global.empty_panel": {
                 "size": [ 176, 12 ],
@@ -38,7 +20,7 @@
                     "sithing_label@global.empty_label": {
                       "anchor_to": "top_left",
                       "anchor_from": "top_left",
-                      "offset": [8, -1],
+                      "offset": [ 8, -1 ],
                       "layer": 5,
                       "text": "atemp.container.grindstone_title",
                       "color": "$title_text_color"
@@ -48,70 +30,65 @@
               }
             },
             {
-              "input_holder@global.empty_stack":{
+              "input_holder@global.empty_stack": {
                 "orientation": "horizontal",
-                "size": [176, 39],
+                "size": [ 176, 39 ],
                 "controls": [
-                  {"filler_1@global.empty_panel":{"size": [48, "fill"]}},
+                  {"filler_1@global.empty_panel": {"size": [ 48, "fill" ]}},
                   {
-                    "cells@global.empty_stack":{
+                    "cells@global.empty_stack": {
                       "orientation": "vertical",
-                      "size": [18, 39],
+                      "size": [ 18, 39 ],
                       "controls": [
                         {"1@global.container_item": {"$item_collection": "grindstone_input_items"}},
-                        {"filler_1@global.empty_panel":{"size": ["fill", 3]}},
+                        {"filler_1@global.empty_panel": {"size": [ "fill", 3 ]}},
                         {"2@global.container_item": {"$item_collection": "grindstone_additional_items"}}
                       ]
                     }
                   },
-                  {"filler_2@global.empty_panel":{"size": [26, "fill"]}},
+                  {"filler_2@global.empty_panel": {"size": [ 26, "fill" ]}},
                   {
-                    "arrow_holder@global.empty_stack":{
+                    "arrow_holder@global.empty_stack": {
                       "orientation": "vertical",
-                      "size": [28, 39],
+                      "size": [ 28, 39 ],
                       "controls": [
-                        {"filler_1@global.empty_panel":{"size": ["fill", 13]}},
+                        {"filler_1@global.empty_panel": {"size": [ "fill", 13 ]}},
                         {
-                          "arrow_panel@global.empty_panel":{
-                            "size": [28, 21],
+                          "arrow_panel@global.empty_panel": {
+                            "size": [ 28, 21 ],
                             "controls": [
                               {
                                 "cross_out_icon@screen_content.image_element": {
                                   "texture": "assets/minecraft/textures/gui/sprites/container/grindstone/error.png",
-                                  "size": [28, 21],
-                                  "bindings": [
-                                    {
-                                      "binding_name"         : "#cross_out_icon",
-                                      "binding_name_override": "#visible"
-                                    }
-                                  ]
+                                  "size": [ 28, 21 ],
+                                  "bindings": [ {"binding_name": "#cross_out_icon", "binding_name_override": "#visible"} ]
                                 }
                               }
                             ]
                           }
                         },
-                        {"filler_1@global.empty_panel":{"size": ["fill", 5]}}
+                        {"filler_1@global.empty_panel": {"size": [ "fill", 5 ]}}
                       ]
                     }
                   },
-                  {"filler_3@global.empty_panel":{"size": [8, "fill"]}},
+                  {"filler_3@global.empty_panel": {"size": [ 8, "fill" ]}},
                   {
-                    "output_holder@global.empty_stack":{
+                    "output_holder@global.empty_stack": {
                       "orientation": "vertical",
-                      "size": [18, 39],
+                      "size": [ 18, 39 ],
                       "controls": [
-                        {"filler_1@global.empty_panel":{"size": ["fill", 15]}},
+                        {"filler_1@global.empty_panel": {"size": [ "fill", 15 ]}},
                         {
                           "result_item_slot@global.container_item": {
                             "$item_collection": "grindstone_result_items",
                             "$button_ref": "button_mappings.grindstone_output_slot_button"
                           }
                         },
-                        {"filler_2@global.empty_panel":{"size": ["fill", 6]}}
+                        {"filler_2@global.empty_panel": {"size": [ "fill", 6 ]}}
                       ]
                     }
                   },
-                  {"filler_4@global.empty_panel":{"size": [30, "fill"]}}
+                  {"filler_4@global.empty_panel": {"size": [ 30, "fill" ]}}
                 ]
               }
             }
@@ -119,10 +96,7 @@
         }
       },
       {
-        "bottom@crafting_screen.inventory_bottom_half_with_label": {
-          "anchor_to"  : "bottom_middle",
-          "anchor_from": "bottom_middle"
-        }
+        "bottom@global.inventory_bottom_half_with_label": {"anchor_to": "bottom_middle", "anchor_from": "bottom_middle"}
       }
     ]
   }

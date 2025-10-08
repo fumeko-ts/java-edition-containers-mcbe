@@ -1,17 +1,3 @@
-// © 2025 ashura_tepes – All Rights Reserved.
-//
-// This UI is custom-made. You are allowed to use it **only as-is**, inside the game.
-// Do not modify, extract, reuse, or share any part of this UI — including .json, .atemp,
-// layout structure, or design.
-//
-// Not allowed:
-//   - Editing the UI (even for private/personal use)
-//   - Using parts of the code or layout in your own pack
-//   - Reuploading, redistributing, or hosting these files elsewhere
-//   - Converting texture packs to Bedrock using this UI
-//
-// By using it, you agree to these terms.
-
 {
   "namespace": "anvil_screen",
   "anvil_panel@container_common.container_details": {
@@ -33,9 +19,7 @@
                 "controls": [
                   {"filler_1@global.empty_panel": {"size": [ 60, "fill" ]}},
                   {
-                    "chest_label_holder": {
-                      "type": "input_panel",
-                      "contained": true,
+                    "chest_label_holder@global.empty_panel": {
                       "size": [ 116, 14 ],
                       "controls": [
                         {
@@ -59,7 +43,25 @@
                 "size": [ 176, 16 ],
                 "controls": [
                   {"filler_1@global.empty_panel": {"size": [ 59, "fill" ]}},
-                  {"text_edit@anvil_screen.text_edit_panel": {}},
+                  {
+                    "text_edit_panel@global.empty_panel": {
+                      "size": [ 110, 16 ],
+                      "controls": [
+                        {
+                          "text_edit_control@text_edit_box.text_edit_box": {
+                            "property_bag": {"#property_field": "#item_name"},
+                            "max_length": 60,
+                            "$text_box_text_color": [ 0.231, 0.231, 0.231, 1 ],
+                            "$text_background_locked": "screen_content.anvil_text_field",
+                            "$text_background_default": "screen_content.anvil_edit_box_hover",
+                            "$text_background_hover": "screen_content.anvil_edit_box_hover",
+                            "$text_edit_binding_name": "#text_box_item_name",
+                            "$text_edit_box_label_size": [ "default", 10 ]
+                          }
+                        }
+                      ]
+                    }
+                  },
                   {"filler_2@global.empty_panel": {"size": [ 7, "fill" ]}}
                 ]
               }
@@ -72,7 +74,9 @@
                 "controls": [
                   {"filler_1@global.empty_panel": {"size": [ 26, "fill" ]}},
                   {
-                    "stack_1@anvil_screen.cell_vertical": {
+                    "stack_1@global.empty_stack": {
+                      "orientation": "vertical",
+                      "size": [ 18, 21 ],
                       "controls": [
                         {"filler_1@global.empty_panel": {"size": [ "fill", 1 ]}},
                         {"input_item_slot@global.container_item": {"$item_collection": "anvil_input_items"}},
@@ -82,7 +86,9 @@
                   },
                   {"filler_2@global.empty_panel": {"size": [ 31, "fill" ]}},
                   {
-                    "stack_2@anvil_screen.cell_vertical": {
+                    "stack_2@global.empty_stack": {
+                      "orientation": "vertical",
+                      "size": [ 18, 21 ],
                       "controls": [
                         {"filler_1@global.empty_panel": {"size": [ "fill", 1 ]}},
                         {"material_item_slot@global.container_item": {"$item_collection": "anvil_material_items"}},
@@ -97,18 +103,8 @@
                       "controls": [
                         {
                           "cross_out_icon@screen_content.image_element": {
-                            "texture": "",
-                            "allow_debug_missing_texture": false,
+                            "texture": "assets/sprites/container/anvil/error",
                             "size": [ 28, 21 ],
-                            "keep_ratio": true,
-                            "bindings": [ {"binding_name": "(not #cross_out_icon)", "binding_name_override": "#visible"} ]
-                          }
-                        },
-                        {
-                          "cross_out_icon@screen_content.image_element": {
-                            "texture": "assets/minecraft/textures/gui/sprites/container/anvil/error.png",
-                            "size": [ 28, 21 ],
-                            "keep_ratio": true,
                             "bindings": [ {"binding_name": "#cross_out_icon", "binding_name_override": "#visible"} ]
                           }
                         }
@@ -117,10 +113,14 @@
                   },
                   {"filler_4@global.empty_panel": {"size": [ 6, "fill" ]}},
                   {
-                    "stack_3@anvil_screen.cell_vertical": {
+                    "stack_3@global.empty_stack": {
+                      "orientation": "vertical",
+                      "size": [ 18, 21 ],
                       "controls": [
                         {"filler_1@global.empty_panel": {"size": [ "fill", 1 ]}},
-                        {"result_item_slot@global.container_item": {"$item_collection": "anvil_result_items"}},
+                        {
+                          "result_item_slot@global.container_item": {"$item_collection": "anvil_result_items", "$button_ref": "anvil.anvil_output_slot_button"}
+                        },
                         {"filler_2@global.empty_panel": {"size": [ "fill", 2 ]}}
                       ]
                     }
@@ -134,43 +134,41 @@
       },
       {
         "cost@global.empty_panel": {
-          "size": [ 169, 79 ],
+          "size": [ 167, 79 ],
           "anchor_to": "top_left",
           "anchor_from": "top_left",
           "controls": [
             {
               "cost_labels@global.empty_panel": {
-                "size": [ 104, 8 ],
+                "size": [ "100%c", "100%c" ],
                 "anchor_to": "bottom_right",
                 "anchor_from": "bottom_right",
                 "controls": [
                   {
-                    "bg1": {
-                      "type": "image",
+                    "anvil_info@screen_content.image_element": {
                       "texture": "textures/ui/Gray",
                       "layer": 4,
-                      "size": [ 107, 13 ],
-                      "offset": [ -2, 0 ],
+                      "size": [ "100%c + 6px", "100%c + 4px" ],
                       "alpha": 0.3,
-                      "bindings": [ {"binding_name": "#cost_text_red", "binding_name_override": "#visible"} ]
+                      "controls": [
+                        {
+                          "cost_label_0@anvil_screen.cost_label": {"color": "$anvil_cost_fail_text_color", "$cost_bindings": "#cost_text_red"}
+                        },
+                        {
+                          "cost_label_1@anvil_screen.cost_label": {"color": [ 0.494, 0.988, 0.125, 1.0 ], "$cost_bindings": "#cost_text_green"}
+                        }
+                      ],
+                      "bindings": [
+                        {"binding_name": "#cost_text_red"},
+                        {"binding_name": "#cost_text_green"},
+                        {
+                          "binding_type": "view",
+                          "binding_condition": "always",
+                          "source_property_name": "(#cost_text_red or #cost_text_green)",
+                          "target_property_name": "#visible"
+                        }
+                      ]
                     }
-                  },
-                  {
-                    "bg2": {
-                      "type": "image",
-                      "texture": "textures/ui/Gray",
-                      "layer": 4,
-                      "size": [ 107, 13 ],
-                      "offset": [ -2, 0 ],
-                      "alpha": 0.3,
-                      "bindings": [ {"binding_name": "#cost_text_green", "binding_name_override": "#visible"} ]
-                    }
-                  },
-                  {
-                    "cost_label_0@anvil_screen.cost_label": {"color": "$anvil_cost_fail_text_color", "$cost_bindings": "#cost_text_red"}
-                  },
-                  {
-                    "cost_label_1@anvil_screen.cost_label": {"color": [ 0.494, 0.988, 0.125, 1.0 ], "$cost_bindings": "#cost_text_green"}
                   }
                 ]
               }
@@ -179,38 +177,11 @@
         }
       },
       {
-        "bottom@crafting_screen.inventory_bottom_half_with_label": {"anchor_to": "bottom_middle", "anchor_from": "bottom_middle"}
+        "bottom@global.inventory_bottom_half_with_label": {"anchor_to": "bottom_middle", "anchor_from": "bottom_middle"}
       }
     ]
   },
-  "text_edit_panel": {
-    "type": "panel",
-    "size": [ 110, 16 ],
-    "controls": [
-      {
-        "anvil_text_box@text_edit_box.text_field": {
-          "offset": [ -1, -1 ],
-          "$text_panel_size_minus_1px|default": [ 109, 16 ],
-          "$text_edit_box_label_size": [ "default", 10 ],
-          "property_bag": {"#property_field": "#item_name"},
-          "$shadow": true,
-          "max_length": 30,
-          "$text_clear_button_enabled": false,
-          "$text_box_bg_offset": [ 1, 1 ],
-          "layer": 6,
-          "$text_clear_offset": [ 14, 1 ],
-          "$text_edit_box_label_offset": [ 4, 2 ],
-          "$text_background_locked": "screen_content.anvil_text_field",
-          "$text_background_default": "screen_content.anvil_text_field",
-          "$text_background_hover": "screen_content.anvil_text_field_highlighted",
-          "$text_edit_binding_name": "#text_box_item_name"
-        }
-      }
-    ]
-  },
-  "cell_vertical@global.empty_stack": {"$stacking": "vertical", "orientation": "$stacking", "size": [ 18, 21 ]},
-  "cost_label": {
-    "type": "label",
+  "cost_label@global.empty_label": {
     "shadow": true,
     "layer": 10,
     "text": "#text",
