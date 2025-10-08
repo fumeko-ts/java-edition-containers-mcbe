@@ -1,0 +1,240 @@
+/**
+// © 2025 ashura_temps,    All Rights Reserved.
+//
+// This UI is custom-made. You are allowed to use it **only as-is**, inside the game.
+// Do not modify, extract, reuse, or share any part of this UI including .json, .atemp files,
+// layout structure, or design.
+//
+// Not allowed:
+//   - Editing the UI (even for private/personal use)
+//   - Using parts of the code or layout in your own pack
+//   - Reuploading, redistributing, or hosting these files elsewhere
+//   - Converting texture packs to Bedrock using this UI
+//
+// By using this project, you agree to these terms.
+*/
+
+{
+  "namespace": "smoker_recipe_book",
+  "smoker_food_items": {
+    "type": "grid",
+    "grid_dimensions": [5, 2],
+    "size": [125, 50],
+    "anchor_to": "top_left",
+    "anchor_from": "top_left",
+    "layer": 300,
+    "controls": [
+      { "1@smoker_recipe_book.toggle": { "$item_aux": 583, "$position": [0, 0] } }, // raw_mutton
+      { "2@smoker_recipe_book.toggle": { "$item_aux": 310, "$position": [1, 0] } }, // raw_rabbit
+      { "3@smoker_recipe_book.toggle": { "$item_aux": 302, "$position": [2, 0] } }, // potato
+      { "4@smoker_recipe_book.toggle": { "$item_aux": 297, "$position": [3, 0] } }, // raw_chicken
+      { "5@smoker_recipe_book.toggle": { "$item_aux": 295, "$position": [4, 0] } }, // raw_beef
+      { "6@smoker_recipe_book.toggle": { "$item_aux": 287, "$position": [0, 1] } }, // raw_salmon
+      { "7@smoker_recipe_book.toggle": { "$item_aux": 286, "$position": [1, 1] } }, // raw_cod
+      { "8@smoker_recipe_book.toggle": { "$item_aux": 284, "$position": [2, 1] } }, // raw_porkchop
+      { "9@smoker_recipe_book.toggle": { "$item_aux": 408, "$position": [3, 1] } }, // kelp
+      { "10@global.empty_panel": { "grid_position": [4, 1] } } // filler
+    ]
+  },
+  "slot_uncraftable@screen_content.image_element": {
+    "size": [25, 25],
+    "layer": 5,
+    "texture": "assets/sprites/recipe_book/slot_uncraftable",
+    "controls": [
+      {
+        "item_renderer@global.custom_renderer": {
+          "$type": "inventory_item_renderer",
+          "size": [16, 16],
+          "anchor_from": "center",
+          "anchor_to": "center",
+          "layer": 6,
+          "property_bag": { "#item_id_aux": "($item_aux * 65536)" }
+        }
+      },
+      {
+        "hover_text@common.hover_text": {
+          "layer": 400,
+          "property_bag": { "#hover_text": "('\u00a7z' + $item_aux)" },
+          "ignored": "(not $hover)"
+        }
+      }
+    ]
+  },
+  "toggle": {
+    "type": "toggle",
+    "size": [25, 25],
+    "unchecked_control": "default",
+    "unchecked_hover_control": "default_hover",
+    "grid_position": "$position",
+    "$hover|default": false,
+    "controls": [
+      { "default@smoker_recipe_book.slot_uncraftable": {} },
+      { "default_hover@smoker_recipe_book.slot_uncraftable": { "$hover": true } }
+    ]
+  },
+
+  "title_template@screen_content.text_field": {
+    "nineslice_size": 1,
+    "alpha": 0.8,
+    "anchor_from": "center",
+    "anchor_to": "center",
+    "size": [81, 14],
+    "$page_title|default": "Unknown",
+    "controls": [
+      {
+        "label@global.empty_label": {
+          "text": "$page_title",
+          "shadow": true,
+          "size": ["default", 10],
+          "anchor_from": "left_middle",
+          "anchor_to": "left_middle",
+          "offset": [4, 1]
+        }
+      }
+    ]
+  },
+  "furnace_filter_on@global.empty_image": {
+    "offset": [0, 1],
+    "texture": "assets/sprites/recipe_book/furnace_filter_disabled.png",
+    "size": ["default", "default"],
+    "layer": 5
+  },
+  "furnace_filter_on_hover@global.empty_image": {
+    "offset": [0, 1],
+    "texture": "assets/sprites/recipe_book/furnace_filter_disabled_highlighted.png",
+    "size": ["default", "default"],
+    "layer": 5
+  },
+  "base_page_logic@global.empty_panel": {
+    "controls": [
+      {
+        "offset_content@global.empty_panel": {
+          "clips_children": true,
+          "size": [125, 100],
+          "offset": [0.9, -1.6],
+          "layer": 4,
+          "controls": [
+            {
+              "2@smoker_recipe_book.smoker_food_items": {
+                "layer": 12
+              }
+            }
+          ]
+        }
+      },
+      {
+        "holder@global.empty_stack": {
+          "orientation": "vertical",
+          "anchor_to": "top_middle",
+          "anchor_from": "top_middle",
+          "size": [111, 30],
+          "offset": [8, 0],
+          "controls": [
+            { "buffer_1@global.empty_panel": { "size": [111, 11] } },
+            {
+              "holder@global.empty_stack": {
+                "orientation": "horizontal",
+                "size": [111, 18],
+                "controls": [
+                  {
+                    "text_edit_panel@global.empty_panel": {
+                      "size": [81, 18],
+                      "controls": [
+                        {
+                          "Misc@smoker_recipe_book.title_template": {
+                            "$page_title": "§7Misc",
+                            "bindings": [
+                              {
+                                "binding_type": "view",
+                                "source_control_name": "first_tab_toggle",
+                                "source_property_name": "#toggle_state",
+                                "target_property_name": "#visible"
+                              }
+                            ]
+                          }
+                        },
+                        {
+                          "Food@smoker_recipe_book.title_template": {
+                            "$page_title": "§7Food",
+                            "bindings": [
+                              {
+                                "binding_type": "view",
+                                "source_control_name": "second_tab_toggle",
+                                "source_property_name": "#toggle_state",
+                                "target_property_name": "#visible"
+                              }
+                            ]
+                          }
+                        }
+                      ]
+                    }
+                  },
+                  { "buffer_2@global.empty_panel": { "size": ["fill", "fill"] } },
+                  {
+                    "filter": {
+                      "type": "toggle",
+                      "size": [26, 16],
+                      "unchecked_control": "default",
+                      "unchecked_hover_control": "default_hover",
+                      "controls": [
+                        { "default@smoker_recipe_book.furnace_filter_on": {} },
+                        {
+                          "default_hover@smoker_recipe_book.furnace_filter_on_hover": {
+                            "controls": [
+                              {
+                                "hover_text@common.hover_text": {
+                                  "layer": 400,
+                                  "property_bag": {
+                                    "#hover_text": "currently the recipe book\nand its contents are\nvisual only"
+                                  }
+                                }
+                              }
+                            ]
+                          }
+                        }
+                      ]
+                    }
+                  }
+                ]
+              }
+            }
+          ]
+        }
+      }
+    ]
+  }
+
+  /*
+  "item_carosel_test@global.empty_panel": {
+    "size": [ 25, 25 ],
+    "layer": 80,
+    "anchor_from": "center",
+    "anchor_to": "center",
+    "controls": [
+      {
+        "1@smoker_recipe_book.toggle": {"$item_aux": 608, "offset": "@smoker_recipe_book.offset_placeholder1_11"}
+      },
+      {
+        "2@smoker_recipe_book.toggle": {"$item_aux": 418, "offset": "@smoker_recipe_book.offset_placeholder2_11"}
+      },
+      {
+        "3@smoker_recipe_book.toggle": {"$item_aux": 388, "offset": "@smoker_recipe_book.offset_placeholder3_11"}
+      },
+      {
+        "4@smoker_recipe_book.toggle": {"$item_aux": 384, "offset": "@smoker_recipe_book.offset_placeholder4_11"}
+      }
+    ]
+  },
+  "offset_base": {
+    "anim_type": "offset",
+    "easing": "linear",
+    "duration": 2,
+    "next": "$next",
+    "to": "$dframe",
+    "from": "$dframe"
+  },
+  "offset_placeholder1_11@smoker_recipe_book.offset_base": {"$dframe": [ 200, 0 ], "$next": "@smoker_recipe_book.offset_placeholder2_11"},
+  "offset_placeholder2_11@smoker_recipe_book.offset_base": {"$dframe": [ 200, 0 ], "$next": "@smoker_recipe_book.offset_placeholder3_11"},
+  "offset_placeholder3_11@smoker_recipe_book.offset_base": {"$dframe": [ 200, 0 ], "$next": "@smoker_recipe_book.offset_placeholder4_11"},
+  "offset_placeholder4_11@smoker_recipe_book.offset_base": {"$dframe": [ 0, 0 ], "$next": "@smoker_recipe_book.offset_placeholder1_11"}*/
+}

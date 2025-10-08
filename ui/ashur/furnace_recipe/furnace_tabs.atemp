@@ -4,15 +4,74 @@
     "orientation": "vertical",
     "size": [35, 135],
     "layer": 2,
-    "controls": [
-      { "1@furnace_tabs.first_tab": {} },
-      { "2@furnace_tabs.second_tab": {} },
-      { "3@furnace_tabs.third_tab": {} },
-      { "4@furnace_tabs.fourth_tab": {} },
-    //  { "5@furnace_tabs.fith_tab": {} },
+    "$1_tabs|default": false,
+    "$2_tabs|default": false,
+    "$3_tabs|default": false,
+    "$4_tabs|default": false,
+    "$5_tabs|default": false,
+    "$tabs_control": [],
+    "$first_tab_icons|default" : [{ "1@furnace_tabs.tab_item_renderer": { "$item_id": 417 } }],
+    "$second_tab_icons|default": [{ "1@furnace_tabs.tab_item_renderer": { "$item_id": 284 } }],
+    "$third_tab_icons|default" : [{ "1@furnace_tabs.tab_item_renderer": { "$item_id": 1   } }],
+    "$fourth_tab_icons|default": [
+      {"1@furnace_tabs.tab_item_renderer": {"layer": 7,"offset": [4,  0],"$item_id": 546}},
+      {"2@furnace_tabs.tab_item_renderer": {"layer": 6,"offset": [-7, 0],"$item_id": 388}}
+    ],
+    "$fith_tab_icons|default": [
+      {"1@furnace_tabs.tab_item_renderer": {"layer": 7,"offset": [4,  0],"$item_id": 546}},
+      {"2@furnace_tabs.tab_item_renderer": {"layer": 6,"offset": [-7, 0],"$item_id": 388}}
+    ],
+    "variables": [
+      {
+        "requires": "$1_tabs",
+        "$tabs_control": [
+          { "1@furnace_tabs.first_tab": {} },
+          { "space_taker@global.empty_panel": { "size": ["fill", "fill"] } }
+        ]
+      },
+      {
+        "requires": "$2_tabs",
+        "$tabs_control": [
+          { "1@furnace_tabs.first_tab": {} },
+          { "2@furnace_tabs.second_tab": {} },
+          { "space_taker@global.empty_panel": { "size": ["fill", "fill"] } }
+        ]
+      },
+      {
+        "requires": "$3_tabs",
+        "$tabs_control": [
+          { "1@furnace_tabs.first_tab": {} },
+          { "2@furnace_tabs.second_tab": {} },
+          { "3@furnace_tabs.third_tab": {} },
 
-      { "space_taker@global.empty_panel": { "size": ["fill", "fill"] } } // with all tabs accounted for the size of this is 0, 0
-    ]
+          { "space_taker@global.empty_panel": { "size": ["fill", "fill"] } }
+        ]
+      },
+      {
+        "requires": "$4_tabs",
+        "$tabs_control": [
+          { "1@furnace_tabs.first_tab": {} },
+          { "2@furnace_tabs.second_tab": {} },
+          { "3@furnace_tabs.third_tab": {} },
+          { "4@furnace_tabs.fourth_tab": {} },
+
+          { "space_taker@global.empty_panel": { "size": ["fill", "fill"] } }
+        ]
+      },
+      {
+        "requires": "$5_tabs",
+        "$tabs_control": [
+          { "1@furnace_tabs.first_tab": {} },
+          { "2@furnace_tabs.second_tab": {} },
+          { "3@furnace_tabs.third_tab": {} },
+          { "4@furnace_tabs.fourth_tab": {} },
+          { "5@furnace_tabs.fith_tab": {} },
+
+          { "space_taker@global.empty_panel": { "size": ["fill", "fill"] } }
+        ]
+      }
+    ],
+    "controls": "$tabs_control"
   },
   "tab_item_renderer@global.custom_renderer": {
     "$type": "inventory_item_renderer",
@@ -23,57 +82,11 @@
   "survival_tab_icon@global.empty_panel": {
     "offset": [0.4, 0],
     "controls": [
-      {
-        "1@global.empty_panel": {
-          "ignored": "(not ($tab_view_binding_name = first_tab_toggle))",
-          "controls": [{ "compass@furnace_tabs.tab_item_renderer": { "$item_id": 417 } }]
-        }
-      },
-      {
-        "2@global.empty_panel": {
-          "ignored": "(not ($tab_view_binding_name = second_tab_toggle))",
-          "controls": [
-            {
-              "porkchop@furnace_tabs.tab_item_renderer": {
-                "$item_id": 284
-              }
-            }
-          ]
-        }
-      },
-      {
-        "3@global.empty_panel": {
-          "ignored": "(not ($tab_view_binding_name = third_tab_toggle))",
-          "controls": [
-            {
-              "redstone_dust@furnace_tabs.tab_item_renderer": {
-                "$item_id": 1
-              }
-            }
-          ]
-        }
-      },
-      {
-        "3@global.empty_panel": {
-          "ignored": "(not ($tab_view_binding_name = fourth_tab_toggle))",
-          "controls": [
-            {
-              "apple@furnace_tabs.tab_item_renderer": {
-                "layer": 7,
-                "offset": [4, 0],
-                "$item_id": 546
-              }
-            },
-            {
-              "lava_bucket@furnace_tabs.tab_item_renderer": {
-                "layer": 6,
-                "offset": [-7, 0],
-                "$item_id": 388
-              }
-            }
-          ]
-        }
-      }
+      {"1@global.empty_panel": {"ignored": "(not ($tab_view_binding_name = first_tab_toggle))" ,"controls": "$first_tab_icons" }},
+      {"2@global.empty_panel": {"ignored": "(not ($tab_view_binding_name = second_tab_toggle))","controls": "$second_tab_icons"}},
+      {"3@global.empty_panel": {"ignored": "(not ($tab_view_binding_name = third_tab_toggle))" ,"controls": "$third_tab_icons" }},
+      {"4@global.empty_panel": {"ignored": "(not ($tab_view_binding_name = fourth_tab_toggle))","controls": "$fourth_tab_icons"}},
+      {"5@global.empty_panel": {"ignored": "(not ($tab_view_binding_name = fourth_tab_toggle))","controls": "$fith_tab_icons"  }}
     ]
   },
   "survival_tab_holder@global.empty_panel": { "size": [24, 25], "controls": [{ "img@$tab_icon": {} }] },

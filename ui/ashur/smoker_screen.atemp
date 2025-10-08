@@ -25,6 +25,25 @@
     "$is_smoker_screen|default": true,
     "controls": [
       {
+        "recipe_book@global.empty_stack": {
+          "size": [184, 166],
+          "orientation": "horizontal",
+          "controls": [
+            {
+              "tab_stack@furnace_tabs.furnace_tabs": {
+                "$2_tabs": true
+              }
+            },
+            {
+              "recipe_base@screen_content.recipe_book": {
+                "controls": [{ "pages@smoker_recipe_book.base_page_logic": { "offset": [-1, 0], "layer": 12 } }]
+              }
+            },
+            { "filler@global.empty_panel": { "size": [2, 166] } }
+          ]
+        }
+      },
+      {
         "main_smoker_contents@container_common.container_details": {
           "size": [ 176, 166 ],
           "$screen_controls": [

@@ -86,7 +86,7 @@
       },
       {
         "bundle_selected_item_background_colour@global.empty_image": {
-          "texture": "textures/bundle_selected_slot",
+          "texture": "textures/ui/ashur/touch_ui_selected",
           "size": [ 18, 18 ],
           "layer": 1,
           "nineslice_size": 1,
@@ -336,7 +336,7 @@
     "controls": [
       {
         "background@global.empty_image": {
-          "texture": "textures/bundle_bg",
+          "texture": "textures/ui/purpleBorder",
           "nineslice_size": 2,
           "layer": 1,
           "size": [ "100%sm + 10px", "100%sm + 10px" ],
@@ -378,8 +378,7 @@
         }
       },
       {
-        "header_stack": {
-          "type": "stack_panel",
+        "header_stack@global.empty_stack": {
           "orientation": "horizontal",
           "size": [ "default", 15 ],
           "offset": [ 5, 5 ],
@@ -388,8 +387,7 @@
           "layer": 2,
           "controls": [
             {
-              "bundle_label": {
-                "type": "label",
+              "bundle_label@global.empty_label": {
                 "color": "$main_header_text_color",
                 "min_size": "$bundle_label_size",
                 "layer": 4,

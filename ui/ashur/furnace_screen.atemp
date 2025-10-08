@@ -29,12 +29,14 @@
           "size": [184, 166],
           "orientation": "horizontal",
           "controls": [
-            { "tab_stack@furnace_tabs.furnace_tabs": {} },
+            {
+              "tab_stack@furnace_tabs.furnace_tabs": {
+                "$4_tabs": true
+              }
+            },
             {
               "recipe_base@screen_content.recipe_book": {
-                "controls": [
-                  {"pages@furnace_recipe_book.base_page_logic": {"offset": [-1, 0],"layer": 12}}
-                ]
+                "controls": [{ "pages@furnace_recipe_book.base_page_logic": { "offset": [-1, 0], "layer": 12 } }]
               }
             },
             { "filler@global.empty_panel": { "size": [2, 166] } }
