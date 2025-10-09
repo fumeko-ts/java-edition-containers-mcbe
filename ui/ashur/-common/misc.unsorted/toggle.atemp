@@ -21,11 +21,14 @@
     "$tab_content|default": "global.empty_panel",
     "$texture_sould_keep_ratio|default": false,
     "$toggle_hover_text|default": "null",
-    "variables": {"requires": "($toggle_hover_text = 'null')", "$hover_path|default": "global.empty_panel"},
+    "variables": { "requires": "($toggle_hover_text = 'null')", "$hover_path|default": "global.empty_panel" },
     "$hover_path|default": "global.hover_text",
     "controls": [
       {
-        "hover_text@$hover_path": {"ignored": "($needs_hover_text = false)", "property_bag": {"#hover_text": "$toggle_hover_texts"}}
+        "hover_text@$hover_path": {
+          "ignored": "($needs_hover_text = false)",
+          "property_bag": { "#hover_text": "$toggle_hover_texts" }
+        }
       },
       {
         "tab_image@screen_content.image_element": {
@@ -40,11 +43,9 @@
       {
         "tab_content_sizer": {
           "type": "panel",
-          "$tab_content_size|default": [ "100% - 4px", "100% - 4px" ],
+          "$tab_content_size|default": ["100% - 4px", "100% - 4px"],
           "size": "$tab_content_size",
-          "controls": [
-            {"tab_content@$tab_content": {"offset": "$tab_content_offset", "layer": 6}}
-          ]
+          "controls": [{ "tab_content@$tab_content": { "offset": "$tab_content_offset", "layer": 6 } }]
         }
       }
     ]
@@ -60,11 +61,11 @@
     "$recipe_inventory|default": false,
     "$toggle_reset_on_focus_lost|default": true,
     "$tab_view_binding_name|default": "tab",
-    "$unchecked_offset|default": [ 0, 0 ],
+    "$unchecked_offset|default": [0, 0],
     "$toggle_binding_type": "global",
-    "$checked_offset|default": [ 0, -2 ],
-    "$toggle_base_offset_checked|default": [ 0, 0 ],
-    "$toggle_base_offset_unchecked|default": [ 0, 0 ],
+    "$checked_offset|default": [0, -2],
+    "$toggle_base_offset_checked|default": [0, 0],
+    "$toggle_base_offset_unchecked|default": [0, 0],
     "$toggle_hover_text|default": "null",
     "$needs_hover_text|default": false,
     "$toggle_hover_texts|default": "hover_text_not_set",
@@ -73,7 +74,7 @@
         "$tab_view_binding_name@common.toggle": {
           "radio_toggle_group": "$is_radio_toggle",
           "reset_on_focus_lost": "$toggle_reset_on_focus_lost",
-          "variables": {"requires": "($is_tab = false)", "$tab_content_offset|default": [ 0, 0 ]},
+          "variables": { "requires": "($is_tab = false)", "$tab_content_offset|default": [0, 0] },
           "controls": [
             {
               "unchecked@$tab_panel": {
@@ -209,6 +210,54 @@
         "$checked_hover_image|default": "assets/sprites/recipe_book/tab_selected.png",
         "$checked_locked_image|default": "assets/sprites/recipe_book/tab_selected.png",
         "$checked_locked_hover_image|default": "assets/sprites/recipe_book/tab_selected.png"
+      }
+    ]
+  },
+  "radio_toggle@global.empty_panel": {
+    "size": "$size",
+    "$size": [18, 18],
+    "$controls|default": [],
+    "controls": [
+      {
+        "$toggle_control_name": {
+          "type": "toggle",
+          "size": "$size",
+          "$hover|default": false,
+          "sound_name": "random.click",
+          "sound_volume": 1.0,
+          "sound_pitch": 1.0,
+          "toggle_name": "$toggle_name",
+          "unchecked_control": "default",
+          "unchecked_hover_control": "default_hover",
+          "checked_control": "checked",
+          "checked_hover_control": "checked_hover",
+          "radio_toggle_group": true,
+          "toggle_group_forced_index": "$toggle_group_forced_index",
+          "property_bag": {
+            "#toggle_state": true
+          },
+          "controls": "$controls",
+          "bindings": [
+            {
+              "binding_type": "global",
+              "binding_condition": "always",
+              "binding_name": "$toggle_binding_value",
+              "binding_name_override": "#toggle_state"
+            }
+          ],
+          "button_mappings": [
+            {
+              "from_button_id": "button.menu_select",
+              "to_button_id": "button.menu_select",
+              "mapping_type": "pressed"
+            },
+            {
+              "from_button_id": "button.menu_ok",
+              "to_button_id": "button.menu_ok",
+              "mapping_type": "pressed"
+            }
+          ]
+        }
       }
     ]
   }
