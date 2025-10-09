@@ -22,157 +22,21 @@
     "size": [125, 50],
     "anchor_to": "top_left",
     "anchor_from": "top_left",
-    "layer": 300,
-    "controls": [
-      { "1@smoker_recipe_book.toggle": { "$item_aux": 583, "$position": [0, 0] } }, // raw_mutton
-      { "2@smoker_recipe_book.toggle": { "$item_aux": 310, "$position": [1, 0] } }, // raw_rabbit
-      { "3@smoker_recipe_book.toggle": { "$item_aux": 302, "$position": [2, 0] } }, // potato
-      { "4@smoker_recipe_book.toggle": { "$item_aux": 297, "$position": [3, 0] } }, // raw_chicken
-      { "5@smoker_recipe_book.toggle": { "$item_aux": 295, "$position": [4, 0] } }, // raw_beef
-      { "6@smoker_recipe_book.toggle": { "$item_aux": 287, "$position": [0, 1] } }, // raw_salmon
-      { "7@smoker_recipe_book.toggle": { "$item_aux": 286, "$position": [1, 1] } }, // raw_cod
-      { "8@smoker_recipe_book.toggle": { "$item_aux": 284, "$position": [2, 1] } }, // raw_porkchop
-      { "9@smoker_recipe_book.toggle": { "$item_aux": 408, "$position": [3, 1] } }, // kelp
-      { "10@global.empty_panel": { "grid_position": [4, 1] } } // filler
-    ]
-  },
-  "slot_uncraftable@screen_content.image_element": {
-    "size": [25, 25],
-    "layer": 5,
-    "texture": "assets/sprites/recipe_book/slot_uncraftable",
     "controls": [
       {
-        "item_renderer@global.custom_renderer": {
-          "$type": "inventory_item_renderer",
-          "size": [16, 16],
-          "anchor_from": "center",
-          "anchor_to": "center",
-          "layer": 6,
-          "property_bag": { "#item_id_aux": "($item_aux * 65536)" }
-        }
-      },
-      {
-        "hover_text@common.hover_text": {
-          "layer": 400,
-          "property_bag": { "#hover_text": "a" },
-          "bindings": [
-            {
-              "binding_type": "collection",
-              "binding_condition": "always",
-              "binding_collection_name": "furnace_ingredient_items",
-              "binding_name": "#hover_text"
-            },
-            {
-              "binding_type": "view",
-              "binding_condition": "always",
-              "source_property_name": "((#hover_text - #hover_text) + ($toggle_binding_value + 'toggle_name\n   ' + $toggle_name + '\n\n' + 'toggle_control_name \n   ' + $toggle_control_name))",
-              "target_property_name": "#hover_text"
-            }
-          ],
-          "ignored": "(not $hover)"
-        }
-      }
-    ]
-  },
-  "toggle@global.empty_panel": {
-    "size": [25, 25],
-    "$toggle_control_name|default": "('control:' + $item_aux)",
-    "$toggle_name|default": "('item:' + $item_aux)",
-    "$toggle_binding_value|default": "('#item:' + $item_aux)",
-    "grid_position": "$position",
-    "$item_aux|default": -1,
-    "controls": [
-      {
-        "$toggle_control_name": {
-          "type": "toggle",
-          "$hover|default": false,
-          "anchor_from": "center",
-          "anchor_to": "center",
-          "size": [25, 25],
-          "sound_name": "random.click",
-          "sound_volume": 0,
-          "sound_pitch": 0,
-          "toggle_name": "$toggle_name",
-
-          "unchecked_control": "default",
-          "unchecked_hover_control": "default_hover",
-          "checked_control": "pressed",
-          "checked_hover_control": "default_hover",
-          "button_mappings": [
-            {
-              "from_button_id": "button.menu_select",
-              "to_button_id": "button.menu_select",
-              "mapping_type": "pressed"
-            },
-            {
-              "from_button_id": "button.menu_ok",
-              "to_button_id": "button.menu_select",
-              "mapping_type": "pressed"
-            },
-            {
-              "from_button_id": "button.menu_secondary_select",
-              "to_button_id": "button.menu_select",
-              "mapping_type": "pressed"
-            },
-            {
-              "from_button_id": "button.menu_auto_place",
-              "to_button_id": "button.menu_select",
-              "mapping_type": "pressed"
-            }
-          ],
-          "property_bag": {
-            "#toggle_state": true
-          },
-          "controls": [
-            { "default@smoker_recipe_book.slot_uncraftable": {} },
-            { "default_hover@smoker_recipe_book.slot_uncraftable": { "$hover": true } },
-            { "pressed@smoker_recipe_book.slot_uncraftable": {} }
-          ],
-          "bindings": [
-            {
-              "binding_type": "global",
-              "binding_condition": "always",
-              "binding_name": "$toggle_binding_value",
-              "binding_name_override": "#toggle_state"
-            }
-          ]
-        }
-      }
+        "1@smelting_common.toggle": { "$hover_text": "item.muttonRaw.name", "$item_aux": 583, "$position": [0, 0] }}, //raw_mutton
+      { "2@smelting_common.toggle": { "$hover_text": "item.rabbit.name", "$item_aux": 310, "$position": [1, 0] } }, //raw_rabbit
+      { "3@smelting_common.toggle": { "$hover_text": "item.potato.name", "$item_aux": 302, "$position": [2, 0] } }, //potato
+      { "4@smelting_common.toggle": { "$hover_text": "item.chicken.name", "$item_aux": 297, "$position": [3, 0] } }, //raw_chicken
+      { "5@smelting_common.toggle": { "$hover_text": "item.beef.name", "$item_aux": 295, "$position": [4, 0] } }, //raw_beef
+      { "6@smelting_common.toggle": { "$hover_text": "item.salmon.name", "$item_aux": 287, "$position": [0, 1] } }, //raw_salmon
+      { "7@smelting_common.toggle": { "$hover_text": "item.fish.name", "$item_aux": 286, "$position": [1, 1] } }, //raw_cod
+      { "8@smelting_common.toggle": { "$hover_text": "item.porkchop.name", "$item_aux": 284, "$position": [2, 1] } }, //raw_porkchop
+      { "9@smelting_common.toggle": { "$hover_text": "item.kelp.name", "$item_aux": 408, "$position": [3, 1] } }, //kelp
+      { "10@global.empty_panel": { "grid_position": [4, 1] } } //filler
     ]
   },
 
-  "title_template@screen_content.text_field": {
-    "nineslice_size": 1,
-    "alpha": 0.8,
-    "anchor_from": "center",
-    "anchor_to": "center",
-    "size": [81, 14],
-    "$page_title|default": "Unknown",
-    "controls": [
-      {
-        "label@global.empty_label": {
-          "text": "$page_title",
-          "shadow": true,
-          "size": ["default", 10],
-          "anchor_from": "left_middle",
-          "anchor_to": "left_middle",
-          "offset": [4, 1]
-        }
-      }
-    ]
-  },
-  "furnace_filter_on@global.empty_image": {
-    "offset": [0, 1],
-    "texture": "assets/sprites/recipe_book/furnace_filter_disabled.png",
-    "size": ["default", "default"],
-    "layer": 5
-  },
-  "furnace_filter_on_hover@global.empty_image": {
-    "offset": [0, 1],
-    "texture": "assets/sprites/recipe_book/furnace_filter_disabled_highlighted.png",
-    "size": ["default", "default"],
-    "layer": 5
-  },
   "base_page_logic@global.empty_panel": {
     "controls": [
       {
@@ -209,29 +73,15 @@
                       "size": [81, 18],
                       "controls": [
                         {
-                          "Misc@smoker_recipe_book.title_template": {
+                          "Misc@smelting_common.title_template": {
                             "$page_title": "§7Misc",
-                            "bindings": [
-                              {
-                                "binding_type": "view",
-                                "source_control_name": "first_tab_toggle",
-                                "source_property_name": "#toggle_state",
-                                "target_property_name": "#visible"
-                              }
-                            ]
+                            "$trigger_name": "first_tab_toggle"
                           }
                         },
                         {
-                          "Food@smoker_recipe_book.title_template": {
+                          "Food@smelting_common.title_template": {
                             "$page_title": "§7Food",
-                            "bindings": [
-                              {
-                                "binding_type": "view",
-                                "source_control_name": "second_tab_toggle",
-                                "source_property_name": "#toggle_state",
-                                "target_property_name": "#visible"
-                              }
-                            ]
+                            "$trigger_name": "second_tab_toggle"
                           }
                         }
                       ]
@@ -245,9 +95,9 @@
                       "unchecked_control": "default",
                       "unchecked_hover_control": "default_hover",
                       "controls": [
-                        { "default@smoker_recipe_book.furnace_filter_on": {} },
+                        { "default@smelting_common.furnace_filter_on": {} },
                         {
-                          "default_hover@smoker_recipe_book.furnace_filter_on_hover": {
+                          "default_hover@smelting_common.furnace_filter_on_hover": {
                             "controls": [
                               {
                                 "hover_text@common.hover_text": {

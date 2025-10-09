@@ -22,27 +22,26 @@
     "size": [125, 100],
     "anchor_to": "top_left",
     "anchor_from": "top_left",
-    "layer": 300,
     "controls": [
-      { "1@blast_furnace_recipe_book.toggle": { "$item_aux": -271, "$position": [0, 0] } }, // ancient_debris
-      { "2@blast_furnace_recipe_book.toggle": { "$item_aux": 376, "$position": [1, 0] } }, // gold_tools
-      { "3@blast_furnace_recipe_book.toggle": { "$item_aux": 541, "$position": [2, 0] } }, // raw_copper
-      { "4@blast_furnace_recipe_book.toggle": { "$item_aux": 540, "$position": [3, 0] } }, // raw_gold
-      { "5@blast_furnace_recipe_book.toggle": { "$item_aux": 539, "$position": [4, 0] } }, // raw_iron
+      { "1@smelting_common.toggle": { "$hover_text": "tile.ancient_debris.name", "$item_aux": -271, "$position": [0, 0] } }, // ancient_debris
+      { "2@smelting_common.toggle": { "$hover_text": "attribute.name.generic.armor",/*i use this text because i am not manualy translateing for this*/ "$item_aux": 376, "$position": [1, 0] } }, // gold_tools
+      { "3@smelting_common.toggle": { "$hover_text": "item.raw_copper.name", "$item_aux": 541, "$position": [2, 0] } }, // raw_copper
+      { "4@smelting_common.toggle": { "$hover_text": "item.raw_gold.name", "$item_aux": 540, "$position": [3, 0] } }, // raw_gold
+      { "5@smelting_common.toggle": { "$hover_text": "item.raw_iron.name", "$item_aux": 539, "$position": [4, 0] } }, // raw_iron
 
-      { "6@blast_furnace_recipe_book.toggle": { "$item_aux": 16, "$position": [0, 1] } }, // coal_ore
-      { "7@blast_furnace_recipe_book.toggle": { "$item_aux": 153, "$position": [1, 1] } }, // nether_quartz_ore
-      { "8@blast_furnace_recipe_book.toggle": { "$item_aux": 129, "$position": [2, 1] } }, // emerald_ore
-      { "9@blast_furnace_recipe_book.toggle": { "$item_aux": 56, "$position": [3, 1] } }, // diamond_ore
-      { "10@blast_furnace_recipe_book.toggle": { "$item_aux": 15, "$position": [4, 1] } }, // iron_ore
+      { "6@smelting_common.toggle": { "$hover_text": "tile.coal_ore.name", "$item_aux": 16, "$position": [0, 1] } }, // coal_ore
+      { "7@smelting_common.toggle": { "$hover_text": "tile.quartz_ore.name", "$item_aux": 153, "$position": [1, 1] } }, // nether_quartz_ore
+      { "8@smelting_common.toggle": { "$hover_text": "tile.emerald_ore.name", "$item_aux": 129, "$position": [2, 1] } }, // emerald_ore
+      { "9@smelting_common.toggle": { "$hover_text": "tile.diamond_ore.name", "$item_aux": 56, "$position": [3, 1] } }, // diamond_ore
+      { "10@smelting_common.toggle": { "$hover_text": "tile.iron_ore.name", "$item_aux": 15, "$position": [4, 1] } }, // iron_ore
 
-      { "11@blast_furnace_recipe_book.toggle": { "$item_aux": 14, "$position": [0, 2] } }, // gold_ore
-      { "12@blast_furnace_recipe_book.toggle": { "$item_aux": -288, "$position": [1, 2] } }, // nether_gold_ore
-      { "13@blast_furnace_recipe_book.toggle": { "$item_aux": -311, "$position": [2, 2] } }, // copper_ore
-      { "14@blast_furnace_recipe_book.toggle": { "$item_aux": -400, "$position": [3, 2] } }, // lapis_lazuli_ore
-      { "17@blast_furnace_recipe_book.toggle": { "$item_aux": 320, "$position": [4, 2] } }, // iron shovel
+      { "11@smelting_common.toggle": { "$hover_text": "tile.gold_ore.name", "$item_aux": 14, "$position": [0, 2] } }, // gold_ore
+      { "12@smelting_common.toggle": { "$hover_text": "tile.nether_gold_ore.name", "$item_aux": -288, "$position": [1, 2] } }, // nether_gold_ore
+      { "13@smelting_common.toggle": { "$hover_text": "tile.copper_ore.name", "$item_aux": -311, "$position": [2, 2] } }, // copper_ore
+      { "14@smelting_common.toggle": { "$hover_text": "tile.lapis_ore.name", "$item_aux": 21, "$position": [3, 2] } }, // lapis_lazuli_ore
+      { "17@smelting_common.toggle": { "$hover_text": "howtoplay.tools", "$item_aux": 320, "$position": [4, 2] } }, // iron shovel
 
-      { "16@blast_furnace_recipe_book.toggle": { "$item_aux": 73, "$position": [0, 3] } }, // redstone_ore
+      { "16@smelting_common.toggle": { "$hover_text": "tile.redstone_ore.name", "$item_aux": 73, "$position": [0, 3] } }, // redstone_ore
       { "18@global.empty_panel": { "grid_position": [1, 3] } }, // filler
       { "18@global.empty_panel": { "grid_position": [2, 3] } }, // filler
       { "19@global.empty_panel": { "grid_position": [3, 3] } }, // filler
@@ -57,135 +56,62 @@
       }
     ]
   },
-  "blast_furnace_redstone": {
-    "type": "grid",
-    "grid_dimensions": [5, 1],
-    "size": [125, 25],
-    "anchor_to": "top_left",
-    "anchor_from": "top_left",
-    "layer": 300,
-    "controls": [
-      { "1@blast_furnace_recipe_book.toggle": { "$item_aux": 73, "$position": [0, 0] } }, // redstone_ore
-      { "2@global.empty_panel": { "grid_position": [1, 0] } }, // filler
-      { "3@global.empty_panel": { "grid_position": [2, 0] } }, // filler
-      { "4@global.empty_panel": { "grid_position": [3, 0] } }, // filler
-      { "5@global.empty_panel": { "grid_position": [4, 0] } } // filler
-    ],
-    "bindings": [
-      {
-        "binding_type": "view",
-        "source_control_name": "second_tab_toggle",
-        "source_property_name": "#toggle_state",
-        "target_property_name": "#visible"
-      }
-    ]
-  },
-  "blast_furnace_ore": {
-    "type": "grid",
-    "grid_dimensions": [5, 3],
-    "size": [125, 75],
-    "anchor_to": "top_left",
-    "anchor_from": "top_left",
-    "layer": 300,
-    "controls": [
-      { "1@blast_furnace_recipe_book.toggle": { "$item_aux": -271, "$position": [0, 0] } }, // ancient_debris
-      { "2@blast_furnace_recipe_book.toggle": { "$item_aux": 376, "$position": [1, 0] } }, // gold_tools
-      { "5@blast_furnace_recipe_book.toggle": { "$item_aux": 541, "$position": [2, 0] } }, // raw_copper
-      { "6@blast_furnace_recipe_book.toggle": { "$item_aux": 540, "$position": [3, 0] } }, // raw_gold
-      { "7@blast_furnace_recipe_book.toggle": { "$item_aux": 539, "$position": [4, 0] } }, // raw_iron
+"blast_furnace_redstone": {
+  "type": "grid",
+  "grid_dimensions": [5, 1],
+  "size": [125, 25],
+  "anchor_to": "top_left",
+  "anchor_from": "top_left",
+  "controls": [
+    { "1@smelting_common.toggle": { "$hover_text": "tile.redstone_ore.name", "$item_aux": 73, "$position": [0, 0] } }, // redstone_ore
+    { "2@global.empty_panel": { "grid_position": [1, 0] } }, // filler
+    { "3@global.empty_panel": { "grid_position": [2, 0] } }, // filler
+    { "4@global.empty_panel": { "grid_position": [3, 0] } }, // filler
+    { "5@global.empty_panel": { "grid_position": [4, 0] } } // filler
+  ],
+  "bindings": [
+    {
+      "binding_type": "view",
+      "source_control_name": "second_tab_toggle",
+      "source_property_name": "#toggle_state",
+      "target_property_name": "#visible"
+    }
+  ]
+},
+"blast_furnace_ore": {
+  "type": "grid",
+  "grid_dimensions": [5, 3],
+  "size": [125, 75],
+  "anchor_to": "top_left",
+  "anchor_from": "top_left",
+  "controls": [
+    { "1@smelting_common.toggle": { "$hover_text": "tile.ancient_debris.name", "$item_aux": -271, "$position": [0, 0] } }, // ancient_debris
+    { "2@smelting_common.toggle": { "$hover_text": "attribute.name.generic.armor", "$item_aux": 376, "$position": [1, 0] } }, // gold_tools
+    { "5@smelting_common.toggle": { "$hover_text": "item.raw_copper.name", "$item_aux": 541, "$position": [2, 0] } }, // raw_copper
+    { "6@smelting_common.toggle": { "$hover_text": "item.raw_gold.name", "$item_aux": 540, "$position": [3, 0] } }, // raw_gold
+    { "7@smelting_common.toggle": { "$hover_text": "item.raw_iron.name", "$item_aux": 539, "$position": [4, 0] } }, // raw_iron
 
-      { "8@blast_furnace_recipe_book.toggle": { "$item_aux": 16, "$position": [0, 1] } }, // coal_ore
-      { "9@blast_furnace_recipe_book.toggle": { "$item_aux": 153, "$position": [1, 1] } }, // nether_quartz_ore
-      { "10@blast_furnace_recipe_book.toggle": { "$item_aux": 129, "$position": [2, 1] } }, // emerald_ore
-      { "12@blast_furnace_recipe_book.toggle": { "$item_aux": 56, "$position": [3, 1] } }, // diamond_ore
-      { "13@blast_furnace_recipe_book.toggle": { "$item_aux": 15, "$position": [4, 1] } }, // iron_ore
+    { "8@smelting_common.toggle": { "$hover_text": "tile.coal_ore.name", "$item_aux": 16, "$position": [0, 1] } }, // coal_ore
+    { "9@smelting_common.toggle": { "$hover_text": "tile.quartz_ore.name", "$item_aux": 153, "$position": [1, 1] } }, // nether_quartz_ore
+    { "10@smelting_common.toggle": { "$hover_text": "tile.emerald_ore.name", "$item_aux": 129, "$position": [2, 1] } }, // emerald_ore
+    { "12@smelting_common.toggle": { "$hover_text": "tile.diamond_ore.name", "$item_aux": 56, "$position": [3, 1] } }, // diamond_ore
+    { "13@smelting_common.toggle": { "$hover_text": "tile.iron_ore.name", "$item_aux": 15, "$position": [4, 1] } }, // iron_ore
 
-      { "14@blast_furnace_recipe_book.toggle": { "$item_aux": 14, "$position": [0, 2] } }, // gold_ore
-      { "15@blast_furnace_recipe_book.toggle": { "$item_aux": -288, "$position": [1, 2] } }, // nether_gold_ore
-      { "16@blast_furnace_recipe_book.toggle": { "$item_aux": -311, "$position": [2, 2] } }, // copper_ore
-      { "17@blast_furnace_recipe_book.toggle": { "$item_aux": -400, "$position": [3, 2] } }, // lapis_lazuli_ore
-      { "18@blast_furnace_recipe_book.toggle": { "$item_aux": 320, "$position": [4, 2] } } // iron shovel
-
-    ],
-    "bindings": [
-      {
-        "binding_type": "view",
-        "source_control_name": "third_tab_toggle",
-        "source_property_name": "#toggle_state",
-        "target_property_name": "#visible"
-      }
-    ]
-  },
-
-  "slot_uncraftable@screen_content.image_element": {
-    "size": [25, 25],
-    "layer": 5,
-    "texture": "assets/sprites/recipe_book/slot_uncraftable",
-    "controls": [
-      {
-        "item_renderer@global.custom_renderer": {
-          "$type": "inventory_item_renderer",
-          "size": [16, 16],
-          "anchor_from": "center",
-          "anchor_to": "center",
-          "layer": 6,
-          "property_bag": { "#item_id_aux": "($item_aux * 65536)" }
-        }
-      },
-      {
-        "hover_text@common.hover_text": {
-          "layer": 400,
-          "property_bag": { "#hover_text": "('\u00a7z' + $item_aux)" },
-          "ignored": "(not $hover)"
-        }
-      }
-    ]
-  },
-  "toggle": {
-    "type": "toggle",
-    "size": [25, 25],
-    "unchecked_control": "default",
-    "unchecked_hover_control": "default_hover",
-    "grid_position": "$position",
-    "$hover|default": false,
-    "controls": [
-      { "default@blast_furnace_recipe_book.slot_uncraftable": {} },
-      { "default_hover@blast_furnace_recipe_book.slot_uncraftable": { "$hover": true } }
-    ]
-  },
-
-  "title_template@screen_content.text_field": {
-    "nineslice_size": 1,
-    "alpha": 0.8,
-    "anchor_from": "center",
-    "anchor_to": "center",
-    "size": [81, 14],
-    "$page_title|default": "Unknown",
-    "controls": [
-      {
-        "label@global.empty_label": {
-          "text": "$page_title",
-          "shadow": true,
-          "size": ["default", 10],
-          "anchor_from": "left_middle",
-          "anchor_to": "left_middle",
-          "offset": [4, 1]
-        }
-      }
-    ]
-  },
-  "furnace_filter_on@global.empty_image": {
-    "offset": [0, 1],
-    "texture": "assets/sprites/recipe_book/furnace_filter_disabled.png",
-    "size": ["default", "default"],
-    "layer": 5
-  },
-  "furnace_filter_on_hover@global.empty_image": {
-    "offset": [0, 1],
-    "texture": "assets/sprites/recipe_book/furnace_filter_disabled_highlighted.png",
-    "size": ["default", "default"],
-    "layer": 5
-  },
+    { "14@smelting_common.toggle": { "$hover_text": "tile.gold_ore.name", "$item_aux": 14, "$position": [0, 2] } }, // gold_ore
+    { "15@smelting_common.toggle": { "$hover_text": "tile.nether_gold_ore.name", "$item_aux": -288, "$position": [1, 2] } }, // nether_gold_ore
+    { "16@smelting_common.toggle": { "$hover_text": "tile.copper_ore.name", "$item_aux": -311, "$position": [2, 2] } }, // copper_ore
+    { "17@smelting_common.toggle": { "$hover_text": "tile.lapis_ore.name", "$item_aux": 21, "$position": [3, 2] } }, // lapis_lazuli_ore
+    { "18@smelting_common.toggle": { "$hover_text": "howtoplay.tools", "$item_aux": 320, "$position": [4, 2] } } // iron shovel
+  ],
+  "bindings": [
+    {
+      "binding_type": "view",
+      "source_control_name": "third_tab_toggle",
+      "source_property_name": "#toggle_state",
+      "target_property_name": "#visible"
+    }
+  ]
+},
   "base_page_logic@global.empty_panel": {
     "controls": [
       {
@@ -223,42 +149,21 @@
                             "size": [81, 18],
                             "controls": [
                               {
-                                "Misc@blast_furnace_recipe_book.title_template": {
+                                "Misc@smelting_common.title_template": {
                                   "$page_title": "§7Misc",
-                                  "bindings": [
-                                    {
-                                      "binding_type": "view",
-                                      "source_control_name": "first_tab_toggle",
-                                      "source_property_name": "#toggle_state",
-                                      "target_property_name": "#visible"
-                                    }
-                                  ]
+                                  "$trigger_name":"first_tab_toggle"
                                 }
                               },
                               {
-                                "Food@blast_furnace_recipe_book.title_template": {
+                                "Food@smelting_common.title_template": {
                                   "$page_title": "§7Redstone",
-                                  "bindings": [
-                                    {
-                                      "binding_type": "view",
-                                      "source_control_name": "second_tab_toggle",
-                                      "source_property_name": "#toggle_state",
-                                      "target_property_name": "#visible"
-                                    }
-                                  ]
+                                  "$trigger_name":"second_tab_toggle"
                                 }
                               },
                               {
-                                "Ores@blast_furnace_recipe_book.title_template": {
+                                "Ores@smelting_common.title_template": {
                                   "$page_title": "§7Ores",
-                                  "bindings": [
-                                    {
-                                      "binding_type": "view",
-                                      "source_control_name": "third_tab_toggle",
-                                      "source_property_name": "#toggle_state",
-                                      "target_property_name": "#visible"
-                                    }
-                                  ]
+                                  "$trigger_name":"third_tab_toggle"
                                 }
                               }
                             ]
@@ -272,9 +177,9 @@
                             "unchecked_control": "default",
                             "unchecked_hover_control": "default_hover",
                             "controls": [
-                              { "default@blast_furnace_recipe_book.furnace_filter_on": {} },
+                              { "default@smelting_common.furnace_filter_on": {} },
                               {
-                                "default_hover@blast_furnace_recipe_book.furnace_filter_on_hover": {
+                                "default_hover@smelting_common.furnace_filter_on_hover": {
                                   "controls": [
                                     {
                                       "hover_text@common.hover_text": {
@@ -310,16 +215,16 @@
     "anchor_to": "center",
     "controls": [
       {
-        "1@blast_furnace_recipe_book.toggle": {"$item_aux": 608, "offset": "@blast_furnace_recipe_book.offset_placeholder1_11"}
+        "1@smelting_common.toggle": {"$item_aux": 608, "offset": "@blast_furnace_recipe_book.offset_placeholder1_11"}
       },
       {
-        "2@blast_furnace_recipe_book.toggle": {"$item_aux": 418, "offset": "@blast_furnace_recipe_book.offset_placeholder2_11"}
+        "2@smelting_common.toggle": {"$item_aux": 418, "offset": "@blast_furnace_recipe_book.offset_placeholder2_11"}
       },
       {
-        "3@blast_furnace_recipe_book.toggle": {"$item_aux": 388, "offset": "@blast_furnace_recipe_book.offset_placeholder3_11"}
+        "3@smelting_common.toggle": {"$item_aux": 388, "offset": "@blast_furnace_recipe_book.offset_placeholder3_11"}
       },
       {
-        "4@blast_furnace_recipe_book.toggle": {"$item_aux": 384, "offset": "@blast_furnace_recipe_book.offset_placeholder4_11"}
+        "4@smelting_common.toggle": {"$item_aux": 384, "offset": "@blast_furnace_recipe_book.offset_placeholder4_11"}
       }
     ]
   },

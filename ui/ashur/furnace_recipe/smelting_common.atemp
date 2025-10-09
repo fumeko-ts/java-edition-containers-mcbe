@@ -1,0 +1,217 @@
+{
+  "namespace": "smelting_common",
+  "slot_uncraftable@screen_content.image_element": {
+    "size": [25, 25],
+    "layer": 5,
+    "texture": "assets/sprites/recipe_book/slot_uncraftable",
+    "controls": [
+      {
+        "hover_text_java@global.custom_renderer": {
+          "allow_clipping": false,
+          "$type": "bundle_tooltip_renderer",
+          "layer": 900,
+          "controls": [{ "1@java_hover_text.java_tooltip_test": {} }]
+        }
+      }/*,
+      {
+        "tooltip@screen_content.image_element": {
+          "layer": 400,
+          "texture": "textures/ui/purpleBorder",
+          "nineslice_size": 2,
+          "allow_clipping": false,
+          "anchor_from": "bottom_left",
+          "anchor_to": "bottom_left",
+          "color": "cyan",
+          "offset": [-30, -30],
+          "size": ["100%c + 10px", "100%c + 8px"],
+          "controls": [
+            {
+              "hover_text@global.empty_label": {
+                "localize": true,
+                "shadow": true,
+                "layer": 401,
+                "color": "white",
+                "size": ["default", "default"],
+                "text": "#hover_text",
+                "bindings": [
+                  {
+                    "binding_type": "collection",
+                    "binding_condition": "always",
+                    "binding_collection_name": "furnace_ingredient_items",
+                    "binding_name": "#hover_text"
+                  },
+                  {
+                    "binding_type": "view",
+                    "binding_condition": "always",
+                    "source_property_name": "((#hover_text - #hover_text) + ($toggle_binding_value + 'toggle_name\n   ' + $toggle_name + '\n\n' + 'toggle_control_name \n   ' + $toggle_control_name))",
+                    "target_property_name": "#hover_text"
+                  }
+                ]
+              }
+            }
+          ],
+          "ignored": "(not $hover)"
+        }
+      }*/
+    ]
+  },
+  "toggle@global.empty_panel": {
+    "size": [25, 25],
+    "$toggle_control_name|default": "('control:' + $item_aux)",
+    "$toggle_name|default": "('item:' + $item_aux)",
+    "$toggle_binding_value|default": "('#item:' + $item_aux)",
+    "grid_position": "$position",
+    "$item_aux|default": -1,
+    "controls": [
+      {
+        "item_renderer@global.custom_renderer": {
+          "$type": "inventory_item_renderer",
+          "size": [16, 16],
+          "anchor_from": "center",
+          "anchor_to": "center",
+          "layer": 6,
+          "property_bag": { "#item_id_aux": "($item_aux * 65536)" }
+        }
+      },
+      {
+        "$toggle_control_name": {
+          "type": "toggle",
+          "$hover|default": false,
+          "sound_name": "random.click",
+          "sound_volume": 1.0,
+          "sound_pitch": 1.0,
+          "toggle_name": "$toggle_name",
+          "unchecked_control": "default",
+          "unchecked_hover_control": "default_hover",
+          "checked_control": "checked",
+          "checked_hover_control": "checked_hover",
+          "property_bag": {
+            "#toggle_state": true
+          },
+          "controls": [
+            { "default@smelting_common.slot_uncraftable": {} },
+            { "default_hover@smelting_common.slot_uncraftable": { "$hover": true } },
+
+            { "checked_hover@smelting_common.slot_uncraftable": { "$hover": true, "color": "red" } },
+            { "checked@smelting_common.slot_uncraftable": { "color": "red" } }
+          ],
+          "bindings": [
+            {
+              "binding_type": "global",
+              "binding_condition": "always",
+              "binding_name": "$toggle_binding_value",
+              "binding_name_override": "#toggle_state"
+            }
+          ],
+
+          "button_mappings": [
+            {
+              "from_button_id": "button.menu_select",
+              "to_button_id": "button.menu_select",
+              "mapping_type": "pressed"
+            },
+            {
+              "from_button_id": "button.menu_ok",
+              "to_button_id": "button.menu_ok",
+              "mapping_type": "focused"
+            }
+          ]
+        }
+      }
+    ]
+  },
+
+  "title_template@screen_content.text_field": {
+    "nineslice_size": 1,
+    "alpha": 0.8,
+    "anchor_from": "center",
+    "anchor_to": "center",
+    "size": [81, 14],
+    "$page_title|default": "Unknown",
+    "$trigger_name|default": "",
+    "controls": [
+      {
+        "label@global.empty_label": {
+          "text": "$page_title",
+          "shadow": true,
+          "size": ["default", 10],
+          "anchor_from": "left_middle",
+          "anchor_to": "left_middle",
+          "offset": [4, 1]
+        }
+      }
+    ],
+    "bindings": [
+      {
+        "binding_type": "view",
+        "source_control_name": "$trigger_name",
+        "source_property_name": "#toggle_state",
+        "target_property_name": "#visible"
+      }
+    ]
+  },
+  "furnace_filter_on@global.empty_image": {
+    "offset": [0, 1],
+    "texture": "assets/sprites/recipe_book/furnace_filter_disabled.png",
+    "size": ["default", "default"],
+    "layer": 5
+  },
+  "furnace_filter_on_hover@global.empty_image": {
+    "offset": [0, 1],
+    "texture": "assets/sprites/recipe_book/furnace_filter_disabled_highlighted.png",
+    "size": ["default", "default"],
+    "layer": 5
+  },
+
+  "red_overlay@screen_content.image_element": {
+    "texture": "textures/ui/ashur/cell_transparent_image_red",
+    "size": ["100%", "100%"],
+    "$item_aux|default": -1,
+    "$trigger_name|default": "",
+    "nineslice_size": 1,
+    "controls": [
+      {
+        "white@global.empty_image": {
+          "texture": "textures/ui/ashur/white",
+          "size": ["100% - 1px", "100% - 1px"],
+          "anchor_to": "center",
+          "anchor_from": "center",
+          "alpha": 0.2,
+          "layer": 12
+        }
+      },
+      {
+        "item_renderer@global.custom_renderer": {
+          "$type": "inventory_item_renderer",
+          "size": [16, 16],
+          "anchor_from": "center",
+          "anchor_to": "center",
+          "property_bag": { "#item_id_aux": "($item_aux * 65536)" }
+        }
+      }
+    ],
+    "bindings": [
+      {
+        "binding_type": "view",
+        "source_control_name": "$trigger_name",
+        "source_property_name": "#toggle_state",
+        "target_property_name": "#visible"
+      }
+    ]
+  },
+  "smoker_selected_items@global.empty_panel": {
+    "size": [18, 18],
+    "layer": 16,
+    "controls": [
+      { "1@smelting_common.red_overlay": { "$item_aux": 583, "$trigger_name": "control:583" } },
+      { "2@smelting_common.red_overlay": { "$item_aux": 310, "$trigger_name": "control:310" } },
+      { "3@smelting_common.red_overlay": { "$item_aux": 302, "$trigger_name": "control:302" } },
+      { "4@smelting_common.red_overlay": { "$item_aux": 297, "$trigger_name": "control:297" } },
+      { "5@smelting_common.red_overlay": { "$item_aux": 295, "$trigger_name": "control:295" } },
+      { "6@smelting_common.red_overlay": { "$item_aux": 287, "$trigger_name": "control:287" } },
+      { "7@smelting_common.red_overlay": { "$item_aux": 286, "$trigger_name": "control:286" } },
+      { "8@smelting_common.red_overlay": { "$item_aux": 284, "$trigger_name": "control:284" } },
+      { "9@smelting_common.red_overlay": { "$item_aux": 408, "$trigger_name": "control:408" } }
+    ]
+  }
+}

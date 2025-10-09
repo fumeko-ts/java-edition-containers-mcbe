@@ -48,6 +48,21 @@
           "size": [176, 166],
           "$screen_controls": [
             {
+              "input_overlay_holder@global.empty_panel": {
+                "size": [121, 34],
+                "anchor_from": "top_right",
+                "anchor_to": "top_right",
+                "controls": [
+                  {
+                    "smoker_selected_items@smelting_common.smoker_selected_items": {
+                      "anchor_from": "bottom_left",
+                      "anchor_to": "bottom_left"
+                    }
+                  }
+                ]
+              }
+            },
+            {
               "smoker_inventory_side@global.empty_panel": {
                 "size": [176, 166],
                 "controls": [
@@ -77,15 +92,7 @@
                                         "anchor_from": "top_left",
                                         "offset": [3, -1],
                                         "text": "atemp.container.smoker",
-                                        "color": "$title_text_color",
-                                        "bindings": [
-                                          {
-                                            "binding_type": "view",
-                                            "source_control_name": "control:295",
-                                            "source_property_name": "#toggle_state",
-                                            "target_property_name": "#visible"
-                                          }
-                                        ]
+                                        "color": "$title_text_color"
                                       }
                                     }
                                   ]
