@@ -23,16 +23,15 @@
     "anchor_to": "top_left",
     "anchor_from": "top_left",
     "controls": [
-      {
-        "1@smelting_common.toggle": { "$hover_text": "item.muttonRaw.name", "$item_aux": 583, "$position": [0, 0] }}, //raw_mutton
-      { "2@smelting_common.toggle": { "$hover_text": "item.rabbit.name", "$item_aux": 310, "$position": [1, 0] } }, //raw_rabbit
-      { "3@smelting_common.toggle": { "$hover_text": "item.potato.name", "$item_aux": 302, "$position": [2, 0] } }, //potato
-      { "4@smelting_common.toggle": { "$hover_text": "item.chicken.name", "$item_aux": 297, "$position": [3, 0] } }, //raw_chicken
-      { "5@smelting_common.toggle": { "$hover_text": "item.beef.name", "$item_aux": 295, "$position": [4, 0] } }, //raw_beef
-      { "6@smelting_common.toggle": { "$hover_text": "item.salmon.name", "$item_aux": 287, "$position": [0, 1] } }, //raw_salmon
-      { "7@smelting_common.toggle": { "$hover_text": "item.fish.name", "$item_aux": 286, "$position": [1, 1] } }, //raw_cod
-      { "8@smelting_common.toggle": { "$hover_text": "item.porkchop.name", "$item_aux": 284, "$position": [2, 1] } }, //raw_porkchop
-      { "9@smelting_common.toggle": { "$hover_text": "item.kelp.name", "$item_aux": 408, "$position": [3, 1] } }, //kelp
+      { "1@smelting_common.toggle": { "$toggle_group_forced_index": 1, "$hover_text": "item.muttonRaw.name", "$item_aux": 583, "$position": [0, 0] }}, //raw_mutton
+      { "2@smelting_common.toggle": { "$toggle_group_forced_index": 2, "$hover_text": "item.rabbit.name", "$item_aux": 310, "$position": [1, 0] } }, //raw_rabbit
+      { "3@smelting_common.toggle": { "$toggle_group_forced_index": 3, "$hover_text": "item.potato.name", "$item_aux": 302, "$position": [2, 0] } }, //potato
+      { "4@smelting_common.toggle": { "$toggle_group_forced_index": 4, "$hover_text": "item.chicken.name", "$item_aux": 297, "$position": [3, 0] } }, //raw_chicken
+      { "5@smelting_common.toggle": { "$toggle_group_forced_index": 5, "$hover_text": "item.beef.name", "$item_aux": 295, "$position": [4, 0] } }, //raw_beef
+      { "6@smelting_common.toggle": { "$toggle_group_forced_index": 6, "$hover_text": "item.salmon.name", "$item_aux": 287, "$position": [0, 1] } }, //raw_salmon
+      { "7@smelting_common.toggle": { "$toggle_group_forced_index": 7, "$hover_text": "item.fish.name", "$item_aux": 286, "$position": [1, 1] } }, //raw_cod
+      { "8@smelting_common.toggle": { "$toggle_group_forced_index": 8, "$hover_text": "item.porkchop.name", "$item_aux": 284, "$position": [2, 1] } }, //raw_porkchop
+      { "9@smelting_common.toggle": { "$toggle_group_forced_index": 9, "$hover_text": "item.kelp.name", "$item_aux": 408, "$position": [3, 1] } }, //kelp
       { "10@global.empty_panel": { "grid_position": [4, 1] } } //filler
     ]
   },

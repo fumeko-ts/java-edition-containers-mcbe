@@ -12,7 +12,7 @@
           "layer": 900,
           "controls": [{ "1@java_hover_text.java_tooltip_test": {} }]
         }
-      }/*,
+      } /*,
       {
         "tooltip@screen_content.image_element": {
           "layer": 400,
@@ -58,9 +58,10 @@
   "toggle@global.empty_panel": {
     "size": [25, 25],
     "$toggle_control_name|default": "('control:' + $item_aux)",
-    "$toggle_name|default": "('item:' + $item_aux)",
+    "$toggle_name|default": "furnace_recipe_items",
     "$toggle_binding_value|default": "('#item:' + $item_aux)",
     "grid_position": "$position",
+    "$toggle_group_forced_index|default": -1,
     "$item_aux|default": -1,
     "controls": [
       {
@@ -76,6 +77,7 @@
       {
         "$toggle_control_name": {
           "type": "toggle",
+          "size": [25, 25],
           "$hover|default": false,
           "sound_name": "random.click",
           "sound_volume": 1.0,
@@ -85,6 +87,8 @@
           "unchecked_hover_control": "default_hover",
           "checked_control": "checked",
           "checked_hover_control": "checked_hover",
+          "radio_toggle_group": true,
+          "toggle_group_forced_index": "$toggle_group_forced_index",
           "property_bag": {
             "#toggle_state": true
           },
@@ -165,7 +169,7 @@
 
   "red_overlay@screen_content.image_element": {
     "texture": "textures/ui/ashur/cell_transparent_image_red",
-    "size": ["100%", "100%"],
+    "size": [18, 18],
     "$item_aux|default": -1,
     "$trigger_name|default": "",
     "nineslice_size": 1,
@@ -173,7 +177,7 @@
       {
         "white@global.empty_image": {
           "texture": "textures/ui/ashur/white",
-          "size": ["100% - 1px", "100% - 1px"],
+          "size": [16, 16],
           "anchor_to": "center",
           "anchor_from": "center",
           "alpha": 0.2,
