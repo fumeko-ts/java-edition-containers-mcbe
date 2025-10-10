@@ -53,8 +53,8 @@
     "$toggle_control_name|default": "('control:' + $item_aux)",
     "$toggle_name|default": "furnace_recipe_items",
     "$toggle_binding_value|default": "('#item:' + $item_aux)",
-    "grid_position": "$position",
     "$toggle_group_forced_index|default": -1,
+    "grid_position": "$position",
     "$item_aux|default": -1,
     "controls": [
       {
@@ -73,7 +73,7 @@
           "size": [25, 25],
           "layer": 500,
           "default_focus_precedence": 1,
-          "hover_control": "hover_text_java",
+          "hover_control": "controls",
           "consume_event": false,
           "bindings": [
             {
@@ -92,12 +92,55 @@
           ],
           "controls": [
             {
-              "hover_text_java@global.custom_renderer": {
-                "allow_clipping": false,
+              "controls@global.empty_panel": {
+                "controls": [
+                  {
+                    "hover_text_java@global.custom_renderer": {
+                      "allow_clipping": false,
 
-                "$type": "bundle_tooltip_renderer",
-                "layer": 900,
-                "controls": [{ "1@java_hover_text.java_tooltip_test": { "$hover|default": true } }]
+                      "$type": "bundle_tooltip_renderer",
+                      "layer": 900,
+                      "controls": [{ "1@java_hover_text.java_tooltip_test": { "$hover|default": true } }],
+                      "bindings": [
+                        {
+                          "binding_name": "(not #using_touch)",
+                          "binding_name_override": "#visible"
+                        }
+                      ]
+                    }
+                  },
+
+                  {
+                    "tooltip@screen_content.image_element": {
+                      "layer": 400,
+                      "texture": "textures/ui/purpleBorder",
+                      "nineslice_size": 2,
+                      "allow_clipping": false,
+                      "anchor_from": "left_middle",
+                      "anchor_to": "left_middle",
+                      "offset": [25, 0],
+                      "size": ["100%c + 10px", "100%c + 8px"],
+                      "controls": [
+                        {
+                          "hover_text@global.empty_label": {
+                            "localize": true,
+                            "shadow": true,
+                            "layer": 401,
+                            "color": "white",
+                            "size": ["default", "default"],
+                            "text": "$hover_text"
+                          }
+                        }
+                      ],
+                      "bindings": [
+                        {
+                          "binding_name": "#using_touch",
+                          "binding_name_override": "#visible"
+                        }
+                      ]
+                    }
+                  }
+                ]
               }
             }
           ]
@@ -231,6 +274,61 @@
         "binding_condition": "always",
         "source_property_name": "(#item_id_aux = -1)",
         "target_property_name": "#visible"
+      }
+    ]
+  },
+  //layout toggle
+  "button_default@screen_content.image_element": {
+    "size": [20, 18],
+    "texture": "assets/sprites/recipe_book/button.png"
+  },
+  "button_hover@screen_content.image_element": {
+    "size": [20, 18],
+    "texture": "assets/sprites/recipe_book/button_highlighted.png"
+  },
+  "layout_sprites@toggle.radio_toggle": {
+    "$toggle_name|default": "furnace_recipe_book_toggle",
+    "$controls": [
+      { "default@smelting_common.button_default": {} },
+      { "default_hover@smelting_common.button_hover": {} },
+
+      { "checked@smelting_common.button_default": {} },
+      { "checked_hover@smelting_common.button_hover": {} }
+    ]
+  },
+  "layout_toggle@global.empty_panel": {
+    "size": [20, 18],
+    "controls": [
+      {
+        "1@smelting_common.layout_sprites": {
+          "$toggle_control_name|default": "furnace_recipe_1",
+          "$toggle_binding_value|default": "#no_recipe_book",
+          "$is_default_active": true,
+          "$toggle_group_forced_index|default": 0,
+          "bindings": [
+            {
+              "binding_type": "view",
+              "source_control_name": "furnace_recipe_2",
+              "source_property_name": "#toggle_state",
+              "target_property_name": "#visible"
+            }
+          ]
+        }
+      },
+      {
+        "1@smelting_common.layout_sprites": {
+          "$toggle_control_name|default": "furnace_recipe_2",
+          "$toggle_binding_value|default": "#recipe_book",
+          "$toggle_group_forced_index|default": 1,
+          "bindings": [
+            {
+              "binding_type": "view",
+              "source_control_name": "furnace_recipe_1",
+              "source_property_name": "#toggle_state",
+              "target_property_name": "#visible"
+            }
+          ]
+        }
       }
     ]
   }

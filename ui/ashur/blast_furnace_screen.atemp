@@ -28,6 +28,7 @@
         "recipe_book@global.empty_stack": {
           "size": [184, 166],
           "orientation": "horizontal",
+          "visible": false,
           "controls": [
             {
               "tab_stack@furnace_tabs.furnace_tabs": {
@@ -45,6 +46,14 @@
               }
             },
             { "filler@global.empty_panel": { "size": [2, 166] } }
+          ],
+          "bindings": [
+            {
+              "binding_type": "view",
+              "source_control_name": "furnace_recipe_2",
+              "source_property_name": "#toggle_state",
+              "target_property_name": "#visible"
+            }
           ]
         }
       },
@@ -52,6 +61,22 @@
         "main_blast_furnace_contents@container_common.container_details": {
           "size": [176, 166],
           "$screen_controls": [
+            {
+              "layout_holder@global.empty_panel": {
+                "size": [40, 52],
+                "anchor_from": "top_left",
+                "anchor_to": "top_left",
+                "controls": [
+                  {
+                    "layout@smelting_common.layout_toggle": {
+                      "anchor_from": "bottom_right",
+                      "anchor_to": "bottom_right",
+                      "layer": 10
+                    }
+                  }
+                ]
+              }
+            },
             { "common_panel@screen_content.container_base": { "$blast_furnace_screen": "$is_blast_furnace_screen" } },
             {
               "blast_furnace_top_half@global.empty_stack": {

@@ -217,6 +217,8 @@
     "size": "$size",
     "$size": [18, 18],
     "$controls|default": [],
+    "$is_radio_toggle|default": true,
+    "$is_default_active|default": false,
     "controls": [
       {
         "$toggle_control_name": {
@@ -231,8 +233,11 @@
           "unchecked_hover_control": "default_hover",
           "checked_control": "checked",
           "checked_hover_control": "checked_hover",
-          "radio_toggle_group": true,
+          "radio_toggle_group": "$is_radio_toggle",
           "toggle_group_forced_index": "$toggle_group_forced_index",
+          "toggle_group_default_selected": 0,
+          "reset_on_focus_lost": true,
+          "toggle_default_state": "$is_default_active",
           "property_bag": {
             "#toggle_state": true
           },

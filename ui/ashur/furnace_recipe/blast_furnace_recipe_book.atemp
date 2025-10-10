@@ -23,25 +23,25 @@
     "anchor_to": "top_left",
     "anchor_from": "top_left",
     "controls": [
-      { "1@smelting_common.toggle": { "$hover_text": "tile.ancient_debris.name", "$item_aux": -271, "$position": [0, 0] } }, // ancient_debris
-      { "2@smelting_common.toggle": { "$hover_text": "attribute.name.generic.armor",/*i use this text because i am not manualy translateing for this*/ "$item_aux": 376, "$position": [1, 0] } }, // gold_tools
-      { "3@smelting_common.toggle": { "$hover_text": "item.raw_copper.name", "$item_aux": 541, "$position": [2, 0] } }, // raw_copper
-      { "4@smelting_common.toggle": { "$hover_text": "item.raw_gold.name", "$item_aux": 540, "$position": [3, 0] } }, // raw_gold
-      { "5@smelting_common.toggle": { "$hover_text": "item.raw_iron.name", "$item_aux": 539, "$position": [4, 0] } }, // raw_iron
+      { "1@smelting_common.toggle": {"$toggle_group_forced_index": 1, "$hover_text": "tile.ancient_debris.name", "$item_aux": -271, "$position": [0, 0] } }, // ancient_debris
+      { "2@smelting_common.toggle": {"$toggle_group_forced_index": 2, "$hover_text": "attribute.name.generic.armor",/*i use this text because i am not manualy translateing for this*/ "$item_aux": 376, "$position": [1, 0] } }, // gold_tools
+      { "3@smelting_common.toggle": {"$toggle_group_forced_index": 3, "$hover_text": "item.raw_copper.name", "$item_aux": 541, "$position": [2, 0] } }, // raw_copper
+      { "4@smelting_common.toggle": {"$toggle_group_forced_index": 4, "$hover_text": "item.raw_gold.name", "$item_aux": 540, "$position": [3, 0] } }, // raw_gold
+      { "5@smelting_common.toggle": {"$toggle_group_forced_index": 5, "$hover_text": "item.raw_iron.name", "$item_aux": 539, "$position": [4, 0] } }, // raw_iron
 
-      { "6@smelting_common.toggle": { "$hover_text": "tile.coal_ore.name", "$item_aux": 16, "$position": [0, 1] } }, // coal_ore
-      { "7@smelting_common.toggle": { "$hover_text": "tile.quartz_ore.name", "$item_aux": 153, "$position": [1, 1] } }, // nether_quartz_ore
-      { "8@smelting_common.toggle": { "$hover_text": "tile.emerald_ore.name", "$item_aux": 129, "$position": [2, 1] } }, // emerald_ore
-      { "9@smelting_common.toggle": { "$hover_text": "tile.diamond_ore.name", "$item_aux": 56, "$position": [3, 1] } }, // diamond_ore
-      { "10@smelting_common.toggle": { "$hover_text": "tile.iron_ore.name", "$item_aux": 15, "$position": [4, 1] } }, // iron_ore
+      { "6@smelting_common.toggle": {"$toggle_group_forced_index": 6, "$hover_text": "tile.coal_ore.name", "$item_aux": 16, "$position": [0, 1] } }, // coal_ore
+      { "7@smelting_common.toggle": {"$toggle_group_forced_index": 7, "$hover_text": "tile.quartz_ore.name", "$item_aux": 153, "$position": [1, 1] } }, // nether_quartz_ore
+      { "8@smelting_common.toggle": {"$toggle_group_forced_index": 8, "$hover_text": "tile.emerald_ore.name", "$item_aux": 129, "$position": [2, 1] } }, // emerald_ore
+      { "9@smelting_common.toggle": {"$toggle_group_forced_index": 9, "$hover_text": "tile.diamond_ore.name", "$item_aux": 56, "$position": [3, 1] } }, // diamond_ore
+      { "10@smelting_common.toggle": {"$toggle_group_forced_index": 10, "$hover_text": "tile.iron_ore.name", "$item_aux": 15, "$position": [4, 1] } }, // iron_ore
 
-      { "11@smelting_common.toggle": { "$hover_text": "tile.gold_ore.name", "$item_aux": 14, "$position": [0, 2] } }, // gold_ore
-      { "12@smelting_common.toggle": { "$hover_text": "tile.nether_gold_ore.name", "$item_aux": -288, "$position": [1, 2] } }, // nether_gold_ore
-      { "13@smelting_common.toggle": { "$hover_text": "tile.copper_ore.name", "$item_aux": -311, "$position": [2, 2] } }, // copper_ore
-      { "14@smelting_common.toggle": { "$hover_text": "tile.lapis_ore.name", "$item_aux": 21, "$position": [3, 2] } }, // lapis_lazuli_ore
-      { "17@smelting_common.toggle": { "$hover_text": "howtoplay.tools", "$item_aux": 320, "$position": [4, 2] } }, // iron shovel
+      { "11@smelting_common.toggle": {"$toggle_group_forced_index": 11, "$hover_text": "tile.gold_ore.name", "$item_aux": 14, "$position": [0, 2] } }, // gold_ore
+      { "12@smelting_common.toggle": {"$toggle_group_forced_index": 12, "$hover_text": "tile.nether_gold_ore.name", "$item_aux": -288, "$position": [1, 2] } }, // nether_gold_ore
+      { "13@smelting_common.toggle": {"$toggle_group_forced_index": 13, "$hover_text": "tile.copper_ore.name", "$item_aux": -311, "$position": [2, 2] } }, // copper_ore
+      { "14@smelting_common.toggle": {"$toggle_group_forced_index": 14, "$hover_text": "tile.lapis_ore.name", "$item_aux": 21, "$position": [3, 2] } }, // lapis_lazuli_ore
+      { "17@smelting_common.toggle": {"$toggle_group_forced_index": 15, "$hover_text": "howtoplay.tools", "$item_aux": 320, "$position": [4, 2] } }, // iron shovel
 
-      { "16@smelting_common.toggle": { "$hover_text": "tile.redstone_ore.name", "$item_aux": 73, "$position": [0, 3] } }, // redstone_ore
+      { "16@smelting_common.toggle": {"$toggle_group_forced_index": 16, "$hover_text": "tile.redstone_ore.name", "$item_aux": 73, "$position": [0, 3] } }, // redstone_ore
       { "18@global.empty_panel": { "grid_position": [1, 3] } }, // filler
       { "18@global.empty_panel": { "grid_position": [2, 3] } }, // filler
       { "19@global.empty_panel": { "grid_position": [3, 3] } }, // filler
@@ -63,7 +63,7 @@
   "anchor_to": "top_left",
   "anchor_from": "top_left",
   "controls": [
-    { "1@smelting_common.toggle": { "$hover_text": "tile.redstone_ore.name", "$item_aux": 73, "$position": [0, 0] } }, // redstone_ore
+    { "1@smelting_common.toggle": {"$toggle_group_forced_index": 17, "$hover_text": "tile.redstone_ore.name", "$item_aux": 73, "$position": [0, 0] } }, // redstone_ore
     { "2@global.empty_panel": { "grid_position": [1, 0] } }, // filler
     { "3@global.empty_panel": { "grid_position": [2, 0] } }, // filler
     { "4@global.empty_panel": { "grid_position": [3, 0] } }, // filler
@@ -85,23 +85,23 @@
   "anchor_to": "top_left",
   "anchor_from": "top_left",
   "controls": [
-    { "1@smelting_common.toggle": { "$hover_text": "tile.ancient_debris.name", "$item_aux": -271, "$position": [0, 0] } }, // ancient_debris
-    { "2@smelting_common.toggle": { "$hover_text": "attribute.name.generic.armor", "$item_aux": 376, "$position": [1, 0] } }, // gold_tools
-    { "5@smelting_common.toggle": { "$hover_text": "item.raw_copper.name", "$item_aux": 541, "$position": [2, 0] } }, // raw_copper
-    { "6@smelting_common.toggle": { "$hover_text": "item.raw_gold.name", "$item_aux": 540, "$position": [3, 0] } }, // raw_gold
-    { "7@smelting_common.toggle": { "$hover_text": "item.raw_iron.name", "$item_aux": 539, "$position": [4, 0] } }, // raw_iron
+    { "1@smelting_common.toggle": {"$toggle_group_forced_index": 18, "$hover_text": "tile.ancient_debris.name", "$item_aux": -271, "$position": [0, 0] } }, // ancient_debris
+    { "2@smelting_common.toggle": {"$toggle_group_forced_index": 19, "$hover_text": "attribute.name.generic.armor", "$item_aux": 376, "$position": [1, 0] } }, // gold_tools
+    { "5@smelting_common.toggle": {"$toggle_group_forced_index": 20, "$hover_text": "item.raw_copper.name", "$item_aux": 541, "$position": [2, 0] } }, // raw_copper
+    { "6@smelting_common.toggle": {"$toggle_group_forced_index": 21, "$hover_text": "item.raw_gold.name", "$item_aux": 540, "$position": [3, 0] } }, // raw_gold
+    { "7@smelting_common.toggle": {"$toggle_group_forced_index": 22, "$hover_text": "item.raw_iron.name", "$item_aux": 539, "$position": [4, 0] } }, // raw_iron
 
-    { "8@smelting_common.toggle": { "$hover_text": "tile.coal_ore.name", "$item_aux": 16, "$position": [0, 1] } }, // coal_ore
-    { "9@smelting_common.toggle": { "$hover_text": "tile.quartz_ore.name", "$item_aux": 153, "$position": [1, 1] } }, // nether_quartz_ore
-    { "10@smelting_common.toggle": { "$hover_text": "tile.emerald_ore.name", "$item_aux": 129, "$position": [2, 1] } }, // emerald_ore
-    { "12@smelting_common.toggle": { "$hover_text": "tile.diamond_ore.name", "$item_aux": 56, "$position": [3, 1] } }, // diamond_ore
-    { "13@smelting_common.toggle": { "$hover_text": "tile.iron_ore.name", "$item_aux": 15, "$position": [4, 1] } }, // iron_ore
+    { "8@smelting_common.toggle": {"$toggle_group_forced_index": 23, "$hover_text": "tile.coal_ore.name", "$item_aux": 16, "$position": [0, 1] } }, // coal_ore
+    { "9@smelting_common.toggle": {"$toggle_group_forced_index": 24, "$hover_text": "tile.quartz_ore.name", "$item_aux": 153, "$position": [1, 1] } }, // nether_quartz_ore
+    { "10@smelting_common.toggle": {"$toggle_group_forced_index": 25, "$hover_text": "tile.emerald_ore.name", "$item_aux": 129, "$position": [2, 1] } }, // emerald_ore
+    { "12@smelting_common.toggle": {"$toggle_group_forced_index": 26, "$hover_text": "tile.diamond_ore.name", "$item_aux": 56, "$position": [3, 1] } }, // diamond_ore
+    { "13@smelting_common.toggle": {"$toggle_group_forced_index": 27, "$hover_text": "tile.iron_ore.name", "$item_aux": 15, "$position": [4, 1] } }, // iron_ore
 
-    { "14@smelting_common.toggle": { "$hover_text": "tile.gold_ore.name", "$item_aux": 14, "$position": [0, 2] } }, // gold_ore
-    { "15@smelting_common.toggle": { "$hover_text": "tile.nether_gold_ore.name", "$item_aux": -288, "$position": [1, 2] } }, // nether_gold_ore
-    { "16@smelting_common.toggle": { "$hover_text": "tile.copper_ore.name", "$item_aux": -311, "$position": [2, 2] } }, // copper_ore
-    { "17@smelting_common.toggle": { "$hover_text": "tile.lapis_ore.name", "$item_aux": 21, "$position": [3, 2] } }, // lapis_lazuli_ore
-    { "18@smelting_common.toggle": { "$hover_text": "howtoplay.tools", "$item_aux": 320, "$position": [4, 2] } } // iron shovel
+    { "14@smelting_common.toggle": {"$toggle_group_forced_index": 28, "$hover_text": "tile.gold_ore.name", "$item_aux": 14, "$position": [0, 2] } }, // gold_ore
+    { "15@smelting_common.toggle": {"$toggle_group_forced_index": 29, "$hover_text": "tile.nether_gold_ore.name", "$item_aux": -288, "$position": [1, 2] } }, // nether_gold_ore
+    { "16@smelting_common.toggle": {"$toggle_group_forced_index": 30, "$hover_text": "tile.copper_ore.name", "$item_aux": -311, "$position": [2, 2] } }, // copper_ore
+    { "17@smelting_common.toggle": {"$toggle_group_forced_index": 31, "$hover_text": "tile.lapis_ore.name", "$item_aux": 21, "$position": [3, 2] } }, // lapis_lazuli_ore
+    { "18@smelting_common.toggle": {"$toggle_group_forced_index": 32, "$hover_text": "howtoplay.tools", "$item_aux": 320, "$position": [4, 2] } } // iron shovel
   ],
   "bindings": [
     {

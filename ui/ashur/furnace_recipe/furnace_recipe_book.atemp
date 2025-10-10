@@ -15,200 +15,192 @@
 */
 
 {
-  "namespace": "furnace_recipe_book",
-  "smelt_items_search": {
-    "type": "grid",
-    "grid_dimensions": [5, 10],
-    "size": [125, 250],
-    "anchor_to": "top_left",
-    "anchor_from": "top_left",
-    "layer": 300,
-    "controls": [
-      { "1@smelting_common.toggle": { "$hover_text": "item.muttonRaw.name", "$item_aux": 583, "$position": [0, 0] } }, // raw_mutton
-      { "2@smelting_common.toggle": { "$hover_text": "item.rabbit.name", "$item_aux": 310, "$position": [1, 0] } }, // raw_rabbit
-      { "3@smelting_common.toggle": { "$hover_text": "item.potato.name", "$item_aux": 302, "$position": [2, 0] } }, // potato
-      { "4@smelting_common.toggle": { "$hover_text": "item.chicken.name", "$item_aux": 297, "$position": [3, 0] } }, // raw_chicken
-      { "5@smelting_common.toggle": { "$hover_text": "item.beef.name", "$item_aux": 295, "$position": [4, 0] } }, // raw_beef
+  "namespace": "furnace_recipe_book","smelt_items_search": {
+  "type": "grid",
+  "grid_dimensions": [5, 10],
+  "size": [125, 250],
+  "anchor_to": "top_left",
+  "anchor_from": "top_left",
+  "layer": 300,
+  "controls": [
+    {"1@smelting_common.toggle": { "$toggle_group_forced_index": 1,  "$hover_text": "item.muttonRaw.name", "$item_aux": 583, "$position": [0, 0] } }, 
+    {"2@smelting_common.toggle": { "$toggle_group_forced_index": 2, "$hover_text": "item.rabbit.name", "$item_aux": 310, "$position": [1, 0] } }, 
+    {"3@smelting_common.toggle": { "$toggle_group_forced_index": 3, "$hover_text": "item.potato.name", "$item_aux": 302, "$position": [2, 0] } }, 
+    {"4@smelting_common.toggle": { "$toggle_group_forced_index": 4, "$hover_text": "item.chicken.name", "$item_aux": 297, "$position": [3, 0] } }, 
+    {"5@smelting_common.toggle": { "$toggle_group_forced_index": 5, "$hover_text": "item.beef.name", "$item_aux": 295, "$position": [4, 0] } }, 
 
-      { "6@smelting_common.toggle": { "$hover_text": "item.salmon.name", "$item_aux": 287, "$position": [0, 1] } }, // raw_salmon
-      { "7@smelting_common.toggle": { "$hover_text": "item.fish.name", "$item_aux": 286, "$position": [1, 1] } }, // raw_cod
-      { "8@smelting_common.toggle": { "$hover_text": "item.porkchop.name", "$item_aux": 284, "$position": [2, 1] } }, // raw_porkchop
-      { "9@smelting_common.toggle": { "$hover_text": "item.kelp.name", "$item_aux": 408, "$position": [3, 1] } }, // kelp
-      {"10@smelting_common.toggle": {"$hover_text": "tile.ancient_debris.name","$item_aux": -271,"$position": [4, 1]}}, // ancient_debris
+    {"6@smelting_common.toggle": { "$toggle_group_forced_index": 6, "$hover_text": "item.salmon.name", "$item_aux": 287, "$position": [0, 1] } }, 
+    {"7@smelting_common.toggle": { "$toggle_group_forced_index": 7, "$hover_text": "item.fish.name", "$item_aux": 286, "$position": [1, 1] } }, 
+    {"8@smelting_common.toggle": { "$toggle_group_forced_index": 8, "$hover_text": "item.porkchop.name", "$item_aux": 284, "$position": [2, 1] } }, 
+    {"9@smelting_common.toggle": { "$toggle_group_forced_index": 9, "$hover_text": "item.kelp.name", "$item_aux": 408, "$position": [3, 1] } }, 
+    {"10@smelting_common.toggle": { "$toggle_group_forced_index": 10,"$hover_text": "tile.ancient_debris.name","$item_aux": -271,"$position": [4, 1]}}, 
 
-      {"11@smelting_common.toggle": {"$hover_text": "attribute.name.generic.armor","$item_aux": 376,"$position": [0, 2]}}, // gold_tools
-      { "12@smelting_common.toggle": { "$item_aux": 410, "$position": [1, 2] } }, // clay_ball
-      { "13@smelting_common.toggle": { "$item_aux": 17, "$position": [2, 2] } }, // log
-      { "14@smelting_common.toggle": { "$hover_text": "item.raw_copper.name", "$item_aux": 541, "$position": [3, 2] } }, // raw_copper
-      { "15@smelting_common.toggle": { "$hover_text": "item.raw_gold.name", "$item_aux": 540, "$position": [4, 2] } }, // raw_gold
+    {"11@smelting_common.toggle": { "$toggle_group_forced_index": 11,"$hover_text": "attribute.name.generic.armor","$item_aux": 376,"$position": [0, 2]}}, 
+    {"12@smelting_common.toggle": { "$toggle_group_forced_index": 12,"$hover_text": "item.clay_ball.name", "$item_aux": 410, "$position": [1, 2] } }, 
+    {"13@smelting_common.toggle": { "$toggle_group_forced_index": 13,"$hover_text": "itemGroup.name.log", "$item_aux": 17, "$position": [2, 2] } }, 
+    {"14@smelting_common.toggle": { "$toggle_group_forced_index": 14, "$hover_text": "item.raw_copper.name", "$item_aux": 541, "$position": [3, 2] } }, 
+    {"15@smelting_common.toggle": { "$toggle_group_forced_index": 15, "$hover_text": "item.raw_gold.name", "$item_aux": 540, "$position": [4, 2] } }, 
 
-      { "16@smelting_common.toggle": { "$hover_text": "item.raw_iron.name", "$item_aux": 539, "$position": [0, 3] } }, // raw_iron
-      { "17@smelting_common.toggle": { "$hover_text": "tile.coal_ore.name", "$item_aux": 16, "$position": [1, 3] } }, // coal_ore
-      { "18@smelting_common.toggle": { "$hover_text": "tile.quartz_ore.name", "$item_aux": 153, "$position": [2, 3] } }, // nether_quartz_ore
-      {"19@smelting_common.toggle": { "$hover_text": "tile.emerald_ore.name", "$item_aux": 129, "$position": [3, 3] }}, // emerald_ore
-      {"20@smelting_common.toggle": { "$hover_text": "tile.redstone_ore.name", "$item_aux": 73, "$position": [4, 3] }}, // redstone_ore
+    {"16@smelting_common.toggle": { "$toggle_group_forced_index": 16, "$hover_text": "item.raw_iron.name", "$item_aux": 539, "$position": [0, 3] } }, 
+    {"17@smelting_common.toggle": { "$toggle_group_forced_index": 17, "$hover_text": "tile.coal_ore.name", "$item_aux": 16, "$position": [1, 3] } }, 
+    {"18@smelting_common.toggle": { "$toggle_group_forced_index": 18, "$hover_text": "tile.quartz_ore.name", "$item_aux": 153, "$position": [2, 3] } }, 
+    {"19@smelting_common.toggle": { "$toggle_group_forced_index": 19, "$hover_text": "tile.emerald_ore.name", "$item_aux": 129, "$position": [3, 3] }}, 
+    {"20@smelting_common.toggle": { "$toggle_group_forced_index": 20, "$hover_text": "tile.redstone_ore.name", "$item_aux": 73, "$position": [4, 3] }}, 
 
-      { "21@smelting_common.toggle": { "$hover_text": "tile.diamond_ore.name", "$item_aux": 56, "$position": [0, 4] } }, // diamond_ore
-      { "22@smelting_common.toggle": { "$hover_text": "tile.iron_ore.name", "$item_aux": 15, "$position": [1, 4] } }, // iron_ore
-      { "23@smelting_common.toggle": { "$hover_text": "tile.gold_ore.name", "$item_aux": 14, "$position": [2, 4] } }, // gold_ore
-      {"24@smelting_common.toggle": {"$hover_text": "tile.nether_gold_ore.name","$item_aux": -288,"$position": [3, 4]}}, // nether_gold_ore
-      {"25@smelting_common.toggle": { "$hover_text": "tile.copper_ore.name", "$item_aux": -311, "$position": [4, 4] }}, // copper_ore
+    {"21@smelting_common.toggle": { "$toggle_group_forced_index": 21, "$hover_text": "tile.diamond_ore.name", "$item_aux": 56, "$position": [0, 4] } }, 
+    {"22@smelting_common.toggle": { "$toggle_group_forced_index": 22, "$hover_text": "tile.iron_ore.name", "$item_aux": 15, "$position": [1, 4] } }, 
+    {"23@smelting_common.toggle": { "$toggle_group_forced_index": 23, "$hover_text": "tile.gold_ore.name", "$item_aux": 14, "$position": [2, 4] } }, 
+    {"24@smelting_common.toggle": { "$toggle_group_forced_index": 24,"$hover_text": "tile.nether_gold_ore.name","$item_aux": -288,"$position": [3, 4]}}, 
+    {"25@smelting_common.toggle": { "$toggle_group_forced_index": 25, "$hover_text": "tile.copper_ore.name", "$item_aux": -311, "$position": [4, 4] }}, 
 
-      { "26@smelting_common.toggle": { "$hover_text": "tile.lapis_ore.name", "$item_aux": 21, "$position": [0, 5] } }, // lapis_lazuli_ore
-      { "27@smelting_common.toggle": { "$item_aux": 591, "$position": [1, 5] } }, // chorus_fruit
-      { "28@smelting_common.toggle": { "$item_aux": 87, "$position": [2, 5] } }, // netherrack
-      { "29@smelting_common.toggle": { "$item_aux": 81, "$position": [3, 5] } }, // cactus
-      { "30@smelting_common.toggle": { "$item_aux": -156, "$position": [4, 5] } }, // sea_pickle
+    {"26@smelting_common.toggle": { "$toggle_group_forced_index": 26, "$hover_text": "tile.lapis_ore.name", "$item_aux": 21, "$position": [0, 5] } }, 
+    {"27@smelting_common.toggle": { "$toggle_group_forced_index": 27, "$hover_text":"item.chorus_fruit.name","$item_aux": 591, "$position": [1, 5] } }, 
+    {"28@smelting_common.toggle": { "$toggle_group_forced_index": 28, "$hover_text":"tile.netherrack.name", "$item_aux": 87, "$position": [2, 5] } }, 
+    {"29@smelting_common.toggle": { "$toggle_group_forced_index": 29, "$hover_text":"tile.cactus.name", "$item_aux": 81, "$position": [3, 5] } }, 
+    {"30@smelting_common.toggle": { "$toggle_group_forced_index": 30, "$hover_text":"tile.sea_pickle.name", "$item_aux": -156, "$position": [4, 5] } }, 
 
-      { "31@smelting_common.toggle": { "$item_aux": 155, "$position": [0, 6] } }, // block_of_quartz
-      { "32@smelting_common.toggle": { "$item_aux": 179, "$position": [1, 6] } }, // red_sandstone
-      { "33@smelting_common.toggle": { "$item_aux": 24, "$position": [2, 6] } }, // sandstone
-      { "34@smelting_common.toggle": { "$item_aux": 98, "$position": [3, 6] } }, // stone_bricks
-      { "35@smelting_common.toggle": { "$item_aux": 82, "$position": [4, 6] } }, // clay
+    {"31@smelting_common.toggle": { "$toggle_group_forced_index": 31, "$hover_text":"tile.quartz_block.name", "$item_aux": 155, "$position": [0, 6] } }, 
+    {"32@smelting_common.toggle": { "$toggle_group_forced_index": 32, "$hover_text":"tile.red_sandstone.name", "$item_aux": 179, "$position": [1, 6] } }, 
+    {"33@smelting_common.toggle": { "$toggle_group_forced_index": 33, "$hover_text":"tile.sandstone.name", "$item_aux": 24, "$position": [2, 6] } }, 
+    {"34@smelting_common.toggle": { "$toggle_group_forced_index": 34, "$hover_text":"tile.stonebrick.name", "$item_aux": 98, "$position": [3, 6] } }, 
+    {"35@smelting_common.toggle": { "$toggle_group_forced_index": 35, "$hover_text":"tile.clay.name", "$item_aux": 82, "$position": [4, 6] } }, 
 
-      { "36@smelting_common.toggle": { "$item_aux": 12, "$position": [0, 7] } }, // sand
-      { "37@smelting_common.toggle": { "$item_aux": 4, "$position": [1, 7] } }, // cobblestone
-      { "38@smelting_common.toggle": { "$item_aux": -984, "$position": [2, 7] } }, // wet_sponge
-      { "39@smelting_common.toggle": { "$item_aux": -274, "$position": [3, 7] } }, // polished_blackstone_bricks
-      { "40@smelting_common.toggle": { "$item_aux": -387, "$position": [4, 7] } }, // deepslate_tiles
+    {"36@smelting_common.toggle": { "$toggle_group_forced_index": 36, "$hover_text":"tile.sand.name", "$item_aux": 12, "$position": [0, 7] } }, 
+    {"37@smelting_common.toggle": { "$toggle_group_forced_index": 37, "$hover_text":"tile.cobblestone.name", "$item_aux": 4, "$position": [1, 7] } }, 
+    {"38@smelting_common.toggle": { "$toggle_group_forced_index": 38, "$hover_text":"tile.sponge.wet.name", "$item_aux": -984, "$position": [2, 7] } }, 
+    {"39@smelting_common.toggle": { "$toggle_group_forced_index": 39, "$hover_text":"tile.polished_blackstone_bricks.name", "$item_aux": -274, "$position": [3, 7] } }, 
+    {"40@smelting_common.toggle": { "$toggle_group_forced_index": 40, "$hover_text":"tile.deepslate_tiles.name", "$item_aux": -387, "$position": [4, 7] } }, 
 
-      { "41@smelting_common.toggle": { "$item_aux": -391, "$position": [0, 8] } }, // deepslate_bricks
-      { "42@smelting_common.toggle": { "$item_aux": -379, "$position": [1, 8] } }, // cobbled_deepslate
-      { "43@smelting_common.toggle": { "$item_aux": -234, "$position": [2, 8] } }, // basalt
-      { "44@smelting_common.toggle": { "$item_aux": 172, "$position": [3, 8] } }, // dyed_terracotta
-      { "45@smelting_common.toggle": { "$item_aux": 112, "$position": [4, 8] } }, // nether_bricks
+    {"41@smelting_common.toggle": { "$toggle_group_forced_index": 41, "$hover_text":"tile.deepslate_bricks.name", "$item_aux": -391, "$position": [0, 8] } }, 
+    {"42@smelting_common.toggle": { "$toggle_group_forced_index": 42, "$hover_text":"tile.cobbled_deepslate.name", "$item_aux": -379, "$position": [1, 8] } }, 
+    {"43@smelting_common.toggle": { "$toggle_group_forced_index": 43, "$hover_text":"tile.basalt.name", "$item_aux": -234, "$position": [2, 8] } }, 
+    {"44@smelting_common.toggle": { "$toggle_group_forced_index": 44, "$hover_text":"itemGroup.name.stainedClay", "$item_aux": 172, "$position": [3, 8] } }, 
+    {"45@smelting_common.toggle": { "$toggle_group_forced_index": 45, "$hover_text":"tile.nether_brick.name", "$item_aux": 112, "$position": [4, 8] } }, 
 
-      { "46@smelting_common.toggle": { "$item_aux": 18, "$position": [0, 9] } }, // leaves
-      { "47@global.empty_panel": { "grid_position": [1, 9] } }, // filler
-      { "48@global.empty_panel": { "grid_position": [2, 9] } }, // filler
-      { "49@global.empty_panel": { "grid_position": [3, 9] } }, // filler
-      { "50@global.empty_panel": { "grid_position": [4, 9] } }
-    ],
-    "bindings": [
-      {
-        "binding_type": "view",
-        "source_control_name": "first_tab_toggle",
-        "source_property_name": "#toggle_state",
-        "target_property_name": "#visible"
-      }
-    ]
-  },
-  "smelt_items_food": {
-    "type": "grid",
-    "grid_dimensions": [5, 2],
-    "size": [125, 50],
-    "anchor_to": "top_left",
-    "anchor_from": "top_left",
-    "layer": 300,
-    "controls": [
-      { "1@smelting_common.toggle": { "$hover_text": "item.muttonRaw.name", "$item_aux": 583, "$position": [0, 0] } }, // raw_mutton
-      { "2@smelting_common.toggle": { "$hover_text": "item.rabbit.name", "$item_aux": 310, "$position": [1, 0] } }, // raw_rabbit
-      { "3@smelting_common.toggle": { "$hover_text": "item.potato.name", "$item_aux": 302, "$position": [2, 0] } }, // potato
-      { "4@smelting_common.toggle": { "$hover_text": "item.chicken.name", "$item_aux": 297, "$position": [3, 0] } }, // raw_chicken
-      { "5@smelting_common.toggle": { "$hover_text": "item.beef.name", "$item_aux": 295, "$position": [4, 0] } }, // raw_beef
-      { "6@smelting_common.toggle": { "$hover_text": "item.salmon.name", "$item_aux": 287, "$position": [0, 1] } }, // raw_salmon
-      { "7@smelting_common.toggle": { "$hover_text": "item.fish.name", "$item_aux": 286, "$position": [1, 1] } }, // raw_cod
-      { "8@smelting_common.toggle": { "$hover_text": "item.porkchop.name", "$item_aux": 284, "$position": [2, 1] } }, // raw_porkchop
-      { "9@smelting_common.toggle": { "$hover_text": "item.kelp.name", "$item_aux": 408, "$position": [3, 1] } }, // kelp
-      { "10@global.empty_panel": { "grid_position": [4, 1] } } // filler
-    ],
-    "bindings": [
-      {
-        "binding_type": "view",
-        "source_control_name": "second_tab_toggle",
-        "source_property_name": "#toggle_state",
-        "target_property_name": "#visible"
-      }
-    ]
-  },
-  "smelt_items_ore": {
-    "type": "grid",
-    "grid_dimensions": [5, 5],
-    "size": [125, 125],
-    "anchor_to": "top_left",
-    "anchor_from": "top_left",
-    "layer": 300,
-    "controls": [
-      {"1@smelting_common.toggle": {"$hover_text": "tile.ancient_debris.name","$item_aux": -271,"$position": [0, 0]}}, // ancient_debris
-      {"2@smelting_common.toggle": {"$hover_text": "attribute.name.generic.armor","$item_aux": 376,"$position": [1, 0]}}, // gold_tools
-      { "3@smelting_common.toggle": { "$item_aux": 410, "$position": [2, 0] } }, // clay_ball
-      { "4@smelting_common.toggle": { "$item_aux": 17, "$position": [3, 0] } }, // log
-      { "5@smelting_common.toggle": { "$hover_text": "item.raw_copper.name", "$item_aux": 541, "$position": [4, 0] } }, // raw_copper
-
-      { "6@smelting_common.toggle": { "$hover_text": "item.raw_gold.name", "$item_aux": 540, "$position": [0, 1] } }, // raw_gold
-      { "7@smelting_common.toggle": { "$hover_text": "item.raw_iron.name", "$item_aux": 539, "$position": [1, 1] } }, // raw_iron
-      { "8@smelting_common.toggle": { "$hover_text": "tile.coal_ore.name", "$item_aux": 16, "$position": [2, 1] } }, // coal_ore
-      { "9@smelting_common.toggle": { "$hover_text": "tile.quartz_ore.name", "$item_aux": 153, "$position": [3, 1] } }, // nether_quartz_ore
-      {"10@smelting_common.toggle": { "$hover_text": "tile.emerald_ore.name", "$item_aux": 129, "$position": [4, 1] }}, // emerald_ore
-
-      {"11@smelting_common.toggle": { "$hover_text": "tile.redstone_ore.name", "$item_aux": 73, "$position": [0, 2] }}, // redstone_ore
-      { "12@smelting_common.toggle": { "$hover_text": "tile.diamond_ore.name", "$item_aux": 56, "$position": [1, 2] } }, // diamond_ore
-      { "13@smelting_common.toggle": { "$hover_text": "tile.iron_ore.name", "$item_aux": 15, "$position": [2, 2] } }, // iron_ore
-      { "14@smelting_common.toggle": { "$hover_text": "tile.gold_ore.name", "$item_aux": 14, "$position": [3, 2] } }, // gold_ore
-      {"15@smelting_common.toggle": {"$hover_text": "tile.nether_gold_ore.name","$item_aux": -288,"$position": [4, 2]}}, // nether_gold_ore
-
-      {"16@smelting_common.toggle": { "$hover_text": "tile.copper_ore.name", "$item_aux": -311, "$position": [0, 3] }}, // copper_ore
-      { "17@smelting_common.toggle": { "$hover_text": "tile.lapis_ore.name", "$item_aux": 21, "$position": [1, 3] } }, // lapis_lazuli_ore
-      { "18@smelting_common.toggle": { "$item_aux": 591, "$position": [2, 3] } }, // chorus_fruit
-      { "19@smelting_common.toggle": { "$item_aux": 87, "$position": [3, 3] } }, // netherrack
-      { "20@smelting_common.toggle": { "$item_aux": 81, "$position": [4, 3] } }, // cactus
-
-      { "21@smelting_common.toggle": { "$item_aux": -156, "$position": [0, 4] } }, // sea_pickle
-      { "22@global.empty_panel": { "grid_position": [1, 4] } }, // filler
-      { "23@global.empty_panel": { "grid_position": [2, 4] } }, // filler
-      { "24@global.empty_panel": { "grid_position": [3, 4] } }, // filler
-      { "25@global.empty_panel": { "grid_position": [4, 4] } } // filler
-    ],
-    "bindings": [
-      {
-        "binding_type": "view",
-        "source_control_name": "third_tab_toggle",
-        "source_property_name": "#toggle_state",
-        "target_property_name": "#visible"
-      }
-    ]
-  },
-  "smelt_items_block": {
-    "type": "grid",
-    "grid_dimensions": [5, 4],
-    "size": [125, 100],
-    "anchor_to": "top_left",
-    "anchor_from": "top_left",
-    "layer": 300,
-    "controls": [
-      { "1@smelting_common.toggle": { "$item_aux": 155, "$position": [0, 0] } }, // block_of_quartz
-      { "2@smelting_common.toggle": { "$item_aux": 179, "$position": [1, 0] } }, // red_sandstone
-      { "3@smelting_common.toggle": { "$item_aux": 24, "$position": [2, 0] } }, // sandstone
-      { "4@smelting_common.toggle": { "$item_aux": 98, "$position": [3, 0] } }, // stone_bricks
-      { "5@smelting_common.toggle": { "$item_aux": 82, "$position": [4, 0] } }, // clay
-
-      { "6@smelting_common.toggle": { "$item_aux": 12, "$position": [0, 1] } }, // sand
-      { "7@smelting_common.toggle": { "$item_aux": 4, "$position": [1, 1] } }, // cobblestone
-      { "8@smelting_common.toggle": { "$item_aux": -984, "$position": [2, 1] } }, // wet_sponge
-      { "9@smelting_common.toggle": { "$item_aux": -274, "$position": [3, 1] } }, // polished_blackstone_bricks
-      { "10@smelting_common.toggle": { "$item_aux": -387, "$position": [4, 1] } }, // deepslate_tiles
-
-      { "11@smelting_common.toggle": { "$item_aux": -391, "$position": [0, 2] } }, // deepslate_bricks
-      { "12@smelting_common.toggle": { "$item_aux": -379, "$position": [1, 2] } }, // cobbled_deepslate
-      { "13@smelting_common.toggle": { "$item_aux": -234, "$position": [2, 2] } }, // basalt
-      { "14@smelting_common.toggle": { "$item_aux": 172, "$position": [3, 2] } }, // dyed_terracotta
-      { "15@smelting_common.toggle": { "$item_aux": 112, "$position": [4, 2] } }, // nether_bricks
-
-      { "16@smelting_common.toggle": { "$item_aux": 18, "$position": [0, 3] } }, // leaves
-      { "17@global.empty_panel": { "grid_position": [1, 3] } }, // filler
-      { "18@global.empty_panel": { "grid_position": [2, 3] } }, // filler
-      { "19@global.empty_panel": { "grid_position": [3, 3] } }, // filler
-      { "20@global.empty_panel": { "grid_position": [4, 3] } } // filler
-    ],
-    "bindings": [
-      {
-        "binding_type": "view",
-        "source_control_name": "fourth_tab_toggle",
-        "source_property_name": "#toggle_state",
-        "target_property_name": "#visible"
-      }
-    ]
-  },
+    {"46@smelting_common.toggle": { "$toggle_group_forced_index": 46, "$hover_text":"item.leaves.name", "$item_aux": 18, "$position": [0, 9] } }, 
+    {"47@global.empty_panel": { "grid_position": [1, 9] } }, 
+    {"48@global.empty_panel": { "grid_position": [2, 9] } }, 
+    {"49@global.empty_panel": { "grid_position": [3, 9] } }, 
+    {"50@global.empty_panel": { "grid_position": [4, 9] } }
+  ],
+  "bindings": [
+    {
+      "binding_type": "view",
+      "source_control_name": "first_tab_toggle",
+      "source_property_name": "#toggle_state",
+      "target_property_name": "#visible"
+    }
+  ]
+},
+"smelt_items_food": {
+  "type": "grid",
+  "grid_dimensions": [5, 2],
+  "size": [125, 50],
+  "anchor_to": "top_left",
+  "anchor_from": "top_left",
+  "layer": 300,
+  "controls": [
+    {"1@smelting_common.toggle": {"$toggle_group_forced_index": 47, "$hover_text": "item.muttonRaw.name", "$item_aux": 583, "$position": [0, 0] }},
+    {"2@smelting_common.toggle": {"$toggle_group_forced_index": 48, "$hover_text": "item.rabbit.name", "$item_aux": 310, "$position": [1, 0] }},
+    {"3@smelting_common.toggle": {"$toggle_group_forced_index": 49, "$hover_text": "item.potato.name", "$item_aux": 302, "$position": [2, 0] }},
+    {"4@smelting_common.toggle": {"$toggle_group_forced_index": 50, "$hover_text": "item.chicken.name", "$item_aux": 297, "$position": [3, 0] }},
+    {"5@smelting_common.toggle": {"$toggle_group_forced_index": 51, "$hover_text": "item.beef.name", "$item_aux": 295, "$position": [4, 0] }},
+    {"6@smelting_common.toggle": {"$toggle_group_forced_index": 52, "$hover_text": "item.salmon.name", "$item_aux": 287, "$position": [0, 1] }},
+    {"7@smelting_common.toggle": {"$toggle_group_forced_index": 53, "$hover_text": "item.fish.name", "$item_aux": 286, "$position": [1, 1] }},
+    {"8@smelting_common.toggle": {"$toggle_group_forced_index": 54, "$hover_text": "item.porkchop.name", "$item_aux": 284, "$position": [2, 1] }},
+    {"9@smelting_common.toggle": {"$toggle_group_forced_index": 55, "$hover_text": "item.kelp.name", "$item_aux": 408, "$position": [3, 1] }},
+    {"10@global.empty_panel": { "grid_position": [4, 1] }}
+  ],
+  "bindings": [ 
+    {
+      "binding_type": "view", 
+      "source_control_name": "second_tab_toggle", 
+      "source_property_name": "#toggle_state", 
+      "target_property_name": "#visible"
+    } 
+  ]
+},
+"smelt_items_ore": {
+  "type": "grid",
+  "grid_dimensions": [5, 5],
+  "size": [125, 125],
+  "anchor_to": "top_left",
+  "anchor_from": "top_left",
+  "layer": 300,
+  "controls": [
+    {"1@smelting_common.toggle": { "$toggle_group_forced_index": 56, "$hover_text": "tile.ancient_debris.name", "$item_aux": -271, "$position": [0, 0] }},
+    {"2@smelting_common.toggle": { "$toggle_group_forced_index": 57, "$hover_text": "attribute.name.generic.armor", "$item_aux": 376, "$position": [1, 0] }},
+    {"3@smelting_common.toggle": { "$toggle_group_forced_index": 58, "$hover_text": "item.clay_ball.name", "$item_aux": 410, "$position": [2, 0] }},
+    {"4@smelting_common.toggle": { "$toggle_group_forced_index": 59, "$hover_text": "itemGroup.name.log", "$item_aux": 17, "$position": [3, 0] }},
+    {"5@smelting_common.toggle": { "$toggle_group_forced_index": 60, "$hover_text": "item.raw_copper.name", "$item_aux": 541, "$position": [4, 0] }},
+    {"6@smelting_common.toggle": { "$toggle_group_forced_index": 61, "$hover_text": "item.raw_gold.name", "$item_aux": 540, "$position": [0, 1] }},
+    {"7@smelting_common.toggle": { "$toggle_group_forced_index": 62, "$hover_text": "item.raw_iron.name", "$item_aux": 539, "$position": [1, 1] }},
+    {"8@smelting_common.toggle": { "$toggle_group_forced_index": 63, "$hover_text": "tile.coal_ore.name", "$item_aux": 16, "$position": [2, 1] }},
+    {"9@smelting_common.toggle": { "$toggle_group_forced_index": 64, "$hover_text": "tile.quartz_ore.name", "$item_aux": 153, "$position": [3, 1] }},
+    {"10@smelting_common.toggle": { "$toggle_group_forced_index": 65, "$hover_text": "tile.emerald_ore.name", "$item_aux": 129, "$position": [4, 1] }},
+    {"11@smelting_common.toggle": { "$toggle_group_forced_index": 66, "$hover_text": "tile.redstone_ore.name", "$item_aux": 73, "$position": [0, 2] }},
+    {"12@smelting_common.toggle": { "$toggle_group_forced_index": 67, "$hover_text": "tile.diamond_ore.name", "$item_aux": 56, "$position": [1, 2] }},
+    {"13@smelting_common.toggle": { "$toggle_group_forced_index": 68, "$hover_text": "tile.iron_ore.name", "$item_aux": 15, "$position": [2, 2] }},
+    {"14@smelting_common.toggle": { "$toggle_group_forced_index": 69, "$hover_text": "tile.gold_ore.name", "$item_aux": 14, "$position": [3, 2] }},
+    {"15@smelting_common.toggle": { "$toggle_group_forced_index": 70, "$hover_text": "tile.nether_gold_ore.name", "$item_aux": -288, "$position": [4, 2] }},
+    {"16@smelting_common.toggle": { "$toggle_group_forced_index": 71, "$hover_text": "tile.copper_ore.name", "$item_aux": -311, "$position": [0, 3] }},
+    {"17@smelting_common.toggle": { "$toggle_group_forced_index": 72, "$hover_text": "tile.lapis_ore.name", "$item_aux": 21, "$position": [1, 3] }},
+    {"18@smelting_common.toggle": { "$toggle_group_forced_index": 73, "$hover_text": "item.chorus_fruit.name", "$item_aux": 591, "$position": [2, 3] }},
+    {"19@smelting_common.toggle": { "$toggle_group_forced_index": 74, "$hover_text": "tile.netherrack.name", "$item_aux": 87, "$position": [3, 3] }},
+    {"20@smelting_common.toggle": { "$toggle_group_forced_index": 75, "$hover_text": "tile.cactus.name", "$item_aux": 81, "$position": [4, 3] }},
+    {"21@smelting_common.toggle": { "$toggle_group_forced_index": 76, "$hover_text": "tile.sea_pickle.name", "$item_aux": -156, "$position": [0, 4] }},
+    {"22@global.empty_panel": { "grid_position": [1, 4] }},
+    {"23@global.empty_panel": { "grid_position": [2, 4] }},
+    {"24@global.empty_panel": { "grid_position": [3, 4] }},
+    {"25@global.empty_panel": { "grid_position": [4, 4] }}
+  ],
+  "bindings": [ 
+    {
+      "binding_type": "view", 
+      "source_control_name": "third_tab_toggle", 
+      "source_property_name": "#toggle_state", 
+      "target_property_name": "#visible"
+    } 
+  ]
+},
+"smelt_items_block": {
+  "type": "grid",
+  "grid_dimensions": [5, 4],
+  "size": [125, 100],
+  "anchor_to": "top_left",
+  "anchor_from": "top_left",
+  "layer": 300,
+  "controls": [
+    {"1@smelting_common.toggle": { "$toggle_group_forced_index": 77, "$hover_text": "tile.quartz_block.name", "$item_aux": 155, "$position": [0, 0] }},
+    {"2@smelting_common.toggle": { "$toggle_group_forced_index": 78, "$hover_text": "tile.red_sandstone.name", "$item_aux": 179, "$position": [1, 0] }},
+    {"3@smelting_common.toggle": { "$toggle_group_forced_index": 79, "$hover_text": "tile.sandstone.name", "$item_aux": 24, "$position": [2, 0] }},
+    {"4@smelting_common.toggle": { "$toggle_group_forced_index": 80, "$hover_text": "tile.stonebrick.name", "$item_aux": 98, "$position": [3, 0] }},
+    {"5@smelting_common.toggle": { "$toggle_group_forced_index": 81, "$hover_text": "tile.clay.name", "$item_aux": 82, "$position": [4, 0] }},
+    {"6@smelting_common.toggle": { "$toggle_group_forced_index": 82, "$hover_text": "tile.sand.name", "$item_aux": 12, "$position": [0, 1] }},
+    {"7@smelting_common.toggle": { "$toggle_group_forced_index": 83, "$hover_text": "tile.cobblestone.name", "$item_aux": 4, "$position": [1, 1] }},
+    {"8@smelting_common.toggle": { "$toggle_group_forced_index": 84, "$hover_text": "tile.sponge.wet.name", "$item_aux": -984, "$position": [2, 1] }},
+    {"9@smelting_common.toggle": { "$toggle_group_forced_index": 85, "$hover_text": "tile.polished_blackstone_bricks.name", "$item_aux": -274, "$position": [3, 1] }},
+    {"10@smelting_common.toggle": { "$toggle_group_forced_index": 86, "$hover_text": "tile.deepslate_tiles.name", "$item_aux": -387, "$position": [4, 1] }},
+    {"11@smelting_common.toggle": { "$toggle_group_forced_index": 87, "$hover_text": "tile.deepslate_bricks.name", "$item_aux": -391, "$position": [0, 2] }},
+    {"12@smelting_common.toggle": { "$toggle_group_forced_index": 88, "$hover_text": "tile.cobbled_deepslate.name", "$item_aux": -379, "$position": [1, 2] }},
+    {"13@smelting_common.toggle": { "$toggle_group_forced_index": 89, "$hover_text": "tile.basalt.name", "$item_aux": -234, "$position": [2, 2] }},
+    {"14@smelting_common.toggle": { "$toggle_group_forced_index": 90, "$hover_text": "itemGroup.name.stainedClay", "$item_aux": 172, "$position": [3, 2] }},
+    {"15@smelting_common.toggle": { "$toggle_group_forced_index": 91, "$hover_text": "tile.nether_brick.name", "$item_aux": 112, "$position": [4, 2] }},
+    {"16@smelting_common.toggle": { "$toggle_group_forced_index": 92, "$hover_text": "item.leaves.name", "$item_aux": 18, "$position": [0, 3] }},
+    {"17@global.empty_panel": { "grid_position": [1, 3] }},
+    {"18@global.empty_panel": { "grid_position": [2, 3] }},
+    {"19@global.empty_panel": { "grid_position": [3, 3] }},
+    {"20@global.empty_panel": { "grid_position": [4, 3] }}
+  ],
+  "bindings": [ 
+    {
+      "binding_type": "view", 
+      "source_control_name": "fourth_tab_toggle", 
+      "source_property_name": "#toggle_state", 
+      "target_property_name": "#visible"
+    } 
+  ]
+},
   "base_toggle_button@global.empty_panel": {
     "anchor_from": "center",
     "anchor_to": "center",
@@ -226,10 +218,10 @@
           "focus_container": true,
           "use_last_focus": true,
           "controls": [
-            { "unchecked@$unchecked": {} },
-            { "unchecked_hover@$unchecked_hover": {} },
-            { "checked@$checked": {} },
-            { "checked_hover@$checked_hover": {} }
+            {"unchecked@$unchecked": {} },
+            {"unchecked_hover@$unchecked_hover": {} },
+            {"checked@$checked": {} },
+            {"checked_hover@$checked_hover": {} }
           ]
         }
       }
@@ -278,7 +270,7 @@
         "base_content": {
           "type": "panel",
           "controls": [
-            { "offset_content@$page_contents": { "offset": [0.9, -1.6], "layer": 4 } },
+            {"offset_content@$page_contents": { "offset": [0.9, -1.6], "layer": 4 } },
             {
               "holder@global.empty_stack": {
                 "orientation": "vertical",
@@ -287,7 +279,7 @@
                 "size": [111, 30],
                 "offset": [8, 0],
                 "controls": [
-                  { "buffer_1@global.empty_panel": { "size": [111, 11] } },
+                  {"buffer_1@global.empty_panel": { "size": [111, 11] } },
                   {
                     "holder@global.empty_stack": {
                       "orientation": "horizontal",
@@ -324,7 +316,7 @@
                             ]
                           }
                         },
-                        { "buffer_2@global.empty_panel": { "size": ["fill", "fill"] } },
+                        {"buffer_2@global.empty_panel": { "size": ["fill", "fill"] } },
                         {
                           "filter": {
                             "type": "toggle",
@@ -332,7 +324,7 @@
                             "unchecked_control": "default",
                             "unchecked_hover_control": "default_hover",
                             "controls": [
-                              { "default@smelting_common.furnace_filter_on": {} },
+                              {"default@smelting_common.furnace_filter_on": {} },
                               {
                                 "default_hover@smelting_common.furnace_filter_on_hover": {
                                   "controls": [
@@ -371,19 +363,19 @@
                       "anchor_from": "bottom_middle",
                       "layer": 20,
                       "controls": [
-                        { "buffer@global.empty_panel": { "size": [18, 0], "ignored": "(not ($current_page = 1))" } },
-                        { "left@furnace_recipe_book.tepes_left_button": {} },
+                        {"buffer@global.empty_panel": { "size": [18, 0], "ignored": "(not ($current_page = 1))" } },
+                        {"left@furnace_recipe_book.tepes_left_button": {} },
                         {
                           "buffer1@global.empty_panel": {
                             "size": [43, 17],
                             "controls": [{ "label@furnace_recipe_book.page_count_label": {} }]
                           }
                         },
-                        { "right@furnace_recipe_book.tepes_right_button": {} }
+                        {"right@furnace_recipe_book.tepes_right_button": {} }
                       ]
                     }
                   },
-                  { "buffer_fill_1@global.empty_panel": { "size": [65, 13] } }
+                  {"buffer_fill_1@global.empty_panel": { "size": [65, 13] } }
                 ]
               }
             }
@@ -398,7 +390,7 @@
           ]
         }
       },
-      { "numbers@$page_counter": {} }
+      {"numbers@$page_counter": {} }
     ],
     "bindings": [
       {
