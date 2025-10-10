@@ -36,6 +36,17 @@
   "secondary_button_template@global.empty_panel": {
     "size": [ 22, 22 ],
     "$effect_path|default": "('assets/beacon_button_sprites/' + $effect_name)",
+    "$locked_button_texture|default": "assets/beacon_button_sprites/locked",
+    "$default_button_texture|default": "assets/beacon_button_sprites/default",
+    "$selected_button_texture|default": "assets/beacon_button_sprites/selected",
+    "$hover_button_texture|default": "assets/beacon_button_sprites/hover",
+    "variables": {
+      "requires": "($cb_is_thick_menu_buttons = true)",
+      "$locked_button_texture|default": "assets/minecraft/textures/gui/sprites/container/beacon/button_disabled.png",
+      "$default_button_texture|default": "assets/minecraft/textures/gui/sprites/container/beacon/button.png",
+      "$selected_button_texture|default": "assets/minecraft/textures/gui/sprites/container/beacon/button_selected.png",
+      "$hover_button_texture|default": "assets/minecraft/textures/gui/sprites/container/beacon/button_highlighted.png"
+    },
     "controls": [
       {
         "hover_button": {
@@ -51,7 +62,7 @@
           ],
           "controls": [
             {
-              "underlay_disabled@screen_content.image_element": {"texture": "assets/beacon_button_sprites/locked", "size": [ 22, 22 ], "layer": 3}
+              "underlay_disabled@screen_content.image_element": {"texture": "$locked_button_texture", "size": [ 22, 22 ], "layer": 3}
             },
             {
               "effect_overlay@screen_content.image_element": {
@@ -132,22 +143,22 @@
                   {"from_button_id": "button.menu_ok", "to_button_id": "button.menu_ok", "mapping_type": "pressed"}
                 ],
                 "controls": [
-                  {"unchecked@secondary_button.image_base": {"$texture": "assets/beacon_button_sprites/default"}},
+                  {"unchecked@secondary_button.image_base": {"$texture": "$default_button_texture"}},
+                  {"checked@secondary_button.image_base": {"$texture": "$selected_button_texture"}},
                   {
                     "unchecked_hover@secondary_button.image_base": {
                       "controls": [
                         {"hover_text@secondary_button.hover_text": {}}
                       ],
-                      "$texture": "assets/beacon_button_sprites/hover"
+                      "$texture": "$hover_button_texture"
                     }
                   },
-                  {"checked@secondary_button.image_base": {"$texture": "assets/beacon_button_sprites/selected"}},
                   {
                     "checked_hover@secondary_button.image_base": {
                       "controls": [
                         {"hover_text@secondary_button.hover_text": {}}
                       ],
-                      "$texture": "assets/beacon_button_sprites/selected"
+                      "$texture": "$selected_button_texture"
                     }
                   },
                   {

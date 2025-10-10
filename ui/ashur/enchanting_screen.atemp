@@ -17,69 +17,81 @@
 {
   "namespace": "enchanting_screen",
   "enchanting_panel@container_common.container_details": {
-    "size": [ 176, 166 ],
+    "size": [176, 166],
     "layer": 5,
     "$screen_controls": [
-      {"base_panel@screen_content.container_base": {"$enchanting_screen": true}},
+      { "base_panel@screen_content.container_base": { "$enchanting_screen": true } },
       {
         "top_half@global.empty_stack": {
           "orientation": "vertical",
-          "size": [ 117, 71 ],
+          "size": [117, 71],
           "anchor_to": "top_right",
           "anchor_from": "top_right",
           "controls": [
-            {"top_filler@global.empty_panel": {"size": [ "fill", 13 ]}},
+            { "top_filler@global.empty_panel": { "size": ["fill", 13] } },
             {
               "buttons_row@global.empty_stack": {
                 "orientation": "horizontal",
-                "size": [ 117, 57 ],
+                "size": [117, 57],
                 "controls": [
                   {
                     "enchantments_button_grid": {
                       "type": "grid",
                       "layer": 6,
-                      "size": [ 108, 57 ],
+                      "size": [108, 57],
                       "collection_name": "#enchant_buttons",
-                      "grid_dimensions": [ 1, 3 ],
+                      "grid_dimensions": [1, 3],
                       "controls": [
                         {
-                          "btn_1@enchanting_screen.button_template": {"$button_index|default": "1", "grid_position": [ 0, 0 ]}
+                          "btn_1@enchanting_screen.button_template": {
+                            "$button_index|default": "1",
+                            "grid_position": [0, 0]
+                          }
                         },
                         {
-                          "btn_2@enchanting_screen.button_template": {"$button_index|default": "2", "grid_position": [ 0, 1 ]}
+                          "btn_2@enchanting_screen.button_template": {
+                            "$button_index|default": "2",
+                            "grid_position": [0, 1]
+                          }
                         },
                         {
-                          "btn_3@enchanting_screen.button_template": {"$button_index|default": "3", "grid_position": [ 0, 2 ]}
+                          "btn_3@enchanting_screen.button_template": {
+                            "$button_index|default": "3",
+                            "grid_position": [0, 2]
+                          }
                         }
                       ]
                     }
                   },
-                  {"right_filler@global.empty_panel": {"size": [ 9, "fill" ]}}
+                  { "right_filler@global.empty_panel": { "size": [9, "fill"] } }
                 ]
               }
             },
-            {"top_filler@global.empty_panel": {"size": [ "fill", 1 ]}}
+            { "top_filler@global.empty_panel": { "size": ["fill", 1] } }
           ]
         }
       },
       {
-        "bottom@global.inventory_bottom_half_with_label": {"anchor_to": "bottom_middle", "anchor_from": "bottom_middle"}
+        "bottom@global.inventory_bottom_half_with_label": {
+          "anchor_to": "bottom_middle",
+          "anchor_from": "bottom_middle"
+        }
       },
       {
         "lapis_and_book_stack@global.empty_stack": {
           "orientation": "vertical",
-          "size": [ 90, 64 ],
+          "size": [90, 64],
           "anchor_to": "top_left",
           "anchor_from": "top_left",
           "controls": [
-            {"filler_1@global.empty_panel": {"size": [ "fill", 6 ]}},
+            { "filler_1@global.empty_panel": { "size": ["fill", 6] } },
             {
               "label_holder@global.empty_panel": {
-                "size": [ "fill", 10 ],
+                "size": ["fill", 10],
                 "controls": [
                   {
                     "small_chest_label@global.empty_label": {
-                      "offset": [ 10, 0 ],
+                      "offset": [10, 0],
                       "anchor_to": "top_left",
                       "anchor_from": "top_left",
                       "layer": 5,
@@ -90,31 +102,31 @@
                 ]
               }
             },
-            {"filler_1@global.empty_panel": {"size": [ "fill", 30 ]}},
+            { "filler_1@global.empty_panel": { "size": ["fill", 30] } },
             {
               "enchanting_input_grids@global.empty_stack": {
                 "orientation": "horizontal",
-                "size": [ 52, 18 ],
+                "size": [52, 18],
                 "controls": [
-                  {"filler_1@global.empty_panel": {"size": [ 14, "fill" ]}},
+                  { "filler_1@global.empty_panel": { "size": [14, "fill"] } },
                   {
                     "item_input": {
                       "type": "grid",
-                      "size": [ 18, 18 ],
+                      "size": [18, 18],
                       "layer": 5,
-                      "grid_dimensions": [ 1, 1 ],
+                      "grid_dimensions": [1, 1],
                       "grid_item_template": "common.container_item",
                       "collection_name": "enchanting_input_items",
                       "$item_collection_name": "enchanting_input_items"
                     }
                   },
-                  {"filler_2@global.empty_panel": {"size": [ 2, "fill" ]}},
+                  { "filler_2@global.empty_panel": { "size": [2, "fill"] } },
                   {
                     "lapis_input": {
                       "type": "grid",
-                      "size": [ 18, 18 ],
+                      "size": [18, 18],
                       "layer": 5,
-                      "grid_dimensions": [ 1, 1 ],
+                      "grid_dimensions": [1, 1],
                       "grid_item_template": "common.container_item",
                       "collection_name": "enchanting_lapis_items",
                       "$cell_overlay_ref": "screen_content.enchanting_lapis",
@@ -130,26 +142,26 @@
       {
         "enchanting_book@global.empty_stack": {
           "orientation": "vertical",
-          "size": [ 53, 46 ],
+          "size": [53, 46],
           "anchor_to": "top_left",
           "anchor_from": "top_left",
           "controls": [
-            {"filler_1@global.empty_panel": {"size": [ "fill", 6 ]}},
+            { "filler_1@global.empty_panel": { "size": ["fill", 6] } },
             {
               "second_stack@global.empty_stack": {
                 "orientation": "horizontal",
-                "size": [ 53, 40 ],
+                "size": [53, 40],
                 "controls": [
-                  {"filler_2@global.empty_panel": {"size": [ 13, "fill" ]}},
+                  { "filler_2@global.empty_panel": { "size": [13, "fill"] } },
                   {
                     "enchanting_book_holder@global.empty_panel": {
-                      "size": [ 40, 40 ],
+                      "size": [40, 40],
                       "controls": [
                         {
                           "enchanting_book@global.custom_renderer": {
                             "$type": "enchanting_book_renderer",
                             "layer": 13,
-                            "offset": [ 0, 5 ],
+                            "offset": [0, 5],
                             "anchor_to": "center",
                             "anchor_from": "center",
                             "animation_reset_name": "screen_animation_reset",
@@ -159,7 +171,7 @@
                               "@common.screen_entrance_size_animation_push",
                               "@common.screen_entrance_size_animation_pop"
                             ],
-                            "bindings": [ {"binding_name": "#open", "binding_type": "global"} ]
+                            "bindings": [{ "binding_name": "#open", "binding_type": "global" }]
                           }
                         }
                       ]
@@ -174,10 +186,10 @@
     ]
   },
   "button_template@global.empty_panel": {
-    "size": [ 108, 19 ],
+    "size": [108, 19],
     "$binding_collection|default": "#enchant_buttons",
     "controls": [
-      {"bg@screen_content.enchanting_button_disabled": {"layer": 4}},
+      { "bg@screen_content.enchanting_button_disabled": { "layer": 4 } },
       {
         "unselectable_button@enchanting_screen.button_common": {
           "default_control": "default",
@@ -187,8 +199,8 @@
           "layer": 12,
           "button_mappings": [],
           "controls": [
-            {"default@enchanting_screen.unselectable_button_controls": {}},
-            {"hover@enchanting_screen.unselectable_button_controls": {}}
+            { "default@enchanting_screen.unselectable_button_controls": {} },
+            { "hover@enchanting_screen.unselectable_button_controls": {} }
           ]
         }
       },
@@ -201,11 +213,23 @@
           "layer": 12,
           "button_mappings": "$enchant_selectable_button_mappings",
           "controls": [
-            {"default@enchanting_screen.selectable_button_controls": {}},
+            {
+              "default@enchanting_screen.selectable_button_controls": {
+                "$button_texture_path": "screen_content.enchanting_button",
+                "variables": {
+                  "requires": "($cb_is_thick_menu_buttons = true)",
+                  "$button_texture_path": "thickly.enchanting_button"
+                }
+              }
+            },
             {
               "hover@enchanting_screen.selectable_button_controls": {
                 "$enchant_rune_color|default": "$enchant_light_yellow",
-                "$button_texture_path": "screen_content.enchanting_button_highlight"
+                "$button_texture_path": "screen_content.enchanting_button_highlight",
+                "variables": {
+                  "requires": "($cb_is_thick_menu_buttons = true)",
+                  "$button_texture_path": "thickly.enchanting_button_highlight"
+                }
               }
             }
           ]
@@ -217,18 +241,18 @@
     "$button_texture_path|default": "screen_content.enchanting_button",
     "$enchant_rune_color|default": "$enchant_light_brown",
     "controls": [
-      {"bg@$button_texture_path": {}},
-      {"dust_template@enchanting_screen.dust_template": {}},
-      {"cost@enchanting_screen.cost": {"color": "$enchant_light_green"}},
-      {"runes@enchanting_screen.runes": {"color": "$enchant_rune_color"}}
+      { "bg@$button_texture_path": {} },
+      { "dust_template@enchanting_screen.dust_template": {} },
+      { "cost@enchanting_screen.cost": { "color": "$enchant_light_green" } },
+      { "runes@enchanting_screen.runes": { "color": "$enchant_rune_color" } }
     ]
   },
   "unselectable_button_controls@global.empty_panel": {
     "controls": [
-      {"bg@screen_content.enchanting_button_disabled": {}},
-      {"dust_template@enchanting_screen.dust_template": {}},
-      {"cost@enchanting_screen.cost": {"color": "$enchant_dark_green"}},
-      {"runes@enchanting_screen.runes": {"color": "$enchant_light_brown"}}
+      { "bg@screen_content.enchanting_button_disabled": {} },
+      { "dust_template@enchanting_screen.dust_template": {} },
+      { "cost@enchanting_screen.cost": { "color": "$enchant_dark_green" } },
+      { "runes@enchanting_screen.runes": { "color": "$enchant_light_brown" } }
     ]
   },
   "dust_template@global.empty_panel": {
@@ -236,10 +260,16 @@
     "$texture_unselectable": "('assets/sprites/container/enchanting_table/level_' + $button_index + '_disabled')",
     "controls": [
       {
-        "dust_sel@enchanting_screen.dust_image": {"$button_texture_enchant": "$texture_selectable", "$button_type_enchant": "selectable"}
+        "dust_sel@enchanting_screen.dust_image": {
+          "$button_texture_enchant": "$texture_selectable",
+          "$button_type_enchant": "selectable"
+        }
       },
       {
-        "dust_unsel@enchanting_screen.dust_image": {"$button_texture_enchant": "$texture_unselectable", "$button_type_enchant": "unselectable"}
+        "dust_unsel@enchanting_screen.dust_image": {
+          "$button_texture_enchant": "$texture_unselectable",
+          "$button_type_enchant": "unselectable"
+        }
       }
     ]
   },
@@ -249,8 +279,8 @@
     "keep_ratio": true,
     "layer": 6,
     "texture": "$button_texture_enchant",
-    "size": [ 16, 16 ],
-    "offset": [ 2, 1 ],
+    "size": [16, 16],
+    "offset": [2, 1],
     "bindings": [
       {
         "binding_name": "('#' + $button_type_enchant + '_dust_is_visible')",
@@ -266,7 +296,7 @@
     "anchor_from": "bottom_right",
     "anchor_to": "bottom_right",
     "text": "#exp_cost",
-    "offset": [ -1, 0 ],
+    "offset": [-1, 0],
     "bindings": [
       {
         "binding_name": "#cost",
@@ -286,8 +316,8 @@
     "shadow": false,
     "text": "#runes",
     "layer": 9,
-    "offset": [ 6, 1 ],
-    "size": [ 84, 16 ],
+    "offset": [6, 1],
+    "size": [84, 16],
     "font_type": "rune",
     "bindings": [
       {
@@ -300,9 +330,9 @@
   "button_common@common.button": {
     "sound_volume": 0.0,
     "layer": 22,
-    "size": [ 108, 19 ],
+    "size": [108, 19],
     "bindings": [
-      {"binding_type": "collection_details", "binding_collection_name": "$binding_collection"},
+      { "binding_type": "collection_details", "binding_collection_name": "$binding_collection" },
       {
         "binding_name": "$visibility_binding_name",
         "binding_name_override": "#visible",

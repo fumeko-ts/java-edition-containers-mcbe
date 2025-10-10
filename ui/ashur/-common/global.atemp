@@ -18,9 +18,9 @@
   "namespace": "global",
   "highlight_slot": {
     "type": "panel",
-    "$white_highlight_offset": [ 0, 0 ],
+    "$white_highlight_offset": [0, 0],
     "$slot_vars": "screen_content.highlight_slot",
-    "variables": {"requires": "($recipe_book = true)", "$slot_vars": "common.empty_panel"},
+    "variables": { "requires": "($recipe_book = true)", "$slot_vars": "common.empty_panel" },
     "controls": [
       {
         "highlight@$slot_vars": {
@@ -28,7 +28,7 @@
           "controls": [
             {
               "hover_text@common.hover_text": {
-                "offset": [ 10, -10 ],
+                "offset": [10, -10],
                 "layer": 29,
                 "$hover_text_binding_name|default": "#hover_text",
                 "bindings": [
@@ -171,34 +171,61 @@
         "to_button_id": "button.coalesce_stack",
         "mapping_type": "double_pressed"
       },
-      {"to_button_id": "button.shape_drawing", "mapping_type": "pressed"},
-      {"to_button_id": "button.container_slot_hovered", "mapping_type": "pressed"}
+      { "to_button_id": "button.shape_drawing", "mapping_type": "pressed" },
+      { "to_button_id": "button.container_slot_hovered", "mapping_type": "pressed" }
     ],
-    "controls": [
-      {"hover@$highlight_control": {}},
-      {"pressed@$highlight_control": {}}
-    ]
+    "controls": [{ "hover@$highlight_control": {} }, { "pressed@$highlight_control": {} }]
   },
-  "close_button@common.close_button": {
-    "layer": 20,
-    "size": [ 14, 14 ],
-    "anchor_to": "top_right",
+  "close_button": {
+    "type": "button",
+    "size": [11, 11],
+    "layer": 10,
     "anchor_from": "top_right",
-    "offset": [ -1, 1 ],
-    "$close_button_panel_size|default": [ 14, 14 ],
-    "controls": [
-      {"default@global.close_button_panel": {"$close_button_texture": "textures/atemp/close_button.png"}},
+    "anchor_to": "top_right",
+    "locked_control": "",
+    "default_control": "default",
+    "hover_control": "hover",
+    "pressed_control": "pressed",
+    "sound_name": "random.click",
+    "$exit_offset": [-2, 2],
+    "offset": "$exit_offset",
+    "sound_volume": 1.0,
+    "sound_pitch": 1.0,
+    "button_mappings": [
       {
-        "hover@global.close_button_panel": {"$close_button_texture": "textures/atemp/close_button_hover.png"}
+        "from_button_id": "button.menu_select",
+        "to_button_id": "button.menu_exit",
+        "mapping_type": "pressed"
       },
-      {"pressed@global.close_button_panel": {"$close_button_texture": "textures/atemp/close_button.png"}}
+      {
+        "from_button_id": "button.menu_ok",
+        "to_button_id": "button.menu_exit",
+        "mapping_type": "focused"
+      }
     ],
-    "ignored": "($Exit_panel_enabled = false)"
+    "controls": [
+      {
+        "default@global.empty_image": {
+          "texture": "textures/ui/ashur/close_button"
+        }
+      },
+      {
+        "hover@global.empty_image": {
+          "alpha": 0.6,
+          "texture": "textures/ui/ashur/close_button_hover"
+        }
+      },
+      {
+        "pressed@global.empty_image": {
+          "texture": "textures/ui/ashur/close_button"
+        }
+      }
+    ]
   },
   "stack_count_label": {
     "type": "label",
     "color": "$item_stack_count_color",
-    "offset": [ 0, 1 ],
+    "offset": [0, 1],
     "anchor_to": "bottom_right",
     "anchor_from": "bottom_right",
     "layer": 7,
@@ -215,15 +242,15 @@
       }
     ]
   },
-  "grid_item@common.container_item": {"$grid_item_collection_name": "hotbar_items"},
+  "grid_item@common.container_item": { "$grid_item_collection_name": "hotbar_items" },
   "hotbar": {
     "type": "grid",
-    "size": [ 162, 18 ],
+    "size": [162, 18],
     "anchor_from": "bottom_middle",
     "anchor_to": "bottom_middle",
     "offset": "$hotbar_offset",
-    "$hotbar_offset": [ 0, -4 ],
-    "grid_dimensions": [ 9, 1 ],
+    "$hotbar_offset": [0, -4],
+    "grid_dimensions": [9, 1],
     "grid_item_template": "global.grid_item",
     "$item_collection_name": "hotbar_items",
     "collection_name": "hotbar_items"
@@ -241,43 +268,52 @@
           "size": "$cell_image_size",
           "layer": 0,
           "controls": [
-            {"$background_image_control_name@$background_images": {"layer": 1}},
-            {"durability_bar@common.durability_bar": {"layer": "$bar_layer"}},
-            {"storage_bar@common.storage_bar": {"layer": "$bar_layer"}},
-            {"$overlay_image_control_name@$overlay_images": {"layer": 9}}
+            { "$background_image_control_name@$background_images": { "layer": 1 } },
+            { "durability_bar@common.durability_bar": { "layer": "$bar_layer" } },
+            { "storage_bar@common.storage_bar": { "layer": "$bar_layer" } },
+            { "$overlay_image_control_name@$overlay_images": { "layer": 9 } }
           ]
         }
       },
-      {"item_cell_overlay_ref@$cell_overlay_ref": {"layer": 3}},
-      {"item_selected_image@common.slot_selected": {"layer": 4}},
+      { "item_cell_overlay_ref@$cell_overlay_ref": { "layer": 3 } },
+      { "item_selected_image@common.slot_selected": { "layer": 4 } },
       {
-        "item_button_ref@$button_ref": {"tts_ignore_count": true, "tts_skip_message": true, "tts_inherit_siblings": true, "layer": 5}
+        "item_button_ref@$button_ref": {
+          "tts_ignore_count": true,
+          "tts_skip_message": true,
+          "tts_inherit_siblings": true,
+          "layer": 5
+        }
       },
       {
         "container_item_lock_overlay@common.container_item_lock_overlay": {
           "size": "$item_renderer_size",
-          "offset": [ 1, 1 ],
+          "offset": [1, 1],
           "anchor_to": "top_left",
           "anchor_from": "top_left",
           "layer": 6
         }
       },
-      {"item_lock_cell_image@common.item_lock_cell_image": {"layer": 2}},
-      {"bundle_slot_panel@gameplay.bundle_slot_panel": {"layer": 10}}
+      { "item_lock_cell_image@common.item_lock_cell_image": { "layer": 2 } },
+      { "bundle_slot_panel@gameplay.bundle_slot_panel": { "layer": 10 } }
     ]
   },
   "inventory_bottom_half_with_label@global.empty_stack": {
     "orientation": "vertical",
-    "size": [ 162, 95 ],
+    "size": [162, 95],
     "offset": "$grid_cell_offset",
-    "$grid_cell_offset": [ 0, 0 ],
+    "$grid_cell_offset": [0, 0],
     "$inventory_panel_offset|default": "bottom_middle",
     "anchor_to": "$inventory_panel_offset",
     "anchor_from": "$inventory_panel_offset",
     "$is_creative_survival_tab|default": false,
     "controls": [
       {
-        "creative_mode_spacing_top": {"type": "panel", "size": [ "default", 10 ], "ignored": "(not ($is_creative_survival_tab = true))"}
+        "creative_mode_spacing_top": {
+          "type": "panel",
+          "size": ["default", 10],
+          "ignored": "(not ($is_creative_survival_tab = true))"
+        }
       },
       {
         "inventory_label": {
@@ -285,33 +321,33 @@
           "anchor_from": "bottom_left",
           "anchor_to": "bottom_left",
           "layer": 2,
-          "size": [ "default", 10 ],
-          "offset": [ 1, 0 ],
+          "size": ["default", 10],
+          "offset": [1, 0],
           "ignored": "($is_creative_survival_tab = true)",
           "color": "$title_text_color",
           "text": "atemp.container.inventory"
         }
       },
-      {"inventory_label_spacing": {"type": "panel", "size": [ "default", 2 ]}},
+      { "inventory_label_spacing": { "type": "panel", "size": ["default", 2] } },
       {
         "inventory_grid": {
           "type": "grid",
-          "size": [ 162, 54 ],
-          "grid_dimensions": [ 9, 3 ],
+          "size": [162, 54],
+          "grid_dimensions": [9, 3],
           "$item_collection_name": "inventory_items",
           "grid_item_template": "global.grid_item",
           "collection_name": "inventory_items"
         }
       },
-      {"below_inventory_grid_spacing": {"type": "panel", "size": [ "default", 4 ]}},
-      {"hotbar@global.hotbar": {}},
-      {"hotbar_bottom_spacing": {"type": "panel", "size": [ "default", 7 ]}}
+      { "below_inventory_grid_spacing": { "type": "panel", "size": ["default", 4] } },
+      { "hotbar@global.hotbar": {} },
+      { "hotbar_bottom_spacing": { "type": "panel", "size": ["default", 7] } }
     ]
   },
   "inventory_selected_icon@common.item_renderer": {
     "layer": 50,
-    "size": [ 16, 16 ],
-    "offset": [ -1, -2 ],
+    "size": [16, 16],
+    "offset": [-1, -2],
     "bindings": [
       {
         "binding_name": "#inventory_selected_item",
@@ -365,37 +401,36 @@
     "layer": 1,
     "size": "$close_button_panel_size",
     "$button_alpha|default": 1,
-    "controls": [
-      {"close_button_image@screen_content.close_button_image": {"alpha": "$button_alpha"}}
-    ]
+    "controls": [{ "close_button_image@screen_content.close_button_image": { "alpha": "$button_alpha" } }]
   },
   "inventory_selected_stack_size_text": {
     "type": "label",
-    "offset": [ 0, 1 ],
+    "offset": [0, 1],
     "anchor_to": "bottom_right",
     "anchor_from": "bottom_right",
     "layer": 5000003,
     "shadow": true,
     "color": "$selected_item_stack_count_color",
     "text": "#inventory_selected_item_stack_count",
-    "bindings": [
-      {"binding_name": "#inventory_selected_item_stack_count", "binding_condition": "always_when_visible"}
-    ]
+    "bindings": [{ "binding_name": "#inventory_selected_item_stack_count", "binding_condition": "always_when_visible" }]
   },
   "inventory_icon_panel": {
     "type": "panel",
     "controls": [
-      {"selected_item_icon@global.inventory_selected_icon": {}},
-      {"selected_stack_size_text@global.inventory_selected_stack_size_text": {}},
-      {"selected_item_lock_overlay@common.inventory_selected_item_lock_overlay": {}},
+      { "selected_item_icon@global.inventory_selected_icon": {} },
+      { "selected_stack_size_text@global.inventory_selected_stack_size_text": {} },
+      { "selected_item_lock_overlay@common.inventory_selected_item_lock_overlay": {} },
       {
-        "hover_text@global.hover_text": {"layer": 59, "bindings": [ {"binding_name": "#using_touch", "binding_name_override": "#visible"} ]}
+        "hover_text@global.hover_text": {
+          "layer": 59,
+          "bindings": [{ "binding_name": "#using_touch", "binding_name_override": "#visible" }]
+        }
       }
     ]
   },
   "inventory_screen_common": {
     "type": "screen",
-    "size": [ "100%", "100%" ],
+    "size": ["100%", "100%"],
     "$screen_content|default": "common.base_screen_empty_panel",
     "$additional_screen_content|default": "stack_splitting_overlay.stack_splitting_overlay",
     "$screen_bg_content|default": "screen_content.screen_background",
@@ -504,7 +539,7 @@
         "to_button_id": "button.focus_right",
         "mapping_type": "global"
       },
-      {"from_button_id": "button.chat", "to_button_id": "button.chat", "mapping_type": "global"}
+      { "from_button_id": "button.chat", "to_button_id": "button.chat", "mapping_type": "global" }
     ],
     "controls": [
       {
@@ -581,7 +616,7 @@
     "hover_control": "hover",
     "pressed_control": "pressed",
     "layer": -10,
-    "size": [ 16, 16 ],
+    "size": [16, 16],
     "follows_cursor": true,
     "sound_name": "random.click",
     "sound_volume": 1.0,
@@ -590,11 +625,11 @@
     "$durability_bar_required|default": true,
     "$storage_bar_required|default": true,
     "controls": [
-      {"default@global.inventory_icon_panel": {}},
-      {"pressed@global.inventory_icon_panel": {}},
-      {"hover@global.inventory_icon_panel": {}},
-      {"durability_bar_grabbed@global.durability_bar_grabbed": {}},
-      {"storage_bar_grabbed@global.storage_bar_grabbed": {}}
+      { "default@global.inventory_icon_panel": {} },
+      { "pressed@global.inventory_icon_panel": {} },
+      { "hover@global.inventory_icon_panel": {} },
+      { "durability_bar_grabbed@global.durability_bar_grabbed": {} },
+      { "storage_bar_grabbed@global.storage_bar_grabbed": {} }
     ]
   },
   "hover_text": {
@@ -617,7 +652,7 @@
   "root_panel": {
     "type": "input_panel",
     "size": "$size",
-    "$size": [ 176, 166 ],
+    "$size": [176, 166],
     "anchor_from": "center",
     "anchor_to": "center",
     "button_mappings": [
@@ -636,8 +671,8 @@
         "to_button_id": "button.container_reset_held",
         "mapping_type": "pressed"
       },
-      {"from_button_id": "button.return", "to_button_id": "button.return", "mapping_type": "global"},
-      {"from_button_id": "button.arrow_up", "to_button_id": "button.arrow_key", "mapping_type": "global"},
+      { "from_button_id": "button.return", "to_button_id": "button.return", "mapping_type": "global" },
+      { "from_button_id": "button.arrow_up", "to_button_id": "button.arrow_key", "mapping_type": "global" },
       {
         "from_button_id": "button.arrow_down",
         "to_button_id": "button.arrow_key",
@@ -669,7 +704,7 @@
         "to_button_id": "button.container_reset_held",
         "mapping_type": "pressed"
       },
-      {"from_button_id": "button.turn_up", "to_button_id": "button.scroll_up", "mapping_type": "global"},
+      { "from_button_id": "button.turn_up", "to_button_id": "button.scroll_up", "mapping_type": "global" },
       {
         "from_button_id": "button.turn_down",
         "to_button_id": "button.scroll_down",
@@ -697,28 +732,32 @@
       }
     ]
   },
-  "empty_panel": {"type": "panel"},
-  "empty_label": {"type": "label"},
-  "empty_image": {"type": "image"},
-  "empty_stack": {"type": "stack_panel"},
-  "custom_renderer": {"type": "custom", "renderer": "$type"},
-  "container_item@common.container_item": {"$item_collection_name": "$item_collection", "size": "$cell_size", "$cell_size": [ 18, 18 ]},
+  "empty_panel": { "type": "panel" },
+  "empty_label": { "type": "label" },
+  "empty_image": { "type": "image" },
+  "empty_stack": { "type": "stack_panel" },
+  "custom_renderer": { "type": "custom", "renderer": "$type" },
+  "container_item@common.container_item": {
+    "$item_collection_name": "$item_collection",
+    "size": "$cell_size",
+    "$cell_size": [18, 18]
+  },
   "storage_bar_grabbed@global.custom_renderer": {
     "$type": "progress_bar_renderer",
-    "size": [ 13, 1 ],
+    "size": [13, 1],
     "anchor_to": "bottom_middle",
     "anchor_from": "bottom_middle",
-    "offset": [ 0, -2.6 ],
-    "primary_color": [ 0.4, 0.4, 1.0, 1.0 ],
-    "full_storage_color": [ 1.0, 0.4, 0.4 ],
-    "property_bag": {"drop_shadow": false, "is_storage_bar": true},
+    "offset": [0, -2.6],
+    "primary_color": [0.4, 0.4, 1.0, 1.0],
+    "full_storage_color": [1.0, 0.4, 0.4],
+    "property_bag": { "drop_shadow": false, "is_storage_bar": true },
     "controls": [
       {
         "bg@screen_content.image_element": {
           "texture": "textures/ui/ashur/durability_underlay",
           "layer": -1,
-          "offset": [ 0, 1 ],
-          "size": [ "default", "default" ],
+          "offset": [0, 1],
+          "size": ["default", "default"],
           "bindings": [
             {
               "binding_name": "#selected_item_storage_visible",
@@ -749,20 +788,20 @@
   },
   "durability_bar_grabbed@global.custom_renderer": {
     "$type": "progress_bar_renderer",
-    "size": [ 13, 1 ],
+    "size": [13, 1],
     "anchor_to": "bottom_middle",
     "anchor_from": "bottom_middle",
-    "offset": [ 1, -2.6 ],
-    "primary_color": [ 0.4, 0.4, 1.0, 1.0 ],
-    "full_storage_color": [ 1.0, 0.4, 0.4 ],
-    "property_bag": {"drop_shadow": false, "is_durability": true, "round_value": true},
+    "offset": [1, -2.6],
+    "primary_color": [0.4, 0.4, 1.0, 1.0],
+    "full_storage_color": [1.0, 0.4, 0.4],
+    "property_bag": { "drop_shadow": false, "is_durability": true, "round_value": true },
     "controls": [
       {
         "bg@screen_content.image_element": {
           "texture": "textures/ui/ashur/durability_underlay",
           "layer": -1,
-          "offset": [ 0, 1 ],
-          "size": [ "default", "default" ],
+          "offset": [0, 1],
+          "size": ["default", "default"],
           "bindings": [
             {
               "binding_name": "#selected_item_durability_visible",

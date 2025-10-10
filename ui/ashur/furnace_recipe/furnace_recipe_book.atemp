@@ -210,6 +210,26 @@
     "$unchecked_hover|default": "('pagination.tepes_' + $direction + '_hover')",
     "$checked|default": "('pagination.tepes_' + $direction)",
     "$checked_hover|default": "('pagination.tepes_' + $direction + '_hover')",
+
+    "$thickly_unchecked|default": "('thickly.tepes_' + $direction)",
+    "$thickly_unchecked_hover|default": "('thickly.tepes_' + $direction + '_hover')",
+    "$thickly_checked|default": "('thickly.tepes_' + $direction)",
+    "$thickly_checked_hover|default": "('thickly.tepes_' + $direction + '_hover')",
+    "$controls": [
+      { "unchecked@$unchecked": {} },
+      { "unchecked_hover@$unchecked_hover": {} },
+      { "checked@$checked": {} },
+      { "checked_hover@$checked_hover": {} }
+    ],
+    "variables": {
+      "requires": "($cb_is_thick_menu_buttons = true)",
+      "$controls": [
+        { "unchecked@$thickly_unchecked": {} },
+        { "unchecked_hover@$thickly_unchecked_hover": {} },
+        { "checked@$thickly_checked": {} },
+        { "checked_hover@$thickly_checked_hover": {} }
+      ]
+    },
     "controls": [
       {
         "$toggle_control_name@common.toggle": {
@@ -217,12 +237,7 @@
           "radio_toggle_group": true,
           "focus_container": true,
           "use_last_focus": true,
-          "controls": [
-            {"unchecked@$unchecked": {} },
-            {"unchecked_hover@$unchecked_hover": {} },
-            {"checked@$checked": {} },
-            {"checked_hover@$checked_hover": {} }
-          ]
+          "controls": "$controls"
         }
       }
     ]

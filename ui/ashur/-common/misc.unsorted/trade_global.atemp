@@ -429,7 +429,14 @@
     "$unchecked_locked_control": "global.empty_panel",
     "$unchecked_locked_hover_control": "global.empty_panel",
     "$checked_locked_control": "global.empty_panel",
-    "$checked_locked_hover_control": "global.empty_panel"
+    "$checked_locked_hover_control": "global.empty_panel",
+    "variables": {
+      "requires": "($cb_is_thick_menu_buttons = true)",
+      "$unchecked_control": "thickly.unchecked_control",
+      "$checked_control": "thickly.checked_control",
+      "$unchecked_hover_control": "thickly.unchecked_hover_control",
+      "$checked_hover_control": "thickly.checked_hover_control"
+    }
   },
   "unchecked_control@trade_global.button_state_common": {
     "$image_texture": "assets/sprites/container/villager/button"

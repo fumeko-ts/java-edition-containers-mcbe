@@ -50,6 +50,9 @@
       {"requires": "($inventory_screen = true)", "$container|default": "inventory"}
     ],
     "controls": [
+      {
+        "close_button@global.close_button":{}
+      },
       {"all_misc@$container": {}}
     ]
   },

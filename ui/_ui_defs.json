@@ -51,6 +51,7 @@
     "ui/ashur/furnace_recipe/furnace_recipe_book.atemp",
     "ui/ashur/furnace_recipe/furnace_tabs.atemp",
     "ui/ashur/furnace_recipe/smelting_common.atemp",
-    "ui/ashur/furnace_recipe/smoker_recipe_book.atemp"
+    "ui/ashur/furnace_recipe/smoker_recipe_book.atemp",
+    "ui/ashur/-common/compatibility/thickly.atemp"
   ]
 }

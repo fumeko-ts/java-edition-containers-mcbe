@@ -192,15 +192,25 @@
   },
   "furnace_filter_on@global.empty_image": {
     "offset": [0, 1],
-    "texture": "assets/sprites/recipe_book/furnace_filter_disabled.png",
+    "texture": "$texture",
+    "$texture": "assets/sprites/recipe_book/furnace_filter_disabled.png",
     "size": ["default", "default"],
-    "layer": 5
+    "layer": 5,
+    "variables": {
+      "requires": "($cb_is_thick_menu_buttons = true)",
+      "$texture": "assets/minecraft/textures/gui/sprites/recipe_book/furnace_filter_disabled.png"
+    }
   },
   "furnace_filter_on_hover@global.empty_image": {
     "offset": [0, 1],
-    "texture": "assets/sprites/recipe_book/furnace_filter_disabled_highlighted.png",
+    "texture": "$texture",
+    "$texture": "assets/sprites/recipe_book/furnace_filter_disabled_highlighted.png",
     "size": ["default", "default"],
-    "layer": 5
+    "layer": 5,
+    "variables": {
+      "requires": "($cb_is_thick_menu_buttons = true)",
+      "$texture": "assets/minecraft/textures/gui/sprites/recipe_book/furnace_filter_disabled_highlighted.png"
+    }
   },
 
   "red_overlay@screen_content.image_element": {
@@ -280,11 +290,21 @@
   //layout toggle
   "button_default@screen_content.image_element": {
     "size": [20, 18],
-    "texture": "assets/sprites/recipe_book/button.png"
+    "texture": "$texture",
+    "$texture": "assets/sprites/recipe_book/button.png",
+    "variables": {
+      "requires": "($cb_is_thick_menu_buttons = true)",
+      "$texture": "assets/minecraft/textures/gui/sprites/recipe_book/button"
+    }
   },
   "button_hover@screen_content.image_element": {
     "size": [20, 18],
-    "texture": "assets/sprites/recipe_book/button_highlighted.png"
+    "texture": "$texture",
+    "$texture": "assets/sprites/recipe_book/button_highlighted.png",
+    "variables": {
+      "requires": "($cb_is_thick_menu_buttons = true)",
+      "$texture": "assets/minecraft/textures/gui/sprites/recipe_book/button_highlighted"
+    }
   },
   "layout_sprites@toggle.radio_toggle": {
     "$toggle_name|default": "furnace_recipe_book_toggle",

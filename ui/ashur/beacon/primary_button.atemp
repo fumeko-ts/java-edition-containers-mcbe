@@ -17,29 +17,44 @@
 {
   "namespace": "primary_button",
   "primary_button@global.empty_panel": {
-    "size": [ 22, 22 ],
+    "size": [22, 22],
     "$effect_path|default": "('assets/beacon_button_sprites/' + $button_name)",
+    "$locked_button_texture|default": "assets/beacon_button_sprites/locked",
+    "$default_button_texture|default": "assets/beacon_button_sprites/default",
+    "$selected_button_texture|default": "assets/beacon_button_sprites/selected",
+    "$hover_button_texture|default": "assets/beacon_button_sprites/hover",
+    "variables": {
+      "requires": "($cb_is_thick_menu_buttons = true)",
+      "$locked_button_texture|default": "assets/minecraft/textures/gui/sprites/container/beacon/button_disabled.png",
+      "$default_button_texture|default": "assets/minecraft/textures/gui/sprites/container/beacon/button.png",
+      "$selected_button_texture|default": "assets/minecraft/textures/gui/sprites/container/beacon/button_selected.png",
+      "$hover_button_texture|default": "assets/minecraft/textures/gui/sprites/container/beacon/button_highlighted.png"
+    },
     "controls": [
       {
         "hover_button": {
           "type": "button",
           "layer": 4,
-          "size": [ 22, 22 ],
-          "offset": [ 1, 1 ],
+          "size": [22, 22],
+          "offset": [1, 1],
           "default_focus_precedence": 1,
           "hover_control": "hover_text",
           "consume_event": false,
           "button_mappings": [
-            {"to_button_id": "button.container_slot_hovered", "mapping_type": "pressed", "consume_event": false}
+            { "to_button_id": "button.container_slot_hovered", "mapping_type": "pressed", "consume_event": false }
           ],
           "controls": [
-            {"hover_text@primary_button.hover_text": {}},
+            { "hover_text@primary_button.hover_text": {} },
             {
-              "underlay_disabled@screen_content.image_element": {"texture": "assets/beacon_button_sprites/locked", "size": [ 22, 22 ], "layer": 3}
+              "underlay_disabled@screen_content.image_element": {
+                "texture": "$locked_button_texture",
+                "size": [22, 22],
+                "layer": 3
+              }
             },
             {
               "effect_overlay@screen_content.image_element": {
-                "size": [ 18, 18 ],
+                "size": [18, 18],
                 "layer": 6,
                 "anchor_from": "center",
                 "anchor_to": "center",
@@ -65,7 +80,7 @@
       },
       {
         "toggle_holder@global.empty_panel": {
-          "size": [ 22, 22 ],
+          "size": [22, 22],
           "bindings": [
             {
               "binding_type": "collection",
@@ -77,9 +92,9 @@
           "controls": [
             {
               "toggle_button@common.toggle": {
-                "size": [ 22, 22 ],
+                "size": [22, 22],
                 "layer": 1,
-                "offset": [ 1, 1 ],
+                "offset": [1, 1],
                 "focus_wrap_enabled": false,
                 "$toggle_name": "$button_name",
                 "checked_control": "checked",
@@ -91,7 +106,7 @@
                 "checked_locked_hover_control": "locked_hover",
                 "unchecked_locked_hover_control": "locked_hover",
                 "bindings": [
-                  {"binding_collection_name": "$button_name", "binding_type": "collection_details"},
+                  { "binding_collection_name": "$button_name", "binding_type": "collection_details" },
                   {
                     "binding_type": "collection",
                     "binding_collection_name": "$button_name",
@@ -111,30 +126,26 @@
                     "to_button_id": "button.menu_ok",
                     "mapping_type": "pressed"
                   },
-                  {"from_button_id": "button.menu_ok", "to_button_id": "button.menu_ok", "mapping_type": "pressed"}
+                  { "from_button_id": "button.menu_ok", "to_button_id": "button.menu_ok", "mapping_type": "pressed" }
                 ],
                 "controls": [
-                  {"unchecked@primary_button.image_base": {"$texture": "assets/beacon_button_sprites/default"}},
+                  { "unchecked@primary_button.image_base": { "$texture": "$default_button_texture" } },
                   {
                     "unchecked_hover@primary_button.image_base": {
-                      "controls": [
-                        {"hover_text@primary_button.hover_text": {}}
-                      ],
-                      "$texture": "assets/beacon_button_sprites/hover"
+                      "controls": [{ "hover_text@primary_button.hover_text": {} }],
+                      "$texture": "$hover_button_texture"
                     }
                   },
-                  {"checked@primary_button.image_base": {"$texture": "assets/beacon_button_sprites/selected"}},
+                  { "checked@primary_button.image_base": { "$texture": "$selected_button_texture" } },
                   {
                     "checked_hover@primary_button.image_base": {
-                      "controls": [
-                        {"hover_text@primary_button.hover_text": {}}
-                      ],
-                      "$texture": "assets/beacon_button_sprites/selected"
+                      "controls": [{ "hover_text@primary_button.hover_text": {} }],
+                      "$texture": "$selected_button_texture"
                     }
                   },
                   {
                     "effect_overlay@screen_content.image_element": {
-                      "size": [ 18, 18 ],
+                      "size": [18, 18],
                       "layer": 6,
                       "anchor_from": "center",
                       "anchor_to": "center",
@@ -149,7 +160,7 @@
       }
     ]
   },
-  "image_base@screen_content.image_element": {"texture": "$texture", "size": [ 22, 22 ], "layer": 3},
+  "image_base@screen_content.image_element": { "texture": "$texture", "size": [22, 22], "layer": 3 },
   "hover_text@common.hover_text": {
     "layer": 999,
     "bindings": [
