@@ -55,6 +55,8 @@
   
   "$cb_is_thick_menu_buttons": false,
   "$jc:dev": true,
+
+  "$item_collection_name": "none",// to stop the spammy errors in /*https://mcpedl.com/java-aspects/ AgentMindStorm (@agentms_)*/
   
   "$enchant_selectable_button_mappings": [
     { "from_button_id": "button.menu_select", "to_button_id": "button.menu_ok", "mapping_type": "pressed" },

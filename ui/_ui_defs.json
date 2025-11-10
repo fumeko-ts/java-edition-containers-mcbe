@@ -1,6 +1,7 @@
 {
   "ui_defs": [
     "ui/ashur/anvil_screen.atemp",
+    "ui/ashur/-common/misc.unsorted/java_item_renderer.atemp",
     "ui/ashur/barrel_screen.atemp",
     "ui/ashur/beacon_screen.atemp",
     "ui/ashur/blast_furnace_screen.atemp",

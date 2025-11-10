@@ -30,3 +30,8 @@ atemp.entity.minecraft.horse=Cheval
 atemp.entity.minecraft.llama=Lama
 atemp.recipe_book.searchBox=§oRecherche...
 atemp.merchant.trades=Échanges
+
+craftingScreen.tab.construction=sr1.atemp
+craftingScreen.tab.nature=sr1.atemp
+craftingScreen.tab.equipment=sr1.atemp
+craftingScreen.tab.items=sr1.atemp

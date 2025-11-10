@@ -175,7 +175,7 @@
       },
       {
         "search@creative_inventory.item_renderer": {
-          "$item_identifier": 417,
+          "$item_identifier": 416,
           "visible": "($tab_view_binding_name = 'search_tab_toggle')"
         }
       },

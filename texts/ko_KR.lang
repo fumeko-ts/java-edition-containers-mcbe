@@ -30,3 +30,8 @@ atemp.entity.minecraft.horse=말
 atemp.entity.minecraft.llama=라마
 atemp.recipe_book.searchBox=§o검색 중...
 atemp.merchant.trades=거래
+
+craftingScreen.tab.construction=sr1.atemp
+craftingScreen.tab.nature=sr1.atemp
+craftingScreen.tab.equipment=sr1.atemp
+craftingScreen.tab.items=sr1.atemp
