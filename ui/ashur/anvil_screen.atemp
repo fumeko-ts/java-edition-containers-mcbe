@@ -66,7 +66,7 @@
                         {
                           "text_edit_control@text_edit_box.text_edit_box": {
                             "property_bag": {"#property_field": "#item_name"},
-                            "max_length": 60,
+                            "max_length": 6000000,
                             "$text_box_text_color": [ 0.231, 0.231, 0.231, 1 ],
                             "$text_background_locked": "screen_content.anvil_text_field",
                             "$text_background_default": "screen_content.anvil_edit_box_hover",

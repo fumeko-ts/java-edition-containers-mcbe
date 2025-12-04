@@ -29,12 +29,13 @@
           "size": [184, 166],
           "orientation": "horizontal",
           "visible": false,
+          "ignored": true,
           "controls": [
             {
               "tab_stack@furnace_tabs.furnace_tabs": {
                 "$second_tab_icons": [{ "1@furnace_tabs.tab_item_renderer": { "$item_id": 73 } }],
                 "$third_tab_icons": [
-                  { "1@furnace_tabs.tab_item_renderer": { "layer": 7, "offset": [4 , 0], "$item_id": 378 } },
+                  { "1@furnace_tabs.tab_item_renderer": { "layer": 7, "offset": [4, 0], "$item_id": 378 } },
                   { "2@furnace_tabs.tab_item_renderer": { "layer": 6, "offset": [-7, 0], "$item_id": 320 } }
                 ],
                 "$3_tabs": true
@@ -66,6 +67,7 @@
                 "size": [40, 52],
                 "anchor_from": "top_left",
                 "anchor_to": "top_left",
+                "ignored": true,
                 "controls": [
                   {
                     "layout@smelting_common.layout_toggle": {

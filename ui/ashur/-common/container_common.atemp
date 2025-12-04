@@ -21,109 +21,38 @@
     "anchor_from": "center",
     "layer": 5,
     "controls": [
-      { "screen@global.empty_panel": { "size": ["100%", "100%"], "controls": "$screen_controls" } },
-      { "2@common.selected_item_details_factory": {} },
-      { "3@common.item_lock_notification_factory": {} },
-      { "4@common.flying_item_renderer": { "layer": 12 } },
-      { "7@container_common.item_flying_selected": {} },
-      { "8@common.gamepad_cursor_button": {} },
-      { "10@common.inventory_take_progress_icon_button": {} }
+      {"screen@global.empty_panel": {"size": [ "100%", "100%" ], "controls": "$screen_controls"}},
+      {"2@common.selected_item_details_factory": {}},
+      {"3@common.item_lock_notification_factory": {}},
+      {"4@common.flying_item_renderer": {"layer": 12}},
+      {"7@container_common.item_flying_selected": {}},
+      {"8@common.gamepad_cursor_button": {}},
+      {"10@common.inventory_take_progress_icon_button": {}}
     ]
   },
   "held_flying_renderer@global.empty_panel": {
-    "size": [18, 18],
+    "size": [ 18, 18 ],
     "controls": [
       {
-        "inventory_selected_icon@common.specific_item_renderer": {
-          "bindings": [],
-          "ignored": "(not (($is_java_aspects = true) and ($item_icons_enabled = true)))",
-          "controls": [
-            {
-              "selected_item_list@common.selected_item_list": {}
-            }
-          ]
-        }
-      },
-      {
-        "inventory_selected_icon@common.item_renderer": {
-          "layer": 50,
-          "anchor_to": "center",
-          "anchor_from": "center",
-          "size": [16, 16],
-          "ignored": "(($is_java_aspects = true) and ($item_icons_enabled = true))",
-          "bindings": [
-            {
-              "binding_name": "#inventory_selected_item",
-              "binding_name_override": "#item_id_aux",
-              "binding_condition": "always_when_visible"
-            },
-            {
-              "binding_name": "#inventory_selected_item_charged_item",
-              "binding_name_override": "#charged_item",
-              "binding_condition": "always_when_visible"
-            },
-            {
-              "binding_name": "#inventory_selected_item_color",
-              "binding_name_override": "#item_custom_color",
-              "binding_condition": "always_when_visible"
-            },
-            {
-              "binding_name": "#inventory_selected_armor_trim_material",
-              "binding_name_override": "#armor_trim_material",
-              "binding_condition": "always_when_visible"
-            },
-            {
-              "binding_name": "#inventory_selected_banner_patterns",
-              "binding_name_override": "#banner_patterns",
-              "binding_condition": "always_when_visible"
-            },
-            {
-              "binding_name": "#shield_base_color_hovered",
-              "binding_name_override": "#shield_base_color",
-              "binding_condition": "always_when_visible"
-            },
-            {
-              "binding_name": "#inventory_selected_banner_colors",
-              "binding_name_override": "#banner_colors",
-              "binding_condition": "always_when_visible"
-            },
-            {
-              "binding_name": "#inventory_selected_banner_type",
-              "binding_name_override": "#banner_type",
-              "binding_condition": "always_when_visible"
-            },
-            {
-              "binding_name": "#inventory_selected_decorated_pot_sherds",
-              "binding_name_override": "#decorated_pot_sherds",
-              "binding_condition": "always_when_visible"
-            }
-          ]
+        "renderer@global.inventory_selected_icon":{
         }
       },
       {
         "stack_text@global.empty_label": {
           "anchor_to": "bottom_right",
           "anchor_from": "bottom_right",
-          "layer": "$stack_text_layer",
-          "$stack_text_layer": 53,
-          "variables": {
-            "requires": "($is_java_aspects and $item_icons_enabled)",
-            "$stack_text_layer": 99
-          },
+          "layer": 53,
           "shadow": true,
-          "offset": [0, 1],
+          "offset": [ -1, -1 ],
           "color": "$selected_item_stack_count_color",
           "text": "#inventory_selected_item_stack_count",
           "bindings": [
-            { "binding_name": "#inventory_selected_item_stack_count", "binding_condition": "always_when_visible" }
+            {"binding_name": "#inventory_selected_item_stack_count", "binding_condition": "always_when_visible"}
           ]
         }
       },
       {
-        "hover_text@common.hover_text": {
-          "layer": 59,
-          "bindings": [{ "binding_name": "#using_touch", "binding_name_override": "#visible" }]
-        }
+        "hover_text@common.hover_text": {"layer": 59, "bindings": [ {"binding_name": "#using_touch", "binding_name_override": "#visible"} ]}
       }
     ]
   },
@@ -136,35 +65,35 @@
     "hover_control": "2",
     "pressed_control": "3",
     "layer": -10,
-    "size": [16, 16],
+    "size": [ 16, 16 ],
     "follows_cursor": true,
     "always_handle_pointer": true,
     "controls": [
-      { "1@container_common.held_flying_renderer": {} },
-      { "3@container_common.held_flying_renderer": {} },
-      { "2@container_common.held_flying_renderer": {} },
-      { "4@global.durability_bar_grabbed": { "layer": 100 } },
-      { "4@global.storage_bar_grabbed": { "layer": 100 } }
+      {"1@container_common.held_flying_renderer": {}},
+      {"3@container_common.held_flying_renderer": {}},
+      {"2@container_common.held_flying_renderer": {}},
+      {"4@global.durability_bar_grabbed": {"layer": 61}},
+      {"4@global.storage_bar_grabbed": {"layer": 61}}
     ]
   },
   "item_remover": {
     "type": "toggle",
-    "size": [18, 18],
+    "size": [ 18, 18 ],
     "unchecked_control": "default",
     "unchecked_hover_control": "default_hover",
     "checked_control": "default",
     "checked_hover_control": "default_hover",
-    "$white_highlight_slot_offset": [1, 1],
+    "$white_highlight_slot_offset": [ 1, 1 ],
     "controls": [
       {
         "default_hover@screen_content.highlight_slot": {
-          "size": [16, 16],
+          "size": [ 16, 16 ],
           "controls": [
-            { "tooltip@common.hover_text": { "layer": 100, "property_bag": { "#hover_text": "destroy item" } } }
+            {"tooltip@common.hover_text": {"layer": 100, "property_bag": {"#hover_text": "destroy item"}}}
           ]
         }
       },
-      { "default@global.empty_image": {} }
+      {"default@global.empty_image": {}}
     ],
     "button_mappings": [
       {

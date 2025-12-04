@@ -17,52 +17,58 @@
 {
   "namespace": "loom_screen",
   "loom_panel@container_common.container_details": {
-    "size": [ 176, 166 ],
+    "size": [176, 166],
     "$screen_controls": [
-      {"common_panel@screen_content.container_base": {"$loom_screen": true}},
+      { "common_panel@screen_content.container_base": { "$loom_screen": true } },
       {
         "loom_top_half@global.empty_panel": {
-          "size": [ 176, 78 ],
+          "size": [176, 78],
           "anchor_to": "top_middle",
           "anchor_from": "top_middle",
           "controls": [
             {
               "inputs_and_label@global.empty_stack": {
                 "orientation": "vertical",
-                "size": [ 50, 62 ],
+                "size": [50, 62],
                 "anchor_to": "top_left",
                 "anchor_from": "top_left",
                 "controls": [
-                  {"filler_1@global.empty_panel": {"size": [ "fill", 4 ]}},
-                  {"smithing_label@global.empty_panel": {"size": [ "fill", 21 ]}},
+                  { "filler_1@global.empty_panel": { "size": ["fill", 4] } },
+                  { "smithing_label@global.empty_panel": { "size": ["fill", 21] } },
                   {
                     "input_top@global.empty_stack": {
                       "orientation": "horizontal",
-                      "size": [ 50, 18 ],
+                      "size": [50, 18],
                       "controls": [
-                        {"filler_1@global.empty_panel": {"size": [ 12, "fill" ]}},
+                        { "filler_1@global.empty_panel": { "size": [12, "fill"] } },
                         {
-                          "banner_slot@global.container_item": {"$item_collection": "loom_input_items", "$cell_overlay_ref": "loom_screen.banner_empty_image"}
+                          "banner_slot@global.container_item": {
+                            "$item_collection": "loom_input_items",
+                            "$cell_overlay_ref": "loom_screen.banner_empty_image"
+                          }
                         },
-                        {"filler_2@global.empty_panel": {"size": [ 2, "fill" ]}},
+                        { "filler_2@global.empty_panel": { "size": [2, "fill"] } },
                         {
-                          "dye_slot@global.container_item": {"$item_collection": "loom_dye_items", "$cell_overlay_ref": "loom_screen.dye_empty_image"}
+                          "dye_slot@global.container_item": {
+                            "$item_collection": "loom_dye_items",
+                            "$cell_overlay_ref": "loom_screen.dye_empty_image"
+                          }
                         }
                       ]
                     }
                   },
-                  {"filler_2@global.empty_panel": {"size": [ "fill", 1 ]}},
+                  { "filler_2@global.empty_panel": { "size": ["fill", 1] } },
                   {
                     "input_bottom@global.empty_stack": {
                       "orientation": "horizontal",
-                      "size": [ 50, 18 ],
+                      "size": [50, 18],
                       "controls": [
-                        {"filler_1@global.empty_panel": {"size": [ 22, "fill" ]}},
+                        { "filler_1@global.empty_panel": { "size": [22, "fill"] } },
                         {
                           "pattern_panel@global.empty_panel": {
-                            "size": [ 18, 18 ],
+                            "size": [18, 18],
                             "controls": [
-                              {"pattern_slot@global.container_item": {"$item_collection": "loom_material_items"}},
+                              { "pattern_slot@global.container_item": { "$item_collection": "loom_material_items" } },
                               {
                                 "img@loom_screen.item_empty_image": {
                                   "$item_collection": "loom_material_items",
@@ -72,7 +78,7 @@
                             ]
                           }
                         },
-                        {"filler_2@global.empty_panel": {"size": [ 10, "fill" ]}}
+                        { "filler_2@global.empty_panel": { "size": [10, "fill"] } }
                       ]
                     }
                   }
@@ -81,7 +87,7 @@
             },
             {
               "scroll_panel@global.empty_panel": {
-                "size": [ 131, 69 ],
+                "size": [131, 69],
                 "anchor_to": "top_left",
                 "anchor_from": "top_left",
                 "controls": [
@@ -126,7 +132,7 @@
             },
             {
               "output_holder@global.empty_panel": {
-                "size": [ 34, 74 ],
+                "size": [34, 74],
                 "anchor_to": "top_right",
                 "anchor_from": "top_right",
                 "controls": [
@@ -143,14 +149,14 @@
             },
             {
               "banner_viewer@global.empty_panel": {
-                "size": [ 35, 48 ],
+                "size": [35, 48],
                 "anchor_to": "top_right",
                 "anchor_from": "top_right",
                 "controls": [
                   {
                     "result_banner_renderer@global.custom_renderer": {
                       "$type": "banner_pattern_renderer",
-                      "size": [ 20, 40 ],
+                      "size": [20, 40],
                       "anchor_from": "bottom_left",
                       "anchor_to": "bottom_left",
                       "bindings": [
@@ -174,18 +180,21 @@
         }
       },
       {
-        "bottom@global.inventory_bottom_half_with_label": {"anchor_to": "bottom_middle", "anchor_from": "bottom_middle"}
+        "bottom@global.inventory_bottom_half_with_label": {
+          "anchor_to": "bottom_middle",
+          "anchor_from": "bottom_middle"
+        }
       },
       {
         "disabled_scroll_box@global.empty_panel": {
-          "size": [ 57, 28 ],
+          "size": [57, 28],
           "anchor_to": "top_right",
           "anchor_from": "top_right",
           "controls": [
             {
               "disabled_box@screen_content.image_element": {
                 "texture": "assets/sprites/container/loom/scroller_disabled",
-                "size": [ 12, 15 ],
+                "size": [12, 15],
                 "anchor_from": "bottom_left",
                 "anchor_to": "bottom_left",
                 "bindings": [
@@ -230,10 +239,11 @@
       }
     ]
   },
+
   "item_empty_image@screen_content.image_element": {
     "texture": "$current_cell_texture",
-    "uv_size": [ 16, 16 ],
-    "size": [ 16, 16 ],
+    "uv_size": [16, 16],
+    "size": [16, 16],
     "anchor_from": "center",
     "anchor_to": "center",
     "bindings": [
@@ -245,15 +255,19 @@
       }
     ]
   },
-  "banner_empty_image@loom_screen.item_empty_image": {"$current_cell_texture|default": "assets/sprites/container/loom/banner_slot"},
-  "dye_empty_image@loom_screen.item_empty_image": {"$current_cell_texture|default": "assets/sprites/container/loom/dye_slot"},
+  "banner_empty_image@loom_screen.item_empty_image": {
+    "$current_cell_texture|default": "assets/sprites/container/loom/banner_slot"
+  },
+  "dye_empty_image@loom_screen.item_empty_image": {
+    "$current_cell_texture|default": "assets/sprites/container/loom/dye_slot"
+  },
   "scroll_panel@scroll_panel.scroll_panel": {
-    "$scroll_size": [ 12, 56.2 ],
-    "size": [ 73, 56.2 ],
-    "offset": [ 1, 0.4 ],
-    "$scroll_view_port_size": [ 71, 56.2 ],
-    "$scrolling_pane_size": [ "100%", "100%" ],
-    "$scroll_track_offset": [ 27.6, -1 ],
+    "$scroll_size": [12, 56.2],
+    "size": [73, 56.2],
+    "offset": [1, 0.4],
+    "$scroll_view_port_size": [71, 56.2],
+    "$scrolling_pane_size": ["100%", "100%"],
+    "$scroll_track_offset": [27.6, -1],
     "anchor_to": "bottom_right",
     "anchor_from": "bottom_right",
     "$scroll_box_image_control": "loom_screen.scroller",
@@ -262,25 +276,25 @@
   },
   "scroller@screen_content.image_element": {
     "tiled": true,
-    "nineslice_size": [ 6, 7, 6, 6 ],
-    "tiled_scale": [ 1, 1 ],
-    "offset": [ 2, 0.8 ],
+    "nineslice_size": [6, 7, 6, 6],
+    "tiled_scale": [1, 1],
+    "offset": [2, 0.8],
     "anchor_to": "center",
     "anchor_from": "center",
     "texture": "assets/sprites/container/loom/scroller",
-    "size": [ 12, "100%" ]
+    "size": [12, "100%"]
   },
   "scroll_grid_holder@global.empty_panel": {
-    "size": [ 56, "100%cm" ],
+    "size": [56, "100%cm"],
     "anchor_to": "center",
     "anchor_from": "center",
-    "offset": [ 0, -0.2 ],
+    "offset": [0, -0.2],
     "controls": [
-      {"scroll_buffer@global.empty_panel": {"size": [ 56, "100%sm" ]}},
+      { "scroll_buffer@global.empty_panel": { "size": [56, "100%sm"] } },
       {
         "scroll_grid": {
           "type": "grid",
-          "size": [ 56, "default" ],
+          "size": [56, "default"],
           "collection_name": "$collection_name",
           "anchor_to": "center",
           "anchor_from": "center",
@@ -303,18 +317,18 @@
   },
   "pattern_button": {
     "type": "input_panel",
-    "size": [ 14, 14 ],
+    "size": [14, 14],
     "$background_image_control_name|default": "bg",
     "controls": [
       {
         "$background_image_control_name@global.empty_panel": {
-          "size": [ 14, 14 ],
-          "offset": [ 1, 0 ],
+          "size": [14, 14],
+          "offset": [1, 0],
           "layer": 1,
           "controls": [
             {
               "default@screen_content.image_element": {
-                "size": [ 14, 14 ],
+                "size": [14, 14],
                 "nineslice_size": 1,
                 "texture": "assets/sprites/container/loom/pattern",
                 "bindings": [
@@ -330,7 +344,7 @@
             },
             {
               "selected@screen_content.image_element": {
-                "size": [ 14, 14 ],
+                "size": [14, 14],
                 "nineslice_size": 1,
                 "texture": "assets/sprites/container/loom/pattern_selected",
                 "bindings": [
@@ -354,8 +368,8 @@
           "keep_ratio": true,
           "layer": 10,
           "texture": "#texture",
-          "size": [ 5, 10 ],
-          "offset": [ 1, 0 ],
+          "size": [6, 10],
+          "offset": [1, 0],
           "bindings": [
             {
               "binding_name": "#banner_patterns",
@@ -376,9 +390,9 @@
           "anchor_to": "center",
           "anchor_from": "center",
           "keep_ratio": true,
-          "offset": [ 1, 0 ],
+          "offset": [1, 0],
           "texture": "textures/ui/ashur/banner_patterns/banner_bg",
-          "size": [ 5, 10 ],
+          "size": [6, 10],
           "layer": 6
         }
       },
@@ -386,7 +400,7 @@
         "pattern_slot_button": {
           "type": "button",
           "$focus_id|default": "",
-          "offset": [ 0, -1 ],
+          "offset": [0, -1],
           "$focus_override_down|default": "",
           "$focus_override_up|default": "",
           "$focus_override_left|default": "",
@@ -498,18 +512,18 @@
               "to_button_id": "button.pattern_select",
               "mapping_type": "pressed"
             },
-            {"to_button_id": "button.container_slot_hovered", "mapping_type": "pressed"}
+            { "to_button_id": "button.container_slot_hovered", "mapping_type": "pressed" }
           ],
           "hover_control": "hover",
           "controls": [
             {
               "hover@global.empty_panel": {
-                "size": [ 14, 14 ],
+                "size": [14, 14],
                 "controls": [
                   {
                     "hover@screen_content.image_element": {
-                      "size": [ 14, 14 ],
-                      "offset": [ 1, 1 ],
+                      "size": [14, 14],
+                      "offset": [1, 1],
                       "nineslice_size": 1,
                       "texture": "assets/sprites/container/loom/pattern_highlighted",
                       "bindings": [
@@ -522,12 +536,96 @@
                         }
                       ]
                     }
-                  }
+                  }/*,
+                  {
+                    "hover_text_test@global.empty_panel": {
+                      "$hover_text|default": "",
+                      "$pattern_index|default": "",
+                      "controls": [
+                        {"0_1_@loom_screen.hover_text_template":{"$hover_text":"atemp.0_1_.pattern","$pattern_index":"0_1_"}},
+                        {"0_2_@loom_screen.hover_text_template":{"$hover_text":"atemp.0_2_.pattern","$pattern_index":"0_2_"}},
+                        {"0_3_@loom_screen.hover_text_template":{"$hover_text":"atemp.0_3_.pattern","$pattern_index":"0_3_"}},
+                        {"0_4_@loom_screen.hover_text_template":{"$hover_text":"atemp.0_4_.pattern","$pattern_index":"0_4_"}},
+                        {"0_5_@loom_screen.hover_text_template":{"$hover_text":"atemp.0_5_.pattern","$pattern_index":"0_5_"}},
+                        {"0_6_@loom_screen.hover_text_template":{"$hover_text":"atemp.0_6_.pattern","$pattern_index":"0_6_"}},
+                        {"0_7_@loom_screen.hover_text_template":{"$hover_text":"atemp.0_7_.pattern","$pattern_index":"0_7_"}},
+                        {"0_8_@loom_screen.hover_text_template":{"$hover_text":"atemp.0_8_.pattern","$pattern_index":"0_8_"}},
+                        {"0_9_@loom_screen.hover_text_template":{"$hover_text":"atemp.0_9_.pattern","$pattern_index":"0_9_"}},
+                        {"0_10_@loom_screen.hover_text_template":{"$hover_text":"atemp.0_10_.pattern","$pattern_index":"0_10_"}},
+                        {"0_11_@loom_screen.hover_text_template":{"$hover_text":"atemp.0_11_.pattern","$pattern_index":"0_11_"}},
+                        {"0_12_@loom_screen.hover_text_template":{"$hover_text":"atemp.0_12_.pattern","$pattern_index":"0_12_"}},
+                        {"0_13_@loom_screen.hover_text_template":{"$hover_text":"atemp.0_13_.pattern","$pattern_index":"0_13_"}},
+                        {"0_14_@loom_screen.hover_text_template":{"$hover_text":"atemp.0_14_.pattern","$pattern_index":"0_14_"}},
+                        {"0_15_@loom_screen.hover_text_template":{"$hover_text":"atemp.0_15_.pattern","$pattern_index":"0_15_"}},
+                        {"0_16_@loom_screen.hover_text_template":{"$hover_text":"atemp.0_16_.pattern","$pattern_index":"0_16_"}},
+                        {"0_17_@loom_screen.hover_text_template":{"$hover_text":"atemp.0_17_.pattern","$pattern_index":"0_17_"}},
+                        {"0_18_@loom_screen.hover_text_template":{"$hover_text":"atemp.0_18_.pattern","$pattern_index":"0_18_"}},
+                        {"0_20_@loom_screen.hover_text_template":{"$hover_text":"atemp.0_20_.pattern","$pattern_index":"0_20_"}},
+                        {"0_21_@loom_screen.hover_text_template":{"$hover_text":"atemp.0_21_.pattern","$pattern_index":"0_21_"}},
+                        {"0_22_@loom_screen.hover_text_template":{"$hover_text":"atemp.0_22_.pattern","$pattern_index":"0_22_"}},
+                        {"0_23_@loom_screen.hover_text_template":{"$hover_text":"atemp.0_23_.pattern","$pattern_index":"0_23_"}},
+                        {"0_24_@loom_screen.hover_text_template":{"$hover_text":"atemp.0_24_.pattern","$pattern_index":"0_24_"}},
+                        {"0_25_@loom_screen.hover_text_template":{"$hover_text":"atemp.0_25_.pattern","$pattern_index":"0_25_"}},
+                        {"0_26_@loom_screen.hover_text_template":{"$hover_text":"atemp.0_26_.pattern","$pattern_index":"0_26_"}},
+                        {"0_27_@loom_screen.hover_text_template":{"$hover_text":"atemp.0_27_.pattern","$pattern_index":"0_27_"}},
+                        {"0_28_@loom_screen.hover_text_template":{"$hover_text":"atemp.0_28_.pattern","$pattern_index":"0_28_"}},
+                        {"0_29_@loom_screen.hover_text_template":{"$hover_text":"atemp.0_29_.pattern","$pattern_index":"0_29_"}},
+                        {"0_30_@loom_screen.hover_text_template":{"$hover_text":"atemp.0_30_.pattern","$pattern_index":"0_30_"}},
+                        {"0_31_@loom_screen.hover_text_template":{"$hover_text":"atemp.0_31_.pattern","$pattern_index":"0_31_"}},
+                        {"0_32_@loom_screen.hover_text_template":{"$hover_text":"atemp.0_32_.pattern","$pattern_index":"0_32_"}},
+                        {"0_33_@loom_screen.hover_text_template":{"$hover_text":"atemp.0_33_.pattern","$pattern_index":"0_33_"}},
+                        {"0_34_@loom_screen.hover_text_template":{"$hover_text":"atemp.0_34_.pattern","$pattern_index":"0_34_"}},
+                        {"0_35_@loom_screen.hover_text_template":{"$hover_text":"atemp.0_35_.pattern","$pattern_index":"0_35_"}},
+                        {"0_36_@loom_screen.hover_text_template":{"$hover_text":"atemp.0_36_.pattern","$pattern_index":"0_36_"}},
+                        {"0_37_@loom_screen.hover_text_template":{"$hover_text":"atemp.0_37_.pattern","$pattern_index":"0_37_"}},
+                        {"0_38_@loom_screen.hover_text_template":{"$hover_text":"atemp.0_38_.pattern","$pattern_index":"0_38_"}},
+                        {"0_39_@loom_screen.hover_text_template":{"$hover_text":"atemp.0_39_.pattern","$pattern_index":"0_39_"}},
+                        {"0_40_@loom_screen.hover_text_template":{"$hover_text":"atemp.0_40_.pattern","$pattern_index":"0_40_"}},
+                        {"0_41_@loom_screen.hover_text_template":{"$hover_text":"atemp.0_41_.pattern","$pattern_index":"0_41_"}},
+                        {"0_42_@loom_screen.hover_text_template":{"$hover_text":"atemp.0_42_.pattern","$pattern_index":"0_42_"}},
+                        {"0_43_@loom_screen.hover_text_template":{"$hover_text":"atemp.0_43_.pattern","$pattern_index":"0_43_"}}
+                      ]
+                    }
+                  }*/
                 ]
               }
             }
           ]
         }
+      }
+    ]
+  },
+  "hover_text_template@global.custom_renderer": {
+    "allow_clipping": false,
+
+    "$type": "bundle_tooltip_renderer",
+    "layer": 900,
+    "controls": [
+      {
+        "1@java_hover_text.java_tooltip_test": {
+          "$hover|default": true,
+          "offset": [-3, -20],
+          "bindings": [
+            {
+              "binding_name": "(not #using_touch)",
+              "binding_name_override": "#visible"
+            }
+          ]
+        }
+      }
+    ],
+    "bindings": [
+      {
+        "binding_name": "#banner_patterns",
+        "binding_type": "collection",
+        "binding_condition": "always",
+        "binding_collection_name": "patterns"
+      },
+      {
+        "binding_type": "view",
+        "binding_condition": "always",
+        "source_property_name": "(#banner_patterns = $pattern_index)",
+        "target_property_name": "#visible"
       }
     ]
   }

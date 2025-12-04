@@ -29,6 +29,7 @@
           "size": [184, 166],
           "orientation": "horizontal",
           "visible": false,
+          "ignored": true,
           "controls": [
             {
               "tab_stack@furnace_tabs.furnace_tabs": {
@@ -61,6 +62,7 @@
                 "size": [121, 34],
                 "anchor_from": "top_right",
                 "anchor_to": "top_right",
+                "ignored": true,
                 "controls": [
                   {
                     "smoker_selected_items@smelting_common.smoker_selected_items": {
@@ -76,6 +78,7 @@
                 "size": [40, 52],
                 "anchor_from": "top_left",
                 "anchor_to": "top_left",
+                "ignored": true,
                 "controls": [
                   {
                     "layout@smelting_common.layout_toggle": {

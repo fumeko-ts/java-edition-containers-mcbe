@@ -18,7 +18,7 @@
   // Set container UI transparency (range 0.0 to 1.0)
   "$container_opacity": 1,
 
-  "$no_close_button": false,
+  "$no_close_button": true,
 
   "$title_text_color": [0.247, 0.247, 0.247, 1.0],
 
@@ -58,7 +58,7 @@
   "$cb_is_thick_menu_buttons": false,
   "$jc:dev": true,
   
-  "$recipe_book_bindings": [// this is here because it is to big
+  "$recipe_book_bindings": [
     {
       "binding_name": "#recipe_book_total_items",
       "binding_name_override": "#maximum_grid_items",

@@ -57,7 +57,7 @@
     "nineslice_size": 1,
     "size": [18, 18],
     "$slot_selected_binding_name|default": "#is_selected_slot",
-    "visible": false,
+    "visible": true,
     "layer": 6,
     "anchor_from": "center",
     "anchor_to": "center",
@@ -252,7 +252,7 @@
                       "offset": "$item_renderer_offset",
                       "anchor_to": "center",
                       "anchor_from": "center",
-                      "layer": 7
+                      "layer": 11
                     }
                   }
                 ]
@@ -273,24 +273,17 @@
           "layer": 5
         }
       },
-      {
-        "container_item_lock_overlay@common.container_item_lock_overlay": {
-          "size": "$item_renderer_size",
-          "anchor_to": "top_left",
-          "anchor_from": "top_left",
-          "layer": 6
-        }
-      },
-      { "item_lock_cell_image@common.item_lock_cell_image": { "layer": 2 } },
       { "bundle_slot_panel@gameplay.bundle_slot_panel": { "layer": 10 } }
     ]
   },
   "item_renderer": {
     "type": "custom",
     "renderer": "inventory_item_renderer",
-    "layer": 5,
+    "layer": 10,
     "$item_renderer_binding_condition|default": "visible",
     "$item_renderer_offset": [0, 0],
+    "anchor_to": "center",
+    "anchor_from": "center",
     "offset": "$item_renderer_offset",
     "bindings": [
       { "binding_type": "collection_details", "binding_collection_name": "$item_collection_name" },
@@ -312,10 +305,13 @@
         "binding_condition": "visible",
         "binding_type": "collection",
         "binding_collection_name": "$item_collection_name"
+      },
+      {
+        "binding_name": "#fade_in_icon_time_seconds",
+        "binding_condition": "visible",
+        "binding_type": "collection",
+        "binding_collection_name": "$item_collection_name"
       }
     ]
-  },
-  //compatibility
-  
-  "item_list": {"layer": 5/*https://mcpedl.com/java-aspects/ AgentMindStorm (@agentms_)*/}
+  }
 }

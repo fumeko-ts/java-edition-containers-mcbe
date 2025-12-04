@@ -42,12 +42,60 @@
                           "recipe_base@screen_content.recipe_book": {
                             "controls": [
                               {
-                                "page@pagination.base_page_logic": {
-                                  "offset": [-1, 0],
-                                  "$is_in_recipe_inventory": true,
-                                  "$page_content": "recipe_grid.recipe_grid"
+                                "holder@global.empty_stack": {
+                                  "orientation": "vertical",
+                                  "anchor_to": "top_right",
+                                  "anchor_from": "top_right",
+                                  "size": [122, 28],
+                                  "controls": [
+                                    { "buffer_1@global.empty_panel": { "size": [122, 12] } },
+                                    {
+                                      "search_and_filter@global.empty_stack": {
+                                        "orientation": "horizontal",
+                                        "size": [122, 16],
+                                        "controls": [
+                                          {
+                                            "search_holder@global.empty_stack": {
+                                              "orientation": "vertical",
+                                              "size": [81, 16],
+                                              "controls": [
+                                                { "buffer_1@global.empty_panel": { "size": [81, 1] } },
+                                                {
+                                                  "text_edit_control@text_edit_box.text_edit_box": {
+                                                    "size": [81, 14],
+                                                    "property_bag": { "#property_field": "#item_name" },
+                                                    "max_length": 300000,
+                                                    "$text_clear_button_offset": [3, 0],
+                                                    "$text_edit_box_label_offset": [1, 0.4],
+                                                    "$text_clear_button_enabled": true,
+
+                                                    "$place_holder_text": "atemp.recipe_book.searchBox",
+                                                    "$extra_contents": "text_edit_box.placeholder_label",
+
+                                                    "$text_background_locked": "screen_content.text_field",
+                                                    "$text_background_default": "screen_content.text_field",
+                                                    "$text_background_hover": "screen_content.text_field_highlighted",
+
+                                                    "$text_edit_binding_name": "#text_box_item_name",
+                                                    "$text_edit_box_label_size": ["default", 10]
+                                                  }
+                                                },
+                                                { "buffer_2@global.empty_panel": { "size": [81, 1] } }
+                                              ]
+                                            }
+                                          },
+                                          { "buffer_1@global.empty_panel": { "size": [4, 16] } },
+
+                                          { "filter@crafting_common.filter_toggle": {} }, //[26, 16],
+                                          { "buffer_2@global.empty_panel": { "size": [11, 16] } }
+                                        ]
+                                      }
+                                    }
+                                  ]
                                 }
-                              }
+                              },
+                              { "recipe_items@survival_recipe_grid.recipe_grid": {} },
+                              { "page_navigation@pagination.base_page_logic": {} }
                             ]
                           }
                         },

@@ -61,46 +61,48 @@
       }
     ]
   },
-  "page_template@global.empty_panel": {
-    "clips_children": true,
-    "size": [125, 100],
-    "controls": [{ "grid@$page_content": { "offset": "$page_offset" } }]
-  },
-  "page_1@page_template": { "$page_offset": [0, 0] },
-  "page_2@page_template": { "$page_offset": [0, -100] },
-  "page_3@page_template": { "$page_offset": [0, -200] },
-  "page_4@page_template": { "$page_offset": [0, -300] },
-  "page_5@page_template": { "$page_offset": [0, -400] },
-  "page_6@page_template": { "$page_offset": [0, -500] },
-  "page_7@page_template": { "$page_offset": [0, -600] },
-  "page_8@page_template": { "$page_offset": [0, -700] },
-  "page_9@page_template": { "$page_offset": [0, -800] },
-  "page_10@page_template": { "$page_offset": [0, -900] },
-  "page_11@page_template": { "$page_offset": [0, -1000] },
-  "page_12@page_template": { "$page_offset": [0, -1100] },
-  "page_13@page_template": { "$page_offset": [0, -1200] },
-  "page_14@page_template": { "$page_offset": [0, -1300] },
-  "page_15@page_template": { "$page_offset": [0, -1400] },
-  "page_16@page_template": { "$page_offset": [0, -1500] },
-  "page_17@page_template": { "$page_offset": [0, -1600] },
-  "page_18@page_template": { "$page_offset": [0, -1700] },
-  "page_19@page_template": { "$page_offset": [0, -1800] },
-  "page_20@page_template": { "$page_offset": [0, -1900] },
-  "page_21@page_template": { "$page_offset": [0, -2000] },
-  "page_22@page_template": { "$page_offset": [0, -2100] },
-  "page_23@page_template": { "$page_offset": [0, -2200] },
-  "page_24@page_template": { "$page_offset": [0, -2300] },
-  "page_25@page_template": { "$page_offset": [0, -2400] },
-  "page_26@page_template": { "$page_offset": [0, -2500] },
-  "page_27@page_template": { "$page_offset": [0, -2600] },
   "base_page_logic@global.empty_panel": {
     "$current_page": 1,
     "$page_counter": "('pagination.index_' + ($current_page + 1))",
-    "$page_contents": "('pagination.page_' + $current_page)",
     "controls": [
       {
         "base_content@global.empty_panel": {
-          "controls": "$recipe_book_contents",
+          "controls": [
+            {
+              "stack_holder@global.empty_stack": {
+                "orientation": "vertical",
+                "anchor_to": "bottom_middle",
+                "anchor_from": "bottom_middle",
+                "size": [77, 30],
+                "controls": [
+                  {
+                    "stack@global.empty_stack": {
+                      "orientation": "horizontal",
+                      "size": [77, 17],
+                      "anchor_to": "bottom_middle",
+                      "anchor_from": "bottom_middle",
+                      "layer": 20,
+                      "controls": [
+                        { "buffer@global.empty_panel": { "size": [18, 0], "ignored": "(not ($current_page = 1))" } },
+                        { "left@pagination.tepes_left_button": {} },
+                        {
+                          "buffer1@global.empty_panel": {
+                            "size": [43, 17],
+                            "controls": [
+                              { "label@pagination.page_count_label": {} },
+                              { "max_page_label@pagination.max_page_label": {} }
+                            ]
+                          }
+                        },
+                        { "right@pagination.tepes_right_button": {} }
+                      ]
+                    }
+                  },
+                  { "buffer_fill_1@global.empty_panel": { "size": [65, 13] } }
+                ]
+              }
+            }
+          ],
           "bindings": [
             {
               "binding_type": "view",

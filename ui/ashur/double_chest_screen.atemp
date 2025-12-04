@@ -43,7 +43,7 @@
                             "anchor_to": "top_left",
                             "anchor_from": "top_left",
                             "layer": 5,
-                            "text": "atemp.container.chestDouble",
+                            "text": "$container_title",
                             "color": "$title_text_color"
                           }
                         }

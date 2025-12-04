@@ -218,7 +218,23 @@
     "$size": [18, 18],
     "$controls|default": [],
     "$is_radio_toggle|default": true,
+    "$radio_collection_name|default": "none",
     "$is_default_active|default": false,
+    "$toggle_group_forced_index|default": -1,
+    "$radio_collection_condition|default": "always",
+    "$button_mappings|default": [
+      {
+        "from_button_id": "button.menu_select",
+        "to_button_id": "button.menu_select",
+        "mapping_type": "pressed"
+      },
+      {
+        "from_button_id": "button.menu_ok",
+        "to_button_id": "button.menu_ok",
+        "mapping_type": "pressed"
+      }
+    ],
+    "$button_volume|default": 1.0,
     "controls": [
       {
         "$toggle_control_name": {
@@ -226,7 +242,7 @@
           "size": "$size",
           "$hover|default": false,
           "sound_name": "random.click",
-          "sound_volume": 1.0,
+          "sound_volume": "$button_volume",
           "sound_pitch": 1.0,
           "toggle_name": "$toggle_name",
           "unchecked_control": "default",
@@ -244,24 +260,28 @@
           "controls": "$controls",
           "bindings": [
             {
+              "binding_type": "collection_details",
+              "binding_collection_name": "$radio_collection_name",
+              "binding_condition": "$radio_collection_condition"
+            },
+
+            {
+              "binding_name": "#selectable_button_visibility",
+              "binding_name_override": "#enabled",
+              "binding_condition": "always",
+              "ignored": "(not ($radio_collection_name = '#enchant_buttons'))",
+              "binding_collection_name": "#enchant_buttons",
+              "binding_type": "collection"
+            },
+
+            {
               "binding_type": "global",
               "binding_condition": "always",
               "binding_name": "$toggle_binding_value",
               "binding_name_override": "#toggle_state"
             }
           ],
-          "button_mappings": [
-            {
-              "from_button_id": "button.menu_select",
-              "to_button_id": "button.menu_select",
-              "mapping_type": "pressed"
-            },
-            {
-              "from_button_id": "button.menu_ok",
-              "to_button_id": "button.menu_ok",
-              "mapping_type": "pressed"
-            }
-          ]
+          "button_mappings": "$button_mappings"
         }
       }
     ]

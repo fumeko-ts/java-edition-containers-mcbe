@@ -16,63 +16,38 @@
 
 {
   "namespace": "crafting_common",
-  "player_renderer_panel@global.empty_panel": {
-    "size": [34, 45],
-    "controls": [
+  "filter_button_template@global.empty_image": {"size": [26, 16]},
+
+  "filter_toggle@toggle.radio_toggle": {
+    "$size": [26, 16],
+    "$toggle_control_name": "recipe_filter",
+    "$toggle_name": "toggle.enableFiltering",
+    "$toggle_binding_value": "#filtering_enabled",
+    "$is_radio_toggle": false,
+    "$controls": [
+      { "default@crafting_common.filter_button_template": { "texture": "assets/sprites/recipe_book/filter_disabled" } },
       {
-        "float@global.empty_panel": {
-          "anchor_from": "center",
-          "anchor_to": "center",
-          "size": [34, 20],
-          "offset": [0, -10],
-          "controls": [
-            {
-              "player_renderer": {
-                "type": "custom",
-                "renderer": "live_player_renderer",
-                "property_bag": { "#look_at_cursor": true },
-                "animation_reset_name": "screen_animation_reset",
-                "anims": [
-                  "@common.screen_exit_size_animation_push",
-                  "@common.screen_exit_size_animation_pop",
-                  "@common.screen_entrance_size_animation_push",
-                  "@common.screen_entrance_size_animation_pop"
-                ]
-              }
-            }
-          ]
+        "default_hover@crafting_common.filter_button_template": {
+          "texture": "assets/sprites/recipe_book/filter_disabled_highlighted","controls": [{"hover@global.hover_text":{"layer":20000,"property_bag":{"#hover_text":"Showing All"}}}]
         }
-      }
-    ]
-  },
-  "filter_disabled@global.empty_image": { "texture": "assets/sprites/recipe_book/filter_disabled.png" },
-  "filter_disabled_highlighted@global.empty_image": {
-    "texture": "assets/sprites/recipe_book/filter_disabled_highlighted.png",
-    "controls": [{ "hover@global.hover_text": { "layer": 20000, "property_bag": { "#hover_text": "Showing All" } } }]
-  },
-  "filter_enabled@global.empty_image": { "texture": "assets/sprites/recipe_book/filter_enabled.png" },
-  "filter_enabled_highlighted@global.empty_image": {
-    "texture": "assets/sprites/recipe_book/filter_enabled_highlighted.png",
-    "controls": [
-      { "hover@global.hover_text": { "layer": 20000, "property_bag": { "#hover_text": "Showing Craftable" } } }
-    ]
-  },
-  "filter_toggle@common_toggles.switch_toggle": {
-    "size": [26, 18],
-    "$unchecked_control": "crafting_common.filter_disabled",
-    "$unchecked_hover_control": "crafting_common.filter_disabled_highlighted",
-    "$checked_control": "crafting_common.filter_enabled",
-    "$checked_hover_control": "crafting_common.filter_enabled_highlighted",
+      },
+      {
+        "checked_hover@crafting_common.filter_button_template": {
+          "texture": "assets/sprites/recipe_book/filter_enabled_highlighted","controls": [{"hover@global.hover_text":{"layer":20000,"property_bag":{"#hover_text":"Showing Craftable"}}}]
+        }
+      },
+      { "checked@crafting_common.filter_button_template": { "texture": "assets/sprites/recipe_book/filter_enabled" } }
+    ],
+
     "variables": {
       "requires": "($cb_is_thick_menu_buttons = true)",
-      "$unchecked_control": "thickly.filter_disabled",
-      "$unchecked_hover_control": "thickly.filter_disabled_highlighted",
-      "$checked_control": "thickly.filter_enabled",
-      "$checked_hover_control": "thickly.filter_enabled_highlighted"
+      "$controls": [
+        { "default@thickly.filter_disabled": {} },
+        {"default_hover@thickly.filter_disabled_highlighted": {"controls": [{ "hover@global.hover_text": { "layer": 20000, "property_bag": { "#hover_text": "Showing All" } } }]}},
+        {"checked_hover@thickly.filter_enabled_highlighted": {"controls": [{ "hover@global.hover_text": { "layer": 20000, "property_bag": { "#hover_text": "Showing Craftable" } } }]}},
+        { "checked@thickly.filter_enabled": {} }
+      ]
     },
-    "$toggle_name": "toggle.enableFiltering",
-    "$toggle_binding_type": "global",
-    "$toggle_state_binding_name": "#filtering_enabled",
     "$button_mappings": [
       { "to_button_id": "button.filter_toggle_hovered", "mapping_type": "pressed" },
       {
@@ -80,27 +55,7 @@
         "mapping_type": "pressed",
         "from_button_id": "button.menu_select"
       },
-      { "to_button_id": "button.menu_ok", "mapping_type": "focused", "from_button_id": "button.menu_ok" },
-      {
-        "to_button_id": "button.controller_back",
-        "mapping_type": "focused",
-        "from_button_id": "button.controller_back",
-        "ignored": "(not $is_ps4)"
-      },
-      {
-        "to_button_id": "$toggle_off_button",
-        "mapping_type": "pressed",
-        "from_button_id": "button.menu_left",
-        "ignored": "(not $enable_directional_toggling)",
-        "input_mode_condition": "gamepad_and_not_gaze"
-      },
-      {
-        "to_button_id": "$toggle_on_button",
-        "mapping_type": "pressed",
-        "from_button_id": "button.menu_right",
-        "ignored": "(not $enable_directional_toggling)",
-        "input_mode_condition": "gamepad_and_not_gaze"
-      }
+      { "to_button_id": "button.menu_ok", "mapping_type": "focused", "from_button_id": "button.menu_ok" }
     ]
   },
   "crafting_survival_tabs@global.empty_stack": {
@@ -108,11 +63,42 @@
     "size": [35, 135],
     "layer": 2,
     "controls": [
-      { "search@crafting_common.search_tab_survival": {} },
-      { "equipment@crafting_common.equipment_tab_survival": {} },
-      { "construction@crafting_common.construction_tab_survival": {} },
-      { "nature@crafting_common.nature_tab_survival": {} },
-      { "items@crafting_common.items_tab_survival": {} }
+      {
+        "search_tab_survival@crafting_common.survival_tab_base": {
+          "$toggle_default_state": true,
+          "$tab_view_binding_name": "search_tab_toggle",
+          "$toggle_group_forced_index": "$search_index",
+          "$toggle_state_binding_name": "#is_left_tab_search"
+        }
+      },
+      {
+        "equipment_tab_survival@crafting_common.survival_tab_base": {
+          "$tab_view_binding_name": "equipment_tab_toggle",
+          "$toggle_group_forced_index": "$equipment_index",
+          "$toggle_state_binding_name": "#is_left_tab_equipment"
+        }
+      },
+      {
+        "construction_tab_survival@crafting_common.survival_tab_base": {
+          "$tab_view_binding_name": "construction_tab_toggle",
+          "$toggle_group_forced_index": "$construction_index",
+          "$toggle_state_binding_name": "#is_left_tab_construct"
+        }
+      },
+      {
+        "nature_tab_survival@crafting_common.survival_tab_base": {
+          "$tab_view_binding_name": "nature_tab_toggle",
+          "$toggle_group_forced_index": "$nature_index",
+          "$toggle_state_binding_name": "#is_left_tab_nature"
+        }
+      },
+      {
+        "items_tab_survival@crafting_common.survival_tab_base": {
+          "$tab_view_binding_name": "items_tab_toggle",
+          "$toggle_group_forced_index": "$items_index",
+          "$toggle_state_binding_name": "#is_left_tab_items"
+        }
+      }
     ]
   },
   "tab_item_renderer@global.custom_renderer": {
@@ -121,8 +107,9 @@
     "$item_id|default": -1,
     "property_bag": { "#item_id_aux": "($item_id * 65536)" }
   },
-  "survival_tab_icon@global.empty_panel": {
+  "survival_tab_icons@global.empty_panel": {
     "offset": [0.4, 0],
+    "size": [24, 25],
     "controls": [
       {
         "search@global.empty_panel": {
@@ -166,7 +153,6 @@
       }
     ]
   },
-  "survival_tab_holder@global.empty_panel": { "size": [24, 25], "controls": [{ "img@$tab_icon": {} }] },
   "survival_tab_base@toggle.toggle": {
     "$toggle_offset": [5, 3],
     "size": [35, 27],
@@ -180,94 +166,7 @@
     "$toggle_name": "navigation_tab",
     "$tab_icon": "crafting_common.survival_tab_icon",
     "$toggle_state_binding_name": "#toggle_state",
-    "$tab_content": "crafting_common.survival_tab_holder"
-  },
-  "search_tab_survival@crafting_common.survival_tab_base": {
-    "$toggle_default_state": true,
-    "$tab_view_binding_name": "search_tab_toggle",
-    "$toggle_group_forced_index": "$search_index",
-    "$toggle_state_binding_name": "#is_left_tab_search"
-  },
-  "equipment_tab_survival@crafting_common.survival_tab_base": {
-    "$tab_view_binding_name": "equipment_tab_toggle",
-    "$toggle_group_forced_index": "$equipment_index",
-    "$toggle_state_binding_name": "#is_left_tab_equipment"
-  },
-  "construction_tab_survival@crafting_common.survival_tab_base": {
-    "$tab_view_binding_name": "construction_tab_toggle",
-    "$toggle_group_forced_index": "$construction_index",
-    "$toggle_state_binding_name": "#is_left_tab_construct"
-  },
-  "nature_tab_survival@crafting_common.survival_tab_base": {
-    "$tab_view_binding_name": "nature_tab_toggle",
-    "$toggle_group_forced_index": "$nature_index",
-    "$toggle_state_binding_name": "#is_left_tab_nature"
-  },
-  "items_tab_survival@crafting_common.survival_tab_base": {
-    "$tab_view_binding_name": "items_tab_toggle",
-    "$toggle_group_forced_index": "$items_index",
-    "$toggle_state_binding_name": "#is_left_tab_items"
-  },
-  "head_and_chest_creative@global.empty_stack": {
-    "orientation": "vertical",
-    "size": [18, 45],
-    "$item_collection_name": "armor_items",
-    "collection_name": "$item_collection_name",
-    "controls": [
-      {
-        "armor_item_index_0@global.container_item": {
-          "$cell_overlay_ref": "screen_content.armor_overlay_helmet",
-          "$button_ref": "crafting.no_coalesce_container_slot_button",
-          "collection_index": 0
-        }
-      },
-      { "buffer_1@global.empty_panel": { "size": ["default", 9] } },
-      {
-        "armor_item_index_1@global.container_item": {
-          "$cell_overlay_ref": "screen_content.armor_overlay_chest",
-          "$button_ref": "crafting.no_coalesce_container_slot_button",
-          "collection_index": 1
-        }
-      }
-    ]
-  },
-  "legs_and_boots_creative@global.empty_stack": {
-    "orientation": "vertical",
-    "size": [18, 45],
-    "$item_collection_name": "armor_items",
-    "collection_name": "$item_collection_name",
-    "controls": [
-      {
-        "armor_item_index_2@global.container_item": {
-          "$cell_overlay_ref": "screen_content.armor_overlay_legs",
-          "$button_ref": "crafting.no_coalesce_container_slot_button",
-          "collection_index": 2
-        }
-      },
-      { "buffer_1@global.empty_panel": { "size": ["default", 9] } },
-      {
-        "armor_item_index_3@global.container_item": {
-          "$cell_overlay_ref": "screen_content.armor_image_feet",
-          "$button_ref": "crafting.no_coalesce_container_slot_button",
-          "collection_index": 3
-        }
-      }
-    ]
-  },
-  "offhand_slot_creative@global.empty_stack": {
-    "orientation": "vertical",
-    "size": [18, 18],
-    "$item_collection_name": "offhand_items",
-    "collection_name": "$item_collection_name",
-    "controls": [
-      {
-        "offhand_grid_item@global.container_item": {
-          "collection_index": 0,
-          "$cell_overlay_ref": "screen_content.armor_overlay_shield",
-          "$button_ref": "crafting.no_coalesce_container_slot_button"
-        }
-      }
-    ]
+    "$tab_content": "crafting_common.survival_tab_icons"
   },
   "recipe_toggle_base@toggle.toggle": {
     "type": "panel",

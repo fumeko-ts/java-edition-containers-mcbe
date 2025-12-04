@@ -1,35 +1,39 @@
 {
-   "format_version": 2,
-   "header": {    
-      "name": "§lJava Containers",
-      "description": "Made by. @Ashura_temps\nOffical download: https://www.planetminecraft.com/texture-pack/java-containers-6490069/\n§fJoin the discord for updates §bhttps://discord.gg/sFnE7zv75t.",
-      "uuid": "9537c60a-2d6b-455b-8e49-e0baf87083d2",
-      "version": [1, 0, 0],
-      "min_engine_version": [1, 16, 0]
-   },
-   "modules": [
-      {
-         "type": "resources",
-         "description": "Created by Ashura_temps",
-         "uuid": "7058f009-f95f-4fe3-b8ed-134c6b16ba89",
-         "version": [1, 0, 0]
-      }
-   ],
-    "metadata": {
-      "authors": ["Ashura_temps"],
-      "url": "https://discord.gg/sFnE7zv75t"
-    },
-  "subpacks" :[
+  "format_version": 2,
+  "header": {
+    "name": "§lJava Containers",
+    "description": "By @Ashura_temps\n§fDownload: §bhttps://www.planetminecraft.com/texture-pack/java-containers-6490069/\n§fDiscord: §bhttps://discord.gg/sFnE7zv75t",
+    "uuid": "9537c60a-2d6b-455b-8e49-e0baf87083d2",
+    "version": [1, 0, 0],
+    "min_engine_version": [1, 16, 0]
+  },
+  "modules": [
     {
-      "folder_name":"laggy_mode",
-      "name":"laggy mode",
-      "memory_tier":1
+      "type": "resources",
+      "description": "Created by Ashura_temps",
+      "uuid": "7058f009-f95f-4fe3-b8ed-134c6b16ba89",
+      "version": [1, 0, 0]
+    }
+  ],
+  "metadata": {
+    "authors": ["Ashura_temps"],
+    "url": "https://discord.gg/sFnE7zv75t"
+  },
+  "subpacks": [
+    /*{
+      "folder_name": "laggy_mode",
+      "name": "§aLaggy Mode§r\n§7More advanced features that may cause some lag§r",
+      "memory_tier": 1
+    },*/
+    {
+      "folder_name": "no_close_button",
+      "name": "§bNo Close Buttons§r\n§7The normal pack but without exit buttons§r",
+      "memory_tier": 1
     },
     {
-      "folder_name":"performance_mode",
-      "name":"performance mode",
-      "memory_tier":2
+      "folder_name": "performance_mode",
+      "name": "§ePerformance Mode§r\n§7The default pack§r",
+      "memory_tier": 2
     }
   ]
- }
- 
+}

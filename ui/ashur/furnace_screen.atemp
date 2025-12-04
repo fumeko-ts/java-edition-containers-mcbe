@@ -27,6 +27,7 @@
       {
         "recipe_book@global.empty_stack": {
           "size": [184, 166],
+          "ignored": true,
           "orientation": "horizontal",
           "visible": false,
           "controls": [
@@ -61,6 +62,7 @@
                 "size": [40, 52],
                 "anchor_from": "top_left",
                 "anchor_to": "top_left",
+                "ignored": true,
                 "controls": [
                   {
                     "layout@smelting_common.layout_toggle": {

@@ -234,6 +234,7 @@
         "binding_collection_name": "trade_tiers"
       },
       {
+     //   "binding_name": "",
         "binding_name": "#tier_visible",
         "binding_name_override": "#visible",
         "binding_type": "collection",
@@ -249,6 +250,7 @@
     "$toggle_binding_type": "global",
     "$toggle_state_binding_name": "#trade_toggle_state",
     "$toggle_enabled_binding_type": "global",
+  //  "$toggle_enabled_binding_name": "",
     "$toggle_enabled_binding_name": "#trade_toggle_enabled",
     "$toggle_enabled_binding_condition": "always"
   },
