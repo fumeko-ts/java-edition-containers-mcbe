@@ -53,6 +53,7 @@
     "ui/ashur/furnace_recipe/smelting_common.atemp",
     "ui/ashur/furnace_recipe/smoker_recipe_book.atemp",
     "ui/ashur/-common/compatibility/thickly.atemp",
-    "ui/ashur/-common/misc.unsorted/survival_recipe_grid.atemp"
+    "ui/ashur/-common/misc.unsorted/survival_recipe_grid.atemp",
+    "ui/ashur/-common/misc.unsorted/selected_item.atemp"
   ]
 }

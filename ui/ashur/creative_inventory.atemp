@@ -347,14 +347,7 @@
                                       "player_renderer": {
                                         "type": "custom",
                                         "renderer": "live_player_renderer",
-                                        "property_bag": { "#look_at_cursor": true },
-                                        "animation_reset_name": "screen_animation_reset",
-                                        "anims": [
-                                          "@common.screen_exit_size_animation_push",
-                                          "@common.screen_exit_size_animation_pop",
-                                          "@common.screen_entrance_size_animation_push",
-                                          "@common.screen_entrance_size_animation_pop"
-                                        ]
+                                        "property_bag": { "#look_at_cursor": true }
                                       }
                                     }
                                   ]
@@ -402,10 +395,54 @@
               }
             },
             {
-              "item_remover@container_common.item_remover": {
-                "offset": [-6, -8],
+              "item_remover": {
+                "type": "toggle",
+                "size": [18, 18],
+                "offset": [-5, -7],
                 "anchor_to": "bottom_right",
-                "anchor_from": "bottom_right"
+                "anchor_from": "bottom_right",
+                "unchecked_hover_control": "default_hover",
+                "checked_hover_control": "default_hover",
+                "controls": [
+                  {
+                    "default_hover@global.empty_panel": {
+                      "size": [16, 16],
+                      "controls": [
+                        { "hover_icon@screen_content.highlight_slot": { "size": [16, 16] } },
+
+                        {
+                          "tooltip@common.hover_text": {
+                            "ignored": "$touch",
+                            "layer": 100,
+                            "property_bag": { "#hover_text": "destroy item" }
+                          }
+                        }
+                      ]
+                    }
+                  }
+                ],
+                "button_mappings": [
+                  {
+                    "from_button_id": "button.menu_select",
+                    "to_button_id": "button.destroy_selection",
+                    "mapping_type": "pressed"
+                  },
+                  {
+                    "from_button_id": "button.menu_ok",
+                    "to_button_id": "button.destroy_selection",
+                    "mapping_type": "pressed"
+                  },
+                  {
+                    "from_button_id": "button.menu_secondary_select",
+                    "to_button_id": "button.destroy_selection",
+                    "mapping_type": "pressed"
+                  },
+                  {
+                    "from_button_id": "button.menu_auto_place",
+                    "to_button_id": "button.menu_clear",
+                    "mapping_type": "pressed"
+                  }
+                ]
               }
             }
           ]

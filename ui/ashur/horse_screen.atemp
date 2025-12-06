@@ -136,13 +136,6 @@
                       "$type": "live_horse_renderer",
                       "anchor_from": "center",
                       "anchor_to": "center",
-                      "animation_reset_name": "screen_animation_reset",
-                      "anims": [
-                        "@common.screen_exit_size_animation_push",
-                        "@common.screen_exit_size_animation_pop",
-                        "@common.screen_entrance_size_animation_push",
-                        "@common.screen_entrance_size_animation_pop"
-                      ],
                       "bindings": [ {"binding_name": "#entity_id"} ]
                     }
                   }

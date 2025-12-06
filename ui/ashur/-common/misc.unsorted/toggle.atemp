@@ -234,6 +234,32 @@
         "mapping_type": "pressed"
       }
     ],
+    "$bindings|default": [
+      {
+        "binding_type": "collection_details",
+        "binding_collection_name": "$radio_collection_name",
+        "binding_condition": "$radio_collection_condition"
+      },
+
+      {
+        "binding_name": "#selectable_button_visibility",
+        "binding_name_override": "#enabled",
+        "binding_condition": "always",
+        "ignored": "(not ($radio_collection_name = '#enchant_buttons'))",
+        "binding_collection_name": "#enchant_buttons",
+        "binding_type": "collection"
+      },
+
+      {
+        "binding_type": "global",
+        "binding_condition": "always",
+        "binding_name": "$toggle_binding_value",
+        "binding_name_override": "#toggle_state"
+      }
+    ],
+    "$property_bag|default": {
+      "#toggle_state": true
+    },
     "$button_volume|default": 1.0,
     "controls": [
       {
@@ -254,33 +280,9 @@
           "toggle_group_default_selected": 0,
           "reset_on_focus_lost": true,
           "toggle_default_state": "$is_default_active",
-          "property_bag": {
-            "#toggle_state": true
-          },
+          "property_bag": "$property_bag",
           "controls": "$controls",
-          "bindings": [
-            {
-              "binding_type": "collection_details",
-              "binding_collection_name": "$radio_collection_name",
-              "binding_condition": "$radio_collection_condition"
-            },
-
-            {
-              "binding_name": "#selectable_button_visibility",
-              "binding_name_override": "#enabled",
-              "binding_condition": "always",
-              "ignored": "(not ($radio_collection_name = '#enchant_buttons'))",
-              "binding_collection_name": "#enchant_buttons",
-              "binding_type": "collection"
-            },
-
-            {
-              "binding_type": "global",
-              "binding_condition": "always",
-              "binding_name": "$toggle_binding_value",
-              "binding_name_override": "#toggle_state"
-            }
-          ],
+          "bindings": "$bindings",
           "button_mappings": "$button_mappings"
         }
       }

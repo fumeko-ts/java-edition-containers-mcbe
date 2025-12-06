@@ -192,7 +192,7 @@
           "anchor_from": "top_right",
           "controls": [
             {
-              "disabled_box@screen_content.image_element": {
+              "disabled_box_binding@screen_content.image_element": {
                 "texture": "assets/sprites/container/loom/scroller_disabled",
                 "size": [12, 15],
                 "anchor_from": "bottom_left",

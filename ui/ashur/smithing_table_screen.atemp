@@ -28,16 +28,8 @@
           "offset": [ -17, -40 ],
           "controls": [
             {
-              "smithing_preview_renderer": {
-                "type": "custom",
-                "renderer": "equipment_preview_renderer",
-                "animation_reset_name": "screen_animation_reset",
-                "anims": [
-                  "@common.screen_exit_size_animation_push",
-                  "@common.screen_exit_size_animation_pop",
-                  "@common.screen_entrance_size_animation_push",
-                  "@common.screen_entrance_size_animation_pop"
-                ],
+              "smithing_preview_renderer@global.custom_renderer": {
+                "$type": "equipment_preview_renderer",
                 "layer": 8,
                 "rotation_x": 30,
                 "rotation_y": -30,
