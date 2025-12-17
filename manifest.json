@@ -16,15 +16,10 @@
     }
   ],
   "metadata": {
-    "authors": ["Ashura_temps"],
+    "code_author": "Ashura_temps",
     "url": "https://discord.gg/sFnE7zv75t"
   },
   "subpacks": [
-    /*{
-      "folder_name": "laggy_mode",
-      "name": "§aLaggy Mode§r\n§7More advanced features that may cause some lag§r",
-      "memory_tier": 1
-    },*/
     {
       "folder_name": "no_close_button",
       "name": "§bNo Close Buttons§r\n§7The normal pack but without exit buttons§r",
