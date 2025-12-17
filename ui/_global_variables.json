@@ -15,7 +15,6 @@
 */
 
 {
-  // Set container UI transparency (range 0.0 to 1.0)
   "$container_opacity": 1,
 
   "$no_close_button": false,
@@ -31,7 +30,6 @@
   "$item_collection|default": "none",
 
 
-  //tab ids
   "$compass_id": 423,
   "$chest_id": 54,
   "$redstone_id": 405,
@@ -45,7 +43,6 @@
 
 
 
-  //pane_item_ids / 65536
   "$glass_pane": 102,
   "$white_pane": 160,
   "$light_grey_pane": -650,
@@ -63,26 +60,6 @@
   "$purple_pane": -652,
   "$magenta_pane": -644,
   "$pink_pane": -648,
-  //make me a python script that will do
-//replace the name of these pngs like this glass_magenta.png will become pane_-644
-// textures/java_items/glass_black.png 
-// textures/java_items/glass_blue.png 
-// textures/java_items/glass_brown.png 
-// textures/java_items/glass_cyan.png 
-// textures/java_items/glass_gray.png 
-// textures/java_items/glass_green.png 
-// textures/java_items/glass_light_blue.png 
-// textures/java_items/glass_lime.png 
-// textures/java_items/glass_magenta.png 
-// textures/java_items/glass_orange.png 
-// textures/java_items/glass_pink.png 
-// textures/java_items/glass_purple.png 
-// textures/java_items/glass_red.png 
-// textures/java_items/glass_silver.png 
-// textures/java_items/glass_white.png 
-// textures/java_items/glass_yellow.png
-
-
 
 
 
