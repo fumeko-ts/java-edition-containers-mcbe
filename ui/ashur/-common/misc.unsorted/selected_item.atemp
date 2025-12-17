@@ -1,16 +1,16 @@
 {
   "namespace": "selected_item",
 
-  "selected_item_tooltip_touch": {
+  "selected_item_details_factory": {
     "type": "factory",
-    "control_name": "@selected_item.tooltip"
+    "control_name": "@selected_item.selected_item_details"
   },
-  "tooltip@global.empty_panel": {
+  "selected_item_details@global.empty_image": {
     "anchor_to": "bottom_middle",
     "anchor_from": "bottom_middle",
     "size": ["100%c", "100%c"],
     "layer": 3000,
-    "offset": [0, -16],
+    "offset": [0, -25],
     "controls": [
       {
         "mobile_tooltip_base@screen_content.image_element": {
@@ -41,17 +41,6 @@
             }
           ]
         }
-      }
-    ],
-    "bindings": [
-      {
-        "binding_name": "#selected_hover_text"
-      },
-      {
-        "binding_type": "view",
-        "binding_condition": "always",
-        "source_property_name": "(not (#selected_hover_text = ''))",
-        "target_property_name": "#visible"
       }
     ]
   },

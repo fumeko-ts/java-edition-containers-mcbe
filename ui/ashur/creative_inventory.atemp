@@ -167,37 +167,37 @@
     "controls": [
       {
         "inventory@creative_inventory.item_renderer": {
-          "$item_identifier": 54,
+          "$item_identifier": "$chest_id",
           "visible": "($tab_view_binding_name = 'inventory_tab_toggle')"
         }
       },
       {
         "search@creative_inventory.item_renderer": {
-          "$item_identifier": 416,
+          "$item_identifier": "$compass_id",
           "visible": "($tab_view_binding_name = 'search_tab_toggle')"
         }
       },
       {
         "items@creative_inventory.item_renderer": {
-          "$item_identifier": 398,
+          "$item_identifier": "$redstone_id",
           "visible": "($tab_view_binding_name = 'items_tab_toggle')"
         }
       },
       {
         "equipment@creative_inventory.item_renderer": {
-          "$item_identifier": 331,
+          "$item_identifier": "$iron_sword_id",
           "visible": "($tab_view_binding_name = 'equipment_tab_toggle')"
         }
       },
       {
         "nature@creative_inventory.item_renderer": {
-          "$item_identifier": -469,
+          "$item_identifier": "$purple_froglight_id",
           "visible": "($tab_view_binding_name = 'nature_tab_toggle')"
         }
       },
       {
         "construction@creative_inventory.item_renderer": {
-          "$item_identifier": 45,
+          "$item_identifier": "$bricks_id",
           "visible": "($tab_view_binding_name = 'construction_tab_toggle')"
         }
       }

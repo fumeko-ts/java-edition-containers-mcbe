@@ -188,6 +188,7 @@
     "anchor_from": "bottom_right",
     "anchor_to": "bottom_right",
     "text": "#cost",
+    "size": ["default", 10],
     "offset": [-1, 0],
     "bindings": [
       {
@@ -196,9 +197,14 @@
         "binding_type": "collection"
       },
       {
+        "binding_collection_name": "#enchant_buttons",
+        "binding_name": "#runes",
+        "binding_type": "collection"
+      },
+      {
         "binding_type": "view",
         "binding_condition": "always",
-        "source_property_name": "((#cost * 1) > 0)",
+        "source_property_name": "(not (#runes = ''))",
         "target_property_name": "#visible"
       }
     ]
@@ -217,63 +223,124 @@
       }
     ]
   },
-  "enchant_button@toggle.radio_toggle": {
-    "layer": 22,
-    "$size": [108, 19],
-    "$button_volume": 0.0,
-    "$toggle_control_name": "('enchant' + $toggle_group_forced_index)",
-    "$toggle_binding_value": "('#enchanting' + $toggle_group_forced_index)",
-    "$toggle_name|default": "enchant_items",
-    "$mapping_type|default": "pressed",
-    "$button_mappings": [
-      { "from_button_id": "button.menu_select", "to_button_id": "button.menu_ok", "mapping_type": "$mapping_type" },
-      { "from_button_id": "button.menu_ok", "to_button_id": "button.menu_ok", "mapping_type": "focused" },
+  "enchant_button@global.empty_panel": {
+    "size": [108, 19],
+    "controls": [
       {
-        "from_button_id": "button.controller_back",
-        "to_button_id": "button.menu_ok",
-        "mapping_type": "focused",
-        "ignored": "(not $is_ps4)"
-      }
-    ],
-    "$radio_collection_name": "#enchant_buttons",
-    "variables": [
-      {
-        "requires": "($touch or $pocket_edition)",
-        "$mapping_type|default": "double_pressed"// to combat the mobile not being able to see enchant info
-      },
-      {
-        "requires": "($cb_is_thick_menu_buttons = true)",
-        "$button_texture_control_hover|default": "thickly.enchanting_button_highlight",
-        "$button_texture_control|default": "thickly.enchanting_button"
-      }
-    ],
-    "$button_texture_control_hover|default": "screen_content.enchanting_button_highlight",
-    "$button_texture_control|default": "screen_content.enchanting_button",
-    "$controls": [
-      { "default@enchanting_screen.unchecked_and_checked": {} },
-      { "checked@enchanting_screen.unchecked_and_checked": {} },
-
-      { "default_hover@enchanting_screen.unchecked_and_checked_hover": {} },
-      { "checked_hover@enchanting_screen.unchecked_and_checked_hover": {} },
-
-      { "disabled@screen_content.enchanting_button_disabled": { "layer": 2 } }, // no hover text for disabled state yet
-
-      //exp orb icons
-      {
-        "exp_enabled@enchanting_screen.exp_orb": {
-          "$exp_orb_texture": "('assets/sprites/container/enchanting_table/level_' + $toggle_group_forced_index)",
-          "$button_type_enchant": "selectable"
+        "hover_button": {
+          "type": "button",
+          "layer": 500,
+          "size": [108, 19],
+          "offset": [1, 1],
+          "default_focus_precedence": 1,
+          "hover_control": "hover_text",
+          "consume_event": false,
+          "button_mappings": [
+            {
+              "to_button_id": "button.container_slot_hovered",
+              "mapping_type": "pressed",
+              "consume_event": false
+            }
+          ],
+          "controls": [
+            {
+              "hover_text@global.hover_text": {
+                "bindings": [
+                  {
+                    "binding_name": "#hover_text",
+                    "binding_collection_name": "#enchant_buttons",
+                    "binding_type": "collection"
+                  },
+                  {
+                    "binding_type": "view",
+                    "binding_condition": "always",
+                    "source_property_name": "('\u00a7r' + #hover_text - '\u00a7o')",
+                    "target_property_name": "#hover_text"
+                  }
+                ]
+              }
+            }
+          ],
+          "bindings": [
+            {
+              "binding_name": "#hover_text",
+              "binding_collection_name": "#enchant_buttons",
+              "binding_type": "collection"
+            },
+            {
+              "binding_type": "view",
+              "binding_condition": "always",
+              "source_property_name": "(not (#hover_text = ''))",
+              "target_property_name": "#visible"
+            }
+          ]
         }
       },
       {
-        "exp_disabled@enchanting_screen.exp_orb": {
-          "$exp_orb_texture": "('assets/sprites/container/enchanting_table/level_' + $toggle_group_forced_index + '_disabled')",
-          "$button_type_enchant": "unselectable"
-        }
-      },
+        "enchant_button@toggle.radio_toggle": {
+          "layer": 14,
+          "$size": [108, 19],
+          "$button_volume": 0.0,
+          "$toggle_control_name": "('enchant' + $toggle_group_forced_index)",
+          "$toggle_binding_value": "('#enchanting' + $toggle_group_forced_index)",
+          "$toggle_name|default": "enchant_items",
+          "$mapping_type|default": "pressed",
+          "$button_mappings": [
+            {
+              "from_button_id": "button.menu_select",
+              "to_button_id": "button.menu_ok",
+              "mapping_type": "$mapping_type"
+            },
+            { "from_button_id": "button.menu_ok", "to_button_id": "button.menu_ok", "mapping_type": "focused" },
+            {
+              "from_button_id": "button.controller_back",
+              "to_button_id": "button.menu_ok",
+              "mapping_type": "focused",
+              "ignored": "(not $is_ps4)"
+            }
+          ],
+          "$radio_collection_name": "#enchant_buttons",
+          "variables": [
+            {
+              "requires": "($touch or $pocket_edition)",
+              "$mapping_type|default": "double_pressed" // to combat the mobile not being able to see enchant info
+            },
+            {
+              "requires": "($cb_is_thick_menu_buttons = true)",
+              "$button_texture_control_hover|default": "thickly.enchanting_button_highlight",
+              "$button_texture_control|default": "thickly.enchanting_button"
+            }
+          ],
+          "$button_texture_control_hover|default": "screen_content.enchanting_button_highlight",
+          "$button_texture_control|default": "screen_content.enchanting_button",
+          "$controls": [
+            { "default@enchanting_screen.unchecked_and_checked": {} },
+            { "checked@enchanting_screen.unchecked_and_checked": {} },
 
-      { "cost@enchanting_screen.cost": { "layer": 2, "color": [0.4, 0.15, 0.2, 1.0] } },
-      { "runes@enchanting_screen.runes": { "layer": 2, "color": [0.28, 0.1, 0.14, 1.0] } }
+            { "default_hover@enchanting_screen.unchecked_and_checked_hover": {} },
+            { "checked_hover@enchanting_screen.unchecked_and_checked_hover": {} },
+
+            { "disabled@screen_content.enchanting_button_disabled": { "layer": 2 } },
+
+            //exp orb icons
+            {
+              "exp_enabled@enchanting_screen.exp_orb": {
+                "$exp_orb_texture": "('assets/sprites/container/enchanting_table/level_' + $toggle_group_forced_index)",
+                "$button_type_enchant": "selectable"
+              }
+            },
+            {
+              "exp_disabled@enchanting_screen.exp_orb": {
+                "$exp_orb_texture": "('assets/sprites/container/enchanting_table/level_' + $toggle_group_forced_index + '_disabled')",
+                "$button_type_enchant": "unselectable"
+              }
+            },
+
+            { "cost@enchanting_screen.cost": { "layer": 3, "color": [0.247059, 0.494118, 0.062745, 1] } },
+            { "runes@enchanting_screen.runes": { "layer": 3, "color": [0.2, 0.180392, 0.145098, 1] } }
+          ]
+        }
+      }
     ]
   },
   "unchecked_and_checked@global.empty_panel": {
@@ -290,7 +357,7 @@
     "controls": [
       { "hover@$button_texture_control_hover": {} },
 
-      { "cost@enchanting_screen.cost": { "color": [0.475, 0.95, 0.11875] } },
+      { "cost@enchanting_screen.cost": {  "color": [0.475, 0.95, 0.11875] } },
       { "runes@enchanting_screen.runes": { "color": [1.0, 1.0, 0.5] } }
     ]
   }

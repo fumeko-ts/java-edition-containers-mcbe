@@ -94,6 +94,7 @@
             {
               "default_hover@screen_content.highlight_slot": {
                 "layer": 2,
+                "ignored": "$touch",
                 "controls": [
                   {
                     "hover_text@global.hover_text": {
@@ -123,6 +124,7 @@
             {
               "checked_hover@screen_content.highlight_slot": {
                 "layer": 2,
+                "ignored": "$touch",
                 "controls": [
                   {
                     "hover_text@global.hover_text": {
@@ -196,7 +198,7 @@
           "size": [18, 18],
           "texture": "textures/ui/ashur/touch_ui_selected",
           "nineslice_size": 1,
-          "layer": 6,
+          "layer": 2,
           "ignored": "(not ($touch or $pocket_screen or $pocket_edition))",
           "bindings": [
             {

@@ -19,11 +19,10 @@
   "highlight_slot": {
     "type": "panel",
     "$white_highlight_offset": [0, 0],
-    "$slot_vars": "screen_content.highlight_slot",
-    "variables": { "requires": "($recipe_book = true)", "$slot_vars": "common.empty_panel" },
+    "ignored": "$touch",
     "controls": [
       {
-        "highlight@$slot_vars": {
+        "highlight@screen_content.highlight_slot": {
           "offset": "$white_highlight_offset",
           "controls": [
             {
@@ -40,10 +39,31 @@
                     "binding_collection_name": "$item_collection_name"
                   },
                   {
+                    "binding_type": "collection",
+                    "ignored": true,
+                    "binding_collection_name": "$item_collection_name",
+                    "binding_name": "#item_id_aux"
+                  },
+                  {
                     "binding_type": "view",
                     "binding_condition": "always_when_visible",
+                    "ignored": false,
                     "source_property_name": "(#hover_remove_text - '\n§9§9sr1.atemp§r'')",
                     "target_property_name": "#hover_text"
+                  },
+                  {
+                    "binding_type": "view",
+                    "binding_condition": "always_when_visible",
+                    "ignored": true,
+                    "source_property_name": "(#hover_remove_text + '\n Aux ID: ' + (#item_id_aux / 65536) - '\n§9§9sr1.atemp§r'')",
+                    "target_property_name": "#hover_text"
+                  },
+                  {
+                    "binding_type": "view",
+                    "binding_condition": "always",
+                    "ignored": true,
+                    "source_property_name": "(not (#hover_remove_text + ''))",
+                    "target_property_name": "#visible"
                   }
                 ]
               }
@@ -513,7 +533,7 @@
           ],
           "controls": [
             { "item_lock_notification_factory@common.item_lock_notification_factory": {} },
-            { "selected_item_tooltip_touch@selected_item.selected_item_tooltip_touch": {} },
+            { "selected_item_details_factory@selected_item.selected_item_details_factory": {} },
             {
               "bg_no_safezone_screen_panel@$screen_bg_content": {
                 "layer": 2

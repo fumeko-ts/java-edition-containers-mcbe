@@ -154,28 +154,7 @@
   "enchant_texture_template@screen_content.image_element": {"size": [ 108, 19 ], "layer": 5, "offset": [ 1, 1 ]},
   "enchanting_button_disabled@screen_content.enchant_texture_template": {"texture": "assets/sprites/container/enchanting_table/enchantment_slot_disabled"},
   "enchanting_button@screen_content.enchant_texture_template": {"texture": "assets/sprites/container/enchanting_table/enchantment_slot"},
-  "enchanting_button_highlight@screen_content.enchant_texture_template": {
-    "texture": "assets/sprites/container/enchanting_table/enchantment_slot_highlighted",
-    "controls": [
-      {
-        "tooltip@global.hover_text": {
-          "bindings": [
-            {
-              "binding_name": "#hover_text",
-              "binding_collection_name": "#enchant_buttons",
-              "binding_type": "collection"
-            },
-            {
-              "binding_type": "view",
-              "binding_condition": "always",
-              "source_property_name": "('\u00a7r' + #hover_text - '\u00a7o')",
-              "target_property_name": "#hover_text"
-            }
-          ]
-        }
-      }
-    ]
-  },
+  "enchanting_button_highlight@screen_content.enchant_texture_template": {"texture": "assets/sprites/container/enchanting_table/enchantment_slot_highlighted"},
   "redstone_activated_bindings@screen_content.image_element": {"size": [ 16, 16 ], "layer": 12, "texture": "$arrow_texture"},
   "anvil_text_field@screen_content.image_element": {
     "nineslice_size": 2,

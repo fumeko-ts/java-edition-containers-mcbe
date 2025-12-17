@@ -28,6 +28,63 @@
   "$enchant_dark_green": [0.318, 0.475, 0.216],
 
   "$direction": "right",
+  "$item_collection|default": "none",
+
+
+  //tab ids
+  "$compass_id": 423,
+  "$chest_id": 54,
+  "$redstone_id": 405,
+  "$iron_sword_id": 338,
+  "$purple_froglight_id": -469,
+  "$bricks_id": 45,
+  "$apple_id": 285,
+  "$bucket_lava_id": 395,
+  "$iron_axe_id": 329,
+  "$golden_sword_id": 354,
+
+
+
+  //pane_item_ids / 65536
+  "$glass_pane": 102,
+  "$white_pane": 160,
+  "$light_grey_pane": -650,
+  "$grey_pane": -649,
+  "$black_pane": -657,
+  "$brown_pane": -654,
+  "$red_pane": -656,
+  "$orange_pane": -643,
+  "$yellow_pane": -646,
+  "$lime_pane": -647,
+  "$green_pane": -655,
+  "$cyan_pane": -651,
+  "$light_blue_pane": -645,
+  "$blue_pane": -653,
+  "$purple_pane": -652,
+  "$magenta_pane": -644,
+  "$pink_pane": -648,
+  //make me a python script that will do
+//replace the name of these pngs like this glass_magenta.png will become pane_-644
+// textures/java_items/glass_black.png 
+// textures/java_items/glass_blue.png 
+// textures/java_items/glass_brown.png 
+// textures/java_items/glass_cyan.png 
+// textures/java_items/glass_gray.png 
+// textures/java_items/glass_green.png 
+// textures/java_items/glass_light_blue.png 
+// textures/java_items/glass_lime.png 
+// textures/java_items/glass_magenta.png 
+// textures/java_items/glass_orange.png 
+// textures/java_items/glass_pink.png 
+// textures/java_items/glass_purple.png 
+// textures/java_items/glass_red.png 
+// textures/java_items/glass_silver.png 
+// textures/java_items/glass_white.png 
+// textures/java_items/glass_yellow.png
+
+
+
+
 
   "$creative_recipe_book": false,
   "$loom_screen": false,
@@ -56,9 +113,106 @@
   "$recipe_book": false,
   
   "$cb_is_thick_menu_buttons": false,
-  "$jc:dev": true,
+  "$jc:dev": false,
+  "$hover_text_property_bag": {
+    "#start": 0,
+    "#result": 0
+  },
+  "$advanced_hover_text": [
+    {
+      "binding_name": "$hover_text_binding_name",
+      "binding_name_override": "#hover_remove_text",
+      "binding_condition": "always",
+      "binding_type": "collection",
+      "binding_collection_name": "$item_collection"
+    },
+    {
+      "binding_type": "collection",
+      "ignored": "(not $jc:dev)",
+      "binding_collection_name": "$item_collection",
+      "binding_name": "#item_id_aux"
+    },
+    {
+      "binding_name": "#group_item_group_name",
+      "binding_condition": "visible",
+      "ignored": "(not $jc:dev)",
+      "binding_type": "collection",
+      "binding_collection_name": "$item_collection"
+    },
+
+    {
+      "binding_type": "view",
+      "source_property_name": "(not (#hover_remove_text = ''))",
+      "target_property_name": "#visible",
+      "ignored": "(not $jc:dev)",
+      "binding_condition": "always"
+    },
+    //durability
+    {
+      "binding_name": "#item_durability_total_amount",
+      "binding_type": "collection",
+      "ignored": "(not $jc:dev)",
+      "binding_collection_name": "$item_collection"
+    },
+    {
+      "binding_name": "#item_durability_current_amount",
+      "binding_type": "collection",
+      "ignored": "(not $jc:dev)",
+      "binding_collection_name": "$item_collection"
+    },
+    {
+      "binding_type": "view",
+      "source_property_name": "(#result + ((#item_durability_total_amount > #result) - (#item_durability_total_amount < #result)))",
+      "target_property_name": "#result",
+      "ignored": "(not $jc:dev)",
+      "binding_condition": "always_when_visible"
+    },
+    {
+      "binding_type": "view",
+      "source_property_name": "(#start + ((#item_durability_current_amount > #start) - (#item_durability_current_amount < #start)))",
+      "target_property_name": "#start",
+      "ignored": "(not $jc:dev)",
+      "binding_condition": "always_when_visible"
+    },
+    {
+      "binding_type": "view",
+      "source_property_name": "('\n current durability: ' + #start + '\n max durability: ' #result)",
+      "target_property_name": "#durability",
+      "ignored": "(not $jc:dev)",
+      "binding_condition": "always_when_visible"
+    },
+    //29032457
+    {
+      "binding_type": "view",
+      "source_property_name": "('§z' + (#item_id_aux - ((#item_id_aux / 65536) * 65536)) + '§z')",
+      "target_property_name": "#refined_id",
+      "ignored": "(not $jc:dev)",
+      "binding_condition": "always_when_visible"
+    },
+    {
+      "binding_type": "view",
+      "ignored": "(not $jc:dev)",
+      "binding_condition": "always_when_visible",
+      "source_property_name": "('§7\nraw id: ' + #item_id_aux + ' \nitem group: ' + #group_item_group_name + ' \nadvanced info: ' + '\n  item specific id: ' + #refined_id + '\n  refined id: ' + (#item_id_aux / 65536) + #durability)",
+      "target_property_name": "#advanced_info"
+    },
+    {
+      "binding_type": "view",
+      "ignored": "(not $jc:dev)",
+      "source_property_name": "(#hover_remove_text + #advanced_info + #durability - '\n§9§9sr1.atemp§r')",
+      "target_property_name": "#hover_text",
+      "binding_condition": "always_when_visible"
+    },
+    {
+      "binding_type": "view",
+      "ignored": "$jc:dev",
+      "source_property_name": "(#hover_remove_text - '\n§9§9sr1.atemp§r')",
+      "target_property_name": "#hover_text",
+      "binding_condition": "always_when_visible"
+    }
+  ],
   
-  "$recipe_book_bindings": [
+  "$recipe_book_bindings": [// this is here because it is to big
     {
       "binding_name": "#recipe_book_total_items",
       "binding_name_override": "#maximum_grid_items",

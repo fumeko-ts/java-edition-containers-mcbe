@@ -26,19 +26,32 @@
                 "bindings": "$recipe_book_bindings",
                 "offset": "#offset",
                 "property_bag": {
-                  "#page_1" : [0,     0],"#page_2" : [0,  -100],
-                  "#page_3" : [0,  -200],"#page_4" : [0,  -300],
-                  "#page_5" : [0,  -400],"#page_6" : [0,  -500],
-                  "#page_7" : [0,  -600],"#page_8" : [0,  -700],
-                  "#page_9" : [0,  -800],"#page_10": [0,  -900],
-                  "#page_11": [0, -1000],"#page_12": [0, -1100],
-                  "#page_13": [0, -1200],"#page_14": [0, -1300],
-                  "#page_15": [0, -1400],"#page_16": [0, -1500],
-                  "#page_17": [0, -1600],"#page_18": [0, -1700],
-                  "#page_19": [0, -1800],"#page_20": [0, -1900],
-                  "#page_21": [0, -2000],"#page_22": [0, -2100],
-                  "#page_23": [0, -2200],"#page_24": [0, -2300],
-                  "#page_25": [0, -2400],"#page_26": [0, -2500],
+                  "#page_1": [0, 0],
+                  "#page_2": [0, -100],
+                  "#page_3": [0, -200],
+                  "#page_4": [0, -300],
+                  "#page_5": [0, -400],
+                  "#page_6": [0, -500],
+                  "#page_7": [0, -600],
+                  "#page_8": [0, -700],
+                  "#page_9": [0, -800],
+                  "#page_10": [0, -900],
+                  "#page_11": [0, -1000],
+                  "#page_12": [0, -1100],
+                  "#page_13": [0, -1200],
+                  "#page_14": [0, -1300],
+                  "#page_15": [0, -1400],
+                  "#page_16": [0, -1500],
+                  "#page_17": [0, -1600],
+                  "#page_18": [0, -1700],
+                  "#page_19": [0, -1800],
+                  "#page_20": [0, -1900],
+                  "#page_21": [0, -2000],
+                  "#page_22": [0, -2100],
+                  "#page_23": [0, -2200],
+                  "#page_24": [0, -2300],
+                  "#page_25": [0, -2400],
+                  "#page_26": [0, -2500],
                   "#page_27": [0, -2600]
                 }
               }
@@ -62,9 +75,7 @@
           "anchor_from": "top_left",
           "anchor_to": "top_left",
           "offset": [2, 2],
-          "controls": [
-            { "item_renderer@common.item_renderer": { "size": [16, 16] } }
-          ]
+          "controls": [{ "item_renderer@common.item_renderer": { "size": [16, 16] } }]
         }
       },
       {
@@ -83,6 +94,7 @@
               "hover@global.hover_text": {
                 "offset": [10, -10],
                 "layer": 300,
+                "ignored": "$touch",
                 "$hover_text_binding_name|default": "#hover_text",
                 "bindings": [
                   {
@@ -130,7 +142,7 @@
       }
     ]
   },
-  "touch_selected@global.empty_panel":{
+  "touch_selected@global.empty_panel": {
     "controls": [
       {
         "touch_item@global.empty_image": {
@@ -171,4 +183,3 @@
     ]
   }
 }
-
