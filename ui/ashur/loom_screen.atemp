@@ -230,8 +230,8 @@
             {
               "binding_type": "view",
               "binding_condition": "always",
-              "source_control_name": "disabled_box",
-              "source_property_name": "(#dye_id or #banner_id = true)",
+              "source_control_name": "disabled_box_binding",
+              "source_property_name": "(#dye_id or #banner_id)",
               "target_property_name": "#visible"
             }
           ]

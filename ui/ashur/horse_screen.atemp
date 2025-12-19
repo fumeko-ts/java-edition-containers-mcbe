@@ -22,7 +22,12 @@
       {
         "horse_inventory_sprite@screen_content.image_element": {
           "uv_size": [176, 166],
-          "texture": "assets/container/horse"
+          "texture": "assets/container/horse",
+          "controls": [
+            {
+              "root@global.root_panel": {}
+            }
+          ]
         }
       },
 
