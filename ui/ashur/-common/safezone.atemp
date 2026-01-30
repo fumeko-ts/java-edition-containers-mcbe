@@ -1,0 +1,60 @@
+/**
+// © 2026 ashura_temps,    All Rights Reserved.
+//
+// This UI is custom-made. You are allowed to use it **only as-is**, inside the game.
+// Do not modify, extract, reuse, or share any part of this UI including .json, .atemp files,
+// layout structure, or design.
+//
+// Not allowed:
+//   - Editing the UI (even for private/personal use)
+//   - Using parts of the code or layout in your own pack
+//   - Reuploading, redistributing, or hosting these files elsewhere
+//   - Converting texture packs to Bedrock using this UI
+//
+// By using this project, you agree to these terms.
+*/
+
+{
+  "namespace": "safezone",
+  "screen_holder_safezone@global.empty_panel": {
+    "size": [ "100%", "100%" ],
+    "controls": [
+      {"root_screen_panel@$screen_content": {}},
+      {
+        "bundle_tooltip_wrapper@global.empty_panel": {
+          "size": [ "100%", "100%" ],
+          "controls": [
+            {
+              "bundle_cursor_tooltip@global.custom_renderer": {
+                "$type": "bundle_tooltip_renderer",
+                "size": [ "100%c", "100%c - 26px" ],
+                "layer": 20,
+                "controls": [
+                  {
+                    "tooltip@bundle.bundle_tooltip": {
+                      "bindings": [
+                        {
+                          "binding_name": "#show_bundle_tooltip_hover",
+                          "binding_name_override": "#visible",
+                          "binding_condition": "always"
+                        }
+                      ]
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "bundle_touch_tooltip@bundle.bundle_tooltip": {
+                "offset": [ 0, "-36px" ],
+                "anchor_from": "bottom_middle",
+                "anchor_to": "bottom_middle",
+                "bindings": [ {"binding_name": "#show_bundle_tooltip_pocket", "binding_name_override": "#visible"} ]
+              }
+            }
+          ]
+        }
+      }
+    ]
+  }
+}

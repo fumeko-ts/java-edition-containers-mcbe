@@ -19,7 +19,7 @@
   "item_template": {
     "type": "input_panel",
     "size": [18, 18],
-    "$item_collection_name|default": "recipe_book",
+    "$item_collection|default": "recipe_book",
     "layer": 4,
     "controls": [
       {
@@ -89,69 +89,10 @@
 
           "$radio_collection_condition|default": "once",
           "$radio_collection_name|default": "recipe_book",
+          "$dont_render_hover_text|default": false,
           "$controls|default": [
-            { "default@global.empty_panel": {} },
-            {
-              "default_hover@screen_content.highlight_slot": {
-                "layer": 2,
-                "ignored": "$touch",
-                "controls": [
-                  {
-                    "hover_text@global.hover_text": {
-                      "offset": [10, -10],
-                      "layer": 300,
-                      "$hover_text_binding_name|default": "#hover_text",
-                      "bindings": [
-                        {
-                          "binding_name": "$hover_text_binding_name",
-                          "binding_name_override": "#hover_remove_text",
-                          "binding_condition": "always",
-                          "binding_type": "collection",
-                          "binding_collection_name": "$item_collection_name"
-                        },
-                        {
-                          "binding_type": "view",
-                          "binding_condition": "always_when_visible",
-                          "source_property_name": "(#hover_remove_text - '\n§9§9sr1.atemp§r'')",
-                          "target_property_name": "#hover_text"
-                        }
-                      ]
-                    }
-                  }
-                ]
-              }
-            },
-            {
-              "checked_hover@screen_content.highlight_slot": {
-                "layer": 2,
-                "ignored": "$touch",
-                "controls": [
-                  {
-                    "hover_text@global.hover_text": {
-                      "offset": [10, -10],
-                      "layer": 300,
-                      "$hover_text_binding_name|default": "#hover_text",
-                      "bindings": [
-                        {
-                          "binding_name": "$hover_text_binding_name",
-                          "binding_name_override": "#hover_remove_text",
-                          "binding_condition": "always",
-                          "binding_type": "collection",
-                          "binding_collection_name": "$item_collection_name"
-                        },
-                        {
-                          "binding_type": "view",
-                          "binding_condition": "always_when_visible",
-                          "source_property_name": "(#hover_remove_text - '\n§9§9sr1.atemp§r'')",
-                          "target_property_name": "#hover_text"
-                        }
-                      ]
-                    }
-                  }
-                ]
-              }
-            },
-            { "checked@global.empty_panel": {} }
+            { "default_hover@jc_container_item.slot_highlight": {} },
+            { "checked_hover@jc_container_item.slot_highlight": {} }
           ]
         }
       },
@@ -164,7 +105,7 @@
         }
       },
 
-      { "item_renderer@common.item_renderer": { "layer": 4, "size": [16, 16] } },
+      { "item_renderer@jc_container_item.item_renderer": { "layer": 7, "size": [16, 16] } },
       {
         "group_icons@global.empty_panel": {
           "controls": [
@@ -186,7 +127,7 @@
             {
               "binding_name": "#container_item_modifier",
               "binding_type": "collection",
-              "binding_collection_name": "$item_collection_name",
+              "binding_collection_name": "$item_collection",
               "binding_condition": "visible"
             }
           ]
@@ -205,7 +146,7 @@
               "binding_name": "(#container_item_background_texture = 'textures/ui/recipe_book_touch_cell_selected')",
               "binding_name_override": "#visible",
               "binding_type": "collection",
-              "binding_collection_name": "$item_collection_name"
+              "binding_collection_name": "$item_collection"
             }
           ]
         }
@@ -213,11 +154,10 @@
     ]
   },
 
-  "item_overlay_image": {
-    "type": "image",
+  "item_overlay_image@screen_content.image_element": {
     "size": [7, 7],
     "offset": [-1, -1],
-    "layer": 6,
+    "layer": 9,
     "anchor_from": "bottom_right",
     "anchor_to": "bottom_right",
     "bindings": [

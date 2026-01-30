@@ -1,219 +1,166 @@
-/**
-// © 2025 ashura_temps,    All Rights Reserved.
-//
-// This UI is custom-made. You are allowed to use it **only as-is**, inside the game.
-// Do not modify, extract, reuse, or share any part of this UI including .json, .atemp files,
-// layout structure, or design.
-//
-// Not allowed:
-//   - Editing the UI (even for private/personal use)
-//   - Using parts of the code or layout in your own pack
-//   - Reuploading, redistributing, or hosting these files elsewhere
-//   - Converting texture packs to Bedrock using this UI
-//
-// By using this project, you agree to these terms.
-*/
-
 {
   "namespace": "screen_content",
-  "image_element@global.empty_image": {"alpha": "$container_opacity"},
-  "container_base@global.root_panel": {
+
+  // exit button templates
+  "container_template@screen_content.image_element": {
     "size": "$size",
-    "$size": [ 176, 166 ],
-    "variables": [
-      {"requires": "($anvil_screen = true)", "$container|default": "anvil"},
-      {"requires": "($barrel_screen = true)", "$container|default": "barrel"},
-      {"requires": "($beacon_screen = true)", "$container|default": "beacon", "$size": [ 230, 219 ]},
-      {"requires": "($blast_furnace_screen = true)", "$container|default": "blast_furnace"},
-      {"requires": "($brewing_stand_screen = true)", "$container|default": "brewing_stand"},
-      {"requires": "($cartography_screen = true)", "$container|default": "cartography"},
-      {"requires": "($crafting_screen = true)", "$container|default": "crafting"},
-      {"requires": "($crafter_screen = true)", "$container|default": "crafter"},
-      {"requires": "($dispenser_screen = true)", "$container|default": "dispenser"},
-      {"requires": "($dropper_screen = true)", "$container|default": "dropper"},
-      {"requires": "($enchanting_screen = true)", "$container|default": "enchanting"},
-      {"requires": "($furnace_screen = true)", "$container|default": "furnace"},
-      {
-        "requires": "($double_chest_container = true)",
-        "$container|default": "double_chest",
-        "$size": [ 176, 222 ]
-      },
-      {"requires": "($grindstone_screen = true)", "$container|default": "grindstone"},
-      {"requires": "($hopper_screen = true)", "$container|default": "hopper", "$size": [ 176, 133 ]},
-      {"requires": "($horse_screen = true)", "$container|default": "horse"},
-      {"requires": "($loom_screen = true)", "$container|default": "loom"},
-      {"requires": "($shulker_screen = true)", "$container|default": "shulker_box"},
-      {"requires": "($smithing_screen = true)", "$container|default": "smithing"},
-      {"requires": "($smoker_screen = true)", "$container|default": "smoker"},
-      {"requires": "($stonecutter_screen = true)", "$container|default": "stonecutter"},
-      {"requires": "($main_trade_screen = true)", "$container|default": "trade", "$size": [ 276, 166 ]},
-      {"requires": "($inventory_screen = true)", "$container|default": "inventory"}
-    ],
+    "uv_size": "$size",
     "controls": [
       {
-        "close_button@global.close_button":{}
-      },
-      {"all_misc@$container": {}}
-    ]
-  },
-  "highlight_slot@screen_content.image_element": {
-    "texture": "textures/ui/ashur/white_slot",
-    "size": "$white_highlight_slot_size",
-    "offset": "$white_highlight_slot_offset",
-    "$white_highlight_slot_offset|default": [ 0, 0 ],
-    "$white_highlight_slot_size|default": [ 16, 16 ],
-    "alpha": 0.45
-  },
-  "label": {
-    "type": "label",
-    "offset": "$text_offset",
-    "$text_offset": [ 0, 0 ],
-    "anchor_from": "top_left",
-    "anchor_to": "top_left",
-    "text": "$container_title",
-    "size": [ "90%", "default" ],
-    "color": "$title_text_color",
-    "layer": 20
-  },
-  "recipe_book@screen_content.image_element": {
-    "texture": "assets/recipe_book",
-    "size": [ 147, 166 ],
-    "uv_size": [ 147, 166 ],
-    "uv": [ 1, 1 ],
-    "offset": [ 1, 0 ],
-    "layer": 1
-  },
-  "creative_inventory@screen_content.image_element": {
-    "uv_size": [ 195, 136 ],
-    "texture": "assets/container/creative_inventory/tab_inventory",
-    "layer": 3
-  },
-  "creative_inventory_misc@screen_content.image_element": {"uv_size": [ 195, 136 ], "texture": "assets/container/creative_inventory/tab_items", "layer": 3},
-  "creative_inventory_search@screen_content.image_element": {
-    "uv_size": [ 195, 136 ],
-    "texture": "assets/container/creative_inventory/tab_item_search",
-    "layer": 3
-  },
-  "anvil@screen_content.image_element": {"uv_size": [ 176, 166 ], "texture": "assets/container/anvil"},
-  "beacon@screen_content.image_element": {"uv_size": [ 230, 219 ], "texture": "assets/container/beacon"},
-  "blast_furnace@screen_content.image_element": {"uv_size": [ 176, 166 ], "texture": "assets/container/blast_furnace"},
-  "brewing_stand@screen_content.image_element": {"uv_size": [ 176, 166 ], "texture": "assets/container/brewing_stand"},
-  "cartography@screen_content.image_element": {"uv_size": [ 176, 166 ], "texture": "assets/container/cartography_table"},
-  "crafter@screen_content.image_element": {"uv_size": [ 176, 166 ], "texture": "assets/container/crafter"},
-  "dispenser@screen_content.image_element": {"uv_size": [ 176, 166 ], "texture": "assets/container/dispenser"},
-  "dropper@screen_content.image_element": {"uv_size": [ 176, 166 ], "texture": "assets/container/dispenser"},
-  "enchanting@screen_content.image_element": {"uv_size": [ 176, 166 ], "texture": "assets/container/enchanting_table"},
-  "furnace@screen_content.image_element": {"uv_size": [ 176, 166 ], "texture": "assets/container/furnace"},
-  "double_chest@screen_content.image_element": {"uv_size": [ 176, 222 ], "texture": "assets/container/generic_54"},
-  "grindstone@screen_content.image_element": {"uv_size": [ 176, 166 ], "texture": "assets/container/grindstone"},
-  "hopper@screen_content.image_element": {"uv_size": [ 176, 133 ], "texture": "assets/container/hopper"},
-  "horse@screen_content.image_element": {"uv_size": [ 176, 166 ], "texture": "assets/container/horse"},
-  "horse_inventory@screen_content.image_element": {"uv_size": [ 176, 166 ], "texture": "assets/container/horse"},
-  "loom@screen_content.image_element": {"uv_size": [ 176, 166 ], "texture": "assets/container/loom"},
-  "shulker_box@screen_content.image_element": {"uv_size": [ 176, 166 ], "texture": "assets/container/shulker_box"},
-  "smithing@screen_content.image_element": {"uv_size": [ 176, 166 ], "texture": "assets/container/smithing"},
-  "smoker@screen_content.image_element": {"uv_size": [ 176, 166 ], "texture": "assets/container/smoker"},
-  "stonecutter@screen_content.image_element": {"uv_size": [ 176, 166 ], "texture": "assets/container/stonecutter"},
-  "trade@screen_content.image_element": {"uv_size": [ 276, 166 ], "texture": "assets/container/villager"},
-  "edit_box_indent@screen_content.image_element": {"texture": "assets/sprites/container/anvil/text_field_disabled"},
-  "edit_box_indent_hover@screen_content.image_element": {"texture": "assets/sprites/container/anvil/text_field"},
-  "armor_overlay@screen_content.image_element": {
-    "size": [ 16, 16 ],
-    "bindings": [
-      {
-        "binding_name": "#empty_armor_image_visible",
-        "binding_name_override": "#visible",
-        "binding_type": "collection",
-        "binding_collection_name": "$item_collection_name"
+        "close_button@global.close_button": {}
       }
     ]
   },
-  "offhand_overlay@screen_content.image_element": {
-    "size": [ 16, 16 ],
-    "bindings": [
-      {
-        "binding_name": "#empty_offhand_image_visible",
-        "binding_name_override": "#visible",
-        "binding_type": "collection",
-        "binding_collection_name": "$item_collection_name"
-      }
-    ]
+
+  //container uis
+  "anvil@screen_content.container_template": { "$size": [176, 166], "texture": "assets/container/anvil" },
+  "beacon@screen_content.container_template": { "$size": [230, 219], "texture": "assets/container/beacon" },
+  "blast_furnace@screen_content.container_template": {
+    "$size": [176, 166],
+    "texture": "assets/container/blast_furnace"
   },
-  "armor_overlay_helmet@screen_content.armor_overlay": {"size": [ 16, 16 ], "texture": "assets/sprites/container/slot/helmet"},
-  "armor_overlay_chest@screen_content.armor_overlay": {"size": [ 16, 16 ], "texture": "assets/sprites/container/slot/chestplate"},
-  "armor_overlay_legs@screen_content.armor_overlay": {"size": [ 16, 16 ], "texture": "assets/sprites/container/slot/leggings"},
-  "armor_image_feet@screen_content.armor_overlay": {"size": [ 16, 16 ], "texture": "assets/sprites/container/slot/boots"},
-  "armor_overlay_shield@screen_content.offhand_overlay": {"size": [ 16, 16 ], "texture": "assets/sprites/container/slot/shield"},
-  "enchanting_lapis@screen_content.image_element": {"size": [ 16, 16 ], "texture": "assets/sprites/container/slot/lapis_lazuli"},
-  "crafter_disabled_slot@screen_content.image_element": {
-    "size": [ 18, 18 ],
-    "nineslice_size": 1,
-    "offset": [ 1, 1 ],
-    "texture": "assets/sprites/container/crafter/disabled_slot"
+  "brewing_stand@screen_content.container_template": {
+    "$size": [176, 166],
+    "texture": "assets/container/brewing_stand"
   },
-  "enchant_texture_template@screen_content.image_element": {"size": [ 108, 19 ], "layer": 5, "offset": [ 1, 1 ]},
-  "enchanting_button_disabled@screen_content.enchant_texture_template": {"texture": "assets/sprites/container/enchanting_table/enchantment_slot_disabled"},
-  "enchanting_button@screen_content.enchant_texture_template": {"texture": "assets/sprites/container/enchanting_table/enchantment_slot"},
-  "enchanting_button_highlight@screen_content.enchant_texture_template": {"texture": "assets/sprites/container/enchanting_table/enchantment_slot_highlighted"},
-  "redstone_activated_bindings@screen_content.image_element": {"size": [ 16, 16 ], "layer": 12, "texture": "$arrow_texture"},
-  "anvil_text_field@screen_content.image_element": {
-    "nineslice_size": 2,
-    "texture": "assets/sprites/container/anvil/text_field_disabled",
-    "size": [ 110, 16 ]
+  "cartography@screen_content.container_template": {
+    "$size": [176, 166],
+    "texture": "assets/container/cartography_table"
   },
-  "anvil_edit_box_hover@screen_content.image_element": {"nineslice_size": 2, "texture": "assets/sprites/container/anvil/text_field", "size": [ 110, 16 ]},
-  "text_field@screen_content.image_element": {
-    "nineslice_size": 1,
-    "texture": "assets/sprites/recipe_book/text_field",
-    "size": [ "100%", "100%" ]
+  "crafting@screen_content.container_template": { "$size": [176, 166], "texture": "assets/container/crafting_table" },
+  "crafter@screen_content.container_template": { "$size": [176, 166], "texture": "assets/container/crafter" },
+  "dispenser@screen_content.container_template": { "$size": [176, 166], "texture": "assets/container/dispenser" },
+  "double_chest@screen_content.container_template": { "$size": [176, 222], "texture": "assets/container/generic_54" },
+  "dropper@screen_content.container_template": { "$size": [176, 166], "texture": "assets/container/dispenser" },
+  "enchanting@screen_content.container_template": {
+    "$size": [176, 166],
+    "texture": "assets/container/enchanting_table"
   },
-  "text_field_highlighted@screen_content.image_element": {
-    "nineslice_size": 1,
-    "texture": "assets/sprites/recipe_book/text_field_highlighted",
-    "size": [ "100%", "100%" ]
-  },
-  "barrel@common.empty_panel": {
+  "furnace@screen_content.container_template": { "$size": [176, 166], "texture": "assets/container/furnace" },
+  "grindstone@screen_content.container_template": { "$size": [176, 166], "texture": "assets/container/grindstone" },
+  "hopper@screen_content.container_template": { "$size": [176, 133], "texture": "assets/container/hopper" },
+  "horse@screen_content.container_template": { "$size": [176, 166], "texture": "assets/container/horse" },
+  "inventory@screen_content.container_template": { "$size": [176, 166], "texture": "assets/container/inventory" },
+  "loom@screen_content.container_template": { "$size": [176, 166], "texture": "assets/container/loom" },
+  "shulker_box@screen_content.container_template": { "$size": [176, 166], "texture": "assets/container/shulker_box" },
+  "smithing@screen_content.container_template": { "$size": [176, 166], "texture": "assets/container/smithing" },
+  "smoker@screen_content.container_template": { "$size": [176, 166], "texture": "assets/container/smoker" },
+  "stonecutter@screen_content.container_template": { "$size": [176, 166], "texture": "assets/container/stonecutter" },
+  "trade@screen_content.container_template": { "$size": [276, 166], "texture": "assets/container/villager" },
+
+  "small_chest@global.empty_panel": {
+    "size": [176, 166],
     "controls": [
+      {
+        "close_button@global.close_button": {}
+      },
       {
         "top_half@screen_content.image_element": {
           "anchor_from": "top_middle",
           "anchor_to": "top_middle",
-          "offset": [ 0, -47.4 ],
-          "layer": 3,
-          "texture": "assets/container/generic_54",
-          "uv_size": [ 176, 71 ]
+          "uv": [0, 0],
+          "uv_size": [176, 71],
+          "size": [176, 71],
+          "texture": "assets/container/generic_54"
         }
       },
       {
         "bottom_half@screen_content.image_element": {
-          "anchor_from": "top_middle",
-          "anchor_to": "top_middle",
-          "offset": [ 0, 34.6 ],
-          "layer": 2,
-          "texture": "assets/container/generic_54",
-          "uv_size": [ 176, 97 ],
-          "uv": [ 0, 125 ]
+          "anchor_from": "bottom_middle",
+          "anchor_to": "bottom_middle",
+          "uv": [0, 127],
+          "uv_size": [176, 95],
+          "size": [176, 95],
+          "texture": "assets/container/generic_54"
         }
       }
     ]
   },
-  "crafting@screen_content.image_element": {"uv_size": [ 176, 166 ], "texture": "assets/container/crafting_table"},
-  "inventory@screen_content.image_element": {"uv_size": [ 176, 166 ], "texture": "assets/container/inventory"},
-  "trade_arrow@screen_content.image_element": {"texture": "assets/sprites/container/villager/trade_arrow", "size": [ 10, 11 ], "layer": 5},
-  "trade_cross_out@screen_content.image_element": {
-    "texture": "assets/sprites/container/villager/trade_arrow_out_of_stock",
-    "size": [ 10, 11 ],
-    "layer": 5
+  "ender_chest@global.empty_panel": {
+    "size": [176, 166],
+    "controls": [
+      {
+        "close_button@global.close_button": {}
+      },
+      {
+        "top_half@screen_content.image_element": {
+          "anchor_from": "top_middle",
+          "anchor_to": "top_middle",
+          "uv": [0, 0],
+          "uv_size": [176, 71],
+          "size": [176, 71],
+          "texture": "assets/container/generic_54"
+        }
+      },
+      {
+        "bottom_half@screen_content.image_element": {
+          "anchor_from": "bottom_middle",
+          "anchor_to": "bottom_middle",
+          "uv": [0, 127],
+          "uv_size": [176, 95],
+          "size": [176, 95],
+          "texture": "assets/container/generic_54"
+        }
+      }
+    ]
   },
-  "cross_out@screen_content.image_element": {
-    "texture": "assets/sprites/container/villager/out_of_stock",
-    "size": [ 28, 21 ],
-    "anchor_from": "top_left",
-    "anchor_to": "top_left",
-    "offset": "$cross_out_offset",
-    "ignored": "$cross_out_ignored",
-    "layer": "$arrowc_layer"
+  "barrel@global.empty_panel": {
+    "size": [176, 166],
+    "controls": [
+      {
+        "close_button@global.close_button": {}
+      },
+      {
+        "top_half@screen_content.image_element": {
+          "anchor_from": "top_middle",
+          "anchor_to": "top_middle",
+          "uv": [0, 0],
+          "uv_size": [176, 71],
+          "size": [176, 71],
+          "texture": "assets/container/generic_54"
+        }
+      },
+      {
+        "bottom_half@screen_content.image_element": {
+          "anchor_from": "bottom_middle",
+          "anchor_to": "bottom_middle",
+          "uv": [0, 127],
+          "uv_size": [176, 95],
+          "size": [176, 95],
+          "texture": "assets/container/generic_54"
+        }
+      }
+    ]
   },
+  "recipe_book@screen_content.image_element": {
+    "texture": "assets/recipe_book",
+    "size": [147, 166],
+    "uv_size": [147, 166],
+    "uv": [1, 1],
+    "offset": [1, 0],
+    "layer": 1
+  },
+  "creative_inventory@screen_content.image_element": {
+    "size": [195, 136],
+    "uv_size": [195, 136],
+    "texture": "assets/container/creative_inventory/tab_inventory",
+    "layer": 3
+  },
+  "creative_inventory_misc@screen_content.image_element": {
+    "size": [195, 136],
+    "uv_size": [195, 136],
+    "texture": "assets/container/creative_inventory/tab_items",
+    "layer": 3
+  },
+  "creative_inventory_search@screen_content.image_element": {
+    "size": [195, 136],
+    "uv_size": [195, 136],
+    "texture": "assets/container/creative_inventory/tab_item_search",
+    "layer": 3
+  },
+
+  //base ui elements
+  "image_element@global.empty_image": { "alpha": "$container_opacity" },
   "screen_background": {
     "type": "image",
     "texture": "textures/ui/screen_background",
@@ -221,13 +168,160 @@
     "$screen_background_alpha|default": 0.78,
     "alpha": "$screen_background_alpha"
   },
+  "label": {
+    "type": "label",
+    "offset": "$text_offset",
+    "$text_offset": [0, 0],
+    "anchor_from": "top_left",
+    "anchor_to": "top_left",
+    "text": "$container_title",
+    "size": ["90%", "default"],
+    "color": "$title_text_color",
+    "layer": 20
+  },
+
+  //slot overlays and highlights
+  "highlight_slot@screen_content.image_element": {
+    "texture": "textures/ui/ashur/white_slot",
+    "size": "$white_highlight_slot_size",
+    "offset": "$white_highlight_slot_offset",
+    "$white_highlight_slot_offset|default": [0, 0],
+    "$white_highlight_slot_size|default": [16, 16],
+    "alpha": 0.45
+  },
+  "debug_element@screen_content.image_element": {
+    "texture": "textures/ui/white",
+    "alpha": 0.4,
+    "nineslice_size": 1,
+    "uv": [2, 2],
+    "uv_size": [1, 1],
+    "color": "cyan",
+    "size": ["100%", "100%"],
+    "layer": 30
+  },
+  "armor_overlay@screen_content.image_element": {
+    "size": [16, 16],
+    "bindings": [
+      {
+        "binding_name": "#empty_armor_image_visible",
+        "binding_name_override": "#visible",
+        "binding_type": "collection",
+        "binding_collection_name": "$item_collection"
+      }
+    ]
+  },
+  "offhand_overlay@screen_content.image_element": {
+    "size": [16, 16],
+    "bindings": [
+      {
+        "binding_name": "#empty_offhand_image_visible",
+        "binding_name_override": "#visible",
+        "binding_type": "collection",
+        "binding_collection_name": "$item_collection"
+      }
+    ]
+  },
+  "armor_overlay_helmet@screen_content.armor_overlay": {
+    "size": [16, 16],
+    "texture": "assets/sprites/container/slot/helmet"
+  },
+  "armor_overlay_chest@screen_content.armor_overlay": {
+    "size": [16, 16],
+    "texture": "assets/sprites/container/slot/chestplate"
+  },
+  "armor_overlay_legs@screen_content.armor_overlay": {
+    "size": [16, 16],
+    "texture": "assets/sprites/container/slot/leggings"
+  },
+  "armor_image_feet@screen_content.armor_overlay": {
+    "size": [16, 16],
+    "texture": "assets/sprites/container/slot/boots"
+  },
+  "armor_overlay_shield@screen_content.offhand_overlay": {
+    "size": [16, 16],
+    "texture": "assets/sprites/container/slot/shield"
+  },
+  "enchanting_lapis@screen_content.image_element": {
+    "size": [16, 16],
+    "texture": "assets/sprites/container/slot/lapis_lazuli"
+  },
+  "crafter_disabled_slot@screen_content.image_element": {
+    "size": [18, 18],
+    "nineslice_size": 1,
+    "offset": [1, 1],
+    "texture": "assets/sprites/container/crafter/disabled_slot"
+  },
+
+  //buttons and interactive elements
+  "enchant_texture_template@screen_content.image_element": { "size": [108, 19], "layer": 5, "offset": [1, 1] },
+  "enchanting_button_disabled@screen_content.enchant_texture_template": {
+    "texture": "assets/sprites/container/enchanting_table/enchantment_slot_disabled"
+  },
+  "enchanting_button@screen_content.enchant_texture_template": {
+    "texture": "assets/sprites/container/enchanting_table/enchantment_slot"
+  },
+  "enchanting_button_highlight@screen_content.enchant_texture_template": {
+    "texture": "assets/sprites/container/enchanting_table/enchantment_slot_highlighted"
+  },
+  "redstone_activated_bindings@screen_content.image_element": {
+    "size": [16, 16],
+    "layer": 12,
+    "texture": "$arrow_texture"
+  },
+
+  //text fields and edit boxes
+  "anvil_text_field@screen_content.image_element": {
+    "nineslice_size": 2,
+    "texture": "assets/sprites/container/anvil/text_field_disabled",
+    "size": [110, 16]
+  },
+  "anvil_edit_box_hover@screen_content.image_element": {
+    "nineslice_size": 2,
+    "texture": "assets/sprites/container/anvil/text_field",
+    "size": [110, 16]
+  },
+  "edit_box_indent@screen_content.image_element": { "texture": "assets/sprites/container/anvil/text_field_disabled" },
+  "edit_box_indent_hover@screen_content.image_element": { "texture": "assets/sprites/container/anvil/text_field" },
+  "text_field@screen_content.image_element": {
+    "nineslice_size": 1,
+    "texture": "assets/sprites/recipe_book/text_field",
+    "size": ["100%", "100%"]
+  },
+  "text_field_highlighted@screen_content.image_element": {
+    "nineslice_size": 1,
+    "texture": "assets/sprites/recipe_book/text_field_highlighted",
+    "size": ["100%", "100%"]
+  },
+
+  //trade and arrow elements
+  "trade_arrow@screen_content.image_element": {
+    "texture": "assets/sprites/container/villager/trade_arrow",
+    "size": [10, 11],
+    "layer": 5
+  },
+  "trade_cross_out@screen_content.image_element": {
+    "texture": "assets/sprites/container/villager/trade_arrow_out_of_stock",
+    "size": [10, 11],
+    "layer": 5
+  },
+  "cross_out@screen_content.image_element": {
+    "texture": "assets/sprites/container/villager/out_of_stock",
+    "size": [28, 21],
+    "anchor_from": "top_left",
+    "anchor_to": "top_left",
+    "offset": "$cross_out_offset",
+    "ignored": "$cross_out_ignored",
+    "layer": "$arrowc_layer"
+  },
   "arrow@screen_content.image_element": {
     "texture": "textures/atemp/in_stock",
-    "size": [ 28, 21 ],
+    "size": [28, 21],
     "anchor_from": "top_left",
     "anchor_to": "top_left",
     "offset": "$cross_out_offset",
     "layer": "$arrow_layer"
   },
-  "red_cell_image@screen_content.image_element": {"texture": "textures/ui/cell_image_red"}
+
+  //miscellaneous
+  "red_cell_image@screen_content.image_element": { "texture": "textures/ui/cell_image_red" }
 }

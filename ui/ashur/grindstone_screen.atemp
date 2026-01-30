@@ -19,7 +19,7 @@
   "grindstone_panel@container_common.container_details": {
     "size": [ 176, 166 ],
     "$screen_controls": [
-      {"common_panel@screen_content.container_base": {"$grindstone_screen": true}},
+      {"common_panel@screen_content.grindstone": {}},
       {
         "grindstone_top_stack@global.empty_stack": {
           "orientation": "vertical",
@@ -56,9 +56,9 @@
                       "orientation": "vertical",
                       "size": [ 18, 39 ],
                       "controls": [
-                        {"1@global.container_item": {"$item_collection": "grindstone_input_items"}},
+                        {"1@jc_container_item.container_item": {"$item_collection": "grindstone_input_items"}},
                         {"filler_1@global.empty_panel": {"size": [ "fill", 3 ]}},
-                        {"2@global.container_item": {"$item_collection": "grindstone_additional_items"}}
+                        {"2@jc_container_item.container_item": {"$item_collection": "grindstone_additional_items"}}
                       ]
                     }
                   },
@@ -95,7 +95,7 @@
                       "controls": [
                         {"filler_1@global.empty_panel": {"size": [ "fill", 15 ]}},
                         {
-                          "result_item_slot@global.container_item": {
+                          "result_item_slot@jc_container_item.container_item": {
                             "$item_collection": "grindstone_result_items",
                             "$button_ref": "button_mappings.grindstone_output_slot_button"
                           }

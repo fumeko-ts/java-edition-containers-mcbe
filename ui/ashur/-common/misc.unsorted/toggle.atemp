@@ -216,7 +216,6 @@
   "radio_toggle@global.empty_panel": {
     "size": "$size",
     "$size": [18, 18],
-    "$controls|default": [],
     "$is_radio_toggle|default": true,
     "$radio_collection_name|default": "none",
     "$is_default_active|default": false,
@@ -228,11 +227,7 @@
         "to_button_id": "button.menu_select",
         "mapping_type": "pressed"
       },
-      {
-        "from_button_id": "button.menu_ok",
-        "to_button_id": "button.menu_ok",
-        "mapping_type": "pressed"
-      }
+      { "from_button_id": "button.menu_ok", "to_button_id": "button.menu_ok", "mapping_type": "pressed" }
     ],
     "$bindings|default": [
       {
@@ -240,7 +235,6 @@
         "binding_collection_name": "$radio_collection_name",
         "binding_condition": "$radio_collection_condition"
       },
-
       {
         "binding_name": "#selectable_button_visibility",
         "binding_name_override": "#enabled",
@@ -249,7 +243,6 @@
         "binding_collection_name": "#enchant_buttons",
         "binding_type": "collection"
       },
-
       {
         "binding_type": "global",
         "binding_condition": "always",
@@ -257,10 +250,24 @@
         "binding_name_override": "#toggle_state"
       }
     ],
-    "$property_bag|default": {
-      "#toggle_state": true
-    },
+    "$extra_contents|default": "global.empty_panel",
+    "$property_bag|default": { "#toggle_state": true },
     "$button_volume|default": 1.0,
+    "$unchecked|default": "global.empty_panel",
+    "$unchecked_hover|default": "global.empty_panel",
+    "$checked|default": "global.empty_panel",
+    "$checked_hover|default": "global.empty_panel",
+    "$locked|default": "global.empty_panel",
+    "$controls|default": [
+      { "default@$unchecked": {} },
+      { "default_hover@$unchecked_hover": {} },
+      { "checked@$checked": {} },
+      { "checked_hover@$checked_hover": {} },
+      { "locked@$locked": {} },
+      {
+        "$extra_contents@$extra_contents": {}
+      }
+    ],
     "controls": [
       {
         "$toggle_control_name": {
@@ -275,6 +282,10 @@
           "unchecked_hover_control": "default_hover",
           "checked_control": "checked",
           "checked_hover_control": "checked_hover",
+          "checked_locked_control": "locked",
+          "checked_locked_hover_control": "locked",
+          "unchecked_locked_control": "locked",
+          "unchecked_locked_hover_control": "locked",
           "radio_toggle_group": "$is_radio_toggle",
           "toggle_group_forced_index": "$toggle_group_forced_index",
           "toggle_group_default_selected": 0,

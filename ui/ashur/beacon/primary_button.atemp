@@ -32,7 +32,7 @@
     },
     "controls": [
       {
-        "hover_button": {
+        "hover_text_area": {
           "type": "button",
           "layer": 4,
           "size": [22, 22],
@@ -43,52 +43,12 @@
           "button_mappings": [
             { "to_button_id": "button.container_slot_hovered", "mapping_type": "pressed", "consume_event": false }
           ],
-          "controls": [
-            { "hover_text@primary_button.hover_text": {} },
-            {
-              "underlay_disabled@screen_content.image_element": {
-                "texture": "$locked_button_texture",
-                "size": [22, 22],
-                "layer": 3
-              }
-            },
-            {
-              "effect_overlay@screen_content.image_element": {
-                "size": [18, 18],
-                "layer": 6,
-                "anchor_from": "center",
-                "anchor_to": "center",
-                "texture": "$effect_path"
-              }
-            }
-          ],
-          "bindings": [
-            {
-              "binding_type": "collection",
-              "binding_collection_name": "$button_name",
-              "binding_name": "#active",
-              "binding_name_override": "#is_active"
-            },
-            {
-              "binding_type": "view",
-              "binding_condition": "always",
-              "source_property_name": "(not #is_active)",
-              "target_property_name": "#visible"
-            }
-          ]
+          "controls": [{ "hover_text@primary_button.hover_text": {} }]
         }
       },
       {
         "toggle_holder@global.empty_panel": {
           "size": [22, 22],
-          "bindings": [
-            {
-              "binding_type": "collection",
-              "binding_collection_name": "$button_name",
-              "binding_name": "#active",
-              "binding_name_override": "#visible"
-            }
-          ],
           "controls": [
             {
               "toggle_button@common.toggle": {
@@ -101,17 +61,18 @@
                 "unchecked_control": "unchecked",
                 "checked_hover_control": "checked_hover",
                 "unchecked_hover_control": "unchecked_hover",
-                "checked_locked_control": "locked_default",
-                "unchecked_locked_control": "locked_default",
-                "checked_locked_hover_control": "locked_hover",
-                "unchecked_locked_hover_control": "locked_hover",
+                "checked_locked_control": "locked",
+                "unchecked_locked_hover_control": "locked",
+                "checked_locked_hover_control": "locked",
+                "unchecked_locked_control": "locked",
                 "bindings": [
                   { "binding_collection_name": "$button_name", "binding_type": "collection_details" },
+
                   {
                     "binding_type": "collection",
                     "binding_collection_name": "$button_name",
-                    "binding_name": "#button_visible",
-                    "binding_name_override": "#visible"
+                    "binding_name": "#active",
+                    "binding_name_override": "#enabled"
                   },
                   {
                     "binding_type": "collection",
@@ -129,20 +90,11 @@
                   { "from_button_id": "button.menu_ok", "to_button_id": "button.menu_ok", "mapping_type": "pressed" }
                 ],
                 "controls": [
-                  { "unchecked@primary_button.image_base": { "$texture": "$default_button_texture" } },
-                  {
-                    "unchecked_hover@primary_button.image_base": {
-                      "controls": [{ "hover_text@primary_button.hover_text": {} }],
-                      "$texture": "$hover_button_texture"
-                    }
-                  },
-                  { "checked@primary_button.image_base": { "$texture": "$selected_button_texture" } },
-                  {
-                    "checked_hover@primary_button.image_base": {
-                      "controls": [{ "hover_text@primary_button.hover_text": {} }],
-                      "$texture": "$selected_button_texture"
-                    }
-                  },
+                  { "unchecked@primary_button.image_base": { "texture": "$default_button_texture" } },
+                  { "unchecked_hover@primary_button.image_base": { "texture": "$hover_button_texture" } },
+                  { "checked@primary_button.image_base": { "texture": "$selected_button_texture" } },
+                  { "checked_hover@primary_button.image_base": { "texture": "$selected_button_texture" } },
+                  { "locked@primary_button.image_base": { "texture": "$locked_button_texture" } },
                   {
                     "effect_overlay@screen_content.image_element": {
                       "size": [18, 18],
@@ -160,7 +112,7 @@
       }
     ]
   },
-  "image_base@screen_content.image_element": { "texture": "$texture", "size": [22, 22], "layer": 3 },
+  "image_base@screen_content.image_element": { "size": [22, 22], "layer": 3 },
   "hover_text@common.hover_text": {
     "layer": 999,
     "bindings": [

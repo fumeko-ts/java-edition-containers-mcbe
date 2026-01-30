@@ -17,15 +17,15 @@
 {
   "namespace": "smithing_table_screen",
   "smithing_table_panel@container_common.container_details": {
-    "size": [ 176, 166 ],
+    "size": [176, 166],
     "$screen_controls": [
-      {"common_panel@screen_content.container_base": {"$smithing_screen": true}},
+      { "common_panel@screen_content.smithing": {} },
       {
         "result_item_preview_inner@global.empty_panel": {
-          "size": [ 30, 24 ],
+          "size": [30, 24],
           "anchor_to": "right_middle",
           "anchor_from": "right_middle",
-          "offset": [ -17, -40 ],
+          "offset": [-17, -40],
           "controls": [
             {
               "smithing_preview_renderer@global.custom_renderer": {
@@ -62,26 +62,28 @@
       },
       {
         "smithing_content@global.empty_stack": {
-          "size": [ 176, 65 ],
+          "size": [176, 65],
           "orientation": "vertical",
           "anchor_to": "top_left",
           "anchor_from": "top_left",
           "controls": [
-            {"filler_1@global.empty_panel": {"size": [ "fill", 15 ]}},
+            { "filler_1@global.empty_panel": { "size": ["fill", 15] } },
             {
               "label_holding_stack@global.empty_stack": {
                 "orientation": "horizontal",
-                "size": [ 176, 12 ],
+                "size": [176, 12],
                 "controls": [
-                  {"filler_1@global.empty_panel": {"size": [ 44, "fill" ]}},
+                  { "filler_1@global.empty_panel": { "size": [44, "fill"] } },
                   {
                     "smithing_label@global.empty_panel": {
-                      "size": [ 132, "fill" ],
+                      "size": [132, "fill"],
                       "controls": [
                         {
-                          "sithing_label@global.empty_label": {
+                          "smithing_label@global.empty_label": {
                             "anchor_to": "top_left",
                             "anchor_from": "top_left",
+                            "size": ["default", 10],
+                            "offset": [0, -1],
                             "layer": 5,
                             "text": "atemp.container.upgrade",
                             "color": "$title_text_color"
@@ -93,54 +95,54 @@
                 ]
               }
             },
-            {"filler_2@global.empty_panel": {"size": [ "fill", 20 ]}},
+            { "filler_2@global.empty_panel": { "size": ["fill", 20] } },
             {
               "label_holding_stack@global.empty_stack": {
                 "orientation": "horizontal",
-                "size": [ 176, 18 ],
+                "size": [176, 18],
                 "controls": [
-                  {"filler_1@global.empty_panel": {"size": [ 7, "fill" ]}},
+                  { "filler_1@global.empty_panel": { "size": [7, "fill"] } },
                   {
                     "recipe_grid": {
                       "type": "grid",
-                      "grid_dimensions": [ 6, 1 ],
-                      "size": [ 108, 18 ],
+                      "grid_dimensions": [6, 1],
+                      "size": [108, 18],
                       "$hover_text_max_width": 500,
                       "controls": [
-                        {"filler_1@global.empty_panel": {"grid_position": [ 3, 0 ]}},
-                        {"filler_2@global.empty_panel": {"grid_position": [ 4, 0 ]}},
+                        { "filler_1@global.empty_panel": { "grid_position": [3, 0] } },
+                        { "filler_2@global.empty_panel": { "grid_position": [4, 0] } },
                         {
-                          "template_item_slot@global.container_item": {
-                            "grid_position": [ 0, 0 ],
+                          "template_item_slot@jc_container_item.container_item": {
+                            "grid_position": [0, 0],
                             "$cell_overlay_ref": "smithing_animations.slot_overlay",
                             "$item_collection": "smithing_table_template_items"
                           }
                         },
                         {
-                          "input_item_slot@global.container_item": {
-                            "grid_position": [ 1, 0 ],
+                          "input_item_slot@jc_container_item.container_item": {
+                            "grid_position": [1, 0],
                             "$cell_overlay_ref": "smithing_animations.slot_overlay",
                             "$item_collection": "smithing_table_input_items"
                           }
                         },
                         {
-                          "material_item_slot@global.container_item": {
-                            "grid_position": [ 2, 0 ],
+                          "material_item_slot@jc_container_item.container_item": {
+                            "grid_position": [2, 0],
                             "$cell_overlay_ref": "smithing_animations.slot_overlay",
                             "$item_collection": "smithing_table_material_items"
                           }
                         },
                         {
-                          "result_item_slot@global.container_item": {
-                            "grid_position": [ 5, 0 ],
+                          "result_item_slot@jc_container_item.container_item": {
+                            "grid_position": [5, 0],
                             "$item_collection": "smithing_table_result_items",
-                            "$button_ref": "smithing_table.smithing_table_output_slot_button"
+                            "$button_ref": "button_mappings.smithing_table_output_slot_button"
                           }
                         }
                       ]
                     }
                   },
-                  {"filler_2@global.empty_panel": {"size": [ 61, "fill" ]}}
+                  { "filler_2@global.empty_panel": { "size": [61, "fill"] } }
                 ]
               }
             }
@@ -148,26 +150,29 @@
         }
       },
       {
-        "bottom@global.inventory_bottom_half_with_label": {"anchor_to": "bottom_middle", "anchor_from": "bottom_middle"}
+        "bottom@global.inventory_bottom_half_with_label": {
+          "anchor_to": "bottom_middle",
+          "anchor_from": "bottom_middle"
+        }
       },
       {
         "craft_not_possible@global.empty_panel": {
-          "size": [ 93, 67 ],
+          "size": [93, 67],
           "anchor_from": "top_left",
           "anchor_to": "top_left",
           "controls": [
             {
               "arrow_holder@global.empty_panel": {
-                "size": [ 28, 21 ],
+                "size": [28, 21],
                 "anchor_to": "bottom_right",
                 "anchor_from": "bottom_right",
                 "controls": [
                   {
                     "cross_out_icon_image@screen_content.image_element": {
                       "texture": "assets/sprites/container/smithing/error",
-                      "size": [ 28, 21 ],
+                      "size": [28, 21],
                       "layer": 5,
-                      "bindings": [ {"binding_name": "#cross_out_icon", "binding_name_override": "#visible"} ]
+                      "bindings": [{ "binding_name": "#cross_out_icon", "binding_name_override": "#visible" }]
                     }
                   }
                 ]

@@ -22,64 +22,12 @@
     "anchor_from": "center",
     "min_size": [176, 166],
     "max_size": [360, 166],
-    "$is_blast_furnace_screen|default": true,
     "controls": [
-      {
-        "recipe_book@global.empty_stack": {
-          "size": [184, 166],
-          "orientation": "horizontal",
-          "visible": false,
-          "ignored": true,
-          "controls": [
-            {
-              "tab_stack@furnace_tabs.furnace_tabs": {
-                "$second_tab_icons": [{ "1@furnace_tabs.tab_item_renderer": { "$item_id": 73 } }],
-                "$third_tab_icons": [
-                  { "1@furnace_tabs.tab_item_renderer": { "layer": 7, "offset": [4, 0], "$item_id": 378 } },
-                  { "2@furnace_tabs.tab_item_renderer": { "layer": 6, "offset": [-7, 0], "$item_id": 320 } }
-                ],
-                "$3_tabs": true
-              }
-            },
-            {
-              "recipe_base@screen_content.recipe_book": {
-                "controls": [{ "pages@blast_furnace_recipe_book.base_page_logic": { "offset": [-1, 0], "layer": 12 } }]
-              }
-            },
-            { "filler@global.empty_panel": { "size": [2, 166] } }
-          ],
-          "bindings": [
-            {
-              "binding_type": "view",
-              "source_control_name": "furnace_recipe_2",
-              "source_property_name": "#toggle_state",
-              "target_property_name": "#visible"
-            }
-          ]
-        }
-      },
       {
         "main_blast_furnace_contents@container_common.container_details": {
           "size": [176, 166],
           "$screen_controls": [
-            {
-              "layout_holder@global.empty_panel": {
-                "size": [40, 52],
-                "anchor_from": "top_left",
-                "anchor_to": "top_left",
-                "ignored": true,
-                "controls": [
-                  {
-                    "layout@smelting_common.layout_toggle": {
-                      "anchor_from": "bottom_right",
-                      "anchor_to": "bottom_right",
-                      "layer": 10
-                    }
-                  }
-                ]
-              }
-            },
-            { "common_panel@screen_content.container_base": { "$blast_furnace_screen": "$is_blast_furnace_screen" } },
+            { "common_panel@screen_content.blast_furnace": { } },
             {
               "blast_furnace_top_half@global.empty_stack": {
                 "orientation": "vertical",
@@ -126,7 +74,7 @@
                             "size": [18, 54],
                             "controls": [
                               {
-                                "smelt_input_item@global.container_item": {
+                                "smelt_input_item@jc_container_item.container_item": {
                                   "$item_collection": "furnace_ingredient_items"
                                 }
                               },
@@ -148,7 +96,7 @@
                                   ]
                                 }
                               },
-                              { "fuel_input_item@global.container_item": { "$item_collection": "furnace_fuel_items" } }
+                              { "fuel_input_item@jc_container_item.container_item": { "$item_collection": "furnace_fuel_items" } }
                             ]
                           }
                         },
@@ -183,7 +131,7 @@
                                   "size": [26, 26],
                                   "controls": [
                                     {
-                                      "output_item@global.container_item": {
+                                      "output_item@jc_container_item.container_item": {
                                         "anchor_to": "center",
                                         "anchor_from": "center",
                                         "$item_collection": "furnace_output_items"

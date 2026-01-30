@@ -22,79 +22,16 @@
     "anchor_from": "center",
     "min_size": [176, 166],
     "max_size": [360, 166],
-    "$is_smoker_screen|default": true,
     "controls": [
-      {
-        "recipe_book@global.empty_stack": {
-          "size": [184, 166],
-          "orientation": "horizontal",
-          "visible": false,
-          "ignored": true,
-          "controls": [
-            {
-              "tab_stack@furnace_tabs.furnace_tabs": {
-                "$2_tabs": true
-              }
-            },
-            {
-              "recipe_base@screen_content.recipe_book": {
-                "controls": [{ "pages@smoker_recipe_book.base_page_logic": { "offset": [-1, 0], "layer": 12 } }]
-              }
-            },
-            { "filler@global.empty_panel": { "size": [2, 166] } }
-          ],
-          "bindings": [
-            {
-              "binding_type": "view",
-              "source_control_name": "furnace_recipe_2",
-              "source_property_name": "#toggle_state",
-              "target_property_name": "#visible"
-            }
-          ]
-        }
-      },
       {
         "main_smoker_contents@container_common.container_details": {
           "size": [176, 166],
           "$screen_controls": [
             {
-              "input_overlay_holder@global.empty_panel": {
-                "size": [121, 34],
-                "anchor_from": "top_right",
-                "anchor_to": "top_right",
-                "ignored": true,
-                "controls": [
-                  {
-                    "smoker_selected_items@smelting_common.smoker_selected_items": {
-                      "anchor_from": "bottom_left",
-                      "anchor_to": "bottom_left"
-                    }
-                  }
-                ]
-              }
-            },
-            {
-              "layout_holder@global.empty_panel": {
-                "size": [40, 52],
-                "anchor_from": "top_left",
-                "anchor_to": "top_left",
-                "ignored": true,
-                "controls": [
-                  {
-                    "layout@smelting_common.layout_toggle": {
-                      "anchor_from": "bottom_right",
-                      "anchor_to": "bottom_right",
-                      "layer": 10
-                    }
-                  }
-                ]
-              }
-            },
-            {
               "smoker_inventory_side@global.empty_panel": {
                 "size": [176, 166],
                 "controls": [
-                  { "common_panel@screen_content.container_base": { "$smoker_screen": "$is_smoker_screen" } },
+                  { "common_panel@screen_content.smoker": {} },
                   {
                     "smoker_top_half@global.empty_stack": {
                       "orientation": "vertical",
@@ -141,7 +78,7 @@
                                   "size": [18, 54],
                                   "controls": [
                                     {
-                                      "smelt_input_item@global.container_item": {
+                                      "smelt_input_item@jc_container_item.container_item": {
                                         "$item_collection": "furnace_ingredient_items"
                                       }
                                     },
@@ -166,7 +103,7 @@
                                       }
                                     },
                                     {
-                                      "fuel_input_item@global.container_item": {
+                                      "fuel_input_item@jc_container_item.container_item": {
                                         "$item_collection": "furnace_fuel_items"
                                       }
                                     }
@@ -204,7 +141,7 @@
                                         "size": [26, 26],
                                         "controls": [
                                           {
-                                            "output_item@global.container_item": {
+                                            "output_item@jc_container_item.container_item": {
                                               "anchor_to": "center",
                                               "anchor_from": "center",
                                               "$item_collection": "furnace_output_items"

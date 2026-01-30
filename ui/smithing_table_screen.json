@@ -15,5 +15,5 @@
 */
 
 {
-  "smithing_table_screen@global.inventory_screen_common": {"$screen_content": "smithing_table_screen.smithing_table_panel"}
+  "smithing_table_screen@global.container_screen": {"$screen_content": "smithing_table_screen.smithing_table_panel"}
 }

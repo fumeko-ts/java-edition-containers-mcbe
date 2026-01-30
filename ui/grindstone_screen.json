@@ -15,5 +15,5 @@
 */
 
 {
-  "grindstone_screen@global.inventory_screen_common": {"$screen_content": "grindstone_screen.grindstone_panel"}
+  "grindstone_screen@global.container_screen": {"$screen_content": "grindstone_screen.grindstone_panel"}
 }

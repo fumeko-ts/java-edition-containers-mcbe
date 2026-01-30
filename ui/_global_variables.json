@@ -19,15 +19,16 @@
 
   "$no_close_button": false,
 
-  "$title_text_color": [0.247, 0.247, 0.247, 1.0],
+  "$title_text_color": [0.247, 0.247, 0.247],
 
-  "$enchant_light_green": [0.475, 0.95, 0.11875],
-  "$enchant_light_yellow": [1.0, 1.0, 0.5],
-  "$enchant_light_brown": [0.392, 0.357, 0.275, 1.0],
-  "$enchant_dark_green": [0.318, 0.475, 0.216],
+  //enabled state
+  "$enchant_light_green": [0.494, 0.988, 0.125],
+  "$enchant_light_yellow": [0.988, 0.988, 0.494],
+  //disabled state
+  "$enchant_light_brown": [0.208, 0.188, 0.141],
+  "$enchant_dark_green": [0.278, 0.478, 0.125],
 
   "$direction": "right",
-  "$item_collection|default": "none",
 
 
   "$compass_id": 423,
@@ -186,49 +187,6 @@
       "source_property_name": "(#hover_remove_text - '\n§9§9sr1.atemp§r')",
       "target_property_name": "#hover_text",
       "binding_condition": "always_when_visible"
-    }
-  ],
-  
-  "$recipe_book_bindings": [// this is here because it is to big
-    {
-      "binding_name": "#recipe_book_total_items",
-      "binding_name_override": "#maximum_grid_items",
-      "binding_condition": "visible",
-      "binding_type": "collection",
-      "binding_collection_name": "recipe_book"
-    },
-    {"binding_type":"view","source_control_name":"page1","source_property_name":"#toggle_state","target_property_name":"#page_one"},
-    {"binding_type":"view","source_control_name":"page2","source_property_name":"#toggle_state","target_property_name":"#page_two"},
-    {"binding_type":"view","source_control_name":"page3","source_property_name":"#toggle_state","target_property_name":"#page_three"},
-    {"binding_type":"view","source_control_name":"page4","source_property_name":"#toggle_state","target_property_name":"#page_four"},
-    {"binding_type":"view","source_control_name":"page5","source_property_name":"#toggle_state","target_property_name":"#page_five"},
-    {"binding_type":"view","source_control_name":"page6","source_property_name":"#toggle_state","target_property_name":"#page_six"},
-    {"binding_type":"view","source_control_name":"page7","source_property_name":"#toggle_state","target_property_name":"#page_seven"},
-    {"binding_type":"view","source_control_name":"page8","source_property_name":"#toggle_state","target_property_name":"#page_eight"},
-    {"binding_type":"view","source_control_name":"page9","source_property_name":"#toggle_state","target_property_name":"#page_nine"},
-    {"binding_type":"view","source_control_name":"page10","source_property_name":"#toggle_state","target_property_name":"#page_ten"},
-    {"binding_type":"view","source_control_name":"page11","source_property_name":"#toggle_state","target_property_name":"#page_eleven"},
-    {"binding_type":"view","source_control_name":"page12","source_property_name":"#toggle_state","target_property_name":"#page_twelve"},
-    {"binding_type":"view","source_control_name":"page13","source_property_name":"#toggle_state","target_property_name":"#page_thirteen"},
-    {"binding_type":"view","source_control_name":"page14","source_property_name":"#toggle_state","target_property_name":"#page_fourteen"},
-    {"binding_type":"view","source_control_name":"page15","source_property_name":"#toggle_state","target_property_name":"#page_fifteen"},
-    {"binding_type":"view","source_control_name":"page16","source_property_name":"#toggle_state","target_property_name":"#page_sixteen"},
-    {"binding_type":"view","source_control_name":"page17","source_property_name":"#toggle_state","target_property_name":"#page_seventeen"},
-    {"binding_type":"view","source_control_name":"page18","source_property_name":"#toggle_state","target_property_name":"#page_eighteen"},
-    {"binding_type":"view","source_control_name":"page19","source_property_name":"#toggle_state","target_property_name":"#page_nineteen"},
-    {"binding_type":"view","source_control_name":"page20","source_property_name":"#toggle_state","target_property_name":"#page_twenty"},
-    {"binding_type":"view","source_control_name":"page21","source_property_name":"#toggle_state","target_property_name":"#page_twentyone"},
-    {"binding_type":"view","source_control_name":"page22","source_property_name":"#toggle_state","target_property_name":"#page_twentytwo"},
-    {"binding_type":"view","source_control_name":"page23","source_property_name":"#toggle_state","target_property_name":"#page_twentythree"},
-    {"binding_type":"view","source_control_name":"page24","source_property_name":"#toggle_state","target_property_name":"#page_twentyfour"},
-    {"binding_type":"view","source_control_name":"page25","source_property_name":"#toggle_state","target_property_name":"#page_twentyfive"},
-    {"binding_type":"view","source_control_name":"page26","source_property_name":"#toggle_state","target_property_name":"#page_twentysix"},
-    {"binding_type":"view","source_control_name":"page27","source_property_name":"#toggle_state","target_property_name":"#page_twentyseven"},
-    {
-      "binding_type": "view",
-      "binding_condition": "always",
-      "source_property_name": "('#page_' + (1 + (#page_one + #page_two + #page_three + #page_four + #page_five + #page_six + #page_seven + #page_eight + #page_nine + #page_ten + #page_eleven + #page_twelve + #page_thirteen + #page_fourteen + #page_fifteen + #page_sixteen + #page_seventeen + #page_eighteen + #page_nineteen + #page_twenty + #page_twentyone + #page_twentytwo + #page_twentythree + #page_twentyfour + #page_twentyfive + #page_twentysix + #page_twentyseven)))",
-      "target_property_name": "#offset"
     }
   ]
 }

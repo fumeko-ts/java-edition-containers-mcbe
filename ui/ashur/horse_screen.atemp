@@ -19,18 +19,7 @@
   "horse_panel@container_common.container_details": {
     "size": [176, 166],
     "$screen_controls": [
-      {
-        "horse_inventory_sprite@screen_content.image_element": {
-          "uv_size": [176, 166],
-          "texture": "assets/container/horse",
-          "controls": [
-            {
-              "root@global.root_panel": {}
-            }
-          ]
-        }
-      },
-
+      {"common_panel@screen_content.horse":{}},
       {
         "cell_main@global.empty_panel": {
           "size": [18, 36],
@@ -92,7 +81,7 @@
                 "anchor_to": "top_middle",
                 "layer": 9,
                 "collection_name": "horse_equip_items",
-                "grid_item_template": "global.container_item",
+                "grid_item_template": "jc_container_item.container_item",
                 "grid_dimension_binding": "#equip_grid_dimensions",
                 "$item_collection": "horse_equip_items",
                 "bindings": [
@@ -121,6 +110,7 @@
                     "horse@global.custom_renderer": {
                       "$type": "live_horse_renderer",
                       "anchor_from": "center",
+                      "layer": 7,
                       "anchor_to": "center",
                       "bindings": [
                         {
@@ -150,7 +140,7 @@
                 "anchor_to": "bottom_left",
                 "anchor_from": "bottom_left",
                 "collection_name": "$item_collection",
-                "grid_item_template": "global.container_item",
+                "grid_item_template": "jc_container_item.container_item",
                 "grid_dimension_binding": "#inv_grid_dimensions",
                 "$background_images": "horse_screen.slot_collection",
                 "bindings": [{ "binding_name": "#inv_grid_dimensions" }]

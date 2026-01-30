@@ -15,8 +15,8 @@
 */
 
 {
-  "hopper_screen@global.inventory_screen_common": {"$screen_content": "hopper_screen.hopper_panel"},
-  "dispenser_screen@global.inventory_screen_common": {"$screen_content": "dispenser_screen.dispenser_panel"},
-  "dropper_screen@global.inventory_screen_common": {"$screen_content": "dropper_screen.dropper_panel"},
-  "crafter_screen@global.inventory_screen_common": {"$screen_content": "crafter_screen.panel_crafter"}
+  "hopper_screen@global.container_screen": {"$screen_content": "hopper_screen.hopper_panel"},
+  "dispenser_screen@global.container_screen": {"$screen_content": "dispenser_screen.dispenser_panel"},
+  "dropper_screen@global.container_screen": {"$screen_content": "dropper_screen.dropper_panel"},
+  "crafter_screen@global.container_screen": {"$screen_content": "crafter_screen.panel_crafter"}
 }

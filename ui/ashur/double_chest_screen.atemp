@@ -17,10 +17,9 @@
 {
   "namespace": "double_chest_screen",
   "double_chest@container_common.container_details": {
-    "type": "panel",
     "size": [ 176, 222 ],
     "$screen_controls": [
-      {"common_panel@screen_content.container_base": {"$double_chest_container": true}},
+      {"common_panel@screen_content.double_chest": {}},
       {
         "double_chest_top_half@global.empty_stack": {
           "orientation": "vertical",
@@ -39,7 +38,7 @@
                       "controls": [
                         {
                           "double_chest_label@global.empty_label": {
-                            "offset": [ 8, 6 ],
+                            "offset": [ 8, 5 ],
                             "anchor_to": "top_left",
                             "anchor_from": "top_left",
                             "layer": 5,
@@ -64,8 +63,8 @@
                       "type": "grid",
                       "size": [ 162, 108 ],
                       "grid_dimensions": [ 9, 6 ],
-                      "grid_item_template": "common.container_item",
-                      "$item_collection_name": "container_items",
+                      "grid_item_template": "jc_container_item.container_item",
+                      "$item_collection": "container_items",
                       "collection_name": "container_items"
                     }
                   },

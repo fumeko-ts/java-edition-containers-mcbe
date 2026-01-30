@@ -17,40 +17,60 @@
 {
   "namespace": "cartography_screen",
   "cartography_panel@container_common.container_details": {
-    "size": [ 176, 166 ],
+    "size": [176, 166],
     "$screen_controls": [
-      {"common_panel@screen_content.container_base": {"$cartography_screen": true}},
+      { "common_panel@screen_content.cartography": {} },
       {
         "cartography_top_content@global.empty_stack": {
           "orientation": "vertical",
-          "size": [ 176, 79 ],
+          "size": [176, 79],
           "anchor_to": "top_middle",
           "anchor_from": "top_middle",
           "controls": [
-            {"filler@global.empty_panel": {"size": [ "fill", 13 ]}},
+            { "filler_1@global.empty_panel": { "size": [176, 3] } },
+            {
+              "label_holder@global.empty_panel": {
+                "size": [176, 10],
+                "controls": [
+                  {
+                    "cartography_label@global.empty_label": {
+                      "offset": [8, 0],
+                      "anchor_to": "left_middle",
+                      "anchor_from": "left_middle",
+                      "size": ["default", 10],
+                      "layer": 5,
+                      "text": "atemp.container.cartography_table",
+                      "color": "$title_text_color"
+                    }
+                  }
+                ]
+              }
+            },
             {
               "main_stack@global.empty_stack": {
                 "orientation": "horizontal",
-                "size": [ 176, 66 ],
+                "size": [176, 66],
                 "controls": [
-                  {"filler_1@global.empty_panel": {"size": [ 14, "fill" ]}},
+                  { "filler_1@global.empty_panel": { "size": [14, "fill"] } },
                   {
                     "input_stack@global.empty_stack": {
                       "orientation": "vertical",
-                      "size": [ 18, 66 ],
+                      "size": [18, 66],
                       "controls": [
-                        {"filler_1@global.empty_panel": {"size": [ "fill", 1 ]}},
-                        {"1st_input_slot@global.container_item": {"$item_collection": "cartography_input_items"}},
-                        {"filler_1@global.empty_panel": {"size": [ "fill", 19 ]}},
-                        {"2nd_input_slot@global.container_item": {"$item_collection": "cartography_additional_items"}},
-                        {"filler_1@global.empty_panel": {"size": [ "fill", 10 ]}}
+                        { "filler_1@global.empty_panel": { "size": ["fill", 1] } },
+                        { "1st_input_slot@jc_container_item.container_item": { "$item_collection": "cartography_input_items" } },
+                        { "filler_1@global.empty_panel": { "size": ["fill", 19] } },
+                        {
+                          "2nd_input_slot@jc_container_item.container_item": { "$item_collection": "cartography_additional_items" }
+                        },
+                        { "filler_1@global.empty_panel": { "size": ["fill", 10] } }
                       ]
                     }
                   },
-                  {"filler_2@global.empty_panel": {"size": [ 35, "fill" ]}},
+                  { "filler_2@global.empty_panel": { "size": [35, "fill"] } },
                   {
                     "map_image_panel@global.empty_panel": {
-                      "size": [ 66, 66 ],
+                      "size": [66, 66],
                       "controls": [
                         {
                           "1@cartography_screen.map_image": {
@@ -58,7 +78,7 @@
                             "anchor_to": "top_left",
                             "layer": 3,
                             "texture": "assets/sprites/container/cartography_table/duplicated_map",
-                            "size": [ 50, 66 ],
+                            "size": [50, 66],
                             "$mode": "clone"
                           }
                         },
@@ -67,51 +87,69 @@
                             "anchor_from": "top_right",
                             "anchor_to": "top_right",
                             "layer": 5,
-                            "offset": [ 0, 14 ],
+                            "offset": [0, 14],
                             "texture": "assets/sprites/container/cartography_table/duplicated_map",
-                            "size": [ 50, 66 ],
+                            "size": [50, 66],
                             "$mode": "clone"
                           }
                         },
                         {
-                          "3@cartography_screen.map_image": {"$map_sprite": "assets/sprites/container/cartography_table/map", "$mode": "none"}
+                          "3@cartography_screen.map_image": {
+                            "$map_sprite": "assets/sprites/container/cartography_table/map",
+                            "$mode": "none"
+                          }
                         },
                         {
-                          "4@cartography_screen.map_image": {"$map_sprite": "assets/sprites/container/cartography_table/map", "$mode": "rename"}
+                          "4@cartography_screen.map_image": {
+                            "$map_sprite": "assets/sprites/container/cartography_table/map",
+                            "$mode": "rename"
+                          }
                         },
                         {
-                          "5@cartography_screen.map_image": {"$map_sprite": "assets/sprites/container/cartography_table/map", "$mode": "basic_map"}
+                          "5@cartography_screen.map_image": {
+                            "$map_sprite": "assets/sprites/container/cartography_table/map",
+                            "$mode": "basic_map"
+                          }
                         },
                         {
-                          "6@cartography_screen.map_image": {"$map_sprite": "assets/sprites/container/cartography_table/map", "$mode": "locator_map"}
+                          "6@cartography_screen.map_image": {
+                            "$map_sprite": "assets/sprites/container/cartography_table/map",
+                            "$mode": "locator_map"
+                          }
                         },
                         {
-                          "7@cartography_screen.map_image": {"$map_sprite": "assets/sprites/container/cartography_table/scaled_map", "$mode": "extend"}
+                          "7@cartography_screen.map_image": {
+                            "$map_sprite": "assets/sprites/container/cartography_table/scaled_map",
+                            "$mode": "extend"
+                          }
                         },
                         {
-                          "8@cartography_screen.map_image": {"$map_sprite": "assets/sprites/container/cartography_table/locked_map", "$mode": "locked"}
+                          "8@cartography_screen.map_image": {
+                            "$map_sprite": "assets/sprites/container/cartography_table/locked_map",
+                            "$mode": "locked"
+                          }
                         }
                       ]
                     }
                   },
-                  {"filler_3@global.empty_panel": {"size": [ 11, "fill" ]}},
+                  { "filler_3@global.empty_panel": { "size": [11, "fill"] } },
                   {
                     "output_slot_holder@global.empty_stack": {
                       "orientation": "vertical",
-                      "size": [ 18, 66 ],
+                      "size": [18, 66],
                       "controls": [
-                        {"filler_1@global.empty_panel": {"size": [ "fill", 25 ]}},
+                        { "filler_1@global.empty_panel": { "size": ["fill", 25] } },
                         {
-                          "result_item_slot@global.container_item": {
+                          "result_item_slot@jc_container_item.container_item": {
                             "$item_collection": "cartography_result_items",
                             "$button_ref": "button_mappings.cartography_output_slot_button"
                           }
                         },
-                        {"filler_2@global.empty_panel": {"size": [ "fill", 23 ]}}
+                        { "filler_2@global.empty_panel": { "size": ["fill", 23] } }
                       ]
                     }
                   },
-                  {"filler_4@global.empty_panel": {"size": [ 14, "fill" ]}}
+                  { "filler_4@global.empty_panel": { "size": [14, "fill"] } }
                 ]
               }
             }
@@ -119,29 +157,36 @@
         }
       },
       {
-        "bottom@global.inventory_bottom_half_with_label": {"anchor_to": "bottom_middle", "anchor_from": "bottom_middle"}
+        "bottom@global.inventory_bottom_half_with_label": {
+          "anchor_to": "bottom_middle",
+          "anchor_from": "bottom_middle"
+        }
       },
       {
         "error_holder@global.empty_panel": {
-          "size": [ 63, 52 ],
+          "size": [63, 52],
           "anchor_from": "top_left",
           "anchor_to": "top_left",
           "controls": [
             {
               "error@global.empty_panel": {
-                "size": [ 28, 21 ],
+                "size": [28, 21],
                 "anchor_from": "bottom_right",
                 "anchor_to": "bottom_right",
                 "controls": [
                   {
-                    "error@screen_content.image_element": {"size": [ 28, 21 ], "layer": 4, "texture": "assets/sprites/container/cartography_table/error.png"}
+                    "error@screen_content.image_element": {
+                      "size": [28, 21],
+                      "layer": 4,
+                      "texture": "assets/sprites/container/cartography_table/error.png"
+                    }
                   }
                 ]
               }
             }
           ],
           "bindings": [
-            {"binding_name": "#is_none_mode"},
+            { "binding_name": "#is_none_mode" },
             {
               "binding_type": "collection",
               "binding_collection_name": "cartography_additional_items",
@@ -167,6 +212,6 @@
   },
   "map_image@screen_content.image_element": {
     "texture": "$map_sprite",
-    "bindings": [ {"binding_name": "('#is_' + $mode + '_mode')", "binding_name_override": "#visible"} ]
+    "bindings": [{ "binding_name": "('#is_' + $mode + '_mode')", "binding_name_override": "#visible" }]
   }
 }

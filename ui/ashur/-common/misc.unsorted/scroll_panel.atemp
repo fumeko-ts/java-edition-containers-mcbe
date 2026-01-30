@@ -36,6 +36,7 @@
     "anchor_from": "top_left",
     "$scroll_panel_consume_hover_events|default": true,
     "consume_hover_events": "$scroll_panel_consume_hover_events",
+    "$scroll_track_icon|default": "global.empty_panel",
     "$scroll_view_name|default": "scroll_view",
     "tts_ignore_count": true,
     "controls": [
@@ -130,7 +131,7 @@
                                   "anchor_from": "center",
                                   "anchor_to": "center",
                                   "controls": [
-                                    {"bar_indent@global.empty_panel": {}}
+                                    {"bar_indent@$scroll_track_icon": {}}
                                   ],
                                   "button_mappings": [
                                     {

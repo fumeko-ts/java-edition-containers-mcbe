@@ -16,10 +16,35 @@
 
 {
   "namespace": "tradeing_screen",
+  "trade_scroll_track@screen_content.image_element": {
+    "uv": [93, 17],
+    "uv_size": [8, 142],
+    "size": [8, 142],
+    "layer": 6,
+    "texture": "assets/container/villager"
+  },
   "screen_panel@container_common.container_details": {
     "size": [276, 166],
     "$screen_controls": [
-      { "screen_base@screen_content.container_base": { "$main_trade_screen": true } },
+      { "common_panel@screen_content.trade": {} },
+      {
+        "disabled_bar@global.empty_panel": {
+          "size": [100, 45],
+          "anchor_from": "top_left",
+          "anchor_to": "top_left",
+          "controls": [
+            {
+              "label@screen_content.image_element": {
+                "anchor_to": "bottom_right",
+                "anchor_from": "bottom_right",
+                "size": [6, 27],
+                "texture": "assets/sprites/container/villager/scroller_disabled",
+                "layer": 3
+              }
+            }
+          ]
+        }
+      },
       {
         "scroll_panel@scroll_panel.scroll_panel": {
           "anchor_to": "top_left",
@@ -31,6 +56,7 @@
           "$scroll_view_port_size": [92, 140.4],
           "$scrolling_pane_size": ["100%", "100%"],
           "$collection_name": "trade_tiers",
+          "$scroll_track_icon": "tradeing_screen.trade_scroll_track",
           "$scroll_box_image_control": "tradeing_screen.trade_scroller",
           "$scrolling_content": "tradeing_screen.grid_holder"
         }
@@ -48,7 +74,7 @@
                 "size": [18, 55],
                 "controls": [
                   { "filler_1@global.empty_panel": { "size": ["fill", 36] } },
-                  { "input_1@global.container_item": { "$item_collection": "trade2_ingredient1_item" } },
+                  { "input_1@jc_container_item.container_item": { "$item_collection": "trade2_ingredient1_item" } },
                   { "filler_2@global.empty_panel": { "size": ["fill", 1] } }
                 ]
               }
@@ -60,7 +86,7 @@
                 "size": [18, 55],
                 "controls": [
                   { "filler_1@global.empty_panel": { "size": ["fill", 36] } },
-                  { "input_2@global.container_item": { "$item_collection": "trade2_ingredient2_item" } },
+                  { "input_2@jc_container_item.container_item": { "$item_collection": "trade2_ingredient2_item" } },
                   { "filler_2@global.empty_panel": { "size": ["fill", 1] } }
                 ]
               }
@@ -73,9 +99,43 @@
                 "controls": [
                   { "filler_1@global.empty_panel": { "size": ["fill", 37] } },
                   {
-                    "result@global.container_item": {
-                      "$item_collection": "trade2_result_item",
-                      "$button_ref": "button_mappings.trade_result_item_slot_button"
+                    "result_holder@global.empty_panel": {
+                      "size": [18, 18],
+                      "controls": [
+                        {
+                          "result@jc_container_item.container_item": {
+                            "$item_collection": "trade2_result_item",
+                            "$button_ref": "button_mappings.trade_result_item_slot_button",
+                            "bindings": [
+                              {
+                                "binding_name": "#item_valid",
+                                "binding_name_override": "#visible",
+                                "binding_type": "collection",
+                                "binding_collection_name": "$item_collection",
+                                "binding_condition": "always"
+                              }
+                            ]
+                          }
+                        },
+                        {
+                          "result_not_possible@jc_container_item.container_item": {
+                            "$dont_render_item": true,
+                            "$dont_render_hover_text": true,
+                            "$dont_render_item_count": true,
+                            "$item_collection": "trade2_result_item",
+                            "$button_ref": "button_mappings.trade_result_item_slot_button",
+                            "bindings": [
+                              {
+                                "binding_name": "(not #item_valid)",
+                                "binding_name_override": "#visible",
+                                "binding_type": "collection",
+                                "binding_collection_name": "$item_collection",
+                                "binding_condition": "always"
+                              }
+                            ]
+                          }
+                        }
+                      ]
                     }
                   }
                 ]
@@ -148,44 +208,35 @@
                     "empty_progress_bar@screen_content.image_element": {
                       "size": [101, 5],
                       "texture": "assets/sprites/container/villager/experience_bar_background",
-                      "layer": 6,
-                      "controls": [
+                      "layer": 6
+                    }
+                  },
+                  {
+                    "green_progress_bar@tradeing_screen.progress_bar_template": {
+                      "texture": "assets/sprites/container/villager/experience_bar_current",
+                      "layer": 8,
+                      "bindings": [
                         {
-                          "green_progress_bar@screen_content.image_element": {
-                            "size": [101, 5],
-                            "texture": "assets/sprites/container/villager/experience_bar_current",
-                            "clip_direction": "left",
-                            "clip_pixelperfect": true,
-                            "layer": 8,
-                            "bindings": [
-                              {
-                                "binding_name": "#exp_progress",
-                                "binding_name_override": "#clip_ratio",
-                                "binding_type": "global",
-                                "binding_condition": "always_when_visible"
-                              }
-                            ]
-                          }
-                        },
-                        {
-                          "white_progress_bar@screen_content.image_element": {
-                            "size": [101, 5],
-                            "texture": "assets/sprites/container/villager/experience_bar_result",
-                            "clip_direction": "left",
-                            "clip_pixelperfect": true,
-                            "layer": 7,
-                            "bindings": [
-                              {
-                                "binding_name": "#exp_possible_progress",
-                                "binding_name_override": "#clip_ratio",
-                                "binding_type": "global",
-                                "binding_condition": "always"
-                              }
-                            ]
-                          }
+                          "binding_name": "#exp_progress",
+                          "binding_name_override": "#clip_ratio",
+                          "binding_type": "global",
+                          "binding_condition": "always"
                         }
-                      ],
-                      "bindings": [{ "binding_name": "#exp_bar_visible", "binding_name_override": "#visible" }]
+                      ]
+                    }
+                  },
+                  {
+                    "white_progress_bar@tradeing_screen.progress_bar_template": {
+                      "texture": "assets/sprites/container/villager/experience_bar_result",
+                      "layer": 7,
+                      "bindings": [
+                        {
+                          "binding_name": "#exp_possible_progress",
+                          "binding_name_override": "#clip_ratio",
+                          "binding_type": "global",
+                          "binding_condition": "always"
+                        }
+                      ]
                     }
                   }
                 ]
@@ -220,6 +271,11 @@
       }
     ]
   },
+  "progress_bar_template@screen_content.image_element": {
+    "size": [101, 5],
+    "clip_direction": "left",
+    "clip_pixelperfect": true
+  },
   "trade_tier_base": {
     "type": "stack_panel",
     "orientation": "vertical",
@@ -234,7 +290,6 @@
         "binding_collection_name": "trade_tiers"
       },
       {
-     //   "binding_name": "",
         "binding_name": "#tier_visible",
         "binding_name_override": "#visible",
         "binding_type": "collection",
@@ -250,12 +305,11 @@
     "$toggle_binding_type": "global",
     "$toggle_state_binding_name": "#trade_toggle_state",
     "$toggle_enabled_binding_type": "global",
-  //  "$toggle_enabled_binding_name": "",
     "$toggle_enabled_binding_name": "#trade_toggle_enabled",
     "$toggle_enabled_binding_condition": "always"
   },
   "trade_scroller@screen_content.image_element": {
-    "nineslice_size": [3, 6, 3, 7], // there is no way i am spending days again just to get the tileing to work
+    "nineslice_size": [3, 6, 3, 7],
     "anchor_to": "center",
     "anchor_from": "center",
     "allow_clipping": false,
@@ -274,7 +328,7 @@
     "offset": [0, -1],
     "controls": [
       {
-        "trade_buttons@common.root_panel": {
+        "trade_buttons@global.empty_panel": {
           "size": [88, "100%c"],
           "controls": [
             {

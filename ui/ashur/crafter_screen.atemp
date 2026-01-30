@@ -20,7 +20,7 @@
     "layer": 1,
     "size": [176, 166],
     "$screen_controls": [
-      { "base_panel@screen_content.container_base": { "$crafter_screen": true } },
+      { "base_panel@screen_content.crafter": {} },
       {
         "main_vertical_stack@global.empty_stack": {
           "orientation": "vertical",
@@ -28,8 +28,25 @@
           "anchor_to": "top_middle",
           "anchor_from": "top_middle",
           "controls": [
-            { "vertical_filler_top@global.empty_panel": { "size": ["fill", 6] } },
-            { "title_row_stack@global.empty_panel": { "size": [176, 7] } },
+            { "vertical_filler_top@global.empty_panel": { "size": ["fill", 3] } },
+            {
+              "title_row_stack@global.empty_panel": {
+                "size": [176, 10],
+                "controls": [
+                  {
+                    "crafter_label@global.empty_label": {
+                      "offset": [68, 2],
+                      "anchor_to": "left_middle",
+                      "anchor_from": "left_middle",
+                      "size": ["default", 10],
+                      "layer": 5,
+                      "text": "atemp.container.crafter",
+                      "color": "$title_text_color"
+                    }
+                  }
+                ]
+              }
+            },
             { "vertical_filler_between@global.empty_panel": { "size": ["fill", 3] } },
             {
               "input_and_output_row@global.empty_stack": {
@@ -113,10 +130,9 @@
                             "layer": 2,
                             "size": [54, 54],
                             "grid_dimensions": [3, 3],
-                            "$item_collection_name": "container_items",
-                            "$background_images|default": "global.empty_image", // not needed
+                            "$item_collection": "container_items",
                             "collection_name": "container_items",
-                            "grid_item_template": "common.container_item"
+                            "grid_item_template": "jc_container_item.container_item"
                           }
                         }
                       ]
@@ -188,9 +204,9 @@
                                       }
                                     },
                                     {
-                                      "output_item_renderer@common.item_renderer": {
+                                      "output_item_renderer@jc_container_item.item_renderer": {
                                         "size": [16, 16],
-                                        "$item_collection_name|default": "none",// to prevent errors since this has no collection
+                                        "$item_collection_name|default": "none", // to prevent errors since this has no collection
                                         "bindings": [
                                           {
                                             "binding_name": "#crafter_output_item",
@@ -280,5 +296,5 @@
       }
     ]
   },
-  "crafter_input_item@common.container_item": { "size": [18, 18] }
+  "crafter_input_item@jc_container_item.container_item": { "size": [18, 18] }
 }

@@ -15,5 +15,5 @@
 */
 
 {
-  "brewing_stand_screen@global.inventory_screen_common": {"$screen_content": "brewing_stand_screen.brewing_panel"}
+  "brewing_stand_screen@global.container_screen": {"$screen_content": "brewing_stand_screen.brewing_panel"}
 }

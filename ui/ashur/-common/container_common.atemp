@@ -16,7 +16,8 @@
 
 {
   "namespace": "container_common",
-  "container_details@global.empty_panel": {
+  "container_details@global.root_panel": {
+    "$size": ["100%", "100%"],
     "anchor_to": "center",
     "anchor_from": "center",
     "layer": 5,

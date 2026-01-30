@@ -18,9 +18,9 @@
   "namespace": "stonecutter_screen",
   "stonecutter_panel@container_common.container_details": {
     "size": [176, 166],
-    "$item_collection_name|default": "stones",
+    "$item_collection|default": "stones",
     "$screen_controls": [
-      { "common_panel@screen_content.container_base": { "$stonecutter_screen": true } },
+      { "common_panel@screen_content.stonecutter": {} },
       { "scroll_panel@stonecutter_screen.scroll_grid": {} },
       {
         "stonecutter_top_half@global.empty_stack": {
@@ -59,7 +59,7 @@
                       "size": [18, 54],
                       "controls": [
                         { "filler_1@global.empty_panel": { "size": ["fill", 17] } },
-                        { "input_item_slot@global.container_item": { "$item_collection": "stonecutter_input_items" } },
+                        { "input_item_slot@jc_container_item.container_item": { "$item_collection": "stonecutter_input_items" } },
                         { "filler_1@global.empty_panel": { "size": ["fill", 19] } }
                       ]
                     }
@@ -72,9 +72,8 @@
                       "controls": [
                         { "filler_1@global.empty_panel": { "size": ["fill", 17] } },
                         {
-                          "result_item_slot@global.container_item": {
+                          "result_item_slot@jc_container_item.container_item": {
                             "$item_collection": "stonecutter_result_items",
-    "$stack_count_required|default": true,
                             "$button_ref": "button_mappings.stonecutter_result_slot_button"
                           }
                         },
@@ -115,7 +114,7 @@
                           "binding_name": "(#stone_selector_total_items < 13)",
                           "binding_name_override": "#visible",
                           "binding_type": "collection",
-                          "binding_collection_name": "$item_collection_name"
+                          "binding_collection_name": "$item_collection"
                         }
                       ]
                     }
@@ -201,7 +200,7 @@
     "bindings": [
       {
         "binding_type": "collection_details",
-        "binding_collection_name": "$item_collection_name",
+        "binding_collection_name": "$item_collection",
         "binding_condition": "always"
       }
     ],
@@ -222,7 +221,7 @@
                   {
                     "binding_type": "collection",
                     "binding_condition": "always",
-                    "binding_collection_name": "$item_collection_name",
+                    "binding_collection_name": "$item_collection",
                     "binding_name": "(#stone_cell_background_texture = 'textures/ui/cell_image_normal')",
                     "binding_name_override": "#visible"
                   }
@@ -242,7 +241,7 @@
             {
               "binding_type": "collection",
               "binding_condition": "always",
-              "binding_collection_name": "$item_collection_name",
+              "binding_collection_name": "$item_collection",
               "binding_name": "(#stone_cell_background_texture = 'textures/ui/cell_image_normal')",
               "binding_name_override": "#visible"
             }
@@ -260,7 +259,7 @@
             {
               "binding_type": "collection",
               "binding_condition": "always",
-              "binding_collection_name": "$item_collection_name",
+              "binding_collection_name": "$item_collection",
               "binding_name": "(#stone_cell_background_texture = 'textures/ui/cell_image_invert')",
               "binding_name_override": "#visible"
             }
@@ -276,13 +275,13 @@
           "anchor_from": "center",
           "offset": [1.2, 1.2],
           "layer": 10,
-          "$item_collection_name|default": "stones",
+          "$item_collection|default": "stones",
           "bindings": [
             {
               "binding_name": "#item_id_aux",
               "binding_condition": "visible",
               "binding_type": "collection",
-              "binding_collection_name": "$item_collection_name"
+              "binding_collection_name": "$item_collection"
             }
           ]
         }
@@ -325,7 +324,7 @@
           "size": [64, "default"],
           "anchor_to": "top_middle",
           "anchor_from": "top_middle",
-          "collection_name": "$item_collection_name",
+          "collection_name": "$item_collection",
           "grid_rescaling_type": "horizontal",
           "grid_item_template": "stonecutter_screen.stone_slot_button",
           "bindings": [
@@ -334,7 +333,7 @@
               "binding_name_override": "#maximum_grid_items",
               "binding_condition": "visible",
               "binding_type": "collection",
-              "binding_collection_name": "$item_collection_name"
+              "binding_collection_name": "$item_collection"
             }
           ]
         }

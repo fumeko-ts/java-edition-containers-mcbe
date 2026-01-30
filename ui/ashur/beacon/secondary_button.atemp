@@ -17,24 +17,22 @@
 {
   "namespace": "secondary_button",
   "secondary_button@global.empty_panel": {
-    "size": [ 22, 22 ],
+    "size": [22, 22],
     "variables": {
       "requires": "($button_name = 'regen')",
-      "$controls": [
-        {"1@secondary_button.secondary_button_template": {"$effect_name": "regen"}}
-      ]
+      "$controls": [{ "1@secondary_button.secondary_button_template": { "$effect_name": "regen" } }]
     },
     "controls": "$controls",
     "$controls": [
-      {"1@secondary_button.secondary_button_template": {"$effect_name": "speed"}},
-      {"2@secondary_button.secondary_button_template": {"$effect_name": "haste"}},
-      {"3@secondary_button.secondary_button_template": {"$effect_name": "resist"}},
-      {"4@secondary_button.secondary_button_template": {"$effect_name": "jump"}},
-      {"5@secondary_button.secondary_button_template": {"$effect_name": "strength"}}
+      { "1@secondary_button.secondary_button_template": { "$effect_name": "speed" } },
+      { "2@secondary_button.secondary_button_template": { "$effect_name": "haste" } },
+      { "3@secondary_button.secondary_button_template": { "$effect_name": "resist" } },
+      { "4@secondary_button.secondary_button_template": { "$effect_name": "jump" } },
+      { "5@secondary_button.secondary_button_template": { "$effect_name": "strength" } }
     ]
   },
   "secondary_button_template@global.empty_panel": {
-    "size": [ 22, 22 ],
+    "size": [22, 22],
     "$effect_path|default": "('assets/beacon_button_sprites/' + $effect_name)",
     "$locked_button_texture|default": "assets/beacon_button_sprites/locked",
     "$default_button_texture|default": "assets/beacon_button_sprites/default",
@@ -52,125 +50,75 @@
         "hover_button": {
           "type": "button",
           "layer": 4,
-          "size": [ 22, 22 ],
-          "offset": [ 1, 1 ],
+          "size": [22, 22],
+          "offset": [1, 1],
           "default_focus_precedence": 1,
           "hover_control": "hover_text",
           "consume_event": false,
           "button_mappings": [
-            {"to_button_id": "button.container_slot_hovered", "mapping_type": "pressed", "consume_event": false}
+            { "to_button_id": "button.container_slot_hovered", "mapping_type": "pressed", "consume_event": false }
           ],
-          "controls": [
+          "controls": [{ "hover_text@secondary_button.hover_text": {} }]
+        }
+      },
+      {
+        "toggle_button@common.toggle": {
+          "size": [22, 22],
+          "layer": 1,
+          "offset": [1, 1],
+          "focus_wrap_enabled": false,
+          "$toggle_name": "$button_name",
+          "checked_control": "checked",
+          "unchecked_control": "unchecked",
+          "checked_hover_control": "checked_hover",
+          "unchecked_hover_control": "unchecked_hover",
+          "checked_locked_control": "locked",
+          "unchecked_locked_hover_control": "locked",
+          "checked_locked_hover_control": "locked",
+          "unchecked_locked_control": "locked",
+          "bindings": [
+            { "binding_collection_name": "$button_name", "binding_type": "collection_details" },
             {
-              "underlay_disabled@screen_content.image_element": {"texture": "$locked_button_texture", "size": [ 22, 22 ], "layer": 3}
+              "binding_name": "#button_visible",
+              "binding_name_override": "#visible",
+              "binding_condition": "always",
+              "binding_collection_name": "$button_name",
+              "binding_type": "collection"
             },
             {
+              "binding_type": "collection",
+              "binding_collection_name": "$button_name",
+              "binding_name": "#active",
+              "binding_name_override": "#enabled"
+            },
+            {
+              "binding_type": "collection",
+              "binding_name": "#selected",
+              "binding_collection_name": "$button_name",
+              "binding_name_override": "#toggle_state"
+            }
+          ],
+          "button_mappings": [
+            {
+              "from_button_id": "button.menu_select",
+              "to_button_id": "button.menu_ok",
+              "mapping_type": "pressed"
+            },
+            { "from_button_id": "button.menu_ok", "to_button_id": "button.menu_ok", "mapping_type": "pressed" }
+          ],
+          "controls": [
+            { "unchecked@secondary_button.beacon_sprite_base": { "$texture": "$default_button_texture" } },
+            { "checked@secondary_button.beacon_sprite_base": { "$texture": "$selected_button_texture" } },
+            { "unchecked_hover@secondary_button.beacon_sprite_base": { "$texture": "$hover_button_texture" } },
+            { "checked_hover@secondary_button.beacon_sprite_base": { "$texture": "$selected_button_texture" } },
+            { "locked@primary_button.image_base": { "texture": "$locked_button_texture" } },
+            {
               "effect_overlay@screen_content.image_element": {
-                "size": [ 18, 18 ],
+                "size": [18, 18],
                 "layer": 6,
                 "anchor_from": "center",
                 "anchor_to": "center",
                 "texture": "$effect_path"
-              }
-            },
-            {"hover_text@secondary_button.hover_text": {}}
-          ],
-          "bindings": [
-            {
-              "binding_type": "collection",
-              "binding_collection_name": "$button_name",
-              "binding_name": "#active",
-              "binding_name_override": "#is_active"
-            },
-            {
-              "binding_type": "view",
-              "binding_condition": "always",
-              "source_property_name": "(not #is_active)",
-              "target_property_name": "#visible"
-            }
-          ]
-        }
-      },
-      {
-        "toggle_holder@global.empty_panel": {
-          "size": [ 22, 22 ],
-          "bindings": [
-            {
-              "binding_type": "collection",
-              "binding_collection_name": "$button_name",
-              "binding_name": "#active",
-              "binding_name_override": "#visible"
-            }
-          ],
-          "controls": [
-            {
-              "toggle_button@common.toggle": {
-                "size": [ 22, 22 ],
-                "layer": 1,
-                "offset": [ 1, 1 ],
-                "focus_wrap_enabled": false,
-                "$toggle_name": "$button_name",
-                "checked_control": "checked",
-                "unchecked_control": "unchecked",
-                "checked_hover_control": "checked_hover",
-                "unchecked_hover_control": "unchecked_hover",
-                "checked_locked_control": "locked_default",
-                "unchecked_locked_control": "locked_default",
-                "checked_locked_hover_control": "locked_hover",
-                "unchecked_locked_hover_control": "locked_hover",
-                "bindings": [
-                  {
-                    "binding_name": "#button_visible",
-                    "binding_name_override": "#visible",
-                    "binding_condition": "always",
-                    "binding_collection_name": "$button_name",
-                    "binding_type": "collection"
-                  },
-                  {"binding_collection_name": "$button_name", "binding_type": "collection_details"},
-                  {
-                    "binding_type": "collection",
-                    "binding_name": "#selected",
-                    "binding_collection_name": "$button_name",
-                    "binding_name_override": "#toggle_state"
-                  }
-                ],
-                "button_mappings": [
-                  {
-                    "from_button_id": "button.menu_select",
-                    "to_button_id": "button.menu_ok",
-                    "mapping_type": "pressed"
-                  },
-                  {"from_button_id": "button.menu_ok", "to_button_id": "button.menu_ok", "mapping_type": "pressed"}
-                ],
-                "controls": [
-                  {"unchecked@secondary_button.image_base": {"$texture": "$default_button_texture"}},
-                  {"checked@secondary_button.image_base": {"$texture": "$selected_button_texture"}},
-                  {
-                    "unchecked_hover@secondary_button.image_base": {
-                      "controls": [
-                        {"hover_text@secondary_button.hover_text": {}}
-                      ],
-                      "$texture": "$hover_button_texture"
-                    }
-                  },
-                  {
-                    "checked_hover@secondary_button.image_base": {
-                      "controls": [
-                        {"hover_text@secondary_button.hover_text": {}}
-                      ],
-                      "$texture": "$selected_button_texture"
-                    }
-                  },
-                  {
-                    "effect_overlay@screen_content.image_element": {
-                      "size": [ 18, 18 ],
-                      "layer": 6,
-                      "anchor_from": "center",
-                      "anchor_to": "center",
-                      "texture": "$effect_path"
-                    }
-                  }
-                ]
               }
             }
           ]
@@ -198,5 +146,5 @@
       }
     ]
   },
-  "image_base@screen_content.image_element": {"texture": "$texture", "size": [ 22, 22 ]}
+  "beacon_sprite_base@screen_content.image_element": { "texture": "$texture", "size": [22, 22] }
 }

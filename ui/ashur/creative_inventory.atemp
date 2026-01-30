@@ -203,6 +203,7 @@
       }
     ]
   },
+  // the hover texts for these are pending localization
   "icon_holder@global.empty_panel": { "size": [24, 25], "controls": [{ "img@$tab_icon": {} }] },
   "top_tab@toggle.toggle": {
     "size": [26, 32],
@@ -285,20 +286,10 @@
                             "controls": [
                               { "buffer_1@global.empty_panel": { "size": ["default", 14] } },
                               {
-                                "offhand_slot_creative@global.empty_stack": {
-                                  "orientation": "vertical",
+                                "offhand_slot_creative@jc_container_item.container_item": {
                                   "size": [18, 18],
-                                  "$item_collection_name": "offhand_items",
-                                  "collection_name": "$item_collection_name",
-                                  "controls": [
-                                    {
-                                      "offhand_grid_item@common.container_item": {
-                                        "collection_index": 0,
-                                        "$cell_overlay_ref": "screen_content.armor_overlay_shield",
-                                        "$button_ref": "crafting.no_coalesce_container_slot_button"
-                                      }
-                                    }
-                                  ]
+                                  "$item_collection": "offhand_items",
+                                  "$cell_overlay_ref": "screen_content.armor_overlay_shield"
                                 }
                               },
                               { "buffer_1@global.empty_panel": { "size": ["default", 13] } }
@@ -310,21 +301,19 @@
                           "head_and_chest_creative@global.empty_stack": {
                             "orientation": "vertical",
                             "size": [18, 45],
-                            "$item_collection_name": "armor_items",
-                            "collection_name": "$item_collection_name",
+                            "$item_collection": "armor_items",
+                            "collection_name": "$item_collection",
                             "controls": [
                               {
-                                "armor_item_index_0@common.container_item": {
+                                "armor_item_index_0@jc_container_item.container_item": {
                                   "$cell_overlay_ref": "screen_content.armor_overlay_helmet",
-                                  "$button_ref": "crafting.no_coalesce_container_slot_button",
                                   "collection_index": 0
                                 }
                               },
                               { "buffer_1@global.empty_panel": { "size": ["default", 9] } },
                               {
-                                "armor_item_index_1@common.container_item": {
+                                "armor_item_index_1@jc_container_item.container_item": {
                                   "$cell_overlay_ref": "screen_content.armor_overlay_chest",
-                                  "$button_ref": "crafting.no_coalesce_container_slot_button",
                                   "collection_index": 1
                                 }
                               }
@@ -361,21 +350,19 @@
                           "legs_and_boots_creative@global.empty_stack": {
                             "orientation": "vertical",
                             "size": [18, 45],
-                            "$item_collection_name": "armor_items",
-                            "collection_name": "$item_collection_name",
+                            "$item_collection": "armor_items",
+                            "collection_name": "$item_collection",
                             "controls": [
                               {
-                                "armor_item_index_2@common.container_item": {
+                                "armor_item_index_2@jc_container_item.container_item": {
                                   "$cell_overlay_ref": "screen_content.armor_overlay_legs",
-                                  "$button_ref": "crafting.no_coalesce_container_slot_button",
                                   "collection_index": 2
                                 }
                               },
                               { "buffer_1@global.empty_panel": { "size": ["default", 9] } },
                               {
-                                "armor_item_index_3@common.container_item": {
+                                "armor_item_index_3@jc_container_item.container_item": {
                                   "$cell_overlay_ref": "screen_content.armor_image_feet",
-                                  "$button_ref": "crafting.no_coalesce_container_slot_button",
                                   "collection_index": 3
                                 }
                               }

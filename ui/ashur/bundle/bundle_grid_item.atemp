@@ -1,12 +1,13 @@
 {
   "namespace": "bundle_grid_item",
   "bundle_slot_item@global.empty_panel": {
-    "size": [ 24, 24 ],
+    "size": [24, 24],
     "layer": 12,
     "controls": [
       {
-        "item_in_bundle_tooltip_pocket@global.container_item": {
-          "size": [ 24, 24 ],
+        "item_cell@global.container_item": {
+          "size": [24, 24],
+          "$stack_count_offset": [-3, -2],
           "$renderer_layer": 30,
           "$background_images|default": "bundle_grid_item.bundle_cell_overlays",
           "$button_ref|default": "bundle_grid_item.bundle_tooltip_slot_button",
@@ -22,7 +23,7 @@
       },
       {
         "bundle_overflow_text@global.empty_label": {
-          "size": [ "default", 10 ],
+          "size": ["default", 10],
           "layer": 2,
           "text": "#more_hidden_items_text",
           "shadow": true,
@@ -33,20 +34,20 @@
               "binding_type": "collection",
               "binding_collection_name": "$item_collection"
             },
-            {"binding_name": "#more_hidden_items_text", "binding_condition": "visible"}
+            { "binding_name": "#more_hidden_items_text", "binding_condition": "visible" }
           ]
         }
       }
     ]
   },
   "bundle_cell_overlays@global.empty_panel": {
-    "size": [ 24, 24 ],
+    "size": [24, 24],
     "controls": [
       {
         "slot_bg": {
           "type": "image",
           "texture": "assets/sprites/container/bundle/slot_background.png",
-          "size": [ 24, 24 ],
+          "size": [24, 24],
           "layer": 1
         }
       },
@@ -56,20 +57,20 @@
             {
               "highlight_slot@global.empty_image": {
                 "texture": "assets/sprites/container/bundle/slot_highlight_back.png",
-                "size": [ 24, 24 ],
+                "size": [24, 24],
                 "layer": 3
               }
             },
             {
               "highlight_slot_overlay@global.empty_image": {
                 "texture": "assets/sprites/container/bundle/slot_highlight_front.png",
-                "size": [ 24, 24 ],
+                "size": [24, 24],
                 "layer": 14
               }
             }
           ],
           "bindings": [
-            {"binding_name": "#using_touch"},
+            { "binding_name": "#using_touch" },
             {
               "binding_name": "#is_selected_bundle_item_slot",
               "binding_type": "collection",
@@ -98,7 +99,7 @@
       }
     ],
     "$pressed_button_name": "button.tapped_bundle_item_icon",
-    "size": [ "100%", "100%" ],
+    "size": ["100%", "100%"],
     "sound_name": "random.click",
     "sound_volume": 1.0,
     "sound_pitch": 1.0,

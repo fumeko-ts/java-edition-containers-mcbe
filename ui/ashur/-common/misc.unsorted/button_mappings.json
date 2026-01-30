@@ -85,13 +85,7 @@
     ]
   },
 
-
-
-
-
-  
-  // idk if the below is used
-  "trade_result_item_slot_button@global.cell_button_prototype": {
+  "trade_result_item_slot_button@jc_container_item.item_button": {
     "size": [16, 16],
     "button_mappings": [
       {
@@ -153,7 +147,7 @@
       { "to_button_id": "button.container_slot_hovered", "mapping_type": "pressed" }
     ]
   },
-  "anvil_output_slot_button@global.cell_button_prototype": {
+  "anvil_output_slot_button@jc_container_item.item_button": {
     "button_mappings": [
       {
         "from_button_id": "button.menu_select",
@@ -214,7 +208,7 @@
       { "to_button_id": "button.container_slot_hovered", "mapping_type": "pressed" }
     ]
   },
-  "smithing_table_output_slot_button@global.cell_button_prototype": {
+  "smithing_table_output_slot_button@jc_container_item.item_button": {
     "button_mappings": [
       {
         "from_button_id": "button.menu_select",
@@ -275,7 +269,7 @@
       { "to_button_id": "button.container_slot_hovered", "mapping_type": "pressed" }
     ]
   },
-  "cartography_output_slot_button@common.no_coalesce_container_slot_button": {
+  "cartography_output_slot_button@jc_container_item.item_button": {
     "button_mappings": [
       {
         "from_button_id": "button.menu_select",
@@ -326,7 +320,7 @@
       { "to_button_id": "button.container_slot_hovered", "mapping_type": "pressed" }
     ]
   },
-  "grindstone_output_slot_button@global.cell_button_prototype": {
+  "grindstone_output_slot_button@jc_container_item.item_button": {
     "button_mappings": [
       {
         "from_button_id": "button.menu_select",
@@ -387,7 +381,7 @@
       { "to_button_id": "button.container_slot_hovered", "mapping_type": "pressed" }
     ]
   },
-  "loom_result_slot_button@common.no_coalesce_container_slot_button": {
+  "loom_result_slot_button@jc_container_item.item_button": {
     "button_mappings": [
       {
         "from_button_id": "button.menu_select",
@@ -432,7 +426,7 @@
       { "to_button_id": "button.container_slot_hovered", "mapping_type": "pressed" }
     ]
   },
-  "stonecutter_result_slot_button@common.no_coalesce_container_slot_button": {
+  "stonecutter_result_slot_button@jc_container_item.item_button": {
     "button_mappings": [
       {
         "from_button_id": "button.menu_select",
@@ -481,6 +475,140 @@
         "mapping_type": "pressed"
       },
       { "to_button_id": "button.container_slot_hovered", "mapping_type": "pressed" }
+    ]
+  },
+  "crafting_misc_button@jc_container_item.item_button": {
+    "$button_take_half_place_one|default": "button.container_take_half_place_one",
+    "$button_auto_place|default": "button.container_auto_place",
+    "$button_take_all_place_all|default": "button.container_take_all_place_all",
+    "$coalesce_button|default": "button.coalesce_stack",
+    "button_mappings": [
+      {
+        "from_button_id": "button.menu_cancel",
+        "to_button_id": "button.try_menu_exit",
+        "mapping_type": "pressed"
+      },
+      {
+        "from_button_id": "button.menu_select",
+        "to_button_id": "$button_take_all_place_all",
+        "mapping_type": "pressed"
+      },
+      {
+        "from_button_id": "button.menu_ok",
+        "to_button_id": "$button_take_all_place_all",
+        "mapping_type": "pressed"
+      },
+      {
+        "from_button_id": "button.controller_back",
+        "to_button_id": "$button_take_all_place_all",
+        "mapping_type": "pressed",
+        "ignored": "(not $is_ps4)"
+      },
+      {
+        "from_button_id": "button.menu_secondary_select",
+        "to_button_id": "$button_take_half_place_one",
+        "mapping_type": "pressed"
+      },
+      {
+        "from_button_id": "button.controller_select",
+        "to_button_id": "$button_take_half_place_one",
+        "mapping_type": "pressed"
+      },
+      {
+        "from_button_id": "button.menu_auto_place",
+        "to_button_id": "$button_auto_place",
+        "mapping_type": "pressed"
+      },
+      {
+        "from_button_id": "button.controller_secondary_select",
+        "to_button_id": "$button_auto_place",
+        "mapping_type": "pressed"
+      },
+      {
+        "from_button_id": "button.menu_inventory_drop",
+        "to_button_id": "button.drop_one",
+        "mapping_type": "pressed"
+      },
+      {
+        "from_button_id": "button.menu_inventory_drop_all",
+        "to_button_id": "button.drop_all",
+        "mapping_type": "pressed"
+      },
+      {
+        "to_button_id": "button.shape_drawing",
+        "mapping_type": "pressed"
+      },
+      {
+        "to_button_id": "button.container_slot_hovered",
+        "mapping_type": "pressed"
+      }
+    ]
+  },
+  "crafting_output_button@jc_container_item.item_button": {
+    "$button_take_all_place_all|default": "button.crafting_output_primary",
+    "$button_take_half_place_one|default": "button.crafting_output_secondary",
+    "$button_auto_place|default": "button.crafting_output_tertiary",
+    "$coalesce_button|default": "button.coalesce_stack",
+    "button_mappings": [
+      {
+        "from_button_id": "button.menu_cancel",
+        "to_button_id": "button.try_menu_exit",
+        "mapping_type": "pressed"
+      },
+      {
+        "from_button_id": "button.menu_select",
+        "to_button_id": "$button_take_all_place_all",
+        "mapping_type": "pressed"
+      },
+      {
+        "from_button_id": "button.menu_ok",
+        "to_button_id": "$button_take_all_place_all",
+        "mapping_type": "pressed"
+      },
+      {
+        "from_button_id": "button.controller_back",
+        "to_button_id": "$button_take_all_place_all",
+        "mapping_type": "pressed",
+        "ignored": "(not $is_ps4)"
+      },
+      {
+        "from_button_id": "button.menu_secondary_select",
+        "to_button_id": "$button_take_half_place_one",
+        "mapping_type": "pressed"
+      },
+      {
+        "from_button_id": "button.controller_select",
+        "to_button_id": "$button_take_half_place_one",
+        "mapping_type": "pressed"
+      },
+      {
+        "from_button_id": "button.menu_auto_place",
+        "to_button_id": "$button_auto_place",
+        "mapping_type": "pressed"
+      },
+      {
+        "from_button_id": "button.controller_secondary_select",
+        "to_button_id": "$button_auto_place",
+        "mapping_type": "pressed"
+      },
+      {
+        "from_button_id": "button.menu_inventory_drop",
+        "to_button_id": "button.drop_one",
+        "mapping_type": "pressed"
+      },
+      {
+        "from_button_id": "button.menu_inventory_drop_all",
+        "to_button_id": "button.drop_all",
+        "mapping_type": "pressed"
+      },
+      {
+        "to_button_id": "button.shape_drawing",
+        "mapping_type": "pressed"
+      },
+      {
+        "to_button_id": "button.container_slot_hovered",
+        "mapping_type": "pressed"
+      }
     ]
   }
 }

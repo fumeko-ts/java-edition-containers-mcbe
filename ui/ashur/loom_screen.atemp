@@ -19,7 +19,7 @@
   "loom_panel@container_common.container_details": {
     "size": [176, 166],
     "$screen_controls": [
-      { "common_panel@screen_content.container_base": { "$loom_screen": true } },
+      { "common_panel@screen_content.loom": {} },
       {
         "loom_top_half@global.empty_panel": {
           "size": [176, 78],
@@ -34,7 +34,25 @@
                 "anchor_from": "top_left",
                 "controls": [
                   { "filler_1@global.empty_panel": { "size": ["fill", 4] } },
-                  { "smithing_label@global.empty_panel": { "size": ["fill", 21] } },
+                  {
+                    "title_row_stack@global.empty_panel": {
+                      "size": [50, 10],
+                      "controls": [
+                        {
+                          "loom_label@global.empty_label": {
+                            "offset": [8, -1],
+                            "anchor_to": "left_middle",
+                            "anchor_from": "left_middle",
+                            "size": ["default", 10],
+                            "layer": 5,
+                            "text": "atemp.container.loom",
+                            "color": "$title_text_color"
+                          }
+                        }
+                      ]
+                    }
+                  },
+                  { "smithing_label@global.empty_panel": { "size": ["fill", 11] } },
                   {
                     "input_top@global.empty_stack": {
                       "orientation": "horizontal",
@@ -42,14 +60,14 @@
                       "controls": [
                         { "filler_1@global.empty_panel": { "size": [12, "fill"] } },
                         {
-                          "banner_slot@global.container_item": {
+                          "banner_slot@jc_container_item.container_item": {
                             "$item_collection": "loom_input_items",
                             "$cell_overlay_ref": "loom_screen.banner_empty_image"
                           }
                         },
                         { "filler_2@global.empty_panel": { "size": [2, "fill"] } },
                         {
-                          "dye_slot@global.container_item": {
+                          "dye_slot@jc_container_item.container_item": {
                             "$item_collection": "loom_dye_items",
                             "$cell_overlay_ref": "loom_screen.dye_empty_image"
                           }
@@ -68,7 +86,7 @@
                           "pattern_panel@global.empty_panel": {
                             "size": [18, 18],
                             "controls": [
-                              { "pattern_slot@global.container_item": { "$item_collection": "loom_material_items" } },
+                              { "pattern_slot@jc_container_item.container_item": { "$item_collection": "loom_material_items" } },
                               {
                                 "img@loom_screen.item_empty_image": {
                                   "$item_collection": "loom_material_items",
@@ -137,7 +155,7 @@
                 "anchor_from": "top_right",
                 "controls": [
                   {
-                    "result_item_slot@global.container_item": {
+                    "result_item_slot@jc_container_item.container_item": {
                       "anchor_to": "bottom_left",
                       "anchor_from": "bottom_left",
                       "$item_collection": "loom_result_items",
@@ -536,7 +554,7 @@
                         }
                       ]
                     }
-                  }/*,
+                  } /*,
                   {
                     "hover_text_test@global.empty_panel": {
                       "$hover_text|default": "",

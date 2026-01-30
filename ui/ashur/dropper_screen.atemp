@@ -19,7 +19,7 @@
   "dropper_panel@container_common.container_details": {
     "size": [ 176, 166 ],
     "$screen_controls": [
-      {"common_panel@screen_content.container_base": {"$dropper_screen": true}},
+      {"common_panel@screen_content.dropper": {}},
       {
         "dropper_top_half@global.empty_stack": {
           "orientation": "vertical",
@@ -47,7 +47,8 @@
                                 "dropper_label@global.empty_label": {
                                   "anchor_to": "top_left",
                                   "anchor_from": "top_left",
-                                  "offset": [ 2, 0 ],
+                                  "offset": [ 6, -1 ],
+                                  "size": ["default", 10],
                                   "text": "atemp.container.dropper",
                                   "color": "$title_text_color"
                                 }
@@ -61,8 +62,8 @@
                             "size": [ 54, 54 ],
                             "grid_dimensions": [ 3, 3 ],
                             "collection_name": "container_items",
-                            "grid_item_template": "common.container_item",
-                            "$item_collection_name": "container_items"
+                            "grid_item_template": "jc_container_item.container_item",
+                            "$item_collection": "container_items"
                           }
                         }
                       ]

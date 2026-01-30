@@ -21,6 +21,7 @@
     "anchor_from": "center",
     "anchor_to": "center",
     "$screen_controls": [
+      { "common_panel@screen_content.beacon": {} },
       {
         "beacon_inner_panel@global.empty_panel": {
           "size": [216, 97],
@@ -36,7 +37,6 @@
           ]
         }
       },
-      { "base@screen_content.container_base": { "$beacon_screen": true } },
       {
         "beacon_top_half@global.empty_stack": {
           "orientation": "vertical",
@@ -137,7 +137,7 @@
                 "size": [153, 18],
                 "controls": [
                   { "filler_1@global.empty_panel": { "size": [135, "fill"] } },
-                  { "input@global.container_item": { "$item_collection": "beacon_payment_items" } }
+                  { "input@jc_container_item.container_item": { "$item_collection": "beacon_payment_items" } }
                 ]
               }
             }
@@ -163,7 +163,8 @@
                       "size": [162, 54],
                       "grid_dimensions": [9, 3],
                       "$item_collection_name": "inventory_items",
-                      "grid_item_template": "global.grid_item",
+                      "grid_item_template": "jc_container_item.container_item",
+                      "$item_collection": "inventory_items",
                       "collection_name": "inventory_items"
                     }
                   },

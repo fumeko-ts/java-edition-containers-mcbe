@@ -15,5 +15,5 @@
 */
 
 {
-  "furnace_screen@global.inventory_screen_common": {"$screen_content": "furnace_screen.furnace_panel"}
+  "furnace_screen@global.container_screen": {"$screen_content": "furnace_screen.furnace_panel"}
 }

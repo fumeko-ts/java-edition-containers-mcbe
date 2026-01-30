@@ -20,7 +20,7 @@
     "size": [176, 166],
     "layer": 5,
     "$screen_controls": [
-      { "base_panel@screen_content.container_base": { "$enchanting_screen": true } },
+      { "base_panel@screen_content.enchanting": {} },
       {
         "top_half@global.empty_stack": {
           "orientation": "vertical",
@@ -91,8 +91,8 @@
                 "size": ["fill", 10],
                 "controls": [
                   {
-                    "small_chest_label@global.empty_label": {
-                      "offset": [10, 0],
+                    "enchant_label@global.empty_label": {
+                      "offset": [8, -1],
                       "anchor_to": "top_left",
                       "anchor_from": "top_left",
                       "layer": 5,
@@ -110,10 +110,10 @@
                 "size": [52, 18],
                 "controls": [
                   { "filler_1@global.empty_panel": { "size": [14, "fill"] } },
-                  { "item_input@global.container_item": { "$item_collection": "enchanting_input_items" } },
+                  { "item_input@jc_container_item.container_item": { "$item_collection": "enchanting_input_items" } },
                   { "filler_2@global.empty_panel": { "size": [2, "fill"] } },
                   {
-                    "lapis_input@global.container_item": {
+                    "lapis_input@jc_container_item.container_item": {
                       "$item_collection": "enchanting_lapis_items",
                       "$cell_overlay_ref": "screen_content.enchanting_lapis"
                     }
@@ -254,7 +254,7 @@
                   {
                     "binding_type": "view",
                     "binding_condition": "always",
-                    "source_property_name": "('\u00a7r' + #hover_text - '\u00a7o')",
+                    "source_property_name": "('§7' + (#hover_text - '§f' - '§o'))",
                     "target_property_name": "#hover_text"
                   }
                 ]
@@ -303,7 +303,7 @@
           "variables": [
             {
               "requires": "($touch or $pocket_edition)",
-              "$mapping_type|default": "double_pressed" // to combat the mobile not being able to see enchant info
+              "$mapping_type|default": "double_pressed"
             },
             {
               "requires": "($cb_is_thick_menu_buttons = true)",
