@@ -16,206 +16,123 @@
 
 {
   "namespace": "toggle",
-  "tab_panel": {
-    "type": "panel",
-    "$tab_content|default": "global.empty_panel",
-    "$texture_sould_keep_ratio|default": false,
-    "$toggle_hover_text|default": "null",
-    "variables": { "requires": "($toggle_hover_text = 'null')", "$hover_path|default": "global.empty_panel" },
-    "$hover_path|default": "global.hover_text",
-    "controls": [
-      {
-        "hover_text@$hover_path": {
-          "ignored": "($needs_hover_text = false)",
-          "property_bag": { "#hover_text": "$toggle_hover_texts" }
-        }
-      },
-      {
-        "tab_image@screen_content.image_element": {
-          "anchor_to": "center",
-          "anchor_from": "center",
-          "texture": "$tab_texture",
-          "offset": "$toggle_offset",
-          "layer": "$tab_content_layer",
-          "keep_ratio": "$texture_sould_keep_ratio"
-        }
-      },
-      {
-        "tab_content_sizer": {
-          "type": "panel",
-          "$tab_content_size|default": ["100% - 4px", "100% - 4px"],
-          "size": "$tab_content_size",
-          "controls": [{ "tab_content@$tab_content": { "offset": "$tab_content_offset", "layer": 6 } }]
-        }
-      }
-    ]
-  },
-  "tab_toggle": {
-    "type": "panel",
-    "anchor_to": "center",
+  "tab_texture_template@screen_content.image_element": {
+    "size": ["default", "default"],
     "anchor_from": "center",
-    "$tab_panel|default": "toggle.tab_panel",
-    "$is_tab|default": true,
-    "$is_creative|default": false,
-    "$is_radio_toggle|default": true,
-    "$recipe_inventory|default": false,
-    "$toggle_reset_on_focus_lost|default": true,
-    "$tab_view_binding_name|default": "tab",
-    "$unchecked_offset|default": [0, 0],
-    "$toggle_binding_type": "global",
-    "$checked_offset|default": [0, -2],
-    "$toggle_base_offset_checked|default": [0, 0],
-    "$toggle_base_offset_unchecked|default": [0, 0],
-    "$toggle_hover_text|default": "null",
-    "$needs_hover_text|default": false,
-    "$toggle_hover_texts|default": "hover_text_not_set",
-    "controls": [
+    "anchor_to": "center",
+    "offset": "#offset",
+    "property_bag": {
+      "#tab_texture_offset_0": "$tab_texture_unchecked_offset",
+      "#tab_texture_offset_1": "$tab_texture_checked_offset"
+    },
+    "bindings": [
       {
-        "$tab_view_binding_name@common.toggle": {
-          "radio_toggle_group": "$is_radio_toggle",
-          "reset_on_focus_lost": "$toggle_reset_on_focus_lost",
-          "variables": { "requires": "($is_tab = false)", "$tab_content_offset|default": [0, 0] },
-          "controls": [
-            {
-              "unchecked@$tab_panel": {
-                "$toggle_hover_text": "null",
-                "$toggle_offset": "$toggle_base_offset_unchecked",
-                "$tab_content_offset": "$unchecked_offset",
-                "$tab_texture": "$unchecked_default_image",
-                "$tab_content_layer": 1
-              }
-            },
-            {
-              "unchecked_hover@$tab_panel": {
-                "$toggle_hover_texts": "$toggle_hover_text",
-                "$toggle_offset": "$toggle_base_offset_unchecked",
-                "$tab_content_offset": "$unchecked_offset",
-                "$tab_texture": "$unchecked_hover_image",
-                "$tab_content_layer": 1
-              }
-            },
-            {
-              "unchecked_locked@$tab_panel": {
-                "$toggle_hover_text": "null",
-                "$toggle_offset": "$toggle_base_offset_unchecked",
-                "$tab_content_offset": "$unchecked_offset",
-                "$tab_texture": "$unchecked_locked_image",
-                "$tab_content_layer": 1
-              }
-            },
-            {
-              "unchecked_locked_hover@$tab_panel": {
-                "$toggle_hover_texts": "$toggle_hover_text",
-                "$toggle_offset": "$toggle_base_offset_unchecked",
-                "$tab_content_offset": "$unchecked_offset",
-                "$tab_texture": "$unchecked_locked_hover_image",
-                "$tab_content_layer": 1
-              }
-            },
-            {
-              "checked@$tab_panel": {
-                "$toggle_hover_text": "null",
-                "$toggle_offset": "$toggle_base_offset_checked",
-                "$tab_content_offset": "$checked_offset",
-                "$tab_texture": "$checked_default_image",
-                "$tab_content_layer": 5
-              }
-            },
-            {
-              "checked_hover@$tab_panel": {
-                "$toggle_hover_texts": "$toggle_hover_text",
-                "$toggle_offset": "$toggle_base_offset_checked",
-                "$tab_content_offset": "$checked_offset",
-                "$tab_texture": "$checked_hover_image",
-                "$tab_content_layer": 5
-              }
-            },
-            {
-              "checked_locked@$tab_panel": {
-                "$toggle_hover_text": "null",
-                "$toggle_offset": "$toggle_base_offset_checked",
-                "$tab_content_offset": "$checked_offset",
-                "$tab_texture": "$checked_locked_image",
-                "$tab_content_layer": 5
-              }
-            },
-            {
-              "checked_locked_hover@$tab_panel": {
-                "$toggle_hover_texts": "$toggle_hover_text",
-                "$toggle_offset": "$toggle_base_offset_checked",
-                "$tab_content_offset": "$checked_offset",
-                "$tab_texture": "$checked_locked_hover_image",
-                "$tab_content_layer": 5
-              }
-            }
-          ]
-        }
+        "binding_type": "view",
+        "binding_condition": "always",
+        "source_control_name": "$toggle_control_name",
+        "source_property_name": "#toggle_state",
+        "target_property_name": "#tab_selected"
+      },
+      {
+        "binding_type": "view",
+        "binding_condition": "always",
+        "source_property_name": "('#tab_texture_offset_' + (#tab_selected * 1))",
+        "target_property_name": "#offset"
       }
     ]
   },
-  "toggle@toggle.tab_toggle": {
+  "tab_toggle@toggle.radio_toggle": {
     "$is_top_left_tab|default": false,
     "$is_top_right_tab|default": false,
     "$is_bottom_right_tab|default": false,
     "$is_left_tab|default": false,
-    "$unchecked_default_image": "assets/sprites/container/creative_inventory/tab_top_unselected_2.png",
-    "$unchecked_hover_image": "assets/sprites/container/creative_inventory/tab_top_unselected_2.png",
-    "$unchecked_locked_image": "assets/sprites/container/creative_inventory/tab_top_unselected_2.png",
-    "$unchecked_locked_hover_image": "assets/sprites/container/creative_inventory/tab_top_unselected_2.png",
-    "$checked_default_image|default": "assets/sprites/container/creative_inventory/tab_top_selected_2.png",
-    "$checked_hover_image|default": "assets/sprites/container/creative_inventory/tab_top_selected_2.png",
-    "$checked_locked_image|default": "assets/sprites/container/creative_inventory/tab_top_selected_2.png",
-    "$checked_locked_hover_image|default": "assets/sprites/container/creative_inventory/tab_top_selected_2.png",
+    //tab sprite templates incase you want to nineslice or uv map seprate the tabs
+    "$tab_texture_template_default|default": "toggle.tab_texture_template",
+    "$tab_texture_template_default_hover|default": "toggle.tab_texture_template",
+    "$tab_texture_template_checked|default": "toggle.tab_texture_template",
+    "$tab_texture_template_checked_hover|default": "toggle.tab_texture_template",
+    //tab_sprite offsets checked/unchecked no hover
+    "$tab_texture_unchecked_offset|default": [0, 0],
+    "$tab_texture_checked_offset|default": [0, 0],
+    //tab texture layers (for when they need to be ontop and below a element)
+    "$checked_hover_layer|default": 5,
+    "$checked_layer|default": 5,
+    "$default_hover_layer|default": 5,
+    "$default_layer|default": 5,
+    //icon offsets
+    "$icon_unchecked_offset|default": [0, 0],
+    "$icon_checked_offset|default": [0, 0],
+    //textures
+    "$unchecked_default_image|default": "assets/sprites/container/creative_inventory/tab_top_unselected_2.png",
+    "$unchecked_hover_image|default"  : "assets/sprites/container/creative_inventory/tab_top_unselected_2.png",
+    "$checked_default_image|default"  : "assets/sprites/container/creative_inventory/tab_top_selected_2.png",
+    "$checked_hover_image|default"    : "assets/sprites/container/creative_inventory/tab_top_selected_2.png",
+    //tab_controls
+    "$controls": [
+      { "default@$tab_texture_template_default"            : {"layer":"$default_layer"      , "texture": "$unchecked_default_image" } },// hover text wont be added because it cant be localised/translated
+      { "default_hover@$tab_texture_template_default_hover": {"layer":"$default_hover_layer", "texture": "$unchecked_hover_image"   } },
+      { "checked@$tab_texture_template_checked"            : {"layer":"$checked_layer"      , "texture": "$checked_default_image"   } },
+      { "checked_hover@$tab_texture_template_checked_hover": {"layer":"$checked_hover_layer", "texture": "$checked_hover_image"     } },
+      { "locked@global.empty_panel": {} },
+      {
+        "$extra_contents@$extra_contents": {
+          "offset": "#offset",
+          "property_bag": {
+            "#icon_offset_0": "$icon_unchecked_offset",
+            "#icon_offset_1": "$icon_checked_offset"
+          },
+          "bindings": [
+            {
+              "binding_type": "view",
+              "binding_condition": "always",
+              "source_control_name": "$toggle_control_name",
+              "source_property_name": "#toggle_state",
+              "target_property_name": "#tab_selected"
+            },
+            {
+              "binding_type": "view",
+              "binding_condition": "always",
+              "source_property_name": "('#icon_offset_' + (#tab_selected * 1))",
+              "target_property_name": "#offset"
+            }
+          ]
+        }
+      }
+    ],
     "variables": [
       {
         "requires": "($is_top_left_tab = true)",
-        "$unchecked_default_image": "assets/sprites/container/creative_inventory/tab_top_unselected_1.png",
-        "$unchecked_hover_image": "assets/sprites/container/creative_inventory/tab_top_unselected_1.png",
-        "$unchecked_locked_image": "assets/sprites/container/creative_inventory/tab_top_unselected_1.png",
-        "$unchecked_locked_hover_image": "assets/sprites/container/creative_inventory/tab_top_unselected_1.png",
-        "$checked_default_image|default": "assets/sprites/container/creative_inventory/tab_top_selected_1.png",
-        "$checked_hover_image|default": "assets/sprites/container/creative_inventory/tab_top_selected_1.png",
-        "$checked_locked_image|default": "assets/sprites/container/creative_inventory/tab_top_selected_1.png",
-        "$checked_locked_hover_image|default": "assets/sprites/container/creative_inventory/tab_top_selected_1.png"
+        "$unchecked_default_image|default": "assets/sprites/container/creative_inventory/tab_top_unselected_1.png",
+        "$unchecked_hover_image|default"  : "assets/sprites/container/creative_inventory/tab_top_unselected_1.png",
+        "$checked_default_image|default"  : "assets/sprites/container/creative_inventory/tab_top_selected_1.png",
+        "$checked_hover_image|default"    : "assets/sprites/container/creative_inventory/tab_top_selected_1.png"
       },
       {
         "requires": "($is_top_right_tab = true)",
-        "$unchecked_default_image": "assets/sprites/container/creative_inventory/tab_top_unselected_7.png",
-        "$unchecked_hover_image": "assets/sprites/container/creative_inventory/tab_top_unselected_7.png",
-        "$unchecked_locked_image": "assets/sprites/container/creative_inventory/tab_top_unselected_7.png",
-        "$unchecked_locked_hover_image": "assets/sprites/container/creative_inventory/tab_top_unselected_7.png",
-        "$checked_default_image|default": "assets/sprites/container/creative_inventory/tab_top_selected_7.png",
-        "$checked_hover_image|default": "assets/sprites/container/creative_inventory/tab_top_selected_7.png",
-        "$checked_locked_image|default": "assets/sprites/container/creative_inventory/tab_top_selected_7.png",
-        "$checked_locked_hover_image|default": "assets/sprites/container/creative_inventory/tab_top_selected_7.png"
+        "$unchecked_default_image|default": "assets/sprites/container/creative_inventory/tab_top_unselected_7.png",
+        "$unchecked_hover_image|default"  : "assets/sprites/container/creative_inventory/tab_top_unselected_7.png",
+        "$checked_default_image|default"  : "assets/sprites/container/creative_inventory/tab_top_selected_7.png",
+        "$checked_hover_image|default"    : "assets/sprites/container/creative_inventory/tab_top_selected_7.png"
       },
       {
         "requires": "($is_bottom_right_tab = true)",
-        "$unchecked_default_image": "assets/sprites/container/creative_inventory/tab_bottom_unselected_7.png",
-        "$unchecked_hover_image": "assets/sprites/container/creative_inventory/tab_bottom_unselected_7.png",
-        "$unchecked_locked_image": "assets/sprites/container/creative_inventory/tab_bottom_unselected_7.png",
-        "$unchecked_locked_hover_image": "assets/sprites/container/creative_inventory/tab_bottom_unselected_7.png",
-        "$checked_default_image|default": "assets/sprites/container/creative_inventory/tab_bottom_selected_7.png",
-        "$checked_hover_image|default": "assets/sprites/container/creative_inventory/tab_bottom_selected_7.png",
-        "$checked_locked_image|default": "assets/sprites/container/creative_inventory/tab_bottom_selected_7.png",
-        "$checked_locked_hover_image|default": "assets/sprites/container/creative_inventory/tab_bottom_selected_7.png"
+        "$unchecked_default_image|default": "assets/sprites/container/creative_inventory/tab_bottom_unselected_7.png",
+        "$unchecked_hover_image|default"  : "assets/sprites/container/creative_inventory/tab_bottom_unselected_7.png",
+        "$checked_default_image|default"  : "assets/sprites/container/creative_inventory/tab_bottom_selected_7.png",
+        "$checked_hover_image|default"    : "assets/sprites/container/creative_inventory/tab_bottom_selected_7.png"
       },
       {
         "requires": "($is_left_tab = true)",
-        "$unchecked_default_image": "assets/sprites/recipe_book/tab.png",
-        "$unchecked_hover_image": "assets/sprites/recipe_book/tab.png",
-        "$unchecked_locked_image": "assets/sprites/recipe_book/tab.png",
-        "$unchecked_locked_hover_image": "assets/sprites/recipe_book/tab.png",
-        "$checked_default_image|default": "assets/sprites/recipe_book/tab_selected.png",
-        "$checked_hover_image|default": "assets/sprites/recipe_book/tab_selected.png",
-        "$checked_locked_image|default": "assets/sprites/recipe_book/tab_selected.png",
-        "$checked_locked_hover_image|default": "assets/sprites/recipe_book/tab_selected.png"
+        "$unchecked_default_image|default": "assets/sprites/recipe_book/tab.png",
+        "$unchecked_hover_image|default"  : "assets/sprites/recipe_book/tab.png",
+        "$checked_default_image|default"  : "assets/sprites/recipe_book/tab_selected.png",
+        "$checked_hover_image|default"    : "assets/sprites/recipe_book/tab_selected.png"
       }
     ]
   },
   "radio_toggle@global.empty_panel": {
     "size": "$size",
-    "$size": [18, 18],
+    "$size": [18, 18], // by default 18 because most elements i use this for is 18x18
     "$is_radio_toggle|default": true,
     "$radio_collection_name|default": "none",
     "$is_default_active|default": false,
@@ -227,7 +144,11 @@
         "to_button_id": "button.menu_select",
         "mapping_type": "pressed"
       },
-      { "from_button_id": "button.menu_ok", "to_button_id": "button.menu_ok", "mapping_type": "pressed" }
+      {
+        "from_button_id": "button.menu_ok",
+        "to_button_id": "button.menu_ok",
+        "mapping_type": "pressed"
+      }
     ],
     "$bindings|default": [
       {
@@ -250,6 +171,7 @@
         "binding_name_override": "#toggle_state"
       }
     ],
+    "$default_selected_index|default": 0,
     "$extra_contents|default": "global.empty_panel",
     "$property_bag|default": { "#toggle_state": true },
     "$button_volume|default": 1.0,
@@ -288,7 +210,7 @@
           "unchecked_locked_hover_control": "locked",
           "radio_toggle_group": "$is_radio_toggle",
           "toggle_group_forced_index": "$toggle_group_forced_index",
-          "toggle_group_default_selected": 0,
+          "toggle_group_default_selected": "$default_selected_index",
           "reset_on_focus_lost": true,
           "toggle_default_state": "$is_default_active",
           "property_bag": "$property_bag",

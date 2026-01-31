@@ -154,107 +154,105 @@
   },
   "item_renderer@global.custom_renderer": {
     "$type": "inventory_item_renderer",
-    "size": ["100%", "100%"],
+    "size": [16, 16],
     "anchor_from": "center",
     "anchor_to": "center",
     "layer": 7,
     "property_bag": { "#item_id_aux": "($item_identifier * 65536)" }
   },
   "icon_control@global.empty_panel": {
-    "size": [16, 16],
+    "size": [24, 25],
     "anchor_from": "center",
     "anchor_to": "center",
     "controls": [
       {
         "inventory@creative_inventory.item_renderer": {
           "$item_identifier": "$chest_id",
-          "visible": "($tab_view_binding_name = 'inventory_tab_toggle')"
+          "offset": [0, -1],
+          "visible": "($toggle_control_name = 'inventory_tab_toggle')"
         }
       },
       {
         "search@creative_inventory.item_renderer": {
           "$item_identifier": "$compass_id",
-          "visible": "($tab_view_binding_name = 'search_tab_toggle')"
+          "visible": "($toggle_control_name = 'search_tab_toggle')"
         }
       },
       {
         "items@creative_inventory.item_renderer": {
           "$item_identifier": "$redstone_id",
-          "visible": "($tab_view_binding_name = 'items_tab_toggle')"
+          "visible": "($toggle_control_name = 'items_tab_toggle')"
         }
       },
       {
         "equipment@creative_inventory.item_renderer": {
           "$item_identifier": "$iron_sword_id",
-          "visible": "($tab_view_binding_name = 'equipment_tab_toggle')"
+          "visible": "($toggle_control_name = 'equipment_tab_toggle')"
         }
       },
       {
         "nature@creative_inventory.item_renderer": {
           "$item_identifier": "$purple_froglight_id",
-          "visible": "($tab_view_binding_name = 'nature_tab_toggle')"
+          "visible": "($toggle_control_name = 'nature_tab_toggle')"
         }
       },
       {
         "construction@creative_inventory.item_renderer": {
           "$item_identifier": "$bricks_id",
-          "visible": "($tab_view_binding_name = 'construction_tab_toggle')"
+          "visible": "($toggle_control_name = 'construction_tab_toggle')"
         }
       }
     ]
   },
-  // the hover texts for these are pending localization
-  "icon_holder@global.empty_panel": { "size": [24, 25], "controls": [{ "img@$tab_icon": {} }] },
-  "top_tab@toggle.toggle": {
-    "size": [26, 32],
-    "$toggle_binding_type": "global",
-    "$toggle_focus_enabled": true,
-    "$needs_hover_text": true,
+  "top_tab@toggle.tab_toggle": {
     "$toggle_name": "navigation_tab",
-    "$tab_icon": "creative_inventory.icon_control",
-    "$toggle_state_binding_name": "#toggle_state",
-    "$tab_content": "creative_inventory.icon_holder"
+
+    "$tab_texture_unchecked_offset": [0, 0],
+    "$tab_texture_checked_offset": [0, 0],
+
+    "$icon_checked_offset": [0, -2],
+
+    "$checked_hover_layer": 5,
+    "$checked_layer": 5,
+    "$default_hover_layer": 2,
+    "$default_layer": 2,
+
+    "$extra_contents": "creative_inventory.icon_control",
+    "$size": [26, 32]
   },
   "search_tab@creative_inventory.top_tab": {
     "$is_top_right_tab": true,
-    "$toggle_default_state": true,
-    "$toggle_hover_text": "Search Items",
-    "$tab_view_binding_name": "search_tab_toggle",
+    "$toggle_control_name": "search_tab_toggle",
     "$toggle_group_forced_index": "$search_index",
-    "$toggle_state_binding_name": "#is_left_tab_search"
+    "$toggle_binding_value": "#is_left_tab_search"
   },
   "equipment_tab@creative_inventory.top_tab": {
-    "$toggle_hover_text": "Equipment Items",
-    "$tab_view_binding_name": "equipment_tab_toggle",
+    "$toggle_control_name": "equipment_tab_toggle",
     "$toggle_group_forced_index": "$equipment_index",
-    "$toggle_state_binding_name": "#is_left_tab_equipment"
+    "$toggle_binding_value": "#is_left_tab_equipment"
   },
   "nature_tab@creative_inventory.top_tab": {
-    "$toggle_hover_text": "Nature Items",
-    "$tab_view_binding_name": "nature_tab_toggle",
+    "$toggle_control_name": "nature_tab_toggle",
     "$toggle_group_forced_index": "$nature_index",
-    "$toggle_state_binding_name": "#is_left_tab_nature"
+    "$toggle_binding_value": "#is_left_tab_nature"
   },
   "items_tab@creative_inventory.top_tab": {
-    "$toggle_hover_text": "Misc Items",
-    "$tab_view_binding_name": "items_tab_toggle",
+    "$toggle_control_name": "items_tab_toggle",
     "$toggle_group_forced_index": "$items_index",
-    "$toggle_state_binding_name": "#is_left_tab_items"
+    "$toggle_binding_value": "#is_left_tab_items"
   },
   "construction_tab@creative_inventory.top_tab": {
-    "$toggle_hover_text": "Construction Items",
     "$is_top_left_tab": true,
-    "$tab_view_binding_name": "construction_tab_toggle",
+    "$toggle_control_name": "construction_tab_toggle",
     "$toggle_group_forced_index": "$construction_index",
-    "$toggle_state_binding_name": "#is_left_tab_construct"
+    "$toggle_binding_value": "#is_left_tab_construct"
   },
   "inventory_tab@creative_inventory.top_tab": {
-    "$toggle_hover_text": "Inventory",
     "$is_bottom_right_tab": true,
-    "$unchecked_offset|default": [0, -2],
-    "$checked_offset|default": [0, 2],
-    "$tab_view_binding_name": "inventory_tab_toggle",
-    "$toggle_group_forced_index": "($search_index + 1)"
+    "$icon_checked_offset": [0, 2],
+    "$toggle_control_name": "inventory_tab_toggle",
+    "$toggle_group_forced_index": "($search_index + 1)",
+    "$toggle_binding_value": "#inventory_tab"
   },
   "tab_base_template@global.empty_panel": { "size": [195, 136], "anchor_to": "center", "anchor_from": "center" },
   "inventory_page@creative_inventory.tab_base_template": {

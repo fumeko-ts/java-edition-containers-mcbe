@@ -62,45 +62,57 @@
       { "to_button_id": "button.menu_ok", "mapping_type": "focused", "from_button_id": "button.menu_ok" }
     ]
   },
+  "survival_tab_base@toggle.tab_toggle": {
+    "$size": [35, 27],
+    "$is_left_tab": true,
+    "$toggle_name": "navigation_tab",
+    "$tab_texture_unchecked_offset": [5, 0],
+    "$tab_texture_checked_offset": [3, 0],
+    "$icon_unchecked_offset": [0, 0],
+    "$icon_checked_offset": [-2, 0],
+    "$extra_contents": "crafting_common.survival_tab_icons",
+    "$toggle_binding_value": "#toggle_state"
+  },
   "crafting_survival_tabs@global.empty_stack": {
     "orientation": "vertical",
-    "size": [35, 135],
+    "size": [35, 138],
     "layer": 2,
     "controls": [
+      { "filler@global.empty_panel": { "size": [35, 3] } },
       {
         "search_tab_survival@crafting_common.survival_tab_base": {
-          "$toggle_default_state": true,
-          "$tab_view_binding_name": "search_tab_toggle",
+          "$is_default_active": true,
+          "$toggle_control_name": "search_tab_toggle",
           "$toggle_group_forced_index": "$search_index",
-          "$toggle_state_binding_name": "#is_left_tab_search"
+          "$toggle_binding_value": "#is_left_tab_search"
         }
       },
       {
         "equipment_tab_survival@crafting_common.survival_tab_base": {
-          "$tab_view_binding_name": "equipment_tab_toggle",
+          "$toggle_control_name": "equipment_tab_toggle",
           "$toggle_group_forced_index": "$equipment_index",
-          "$toggle_state_binding_name": "#is_left_tab_equipment"
+          "$toggle_binding_value": "#is_left_tab_equipment"
         }
       },
       {
         "construction_tab_survival@crafting_common.survival_tab_base": {
-          "$tab_view_binding_name": "construction_tab_toggle",
+          "$toggle_control_name": "construction_tab_toggle",
           "$toggle_group_forced_index": "$construction_index",
-          "$toggle_state_binding_name": "#is_left_tab_construct"
+          "$toggle_binding_value": "#is_left_tab_construct"
         }
       },
       {
         "nature_tab_survival@crafting_common.survival_tab_base": {
-          "$tab_view_binding_name": "nature_tab_toggle",
+          "$toggle_control_name": "nature_tab_toggle",
           "$toggle_group_forced_index": "$nature_index",
-          "$toggle_state_binding_name": "#is_left_tab_nature"
+          "$toggle_binding_value": "#is_left_tab_nature"
         }
       },
       {
         "items_tab_survival@crafting_common.survival_tab_base": {
-          "$tab_view_binding_name": "items_tab_toggle",
+          "$toggle_control_name": "items_tab_toggle",
           "$toggle_group_forced_index": "$items_index",
-          "$toggle_state_binding_name": "#is_left_tab_items"
+          "$toggle_binding_value": "#is_left_tab_items"
         }
       }
     ]
@@ -112,18 +124,28 @@
     "property_bag": { "#item_id_aux": "($item_id * 65536)" }
   },
   "survival_tab_icons@global.empty_panel": {
-    "offset": [0.4, 0],
     "size": [24, 25],
+    "anchor_from": "top_right",
+    "anchor_to": "top_right",
     "controls": [
       {
         "search@global.empty_panel": {
-          "ignored": "(not ($tab_view_binding_name = search_tab_toggle))",
-          "controls": [{ "compass@crafting_common.tab_item_renderer": { "$item_id": "$compass_id" } }]
+          "offset": [0, 0.6],
+          "ignored": "(not ($toggle_control_name = search_tab_toggle))",
+          "controls": [
+            {
+              "compass@crafting_common.tab_item_renderer": {
+                "layer": 6,
+                "$item_id": "$compass_id"
+              }
+            }
+          ]
         }
       },
       {
         "equipment@global.empty_panel": {
-          "ignored": "(not ($tab_view_binding_name = equipment_tab_toggle))",
+          "offset": [0, 0.6],
+          "ignored": "(not ($toggle_control_name = equipment_tab_toggle))",
           "controls": [
             {
               "golden_sword@crafting_common.tab_item_renderer": {
@@ -144,13 +166,22 @@
       },
       {
         "construction@global.empty_panel": {
-          "ignored": "(not ($tab_view_binding_name = construction_tab_toggle))",
-          "controls": [{ "bricks@crafting_common.tab_item_renderer": { "$item_id": "$bricks_id" } }]
+          "offset": [-1, 0.6],
+          "ignored": "(not ($toggle_control_name = construction_tab_toggle))",
+          "controls": [
+            {
+              "bricks@crafting_common.tab_item_renderer": {
+                "layer": 6,
+                "$item_id": "$bricks_id"
+              }
+            }
+          ]
         }
       },
       {
         "nature@global.empty_panel": {
-          "ignored": "(not ($tab_view_binding_name = nature_tab_toggle))",
+          "offset": [0, 0.6],
+          "ignored": "(not ($toggle_control_name = nature_tab_toggle))",
           "controls": [
             {
               "apple@crafting_common.tab_item_renderer": { "layer": 7, "offset": [4, 0], "$item_id": "$apple_id" }
@@ -167,26 +198,19 @@
       },
       {
         "items@global.empty_panel": {
-          "ignored": "(not ($tab_view_binding_name = items_tab_toggle))",
-          "controls": [{ "redstone_dust@crafting_common.tab_item_renderer": { "$item_id": "$redstone_id" } }]
+          "offset": [-1, 0.6],
+          "ignored": "(not ($toggle_control_name = items_tab_toggle))",
+          "controls": [
+            {
+              "redstone_dust@crafting_common.tab_item_renderer": {
+                "layer": 6,
+                "$item_id": "$redstone_id"
+              }
+            }
+          ]
         }
       }
     ]
-  },
-  "survival_tab_base@toggle.toggle": {
-    "$toggle_offset": [5, 3],
-    "size": [35, 27],
-    "$unchecked_offset": [5, 3],
-    "$checked_offset": [3, 3],
-    "$toggle_base_offset_unchecked": [5, 3],
-    "$toggle_base_offset_checked": [3, 3],
-    "$toggle_binding_type": "global",
-    "$toggle_focus_enabled": false,
-    "$is_left_tab": true,
-    "$toggle_name": "navigation_tab",
-    "$tab_icon": "crafting_common.survival_tab_icon",
-    "$toggle_state_binding_name": "#toggle_state",
-    "$tab_content": "crafting_common.survival_tab_icons"
   },
   "recipe_toggle_base@toggle.radio_toggle": {
     "$size": [20, 18],
