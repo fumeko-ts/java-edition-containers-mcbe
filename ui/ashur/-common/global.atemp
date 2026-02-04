@@ -411,7 +411,7 @@
               }
             },
             {
-              "safezone_screen_matrix@safezone.screen_holder_safezone": {
+              "safezone@safezone.screen_holder_safezone": {
                 "layer": 2
               }
             }

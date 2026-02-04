@@ -409,7 +409,7 @@
                 "checked_hover_control": "default_hover",
                 "controls": [
                   {
-                    "default_hover@screen_content.highlight_slot": { "size": [16, 16] }
+                    "default_hover@screen_content.highlight_slot": {"ignored": "$touch", "size": [16, 16] }
                   }
                 ],
                 "button_mappings": [
@@ -589,7 +589,7 @@
                             "size": ["default", 10],
                             "layer": 15,
                             "localize": true,
-                            "text": "itemGroup.search",
+                            "text": "ashur.tab.search",
                             "color": "$title_text_color"
                           }
                         }

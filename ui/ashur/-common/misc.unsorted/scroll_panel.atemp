@@ -68,6 +68,11 @@
               "button_up_right_of_first_refusal": true
             }
           ],
+          "bindings": [
+            {
+              "binding_name": "#gesture_control_enabled"
+            }
+          ],
           "controls": [
             {
               "panel@global.empty_panel": {

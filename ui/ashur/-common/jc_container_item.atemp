@@ -154,7 +154,7 @@
       { "item_cell_overlay_ref@$cell_overlay_ref": {} },
       {
         "slot_selected@screen_content.image_element": {
-          "texture": "textures/ui/touch_ui_selected_slot",
+          "texture": "textures/ui/ashur/touch_ui_selected.png",
           "size": [18, 18],
           "visible": false,
           "layer": 4,
@@ -178,7 +178,7 @@
           "controls": [
             {
               "bundle_selected_item_background_colour@global.empty_image": {
-                "texture": "textures/bundles/bundle_selected_slot",
+                "texture": "textures/ui/ashur/touch_ui_selected.png",
                 "size": [18, 18],
                 "layer": 1,
                 "nineslice_size": 1,

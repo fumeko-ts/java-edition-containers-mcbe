@@ -285,6 +285,7 @@
                                           { "filler_panel@global.empty_panel": { "size": [18, 54] } },
                                           {
                                             "offhand_slot@jc_container_item.container_item": {
+                                              "$item_collection": "offhand_items",
                                               "$cell_overlay_ref": "screen_content.armor_overlay_shield",
                                               "$button_ref": "button_mappings.crafting_misc_button"
                                             }
