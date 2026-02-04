@@ -36,3 +36,9 @@ craftingScreen.tab.nature=sr1.atemp
 craftingScreen.tab.equipment=sr1.atemp
 craftingScreen.tab.items=sr1.atemp
 container.enchant.clue=%s §r. . . ?
+
+ashur.tab.items=Rôzne
+ashur.tab.nature=Príroda
+ashur.tab.equipment=Výbava
+ashur.tab.construction=Stavba
+ashur.tab.search=Hľadať

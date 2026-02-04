@@ -60,9 +60,7 @@
                         { "filler_1@global.empty_panel": { "size": ["fill", 1] } },
                         { "1st_input_slot@jc_container_item.container_item": { "$item_collection": "cartography_input_items" } },
                         { "filler_1@global.empty_panel": { "size": ["fill", 19] } },
-                        {
-                          "2nd_input_slot@jc_container_item.container_item": { "$item_collection": "cartography_additional_items" }
-                        },
+                        { "2nd_input_slot@jc_container_item.container_item": { "$item_collection": "cartography_additional_items" }},
                         { "filler_1@global.empty_panel": { "size": ["fill", 10] } }
                       ]
                     }

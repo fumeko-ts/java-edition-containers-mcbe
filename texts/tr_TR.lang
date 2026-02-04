@@ -36,3 +36,9 @@ craftingScreen.tab.nature=sr1.atemp
 craftingScreen.tab.equipment=sr1.atemp
 craftingScreen.tab.items=sr1.atemp
 container.enchant.clue=%s §r. . . ?
+
+ashur.tab.items=Çeşitli
+ashur.tab.nature=Doğa
+ashur.tab.equipment=Ekipman
+ashur.tab.construction=İnşaat
+ashur.tab.search=Ara

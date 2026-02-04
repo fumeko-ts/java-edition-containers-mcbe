@@ -36,3 +36,9 @@ craftingScreen.tab.nature=sr1.atemp
 craftingScreen.tab.equipment=sr1.atemp
 craftingScreen.tab.items=sr1.atemp
 container.enchant.clue=¿%s §r. . . ?
+
+ashur.tab.items=Miscelánea
+ashur.tab.nature=Naturaleza
+ashur.tab.equipment=Equipamiento
+ashur.tab.construction=Construcción
+ashur.tab.search=Buscar

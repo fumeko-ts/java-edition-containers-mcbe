@@ -36,3 +36,9 @@ craftingScreen.tab.nature=sr1.atemp
 craftingScreen.tab.equipment=sr1.atemp
 craftingScreen.tab.items=sr1.atemp
 container.enchant.clue=%s §r. . . ?
+
+ashur.tab.items=Egyéb
+ashur.tab.nature=Természet
+ashur.tab.equipment=Felszerelés
+ashur.tab.construction=Építés
+ashur.tab.search=Keresés

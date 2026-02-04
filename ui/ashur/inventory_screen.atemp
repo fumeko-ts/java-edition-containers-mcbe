@@ -284,21 +284,9 @@
                                         "controls": [
                                           { "filler_panel@global.empty_panel": { "size": [18, 54] } },
                                           {
-                                            "offhand_1x1": {
-                                              "type": "grid",
-                                              "size": [18, 18],
-                                              "grid_dimensions": [1, 1],
-                                              "$item_collection": "offhand_items",
-                                              "collection_name": "$item_collection",
-                                              "controls": [
-                                                {
-                                                  "offhand_grid_item@jc_container_item.container_item": {
-                                                    "grid_position": [0, 0],
-                                                    "$cell_overlay_ref": "screen_content.armor_overlay_shield",
-                                                    "$button_ref": "button_mappings.crafting_misc_button"
-                                                  }
-                                                }
-                                              ]
+                                            "offhand_slot@jc_container_item.container_item": {
+                                              "$cell_overlay_ref": "screen_content.armor_overlay_shield",
+                                              "$button_ref": "button_mappings.crafting_misc_button"
                                             }
                                           }
                                         ]

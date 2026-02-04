@@ -18,139 +18,7 @@
   "namespace": "trade_global",
   "toggle_content@global.empty_panel": {
     "size": [88, 20],
-    "$is_second_item|default": false,
     "controls": [
-      {
-        "item_1@trade_global.collection": {
-          "$item_collection": "trade_item_1",
-          "controls": [
-            {
-              "item_1@global.empty_panel": {
-                "size": [21, 17],
-                "anchor_from": "top_left",
-                "anchor_to": "top_left",
-                "controls": [
-                  {
-                    "item_counts@global.empty_panel": {
-                      "size": [21, 17],
-                      "controls": [
-                        {
-                          "item_count_default@trade_global.label_template": {
-                            "$item_count_binding_name": "(not #trade_price_different)"
-                          }
-                        },
-                        {
-                          "item_count_changed@trade_global.label_template": {
-                            "$item_count_binding_name": "#trade_price_different",
-                            "controls": [
-                              {
-                                "red_slash@trade_global.red_slash": {
-                                  "size": [6, 2],
-                                  "$slash_binding": "#single_slash_visible"
-                                }
-                              },
-                              {
-                                "red_slash_double@trade_global.red_slash": {
-                                  "size": [12, 2],
-                                  "$slash_binding": "#double_slash_visible"
-                                }
-                              }
-                            ]
-                          }
-                        },
-                        { "hover_control@trade_global.hover_text_button": {} }
-                      ]
-                    }
-                  },
-                  { "item_renderer@trade_global.item_renderer": {} }
-                ]
-              }
-            },
-            {
-              "label_2_holder@global.empty_panel": {
-                "size": [35, 17],
-                "anchor_to": "top_left",
-                "anchor_from": "top_left",
-                "$is_second_item": true,
-                "controls": [{ "second_trade_count@trade_global.second_trade_item_count": {} }],
-                "bindings": [
-                  { "binding_type": "collection_details" },
-                  { "binding_name": "#double_slash_visible" },
-                  { "binding_name": "#single_slash_visible" },
-                  {
-                    "binding_type": "view",
-                    "binding_condition": "always",
-                    "source_property_name": "(#double_slash_visible or #single_slash_visible)",
-                    "target_property_name": "#visible"
-                  }
-                ]
-              }
-            }
-          ]
-        }
-      },
-      {
-        "item_2@trade_global.collection": {
-          "$item_collection": "trade_item_2",
-          "controls": [
-            {
-              "item_2@global.empty_panel": {
-                "size": [52, 17],
-                "anchor_from": "top_left",
-                "anchor_to": "top_left",
-                "controls": [
-                  {
-                    "item_counts@global.empty_panel": {
-                      "size": [52, 17],
-                      "controls": [{ "hover_control@trade_global.hover_text_button": {} }]
-                    }
-                  },
-                  { "item_renderer@trade_global.item_renderer": {} }
-                ]
-              }
-            },
-            {
-              "label_2_holder@global.empty_panel": {
-                "size": [52, 17],
-                "anchor_to": "top_left",
-                "anchor_from": "top_left",
-                "controls": [{ "second_trade_count@trade_global.second_trade_item_count": {} }]
-              }
-            }
-          ]
-        }
-      },
-      {
-        "item_3@trade_global.collection": {
-          "$item_collection": "sell_item",
-          "controls": [
-            {
-              "item_3@global.empty_panel": {
-                "size": [84, 17],
-                "anchor_from": "top_left",
-                "anchor_to": "top_left",
-                "controls": [
-                  {
-                    "hover_text@global.empty_panel": {
-                      "size": [84, 17],
-                      "controls": [{ "hover_control@trade_global.hover_text_button": {} }]
-                    }
-                  },
-                  { "item_renderer@trade_global.item_renderer": {} }
-                ]
-              }
-            },
-            {
-              "label_2_holder@global.empty_panel": {
-                "size": [84, 17],
-                "anchor_to": "top_left",
-                "anchor_from": "top_left",
-                "controls": [{ "second_trade_count@trade_global.second_trade_item_count": {} }]
-              }
-            }
-          ]
-        }
-      },
       {
         "arrow_holder@global.empty_stack": {
           "orientation": "vertical",
@@ -303,10 +171,170 @@
     "$checked_control": "trade_global.checked_control",
     "$unchecked_hover_control": "trade_global.unchecked_hover_control",
     "$checked_hover_control": "trade_global.checked_hover_control",
+    "variables": {
+      "requires": "($cb_is_thick_menu_buttons = true)",
+      "$unchecked_control": "thickly.unchecked_control",
+      "$checked_control": "thickly.checked_control",
+      "$unchecked_hover_control": "thickly.unchecked_hover_control",
+      "$checked_hover_control": "thickly.checked_hover_control"
+    },
     "$unchecked_locked_control": "trade_global.locked_control",
     "$unchecked_locked_hover_control": "trade_global.locked_control",
     "$checked_locked_control": "trade_global.locked_control",
-    "$checked_locked_hover_control": "trade_global.locked_control"
+    "$checked_locked_hover_control": "trade_global.locked_control",
+    "controls": [
+      {
+        "contents@global.empty_panel": {
+          "$is_second_item|default": false,
+          "size": [88, 20],
+          "offset": [1, 1],
+          "controls": [
+            {
+              "item_1@trade_global.collection": {
+                "layer": 6,
+                "$item_collection": "trade_item_1",
+                "controls": [
+                  {
+                    "item_1@global.empty_panel": {
+                      "size": [21, 17],
+                      "anchor_from": "top_left",
+                      "anchor_to": "top_left",
+                      "controls": [
+                        {
+                          "item_counts@global.empty_panel": {
+                            "size": [21, 17],
+                            "controls": [
+                              {
+                                "item_count_default@trade_global.label_template": {
+                                  "$item_count_binding_name": "(not #trade_price_different)"
+                                }
+                              },
+                              {
+                                "item_count_changed@trade_global.label_template": {
+                                  "$item_count_binding_name": "#trade_price_different",
+                                  "controls": [
+                                    {
+                                      "red_slash@trade_global.red_slash": {
+                                        "size": [6, 2],
+                                        "$slash_binding": "#single_slash_visible"
+                                      }
+                                    },
+                                    {
+                                      "red_slash_double@trade_global.red_slash": {
+                                        "size": [12, 2],
+                                        "$slash_binding": "#double_slash_visible"
+                                      }
+                                    }
+                                  ]
+                                }
+                              },
+                              { "hover_control@trade_global.hover_text_button": {} }
+                            ]
+                          }
+                        },
+                        { "item_renderer@trade_global.item_renderer": {} }
+                      ]
+                    }
+                  },
+                  {
+                    "label_2_holder@global.empty_panel": {
+                      "size": [35, 17],
+                      "anchor_to": "top_left",
+                      "anchor_from": "top_left",
+                      "$is_second_item": true,
+                      "controls": [{ "second_trade_count@trade_global.second_trade_item_count": {} }],
+                      "bindings": [
+                        { "binding_type": "collection_details" },
+                        { "binding_name": "#double_slash_visible" },
+                        { "binding_name": "#single_slash_visible" },
+                        {
+                          "binding_type": "view",
+                          "binding_condition": "always",
+                          "source_property_name": "(#double_slash_visible or #single_slash_visible)",
+                          "target_property_name": "#visible"
+                        }
+                      ]
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "item_2@trade_global.collection": {
+                "layer": 6,
+                "$item_collection": "trade_item_2",
+                "controls": [
+                  {
+                    "item_2@global.empty_panel": {
+                      "size": [52, 17],
+                      "anchor_from": "top_left",
+                      "anchor_to": "top_left",
+                      "controls": [
+                        {
+                          "item_counts@global.empty_panel": {
+                            "size": [52, 17],
+                            "controls": [{ "hover_control@trade_global.hover_text_button": {} }]
+                          }
+                        },
+                        { "item_renderer@trade_global.item_renderer": {} }
+                      ]
+                    }
+                  },
+                  {
+                    "label_2_holder@global.empty_panel": {
+                      "size": [52, 17],
+                      "anchor_to": "top_left",
+                      "anchor_from": "top_left",
+                      "controls": [{ "second_trade_count@trade_global.second_trade_item_count": {} }]
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "item_3@trade_global.collection": {
+                "layer": 6,
+                "$item_collection": "sell_item",
+                "controls": [
+                  {
+                    "item_3@global.empty_panel": {
+                      "size": [84, 17],
+                      "anchor_from": "top_left",
+                      "anchor_to": "top_left",
+                      "controls": [
+                        {
+                          "hover_text@global.empty_panel": {
+                            "size": [84, 17],
+                            "controls": [{ "hover_control@trade_global.hover_text_button": {} }]
+                          }
+                        },
+                        { "item_renderer@trade_global.item_renderer": {} }
+                      ]
+                    }
+                  },
+                  {
+                    "label_2_holder@global.empty_panel": {
+                      "size": [84, 17],
+                      "anchor_to": "top_left",
+                      "anchor_from": "top_left",
+                      "controls": [{ "second_trade_count@trade_global.second_trade_item_count": {} }]
+                    }
+                  }
+                ]
+              }
+            }
+          ]
+        }
+      },
+      { "unchecked@$unchecked_control": {} },
+      { "checked@$checked_control": {} },
+      { "unchecked_hover@$unchecked_hover_control": {} },
+      { "checked_hover@$checked_hover_control": {} },
+      { "unchecked_locked@$unchecked_locked_control": {} },
+      { "checked_locked@$checked_locked_control": {} },
+      { "unchecked_locked_hover@$unchecked_locked_hover_control": {} },
+      { "checked_locked_hover@$checked_locked_hover_control": {} }
+    ]
   },
   "unchecked_control@trade_global.button_state_common": {
     "$button_sprite": "assets/sprites/container/villager/button.png"
@@ -335,7 +363,7 @@
   },
   "red_slash@screen_content.image_element": {
     "keep_ratio": true,
-    "size": [ "default", 2 ],
+    "size": ["default", 2],
     "nineslice_size": 1,
     "texture": "assets/sprites/container/villager/discount_strikethrough.png",
     "offset": [0, -3],

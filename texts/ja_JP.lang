@@ -36,3 +36,9 @@ craftingScreen.tab.nature=sr1.atemp
 craftingScreen.tab.equipment=sr1.atemp
 craftingScreen.tab.items=sr1.atemp
 container.enchant.clue=%s §r. . . ?
+
+ashur.tab.items=雑貨
+ashur.tab.nature=自然
+ashur.tab.equipment=装備
+ashur.tab.construction=建築
+ashur.tab.search=検索

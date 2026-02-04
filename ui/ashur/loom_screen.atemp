@@ -86,11 +86,34 @@
                           "pattern_panel@global.empty_panel": {
                             "size": [18, 18],
                             "controls": [
-                              { "pattern_slot@jc_container_item.container_item": { "$item_collection": "loom_material_items" } },
                               {
-                                "img@loom_screen.item_empty_image": {
+                                "pattern_slot@jc_container_item.container_item": {
                                   "$item_collection": "loom_material_items",
-                                  "$current_cell_texture": "assets/sprites/container/loom/pattern_slot"
+                                  "bindings": [
+                                    {
+                                      "binding_name": "(not #empty_image_visible)",
+                                      "binding_name_override": "#visible",
+                                      "binding_type": "collection",
+                                      "binding_collection_name": "$item_collection"
+                                    }
+                                  ]
+                                }
+                              },
+                              {
+                                "pattern_slot_fixer@jc_container_item.container_item": {
+                                  "$item_collection": "loom_material_items",
+                                  "$cell_overlay_ref": "loom_screen.pattern_empty_image",
+                                  "$dont_render_item": true,
+                                  "$dont_render_hover_text": true,
+                                  "$dont_render_item_count": true,
+                                  "bindings": [
+                                    {
+                                      "binding_name": "#empty_image_visible",
+                                      "binding_name_override": "#visible",
+                                      "binding_type": "collection",
+                                      "binding_collection_name": "$item_collection"
+                                    }
+                                  ]
                                 }
                               }
                             ]
@@ -278,6 +301,9 @@
   },
   "dye_empty_image@loom_screen.item_empty_image": {
     "$current_cell_texture|default": "assets/sprites/container/loom/dye_slot"
+  },
+  "pattern_empty_image@loom_screen.item_empty_image": {
+    "$current_cell_texture|default": "assets/sprites/container/loom/pattern_slot"
   },
   "scroll_panel@scroll_panel.scroll_panel": {
     "$scroll_size": [12, 56.2],

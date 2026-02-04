@@ -17,6 +17,21 @@
     "$dont_render_item|default": false,
     "$dont_render_hover_text|default": false,
     "$dont_render_item_count|default": false,
+    "$cell_hover_text_bindings|default": [
+      {
+        "binding_name": "$hover_text_binding_name",
+        "binding_name_override": "#hover_remove_text",
+        "binding_condition": "always",
+        "binding_type": "collection",
+        "binding_collection_name": "$item_collection"
+      },
+      {
+        "binding_type": "view",
+        "binding_condition": "always_when_visible",
+        "source_property_name": "(#hover_remove_text - '\n§9§9sr1.atemp§r')",
+        "target_property_name": "#hover_text"
+      }
+    ],
     "controls": [
       //   {"debug_element@screen_content.debug_element":{}},
       { "$background_image_control_name@$background_images": {} },
@@ -266,8 +281,12 @@
 
   "item_button": {
     "type": "button",
-    "$highlight_control|default": "jc_container_item.slot_highlight",
+    "focus_enabled": true,
+    "focus_wrap_enabled": false,
+    "focus_magnet_enabled": true,
     "default_focus_precedence": 1,
+
+    "$highlight_control|default": "jc_container_item.slot_highlight",
     "hover_control": "hover",
     "pressed_control": "pressed",
     "bindings": [
@@ -364,21 +383,7 @@
           "layer": 290,
           "$hover_text_binding_name|default": "#hover_text",
           "ignored": "$dont_render_hover_text",
-          "bindings": [
-            {
-              "binding_name": "$hover_text_binding_name",
-              "binding_name_override": "#hover_remove_text",
-              "binding_condition": "always",
-              "binding_type": "collection",
-              "binding_collection_name": "$item_collection"
-            },
-            {
-              "binding_type": "view",
-              "binding_condition": "always_when_visible",
-              "source_property_name": "(#hover_remove_text - '\n§9§9sr1.atemp§r')",
-              "target_property_name": "#hover_text"
-            }
-          ]
+          "bindings": "$cell_hover_text_bindings"
         }
       }
     ]

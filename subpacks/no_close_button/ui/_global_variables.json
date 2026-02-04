@@ -62,129 +62,13 @@
 
 
 
-  "$creative_recipe_book": false,
-  "$loom_screen": false,
-  "$anvil_screen": false,
-  "$barrel_screen": false,
-  "$beacon_screen": false,
-  "$blast_furnace_screen": false,
-  "$brewing_stand_screen": false,
-  "$cartography_screen": false,
-  "$crafting_screen": false,
-  "$crafter_screen": false,
-  "$dispenser_screen": false,
-  "$dropper_screen": false,
-  "$enchanting_screen": false,
-  "$furnace_screen": false,
-  "$double_chest_container": false,
-  "$grindstone_screen": false,
-  "$hopper_screen": false,
-  "$horse_screen": false,
-  "$inventory_screen": false,
-  "$shulker_screen": false,
-  "$smithing_screen": false,
-  "$smoker_screen": false,
-  "$stonecutter_screen": false,
-  "$main_trade_screen": false,
-  "$recipe_book": false,
+
+  "$is_java_aspects": false,
+  "$item_icons_enabled": false,
+  "$is_java_aspects_icons": "($item_icons_enabled and $is_java_aspects)",
   
   "$cb_is_thick_menu_buttons": false,
-  "$jc:dev": false,
-  "$hover_text_property_bag": {
-    "#start": 0,
-    "#result": 0
-  },
-  "$advanced_hover_text": [
-    {
-      "binding_name": "$hover_text_binding_name",
-      "binding_name_override": "#hover_remove_text",
-      "binding_condition": "always",
-      "binding_type": "collection",
-      "binding_collection_name": "$item_collection"
-    },
-    {
-      "binding_type": "collection",
-      "ignored": "(not $jc:dev)",
-      "binding_collection_name": "$item_collection",
-      "binding_name": "#item_id_aux"
-    },
-    {
-      "binding_name": "#group_item_group_name",
-      "binding_condition": "visible",
-      "ignored": "(not $jc:dev)",
-      "binding_type": "collection",
-      "binding_collection_name": "$item_collection"
-    },
 
-    {
-      "binding_type": "view",
-      "source_property_name": "(not (#hover_remove_text = ''))",
-      "target_property_name": "#visible",
-      "ignored": "(not $jc:dev)",
-      "binding_condition": "always"
-    },
-    //durability
-    {
-      "binding_name": "#item_durability_total_amount",
-      "binding_type": "collection",
-      "ignored": "(not $jc:dev)",
-      "binding_collection_name": "$item_collection"
-    },
-    {
-      "binding_name": "#item_durability_current_amount",
-      "binding_type": "collection",
-      "ignored": "(not $jc:dev)",
-      "binding_collection_name": "$item_collection"
-    },
-    {
-      "binding_type": "view",
-      "source_property_name": "(#result + ((#item_durability_total_amount > #result) - (#item_durability_total_amount < #result)))",
-      "target_property_name": "#result",
-      "ignored": "(not $jc:dev)",
-      "binding_condition": "always_when_visible"
-    },
-    {
-      "binding_type": "view",
-      "source_property_name": "(#start + ((#item_durability_current_amount > #start) - (#item_durability_current_amount < #start)))",
-      "target_property_name": "#start",
-      "ignored": "(not $jc:dev)",
-      "binding_condition": "always_when_visible"
-    },
-    {
-      "binding_type": "view",
-      "source_property_name": "('\n current durability: ' + #start + '\n max durability: ' #result)",
-      "target_property_name": "#durability",
-      "ignored": "(not $jc:dev)",
-      "binding_condition": "always_when_visible"
-    },
-    //29032457
-    {
-      "binding_type": "view",
-      "source_property_name": "('§z' + (#item_id_aux - ((#item_id_aux / 65536) * 65536)) + '§z')",
-      "target_property_name": "#refined_id",
-      "ignored": "(not $jc:dev)",
-      "binding_condition": "always_when_visible"
-    },
-    {
-      "binding_type": "view",
-      "ignored": "(not $jc:dev)",
-      "binding_condition": "always_when_visible",
-      "source_property_name": "('§7\nraw id: ' + #item_id_aux + ' \nitem group: ' + #group_item_group_name + ' \nadvanced info: ' + '\n  item specific id: ' + #refined_id + '\n  refined id: ' + (#item_id_aux / 65536) + #durability)",
-      "target_property_name": "#advanced_info"
-    },
-    {
-      "binding_type": "view",
-      "ignored": "(not $jc:dev)",
-      "source_property_name": "(#hover_remove_text + #advanced_info + #durability - '\n§9§9sr1.atemp§r')",
-      "target_property_name": "#hover_text",
-      "binding_condition": "always_when_visible"
-    },
-    {
-      "binding_type": "view",
-      "ignored": "$jc:dev",
-      "source_property_name": "(#hover_remove_text - '\n§9§9sr1.atemp§r')",
-      "target_property_name": "#hover_text",
-      "binding_condition": "always_when_visible"
-    }
-  ]
+  
+  "$jc:dev": false
 }

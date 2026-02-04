@@ -23,6 +23,25 @@
     "$is_creative_survival_tab": true,
     "controls": [
       {
+        "disabled_scroller@screen_content.image_element": {
+          "texture": "assets/sprites/container/creative_inventory/scroller_disabled.png",
+          "layer": 20,
+          "offset": [-8, 46],
+          "anchor_from": "top_right",
+          "anchor_to": "top_right",
+          "size": [12, 15],
+          "bindings": [
+            {
+              "binding_type": "view",
+              "binding_condition": "always",
+              "source_control_name": "creative_recipe_grid",
+              "source_property_name": "(#maximum_grid_items < 45)",
+              "target_property_name": "#visible"
+            }
+          ]
+        }
+      },
+      {
         "close_button@global.close_button": { "offset": [-2, 30] }
       },
       {
@@ -51,12 +70,12 @@
           "$tab_binding": "inventory_tab_toggle"
         }
       },
-      { "items@creative_inventory.tab_contents": { "$tab_binding": "construction_tab_toggle" } },
-      { "items@creative_inventory.tab_contents": { "$tab_binding": "equipment_tab_toggle" } },
-      { "items@creative_inventory.tab_contents": { "$tab_binding": "nature_tab_toggle" } },
-      { "items@creative_inventory.tab_contents": { "$tab_binding": "items_tab_toggle" } },
+      { "construction_tab@creative_inventory.tab_contents": { "$tab_binding": "construction_tab_toggle" } },
+      { "equipment_tab@creative_inventory.tab_contents": { "$tab_binding": "equipment_tab_toggle" } },
+      { "nature_tab@creative_inventory.tab_contents": { "$tab_binding": "nature_tab_toggle" } },
+      { "items_tab@creative_inventory.tab_contents": { "$tab_binding": "items_tab_toggle" } },
       {
-        "items@creative_inventory.tab_contents": {
+        "search_tab@creative_inventory.tab_contents": {
           "$tab_contents_is": "search_page",
           "$tab_binding": "search_tab_toggle"
         }
@@ -128,7 +147,7 @@
     "anchor_from": "center",
     "controls": [
       {
-        "scroll_grid": {
+        "creative_recipe_grid": {
           "type": "grid",
           "size": [162, "default"],
           "collection_name": "recipe_book",
@@ -390,20 +409,7 @@
                 "checked_hover_control": "default_hover",
                 "controls": [
                   {
-                    "default_hover@global.empty_panel": {
-                      "size": [16, 16],
-                      "controls": [
-                        { "hover_icon@screen_content.highlight_slot": { "size": [16, 16] } },
-
-                        {
-                          "tooltip@common.hover_text": {
-                            "ignored": "$touch",
-                            "layer": 100,
-                            "property_bag": { "#hover_text": "destroy item" }
-                          }
-                        }
-                      ]
-                    }
+                    "default_hover@screen_content.highlight_slot": { "size": [16, 16] }
                   }
                 ],
                 "button_mappings": [
@@ -435,8 +441,76 @@
       }
     ]
   },
+  "tab_label_template@global.empty_label": {
+    "anchor_to": "top_left",
+    "anchor_from": "top_left",
+    "size": ["default", 10],
+    "layer": 15,
+    "localize": true,
+    "color": "$title_text_color",
+    "$label_visibility|default": "none",
+    "bindings": [
+      {
+        "binding_type": "view",
+        "source_control_name": "$label_visibility",
+        "source_property_name": "#toggle_state",
+        "target_property_name": "#visible"
+      }
+    ]
+  },
   "misc_page@creative_inventory.tab_base_template": {
     "controls": [
+      {
+        "label_stack@global.empty_stack": {
+          "orientation": "horizontal",
+          "size": ["100%", 17],
+          "anchor_from": "top_left",
+          "anchor_to": "top_left",
+          "controls": [
+            { "label_left_filler@global.empty_panel": { "size": [8, 17] } },
+            {
+              "label_vertical_stack@global.empty_stack": {
+                "orientation": "vertical",
+                "size": ["fill", 17],
+                "controls": [
+                  { "label_top_filler@global.empty_panel": { "size": ["fill", 5] } },
+                  {
+                    "label_holder@global.empty_panel": {
+                      "size": ["fill", 11],
+                      "controls": [
+                        {
+                          "equipment@creative_inventory.tab_label_template": {
+                            "text": "ashur.tab.equipment",
+                            "$label_visibility": "equipment_tab_toggle"
+                          }
+                        },
+                        {
+                          "nature@creative_inventory.tab_label_template": {
+                            "text": "ashur.tab.nature",
+                            "$label_visibility": "nature_tab_toggle"
+                          }
+                        },
+                        {
+                          "items@creative_inventory.tab_label_template": {
+                            "text": "ashur.tab.items",
+                            "$label_visibility": "items_tab_toggle"
+                          }
+                        },
+                        {
+                          "construction@creative_inventory.tab_label_template": {
+                            "text": "ashur.tab.construction",
+                            "$label_visibility": "construction_tab_toggle"
+                          }
+                        }
+                      ]
+                    }
+                  }
+                ]
+              }
+            }
+          ]
+        }
+      },
       {
         "misc_tab_base@screen_content.creative_inventory_misc": {
           "anchor_to": "center",
@@ -472,6 +546,63 @@
   "search_page@creative_inventory.tab_base_template": {
     "controls": [
       {
+        "search_highlight@screen_content.image_element": {
+          "size": [88, 15],
+          "texture": "textures/creative_highlight.png",
+          "anchor_from": "top_left",
+          "anchor_to": "top_left",
+          "ignored": true,// this needs more thinking because i need to be able to detect when the text box is selected useing bindings
+          "layer": 16,
+          "bindings": [
+            {
+              "binding_type": "view",
+              "binding_condition": "always",
+              "source_control_name": "creative_recipe_grid",
+              "source_property_name": "(#maximum_grid_items > 2083)",// wont work always but for vanilla users it will
+              "target_property_name": "#visible"
+            }
+          ]
+        }
+      },
+      {
+        "search_label_stack@global.empty_stack": {
+          "orientation": "horizontal",
+          "size": ["100%", 17],
+          "anchor_from": "top_left",
+          "anchor_to": "top_left",
+          "controls": [
+            { "search_label_left_filler@global.empty_panel": { "size": [8, 17] } },
+            {
+              "search_label_vertical_stack@global.empty_stack": {
+                "orientation": "vertical",
+                "size": ["fill", 17],
+                "controls": [
+                  { "search_label_top_filler@global.empty_panel": { "size": ["fill", 5] } },
+                  {
+                    "search_label_holder@global.empty_panel": {
+                      "size": ["fill", 11],
+                      "controls": [
+                        {
+                          "search_label@global.empty_label": {
+                            "anchor_to": "top_left",
+                            "anchor_from": "top_left",
+                            "size": ["default", 10],
+                            "layer": 15,
+                            "localize": true,
+                            "text": "itemGroup.search",
+                            "color": "$title_text_color"
+                          }
+                        }
+                      ]
+                    }
+                  }
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
         "search_holder@global.empty_stack": {
           "orientation": "vertical",
           "size": [116, 16],
@@ -490,7 +621,7 @@
                       "size": [90, 12],
                       "controls": [
                         {
-                          "text_edit_control@text_edit_box.text_edit_box": {
+                          "creative_text_edit_control@text_edit_box.text_edit_box": {
                             "size": [90, 12],
                             "property_bag": { "#property_field": "#item_name" },
                             "max_length": 300000,

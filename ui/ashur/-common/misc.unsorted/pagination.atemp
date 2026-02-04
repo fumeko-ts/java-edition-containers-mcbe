@@ -44,6 +44,11 @@
           "anchor_from": "bottom_middle",
           "offset": [0, -13],
           "layer": 20,
+          "$namespace|default": "pagination",
+          "variables": {
+            "requires": "($cb_is_thick_menu_buttons = true)",
+            "$namespace|default": "thickly"
+          },
           "controls": [
             {
               "buffer@global.empty_panel": {
@@ -153,17 +158,10 @@
     "$size": [18, 17],
     "layer": 4,
     "$toggle_binding_value": "('#recipe_toggle_index_binding_' + $current_page)",
-    "$unchecked|default": "('pagination.tepes_' + $direction)",
-    "$unchecked_hover|default": "('pagination.tepes_' + $direction + '_hover')",
-    "$checked|default": "('pagination.tepes_' + $direction)",
-    "$checked_hover|default": "('pagination.tepes_' + $direction + '_hover')",
-    "variables": {
-      "requires": "($cb_is_thick_menu_buttons = true)",
-      "$unchecked|default": "('thickly.tepes_' + $direction)",
-      "$unchecked_hover|default": "('thickly.tepes_' + $direction + '_hover')",
-      "$checked|default": "('thickly.tepes_' + $direction)",
-      "$checked_hover|default": "('thickly.tepes_' + $direction + '_hover')"
-    }
+    "$unchecked|default": "($namespace + '.tepes_' + $direction)",
+    "$unchecked_hover|default": "($namespace + '.tepes_' + $direction + '_hover')",
+    "$checked|default": "($namespace + '.tepes_' + $direction)",
+    "$checked_hover|default": "($namespace + '.tepes_' + $direction + '_hover')"
   },
   "tepes_left_button@pagination.base_toggle_button": {
     "ignored": "($current_page = 1)",

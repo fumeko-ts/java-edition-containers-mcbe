@@ -12,33 +12,35 @@
   // trade
   "unchecked_control@trade_global.button_state_common": {
     "nineslice_size": 3,
-    "$image_texture": "assets/minecraft/textures/gui/sprites/widget/button.png"
+    "$button_sprite": "assets/minecraft/textures/gui/sprites/widget/button.png"
   },
   "checked_control@trade_global.button_state_common": {
     "nineslice_size": 3,
-    "$image_texture": "assets/minecraft/textures/gui/sprites/widget/button_highlighted.png"
+    "$button_sprite": "assets/minecraft/textures/gui/sprites/widget/button_highlighted.png"
   },
   "unchecked_hover_control@trade_global.button_state_common": {
     "nineslice_size": 3,
-    "$image_texture": "assets/minecraft/textures/gui/sprites/widget/button_highlighted.png"
+    "$button_sprite": "assets/minecraft/textures/gui/sprites/widget/button_highlighted.png"
   },
   "checked_hover_control@trade_global.button_state_common": {
     "nineslice_size": 3,
-    "$image_texture": "assets/minecraft/textures/gui/sprites/widget/button_highlighted.png"
+    "$button_sprite": "assets/minecraft/textures/gui/sprites/widget/button_highlighted.png"
   },
 
   //crafting recipe book
-
+// assets/minecraft/textures/gui/sprites/recipe_book/page_backward.png 
+// assets/minecraft/textures/gui/sprites/recipe_book/page_backward_highlighted.png 
+// assets/minecraft/textures/gui/sprites/recipe_book/page_forward.png 
+// assets/minecraft/textures/gui/sprites/recipe_book/page_forward_highlighted.png
   "tepes_left@pagination.texture_base": { "texture": "assets/minecraft/textures/gui/sprites/recipe_book/page_backward.png" },
   "tepes_left_hover@pagination.texture_base": { "texture": "assets/minecraft/textures/gui/sprites/recipe_book/page_backward_highlighted.png" },
-
   "tepes_right@pagination.texture_base": { "texture": "assets/minecraft/textures/gui/sprites/recipe_book/page_forward.png" },
   "tepes_right_hover@pagination.texture_base": { "texture": "assets/minecraft/textures/gui/sprites/recipe_book/page_forward_highlighted.png" },
 
   //crafting recipe book filter
   
-  "filter_disabled@crafting_common.filter_disabled"            : {"texture": "assets/minecraft/textures/gui/sprites/recipe_book/filter_disabled.png" },
-  "filter_disabled_highlighted@crafting_common.filter_disabled_highlighted": {"texture": "assets/minecraft/textures/gui/sprites/recipe_book/filter_disabled_highlighted.png"},
-  "filter_enabled@crafting_common.filter_enabled"             : {"texture": "assets/minecraft/textures/gui/sprites/recipe_book/filter_enabled.png" },
-  "filter_enabled_highlighted@crafting_common.filter_enabled_highlighted" : {"texture": "assets/minecraft/textures/gui/sprites/recipe_book/filter_enabled_highlighted.png"}
+  "filter_disabled@crafting_common.filter_button_template"            : {"texture": "assets/minecraft/textures/gui/sprites/recipe_book/filter_disabled.png" },
+  "filter_disabled_highlighted@crafting_common.filter_button_template": {"texture": "assets/minecraft/textures/gui/sprites/recipe_book/filter_disabled_highlighted.png"},
+  "filter_enabled@crafting_common.filter_button_template"             : {"texture": "assets/minecraft/textures/gui/sprites/recipe_book/filter_enabled.png" },
+  "filter_enabled_highlighted@crafting_common.filter_button_template" : {"texture": "assets/minecraft/textures/gui/sprites/recipe_book/filter_enabled_highlighted.png"}
 }

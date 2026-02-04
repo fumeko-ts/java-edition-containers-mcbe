@@ -254,11 +254,11 @@
   },
   "blitsprite_alpha_template": {
     "anim_type": "alpha",
-    "duration": "$frame_time",
+    "duration": 0.4,
     "from": "$frame",
     "to": "$frame",
     "next": "('@anvil_screen.' + $next)"
   },
-  "anvil_highlight_alpha_1@anvil_screen.blitsprite_alpha_template": {"$frame_time": 0.5,"$frame": 0,"$next": "anvil_highlight_alpha_2"},
-  "anvil_highlight_alpha_2@anvil_screen.blitsprite_alpha_template": {"$frame_time": 0.5,"$frame": 1,"$next": "anvil_highlight_alpha_1"}
+  "anvil_highlight_alpha_1@anvil_screen.blitsprite_alpha_template": {"$frame": 0,"$next": "anvil_highlight_alpha_2"},
+  "anvil_highlight_alpha_2@anvil_screen.blitsprite_alpha_template": {"$frame": 1,"$next": "anvil_highlight_alpha_1"}
 }

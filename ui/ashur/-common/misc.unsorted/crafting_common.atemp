@@ -8,47 +8,17 @@
     "$toggle_binding_value": "#filtering_enabled",
     "$is_radio_toggle": false,
     "$controls": [
-      {
-        "default@crafting_common.filter_button_template": { "texture": "assets/sprites/recipe_book/filter_disabled" }
-      },
-      {
-        "default_hover@crafting_common.filter_button_template": {
-          "texture": "assets/sprites/recipe_book/filter_disabled_highlighted",
-          "controls": [
-            { "hover@global.hover_text": { "layer": 20000, "property_bag": { "#hover_text": "Showing All" } } }
-          ]
-        }
-      },
-      {
-        "checked_hover@crafting_common.filter_button_template": {
-          "texture": "assets/sprites/recipe_book/filter_enabled_highlighted",
-          "controls": [
-            { "hover@global.hover_text": { "layer": 20000, "property_bag": { "#hover_text": "Showing Craftable" } } }
-          ]
-        }
-      },
-      {
-        "checked@crafting_common.filter_button_template": { "texture": "assets/sprites/recipe_book/filter_enabled" }
-      }
+      { "default@crafting_common.filter_button_template": { "texture": "assets/sprites/recipe_book/filter_disabled" }},
+      { "default_hover@crafting_common.filter_button_template": {"texture": "assets/sprites/recipe_book/filter_disabled_highlighted"}},
+      { "checked_hover@crafting_common.filter_button_template": {"texture": "assets/sprites/recipe_book/filter_enabled_highlighted"}},
+      { "checked@crafting_common.filter_button_template": { "texture": "assets/sprites/recipe_book/filter_enabled" }}
     ],
     "variables": {
       "requires": "($cb_is_thick_menu_buttons = true)",
       "$controls": [
         { "default@thickly.filter_disabled": {} },
-        {
-          "default_hover@thickly.filter_disabled_highlighted": {
-            "controls": [
-              { "hover@global.hover_text": { "layer": 20000, "property_bag": { "#hover_text": "Showing All" } } }
-            ]
-          }
-        },
-        {
-          "checked_hover@thickly.filter_enabled_highlighted": {
-            "controls": [
-              { "hover@global.hover_text": { "layer": 20000, "property_bag": { "#hover_text": "Showing Craftable" } } }
-            ]
-          }
-        },
+        { "default_hover@thickly.filter_disabled_highlighted": {} },
+        { "checked_hover@thickly.filter_enabled_highlighted": {} },
         { "checked@thickly.filter_enabled": {} }
       ]
     },

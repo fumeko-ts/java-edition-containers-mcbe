@@ -36,3 +36,9 @@ craftingScreen.tab.nature=sr1.atemp
 craftingScreen.tab.equipment=sr1.atemp
 craftingScreen.tab.items=sr1.atemp
 container.enchant.clue=%s §r. . . ?
+
+ashur.tab.items=Diversen
+ashur.tab.nature=Natuur
+ashur.tab.equipment=Uitrusting
+ashur.tab.construction=Bouw
+ashur.tab.search=Zoeken
