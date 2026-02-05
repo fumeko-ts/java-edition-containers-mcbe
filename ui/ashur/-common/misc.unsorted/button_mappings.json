@@ -18,9 +18,9 @@
   "namespace": "button_mappings",
   "recipe_button_item": {
     "type": "button",
-    "focus_enabled": true,
+    "focus_enabled": false,
     "focus_wrap_enabled": false,
-    "focus_magnet_enabled": true,
+    "focus_magnet_enabled": false,
     "default_focus_precedence": 1,
 
     "sound_volume": 0.0,

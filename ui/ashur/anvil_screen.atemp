@@ -98,7 +98,7 @@
                       "size": [18, 21],
                       "controls": [
                         { "filler_1@global.empty_panel": { "size": ["fill", 1] } },
-                        { "input_item_slot@global.container_item": { "$item_collection": "anvil_input_items" } },
+                        { "input_item_slot@jc_container_item.container_item": { "$item_collection": "anvil_input_items" } },
                         { "filler_2@global.empty_panel": { "size": ["fill", 2] } }
                       ]
                     }
@@ -110,7 +110,7 @@
                       "size": [18, 21],
                       "controls": [
                         { "filler_1@global.empty_panel": { "size": ["fill", 1] } },
-                        { "material_item_slot@global.container_item": { "$item_collection": "anvil_material_items" } },
+                        { "material_item_slot@jc_container_item.container_item": { "$item_collection": "anvil_material_items" } },
                         { "filler_2@global.empty_panel": { "size": ["fill", 2] } }
                       ]
                     }
@@ -138,7 +138,7 @@
                       "controls": [
                         { "filler_1@global.empty_panel": { "size": ["fill", 1] } },
                         {
-                          "result_item_slot@global.container_item": {
+                          "result_item_slot@jc_container_item.container_item": {
                             "$item_collection": "anvil_result_items",
                             "$button_ref": "button_mappings.anvil_output_slot_button"
                           }

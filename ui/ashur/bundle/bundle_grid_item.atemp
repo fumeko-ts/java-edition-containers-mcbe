@@ -3,10 +3,12 @@
   "bundle_slot_item@global.empty_panel": {
     "size": [24, 24],
     "layer": 12,
+    "$item_collection|default": "bundle_items",
     "controls": [
       {
-        "item_cell@global.container_item": {
+        "item_cell@jc_container_item.container_item": {
           "size": [24, 24],
+          "$item_collection": "bundle_items",
           "$stack_count_offset": [-3, -2],
           "$renderer_layer": 30,
           "$background_images|default": "bundle_grid_item.bundle_cell_overlays",

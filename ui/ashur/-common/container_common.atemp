@@ -68,36 +68,6 @@
             }
           ]
         }
-      },
-      {
-        "inventory_take_progress_icon_button": {
-          "type": "button",
-          "layer": -10,
-          "follows_cursor": true,
-          "sound_name": "random.click",
-          "sound_volume": 1.0,
-          "sound_pitch": 1.0,
-          "always_handle_pointer": true,
-          "controls": [
-            {
-              "inventory_hold_icon@global.custom_renderer": {
-                "$type": "progress_bar_renderer",
-                "layer": 70,
-                "offset": "$bar_offset",
-                "size": [15, 3],
-                "variables": [
-                  { "requires": "$desktop_screen", "$bar_offset": [0, -12] },
-                  { "requires": "$pocket_screen", "$bar_offset": [0, -18] }
-                ],
-                "bindings": [
-                  { "binding_name": "#progress_bar_visible", "binding_condition": "always" },
-                  { "binding_name": "#progress_bar_total_amount", "binding_condition": "always_when_visible" },
-                  { "binding_name": "#progress_bar_current_amount", "binding_condition": "always_when_visible" }
-                ]
-              }
-            }
-          ]
-        }
       }
     ]
   },

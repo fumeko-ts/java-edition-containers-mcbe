@@ -281,9 +281,9 @@
 
   "item_button": {
     "type": "button",
-    "focus_enabled": true,
+    "focus_enabled": false,
     "focus_wrap_enabled": false,
-    "focus_magnet_enabled": true,
+    "focus_magnet_enabled": false,
     "default_focus_precedence": 1,
 
     "$highlight_control|default": "jc_container_item.slot_highlight",

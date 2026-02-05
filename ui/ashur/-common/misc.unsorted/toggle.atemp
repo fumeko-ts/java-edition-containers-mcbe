@@ -195,6 +195,9 @@
         "$toggle_control_name": {
           "type": "toggle",
           "size": "$size",
+          "focus_enabled": false,
+          "focus_wrap_enabled": false,
+          "focus_magnet_enabled": false,
           "$hover|default": false,
           "sound_name": "random.click",
           "sound_volume": "$button_volume",

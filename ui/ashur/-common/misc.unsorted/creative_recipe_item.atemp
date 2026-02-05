@@ -19,6 +19,9 @@
   "item_template": {
     "type": "input_panel",
     "size": [18, 18],
+    "focus_enabled": false,
+    "focus_wrap_enabled": false,
+    "focus_magnet_enabled": false,
     "$item_collection|default": "recipe_book",
     "layer": 4,
     "controls": [

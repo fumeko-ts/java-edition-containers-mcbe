@@ -424,10 +424,6 @@
     "type": "button",
     "anchor_from": "center",
     "anchor_to": "center",
-    "locked_control": "",
-    "default_control": "default",
-    "hover_control": "hover",
-    "pressed_control": "pressed",
     "layer": -10,
     "size": [16, 16],
     "follows_cursor": true,
@@ -438,9 +434,7 @@
     "$durability_bar_required|default": true,
     "$storage_bar_required|default": true,
     "controls": [
-      { "default@global.inventory_icon_panel": {} },
-      { "pressed@global.inventory_icon_panel": {} },
-      { "hover@global.inventory_icon_panel": {} },
+      { "inventory_icon_panel@global.inventory_icon_panel": {} },
       { "durability_bar_grabbed@global.durability_bar_grabbed": {} },
       { "storage_bar_grabbed@global.storage_bar_grabbed": {} }
     ]
@@ -550,11 +544,6 @@
   "empty_image": { "type": "image" },
   "empty_stack": { "type": "stack_panel" },
   "custom_renderer": { "type": "custom", "renderer": "$type" },
-  "container_item@jc_container_item.container_item": {
-    "$item_collection": "$item_collection",
-    "size": "$cell_size",
-    "$cell_size": [18, 18]
-  },
   "durability_bar_grabbed@global.custom_renderer": {
     "$type": "progress_bar_renderer",
     "layer": 16,
