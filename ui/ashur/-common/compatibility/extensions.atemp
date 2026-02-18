@@ -2,15 +2,12 @@
   "namespace": "jc-extensions",
 
   "mount_screen@jc-extensions.campatibility": {},
-
   "anvil_screen@jc-extensions.campatibility": {},
   "barrel_screen@jc-extensions.campatibility": {},
   "beacon_screen@jc-extensions.campatibility": {},
   "blast_furnace_screen@jc-extensions.campatibility": {},
   "brewing_stand_screen@jc-extensions.campatibility": {},
-
   "cartography_screen@jc-extensions.campatibility": {},
-
   "crafter_screen@jc-extensions.campatibility": {},
   "crafting_screen@jc-extensions.campatibility": {},
   "creative_inventory@jc-extensions.campatibility": {},
@@ -37,7 +34,7 @@
     "controls": [
       {
         "element@global.empty_image": {
-          "ignored": false,
+          "ignored": true,
           "texture": "textures/ui/white",
           "nineslice_size": 2,
           "size": [24, 24],
