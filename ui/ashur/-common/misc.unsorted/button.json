@@ -1,0 +1,105 @@
+{
+  "namespace": "button",
+  "button": {
+    "type": "button",
+    "layer": 1,
+    "sound_name": "$button_sound",
+    "sound_volume": 1.0,
+    "sound_pitch": 1.0,
+    "locked_control": "locked_button",
+    "default_control": "default_button",
+    "hover_control": "hover_button",
+    "pressed_control": "pressed_button",
+    "button_mappings": [
+      {
+        "from_button_id": "button.menu_select",
+        "to_button_id": "$pressed_button_name",
+        "mapping_type": "pressed"
+      },
+      {
+        "from_button_id": "button.menu_ok",
+        "to_button_id": "$pressed_button_name",
+        "mapping_type": "focused"
+      }
+    ],
+
+    "bindings": "$button_bindings"
+  },
+
+  "text_button@button.button": {
+    "$button_bindings|default": [],
+    "$button_sound|default": "random.click",
+    "$text_color|default": [1.0, 1.0, 1.0],
+    "$text_color_hover|default": "white",
+    "$button_label|default": "button.label_template",
+    "$shadow_text|default": false,
+    "$pressed_button_name|default": "button.menu_ok",
+    "$button_text|default": "BUTTON TEXT",
+    "$text_should_localize|default": true,
+    "controls": [
+      { "default_button@button.default_button": { "controls": [{ "text@$button_label": {} }] } },
+      {
+        "hover_button@button.hover_button": { "controls": [{ "text@$button_label": { "color": "$text_color_hover" } }] }
+      },
+      {
+        "pressed_button@button.pressed_button": {
+          "controls": [{ "text@$button_label": { "color": "$text_color_hover" } }]
+        }
+      },
+      { "locked_button@button.locked_button": { "controls": [{ "text@$button_label": {} }] } }
+    ]
+  },
+
+  "icon_button@button.button": {
+    "$button_bindings|default": [],
+    "$button_sound|default": "random.click",
+    "$pressed_button_name|default": "button.menu_ok",
+    "$button_icon|default": "global.empty_panel",
+    "controls": [
+      { "default_button@button.default_button": { "controls": [{ "icon@$button_icon": {} }] } },
+      { "hover_button@button.hover_button": { "controls": [{ "icon@$button_icon": {} }] } },
+      { "pressed_button@button.pressed_button": { "controls": [{ "icon@$button_icon": {} }] } },
+      { "locked_button@button.locked_button": { "controls": [{ "icon@$button_icon": {} }] } }
+    ]
+  },
+
+  "label_template@global.empty_label": {
+    "size": ["default", "default"],
+    "anchor_from": "center",
+    "anchor_to": "center",
+    "layer": 3,
+    "shadow": "$shadow_text",
+    "color": "$text_color",
+    "text": "$button_text",
+    "localize": "$text_should_localize"
+  },
+
+  "default_button@screen_content.image_element": {
+    "nineslice_size": [2, 3, 3, 2],
+    "alpha": 1,
+    "layer": 2,
+    "size": ["100%", "100%"],
+    "texture": "textures/book/button.png"
+  },
+  "hover_button@screen_content.image_element": {
+    "nineslice_size": [2, 3, 3, 2],
+    "alpha": 1,
+    "layer": 2,
+    "size": ["100%", "100%"],
+    "texture": "textures/book/button_hover.png"
+  },
+  "pressed_button@screen_content.image_element": {
+    "nineslice_size": [2, 3, 3, 2],
+    "alpha": 1,
+    "layer": 2,
+    "size": ["100%", "100%"],
+    "texture": "textures/book/button_hover.png"
+  },
+  "locked_button@screen_content.image_element": {
+    "nineslice_size": [2, 3, 3, 2],
+    "alpha": 1,
+    "layer": 2,
+    "size": ["100%", "100%"],
+    "texture": "textures/book/button_locked.png"
+  }
+}

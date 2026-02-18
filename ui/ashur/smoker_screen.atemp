@@ -27,134 +27,36 @@
         "main_smoker_contents@container_common.container_details": {
           "size": [176, 166],
           "$screen_controls": [
+            { "common_panel@screen_content.smoker": {} },
+            { "extensions@jc-extensions.smoker_screen": {} },
             {
-              "smoker_inventory_side@global.empty_panel": {
-                "size": [176, 166],
+              "smoker_top_half@global.empty_stack": {
+                "orientation": "vertical",
+                "size": [176, 70],
+                "anchor_from": "top_middle",
+                "anchor_to": "top_middle",
                 "controls": [
-                  { "common_panel@screen_content.smoker": {} },
+                  { "filler_1@global.empty_panel": { "size": ["fill", 6] } },
                   {
-                    "smoker_top_half@global.empty_stack": {
-                      "orientation": "vertical",
-                      "size": [176, 70],
-                      "anchor_from": "top_middle",
-                      "anchor_to": "top_middle",
+                    "label_stack@global.empty_stack": {
+                      "orientation": "horizontal",
+                      "size": [176, 10],
                       "controls": [
-                        { "filler_1@global.empty_panel": { "size": ["fill", 6] } },
+                        { "filler_1@global.empty_panel": { "size": [67, "fill"] } },
                         {
-                          "label_stack@global.empty_stack": {
-                            "orientation": "horizontal",
-                            "size": [176, 10],
+                          "label_holder@global.empty_panel": {
+                            "size": [109, 10],
                             "controls": [
-                              { "filler_1@global.empty_panel": { "size": [67, "fill"] } },
                               {
-                                "label_holder@global.empty_panel": {
-                                  "size": [109, 10],
-                                  "controls": [
-                                    {
-                                      "smoker_title_label": {
-                                        "type": "label",
-                                        "anchor_to": "top_left",
-                                        "anchor_from": "top_left",
-                                        "offset": [3, -1],
-                                        "text": "atemp.container.smoker",
-                                        "color": "$title_text_color"
-                                      }
-                                    }
-                                  ]
+                                "smoker_title_label": {
+                                  "type": "label",
+                                  "anchor_to": "top_left",
+                                  "anchor_from": "top_left",
+                                  "offset": [3, -1],
+                                  "text": "atemp.container.smoker",
+                                  "color": "$title_text_color"
                                 }
                               }
-                            ]
-                          }
-                        },
-                        {
-                          "main_content@global.empty_stack": {
-                            "orientation": "horizontal",
-                            "size": [176, 54],
-                            "controls": [
-                              { "filler_1@global.empty_panel": { "size": [55, "fill"] } },
-                              {
-                                "inputs@global.empty_stack": {
-                                  "orientation": "vertical",
-                                  "size": [18, 54],
-                                  "controls": [
-                                    {
-                                      "smelt_input_item@jc_container_item.container_item": {
-                                        "$item_collection": "furnace_ingredient_items"
-                                      }
-                                    },
-                                    {
-                                      "flame_buffer_and_holder": {
-                                        "type": "input_panel",
-                                        "contained": true,
-                                        "size": [18, 18],
-                                        "controls": [
-                                          {
-                                            "flame_progress@smoker_screen.smoker_image_controls": {
-                                              "size": [14, 14],
-                                              "offset": [-1, 0],
-                                              "anchor_to": "center",
-                                              "anchor_from": "center",
-                                              "$smoker_sprite": "lit_progress",
-                                              "$source": "#furnace_flame_ratio",
-                                              "$houkou": "down"
-                                            }
-                                          }
-                                        ]
-                                      }
-                                    },
-                                    {
-                                      "fuel_input_item@jc_container_item.container_item": {
-                                        "$item_collection": "furnace_fuel_items"
-                                      }
-                                    }
-                                  ]
-                                }
-                              },
-                              { "filler_2@global.empty_panel": { "size": [6, "fill"] } },
-                              {
-                                "arrow_holder@global.empty_stack": {
-                                  "orientation": "vertical",
-                                  "size": [24, 54],
-                                  "controls": [
-                                    { "filler_1@global.empty_panel": { "size": ["fill", 18] } },
-                                    {
-                                      "arrow_progress@smoker_screen.smoker_image_controls": {
-                                        "size": [24, 16],
-                                        "$smoker_sprite": "burn_progress",
-                                        "$source": "#furnace_arrow_ratio",
-                                        "$houkou": "left"
-                                      }
-                                    },
-                                    { "filler_2@global.empty_panel": { "size": ["fill", 20] } }
-                                  ]
-                                }
-                              },
-                              { "filler_3@global.empty_panel": { "size": [8, "fill"] } },
-                              {
-                                "item_output_holder@global.empty_stack": {
-                                  "orientation": "vertical",
-                                  "size": [26, 54],
-                                  "controls": [
-                                    { "filler_1@global.empty_panel": { "size": ["fill", 14] } },
-                                    {
-                                      "cell_holder@global.empty_panel": {
-                                        "size": [26, 26],
-                                        "controls": [
-                                          {
-                                            "output_item@jc_container_item.container_item": {
-                                              "anchor_to": "center",
-                                              "anchor_from": "center",
-                                              "$item_collection": "furnace_output_items"
-                                            }
-                                          }
-                                        ]
-                                      }
-                                    },
-                                    { "filler_2@global.empty_panel": { "size": ["fill", 14] } }
-                                  ]
-                                }
-                              },
-                              { "filler_4@global.empty_panel": { "size": [35, "fill"] } }
                             ]
                           }
                         }
@@ -162,12 +64,104 @@
                     }
                   },
                   {
-                    "bottom@global.inventory_bottom_half_with_label": {
-                      "anchor_to": "bottom_middle",
-                      "anchor_from": "bottom_middle"
+                    "main_content@global.empty_stack": {
+                      "orientation": "horizontal",
+                      "size": [176, 54],
+                      "controls": [
+                        { "filler_1@global.empty_panel": { "size": [55, "fill"] } },
+                        {
+                          "inputs@global.empty_stack": {
+                            "orientation": "vertical",
+                            "size": [18, 54],
+                            "controls": [
+                              {
+                                "smelt_input_item@jc_container_item.container_item": {
+                                  "$item_collection": "furnace_ingredient_items"
+                                }
+                              },
+                              {
+                                "flame_buffer_and_holder": {
+                                  "type": "input_panel",
+                                  "contained": true,
+                                  "size": [18, 18],
+                                  "controls": [
+                                    {
+                                      "flame_progress@smoker_screen.smoker_image_controls": {
+                                        "size": [14, 14],
+                                        "offset": [-1, 0],
+                                        "anchor_to": "center",
+                                        "anchor_from": "center",
+                                        "$smoker_sprite": "lit_progress",
+                                        "$source": "#furnace_flame_ratio",
+                                        "$houkou": "down"
+                                      }
+                                    }
+                                  ]
+                                }
+                              },
+                              {
+                                "fuel_input_item@jc_container_item.container_item": {
+                                  "$item_collection": "furnace_fuel_items"
+                                }
+                              }
+                            ]
+                          }
+                        },
+                        { "filler_2@global.empty_panel": { "size": [6, "fill"] } },
+                        {
+                          "arrow_holder@global.empty_stack": {
+                            "orientation": "vertical",
+                            "size": [24, 54],
+                            "controls": [
+                              { "filler_1@global.empty_panel": { "size": ["fill", 18] } },
+                              {
+                                "arrow_progress@smoker_screen.smoker_image_controls": {
+                                  "size": [24, 16],
+                                  "$smoker_sprite": "burn_progress",
+                                  "$source": "#furnace_arrow_ratio",
+                                  "$houkou": "left"
+                                }
+                              },
+                              { "filler_2@global.empty_panel": { "size": ["fill", 20] } }
+                            ]
+                          }
+                        },
+                        { "filler_3@global.empty_panel": { "size": [8, "fill"] } },
+                        {
+                          "item_output_holder@global.empty_stack": {
+                            "orientation": "vertical",
+                            "size": [26, 54],
+                            "controls": [
+                              { "filler_1@global.empty_panel": { "size": ["fill", 14] } },
+                              {
+                                "cell_holder@global.empty_panel": {
+                                  "size": [26, 26],
+                                  "controls": [
+                                    {
+                                      "output_item@jc_container_item.container_item": {
+                                        "anchor_to": "center",
+                                        "anchor_from": "center",
+                                        "$item_collection": "furnace_output_items"
+                                      }
+                                    }
+                                  ]
+                                }
+                              },
+                              { "filler_2@global.empty_panel": { "size": ["fill", 14] } }
+                            ]
+                          }
+                        },
+                        { "filler_4@global.empty_panel": { "size": [35, "fill"] } }
+                      ]
                     }
                   }
                 ]
+              }
+            },
+            {
+              "bottom@global.inventory_bottom_half_with_label": {
+                "anchor_to": "bottom_middle",
+                "anchor_from": "bottom_middle"
               }
             }
           ]

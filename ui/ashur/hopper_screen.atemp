@@ -18,25 +18,26 @@
   "namespace": "hopper_screen",
   "hopper_panel@container_common.container_details": {
     "layer": 5,
-    "size": [ 176, 133 ],
+    "size": [176, 133],
     "$screen_controls": [
-      {"common_panel@screen_content.hopper": {}},
+      { "common_panel@screen_content.hopper": {} },
+      { "extensions@jc-extensions.hopper_screen": {} },
       {
         "hopper_top_half@global.empty_stack": {
           "orientation": "vertical",
-          "size": [ 176, 37 ],
+          "size": [176, 37],
           "anchor_to": "top_middle",
           "anchor_from": "top_middle",
           "controls": [
-            {"filler_1@global.empty_panel": {"size": [ "fill", 6 ]}},
+            { "filler_1@global.empty_panel": { "size": ["fill", 6] } },
             {
               "hopper_label_holder@global.empty_panel": {
-                "size": [ 176, 13 ],
+                "size": [176, 13],
                 "controls": [
                   {
                     "item_hopper_label": {
                       "type": "label",
-                      "offset": [ 8, -1 ],
+                      "offset": [8, -1],
                       "anchor_from": "top_left",
                       "anchor_to": "top_left",
                       "text": "atemp.container.hopper",
@@ -49,20 +50,20 @@
             {
               "hopper_grid_holder@global.empty_stack": {
                 "orientation": "horizontal",
-                "size": [ 176, 18 ],
+                "size": [176, 18],
                 "controls": [
-                  {"filler_2@global.empty_panel": {"size": [ 43, "fill" ]}},
+                  { "filler_2@global.empty_panel": { "size": [43, "fill"] } },
                   {
                     "hopper_input_grid": {
                       "type": "grid",
-                      "size": [ 90, 18 ],
-                      "grid_dimensions": [ 5, 1 ],
+                      "size": [90, 18],
+                      "grid_dimensions": [5, 1],
                       "collection_name": "container_items",
                       "grid_item_template": "jc_container_item.container_item",
                       "$item_collection": "container_items"
                     }
                   },
-                  {"filler_3@global.empty_panel": {"size": [ 43, "fill" ]}}
+                  { "filler_3@global.empty_panel": { "size": [43, "fill"] } }
                 ]
               }
             }
@@ -70,7 +71,10 @@
         }
       },
       {
-        "bottom@global.inventory_bottom_half_with_label": {"anchor_to": "bottom_middle", "anchor_from": "bottom_middle"}
+        "bottom@global.inventory_bottom_half_with_label": {
+          "anchor_to": "bottom_middle",
+          "anchor_from": "bottom_middle"
+        }
       }
     ]
   }

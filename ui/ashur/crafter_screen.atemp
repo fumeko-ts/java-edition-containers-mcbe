@@ -21,6 +21,7 @@
     "size": [176, 166],
     "$screen_controls": [
       { "base_panel@screen_content.crafter": {} },
+      { "extensions@jc-extensions.crafter_screen": {} },
       {
         "main_vertical_stack@global.empty_stack": {
           "orientation": "vertical",
@@ -173,23 +174,21 @@
                               {
                                 "redstone_activated@screen_content.redstone_activated_bindings": {
                                   "$arrow_texture": "assets/sprites/container/crafter/powered_redstone",
-                                  "bindings": [
-                                    {
-                                      "binding_name": "(#redstone_arrow_texture = 'textures/ui/redstone_arrow_powered')",
-                                      "binding_name_override": "#visible"
-                                    }
-                                  ]
+                                  "$binding_value": "(#redstone_arrow_texture = 'textures/ui/redstone_arrow_powered')",
+                                  "variables": {
+                                    "requires": "$pocket_screen",
+                                    "$binding_value": "(#redstone_arrow_texture = 'textures/ui/redstone_arrow_vertical_unpowered')"
+                                  }
                                 }
                               },
                               {
                                 "redstone_deactivated@screen_content.redstone_activated_bindings": {
                                   "$arrow_texture": "assets/sprites/container/crafter/unpowered_redstone",
-                                  "bindings": [
-                                    {
-                                      "binding_name": "(#redstone_arrow_texture = 'textures/ui/redstone_arrow_unpowered')",
-                                      "binding_name_override": "#visible"
-                                    }
-                                  ]
+                                  "$binding_value": "(#redstone_arrow_texture = 'textures/ui/redstone_arrow_unpowered')",
+                                  "variables": {
+                                    "requires": "$pocket_screen",
+                                    "$binding_value": "(#redstone_arrow_texture = 'textures/ui/redstone_arrow_vertical_powered')"
+                                  }
                                 }
                               }
                             ]
@@ -203,6 +202,10 @@
                     "output_stack@global.empty_stack": {
                       "orientation": "horizontal",
                       "size": [63, 54],
+                      "$stack_count_binding_name|default": "#inventory_stack_count",
+                      "$stack_count_binding_condition|default": "none",
+                      "$stack_count_offset|default": [0, 1],
+                      "$dont_render_item_count|default": false,
                       "controls": [
                         { "output_right_filler@global.empty_panel": { "size": [20, "fill"] } },
                         {
@@ -260,7 +263,7 @@
                                       }
                                     },
                                     {
-                                      "output_stack_count_label@global.stack_count_label": {
+                                      "output_stack_count_label@jc_container_item.stack_count_label": {
                                         "layer": 20,
                                         "bindings": [
                                           {

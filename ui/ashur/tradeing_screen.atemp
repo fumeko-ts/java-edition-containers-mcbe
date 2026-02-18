@@ -16,17 +16,11 @@
 
 {
   "namespace": "tradeing_screen",
-  "trade_scroll_track@screen_content.image_element": {
-    "uv": [93, 17],
-    "uv_size": [8, 142],
-    "size": [8, 142],
-    "layer": 6,
-    "texture": "assets/container/villager"
-  },
   "screen_panel@container_common.container_details": {
     "size": [276, 166],
     "$screen_controls": [
       { "common_panel@screen_content.trade": {} },
+      { "extensions@jc-extensions.tradeing_screen": {} },
       {
         "disabled_bar@global.empty_panel": {
           "size": [100, 45],
@@ -301,6 +295,13 @@
       }
     ]
   },
+  "trade_scroll_track@screen_content.image_element": {
+    "uv": [93, 17],
+    "uv_size": [8, 142],
+    "size": [8, 142],
+    "layer": 6,
+    "texture": "assets/container/villager"
+  },
   "progress_bar_template@screen_content.image_element": {
     "size": [101, 5],
     "clip_direction": "left",
@@ -338,38 +339,6 @@
     "$toggle_enabled_binding_name": "#trade_toggle_enabled",
     "$toggle_enabled_binding_condition": "always"
   },
-  //   "trade_tier_base": {
-  //     "type": "stack_panel",
-  //     "orientation": "vertical",
-  //     "size": ["100%", "default"],
-  //     "factory": { "name": "selected_pack_factory", "control_name": "tradeing_screen.trade_toggle" },
-  //     "collection_name": "trades",
-  //     "bindings": [
-  //       {
-  //         "binding_name": "#trade_tier_total",
-  //         "binding_name_override": "#collection_length",
-  //         "binding_type": "collection",
-  //         "binding_collection_name": "trade_tiers"
-  //       }/*,
-  //       {
-  //         "binding_name": "#tier_visible",
-  //         "binding_name_override": "#visible",
-  //         "binding_type": "collection",
-  //         "binding_collection_name": "trade_tiers",
-  //         "binding_condition": "always"
-  //       }*/
-  //     ]
-  //   },
-  //   "trade_toggle@common_toggles.light_image_toggle_collection": {
-  //     "size": [88, 20],
-  //     "$toggle_name": "trade_toggle",
-  //     "$template_toggle": "trade_global.trade_toggle",
-  //     "$toggle_binding_type": "global",
-  //     "$toggle_state_binding_name": "#trade_toggle_state"//,
-  //    // "$toggle_enabled_binding_type": "global"//,
-  //  //   "$toggle_enabled_binding_name": "#trade_toggle_enabled",
-  //  //   "$toggle_enabled_binding_condition": "always"
-  //   },
   "trade_scroller@screen_content.image_element": {
     "nineslice_size": [3, 6, 3, 7],
     "anchor_to": "center",

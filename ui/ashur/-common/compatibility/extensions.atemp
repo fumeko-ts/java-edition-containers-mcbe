@@ -1,0 +1,52 @@
+{
+  "namespace": "jc-extensions",
+
+  "mount_screen@jc-extensions.campatibility": {},
+
+  "anvil_screen@jc-extensions.campatibility": {},
+  "barrel_screen@jc-extensions.campatibility": {},
+  "beacon_screen@jc-extensions.campatibility": {},
+  "blast_furnace_screen@jc-extensions.campatibility": {},
+  "brewing_stand_screen@jc-extensions.campatibility": {},
+
+  "cartography_screen@jc-extensions.campatibility": {},
+
+  "crafter_screen@jc-extensions.campatibility": {},
+  "crafting_screen@jc-extensions.campatibility": {},
+  "creative_inventory@jc-extensions.campatibility": {},
+  "dispenser_screen@jc-extensions.campatibility": {},
+  "double_chest_screen@jc-extensions.campatibility": {},
+  "dropper_screen@jc-extensions.campatibility": {},
+  "enchanting_screen@jc-extensions.campatibility": {},
+  "ender_chest_screen@jc-extensions.campatibility": {},
+  "furnace_screen@jc-extensions.campatibility": {},
+  "grindstone_screen@jc-extensions.campatibility": {},
+  "hopper_screen@jc-extensions.campatibility": {},
+  "inventory_screen@jc-extensions.campatibility": {},
+  "loom_screen@jc-extensions.campatibility": {},
+  "shulker_screen@jc-extensions.campatibility": {},
+  "small_chest_screen@jc-extensions.campatibility": {},
+  "smithing_table_screen@jc-extensions.campatibility": {},
+  "smoker_screen@jc-extensions.campatibility": {},
+  "stonecutter_screen@jc-extensions.campatibility": {},
+  "tradeing_screen@jc-extensions.campatibility": {},
+
+  "campatibility": {// this is a example use case
+    "type": "panel",
+    "size": ["100%", "100%"],
+    "controls": [
+      {
+        "element@global.empty_image": {
+          "ignored": false,
+          "texture": "textures/ui/white",
+          "nineslice_size": 2,
+          "size": [24, 24],
+          "layer": 50,
+          "offset": [5, 0],
+          "anchor_to": "bottom_left",
+          "anchor_from": "bottom_right"
+        }
+      }
+    ]
+  }
+}

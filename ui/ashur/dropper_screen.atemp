@@ -17,37 +17,38 @@
 {
   "namespace": "dropper_screen",
   "dropper_panel@container_common.container_details": {
-    "size": [ 176, 166 ],
+    "size": [176, 166],
     "$screen_controls": [
-      {"common_panel@screen_content.dropper": {}},
+      { "common_panel@screen_content.dropper": {} },
+      { "extensions@jc-extensions.dropper_screen": {} },
       {
         "dropper_top_half@global.empty_stack": {
           "orientation": "vertical",
-          "size": [ 176, 70 ],
+          "size": [176, 70],
           "anchor_to": "top_middle",
           "anchor_from": "top_middle",
           "controls": [
-            {"filler_1@global.empty_panel": {"size": [ "fill", 6 ]}},
+            { "filler_1@global.empty_panel": { "size": ["fill", 6] } },
             {
               "dropper_main_content@global.empty_stack": {
                 "orientation": "horizontal",
-                "size": [ 176, 64 ],
+                "size": [176, 64],
                 "controls": [
-                  {"filler_2@global.empty_panel": {"size": [ 61, "fill" ]}},
+                  { "filler_2@global.empty_panel": { "size": [61, "fill"] } },
                   {
                     "label_and_grid_holder@global.empty_stack": {
                       "orientation": "vertical",
-                      "size": [ 54, 64 ],
+                      "size": [54, 64],
                       "controls": [
                         {
                           "dropper_label_holder@global.empty_panel": {
-                            "size": [ 54, 10 ],
+                            "size": [54, 10],
                             "controls": [
                               {
                                 "dropper_label@global.empty_label": {
                                   "anchor_to": "top_left",
                                   "anchor_from": "top_left",
-                                  "offset": [ 6, -1 ],
+                                  "offset": [6, -1],
                                   "size": ["default", 10],
                                   "text": "atemp.container.dropper",
                                   "color": "$title_text_color"
@@ -59,8 +60,8 @@
                         {
                           "dropper_item_input": {
                             "type": "grid",
-                            "size": [ 54, 54 ],
-                            "grid_dimensions": [ 3, 3 ],
+                            "size": [54, 54],
+                            "grid_dimensions": [3, 3],
                             "collection_name": "container_items",
                             "grid_item_template": "jc_container_item.container_item",
                             "$item_collection": "container_items"
@@ -69,7 +70,7 @@
                       ]
                     }
                   },
-                  {"filler_3@global.empty_panel": {"size": [ 61, "fill" ]}}
+                  { "filler_3@global.empty_panel": { "size": [61, "fill"] } }
                 ]
               }
             }
@@ -77,7 +78,10 @@
         }
       },
       {
-        "bottom@global.inventory_bottom_half_with_label": {"anchor_to": "bottom_middle", "anchor_from": "bottom_middle"}
+        "bottom@global.inventory_bottom_half_with_label": {
+          "anchor_to": "bottom_middle",
+          "anchor_from": "bottom_middle"
+        }
       }
     ]
   }

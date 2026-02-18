@@ -127,6 +127,7 @@
                 "size": [176, 166],
                 "controls": [
                   { "container@screen_content.crafting": {} },
+                  { "extensions@jc-extensions.crafting_screen": {} },
                   {
                     "crafting_top_stack@global.empty_panel": {
                       "size": [176, 166],

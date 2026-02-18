@@ -14,9 +14,12 @@
 // By using this project, you agree to these terms.
 */
 
-{
-  "$container_opacity": 1,
 
+{
+  "$is_java_containers": true,
+
+
+  "$container_opacity": 1,
   "$no_close_button": true,
 
   "$title_text_color": [0.247, 0.247, 0.247],
@@ -40,25 +43,6 @@
   "$bucket_lava_id": 395,
   "$iron_axe_id": 329,
   "$golden_sword_id": 354,
-
-
-  "$glass_pane": 102,
-  "$white_pane": 160,
-  "$light_grey_pane": -650,
-  "$grey_pane": -649,
-  "$black_pane": -657,
-  "$brown_pane": -654,
-  "$red_pane": -656,
-  "$orange_pane": -643,
-  "$yellow_pane": -646,
-  "$lime_pane": -647,
-  "$green_pane": -655,
-  "$cyan_pane": -651,
-  "$light_blue_pane": -645,
-  "$blue_pane": -653,
-  "$purple_pane": -652,
-  "$magenta_pane": -644,
-  "$pink_pane": -648,
 
 
 

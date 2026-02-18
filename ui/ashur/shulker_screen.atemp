@@ -20,6 +20,7 @@
     "size": [176, 166],
     "$screen_controls": [
       { "common_panel@screen_content.shulker_box": {} },
+      { "extensions@jc-extensions.shulker_screen": {} },
       {
         "shulker_top_half@global.empty_stack": {
           "orientation": "vertical",

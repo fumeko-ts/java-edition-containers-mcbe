@@ -21,7 +21,22 @@
     "$item_collection|default": "stones",
     "$screen_controls": [
       { "common_panel@screen_content.stonecutter": {} },
-      { "scroll_panel@stonecutter_screen.scroll_grid": {} },
+      { "extensions@jc-extensions.stonecutter_screen": {} },
+      {
+        "scroll_grid@scroll_panel.scroll_panel": {
+          "$scroll_size": [12, 56],
+          "size": [80, 56],
+          "offset": [3, -40],
+          "$scroll_view_port_size": [79, 54],
+          "$scrolling_pane_size": ["100%", "100%"],
+          "$scroll_track_offset": [32.2, -1],
+          "anchor_to": "center",
+          "anchor_from": "center",
+          "$stack_count_required|default": false,
+          "$scroll_box_image_control": "stonecutter_screen.scroller",
+          "$scrolling_content": "stonecutter_screen.grid_holder"
+        }
+      },
       {
         "stonecutter_top_half@global.empty_stack": {
           "orientation": "vertical",
@@ -59,7 +74,11 @@
                       "size": [18, 54],
                       "controls": [
                         { "filler_1@global.empty_panel": { "size": ["fill", 17] } },
-                        { "input_item_slot@jc_container_item.container_item": { "$item_collection": "stonecutter_input_items" } },
+                        {
+                          "input_item_slot@jc_container_item.container_item": {
+                            "$item_collection": "stonecutter_input_items"
+                          }
+                        },
                         { "filler_1@global.empty_panel": { "size": ["fill", 19] } }
                       ]
                     }
@@ -287,19 +306,6 @@
         }
       }
     ]
-  },
-  "scroll_grid@scroll_panel.scroll_panel": {
-    "$scroll_size": [12, 56],
-    "size": [80, 56],
-    "offset": [3, -40],
-    "$scroll_view_port_size": [79, 54],
-    "$scrolling_pane_size": ["100%", "100%"],
-    "$scroll_track_offset": [32.2, -1],
-    "anchor_to": "center",
-    "anchor_from": "center",
-    "$stack_count_required|default": false,
-    "$scroll_box_image_control": "stonecutter_screen.scroller",
-    "$scrolling_content": "stonecutter_screen.grid_holder"
   },
   "scroller@screen_content.image_element": {
     "tiled": true,

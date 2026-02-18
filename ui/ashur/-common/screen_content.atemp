@@ -168,18 +168,6 @@
     "$screen_background_alpha|default": 0.78,
     "alpha": "$screen_background_alpha"
   },
-  "label": {
-    "type": "label",
-    "offset": "$text_offset",
-    "$text_offset": [0, 0],
-    "anchor_from": "top_left",
-    "anchor_to": "top_left",
-    "text": "$container_title",
-    "size": ["90%", "default"],
-    "color": "$title_text_color",
-    "layer": 20
-  },
-
   //slot overlays and highlights
   "highlight_slot@screen_content.image_element": {
     "texture": "textures/ui/ashur/white_slot",
@@ -188,16 +176,6 @@
     "$white_highlight_slot_offset|default": [0, 0],
     "$white_highlight_slot_size|default": [16, 16],
     "alpha": 0.45
-  },
-  "debug_element@screen_content.image_element": {
-    "texture": "textures/ui/white",
-    "alpha": 0.4,
-    "nineslice_size": 1,
-    "uv": [2, 2],
-    "uv_size": [1, 1],
-    "color": "cyan",
-    "size": ["100%", "100%"],
-    "layer": 30
   },
   "armor_overlay@screen_content.image_element": {
     "size": [16, 16],
@@ -266,7 +244,13 @@
   "redstone_activated_bindings@screen_content.image_element": {
     "size": [16, 16],
     "layer": 12,
-    "texture": "$arrow_texture"
+    "texture": "$arrow_texture",
+    "bindings": [
+      {
+        "binding_name": "$binding_value",
+        "binding_name_override": "#visible"
+      }
+    ]
   },
 
   //text fields and edit boxes
@@ -280,8 +264,6 @@
     "texture": "assets/sprites/container/anvil/text_field",
     "size": [110, 16]
   },
-  "edit_box_indent@screen_content.image_element": { "texture": "assets/sprites/container/anvil/text_field_disabled" },
-  "edit_box_indent_hover@screen_content.image_element": { "texture": "assets/sprites/container/anvil/text_field" },
   "text_field@screen_content.image_element": {
     "nineslice_size": 1,
     "texture": "assets/sprites/recipe_book/text_field",
@@ -291,37 +273,5 @@
     "nineslice_size": 1,
     "texture": "assets/sprites/recipe_book/text_field_highlighted",
     "size": ["100%", "100%"]
-  },
-
-  //trade and arrow elements
-  "trade_arrow@screen_content.image_element": {
-    "texture": "assets/sprites/container/villager/trade_arrow",
-    "size": [10, 11],
-    "layer": 5
-  },
-  "trade_cross_out@screen_content.image_element": {
-    "texture": "assets/sprites/container/villager/trade_arrow_out_of_stock",
-    "size": [10, 11],
-    "layer": 5
-  },
-  "cross_out@screen_content.image_element": {
-    "texture": "assets/sprites/container/villager/out_of_stock",
-    "size": [28, 21],
-    "anchor_from": "top_left",
-    "anchor_to": "top_left",
-    "offset": "$cross_out_offset",
-    "ignored": "$cross_out_ignored",
-    "layer": "$arrowc_layer"
-  },
-  "arrow@screen_content.image_element": {
-    "texture": "textures/atemp/in_stock",
-    "size": [28, 21],
-    "anchor_from": "top_left",
-    "anchor_to": "top_left",
-    "offset": "$cross_out_offset",
-    "layer": "$arrow_layer"
-  },
-
-  //miscellaneous
-  "red_cell_image@screen_content.image_element": { "texture": "textures/ui/cell_image_red" }
+  }
 }

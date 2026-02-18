@@ -112,6 +112,7 @@
                 "size": [176, 166],
                 "controls": [
                   { "common_panel@screen_content.inventory": {} },
+                  { "extensions@jc-extensions.inventory_screen": {} },
                   {
                     "inventory_crafting_stack@global.empty_panel": {
                       "size": [176, 166],

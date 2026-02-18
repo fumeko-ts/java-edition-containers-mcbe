@@ -20,6 +20,7 @@
     "size": [176, 166],
     "$screen_controls": [
       { "common_panel@screen_content.barrel": {} },
+      { "extensions@jc-extensions.barrel_screen": {} },
       {
         "barrel_top_half@global.empty_stack": {
           "orientation": "vertical",

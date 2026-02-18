@@ -20,6 +20,7 @@
     "size": [176, 166],
     "$screen_controls": [
       { "common_panel@screen_content.brewing_stand": {} },
+      { "extensions@jc-extensions.brewing_stand_screen": {} },
       {
         "sprite_stack@global.empty_stack": {
           "size": [176, 48],

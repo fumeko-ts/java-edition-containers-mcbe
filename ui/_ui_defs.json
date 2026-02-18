@@ -33,12 +33,13 @@
     "ui/ashur/-common/global.atemp",
     "ui/ashur/-common/screen_content.atemp",
     "ui/ashur/-common/misc.unsorted/banner.atemp",
+    "ui/ashur/book_screen.atemp",
+    "ui/ashur/-common/misc.unsorted/button.json",
     "ui/ashur/-common/misc.unsorted/button_mappings.json",
     "ui/ashur/-common/misc.unsorted/crafting_common.atemp",
     "ui/ashur/-common/misc.unsorted/crafting_textures.atemp",
     "ui/ashur/-common/misc.unsorted/creative_recipe_item.atemp",
-    "ui/ashur/-common/misc.unsorted/java_hover_text.atemp",
-    "ui/ashur/-common/misc.unsorted/pagination.atemp",
+    "ui/ashur/-common/misc.unsorted/java_hover_text.atemp",                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                "assets/sprites/container/slot_2.png",
     "ui/ashur/-common/misc.unsorted/recipe_grid.atemp",
     "ui/ashur/-common/misc.unsorted/scroll_panel.atemp",
     "ui/ashur/-common/misc.unsorted/selected_trade_invalid.atemp",
@@ -58,6 +59,7 @@
     "ui/ashur/-common/misc.unsorted/survival_recipe_grid.atemp",
     "ui/ashur/-common/misc.unsorted/selected_item.atemp",
     "ui/ashur/bundle/bundle.atemp",
-    "ui/ashur/bundle/bundle_grid_item.atemp"
+    "ui/ashur/bundle/bundle_grid_item.atemp",
+    "ui/ashur/-common/compatibility/extensions.atemp"
   ]
 }

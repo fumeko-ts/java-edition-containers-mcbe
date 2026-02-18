@@ -33,27 +33,8 @@
       }
     ],
     "controls": [
-      //   {"debug_element@screen_content.debug_element":{}},
-      { "$background_image_control_name@$background_images": {} },
-      {
-        "stack_count_label@global.empty_label": {
-          "offset": "$stack_count_offset",
-          "anchor_to": "bottom_right",
-          "anchor_from": "bottom_right",
-          "layer": 9,
-          "shadow": true,
-          "text": "$stack_count_binding_name",
-          "ignored": "$dont_render_item_count",
-          "bindings": [
-            {
-              "binding_name": "$stack_count_binding_name",
-              "binding_type": "collection",
-              "binding_collection_name": "$item_collection",
-              "binding_condition": "$stack_count_binding_condition"
-            }
-          ]
-        }
-      },
+      {"$background_image_control_name@$background_images": {} },
+      {"stack_count@jc_container_item.stack_count_label": {}},
       {
         "item_renderer_holder@global.empty_panel": {
           "size": "$item_renderer_size",
@@ -258,7 +239,23 @@
       }
     ]
   },
-
+  "stack_count_label@global.empty_label": {
+    "offset": "$stack_count_offset",
+    "anchor_to": "bottom_right",
+    "anchor_from": "bottom_right",
+    "layer": 9,
+    "shadow": true,
+    "text": "$stack_count_binding_name",
+    "ignored": "$dont_render_item_count",
+    "bindings": [
+      {
+        "binding_name": "$stack_count_binding_name",
+        "binding_type": "collection",
+        "binding_collection_name": "$item_collection",
+        "binding_condition": "$stack_count_binding_condition"
+      }
+    ]
+  },
   "bundle_item_template@jc_container_item.item_renderer": {
     "size": [16, 16],
     "layer": "$z_index",
@@ -390,6 +387,7 @@
   },
 
   "item_renderer@global.custom_renderer": {
+    // every item uses this renderer
     "$type": "inventory_item_renderer",
     "layer": 10,
     "$item_renderer_binding_condition|default": "visible",

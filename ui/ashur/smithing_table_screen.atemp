@@ -20,6 +20,7 @@
     "size": [176, 166],
     "$screen_controls": [
       { "common_panel@screen_content.smithing": {} },
+      { "extensions@jc-extensions.smithing_table_screen": {} },
       {
         "result_item_preview_inner@global.empty_panel": {
           "size": [30, 24],

@@ -22,6 +22,7 @@
     "anchor_to": "center",
     "$screen_controls": [
       { "common_panel@screen_content.beacon": {} },
+      { "extensions@jc-extensions.beacon_screen": {} },
       {
         "beacon_inner_panel@global.empty_panel": {
           "size": [216, 97],

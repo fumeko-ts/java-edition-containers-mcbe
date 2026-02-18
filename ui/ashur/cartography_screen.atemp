@@ -20,6 +20,7 @@
     "size": [176, 166],
     "$screen_controls": [
       { "common_panel@screen_content.cartography": {} },
+      { "extensions@jc-extensions.cartography_screen": {} },
       {
         "cartography_top_content@global.empty_stack": {
           "orientation": "vertical",

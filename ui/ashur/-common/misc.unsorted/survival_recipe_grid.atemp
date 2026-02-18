@@ -31,6 +31,7 @@
                     "binding_type": "collection",
                     "binding_collection_name": "recipe_book"
                   },
+                  // please dont steal this design if you really need to ask me directly
                   {
                     "binding_type": "view",
                     "binding_condition": "always",

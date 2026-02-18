@@ -20,7 +20,8 @@
     "size": [176, 166],
     "layer": 5,
     "$screen_controls": [
-      { "base_panel@screen_content.enchanting": {} },
+      { "common_panel@screen_content.enchanting": {} },
+      { "extensions@jc-extensions.enchanting_screen": {} },
       {
         "top_half@global.empty_stack": {
           "orientation": "vertical",
@@ -357,7 +358,7 @@
     "controls": [
       { "hover@$button_texture_control_hover": {} },
 
-      { "cost@enchanting_screen.cost": {  "color": [0.475, 0.95, 0.11875] } },
+      { "cost@enchanting_screen.cost": { "color": [0.475, 0.95, 0.11875] } },
       { "runes@enchanting_screen.runes": { "color": [1.0, 1.0, 0.5] } }
     ]
   }

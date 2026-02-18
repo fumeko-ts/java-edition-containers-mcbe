@@ -22,6 +22,7 @@
     "anchor_from": "center",
     "$is_creative_survival_tab": true,
     "controls": [
+      { "extensions@jc-extensions.creative_inventory": {} },
       {
         "disabled_scroller@screen_content.image_element": {
           "texture": "assets/sprites/container/creative_inventory/scroller_disabled.png",
@@ -33,9 +34,20 @@
           "bindings": [
             {
               "binding_type": "view",
+              "source_control_name": "search_tab_toggle",
+              "source_property_name": "#toggle_state",
+              "target_property_name": "#is_search_tab"
+            },
+            {
+              "binding_type": "view",
               "binding_condition": "always",
               "source_control_name": "creative_recipe_grid",
               "source_property_name": "(#maximum_grid_items < 45)",
+              "target_property_name": "#less_than_45_items"
+            },
+            {
+              "binding_type": "view",
+              "source_property_name": "(#less_than_45_items and #is_search_tab)",
               "target_property_name": "#visible"
             }
           ]
@@ -545,25 +557,6 @@
   },
   "search_page@creative_inventory.tab_base_template": {
     "controls": [
-      {
-        "search_highlight@screen_content.image_element": {
-          "size": [88, 15],
-          "texture": "textures/creative_highlight.png",
-          "anchor_from": "top_left",
-          "anchor_to": "top_left",
-          "ignored": true,// this needs more thinking because i need to be able to detect when the text box is selected useing bindings
-          "layer": 16,
-          "bindings": [
-            {
-              "binding_type": "view",
-              "binding_condition": "always",
-              "source_control_name": "creative_recipe_grid",
-              "source_property_name": "(#maximum_grid_items > 2083)",// wont work always but for vanilla users it will
-              "target_property_name": "#visible"
-            }
-          ]
-        }
-      },
       {
         "search_label_stack@global.empty_stack": {
           "orientation": "horizontal",

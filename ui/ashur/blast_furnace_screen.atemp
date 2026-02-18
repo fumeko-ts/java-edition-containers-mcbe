@@ -28,6 +28,7 @@
           "size": [176, 166],
           "$screen_controls": [
             { "common_panel@screen_content.blast_furnace": { } },
+            { "extensions@jc-extensions.blast_furnace_screen": {} },
             {
               "blast_furnace_top_half@global.empty_stack": {
                 "orientation": "vertical",

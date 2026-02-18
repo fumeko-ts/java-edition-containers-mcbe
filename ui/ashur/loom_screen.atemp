@@ -20,6 +20,7 @@
     "size": [176, 166],
     "$screen_controls": [
       { "common_panel@screen_content.loom": {} },
+      { "extensions@jc-extensions.loom_screen": {} },
       {
         "loom_top_half@global.empty_panel": {
           "size": [176, 78],

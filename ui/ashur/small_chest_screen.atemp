@@ -20,6 +20,7 @@
     "size": [176, 166],
     "$screen_controls": [
       { "common_panel@screen_content.small_chest": {} },
+      { "extensions@jc-extensions.small_chest_screen": {} },
       {
         "small_chest_top_half@global.empty_stack": {
           "orientation": "vertical",

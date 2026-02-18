@@ -16,6 +16,9 @@
 
 {
   "namespace": "button_mappings",
+
+
+  // this file is next to be optimised
   "recipe_button_item": {
     "type": "button",
     "focus_enabled": false,
