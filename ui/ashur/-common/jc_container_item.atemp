@@ -36,16 +36,10 @@
     "$cell_hover_text_bindings|default": [
       {
         "binding_name": "$hover_text_binding_name",
-        "binding_name_override": "#hover_remove_text",
+        "binding_name_override": "#hover_text",
         "binding_condition": "always",
         "binding_type": "collection",
         "binding_collection_name": "$item_collection"
-      },
-      {
-        "binding_type": "view",
-        "binding_condition": "always_when_visible",
-        "source_property_name": "(#hover_remove_text - '\n§9§9sr1.atemp§r')",
-        "target_property_name": "#hover_text"
       }
     ],
     "controls": [

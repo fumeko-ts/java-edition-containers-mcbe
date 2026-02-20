@@ -15,6 +15,24 @@
 */
 
 {
-  "crafting_screen@global.container_screen": {"$screen_content": "crafting_screen.screen_base"},
-  "inventory_screen@global.container_screen": {"$screen_content": "inventory_screen.screen_base"}
+  "crafting_screen@global.container_screen": {
+    "$screen_content": "crafting_screen.screen_base",
+    "$recipe_container_type|default": "crafting_screen.screen_base",
+    "variables": [
+      {
+        "requires": "$is_jei_recipe_book_layout_pack",
+        "$screen_content": "JEI_Recipe_Book_Layout.jei_layout"
+      }
+    ]
+  },
+  "inventory_screen@global.container_screen": {
+    "$screen_content": "inventory_screen.screen_base",
+    "$recipe_container_type|default": "inventory_screen.screen_base",
+    "variables": [
+      {
+        "requires": "$is_jei_recipe_book_layout_pack",
+        "$screen_content": "JEI_Recipe_Book_Layout.jei_layout"
+      }
+    ]
+  }
 }

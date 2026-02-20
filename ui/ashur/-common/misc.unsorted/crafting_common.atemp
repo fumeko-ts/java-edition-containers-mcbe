@@ -32,10 +32,10 @@
     "variables": {
       "requires": "($cb_is_thick_menu_buttons = true)",
       "$controls": [
-        { "default@thickly.filter_disabled": {} },
-        { "default_hover@thickly.filter_disabled_highlighted": {} },
-        { "checked_hover@thickly.filter_enabled_highlighted": {} },
-        { "checked@thickly.filter_enabled": {} }
+        { "default@Thickly_Be-Beveled_Buttons.filter_disabled": {} },
+        { "default_hover@Thickly_Be-Beveled_Buttons.filter_disabled_highlighted": {} },
+        { "checked_hover@Thickly_Be-Beveled_Buttons.filter_enabled_highlighted": {} },
+        { "checked@Thickly_Be-Beveled_Buttons.filter_enabled": {} }
       ]
     },
     "$button_mappings": [
@@ -207,10 +207,10 @@
     "$toggle_name": "layout_toggle",
     "variables": {
       "requires": "($cb_is_thick_menu_buttons = true)",
-      "$unchecked": "crafting_common.thickly_recipe_toggle",
-      "$unchecked_hover": "crafting_common.thickly_recipe_hover_toggle",
-      "$checked": "crafting_common.thickly_recipe_toggle",
-      "$checked_hover": "crafting_common.thickly_recipe_hover_toggle"
+      "$unchecked": "Thickly_Be-Beveled_Buttons.recipe_toggle",
+      "$unchecked_hover": "Thickly_Be-Beveled_Buttons.recipe_hover_toggle",
+      "$checked": "Thickly_Be-Beveled_Buttons.recipe_toggle",
+      "$checked_hover": "Thickly_Be-Beveled_Buttons.recipe_hover_toggle"
     }
   },
   "recipe_toggle@screen_content.image_element": {
@@ -220,15 +220,6 @@
   "recipe_hover_toggle@screen_content.image_element": {
     "size": [20, 18],
     "texture": "assets/sprites/recipe_book/button_highlighted"
-  },
-
-  "thickly_recipe_toggle@screen_content.image_element": {
-    "size": [20, 18],
-    "texture": "assets/minecraft/textures/gui/sprites/recipe_book/button"
-  },
-  "thickly_recipe_hover_toggle@screen_content.image_element": {
-    "size": [20, 18],
-    "texture": "assets/minecraft/textures/gui/sprites/recipe_book/button_highlighted"
   },
 
   "recipe_layout_toggle@global.empty_panel": {

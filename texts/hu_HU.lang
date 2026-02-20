@@ -31,10 +31,6 @@ atemp.entity.minecraft.llama=Láma
 atemp.recipe_book.searchBox=§oKeresés...
 atemp.merchant.trades=Ajánlatok
 
-craftingScreen.tab.construction=sr1.atemp
-craftingScreen.tab.nature=sr1.atemp
-craftingScreen.tab.equipment=sr1.atemp
-craftingScreen.tab.items=sr1.atemp
 container.enchant.clue=%s §r. . . ?
 
 ashur.tab.items=Egyéb

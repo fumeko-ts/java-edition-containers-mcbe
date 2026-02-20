@@ -46,7 +46,7 @@
           "$namespace|default": "pagination",
           "variables": {
             "requires": "($cb_is_thick_menu_buttons = true)",
-            "$namespace|default": "thickly"
+            "$namespace|default": "Thickly_Be-Beveled_Buttons"
           },
           "controls": [
             {

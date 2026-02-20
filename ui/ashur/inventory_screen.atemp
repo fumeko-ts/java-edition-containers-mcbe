@@ -32,6 +32,7 @@
             {
               "3@global.empty_stack": {
                 "size": [183, 166],
+                "ignored": "$is_jei_recipe_book_layout_pack",
                 "orientation": "horizontal",
                 "controls": [
                   { "tab_stack@crafting_common.crafting_survival_tabs": {} },

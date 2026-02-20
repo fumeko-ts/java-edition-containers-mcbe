@@ -32,6 +32,7 @@
             {
               "2@global.empty_panel": {
                 "size": ["100%c", 166],
+                "ignored": "$is_jei_recipe_book_layout_pack",
                 "controls": [
                   {
                     "3@global.empty_stack": {

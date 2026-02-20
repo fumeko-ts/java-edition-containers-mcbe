@@ -173,10 +173,10 @@
     "$checked_hover_control": "trade_global.checked_hover_control",
     "variables": {
       "requires": "($cb_is_thick_menu_buttons = true)",
-      "$unchecked_control": "thickly.unchecked_control",
-      "$checked_control": "thickly.checked_control",
-      "$unchecked_hover_control": "thickly.unchecked_hover_control",
-      "$checked_hover_control": "thickly.checked_hover_control"
+      "$unchecked_control": "Thickly_Be-Beveled_Buttons.unchecked_control",
+      "$checked_control": "Thickly_Be-Beveled_Buttons.checked_control",
+      "$unchecked_hover_control": "Thickly_Be-Beveled_Buttons.unchecked_hover_control",
+      "$checked_hover_control": "Thickly_Be-Beveled_Buttons.checked_hover_control"
     },
     "$unchecked_locked_control": "trade_global.locked_control",
     "$unchecked_locked_hover_control": "trade_global.locked_control",

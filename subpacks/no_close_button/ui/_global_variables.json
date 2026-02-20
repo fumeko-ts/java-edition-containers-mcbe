@@ -51,6 +51,7 @@
   "$is_java_aspects_icons": "($item_icons_enabled and $is_java_aspects)",
   
   "$cb_is_thick_menu_buttons": false,
+  "$is_jei_recipe_book_layout_pack": false,
 
   
   "$jc:dev": false

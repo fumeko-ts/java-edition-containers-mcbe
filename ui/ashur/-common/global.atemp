@@ -129,7 +129,7 @@
   },
   "container_screen": {
     "type": "screen",
-    "size": ["70%", "60%"],
+    "size": ["100%", "100%"],
     "cache_screen": true,
     "send_telemetry": false,
     "gamepad_cursor": true,

@@ -1,0 +1,28 @@
+//https://www.curseforge.com/minecraft-bedrock/texture-packs/jei-recipe-book-layout
+
+{
+  "namespace": "JEI_Recipe_Book_Layout",
+  "jei_layout@déesse_JEIlayout.main_content_panel": {
+    "controls": [
+      {"left_half@JEI_Recipe_Book_Layout.template": {"$recipe_direction|default": "$controls_left"}},
+      {
+        "center_content@global.empty_panel": {
+          "size": [180, "100%"],
+          "controls": [
+            {
+              "player_inventory@$recipe_container_type": {
+                "anchor_to": "center",
+                "anchor_from": "center"
+              }
+            }
+          ]
+        }
+      },
+      {"right_half@JEI_Recipe_Book_Layout.template": {"$recipe_direction|default": "$controls_right"}}
+    ]
+  },
+  "template@global.empty_panel": {
+    "size": ["fill", "100%"],
+    "controls": [{ "recipe_book@$recipe_direction": {} }]
+  }
+}

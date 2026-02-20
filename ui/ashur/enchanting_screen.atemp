@@ -308,8 +308,8 @@
             },
             {
               "requires": "($cb_is_thick_menu_buttons = true)",
-              "$button_texture_control_hover|default": "thickly.enchanting_button_highlight",
-              "$button_texture_control|default": "thickly.enchanting_button"
+              "$button_texture_control_hover|default": "Thickly_Be-Beveled_Buttons.enchanting_button_highlight",
+              "$button_texture_control|default": "Thickly_Be-Beveled_Buttons.enchanting_button"
             }
           ],
           "$button_texture_control_hover|default": "screen_content.enchanting_button_highlight",
