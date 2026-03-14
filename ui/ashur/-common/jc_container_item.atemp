@@ -37,14 +37,13 @@
       {
         "binding_name": "$hover_text_binding_name",
         "binding_name_override": "#hover_text",
-        "binding_condition": "always",
         "binding_type": "collection",
         "binding_collection_name": "$item_collection"
       }
     ],
     "controls": [
-      {"$background_image_control_name@$background_images": {} },
-      {"stack_count@jc_container_item.stack_count_label": {}},
+      { "$background_image_control_name@$background_images": {} },
+      { "stack_count@jc_container_item.stack_count_label": {} },
       {
         "item_renderer_holder@global.empty_panel": {
           "size": "$item_renderer_size",
@@ -249,7 +248,9 @@
       }
     ]
   },
-  "stack_count_label@global.empty_label": {
+  // since this only outputs numbers as a string it cant use global.empty_label
+  "stack_count_label": {
+    "type": "label",
     "offset": "$stack_count_offset",
     "anchor_to": "bottom_right",
     "anchor_from": "bottom_right",

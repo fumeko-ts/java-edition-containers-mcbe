@@ -15,44 +15,51 @@
 */
 
 {
+  //used for compatibility
   "$is_java_containers": true,
 
-
+  //set UI transparency 0 - 1 (can be a float or a int)
   "$container_opacity": 1,
-  "$no_close_button": true,
 
+
+  //if true makes so pc users dont need to move their mouse to reselect the page button
+  "$use_experimental_direction_buttons": true,
+
+  //title text color
   "$title_text_color": [0.247, 0.247, 0.247],
 
-  //enabled state
-  "$enchant_light_green": [0.494, 0.988, 0.125],
-  "$enchant_light_yellow": [0.988, 0.988, 0.494],
-  //disabled state
-  "$enchant_light_brown": [0.208, 0.188, 0.141],
-  "$enchant_dark_green": [0.278, 0.478, 0.125],
-
-  "$direction": "right",
-
-  "$compass_id": 423,
+  //these ids are whats used to render the items in the tab icons (inventory and crafting table)
+  //you can find the ids for a item useing this --> https://www.planetminecraft.com/texture-pack/item-id-visualizer-mcbe-mcpe/
+  "$apple_id": 285,
+  "$bricks_id": 45,
+  "$bucket_lava_id": 395,
   "$chest_id": 54,
-  "$redstone_id": 405,
+  "$compass_id": 423,
+  "$golden_sword_id": 354,
+  "$iron_axe_id": 329,
   "$iron_sword_id": 338,
   "$purple_froglight_id": -469,
-  "$bricks_id": 45,
-  "$apple_id": 285,
-  "$bucket_lava_id": 395,
-  "$iron_axe_id": 329,
-  "$golden_sword_id": 354,
+  "$redstone_id": 405,
 
+  //enchanting table text colors
+  "$xp_price_color_enabled_state": [0.4941, 0.9882, 0.1255, 1],
+  "$xp_price_shadow_color_enabled_state": [0.1255, 0.2431, 0.0314, 1],
 
+  "$xp_price_color_disabled_state": [0.2471, 0.4941, 0.0627, 1],
+  "$xp_price_shadow_color_disabled_state": [0.0627, 0.1216, 0.0157, 1],
 
+  "$runes_disabled_color": [0.2, 0.1804, 0.1451, 1],
+  "$runes_enabled_color": [0.4039, 0.3647, 0.2863, 1],
 
+  "$runes_enabled_hover_color": [0.988, 0.988, 0.494],
+
+  //development variables (dont modify)
+  "$no_close_button": true,
   "$is_java_aspects": false,
   "$item_icons_enabled": false,
-  "$is_java_aspects_icons": "($item_icons_enabled and $is_java_aspects)",
-  
   "$cb_is_thick_menu_buttons": false,
   "$is_jei_recipe_book_layout_pack": false,
-
-  
+  "$ashur:brewing_guide": false,
+  "$brewing_content": "global.empty_panel",
   "$jc:dev": false
 }

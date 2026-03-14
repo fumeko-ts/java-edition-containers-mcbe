@@ -30,16 +30,16 @@
   },
 
   //recipe book
-  "tepes_left@pagination.texture_base": {
+  "page_left@screen_content.recipe_direction_base": {
     "texture": "assets/minecraft/textures/gui/sprites/recipe_book/page_backward.png"
   },
-  "tepes_left_hover@pagination.texture_base": {
+  "page_left_hover@screen_content.recipe_direction_base": {
     "texture": "assets/minecraft/textures/gui/sprites/recipe_book/page_backward_highlighted.png"
   },
-  "tepes_right@pagination.texture_base": {
+  "page_right@screen_content.recipe_direction_base": {
     "texture": "assets/minecraft/textures/gui/sprites/recipe_book/page_forward.png"
   },
-  "tepes_right_hover@pagination.texture_base": {
+  "page_right_hover@screen_content.recipe_direction_base": {
     "texture": "assets/minecraft/textures/gui/sprites/recipe_book/page_forward_highlighted.png"
   },
 

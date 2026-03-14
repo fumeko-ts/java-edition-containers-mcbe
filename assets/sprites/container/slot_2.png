@@ -15,82 +15,38 @@
 //top secret code below please dont touch
 {
   "namespace": "pagination",
-  "texture_base@screen_content.image_element": {
-    "anchor_from": "$anchor",
-    "anchor_to": "$anchor",
-    "$anchor": "top_right",
-    "variables": {
-      "requires": "($direction = 'right')",
-      "$anchor": "top_left"
-    },
-    "size": [12, 17],
-    "layer": 2
-  },
-  "tepes_left@pagination.texture_base": { "texture": "assets/sprites/recipe_book/page_backward" },
-  "tepes_left_hover@pagination.texture_base": { "texture": "assets/sprites/recipe_book/page_backward_highlighted" },
-  "tepes_right@pagination.texture_base": { "texture": "assets/sprites/recipe_book/page_forward" },
-  "tepes_right_hover@pagination.texture_base": { "texture": "assets/sprites/recipe_book/page_forward_highlighted" },
-
   "base_page_logic@global.empty_panel": {
     "$current_page": 1,
     "$page_counter": "('pagination.index_' + ($current_page + 1))",
+    "size": [147, 166],
     "controls": [
       {
-        "base_content@global.empty_stack": {
-          "orientation": "horizontal",
-          "size": [77, 17],
+        "base_content@global.empty_panel": {
           "anchor_to": "bottom_middle",
           "anchor_from": "bottom_middle",
-          "offset": [0, -13],
-          "layer": 20,
-          "$namespace|default": "pagination",
-          "variables": {
-            "requires": "($cb_is_thick_menu_buttons = true)",
-            "$namespace|default": "Thickly_Be-Beveled_Buttons"
-          },
+          "size": [147, 29],
+          "layer": 4,
           "controls": [
             {
-              "buffer@global.empty_panel": {
-                "size": [18, 0],
-                "ignored": "($current_page > 1)"
-              }
-            },
-            {
-              "left@pagination.tepes_left_button": {}
-            },
-            {
-              "page_labels_holder@global.empty_panel": {
-                "size": [43, 17],
+              "right_button_holder@global.empty_panel": {
+                "size": [54, 29],
+                "anchor_from": "bottom_right",
+                "anchor_to": "bottom_right",
                 "controls": [
                   {
-                    "default_page_counter@pagination.count_template": {
+                    "right_button@pagination.base_toggle_button": {
+                      "anchor_from": "top_left",
+                      "anchor_to": "top_left",
+                      "ignored": "($current_page = 27)",
+                      "$toggle_group_forced_index": 1,
+                      "$toggle_control_name": "('page' + ($current_page + 1))",
+                      "$toggle_name": "('ashur' + $current_page)",
                       "bindings": [
                         {
                           "binding_type": "view",
                           "binding_condition": "always",
                           "source_control_name": "recipe_book_grid",
-                          "source_property_name": "('\u00a7r' + $current_page + '/' + #maximum_recipe_pages)",
-                          "target_property_name": "#text"
-                        },
-                        {
-                          "binding_type": "view",
-                          "binding_condition": "always",
-                          "source_control_name": "recipe_book_grid",
-                          "source_property_name": "(#maximum_recipe_pages > 1 and #maximum_recipe_pages < 27)",
-                          "target_property_name": "#visible"
-                        }
-                      ]
-                    }
-                  },
-                  {
-                    "max_page_counter@pagination.count_template": {
-                      "text": "('\u00a7r' + $current_page + '/27')",
-                      "bindings": [
-                        {
-                          "binding_type": "view",
-                          "binding_condition": "always",
-                          "source_control_name": "recipe_book_grid",
-                          "source_property_name": "(#maximum_recipe_pages > 26)",
+                          "source_property_name": "($current_page < #maximum_recipe_pages)",
                           "target_property_name": "#visible"
                         }
                       ]
@@ -100,7 +56,23 @@
               }
             },
             {
-              "right@pagination.tepes_right_button": {}
+              "left_button_holder@global.empty_panel": {
+                "size": [54, 29],
+                "anchor_from": "bottom_left",
+                "anchor_to": "bottom_left",
+                "controls": [
+                  {
+                    "left_button@pagination.base_toggle_button": {
+                      "anchor_from": "top_right",
+                      "anchor_to": "top_right",
+                      "ignored": "($current_page = 1)",
+                      "$toggle_group_forced_index": 0,
+                      "$toggle_control_name": "('page' + $current_page)",
+                      "$toggle_name": "('ashur' + ($current_page - 1))"
+                    }
+                  }
+                ]
+              }
             }
           ],
           "bindings": [
@@ -157,11 +129,12 @@
     "$size": [18, 17],
     "layer": 4,
     "$toggle_binding_value": "('#recipe_toggle_index_binding_' + $current_page)",
-    "$unchecked|default": "($namespace + '.tepes_' + $direction)",
-    "$unchecked_hover|default": "($namespace + '.tepes_' + $direction + '_hover')",
-    "$checked|default": "($namespace + '.tepes_' + $direction)",
-    "$checked_hover|default": "($namespace + '.tepes_' + $direction + '_hover')",
-    "$bindings|default": [
+    "$toggle_variables": "global.empty_panel",
+    "variables": {
+      "requires": "$use_experimental_direction_buttons",
+      "$toggle_variables": "pagination.additional_toggle_properties"
+    },
+    "$bindings": [
       {
         "binding_type": "global",
         "binding_condition": "always",
@@ -169,47 +142,113 @@
         "binding_name_override": "#toggle_state"
       },
       {
+        "ignored": "($toggle_group_forced_index = 0)",
         "binding_type": "view",
         "binding_condition": "always",
         "source_control_name": "recipe_book_grid",
-        "ignored": "($direction = 'left')",
         "source_property_name": "(($current_page > #maximum_recipe_pages) and (#toggle_state = true))",
         "target_property_name": "#toggle_state"
-       }
-    ]
-  },
-  "tepes_left_button@pagination.base_toggle_button": {
-    "ignored": "($current_page = 1)",
-    "$toggle_group_forced_index": 0,
-    "$direction": "left",
-    "$toggle_control_name": "('page' + $current_page)",
-    "$toggle_name": "('ashur' + ($current_page - 1))"
-  },
-  "tepes_right_button@pagination.base_toggle_button": {
-    "ignored": "($current_page = 27)",
-    "$toggle_group_forced_index": 1,
-    "$direction": "right",
-    "$toggle_control_name": "('page' + ($current_page + 1))",
-    "$toggle_name": "('ashur' + $current_page)",
-    "bindings": [
-      {
-        "binding_type": "view",
-        "binding_condition": "always",
-        "source_control_name": "recipe_book_grid",
-        "source_property_name": "($current_page < #maximum_recipe_pages)",
-        "target_property_name": "#visible"
       }
     ]
   },
-  "count_template@global.empty_label": {
-    "color": "white",
-    "anchor_from": "top_middle",
-    "anchor_to": "top_middle",
-    "size": ["default", 10],
-    "offset": [0, 3],
-    "text": "#text",
-    "shadow": true,
-    "bindings": "$bindings",
-    "visible": false
+  "additional_toggle_properties": {
+    "always_listen_to_input": true,
+    "consume_hover_events": false
+  },
+  "left_button_holder@global.empty_panel": {
+    "size": [54, 29],
+    "anchor_from": "bottom_left",
+    "anchor_to": "bottom_left",
+    "controls": [
+      {
+        "left@recipe_book.button_visuals": {
+          "anchor_from": "top_right",
+          "anchor_to": "top_right",
+          "$default_pagination|default": "($namespace + '.page_left')",
+          "$hover_pagination|default": "($namespace + '.page_left_hover')",
+          "bindings": [
+            {
+              "binding_type": "view",
+              "binding_condition": "always",
+              "source_control_name": "recipe_book_grid",
+              "source_property_name": "(not (#raw_current_page = 0))",
+              "target_property_name": "#visible"
+            }
+          ]
+        }
+      }
+    ]
+  },
+  "page_count@global.empty_label": {
+    "size": [147, 26],
+    "anchor_from": "bottom_middle",
+    "anchor_to": "bottom_middle",
+    "controls": [
+      {
+        "default_page_counter@recipe_book.count_template": {
+          "bindings": [
+            {
+              "binding_type": "view",
+              "binding_condition": "always",
+              "source_control_name": "recipe_book_grid",
+              "source_property_name": "('\u00a7r' + (1 + #raw_current_page) + '/' + #maximum_recipe_pages)",
+              "target_property_name": "#text"
+            },
+            {
+              "binding_type": "view",
+              "binding_condition": "always",
+              "source_control_name": "recipe_book_grid",
+              "source_property_name": "((#maximum_recipe_pages > 1) and (#maximum_recipe_pages < 27))",
+              "target_property_name": "#visible"
+            }
+          ]
+        }
+      },
+      {
+        "max_page_counter@recipe_book.count_template": {
+          "bindings": [
+            {
+              "binding_type": "view",
+              "binding_condition": "always",
+              "source_control_name": "recipe_book_grid",
+              "source_property_name": "('\u00a7r' + (1 + #raw_current_page) + '/27')",
+              "target_property_name": "#text"
+            },
+            {
+              "binding_type": "view",
+              "binding_condition": "always",
+              "source_control_name": "recipe_book_grid",
+              "source_property_name": "(#maximum_recipe_pages > 26)",
+              "target_property_name": "#visible"
+            }
+          ]
+        }
+      }
+    ]
+  },
+  "right_button_holder@global.empty_panel": {
+    "size": [54, 29],
+    "anchor_from": "bottom_right",
+    "anchor_to": "bottom_right",
+    "controls": [
+      {
+        "right@recipe_book.button_visuals": {
+          "anchor_from": "top_left",
+          "anchor_to": "top_left",
+          "$anchor_point": "left_middle",
+          "$default_pagination|default": "($namespace + '.page_right')",
+          "$hover_pagination|default": "($namespace + '.page_right_hover')",
+          "bindings": [
+            {
+              "binding_type": "view",
+              "binding_condition": "always",
+              "source_control_name": "recipe_book_grid",
+              "source_property_name": "(((1 + #raw_current_page) < #maximum_recipe_pages) and ((1 + #raw_current_page) < 27))",
+              "target_property_name": "#visible"
+            }
+          ]
+        }
+      }
+    ]
   }
 }

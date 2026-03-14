@@ -82,7 +82,7 @@
     "$grid_cell_offset": [0, 0],
     "$inventory_panel_offset|default": "bottom_middle",
     "anchor_to": "$inventory_panel_offset",
-    "anchor_from": "$inventory_panel_offset",
+    "anchor_from": "$inventory_panel_offset", // this grid implementation is unoptimized so i need to fix it at some point
     "$is_creative_survival_tab|default": false,
     "controls": [
       {
@@ -219,7 +219,6 @@
           "type": "input_panel",
           "hover_enabled": false,
           "prevent_touch_input": false,
-          "ttsSectionContainer": true,
           "button_mappings": [
             {
               "from_button_id": "button.menu_select",
@@ -326,9 +325,9 @@
     ]
   },
   "hover_text": {
-    "$hover_text_max_width|default": 0,
     "type": "custom",
     "renderer": "hover_text_renderer",
+    "$hover_text_max_width|default": 0,
     "hover_text_max_width": "$hover_text_max_width",
     "layer": 5000,
     "allow_clipping": false,
@@ -426,8 +425,9 @@
     ]
   },
   "empty_panel": { "type": "panel" },
-  "empty_label": { "type": "label" },
+  "empty_label": { "type": "label"/*,"font_type": "rune" */},
   "empty_image": { "type": "image" },
   "empty_stack": { "type": "stack_panel" },
+  "empty_grid": { "type": "grid" },
   "custom_renderer": { "type": "custom", "renderer": "$type" }
 }

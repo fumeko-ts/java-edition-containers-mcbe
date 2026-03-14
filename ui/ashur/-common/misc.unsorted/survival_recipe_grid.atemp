@@ -84,7 +84,13 @@
                   {
                     "binding_type": "view",
                     "binding_condition": "always",
-                    "source_property_name": "('#page_' + (1 + (#current_page_1 + #current_page_2 + #current_page_3 + #current_page_4 + #current_page_5 + #current_page_6 + #current_page_7 + #current_page_8 + #current_page_9 + #current_page_10 + #current_page_11 + #current_page_12 + #current_page_13 + #current_page_14 + #current_page_15 + #current_page_16 + #current_page_17 + #current_page_18 + #current_page_19 + #current_page_20 + #current_page_21 + #current_page_22 + #current_page_23 + #current_page_24 + #current_page_25 + #current_page_26 + #current_page_27)))",
+                    "source_property_name": "(#current_page_1 + #current_page_2 + #current_page_3 + #current_page_4 + #current_page_5 + #current_page_6 + #current_page_7 + #current_page_8 + #current_page_9 + #current_page_10 + #current_page_11 + #current_page_12 + #current_page_13 + #current_page_14 + #current_page_15 + #current_page_16 + #current_page_17 + #current_page_18 + #current_page_19 + #current_page_20 + #current_page_21 + #current_page_22 + #current_page_23 + #current_page_24 + #current_page_25 + #current_page_26 + #current_page_27)",
+                    "target_property_name": "#raw_current_page"
+                  },
+                  {
+                    "binding_type": "view",
+                    "binding_condition": "always",
+                    "source_property_name": "('#page_' + (1 + #raw_current_page))",
                     "target_property_name": "#offset"
                   }
                 ],

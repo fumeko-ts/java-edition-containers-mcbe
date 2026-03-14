@@ -27,6 +27,34 @@
       }
     ]
   },
+  // debug viewer
+  "debug_element@screen_content.image_element": {
+    "texture": "textures/ui/white",
+    "alpha": 0.4,
+    "nineslice_size": 1,
+    "uv": [2, 2],
+    "uv_size": [1, 1],
+    "color": "cyan",
+    "size": ["100%", "100%"],
+    "layer": 30
+  },
+  //recipe book button textures
+  "recipe_direction_base@screen_content.image_element": {
+    "size": [12, 17],
+    "layer": 2
+  },
+  "page_left@screen_content.recipe_direction_base": {
+    "texture": "assets/sprites/recipe_book/page_backward"
+  },
+  "page_left_hover@screen_content.recipe_direction_base": {
+    "texture": "assets/sprites/recipe_book/page_backward_highlighted"
+  },
+  "page_right@screen_content.recipe_direction_base": {
+    "texture": "assets/sprites/recipe_book/page_forward"
+  },
+  "page_right_hover@screen_content.recipe_direction_base": {
+    "texture": "assets/sprites/recipe_book/page_forward_highlighted"
+  },
 
   //container uis
   "anvil@screen_content.container_template": { "$size": [176, 166], "texture": "assets/container/anvil" },
@@ -151,9 +179,6 @@
   "recipe_book@screen_content.image_element": {
     "texture": "assets/recipe_book",
     "size": [147, 166],
-    "uv_size": [147, 166],
-    "uv": [1, 1],
-    "offset": [1, 0],
     "layer": 1
   },
   "creative_inventory@screen_content.image_element": {
@@ -242,21 +267,11 @@
   "crafter_disabled_slot@screen_content.image_element": {
     "size": [18, 18],
     "nineslice_size": 1,
-    "offset": [1, 1],
     "texture": "assets/sprites/container/crafter/disabled_slot"
   },
 
   //buttons and interactive elements
-  "enchant_texture_template@screen_content.image_element": { "size": [108, 19], "layer": 5, "offset": [1, 1] },
-  "enchanting_button_disabled@screen_content.enchant_texture_template": {
-    "texture": "assets/sprites/container/enchanting_table/enchantment_slot_disabled"
-  },
-  "enchanting_button@screen_content.enchant_texture_template": {
-    "texture": "assets/sprites/container/enchanting_table/enchantment_slot"
-  },
-  "enchanting_button_highlight@screen_content.enchant_texture_template": {
-    "texture": "assets/sprites/container/enchanting_table/enchantment_slot_highlighted"
-  },
+
   "redstone_activated_bindings@screen_content.image_element": {
     "size": [16, 16],
     "layer": 12,
@@ -275,7 +290,7 @@
     "texture": "assets/sprites/container/anvil/text_field_disabled",
     "size": [110, 16]
   },
-  "anvil_edit_box_hover@screen_content.image_element": {
+  "anvil_edit_box_focused@screen_content.image_element": {
     "nineslice_size": 2,
     "texture": "assets/sprites/container/anvil/text_field",
     "size": [110, 16]

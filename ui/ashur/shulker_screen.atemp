@@ -69,7 +69,7 @@
                       "grid_dimensions": [9, 3],
                       "grid_item_template": "jc_container_item.container_item",
                       "$item_collection": "container_items",
-                      "collection_name": "container_items"
+                      "collection_name": "$item_collection"
                     }
                   },
                   { "filler_4@global.empty_panel": { "size": [7, "fill"] } }

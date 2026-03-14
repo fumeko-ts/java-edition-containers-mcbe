@@ -82,7 +82,8 @@
     "anchor_from": "center",
     "collection_name": "$item_collection"
   },
-  "second_trade_item_count@global.empty_label": {
+  "second_trade_item_count": {
+    "type": "label",
     "color": "white",
     "shadow": true,
     "layer": 5,
@@ -375,7 +376,8 @@
       { "binding_name": "$slash_binding", "binding_name_override": "#visible" }
     ]
   },
-  "label_template@global.empty_label": {
+  "label_template": {
+    "type": "label",
     "color": "white",
     "shadow": true,
     "layer": 5,

@@ -27,7 +27,7 @@
         "main_blast_furnace_contents@container_common.container_details": {
           "size": [176, 166],
           "$screen_controls": [
-            { "common_panel@screen_content.blast_furnace": { } },
+            { "common_panel@screen_content.blast_furnace": {} },
             { "extensions@jc-extensions.blast_furnace_screen": {} },
             {
               "blast_furnace_top_half@global.empty_stack": {
@@ -48,8 +48,7 @@
                             "size": [109, 10],
                             "controls": [
                               {
-                                "blast_furnace_title_label": {
-                                  "type": "label",
+                                "blast_furnace_title_label@global.empty_label":{
                                   "anchor_to": "top_left",
                                   "anchor_from": "top_left",
                                   "offset": [-15, -1],
@@ -97,7 +96,11 @@
                                   ]
                                 }
                               },
-                              { "fuel_input_item@jc_container_item.container_item": { "$item_collection": "furnace_fuel_items" } }
+                              {
+                                "fuel_input_item@jc_container_item.container_item": {
+                                  "$item_collection": "furnace_fuel_items"
+                                }
+                              }
                             ]
                           }
                         },

@@ -16,8 +16,7 @@
 
 {
   "namespace": "safezone",
-  "safezone_buffer": {
-    "type": "panel",
+  "safezone_buffer@global.empty_panel": {
     "bindings": [
       {
         "binding_name": "$safezone_binding_name",
@@ -41,8 +40,7 @@
   "right_safezone_horizontal_buffer@safezone.safezone_buffer": {
     "size": "$right_horizontal_safezone_size"
   },
-  "screen_holder_safezone": {
-    "type": "stack_panel",
+  "screen_holder_safezone@global.empty_stack": {
     "orientation": "horizontal",
     "size": ["100%", "100%"],
     "controls": [

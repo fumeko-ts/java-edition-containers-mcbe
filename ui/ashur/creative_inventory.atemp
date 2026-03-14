@@ -68,9 +68,9 @@
             { "buffer_1@global.empty_panel": { "size": [1, "default"] } },
             { "equipment@creative_inventory.equipment_tab": {} },
             { "buffer_2@global.empty_panel": { "size": [1, "default"] } },
-            { "nature@creative_inventory.nature_tab": {} },
-            { "buffer_3@global.empty_panel": { "size": [1, "default"] } },
             { "items@creative_inventory.items_tab": {} },
+            { "buffer_3@global.empty_panel": { "size": [1, "default"] } },
+            { "nature@creative_inventory.nature_tab": {} },
             { "buffer_4@global.empty_panel": { "size": [62, "default"] } },
             { "search_tab@creative_inventory.search_tab": {} }
           ]
@@ -79,7 +79,7 @@
       {
         "inventory@creative_inventory.tab_contents": {
           "$tab_contents_is": "inventory_page",
-          "$tab_binding": "inventory_tab_toggle"
+          "$tab_binding": "survival_tab_toggle"
         }
       },
       { "construction_tab@creative_inventory.tab_contents": { "$tab_binding": "construction_tab_toggle" } },
@@ -103,7 +103,7 @@
           "bindings": [
             {
               "binding_type": "view",
-              "source_control_name": "inventory_tab_toggle",
+              "source_control_name": "survival_tab_toggle",
               "source_property_name": "(not #toggle_state)",
               "target_property_name": "#visible"
             }
@@ -200,7 +200,7 @@
         "inventory@creative_inventory.item_renderer": {
           "$item_identifier": "$chest_id",
           "offset": [0, -1],
-          "visible": "($toggle_control_name = 'inventory_tab_toggle')"
+          "visible": "($toggle_control_name = 'survival_tab_toggle')"
         }
       },
       {
@@ -249,6 +249,7 @@
     "$default_layer": 2,
 
     "$extra_contents": "creative_inventory.icon_control",
+    "$toggle_binding_value": "#toggle_state",
     "$size": [26, 32]
   },
   "search_tab@creative_inventory.top_tab": {
@@ -281,9 +282,8 @@
   "inventory_tab@creative_inventory.top_tab": {
     "$is_bottom_right_tab": true,
     "$icon_checked_offset": [0, 2],
-    "$toggle_control_name": "inventory_tab_toggle",
-    "$toggle_group_forced_index": "($search_index + 1)",
-    "$toggle_binding_value": "#inventory_tab"
+    "$toggle_control_name": "survival_tab_toggle",
+    "$toggle_group_forced_index": "$survival_index"
   },
   "tab_base_template@global.empty_panel": { "size": [195, 136], "anchor_to": "center", "anchor_from": "center" },
   "inventory_page@creative_inventory.tab_base_template": {
@@ -362,9 +362,9 @@
                                   "offset": [0, -10],
                                   "controls": [
                                     {
-                                      "player_renderer": {
-                                        "type": "custom",
-                                        "renderer": "live_player_renderer",
+                                      "player_renderer@global.custom_renderer": {
+                                        "$type": "live_player_renderer",
+                                        "layer": 20,
                                         "property_bag": { "#look_at_cursor": true }
                                       }
                                     }
@@ -421,7 +421,7 @@
                 "checked_hover_control": "default_hover",
                 "controls": [
                   {
-                    "default_hover@screen_content.highlight_slot": {"ignored": "$touch", "size": [16, 16] }
+                    "default_hover@screen_content.highlight_slot": { "ignored": "$touch", "size": [16, 16] }
                   }
                 ],
                 "button_mappings": [
@@ -596,48 +596,23 @@
         }
       },
       {
-        "search_holder@global.empty_stack": {
-          "orientation": "vertical",
-          "size": [116, 16],
+        "search_holder@global.empty_panel": {
+          "size": [115, 16],
           "anchor_to": "top_right",
           "anchor_from": "top_right",
           "layer": 20,
           "controls": [
-            { "filler_1@global.empty_panel": { "size": ["default", 4] } },
             {
-              "search_extra_padding@global.empty_stack": {
-                "orientation": "horizontal",
-                "size": [116, "default"],
-                "controls": [
-                  {
-                    "text_edit_panel@global.empty_panel": {
-                      "size": [90, 12],
-                      "controls": [
-                        {
-                          "creative_text_edit_control@text_edit_box.text_edit_box": {
-                            "size": [90, 12],
-                            "property_bag": { "#property_field": "#item_name" },
-                            "max_length": 300000,
-                            "anchor_from": "center",
-                            "anchor_to": "center",
-                            "$text_box_text_color": "white",
-                            "$text_edit_box_label_offset": [1, 0],
-                            "$text_clear_button_enabled": true,
-                            "$text_clear_button_offset": [5, -0.4],
-                            "$place_holder_text": "",
-                            "$text_edit_clipping_panel_size": ["100%", 16],
-                            "$text_background_locked": "global.empty_image",
-                            "$text_background_default": "global.empty_image",
-                            "$text_background_hover": "global.empty_image",
-                            "$text_edit_binding_name": "#text_box_item_name",
-                            "$text_edit_box_label_size": ["default", 10]
-                          }
-                        }
-                      ]
-                    }
-                  },
-                  { "filler_2@global.empty_panel": { "size": [26, "default"] } }
-                ]
+              "text_edit_panel@text_edit_area.text_edit_box": {
+                "size": [90, 12],
+                "anchor_from": "bottom_left",
+                "anchor_to": "bottom_left",
+                "$clipping_panel_size": ["100% - 4px", "100%"],
+                "$default_control": "global.empty_panel",
+                "$locked_control": "global.empty_panel",
+                "$edit_label_offset": [0, -2],
+                "$hover_control": "global.empty_panel",
+                "$pressed_control": "global.empty_panel"
               }
             }
           ]

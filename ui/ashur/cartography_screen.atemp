@@ -16,6 +16,7 @@
 
 {
   "namespace": "cartography_screen",
+  // this file is pending remake
   "cartography_panel@container_common.container_details": {
     "size": [176, 166],
     "$screen_controls": [

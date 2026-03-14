@@ -48,8 +48,7 @@
                             "size": [109, 10],
                             "controls": [
                               {
-                                "smoker_title_label": {
-                                  "type": "label",
+                                "smoker_title_label@global.empty_label":{
                                   "anchor_to": "top_left",
                                   "anchor_from": "top_left",
                                   "offset": [3, -1],

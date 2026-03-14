@@ -1,0 +1,202 @@
+/**
+// © 2026 ashura_temps,    All Rights Reserved.
+//
+// This UI is custom-made. You are allowed to use it **only as-is**, inside the game.
+// Do not modify, extract, reuse, or share any part of this UI including .json, .atemp files,
+// layout structure, or design.
+//
+// Not allowed:
+//   - Editing the UI (even for private/personal use)
+//   - Using parts of the code or layout in your own pack
+//   - Reuploading, redistributing, or hosting these files elsewhere
+//   - Converting texture packs to Bedrock using this UI
+//
+// By using this project, you agree to these terms.
+*/
+
+{
+  "namespace": "text_edit_area",
+  "text_edit_box": {
+    "type": "edit_box",
+    "text_box_name": "$text_box_name",
+    "max_length": 30,
+    "text_type": "ExtendedASCII",
+    "text_control": "$text_edit_text_control",
+    "place_holder_control": "place_holder_text_label",
+    "locked_control": "locked",
+    "default_control": "default",
+    "hover_control": "hover",
+    "pressed_control": "pressed",
+    "text_edit_box_grid_collection_name": "Minecraft",
+
+    "button_mappings": [
+      {
+        "from_button_id": "button.menu_select",
+        "to_button_id": "button.text_edit_box_selected",
+        "mapping_type": "pressed",
+        "handle_select": true,
+        "handle_deselect": false
+      },
+      {
+        "from_button_id": "button.menu_select",
+        "to_button_id": "button.text_edit_box_selected",
+        "mapping_type": "global",
+        "handle_select": false,
+        "handle_deselect": true,
+        "consume_event": false
+      },
+      {
+        "from_button_id": "button.menu_ok",
+        "to_button_id": "button.text_edit_box_selected",
+        "mapping_type": "pressed",
+        "handle_select": true,
+        "handle_deselect": true
+      },
+      {
+        "from_button_id": "button.menu_ok",
+        "to_button_id": "button.text_edit_box_selected",
+        "mapping_type": "global",
+        "handle_select": false,
+        "handle_deselect": true
+      },
+      {
+        "from_button_id": "button.menu_cancel",
+        "to_button_id": "button.text_edit_box_deselected",
+        "mapping_type": "global",
+        "handle_select": false,
+        "handle_deselect": true
+      },
+      {
+        "to_button_id": "button.text_edit_box_hovered",
+        "mapping_type": "pressed"
+      },
+      {
+        "from_button_id": "button.menu_clear",
+        "to_button_id": "button.text_edit_box_clear",
+        "mapping_type": "focused",
+        "handle_select": false,
+        "handle_deselect": false
+      }
+    ],
+
+    "$text_edit_color|default": "white",
+    "$text_edit_locked_color|default": "",
+    "$text_box_content|default": "#text_box_item_name",
+
+    "$clipping_panel_size|default": ["100% - 4px", "100% - 4px"],
+
+    "$text_edit_text_control|default": "display_text",
+    "$default_control|default": "common.edit_box_indent",
+    "$locked_control|default": "common.edit_box_indent",
+    "$hover_control|default": "common.edit_box_indent_hover",
+    "$pressed_control|default": "common.edit_box_indent_hover",
+
+    "$extra_contents|default": "global.empty_panel",
+
+    "$text_box_name|default": "#text_box_name",
+    "$edit_label_offset|default": [0, 0],
+
+    "$place_holder_text|default": "",
+
+    "$place_holder_text_color|default": "",
+    "$place_holder_text_shadow_color|default": "",
+
+    "$place_holder_text_offset|default": [2, 0],
+    "enabled": "#enabled",
+    "bindings": [
+      {
+        "binding_type": "global",
+        "binding_collection_name": "Minecraft",
+        "binding_name": "#text_box_enabled",
+        "binding_name_override": "#enabled"
+      }
+    ],
+    "controls": [
+      {
+        "text_clipping_panel@global.empty_panel": {
+          "size": "$clipping_panel_size",
+          "anchor_from": "top_left",
+          "anchor_to": "top_left",
+          "offset": [2, 2],
+          "clips_children": true,
+          "controls": [
+            {
+              "$text_edit_text_control@text_edit_area.label_template": {
+                "layer": 4,
+                "text": "#item_name",
+                "offset": "$edit_label_offset",
+                "color": "$text_edit_color",
+                "locked_color": "$text_edit_locked_color",
+                "localize": false,
+                "property_bag": {
+                  "#property_field": "#item_name"
+                },
+                "bindings": [
+                  {
+                    "binding_type": "global",
+                    "binding_condition": "visible",
+                    "binding_collection_name": "Minecraft",
+                    "binding_name": "$text_box_content",
+                    "binding_name_override": "#item_name"
+                  }
+                ]
+              }
+            },
+            {
+              "place_holder_text_label@global.empty_label": {
+                "size": ["100%", "100%"],
+                "offset": "$place_holder_text_offset",
+
+                "controls": [
+                  {
+                    "overlay@text_edit_area.label_template": {
+                      "layer": 3,
+                      "text": "$place_holder_text",
+                      "color": "$place_holder_text_color",
+                      "localize": true
+                    }
+                  },
+                  {
+                    "underlay@text_edit_area.label_template": {
+                      "offset": [1, 1],
+                      "text": "$place_holder_text",
+                      "color": "$place_holder_text_shadow_color",
+                      "localize": true
+                    }
+                  }
+                ],
+
+                "bindings": [
+                  {
+                    "binding_type": "view",
+                    "source_control_name": "$text_edit_text_control",
+                    "source_property_name": "(#item_name = '')",
+                    "target_property_name": "#visible",
+                    "resolve_sibling_scope": true
+                  }
+                ]
+              }
+            }
+          ]
+        }
+      },
+      { "locked@$locked_control": {} },
+      { "default@$default_control": {} },
+      { "hover@$hover_control": {} },
+      { "pressed@$pressed_control": {} },
+
+      {
+        "$extra_contents@$extra_contents": {}
+      }
+    ]
+  },
+
+  "label_template@global.empty_label": {
+    "size": ["default", 10],
+    "layer": 2,
+    "anchor_from": "left_middle",
+    "anchor_to": "left_middle",
+    "font_size": "normal",
+    "text_alignment": "left"
+  }
+}

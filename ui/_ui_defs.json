@@ -49,7 +49,7 @@
     "ui/ashur/-common/global.atemp",
     "ui/ashur/-common/screen_content.atemp",
     "ui/ashur/-common/misc.unsorted/banner.atemp",
-    "ui/ashur/book_screen.atemp",
+    "ui/ashur/-common/misc.unsorted/enchant_button.atemp",
     "ui/ashur/-common/misc.unsorted/button.json",
     "ui/ashur/-common/misc.unsorted/button_mappings.json",
     "ui/ashur/-common/misc.unsorted/crafting_common.atemp",
@@ -61,7 +61,7 @@
     "ui/ashur/-common/misc.unsorted/selected_trade_invalid.atemp",
     "ui/ashur/-common/misc.unsorted/smithing_animations.atemp",
     "ui/ashur/-common/misc.unsorted/stack_splitting_overlay.atemp",
-    "ui/ashur/-common/misc.unsorted/text_edit_box.atemp",
+    "ui/ashur/-common/misc.unsorted/text_edit_area.atemp",
     "ui/ashur/-common/misc.unsorted/toggle.atemp",
     "ui/ashur/-common/misc.unsorted/trade_global.atemp",
     "ui/ashur/beacon/primary_button.atemp",
@@ -76,6 +76,7 @@
     "ui/ashur/bundle/bundle.atemp",
     "ui/ashur/bundle/bundle_grid_item.atemp",
     "ui/ashur/-common/compatibility/extensions.atemp",
+    "ui/ashur/-common/recipe_book.atemp",
     
     //compatibility sections
 
