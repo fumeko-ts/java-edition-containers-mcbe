@@ -309,16 +309,8 @@
             { "selected_item_details_factory@selected_item.selected_item_details_factory": {} },
             { "stack_splitting_overlay@stack_splitting_overlay.stack_splitting_overlay": {} },
             { "extra_content@global.empty_panel": { "controls": "$extra_screen_controls" } },
-            {
-              "screen_background@screen_content.screen_background": {
-                "layer": 2
-              }
-            },
-            {
-              "safezone@safezone.screen_holder_safezone": {
-                "layer": 2
-              }
-            }
+            { "screen_background@screen_content.screen_background": {"layer": 2}},
+            { "safezone@safezone.screen_holder_safezone": {"layer": 2}}
           ]
         }
       }

@@ -191,7 +191,8 @@
     ]
   },
 
-  "label_template@global.empty_label": {
+  "label_template": {
+    "type": "label",
     "size": ["default", 10],
     "layer": 2,
     "anchor_from": "left_middle",

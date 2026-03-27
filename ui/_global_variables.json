@@ -22,6 +22,9 @@
   "$container_opacity": 1,
 
 
+  "$no_close_button": false,
+
+
   //if true makes so pc users dont need to move their mouse to reselect the page button
   "$use_experimental_direction_buttons": true,
 
@@ -54,12 +57,13 @@
   "$runes_enabled_hover_color": [0.988, 0.988, 0.494],
 
   //development variables (dont modify)
-  "$no_close_button": false,
-  "$is_java_aspects": false,
-  "$item_icons_enabled": false,
+  //will add links to each creators pages when i get the chance
+  /*"$is_java_aspects": false,
+  "$item_icons_enabled": false,*/
   "$cb_is_thick_menu_buttons": false,
   "$is_jei_recipe_book_layout_pack": false,
-  "$ashur:brewing_guide": false,
+  "$ashur:brewing_guide": false,//var for a pack im working on (a full brewing guide thats interactive and performance light)
+
   "$brewing_content": "global.empty_panel",
   "$jc:dev": false
 }

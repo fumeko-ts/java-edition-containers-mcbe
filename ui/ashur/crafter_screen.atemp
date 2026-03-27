@@ -74,7 +74,7 @@
                                   "$binding_value": "(#redstone_arrow_texture = 'textures/ui/redstone_arrow_powered')",
                                   "variables": {
                                     "requires": "$pocket_screen",
-                                    "$binding_value": "(#redstone_arrow_texture = 'textures/ui/redstone_arrow_vertical_unpowered')"
+                                    "$binding_value": "(#redstone_arrow_texture = 'textures/ui/redstone_arrow_vertical_powered')"
                                   }
                                 }
                               },
@@ -84,7 +84,7 @@
                                   "$binding_value": "(#redstone_arrow_texture = 'textures/ui/redstone_arrow_unpowered')",
                                   "variables": {
                                     "requires": "$pocket_screen",
-                                    "$binding_value": "(#redstone_arrow_texture = 'textures/ui/redstone_arrow_vertical_powered')"
+                                    "$binding_value": "(#redstone_arrow_texture = 'textures/ui/redstone_arrow_vertical_unpowered')"
                                   }
                                 }
                               }
@@ -180,7 +180,7 @@
     "size": [18, 18],
     "controls": [
       {
-        "disabled_button_grid_bindings@common.button": {
+        "disabled_button@common.button": {
           // will localize this some time
           "type": "button",
           "anchor_from": "center",

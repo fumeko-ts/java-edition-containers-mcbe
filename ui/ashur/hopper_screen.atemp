@@ -57,9 +57,9 @@
                       "type": "grid",
                       "size": [90, 18],
                       "grid_dimensions": [5, 1],
-                      "collection_name": "container_items",
-                      "grid_item_template": "jc_container_item.container_item",
-                      "$item_collection": "container_items"
+                      "$item_collection": "container_items",
+                      "collection_name": "$item_collection",
+                      "grid_item_template": "jc_container_item.container_item"
                     }
                   },
                   { "filler_3@global.empty_panel": { "size": [43, "fill"] } }

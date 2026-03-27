@@ -49,7 +49,7 @@
                   {
                     "binding_type": "view",
                     "binding_condition": "always_when_visible",
-                    "source_property_name": "(#selected_hover_text - '\n§9§9sr1.atemp§r')",
+                    "source_property_name": "#selected_hover_text",
                     "target_property_name": "#hover_text"
                   }
                 ]
@@ -64,7 +64,7 @@
     "anim_type": "alpha",
     "easing": "in_quint",
     "destroy_at_end": "selected_item_details",
-    "duration": 2,
+    "duration": 1.8,
     "from": 1.0,
     "to": 0
   }

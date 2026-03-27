@@ -25,21 +25,7 @@
       "#tab_texture_offset_0": "$tab_texture_unchecked_offset",
       "#tab_texture_offset_1": "$tab_texture_checked_offset"
     },
-    "bindings": [
-      {
-        "binding_type": "view",
-        "binding_condition": "always",
-        "source_control_name": "$toggle_control_name",
-        "source_property_name": "#toggle_state",
-        "target_property_name": "#tab_selected"
-      },
-      {
-        "binding_type": "view",
-        "binding_condition": "always",
-        "source_property_name": "('#tab_texture_offset_' + (#tab_selected * 1))",
-        "target_property_name": "#offset"
-      }
-    ]
+    "bindings": "$tab_texture_bindings"
   },
   "tab_toggle@toggle.radio_toggle": {
     "$is_top_left_tab|default": false,
@@ -67,6 +53,22 @@
     "$unchecked_hover_image|default"  : "assets/sprites/container/creative_inventory/tab_top_unselected_2.png",
     "$checked_default_image|default"  : "assets/sprites/container/creative_inventory/tab_top_selected_2.png",
     "$checked_hover_image|default"    : "assets/sprites/container/creative_inventory/tab_top_selected_2.png",
+    //bindings for tab texture
+    "$tab_texture_bindings|default": [
+      {
+        "binding_type": "view",
+        "binding_condition": "always",
+        "source_control_name": "$toggle_control_name",
+        "source_property_name": "#toggle_state",
+        "target_property_name": "#tab_selected"
+      },
+      {
+        "binding_type": "view",
+        "binding_condition": "always",
+        "source_property_name": "('#tab_texture_offset_' + (#tab_selected * 1))",
+        "target_property_name": "#offset"
+      }
+    ],
     //tab_controls
     "$controls": [
       { "default@$tab_texture_template_default"            : {"layer":"$default_layer"      , "texture": "$unchecked_default_image" } },// hover text wont be added because it cant be localised/translated

@@ -17,11 +17,27 @@
 {
   "namespace": "screen_content",
 
-  // exit button templates
+  //base ui elements
+  "image_element@global.empty_image": { "alpha": "$container_opacity" },
+  "screen_background": {
+    "type": "image",
+    "texture": "textures/ui/screen_background",
+    "layer": -1000,
+    "$screen_background_alpha|default": 0.78,
+    "alpha": "$screen_background_alpha"
+  },
+  // base ui template
   "container_template@screen_content.image_element": {
     "size": "$size",
     "uv_size": "$size",
+    "$extra_ui_contents|default": [],
     "controls": [
+      {
+        "extra_content@global.empty_panel": {
+          "size": "$size",
+          "controls": "$extra_ui_contents"
+        }
+      },
       {
         "close_button@global.close_button": {}
       }
@@ -38,6 +54,24 @@
     "size": ["100%", "100%"],
     "layer": 30
   },
+  // creative inventory sprites
+
+  "creative_inventory@screen_content.container_template": {
+    "$size": [195, 136],
+    "texture": "assets/container/creative_inventory/tab_inventory",
+    "layer": 3
+  },
+  "creative_inventory_misc@screen_content.container_template": {
+    "$size": [195, 136],
+    "texture": "assets/container/creative_inventory/tab_items",
+    "layer": 3
+  },
+  "creative_inventory_search@screen_content.container_template": {
+    "$size": [195, 136],
+    "texture": "assets/container/creative_inventory/tab_item_search",
+    "layer": 3
+  },
+
   //recipe book button textures
   "recipe_direction_base@screen_content.image_element": {
     "size": [12, 17],
@@ -180,34 +214,6 @@
     "texture": "assets/recipe_book",
     "size": [147, 166],
     "layer": 1
-  },
-  "creative_inventory@screen_content.image_element": {
-    "size": [195, 136],
-    "uv_size": [195, 136],
-    "texture": "assets/container/creative_inventory/tab_inventory",
-    "layer": 3
-  },
-  "creative_inventory_misc@screen_content.image_element": {
-    "size": [195, 136],
-    "uv_size": [195, 136],
-    "texture": "assets/container/creative_inventory/tab_items",
-    "layer": 3
-  },
-  "creative_inventory_search@screen_content.image_element": {
-    "size": [195, 136],
-    "uv_size": [195, 136],
-    "texture": "assets/container/creative_inventory/tab_item_search",
-    "layer": 3
-  },
-
-  //base ui elements
-  "image_element@global.empty_image": { "alpha": "$container_opacity" },
-  "screen_background": {
-    "type": "image",
-    "texture": "textures/ui/screen_background",
-    "layer": -1000,
-    "$screen_background_alpha|default": 0.78,
-    "alpha": "$screen_background_alpha"
   },
   //slot overlays and highlights
   "highlight_slot@screen_content.image_element": {

@@ -1,0 +1,101 @@
+/**
+// © 2026 ashura_temps,    All Rights Reserved.
+//
+// This UI is custom-made. You are allowed to use it **only as-is**, inside the game.
+// Do not modify, extract, reuse, or share any part of this UI including .json, .atemp files,
+// layout structure, or design.
+//
+// Not allowed:
+//   - Editing the UI (even for private/personal use)
+//   - Using parts of the code or layout in your own pack
+//   - Reuploading, redistributing, or hosting these files elsewhere
+//   - Converting texture packs to Bedrock using this UI
+//
+// By using this project, you agree to these terms.
+*/
+
+{
+  "namespace": "loom_screen",
+  "hover_text_test@global.empty_panel": {
+    "$hover_text|default": "",
+    "$pattern_index|default": "",
+    "controls": [
+      { "0_1_@loom_screen.hover_text_template": { "$hover_text": "atemp.0_1_.pattern", "$pattern_index": "0_1_" } },
+      { "0_2_@loom_screen.hover_text_template": { "$hover_text": "atemp.0_2_.pattern", "$pattern_index": "0_2_" } },
+      { "0_3_@loom_screen.hover_text_template": { "$hover_text": "atemp.0_3_.pattern", "$pattern_index": "0_3_" } },
+      { "0_4_@loom_screen.hover_text_template": { "$hover_text": "atemp.0_4_.pattern", "$pattern_index": "0_4_" } },
+      { "0_5_@loom_screen.hover_text_template": { "$hover_text": "atemp.0_5_.pattern", "$pattern_index": "0_5_" } },
+      { "0_6_@loom_screen.hover_text_template": { "$hover_text": "atemp.0_6_.pattern", "$pattern_index": "0_6_" } },
+      { "0_7_@loom_screen.hover_text_template": { "$hover_text": "atemp.0_7_.pattern", "$pattern_index": "0_7_" } },
+      { "0_8_@loom_screen.hover_text_template": { "$hover_text": "atemp.0_8_.pattern", "$pattern_index": "0_8_" } },
+      { "0_9_@loom_screen.hover_text_template": { "$hover_text": "atemp.0_9_.pattern", "$pattern_index": "0_9_" } },
+      { "0_10_@loom_screen.hover_text_template": { "$hover_text": "atemp.0_10_.pattern", "$pattern_index": "0_10_" } },
+      { "0_11_@loom_screen.hover_text_template": { "$hover_text": "atemp.0_11_.pattern", "$pattern_index": "0_11_" } },
+      { "0_12_@loom_screen.hover_text_template": { "$hover_text": "atemp.0_12_.pattern", "$pattern_index": "0_12_" } },
+      { "0_13_@loom_screen.hover_text_template": { "$hover_text": "atemp.0_13_.pattern", "$pattern_index": "0_13_" } },
+      { "0_14_@loom_screen.hover_text_template": { "$hover_text": "atemp.0_14_.pattern", "$pattern_index": "0_14_" } },
+      { "0_15_@loom_screen.hover_text_template": { "$hover_text": "atemp.0_15_.pattern", "$pattern_index": "0_15_" } },
+      { "0_16_@loom_screen.hover_text_template": { "$hover_text": "atemp.0_16_.pattern", "$pattern_index": "0_16_" } },
+      { "0_17_@loom_screen.hover_text_template": { "$hover_text": "atemp.0_17_.pattern", "$pattern_index": "0_17_" } },
+      { "0_18_@loom_screen.hover_text_template": { "$hover_text": "atemp.0_18_.pattern", "$pattern_index": "0_18_" } },
+      { "0_20_@loom_screen.hover_text_template": { "$hover_text": "atemp.0_20_.pattern", "$pattern_index": "0_20_" } },
+      { "0_21_@loom_screen.hover_text_template": { "$hover_text": "atemp.0_21_.pattern", "$pattern_index": "0_21_" } },
+      { "0_22_@loom_screen.hover_text_template": { "$hover_text": "atemp.0_22_.pattern", "$pattern_index": "0_22_" } },
+      { "0_23_@loom_screen.hover_text_template": { "$hover_text": "atemp.0_23_.pattern", "$pattern_index": "0_23_" } },
+      { "0_24_@loom_screen.hover_text_template": { "$hover_text": "atemp.0_24_.pattern", "$pattern_index": "0_24_" } },
+      { "0_25_@loom_screen.hover_text_template": { "$hover_text": "atemp.0_25_.pattern", "$pattern_index": "0_25_" } },
+      { "0_26_@loom_screen.hover_text_template": { "$hover_text": "atemp.0_26_.pattern", "$pattern_index": "0_26_" } },
+      { "0_27_@loom_screen.hover_text_template": { "$hover_text": "atemp.0_27_.pattern", "$pattern_index": "0_27_" } },
+      { "0_28_@loom_screen.hover_text_template": { "$hover_text": "atemp.0_28_.pattern", "$pattern_index": "0_28_" } },
+      { "0_29_@loom_screen.hover_text_template": { "$hover_text": "atemp.0_29_.pattern", "$pattern_index": "0_29_" } },
+      { "0_30_@loom_screen.hover_text_template": { "$hover_text": "atemp.0_30_.pattern", "$pattern_index": "0_30_" } },
+      { "0_31_@loom_screen.hover_text_template": { "$hover_text": "atemp.0_31_.pattern", "$pattern_index": "0_31_" } },
+      { "0_32_@loom_screen.hover_text_template": { "$hover_text": "atemp.0_32_.pattern", "$pattern_index": "0_32_" } },
+      { "0_33_@loom_screen.hover_text_template": { "$hover_text": "atemp.0_33_.pattern", "$pattern_index": "0_33_" } },
+      { "0_34_@loom_screen.hover_text_template": { "$hover_text": "atemp.0_34_.pattern", "$pattern_index": "0_34_" } },
+      { "0_35_@loom_screen.hover_text_template": { "$hover_text": "atemp.0_35_.pattern", "$pattern_index": "0_35_" } },
+      { "0_36_@loom_screen.hover_text_template": { "$hover_text": "atemp.0_36_.pattern", "$pattern_index": "0_36_" } },
+      { "0_37_@loom_screen.hover_text_template": { "$hover_text": "atemp.0_37_.pattern", "$pattern_index": "0_37_" } },
+      { "0_38_@loom_screen.hover_text_template": { "$hover_text": "atemp.0_38_.pattern", "$pattern_index": "0_38_" } },
+      { "0_39_@loom_screen.hover_text_template": { "$hover_text": "atemp.0_39_.pattern", "$pattern_index": "0_39_" } },
+      { "0_40_@loom_screen.hover_text_template": { "$hover_text": "atemp.0_40_.pattern", "$pattern_index": "0_40_" } },
+      { "0_41_@loom_screen.hover_text_template": { "$hover_text": "atemp.0_41_.pattern", "$pattern_index": "0_41_" } },
+      { "0_42_@loom_screen.hover_text_template": { "$hover_text": "atemp.0_42_.pattern", "$pattern_index": "0_42_" } },
+      { "0_43_@loom_screen.hover_text_template": { "$hover_text": "atemp.0_43_.pattern", "$pattern_index": "0_43_" } }
+    ]
+  },
+  "hover_text_template@global.custom_renderer": {
+    "allow_clipping": false,
+
+    "$type": "bundle_tooltip_renderer",
+    "layer": 900,
+    "controls": [
+      {
+        "1@java_hover_text.java_tooltip_test": {
+          "$hover|default": true,
+          "offset": [-3, -20],
+          "bindings": [
+            {
+              "binding_name": "(not #using_touch)",
+              "binding_name_override": "#visible"
+            }
+          ]
+        }
+      }
+    ],
+    "bindings": [
+      {
+        "binding_name": "#banner_patterns",
+        "binding_type": "collection",
+        "binding_condition": "always",
+        "binding_collection_name": "patterns"
+      },
+      {
+        "binding_type": "view",
+        "binding_condition": "always",
+        "source_property_name": "(#banner_patterns = $pattern_index)",
+        "target_property_name": "#visible"
+      }
+    ]
+  }
+}

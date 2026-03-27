@@ -165,7 +165,8 @@
     ]
   },
 
-  "count_template@global.empty_label": {
+  "count_template": {
+    "type": "label",
     "anchor_from": "top_middle",
     "anchor_to": "top_middle",
     "size": ["default", 10],
@@ -176,6 +177,7 @@
   "recipe_tab_template@toggle.tab_toggle": {
     "$size": [35, 27],
     "$is_left_tab": true,
+    "$default_selected_index": "$construction_index",
     "$toggle_name": "navigation_tab",
     "$tab_texture_unchecked_offset": [5, 0],
     "$tab_texture_checked_offset": [3, 0],
@@ -191,20 +193,33 @@
   "button_visuals": {
     "type": "button",
     "default_focus_precedence": 1,
-    "default_control": "default",
     "size": [18, 17],
+    "default_control": "default",
     "hover_control": "hover",
-    "consume_event": false,
+    "pressed_control": "pressed",
     "layer": 10,
     "button_mappings": [
       {
-        "to_button_id": "button.container_slot_hovered",
-        "mapping_type": "pressed",
-        "consume_event": false
+        "from_button_id": "button.menu_select",
+        "to_button_id": "button.menu_select",
+        "mapping_type": "pressed"
+      },
+      {
+        "from_button_id": "button.menu_ok",
+        "to_button_id": "button.menu_ok",
+        "mapping_type": "focused"
       }
     ],
     "$anchor_point|default": "right_middle",
     "controls": [
+      {
+        "touch@$default_pagination": {
+          "layer": 11,
+          "ignored": "(not $touch)",
+          "anchor_from": "$anchor_point",
+          "anchor_to": "$anchor_point"
+        }
+      },
       {
         "default@$default_pagination": {
           "anchor_from": "$anchor_point",
@@ -213,6 +228,12 @@
       },
       {
         "hover@$hover_pagination": {
+          "anchor_from": "$anchor_point",
+          "anchor_to": "$anchor_point"
+        }
+      },
+      {
+        "pressed@$hover_pagination": {
           "anchor_from": "$anchor_point",
           "anchor_to": "$anchor_point"
         }

@@ -161,6 +161,34 @@
         }
       },
       {
+        "label_holding_stack@global.empty_stack": {
+          "orientation": "vertical",
+          "size": [176, 17],
+          "anchor_to": "top_middle",
+          "anchor_from": "top_middle",
+          "controls": [
+            { "filler_1@global.empty_panel": { "size": ["fill", 6] } },
+            {
+              "mount_title@global.empty_panel": {
+                "size": [176, 11],
+                "controls": [
+                  {
+                    "mount_label@global.empty_label": {
+                      "anchor_to": "top_left",
+                      "anchor_from": "top_left",
+                      "layer": 5,
+                      "offset": [7, -1],
+                      "text": "$container_title",
+                      "color": "$title_text_color"
+                    }
+                  }
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
         "bottom@global.inventory_bottom_half_with_label": {
           "anchor_to": "bottom_middle",
           "anchor_from": "bottom_middle"
@@ -219,11 +247,11 @@
     "$index|default": 0,
     "$slot_icon": "",
     "texture": "assets/sprites/container/slot.png",
-    "layer": 6,
+    "layer": 3,
     "controls": [
       {
         "overlay@screen_content.image_element": {
-          "layer": 7,
+          "layer": 4,
           "texture": "$slot_icon",
           "size": [16, 16],
           "anchor_from": "center",

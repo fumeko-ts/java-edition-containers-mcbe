@@ -63,6 +63,12 @@
     "$item_id|default": -1,
     "property_bag": { "#item_id_aux": "($item_id * 65536)" }
   },
+  
+  "creative_item_renderer@crafting_common.tab_item_renderer": {
+    "anchor_from": "center",
+    "anchor_to": "center",
+    "property_bag": { "#item_id_aux": "($item_identifier * 65536)" }
+  },
   "survival_tab_icons@global.empty_panel": {
     "size": [24, 25],
     "anchor_from": "top_right",
@@ -147,6 +153,50 @@
               }
             }
           ]
+        }
+      }
+    ]
+  },
+  "creative_tab_icons@global.empty_panel": {
+    "size": [24, 25],
+    "anchor_from": "center",
+    "anchor_to": "center",
+    "controls": [
+      {
+        "inventory@crafting_common.creative_item_renderer": {
+          "$item_identifier": "$chest_id",
+          "offset": [0, -1],
+          "visible": "($toggle_control_name = 'survival_tab_toggle')"
+        }
+      },
+      {
+        "search@crafting_common.creative_item_renderer": {
+          "$item_identifier": "$compass_id",
+          "visible": "($toggle_control_name = 'search_tab_toggle')"
+        }
+      },
+      {
+        "items@crafting_common.creative_item_renderer": {
+          "$item_identifier": "$redstone_id",
+          "visible": "($toggle_control_name = 'items_tab_toggle')"
+        }
+      },
+      {
+        "equipment@crafting_common.creative_item_renderer": {
+          "$item_identifier": "$iron_sword_id",
+          "visible": "($toggle_control_name = 'equipment_tab_toggle')"
+        }
+      },
+      {
+        "nature@crafting_common.creative_item_renderer": {
+          "$item_identifier": "$purple_froglight_id",
+          "visible": "($toggle_control_name = 'nature_tab_toggle')"
+        }
+      },
+      {
+        "construction@crafting_common.creative_item_renderer": {
+          "$item_identifier": "$bricks_id",
+          "visible": "($toggle_control_name = 'construction_tab_toggle')"
         }
       }
     ]

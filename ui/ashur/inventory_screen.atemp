@@ -16,7 +16,6 @@
 
 {
   "namespace": "inventory_screen",
-
   "screen_base@container_common.container_details": {
     "min_size": [176, 166],
     "max_size": [359, 166],

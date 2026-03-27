@@ -62,9 +62,9 @@
                             "type": "grid",
                             "size": [54, 54],
                             "grid_dimensions": [3, 3],
-                            "collection_name": "container_items",
-                            "grid_item_template": "jc_container_item.container_item",
-                            "$item_collection": "container_items"
+                            "$item_collection": "container_items",
+                            "collection_name": "$item_collection",
+                            "grid_item_template": "jc_container_item.container_item"
                           }
                         }
                       ]

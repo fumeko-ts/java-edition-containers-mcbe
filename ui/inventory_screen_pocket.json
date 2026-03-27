@@ -28,7 +28,7 @@
   "inventory_screen_pocket@global.container_screen": {
     "$screen_content": "inventory_screen.screen_base",
     "$recipe_container_type|default": "inventory_screen.screen_base",
-    "variables": [
+    "variables": [// could have done inside a {} instead of a [] but i may need to add more contents so its going to be []
       {
         "requires": "$is_jei_recipe_book_layout_pack",
         "$screen_content": "JEI_Recipe_Book_Layout.jei_layout"

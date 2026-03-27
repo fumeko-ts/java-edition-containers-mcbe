@@ -24,31 +24,17 @@
       }
     ]
   },
+  
+  "top_safezone_vertical_buffer@safezone.safezone_buffer"    : {"size": "$top_vertical_safezone_size"    },
+  "bottom_safezone_vertical_buffer@safezone.safezone_buffer" : {"size": "$bottom_vertical_safezone_size" },
+  "left_safezone_horizontal_buffer@safezone.safezone_buffer" : {"size": "$left_horizontal_safezone_size" },
+  "right_safezone_horizontal_buffer@safezone.safezone_buffer": {"size": "$right_horizontal_safezone_size"},
 
-  "top_safezone_vertical_buffer@safezone.safezone_buffer": {
-    "size": "$top_vertical_safezone_size"
-  },
-
-  "bottom_safezone_vertical_buffer@safezone.safezone_buffer": {
-    "size": "$bottom_vertical_safezone_size"
-  },
-
-  "left_safezone_horizontal_buffer@safezone.safezone_buffer": {
-    "size": "$left_horizontal_safezone_size"
-  },
-
-  "right_safezone_horizontal_buffer@safezone.safezone_buffer": {
-    "size": "$right_horizontal_safezone_size"
-  },
   "screen_holder_safezone@global.empty_stack": {
     "orientation": "horizontal",
     "size": ["100%", "100%"],
     "controls": [
-      {
-        "outer_left@safezone.left_safezone_horizontal_buffer": {
-          "$safezone_binding_name": "#safezone_outer_left"
-        }
-      },
+      {"outer_left@safezone.left_safezone_horizontal_buffer": {"$safezone_binding_name": "#safezone_outer_left"}},
       {
         "inner_left@safezone.left_safezone_horizontal_buffer": {
           "$safezone_binding_name": "#safezone_inner_left",
@@ -62,16 +48,8 @@
           "size": ["fill", "100%"],
           "orientation": "vertical",
           "controls": [
-            {
-              "outer_top@safezone.top_safezone_vertical_buffer": {
-                "$safezone_binding_name": "#safezone_outer_top"
-              }
-            },
-            {
-              "inner_top@safezone.top_safezone_vertical_buffer": {
-                "$safezone_binding_name": "#safezone_inner_top"
-              }
-            },
+            {"outer_top@safezone.top_safezone_vertical_buffer": {"$safezone_binding_name": "#safezone_outer_top"}},
+            {"inner_top@safezone.top_safezone_vertical_buffer": {"$safezone_binding_name": "#safezone_inner_top"}},
             {
               "container_content@global.empty_panel": {
                 "size": ["100%", "fill"],
@@ -117,29 +95,13 @@
                 ]
               }
             },
-            {
-              "inner_bottom@safezone.bottom_safezone_vertical_buffer": {
-                "$safezone_binding_name": "#safezone_inner_bottom"
-              }
-            },
-            {
-              "outer_bottom@safezone.bottom_safezone_vertical_buffer": {
-                "$safezone_binding_name": "#safezone_outer_bottom"
-              }
-            }
+            {"inner_bottom@safezone.bottom_safezone_vertical_buffer": {"$safezone_binding_name": "#safezone_inner_bottom"}},
+            {"outer_bottom@safezone.bottom_safezone_vertical_buffer": {"$safezone_binding_name": "#safezone_outer_bottom"}}
           ]
         }
       },
-      {
-        "inner_right@safezone.right_safezone_horizontal_buffer": {
-          "$safezone_binding_name": "#safezone_inner_right"
-        }
-      },
-      {
-        "outer_right@safezone.right_safezone_horizontal_buffer": {
-          "$safezone_binding_name": "#safezone_outer_right"
-        }
-      }
+      {"inner_right@safezone.right_safezone_horizontal_buffer": {"$safezone_binding_name": "#safezone_inner_right"}},
+      {"outer_right@safezone.right_safezone_horizontal_buffer": {"$safezone_binding_name": "#safezone_outer_right"}}
     ]
   }
 }

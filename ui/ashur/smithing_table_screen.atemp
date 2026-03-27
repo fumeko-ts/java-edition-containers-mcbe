@@ -233,7 +233,11 @@
     "size": [16, 16],
     "texture": "$slot_spritesheet",
     "disable_anim_fast_forward": true,
-    "uv": { "anim_type": "aseprite_flip_book", "initial_uv": [0, 0] },
+    "uv": {
+    //planning in makeing this a normal uv anim instead of aseprite 
+      "anim_type": "aseprite_flip_book", 
+      "initial_uv": [0, 0] 
+    },
     "uv_size": [16, 16]
   }
 }
