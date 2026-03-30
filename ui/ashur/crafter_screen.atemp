@@ -217,9 +217,13 @@
               "binding_type": "collection",
               "binding_collection_name": "$item_collection"
             },
+            {"binding_name": "$button_binding"},
+            {"binding_name": "#show_bundle_tooltip_hover"},
             {
-              "binding_name": "(not $button_binding)",
-              "binding_name_override": "#visible"
+              "binding_type": "view",
+              "binding_condition": "always",
+              "source_property_name": "((not $button_binding) and (not #show_bundle_tooltip_hover))",
+              "target_property_name": "#visible"
             }
           ]
         }
