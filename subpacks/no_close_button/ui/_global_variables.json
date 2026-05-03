@@ -25,6 +25,10 @@
   //if true makes so pc users dont need to move their mouse to reselect the page button
   "$use_experimental_direction_buttons": true,
 
+  //if true allows pc users to trigger the page buttons useing the scroll wheel
+  "$use_experimental_recipe_scroll_input": false,
+
+  
   //title text color
   "$title_text_color": [0.247, 0.247, 0.247],
 

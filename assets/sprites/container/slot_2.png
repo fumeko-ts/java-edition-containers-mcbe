@@ -134,6 +134,32 @@
       "requires": "$use_experimental_direction_buttons",
       "$toggle_variables": "pagination.additional_toggle_properties"
     },
+    "$button_mappings": [
+      {
+        "from_button_id": "button.inventory_left",
+        "to_button_id": "button.menu_ok",
+        "consume_event": false,
+        "ignored": "(not $use_experimental_recipe_scroll_input)",
+        "mapping_type": "pressed"
+      },
+      {
+        "from_button_id": "button.inventory_right",
+        "to_button_id": "button.menu_ok",
+        "consume_event": false,
+        "ignored": "(not $use_experimental_recipe_scroll_input)",
+        "mapping_type": "pressed"
+      },
+      {
+        "from_button_id": "button.menu_select",
+        "to_button_id": "button.menu_select",
+        "mapping_type": "pressed"
+      },
+      {
+        "from_button_id": "button.menu_ok",
+        "to_button_id": "button.menu_ok",
+        "mapping_type": "pressed"
+      }
+    ],
     "$bindings": [
       {
         "binding_type": "global",

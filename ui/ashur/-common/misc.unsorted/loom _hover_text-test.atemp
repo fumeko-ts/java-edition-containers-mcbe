@@ -15,6 +15,7 @@
 */
 
 {
+  // this file is stupid
   "namespace": "loom_screen",
   "hover_text_test@global.empty_panel": {
     "$hover_text|default": "",

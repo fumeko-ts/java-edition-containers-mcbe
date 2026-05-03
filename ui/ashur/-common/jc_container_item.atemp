@@ -401,22 +401,22 @@
     // every item uses this renderer
     "$type": "inventory_item_renderer",
     "layer": 10,
+
     "$item_renderer_binding_condition|default": "visible",
     "anchor_to": "center",
     "anchor_from": "center",
+    //slightly darkens items so they look similar to java
+    "property_bag": {
+      "#filtered_light_multiplier": 0.9,
+      "#disabled_filter_visible": true
+    },
+
     "bindings": [
       { "binding_type": "collection_details", "binding_collection_name": "$item_collection" },
       {
         "binding_name": "#item_renderer_data",
         "binding_type": "collection",
         "binding_collection_name": "$item_collection",
-        "binding_condition": "$item_renderer_binding_condition"
-      },
-      {
-        "binding_name": "#inactive_item",
-        "binding_type": "collection",
-        "binding_collection_name": "$item_collection",
-        "binding_name_override": "#disabled_filter_visible",
         "binding_condition": "$item_renderer_binding_condition"
       },
       {

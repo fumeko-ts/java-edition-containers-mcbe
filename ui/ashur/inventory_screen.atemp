@@ -58,7 +58,7 @@
                         },
                         { "buffer_1@global.empty_panel": { "size": ["fill", 2] } },
                         {
-                          "cell_stack@global.empty_stack": {
+                          "crafting_slots_cell_stack@global.empty_stack": {
                             "orientation": "horizontal",
                             "size": [79, 36],
                             "controls": [
@@ -84,11 +84,8 @@
                                     {
                                       "crafting_table_output_slot@jc_container_item.container_item": {
                                         "$item_collection": "crafting_output_items",
-                                        "$item_collection_name": "crafting_output_items",
                                         "$button_ref": "button_mappings.crafting_output_button",
                                         "$background_images": "crafting_textures.main_cell_panel",
-                                        "$item_renderer_binding_condition": "always",
-                                        "$stack_count_binding_condition": "always",
                                         "$cell_size": [18, 18]
                                       }
                                     },

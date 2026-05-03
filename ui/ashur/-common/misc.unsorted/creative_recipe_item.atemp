@@ -107,37 +107,24 @@
           ]
         }
       },
-      {
-        "slot_image@global.empty_image": {
-          "nineslice_size": [1, 1, 1, 1],
-          "layer": 1,
-          "texture": "assets/sprites/container/slot.png",
-          "size": [18, 18]
-        }
-      },
 
       { "item_renderer@jc_container_item.item_renderer": { "layer": 7, "size": [16, 16] } },
       {
-        "group_icons@global.empty_panel": {
-          "controls": [
-            {
-              "item_overlay_contract@creative_recipe_item.item_overlay_image": {
-                "texture": "textures/ui/recipe_book_collapse_icon",
-                "$group_index": 1
-              }
-            },
-
-            {
-              "item_overlay_expand@creative_recipe_item.item_overlay_image": {
-                "texture": "textures/ui/recipe_book_expand_icon",
-                "$group_index": 2
-              }
-            }
-          ],
+        "item_overlay_image@screen_content.image_element": {
+          "size": [7, 7],
+          "offset": [-1, -1],
+          "layer": 9,
+          "anchor_from": "bottom_right",
+          "anchor_to": "bottom_right",
+          "property_bag": {
+            "#icon_1": "textures/ui/recipe_book_collapse_icon",
+            "#icon_2": "textures/ui/recipe_book_expand_icon"
+          },
           "bindings": [
             {
-              "binding_name": "#container_item_modifier",
+              "binding_name": "('#icon_' + #container_item_modifier)",
               "binding_type": "collection",
+              "binding_name_override": "#texture",
               "binding_collection_name": "$item_collection",
               "binding_condition": "visible"
             }
@@ -161,23 +148,38 @@
             }
           ]
         }
-      }
-    ]
-  },
-
-  "item_overlay_image@screen_content.image_element": {
-    "size": [7, 7],
-    "offset": [-1, -1],
-    "layer": 9,
-    "anchor_from": "bottom_right",
-    "anchor_to": "bottom_right",
-    "bindings": [
+      },
       {
-        "binding_type": "view",
-        "source_control_name": "group_icons",
-        "resolve_sibling_scope": true,
-        "source_property_name": "(#container_item_modifier = $group_index)",
-        "target_property_name": "#visible"
+        "slot_icon@screen_content.image_element": {
+          "nineslice_size": [1, 1, 1, 1],
+          "layer": 1,
+          "texture": "assets/sprites/container/slot.png",
+          "size": [18, 18]
+        }
+      },
+      {
+        "group_identifier@screen_content.image_element": {
+          "size": [16, 16],
+          "offset": [1, 1],
+          "anchor_from": "top_left",
+          "anchor_to": "top_left",
+          "layer": 2,
+          "uv_size": [1, 1],// grabs the top left most pixel
+          "alpha": 0.5,
+          "property_bag": {
+            "#icon_3": "assets/sprites/container/slot"
+          },
+          "allow_debug_missing_texture": false,
+          "bindings": [
+            {
+              "binding_name": "('#icon_' + #container_item_modifier)",
+              "binding_type": "collection",
+              "binding_name_override": "#texture",
+              "binding_collection_name": "$item_collection",
+              "binding_condition": "visible"
+            }
+          ]
+        }
       }
     ]
   }

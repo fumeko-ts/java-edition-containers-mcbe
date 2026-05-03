@@ -20,7 +20,6 @@
     "size": "$cell_size",
     "anchor_from": "center",
     "anchor_to": "center",
-    "$cell_images_binding_condition|default": "visible",
     "controls": [
       {
         "red@global.empty_panel": {
