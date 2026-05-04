@@ -3,7 +3,6 @@
 
   "mount_screen@jc-extensions.campatibility": {},
   "anvil_screen@jc-extensions.campatibility": {},
-  "barrel_screen@jc-extensions.campatibility": {},
   "beacon_screen@jc-extensions.campatibility": {},
   "blast_furnace_screen@jc-extensions.campatibility": {},
   "brewing_stand_screen@jc-extensions.campatibility": {},
@@ -12,23 +11,28 @@
   "crafting_screen@jc-extensions.campatibility": {},
   "creative_inventory@jc-extensions.campatibility": {},
   "dispenser_screen@jc-extensions.campatibility": {},
-  "double_chest_screen@jc-extensions.campatibility": {},
   "dropper_screen@jc-extensions.campatibility": {},
   "enchanting_screen@jc-extensions.campatibility": {},
-  "ender_chest_screen@jc-extensions.campatibility": {},
   "furnace_screen@jc-extensions.campatibility": {},
   "grindstone_screen@jc-extensions.campatibility": {},
   "hopper_screen@jc-extensions.campatibility": {},
   "inventory_screen@jc-extensions.campatibility": {},
   "loom_screen@jc-extensions.campatibility": {},
-  "shulker_screen@jc-extensions.campatibility": {},
-  "small_chest_screen@jc-extensions.campatibility": {},
   "smithing_table_screen@jc-extensions.campatibility": {},
   "smoker_screen@jc-extensions.campatibility": {},
   "stonecutter_screen@jc-extensions.campatibility": {},
   "tradeing_screen@jc-extensions.campatibility": {},
 
-  "campatibility": {// this is a example use case
+  "barrel_screen@jc-extensions.campatibility_container_contents": {},
+  "shulker_screen@jc-extensions.campatibility_container_contents": {},
+  "double_chest_screen@jc-extensions.campatibility_container_contents": {
+    "$is_large_chest": true
+  },
+  "ender_chest_screen@jc-extensions.campatibility_container_contents": {},
+  "small_chest_screen@jc-extensions.campatibility_container_contents": {},
+
+  "campatibility": {
+    // this is a example use case
     "type": "panel",
     "size": ["100%", "100%"],
     "controls": [
@@ -45,5 +49,15 @@
         }
       }
     ]
+  },
+
+  "campatibility_container_contents@jc-extensions.campatibility": {
+    "$is_chest_screen": true,
+    "$campatibility_content|default": "global.empty_panel",
+    "controls": [{ "$campatibility_content@$campatibility_content": {} }],
+    "variables": {
+      "requires": "$is_déesse_ui_pack",
+      "$campatibility_content|default": "Déesse_UI_Pack.chest_contents"
+    }
   }
 }

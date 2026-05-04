@@ -65,6 +65,7 @@
   "$item_icons_enabled": false,*/
   "$cb_is_thick_menu_buttons": false,
   "$is_jei_recipe_book_layout_pack": false,
+  "$is_déesse_ui_pack": false,
   "$ashur:brewing_guide": false,//var for a pack im working on (a full brewing guide thats interactive and performance light)
 
   "$brewing_content": "global.empty_panel",

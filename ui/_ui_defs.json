@@ -80,6 +80,9 @@
     
     //compatibility sections
 
+
+    //pack [https://www.curseforge.com/minecraft-bedrock/texture-packs/deesse-ui-pack]
+    "ui/ashur/-common/compatibility/Déesse_UI_Pack.atemp",
     //pack [https://www.curseforge.com/minecraft-bedrock/texture-packs/jei-recipe-book-layout]
     "ui/ashur/-common/compatibility/JEI_Recipe_Book_Layout.atemp",
     //pack [https://www.planetminecraft.com/texture-pack/thickly-be-beveled-buttons-bedrock-edition/]

@@ -1,275 +1,137 @@
-/**
-// © 2026 ashura_temps,    All Rights Reserved.
-//
-// This UI is custom-made. You are allowed to use it **only as-is**, inside the game.
-// Do not modify, extract, reuse, or share any part of this UI including .json, .atemp files,
-// layout structure, or design.
-//
-// Not allowed:
-//   - Editing the UI (even for private/personal use)
-//   - Using parts of the code or layout in your own pack
-//   - Reuploading, redistributing, or hosting these files elsewhere
-//   - Converting texture packs to Bedrock using this UI
-//
-// By using this project, you agree to these terms.
-*/
+// this file has no lisense
+
 
 {
   "namespace": "button_mappings",
-
-  // this file is next to be optimised
+  
   "recipe_button_item": {
     "type": "button",
-    "focus_enabled": false,
+    "focus_enabled": "$game_pad",
     "focus_wrap_enabled": false,
     "focus_magnet_enabled": false,
     "default_focus_precedence": 1,
-
     "sound_volume": 0.0,
     "sound_name": "random.click",
-    "tts_ignore_count": true,
-    "tts_skip_message": true,
-    "tts_inherit_siblings": true,
     "button_mappings": [
-      {
-        "from_button_id": "button.menu_cancel",
-        "to_button_id": "button.try_menu_exit",
-        "mapping_type": "pressed"
-      },
-      {"from_button_id": "button.menu_select","to_button_id": "button.recipe_select","mapping_type": "pressed"},
-      {"from_button_id": "button.menu_ok","to_button_id": "button.recipe_select","mapping_type": "pressed"},
-      {"from_button_id": "button.controller_back","to_button_id": "button.recipe_select","mapping_type": "pressed","ignored": "(not $is_ps4)"},
-      {"from_button_id": "button.menu_secondary_select","to_button_id": "button.recipe_secondary","mapping_type": "pressed"},
-      {"from_button_id": "button.controller_select","to_button_id": "button.recipe_secondary","mapping_type": "pressed"},
-      {"from_button_id": "button.menu_auto_place","to_button_id": "button.recipe_tertiary","mapping_type": "pressed"},
-      {"from_button_id": "button.controller_secondary_select","to_button_id": "button.recipe_tertiary","mapping_type": "pressed"},
-      {"from_button_id": "button.menu_inventory_drop","to_button_id": "button.drop_one","mapping_type": "pressed"},
-      {"from_button_id": "button.menu_inventory_drop_all","to_button_id": "button.drop_all","mapping_type": "pressed"},
-      { "to_button_id": "button.shape_drawing", "mapping_type": "pressed" },
-      { "to_button_id": "button.container_slot_hovered", "mapping_type": "pressed" }
+      { "from_button_id": "button.menu_cancel"                 , "to_button_id": "button.try_menu_exit"    , "mapping_type": "pressed" },
+      { "from_button_id": "button.menu_select"                 , "to_button_id": "button.recipe_select"    , "mapping_type": "pressed" },
+      { "from_button_id": "button.menu_ok"                     , "to_button_id": "button.recipe_select"    , "mapping_type": "pressed" },
+      { "from_button_id": "button.controller_back"             , "to_button_id": "button.recipe_select"    , "mapping_type": "pressed"  , "ignored": "(not $is_ps4)" },
+      { "from_button_id": "button.menu_secondary_select"       , "to_button_id": "button.recipe_secondary" , "mapping_type": "pressed" },
+      { "from_button_id": "button.controller_select"           , "to_button_id": "button.recipe_secondary" , "mapping_type": "pressed" },
+      { "from_button_id": "button.menu_auto_place"             , "to_button_id": "button.recipe_tertiary"  , "mapping_type": "pressed" },
+      { "from_button_id": "button.controller_secondary_select" , "to_button_id": "button.recipe_tertiary"  , "mapping_type": "pressed" },
+      { "from_button_id": "button.menu_inventory_drop"         , "to_button_id": "button.drop_one"         , "mapping_type": "pressed" },
+      { "from_button_id": "button.menu_inventory_drop_all"     , "to_button_id": "button.drop_all"         , "mapping_type": "pressed" },
+      { "to_button_id": "button.shape_drawing"                 , "mapping_type": "pressed" },
+      { "to_button_id": "button.container_slot_hovered"        , "mapping_type": "pressed" }
     ]
   },
 
-  "trade_result_item_slot_button@jc_container_item.item_button": {
-    "size": [16, 16],
+
+  "custom_mapping_template@jc_container_item.item_button": {
+    "$has_cancel_button|default": false,
+    "$cancel_button_action|default": "button.try_menu_exit",
+    "$primary_button_action|default": "",
+    "$secondary_button_action|default": "",
+    "$tertiary_button_action|default": "",
+    "$drop_one_action|default": "button.drop_one",
+    "$drop_all_action|default": "button.drop_all",
+    "$has_shape_drawing|default": true,
+    "$shape_drawing_action|default": "button.shape_drawing",
+    "$hovered_action|default": "button.container_slot_hovered",
+    "$has_coalesce_action|default": false,
+    "$coalesce_button_action|default": "",
     "button_mappings": [
-      {"from_button_id": "button.menu_select","to_button_id": "button.trade_take_all_place_all","mapping_type": "pressed"},
-      {"from_button_id": "button.menu_ok","to_button_id": "button.trade_take_all_place_all","mapping_type": "pressed"},
-      {"from_button_id": "button.controller_back","to_button_id": "button.trade_take_all_place_all","mapping_type": "pressed","ignored": "(not $is_ps4)"},
-      {"from_button_id": "button.menu_secondary_select","to_button_id": "button.trade_take_half_place_one","mapping_type": "pressed"},
-      {"from_button_id": "button.controller_select","to_button_id": "button.trade_take_half_place_one","mapping_type": "pressed"},
-      {"from_button_id": "button.menu_auto_place","to_button_id": "button.container_auto_place","mapping_type": "pressed"},
-      {"from_button_id": "button.controller_secondary_select","to_button_id": "button.container_auto_place","mapping_type": "pressed"},
-      {"from_button_id": "button.menu_inventory_drop","to_button_id": "button.drop_one","mapping_type": "pressed"},
-      {"from_button_id": "button.menu_inventory_drop_all","to_button_id": "button.drop_all","mapping_type": "pressed"},
-      {"from_button_id": "button.menu_select","to_button_id": "button.trade_coalesce_stack","mapping_type": "double_pressed"},
-      {"from_button_id": "button.menu_ok","to_button_id": "button.trade_coalesce_stack","mapping_type": "double_pressed"},
-      { "to_button_id": "button.container_slot_hovered", "mapping_type": "pressed" }
+      { "from_button_id": "button.menu_cancel"                 , "to_button_id": "$cancel_button_action"     , "mapping_type": "pressed"              , "ignored": "(not $has_cancel_button)" },
+      { "from_button_id": "button.menu_select"                 , "to_button_id": "$primary_button_action"    , "mapping_type": "pressed"             },
+      { "from_button_id": "button.menu_ok"                     , "to_button_id": "$primary_button_action"    , "mapping_type": "pressed"             },
+      { "from_button_id": "button.controller_back"             , "to_button_id": "$primary_button_action"    , "mapping_type": "pressed"              , "ignored": "(not $is_ps4)"             },
+      { "from_button_id": "button.menu_secondary_select"       , "to_button_id": "$secondary_button_action"  , "mapping_type": "pressed"             },
+      { "from_button_id": "button.controller_select"           , "to_button_id": "$secondary_button_action"  , "mapping_type": "pressed"             },
+      { "from_button_id": "button.menu_auto_place"             , "to_button_id": "$tertiary_button_action"   , "mapping_type": "pressed"             },
+      { "from_button_id": "button.controller_secondary_select" , "to_button_id": "$tertiary_button_action"   , "mapping_type": "pressed"             },
+      { "from_button_id": "button.menu_inventory_drop"         , "to_button_id": "$drop_one_action"          , "mapping_type": "pressed"             },
+      { "from_button_id": "button.menu_inventory_drop_all"     , "to_button_id": "$drop_all_action"          , "mapping_type": "pressed"             },
+      { "to_button_id": "$shape_drawing_action"                , "mapping_type": "pressed"                   , "ignored": "(not $has_shape_drawing)" },
+      { "from_button_id": "button.menu_select"                 , "to_button_id": "$coalesce_button_action"   , "mapping_type": "double_pressed"       , "ignored": "(not $has_coalesce_action)" },
+      { "from_button_id": "button.menu_ok"                     , "to_button_id": "$coalesce_button_action"   , "mapping_type": "double_pressed"       , "ignored": "(not $has_coalesce_action)" },
+      { "to_button_id": "$hovered_action"                      , "mapping_type": "pressed" }
     ]
   },
-  "anvil_output_slot_button@jc_container_item.item_button": {
-    "button_mappings": [
-      {"from_button_id": "button.menu_select","to_button_id": "button.anvil_take_all_place_all","mapping_type": "pressed"},
-      {"from_button_id": "button.menu_ok","to_button_id": "button.anvil_take_all_place_all","mapping_type": "pressed"},
-      {"from_button_id": "button.controller_back","to_button_id": "button.anvil_take_all_place_all","mapping_type": "pressed","ignored": "(not $is_ps4)"},
-      {"from_button_id": "button.menu_secondary_select","to_button_id": "button.anvil_take_half_place_one","mapping_type": "pressed"},
-      {"from_button_id": "button.controller_select","to_button_id": "button.anvil_take_half_place_one","mapping_type": "pressed"},
-      {"from_button_id": "button.menu_auto_place","to_button_id": "button.container_auto_place","mapping_type": "pressed"},
-      {"from_button_id": "button.controller_secondary_select","to_button_id": "button.container_auto_place","mapping_type": "pressed"},
-      {"from_button_id": "button.menu_inventory_drop","to_button_id": "button.drop_one","mapping_type": "pressed"},
-      {"from_button_id": "button.menu_inventory_drop_all","to_button_id": "button.drop_all","mapping_type": "pressed"},
-      {"from_button_id": "button.menu_select","to_button_id": "button.anvil_coalesce_stack","mapping_type": "double_pressed"},
-      {"from_button_id": "button.menu_ok","to_button_id": "button.anvil_coalesce_stack","mapping_type": "double_pressed"},
-      { "to_button_id": "button.container_slot_hovered", "mapping_type": "pressed" }
-    ]
+  "creative_item_button@button_mappings.custom_mapping_template": {
+    "$has_cancel_button": true,
+    "$primary_button_action": "button.recipe_select",
+    "$secondary_button_action": "button.recipe_secondary",
+    "$tertiary_button_action": "button.recipe_tertiary"
   },
-  "smithing_table_output_slot_button@jc_container_item.item_button": {
-    "button_mappings": [
-      {"from_button_id": "button.menu_select","to_button_id": "button.smithing_table_take_all_place_all","mapping_type": "pressed"},
-      {"from_button_id": "button.menu_ok","to_button_id": "button.smithing_table_take_all_place_all","mapping_type": "pressed"},
-      {"from_button_id": "button.controller_back","to_button_id": "button.smithing_table_take_all_place_all","mapping_type": "pressed","ignored": "(not $is_ps4)"},
-      {"from_button_id": "button.menu_secondary_select","to_button_id": "button.smithing_table_take_half_place_one","mapping_type": "pressed"},
-      {"from_button_id": "button.controller_select","to_button_id": "button.smithing_table_take_half_place_one","mapping_type": "pressed"},
-      {"from_button_id": "button.menu_auto_place","to_button_id": "button.container_auto_place","mapping_type": "pressed"},
-      {"from_button_id": "button.controller_secondary_select","to_button_id": "button.container_auto_place","mapping_type": "pressed"},
-      {"from_button_id": "button.menu_inventory_drop","to_button_id": "button.drop_one","mapping_type": "pressed"},
-      {"from_button_id": "button.menu_inventory_drop_all","to_button_id": "button.drop_all","mapping_type": "pressed"},
-      {"from_button_id": "button.menu_select","to_button_id": "button.smithing_table_coalesce_stack","mapping_type": "double_pressed"},
-      {"from_button_id": "button.menu_ok","to_button_id": "button.smithing_table_coalesce_stack","mapping_type": "double_pressed"},
-      { "to_button_id": "button.container_slot_hovered", "mapping_type": "pressed" }
-    ]
+  "loom_result_slot_button@button_mappings.custom_mapping_template": {
+    "$primary_button_action": "button.loom_result_take_all_place_all",
+    "$secondary_button_action": "button.loom_result_take_all_place_all",
+    "$tertiary_button_action": "button.container_auto_place",
+    "$has_shape_drawing": false
   },
-  "cartography_output_slot_button@jc_container_item.item_button": {
-    "button_mappings": [
-      {"from_button_id": "button.menu_select","to_button_id": "button.cartography_result_take_all_place_all","mapping_type": "pressed"},
-      {"from_button_id": "button.menu_ok","to_button_id": "button.cartography_result_take_all_place_all","mapping_type": "pressed"},
-      {"from_button_id": "button.controller_back","to_button_id": "button.cartography_result_take_all_place_all","mapping_type": "pressed","ignored": "(not $is_ps4)"},
-      {"from_button_id": "button.menu_secondary_select","to_button_id": "button.cartography_result_take_half_place_one","mapping_type": "pressed"},
-      {"from_button_id": "button.controller_select","to_button_id": "button.cartography_result_take_half_place_one","mapping_type": "pressed"},
-      {"from_button_id": "button.menu_auto_place","to_button_id": "button.container_auto_place","mapping_type": "pressed"},
-      {"from_button_id": "button.controller_secondary_select","to_button_id": "button.container_auto_place","mapping_type": "pressed"},
-      {"from_button_id": "button.menu_inventory_drop","to_button_id": "button.drop_one","mapping_type": "pressed"},
-      {"from_button_id": "button.menu_inventory_drop_all","to_button_id": "button.drop_all","mapping_type": "pressed"},
-      { "to_button_id": "button.container_slot_hovered", "mapping_type": "pressed" }
-    ]
+  "crafting_output_button@button_mappings.custom_mapping_template": {
+    "$has_cancel_button": true,
+    "$primary_button_action": "button.crafting_output_primary",
+    "$secondary_button_action": "button.crafting_output_secondary",
+    "$tertiary_button_action": "button.crafting_output_tertiary"
   },
-  "grindstone_output_slot_button@jc_container_item.item_button": {
-    "button_mappings": [
-      {"from_button_id": "button.menu_select","to_button_id": "button.grindstone_take_all_place_all","mapping_type": "pressed"},
-      {"from_button_id": "button.menu_ok","to_button_id": "button.grindstone_take_all_place_all","mapping_type": "pressed"},
-      {"from_button_id": "button.controller_back","to_button_id": "button.grindstone_take_all_place_all","mapping_type": "pressed","ignored": "(not $is_ps4)"},
-      {"from_button_id": "button.menu_secondary_select","to_button_id": "button.grindstone_take_half_place_one","mapping_type": "pressed"},
-      {"from_button_id": "button.controller_select","to_button_id": "button.grindstone_take_half_place_one","mapping_type": "pressed"},
-      {"from_button_id": "button.menu_auto_place","to_button_id": "button.container_auto_place","mapping_type": "pressed"},
-      {"from_button_id": "button.controller_secondary_select","to_button_id": "button.container_auto_place","mapping_type": "pressed"},
-      {"from_button_id": "button.menu_inventory_drop","to_button_id": "button.drop_one","mapping_type": "pressed"},
-      {"from_button_id": "button.menu_inventory_drop_all","to_button_id": "button.drop_all","mapping_type": "pressed"},
-      {"from_button_id": "button.menu_select","to_button_id": "button.grindstone_coalesce_stack","mapping_type": "double_pressed"},
-      {"from_button_id": "button.menu_ok","to_button_id": "button.grindstone_coalesce_stack","mapping_type": "double_pressed"},
-      { "to_button_id": "button.container_slot_hovered", "mapping_type": "pressed" }
-    ]
+
+  "cartography_output_slot_button@button_mappings.custom_mapping_template": {
+    "$primary_button_action": "button.cartography_result_take_all_place_all",
+    "$secondary_button_action": "button.cartography_result_take_half_place_one",
+    "$tertiary_button_action": "button.container_auto_place",
+    "$has_shape_drawing": false
   },
-  "loom_result_slot_button@jc_container_item.item_button": {
-    "button_mappings": [
-      {"from_button_id": "button.menu_select","to_button_id": "button.loom_result_take_all_place_all","mapping_type": "pressed"},
-      {"from_button_id": "button.menu_ok","to_button_id": "button.loom_result_take_all_place_all","mapping_type": "pressed"},
-      {
-        "from_button_id": "button.menu_secondary_select",
-        "to_button_id": "button.loom_result_take_all_place_all",
-        "mapping_type": "pressed"
-      },
-      {
-        "from_button_id": "button.controller_select",
-        "to_button_id": "button.loom_result_take_all_place_all",
-        "mapping_type": "pressed"
-      },
-      {
-        "from_button_id": "button.menu_auto_place",
-        "to_button_id": "button.container_auto_place",
-        "mapping_type": "pressed"
-      },
-      {
-        "from_button_id": "button.controller_secondary_select",
-        "to_button_id": "button.container_auto_place",
-        "mapping_type": "pressed"
-      },
-      {
-        "from_button_id": "button.menu_inventory_drop",
-        "to_button_id": "button.drop_one",
-        "mapping_type": "pressed"
-      },
-      {
-        "from_button_id": "button.menu_inventory_drop_all",
-        "to_button_id": "button.drop_all",
-        "mapping_type": "pressed"
-      },
-      { "to_button_id": "button.container_slot_hovered", "mapping_type": "pressed" }
-    ]
+
+  "stonecutter_result_slot_button@button_mappings.custom_mapping_template": {
+    "$primary_button_action": "button.stonecutter_result_take_all_place_all",
+    "$secondary_button_action": "button.stonecutter_result_take_half_place_one",
+    "$tertiary_button_action": "button.container_auto_place",
+    "$has_shape_drawing": false
   },
-  "stonecutter_result_slot_button@jc_container_item.item_button": {
-    "button_mappings": [
-      {"from_button_id": "button.menu_select","to_button_id": "button.stonecutter_result_take_all_place_all","mapping_type": "pressed"},
-      {"from_button_id": "button.menu_ok","to_button_id": "button.stonecutter_result_take_all_place_all","mapping_type": "pressed"},
-      {"from_button_id": "button.controller_back","to_button_id": "button.stonecutter_result_take_all_place_all","mapping_type": "pressed","ignored": "(not $is_ps4)"},
-      {"from_button_id": "button.menu_secondary_select","to_button_id": "button.stonecutter_result_take_half_place_one","mapping_type": "pressed"},
-      {"from_button_id": "button.controller_select","to_button_id": "button.stonecutter_result_take_half_place_one","mapping_type": "pressed"},
-      {"from_button_id": "button.menu_auto_place","to_button_id": "button.container_auto_place","mapping_type": "pressed"},
-      {"from_button_id": "button.controller_secondary_select","to_button_id": "button.container_auto_place","mapping_type": "pressed"},
-      {"from_button_id": "button.menu_inventory_drop","to_button_id": "button.drop_one","mapping_type": "pressed"},
-      {"from_button_id": "button.menu_inventory_drop_all","to_button_id": "button.drop_all","mapping_type": "pressed"},
-      { "to_button_id": "button.container_slot_hovered", "mapping_type": "pressed" }
-    ]
+
+  "inventory_container_slot_button@button_mappings.custom_mapping_template": {
+    "$has_cancel_button": true,
+    "$primary_button_action": "button.container_take_all_place_all",
+    "$secondary_button_action": "button.container_take_half_place_one",
+    "$tertiary_button_action": "button.container_auto_place"
   },
-  "crafting_misc_button@jc_container_item.item_button": {
-    "$button_take_half_place_one|default": "button.container_take_half_place_one",
-    "$button_auto_place|default": "button.container_auto_place",
-    "$button_take_all_place_all|default": "button.container_take_all_place_all",
-    "button_mappings": [
-      {
-        "from_button_id": "button.menu_cancel",
-        "to_button_id": "button.try_menu_exit",
-        "mapping_type": "pressed"
-      },
-      {"from_button_id": "button.menu_select","to_button_id": "$button_take_all_place_all","mapping_type": "pressed"},
-      {"from_button_id": "button.menu_ok","to_button_id": "$button_take_all_place_all","mapping_type": "pressed"},
-      {"from_button_id": "button.controller_back","to_button_id": "$button_take_all_place_all","mapping_type": "pressed","ignored": "(not $is_ps4)"},
-      {"from_button_id": "button.menu_secondary_select","to_button_id": "$button_take_half_place_one","mapping_type": "pressed"},
-      {"from_button_id": "button.controller_select","to_button_id": "$button_take_half_place_one","mapping_type": "pressed"},
-      {"from_button_id": "button.menu_auto_place","to_button_id": "$button_auto_place","mapping_type": "pressed"},
-      {"from_button_id": "button.controller_secondary_select","to_button_id": "$button_auto_place","mapping_type": "pressed"},
-      {"from_button_id": "button.menu_inventory_drop","to_button_id": "button.drop_one","mapping_type": "pressed"},
-      {"from_button_id": "button.menu_inventory_drop_all","to_button_id": "button.drop_all","mapping_type": "pressed"},
-      {
-        "to_button_id": "button.shape_drawing",
-        "mapping_type": "pressed"
-      },
-      {
-        "to_button_id": "button.container_slot_hovered",
-        "mapping_type": "pressed"
-      }
-    ]
+
+  "anvil_output_slot_button@button_mappings.custom_mapping_template": {
+    "$primary_button_action": "button.anvil_take_all_place_all",
+    "$secondary_button_action": "button.anvil_take_half_place_one",
+    "$tertiary_button_action": "button.container_auto_place",
+    "$has_shape_drawing": false,
+    "$has_coalesce_action": true,
+    "$coalesce_button_action": "button.anvil_coalesce_stack"
   },
-  "crafting_output_button@jc_container_item.item_button": {
-    "button_mappings": [
-      {
-        "from_button_id": "button.menu_cancel",
-        "to_button_id": "button.try_menu_exit",
-        "mapping_type": "pressed"
-      },
-      {
-        "from_button_id": "button.menu_select",
-        "to_button_id": "button.crafting_output_primary",
-        "mapping_type": "pressed"
-      },
-      {
-        "from_button_id": "button.menu_ok",
-        "to_button_id": "button.crafting_output_primary",
-        "mapping_type": "pressed"
-      },
-      {
-        "from_button_id": "button.controller_back",
-        "to_button_id": "button.crafting_output_primary",
-        "mapping_type": "pressed",
-        "ignored": "(not $is_ps4)"
-      },
-      {
-        "from_button_id": "button.menu_secondary_select",
-        "to_button_id": "button.crafting_output_secondary",
-        "mapping_type": "pressed"
-      },
-      {
-        "from_button_id": "button.controller_select",
-        "to_button_id": "button.crafting_output_secondary",
-        "mapping_type": "pressed"
-      },
-      {
-        "from_button_id": "button.menu_auto_place",
-        "to_button_id": "button.crafting_output_tertiary",
-        "mapping_type": "pressed"
-      },
-      {
-        "from_button_id": "button.controller_secondary_select",
-        "to_button_id": "button.crafting_output_tertiary",
-        "mapping_type": "pressed"
-      },
-      {
-        "from_button_id": "button.menu_inventory_drop",
-        "to_button_id": "button.drop_one",
-        "mapping_type": "pressed"
-      },
-      {
-        "from_button_id": "button.menu_inventory_drop_all",
-        "to_button_id": "button.drop_all",
-        "mapping_type": "pressed"
-      },
-      {
-        "to_button_id": "button.shape_drawing",
-        "mapping_type": "pressed"
-      },
-      {
-        "to_button_id": "button.container_slot_hovered",
-        "mapping_type": "pressed"
-      }
-    ]
+
+  "smithing_table_output_slot_button@button_mappings.custom_mapping_template": {
+    "$primary_button_action": "button.smithing_table_take_all_place_all",
+    "$secondary_button_action": "button.smithing_table_take_half_place_one",
+    "$tertiary_button_action": "button.container_auto_place",
+    "$has_shape_drawing": false,
+    "$has_coalesce_action": true,
+    "$coalesce_button_action": "button.smithing_table_coalesce_stack"
+  },
+
+  "grindstone_output_slot_button@button_mappings.custom_mapping_template": {
+    "$primary_button_action": "button.grindstone_take_all_place_all",
+    "$secondary_button_action": "button.grindstone_take_half_place_one",
+    "$tertiary_button_action": "button.container_auto_place",
+    "$has_shape_drawing": false,
+    "$has_coalesce_action": true,
+    "$coalesce_button_action": "button.grindstone_coalesce_stack"
+  },
+
+  "trade_result_item_slot_button@button_mappings.custom_mapping_template": {
+    "$primary_button_action": "button.trade_take_all_place_all",
+    "$secondary_button_action": "button.trade_take_half_place_one",
+    "$tertiary_button_action": "button.container_auto_place",
+    "$has_shape_drawing": false,
+    "$has_coalesce_action": true,
+    "$coalesce_button_action": "button.trade_coalesce_stack"
   }
 }

@@ -1,0 +1,20 @@
+{
+  "namespace": "Déesse_UI_Pack",
+
+  "chest_contents@déesse_qcMain.content_panel": {
+    "controls": [
+      {
+        "inventory_stack_button@déesse_instantButton.inv_instant_stack_button": {
+          "ignored": "(not ($dé_QC:show_quick_move_items_inv and $is_inventory_screen))"
+        }
+      },
+      {
+        "container_stack_button@déesse_instantButton.instant_move_stack_button_panel": {
+          "ignored": "(not ($dé_QC:show_quick_move_items and $is_chest_screen))"
+        }
+      },
+      { "quick_items_stack_button@déesse_quickItems.quick_items_stack_button": {} },
+      { "background_close@déesse_qcUtils.background_close": { "ignored": "(not $dé:use_background_close)" } }
+    ]
+  }
+}

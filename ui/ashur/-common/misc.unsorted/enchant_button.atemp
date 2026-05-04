@@ -189,7 +189,7 @@
                         },
                         {
                           "binding_type": "view",
-                          "binding_condition": "always",
+                          "binding_condition": "always_when_visible",
                           "source_property_name": "('§7' + (#hover_text - '§f' - '§o'))",
                           "target_property_name": "#hover_text"
                         }
@@ -208,7 +208,6 @@
             },
             {
               "binding_type": "view",
-              "binding_condition": "always",
               "source_property_name": "(not (#hover_text = ''))",
               "target_property_name": "#visible"
             }

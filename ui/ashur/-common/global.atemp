@@ -210,8 +210,7 @@
       {
         "binding_type": "global",
         "binding_name": "$hover_text",
-        "binding_name_override": "#hover_text",
-        "binding_condition": "always"
+        "binding_name_override": "#hover_text"
       }
     ]
   },
