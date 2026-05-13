@@ -1,63 +1,66 @@
 {
   "namespace": "jc-extensions",
 
-  "mount_screen@jc-extensions.campatibility": {},
-  "anvil_screen@jc-extensions.campatibility": {},
-  "beacon_screen@jc-extensions.campatibility": {},
-  "blast_furnace_screen@jc-extensions.campatibility": {},
-  "brewing_stand_screen@jc-extensions.campatibility": {},
-  "cartography_screen@jc-extensions.campatibility": {},
-  "crafter_screen@jc-extensions.campatibility": {},
-  "crafting_screen@jc-extensions.campatibility": {},
-  "creative_inventory@jc-extensions.campatibility": {},
-  "dispenser_screen@jc-extensions.campatibility": {},
-  "dropper_screen@jc-extensions.campatibility": {},
-  "enchanting_screen@jc-extensions.campatibility": {},
-  "furnace_screen@jc-extensions.campatibility": {},
-  "grindstone_screen@jc-extensions.campatibility": {},
-  "hopper_screen@jc-extensions.campatibility": {},
-  "inventory_screen@jc-extensions.campatibility": {},
-  "loom_screen@jc-extensions.campatibility": {},
-  "smithing_table_screen@jc-extensions.campatibility": {},
-  "smoker_screen@jc-extensions.campatibility": {},
-  "stonecutter_screen@jc-extensions.campatibility": {},
-  "tradeing_screen@jc-extensions.campatibility": {},
+  // screens
+  "anvil_screen@jc-extensions.compatability": {},
+  "blast_furnace_screen@jc-extensions.compatability": {},
+  "brewing_stand_screen@jc-extensions.compatability": {},
+  "cartography_screen@jc-extensions.compatability": {},
+  "enchanting_screen@jc-extensions.compatability": {},
+  "furnace_screen@jc-extensions.compatability": {},
+  "grindstone_screen@jc-extensions.compatability": {},
+  "loom_screen@jc-extensions.compatability": {},
+  "mount_screen@jc-extensions.compatability": {},
+  "smithing_table_screen@jc-extensions.compatability": {},
+  "smoker_screen@jc-extensions.compatability": {},
+  "stonecutter_screen@jc-extensions.compatability": {},
+  "trading_screen@jc-extensions.compatability": {},
+  "beacon_screen@jc-extensions.compatability": {},
 
-  "barrel_screen@jc-extensions.campatibility_container_contents": {},
-  "shulker_screen@jc-extensions.campatibility_container_contents": {},
-  "double_chest_screen@jc-extensions.campatibility_container_contents": {
-    "$is_large_chest": true
-  },
-  "ender_chest_screen@jc-extensions.campatibility_container_contents": {},
-  "small_chest_screen@jc-extensions.campatibility_container_contents": {},
+  //inventorys
+  "inventory_screen@jc-extensions.compatability_inventory_contents": {},
+  "crafting_screen@jc-extensions.compatability_inventory_contents": {},
 
-  "campatibility": {
-    // this is a example use case
+  "creative_inventory@jc-extensions.compatability_inventory_contents": {},
+
+  // redstone blocks
+  "crafter_screen@jc-extensions.compatability": {},
+  "dispenser_screen@jc-extensions.compatability": {},
+  "dropper_screen@jc-extensions.compatability": {},
+  "hopper_screen@jc-extensions.compatability": {},
+
+  // container blocks
+  "barrel_screen@jc-extensions.compatability_container_contents": {},
+  "double_chest_screen@jc-extensions.compatability_container_contents": {},
+  "ender_chest_screen@jc-extensions.compatability_container_contents": {},
+  "shulker_screen@jc-extensions.compatability_container_contents": {},
+  "small_chest_screen@jc-extensions.compatability_container_contents": {},
+
+  //extended defs
+  "compatability": {
     "type": "panel",
-    "size": ["100%", "100%"],
+    "$compatability_content|default": "global.empty_panel",
+    "$is_crafting_screen|default": "($screen_content = 'crafting_screen.screen_base')",
+    "$is_inventory_screen|default": "($screen_content = 'inventory_screen.screen_base')",
     "controls": [
       {
-        "element@global.empty_image": {
-          "ignored": true,
-          "texture": "textures/ui/white",
-          "nineslice_size": 2,
-          "size": [24, 24],
-          "layer": 50,
-          "offset": [5, 0],
-          "anchor_to": "bottom_left",
-          "anchor_from": "bottom_right"
-        }
+        "$compatability_content@$compatability_content": {}
       }
     ]
   },
 
-  "campatibility_container_contents@jc-extensions.campatibility": {
-    "$is_chest_screen": true,
-    "$campatibility_content|default": "global.empty_panel",
-    "controls": [{ "$campatibility_content@$campatibility_content": {} }],
-    "variables": {
-      "requires": "$is_déesse_ui_pack",
-      "$campatibility_content|default": "Déesse_UI_Pack.chest_contents"
-    }
+  "compatability_container_contents@jc-extensions.compatability": {
+    // "variables": {
+    //   "requires": "$is_déesse_ui_pack",
+    //   "$compatability_content|default": "Déesse_UI_Pack.chest_contents"
+    // }
+  },
+
+  //inventory and crafting screens
+  "compatability_inventory_contents@jc-extensions.compatability_container_contents": {
+    // "variables": {
+    //   "requires": "$is_déesse_ui_pack",
+    //   "$compatability_content|default": "Déesse_UI_Pack.inventory_content"
+    // }
   }
 }

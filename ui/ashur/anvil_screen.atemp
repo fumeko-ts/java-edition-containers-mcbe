@@ -156,7 +156,7 @@
                         {
                           "result_item_slot@jc_container_item.container_item": {
                             "$item_collection": "anvil_result_items",
-                            "$button_ref": "button_mappings.anvil_output_slot_button"
+                            "$button_control": "button_mappings.anvil_output_button"
                           }
                         },
                         { "filler_2@global.empty_panel": { "size": ["fill", 2] } }
@@ -221,12 +221,6 @@
         }
       },
       {
-        "bottom@global.inventory_bottom_half_with_label": {
-          "anchor_to": "bottom_middle",
-          "anchor_from": "bottom_middle"
-        }
-      },
-      {
         "anvil_highlight@screen_content.image_element": {
           "texture": "textures/anvil_highlight.png",
           "alpha": "@anvil_screen.anvil_highlight_alpha_1",
@@ -255,6 +249,12 @@
               "target_property_name": "#visible"
             }
           ]
+        }
+      },
+      {
+        "bottom@global.inventory_bottom_half_with_label": {
+          "anchor_to": "bottom_middle",
+          "anchor_from": "bottom_middle"
         }
       }
     ]

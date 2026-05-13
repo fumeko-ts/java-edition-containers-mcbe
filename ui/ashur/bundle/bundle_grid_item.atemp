@@ -28,7 +28,7 @@
           "$stack_count_offset": [-3, -2],
           "$renderer_layer": 30,
           "$background_images|default": "bundle_grid_item.bundle_cell_overlays",
-          "$button_ref|default": "bundle_grid_item.bundle_tooltip_slot_button",
+          "$button_control|default": "bundle_grid_item.bundle_tooltip_slot_button",
           "bindings": [
             {
               "binding_name": "#show_bundle_item_slot",
@@ -40,7 +40,8 @@
         }
       },
       {
-        "bundle_overflow_text@global.empty_label": {
+        "bundle_overflow_text": {
+          "type": "label",
           "size": ["default", 10],
           "layer": 2,
           "text": "#more_hidden_items_text",

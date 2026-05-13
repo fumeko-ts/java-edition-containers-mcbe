@@ -278,7 +278,6 @@
                         { "top_offhand_filler@global.empty_panel": { "size": [18, 19] } },
                         {
                           "offhand_slot_button@jc_container_item.container_item": {
-                            "size": [18, 18],
                             "$item_collection": "offhand_items",
                             "$cell_overlay_ref": "screen_content.armor_overlay_shield"
                           }

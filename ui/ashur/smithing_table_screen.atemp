@@ -125,19 +125,13 @@
                   {
                     "result_item_slot@jc_container_item.container_item": {
                       "$item_collection": "smithing_table_result_items",
-                      "$button_ref": "button_mappings.smithing_table_output_slot_button"
+                      "$button_control": "button_mappings.smithing_output_button"
                     }
                   }
                 ]
               }
             }
           ]
-        }
-      },
-      {
-        "bottom@global.inventory_bottom_half_with_label": {
-          "anchor_to": "bottom_middle",
-          "anchor_from": "bottom_middle"
         }
       },
       {
@@ -164,6 +158,12 @@
               }
             }
           ]
+        }
+      },
+      {
+        "bottom@global.inventory_bottom_half_with_label": {
+          "anchor_to": "bottom_middle",
+          "anchor_from": "bottom_middle"
         }
       }
     ]

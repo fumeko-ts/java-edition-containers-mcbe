@@ -100,7 +100,7 @@
                         {
                           "result_item_slot@jc_container_item.container_item": {
                             "$item_collection": "grindstone_result_items",
-                            "$button_ref": "button_mappings.grindstone_output_slot_button"
+                            "$button_control": "button_mappings.grindstone_output_button"
                           }
                         },
                         { "filler_2@global.empty_panel": { "size": ["fill", 6] } }

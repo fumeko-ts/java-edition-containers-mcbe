@@ -86,6 +86,8 @@
     "$clipping_panel_size|default": ["100% - 4px", "100% - 4px"],
 
     "$text_edit_text_control|default": "display_text",
+
+    //uses vanilla refs cause i aint making new ones
     "$default_control|default": "common.edit_box_indent",
     "$locked_control|default": "common.edit_box_indent",
     "$hover_control|default": "common.edit_box_indent_hover",

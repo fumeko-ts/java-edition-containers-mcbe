@@ -27,9 +27,7 @@
       {
         "controller_pointer": {
           "type": "button",
-          "visible": false,
-          "anchor_from": "center",
-          "anchor_to": "center",
+          "visible": "$game_pad",
           "layer": -10,
           "size": [16, 16],
           "follows_cursor": true,

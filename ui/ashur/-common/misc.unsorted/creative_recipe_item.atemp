@@ -26,8 +26,8 @@
     "layer": 4,
     "controls": [
       {
-        "item_cell_button@button_mappings.creative_item_button": {
-          "$cell_hover_text_bindings|default": [
+        "item_cell_button@button_mappings.creative_recipe_cell_button": {
+          "$cell_hover_text_bindings": [
             {
               "binding_name": "#recipe_hover_text",
               "binding_name_override": "#hover_text",
@@ -35,7 +35,7 @@
               "binding_collection_name": "$item_collection"
             }
           ],
-          "$dont_render_hover_text|default": false
+          "$dont_render_hover_text": false
         }
       },
 

@@ -17,7 +17,6 @@
 {
   "namespace": "hopper_screen",
   "hopper_panel@container_common.container_details": {
-    "layer": 5,
     "size": [176, 133],
     "$screen_controls": [
       { "common_panel@screen_content.hopper": {} },

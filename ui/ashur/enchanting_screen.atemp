@@ -18,7 +18,6 @@
   "namespace": "enchanting_screen",
   "enchanting_panel@container_common.container_details": {
     "size": [176, 166],
-    "layer": 5,
     "$screen_controls": [
       { "common_panel@screen_content.enchanting": {} },
       { "extensions@jc-extensions.enchanting_screen": {} },
@@ -72,12 +71,6 @@
               }
             }
           ]
-        }
-      },
-      {
-        "bottom@global.inventory_bottom_half_with_label": {
-          "anchor_to": "bottom_middle",
-          "anchor_from": "bottom_middle"
         }
       },
       {
@@ -161,6 +154,12 @@
               }
             }
           ]
+        }
+      },
+      {
+        "bottom@global.inventory_bottom_half_with_label": {
+          "anchor_to": "bottom_middle",
+          "anchor_from": "bottom_middle"
         }
       }
     ]

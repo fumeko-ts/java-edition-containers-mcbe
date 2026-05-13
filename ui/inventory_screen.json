@@ -23,6 +23,11 @@
         "requires": "$is_jei_recipe_book_layout_pack",
         "$screen_content": "JEI_Recipe_Book_Layout.jei_layout"
       }
+      // ,
+      // {
+      //   "requires": "$is_déesse_ui_pack",
+      //   "$extra_screen_elements": "Déesse_UI_Pack.inventory_armor_overlay"
+      // }
     ]
   },
   "inventory_screen@global.container_screen": {
@@ -33,6 +38,11 @@
         "requires": "$is_jei_recipe_book_layout_pack",
         "$screen_content": "JEI_Recipe_Book_Layout.jei_layout"
       }
+      // ,
+      // {
+      //   "requires": "$is_déesse_ui_pack",
+      //   "$extra_screen_elements": "Déesse_UI_Pack.inventory_armor_overlay"
+      // }
     ]
   }
 }

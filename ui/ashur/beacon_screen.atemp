@@ -16,130 +16,59 @@
 
 {
   "namespace": "beacon_screen",
-  // i need to remake the base of this file because the codes looks horrible (very hard for me to read)
   "beacon_panel@container_common.container_details": {
     "size": [230, 219],
-    "anchor_from": "center",
-    "anchor_to": "center",
     "$screen_controls": [
       { "common_panel@screen_content.beacon": {} },
       { "extensions@jc-extensions.beacon_screen": {} },
       {
-        "beacon_inner_panel@global.empty_panel": {
-          "size": [216, 97],
-          "anchor_from": "top_middle",
-          "anchor_to": "top_middle",
-          "controls": [
-            {
-              "primary_power_label@beacon_screen.beacon_label": { "text": "tile.beacon.primary", "offset": [-54, 8] }
-            },
-            {
-              "secondary_power_label@beacon_screen.beacon_label": { "text": "tile.beacon.secondary", "offset": [52, 8] }
-            }
-          ]
-        }
-      },
-      {
-        "beacon_top_half@global.empty_stack": {
-          "orientation": "vertical",
-          "size": [230, 129],
-          "anchor_from": "top_middle",
-          "anchor_to": "top_middle",
-          "controls": [
-            { "filler_1@global.empty_panel": { "size": ["fill", 21] } },
-            {
-              "top_panel_buttons@global.empty_stack": {
-                "orientation": "horizontal",
-                "size": [230, 72],
-                "controls": [
-                  { "filler_1@global.empty_panel": { "size": [52, "fill"] } },
-                  {
-                    "main_buttons@global.empty_stack": {
-                      "orientation": "vertical",
-                      "size": [46, 72],
-                      "controls": [
-                        {
-                          "row_1@global.empty_stack": {
-                            "orientation": "horizontal",
-                            "size": [46, 22],
-                            "controls": [
-                              { "speed@primary_button.primary_button": { "$button_name": "speed" } },
-                              { "filler_1@global.empty_panel": { "size": [2, "fill"] } },
-                              { "haste@primary_button.primary_button": { "$button_name": "haste" } }
-                            ]
-                          }
-                        },
-                        { "filler_1@global.empty_panel": { "size": ["fill", 3] } },
-                        {
-                          "row_2@global.empty_stack": {
-                            "orientation": "horizontal",
-                            "size": [46, 22],
-                            "controls": [
-                              { "1@primary_button.primary_button": { "$button_name": "resist" } },
-                              { "filler_1@global.empty_panel": { "size": [2, "fill"] } },
-                              { "2@primary_button.primary_button": { "$button_name": "jump" } }
-                            ]
-                          }
-                        },
-                        { "filler_2@global.empty_panel": { "size": ["fill", 3] } },
-                        {
-                          "row_2@global.empty_stack": {
-                            "orientation": "horizontal",
-                            "size": [46, 22],
-                            "controls": [
-                              { "filler_1@global.empty_panel": { "size": [12, "fill"] } },
-                              { "1@primary_button.primary_button": { "$button_name": "strength" } },
-                              { "filler_2@global.empty_panel": { "size": [12, "fill"] } }
-                            ]
-                          }
-                        }
-                      ]
-                    }
-                  },
-                  { "filler_2@global.empty_panel": { "size": [45, "fill"] } },
-                  {
-                    "secondary_buttons@global.empty_stack": {
-                      "orientation": "vertical",
-                      "size": [46, 72],
-                      "controls": [
-                        { "filler_1@global.empty_panel": { "size": ["fill", 25] } },
-                        {
-                          "secondary_buttons_holder@global.empty_stack": {
-                            "orientation": "horizontal",
-                            "size": [46, 22],
-                            "controls": [
-                              { "1@secondary_button.secondary_button": { "$button_name": "regen" } },
-                              { "filler_1@global.empty_panel": { "size": [2, "fill"] } },
-                              { "2@secondary_button.secondary_button": { "$button_name": "extra" } }
-                            ]
-                          }
-                        },
-                        { "filler_2@global.empty_panel": { "size": ["fill", 23] } }
-                      ]
-                    }
-                  },
-                  { "filler_3@global.empty_panel": { "size": [41, "fill"] } }
-                ]
-              }
-            }
-          ]
-        }
-      },
-      {
-        "input_slot_holder@global.empty_stack": {
-          "orientation": "vertical",
+        "primary_toggles_holder@global.empty_panel": {
           "anchor_from": "top_left",
           "anchor_to": "top_left",
-          "size": [153, 27],
+          "size": [99, 94],
           "controls": [
-            { "input_top_filler@global.empty_panel": { "size": ["fill", 109] } },
             {
-              "slot_push@global.empty_stack": {
-                "orientation": "horizontal",
-                "size": [153, 18],
+              "primary_stacks@global.empty_stack": {
+                "orientation": "vertical",
+                "anchor_from": "bottom_right",
+                "anchor_to": "bottom_right",
+                "size": [46, 72],
                 "controls": [
-                  { "filler_1@global.empty_panel": { "size": [135, "fill"] } },
-                  { "input@jc_container_item.container_item": { "$item_collection": "beacon_payment_items" } }
+                  {
+                    "speed_and_haste@global.empty_stack": {
+                      "orientation": "horizontal",
+                      "size": [46, 22],
+                      "controls": [
+                        { "primary_speed_effect@beacon_screen.primary_toggle": { "$button_name": "speed" } },//22x22
+                        { "filler_1@global.empty_panel": { "size": [2, 22] } },
+                        { "primary_haste_effect@beacon_screen.primary_toggle": { "$button_name": "haste" } }//22x22
+                      ]
+                    }
+                  },
+                  { "filler_2@global.empty_panel": { "size": [46, 3] } },
+                  {
+                    "resist_and_jump@global.empty_stack": {
+                      "orientation": "horizontal",
+                      "size": [46, 22],
+                      "controls": [
+                        { "primary_resist_effect@beacon_screen.primary_toggle": { "$button_name": "resist" } },//22x22
+                        { "filler_3@global.empty_panel": { "size": [2, 22] } },
+                        { "primary_jump_effect@beacon_screen.primary_toggle": { "$button_name": "jump" } }//22x22
+                      ]
+                    }
+                  },
+                  { "filler_4@global.empty_panel": { "size": [46, 3] } },
+                  {
+                    "strength@global.empty_stack": {
+                      "orientation": "horizontal",
+                      "size": [46, 22],
+                      "controls": [
+                        { "filler_5@global.empty_panel": { "size": [12, 22] } },
+                        { "primary_strength_effect@beacon_screen.primary_toggle": { "$button_name": "strength" } },//22x22
+                        { "filler_6@global.empty_panel": { "size": [12, 22] } }
+                      ]
+                    }
+                  }
                 ]
               }
             }
@@ -147,121 +76,137 @@
         }
       },
       {
-        "beacon_inventory@global.empty_stack": {
+        "secondary_toggles_holder@global.empty_panel": {
+          "size": [86, 69],
+          "anchor_to": "top_right",
+          "anchor_from": "top_right",
+          "controls": [
+            {
+              "regen_and_extra@global.empty_stack": {
+                "orientation": "horizontal",
+                "size": [46, 22],
+                "anchor_from": "bottom_left",
+                "anchor_to": "bottom_left",
+                "controls": [
+                  { "regen@beacon_screen.secondary_left_toggle": {} },//22x22
+                  { "filler_7@global.empty_panel": { "size": [2, 22] } },
+                  { "extra@beacon_screen.secondary_right_toggle": {} }//22x22
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "ores_holder@global.empty_panel": {
+          "size": [124, 125],
+          "anchor_from": "top_left",
+          "anchor_to": "top_left",
+          "layer": 3,
+          "controls": [
+            {
+              "ores@global.empty_stack": {
+                "orientation": "horizontal",
+                "size": [104, 16],
+                "anchor_from": "bottom_right",
+                "anchor_to": "bottom_right",
+                "controls": [
+                  {"netherite@beacon_screen.beacon_ore_texture_template" : {"$ore_path": "textures/items/netherite_ingot" }},//16x16
+                  {"filler_8@global.empty_panel": {"size": [5, 16]}},
+                  {"emerald@beacon_screen.beacon_ore_texture_template"   : {"$ore_path": "textures/items/emerald"         }},//16x16
+                  {"filler_9@global.empty_panel": {"size": [6, 16]}},
+                  {"diamond@beacon_screen.beacon_ore_texture_template"   : {"$ore_path": "textures/items/diamond"         }},//16x16
+                  {"filler_10@global.empty_panel": {"size": [7, 16]}},
+                  {"gold@beacon_screen.beacon_ore_texture_template"      : {"$ore_path": "textures/items/gold_ingot"      }},//16x16
+                  {"filler_11@global.empty_panel": {"size": [6, 16]}},
+                  {"iron@beacon_screen.beacon_ore_texture_template"      : {"$ore_path": "textures/items/iron_ingot"      }}//16x16
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "input_and_actions_holder@global.empty_panel": {
+          "anchor_from": "top_right",
+          "anchor_to": "top_right",
+          "size": [95, 129],
+          "controls": [
+            {
+              "input_and_actions@global.empty_stack": {
+                "orientation": "horizontal",
+                "size": [77, 22],
+                "anchor_from": "bottom_left",
+                "anchor_to": "bottom_left",
+                "controls": [
+                  {
+                    "payment_input@global.empty_stack": {
+                      "orientation": "vertical",
+                      "size": [18, 22],
+                      "controls": [
+                        {"filler_12@global.empty_panel": {"size": [18, 2]}},
+                        {"payment_slot@jc_container_item.container_item": { "$item_collection": "beacon_payment_items" }},//18x18
+                        {"filler_13@global.empty_panel": {"size": [18, 2]}}
+                      ]
+                    }
+                  },
+                  {"filler_14@global.empty_panel": {"size": [11, 22]}},
+                  {"confirm_action@beacon_screen.primary_toggle": {"$button_name": "confirm" }},//22x22
+                  {"filler_15@global.empty_panel": {"size": [4, 22]}},
+                  {"cancel_action@beacon_screen.primary_toggle": {"$button_name": "cancel" }}//22x22
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "inventory_section@global.empty_stack": {
           "orientation": "horizontal",
           "size": [230, 83],
           "anchor_to": "bottom_middle",
           "anchor_from": "bottom_middle",
           "controls": [
-            { "filler_1@global.empty_panel": { "size": [35, "fill"] } },
+            {"filler_16@global.empty_panel": {"size": [35, 83]} },
             {
-              "inventory_bottom_half_with_label@global.empty_stack": {
-                "orientation": "vertical",
+              "inventory_grid_holder@global.empty_panel": {
                 "size": [162, 83],
-                "controls": [
-                  {
-                    "inventory_grid": {
-                      "type": "grid",
-                      "size": [162, 54],
-                      "grid_dimensions": [9, 3],
-                      "$item_collection_name": "inventory_items",
-                      "grid_item_template": "jc_container_item.container_item",
-                      "$item_collection": "inventory_items",
-                      "collection_name": "inventory_items"
-                    }
-                  },
-                  { "below_inventory_grid_spacing@global.empty_panel": { "size": ["fill", 4] } },
-                  { "hotbar@global.hotbar": {} },
-                  { "hotbar_bottom_spacing@global.empty_panel": { "size": ["fill", 7] } }
-                ]
+                "controls": [{"inventory_and_hotbar@container_common.container_bottom_section": {}}]
               }
             },
-            { "filler_2@global.empty_panel": { "size": [33, "fill"] } }
+            {"filler_17@global.empty_panel": {"size": [33, 83]} }
           ]
         }
       },
       {
-        "confirm_and_exit_buttons@global.empty_stack": {
+        "labels_holder@global.empty_stack": {
           "orientation": "vertical",
-          "anchor_to": "bottom_right",
-          "anchor_from": "bottom_right",
-          "size": [67, 114],
-          "$button_name|default": "cancel",
-          "controls": [
-            {
-              "buttons_stack@global.empty_stack": {
-                "orientation": "horizontal",
-                "size": [67, 22],
-                "controls": [
-                  { "confirm_panel@beacon_screen.advanced_buttons_template": { "$button_name": "confirm" } },
-                  { "filler_1@global.empty_panel": { "size": [4, "fill"] } },
-                  { "cancel_panel@beacon_screen.advanced_buttons_template": { "$button_name": "cancel" } },
-                  { "filler_2@global.empty_panel": { "size": [19, "fill"] } }
-                ]
-              }
-            },
-            { "filler_1@global.empty_panel": { "size": ["fill", "fill"] } }
-          ]
-        }
-      },
-      {
-        "label_holder@global.empty_stack": {
-          "orientation": "vertical",
-          "size": [230, 21],
-          "anchor_to": "top_middle",
+          "size": [230, 22],
           "anchor_from": "top_middle",
+          "anchor_to": "top_middle",
           "controls": [
-            { "filler_1@global.empty_panel": { "size": ["fill", 9] } },
+            {"filler_18@global.empty_panel": {"size": [230, 7]}},
             {
               "labels@global.empty_stack": {
                 "orientation": "horizontal",
-                "size": [230, 11],
+                "size": [230, 15],
                 "controls": [
-                  { "filler_1@global.empty_panel": { "size": [26, "fill"] } },
-                  { "primary_label@global.empty_panel": { "size": [99, "fill"] } },
-                  { "secondary_label@global.empty_panel": { "size": [105, "fill"] } }
+                  {"filler_19@global.empty_panel": {"size": [10, 15]}},
+                  {
+                    "primary_label_holder@global.empty_panel": {
+                      "size": [105, 15],
+                      "controls": [{"primary@beacon_screen.beacon_labels": {"text": "tile.beacon.primary"}}]
+                    }
+                  },
+                  {"filler_20@global.empty_panel": {"size": [2, 15]}},
+                  {
+                    "secondary_label_holder@global.empty_panel": {
+                      "size": [103, 15],
+                      "controls": [{"secondary@beacon_screen.beacon_labels": {"text": "tile.beacon.secondary"}}]
+                    }
+                  },
+                  {"filler_21@global.empty_panel": {"size": [10, 15]}}
                 ]
-              }
-            },
-            { "filler_2@global.empty_panel": { "size": ["fill", 1] } }
-          ]
-        }
-      },
-      {
-        "usable_items_panel@global.empty_panel": {
-          "size": [104, 18],
-          "anchor_to": "top_left",
-          "anchor_from": "top_left",
-          "controls": [
-            {
-              "netherite@beacon_screen.item_renderer": {
-                "offset": [20, 109],
-                "$item_property": { "#item_id_aux": 48627712 },
-                "bindings": [{ "binding_name": "#supports_netherite", "binding_name_override": "#visible" }]
-              }
-            },
-            {
-              "emerald@beacon_screen.item_renderer": {
-                "offset": [41, 109],
-                "$item_property": { "#item_id_aux": 25427968 }
-              }
-            },
-            {
-              "diamond@beacon_screen.item_renderer": {
-                "offset": [63, 109],
-                "$item_property": { "#item_id_aux": 17301504 }
-              }
-            },
-            {
-              "gold@beacon_screen.item_renderer": {
-                "offset": [86, 109],
-                "$item_property": { "#item_id_aux": 17432576 }
-              }
-            },
-            {
-              "iron@beacon_screen.item_renderer": {
-                "offset": [108, 109],
-                "$item_property": { "#item_id_aux": 17367040 }
               }
             }
           ]
@@ -269,128 +214,156 @@
       }
     ]
   },
-  "beacon_label@global.empty_label": {
-    "anchor_from": "top_middle",
-    "anchor_to": "top_middle",
-    "color": "$beacon_power_title_text_color",
+  "beacon_ore_texture_template@screen_content.image_element": {"size": [16, 16],"texture": "$ore_path"},
+
+  "beacon_labels@global.empty_label": {
+    "size": ["default", "default"],
+    "layer": 4,
+    "anchor_from": "center",
+    "anchor_to": "center",
+    "color": [0.867, 0.867, 0.867],
+    "localize": true,
     "shadow": true
   },
-  "item_renderer@global.empty_panel": {
-    "size": [16, 16],
-    "anchor_to": "top_left",
-    "anchor_from": "top_left",
-    "$item_property|default": {},
+  //toggles and toggle assets
+   "secondary_left_toggle@global.empty_panel": {
+    "size": [22, 22],
+    "controls": [{"secondary_regen@beacon_screen.primary_toggle": {"$button_name": "regen"}}]
+  },
+  "secondary_right_toggle@global.empty_panel": {
+    "size": [22, 22],
     "controls": [
-      {
-        "item_renderer@global.custom_renderer": {
-          "$type": "inventory_item_renderer",
-          "size": [16, 16],
-          "property_bag": "$item_property"
-        }
-      }
+      { "secondary_speed@beacon_screen.secondary_toggle_bridge"    : { "$effect_name": "speed"    } },
+      { "secondary_haste@beacon_screen.secondary_toggle_bridge"    : { "$effect_name": "haste"    } },
+      { "secondary_resist@beacon_screen.secondary_toggle_bridge"   : { "$effect_name": "resist"   } },
+      { "secondary_jump@beacon_screen.secondary_toggle_bridge"     : { "$effect_name": "jump"     } },
+      { "secondary_strength@beacon_screen.secondary_toggle_bridge" : { "$effect_name": "strength" } }
     ]
   },
-  "advanced_buttons_template@common.toggle": {
-    "size": [22, 22],
-    "layer": 4,
-    "focus_wrap_enabled": false,
-    "$toggle_name": "$button_name",
-    "checked_control": "checked",
-    "unchecked_control": "unchecked",
-    "checked_hover_control": "checked_hover",
-    "unchecked_hover_control": "unchecked_hover",
-    "checked_locked_control": "locked_default",
-    "unchecked_locked_control": "locked_default",
-    "checked_locked_hover_control": "locked_default",
-    "unchecked_locked_hover_control": "locked_default",
+  "secondary_toggle_bridge@beacon_screen.primary_toggle": {
+    "$button_name": "extra",
+    "$icon_path": "('assets/beacon_button_sprites/' + $effect_name)",
     "bindings": [
-      { "binding_collection_name": "$button_name", "binding_type": "collection_details" },
       {
-        "binding_type": "collection",
-        "binding_name": "#active",
-        "binding_collection_name": "$button_name",
-        "binding_name_override": "#enabled"
-      },
-      {
-        "binding_name": "#button_visible",
+        "binding_name": "#extra_image_selection",
         "binding_name_override": "#visible",
-        "binding_collection_name": "$button_name",
+        "binding_collection_name": "$effect_name",
         "binding_type": "collection"
-      },
-      {
-        "binding_type": "collection",
-        "binding_name": "#selected",
-        "binding_collection_name": "$button_name",
-        "binding_name_override": "#toggle_state"
       }
-    ],
-    "button_mappings": [
-      {
-        "from_button_id": "button.menu_select",
-        "to_button_id": "button.menu_ok",
-        "mapping_type": "pressed"
-      },
-      { "from_button_id": "button.menu_ok", "to_button_id": "button.menu_ok", "mapping_type": "pressed" }
-    ],
-    "$locked_button_texture|default": "assets/beacon_button_sprites/locked",
-    "$default_button_texture|default": "assets/beacon_button_sprites/default",
-    "$selected_button_texture|default": "assets/beacon_button_sprites/selected",
-    "$hover_button_texture|default": "assets/beacon_button_sprites/hover",
-    "variables": {
-      "requires": "($cb_is_thick_menu_buttons = true)",
-      "$locked_button_texture|default": "assets/minecraft/textures/gui/sprites/container/beacon/button_disabled.png",
-      "$default_button_texture|default": "assets/minecraft/textures/gui/sprites/container/beacon/button.png",
-      "$selected_button_texture|default": "assets/minecraft/textures/gui/sprites/container/beacon/button_selected.png",
-      "$hover_button_texture|default": "assets/minecraft/textures/gui/sprites/container/beacon/button_highlighted.png"
-    },
+    ]
+  },
+  
+  "primary_toggle@global.empty_panel": {
+    "size": [22, 22],
+    "$button_name|default": "none",
+    "$icon_path|default": "('assets/beacon_button_sprites/' + $button_name)",
     "controls": [
       {
-        "unchecked@beacon_screen.advanced_icons": {
-          "$advanced_button_icon": "('assets/beacon_button_sprites/' + $button_name)",
-          "$button_texture": "$default_button_texture"
+        "toggle_static_hover": {
+          "type": "button",
+          "layer": 7,
+          "size": [22, 22],
+          "default_focus_precedence": 1,
+          "hover_control": "hover_text",
+          "consume_event": false,
+          "button_mappings": [
+            {
+              "to_button_id": "button.container_slot_hovered",
+              "mapping_type": "pressed",
+              "consume_event": false
+            }
+          ],
+          "controls": [
+            {
+              "hover_text@global.hover_text": {
+                "bindings": [
+                  {
+                    "binding_name": "#button_hover",
+                    "binding_name_override": "#hover_text",
+                    "binding_collection_name": "$button_name",
+                    "binding_type": "collection"
+                  }
+                ]
+              }
+            }
+          ]
         }
       },
       {
-        "checked@beacon_screen.advanced_icons": {
-          "$advanced_button_icon": "('assets/beacon_button_sprites/' + $button_name)",
-          "$button_texture": "$selected_button_texture"
-        }
-      },
-      {
-        "locked_default@beacon_screen.advanced_icons": {
-          "$advanced_button_icon": "('assets/beacon_button_sprites/' + $button_name + '_locked')",
-          "$button_texture": "$locked_button_texture"
-        }
-      },
-      {
-        "unchecked_hover@beacon_screen.advanced_icons": {
-          "$advanced_button_icon": "('assets/beacon_button_sprites/' + $button_name)",
-          "$button_texture": "$hover_button_texture"
-        }
-      },
-      {
-        "checked_hover@beacon_screen.advanced_icons": {
-          "$advanced_button_icon": "('assets/beacon_button_sprites/' + $button_name)",
-          "$button_texture": "$selected_button_texture"
+        "toggle_control@toggle.radio_toggle": {
+          "size": [22, 22],
+          "$is_radio_toggle": false,
+          "$toggle_control_name": "('beacon_screen_' + $button_name)",
+          "$toggle_name": "$button_name",
+          "$button_mappings": [
+            {
+              "from_button_id": "button.menu_select",
+              "to_button_id": "button.menu_ok",
+              "mapping_type": "pressed"
+            },
+            {
+              "from_button_id": "button.menu_ok",
+              "to_button_id": "button.menu_ok",
+              "mapping_type": "pressed"
+            }
+          ],
+          "$bindings": [
+            {
+              "binding_collection_name": "$button_name",
+              "binding_type": "collection_details"
+            },
+            {
+              "binding_name": "#button_visible",
+              "binding_name_override": "#visible",
+              "binding_collection_name": "$button_name",
+              "binding_type": "collection"
+            },
+            {
+              "binding_type": "collection",
+              "binding_collection_name": "$button_name",
+              "binding_name": "#active",
+              "binding_name_override": "#enabled"
+            },
+            {
+              "binding_type": "collection",
+              "binding_name": "#selected",
+              "binding_collection_name": "$button_name",
+              "binding_name_override": "#toggle_state"
+            }
+          ],
+          "$unchecked": "beacon_screen.toggle_unchecked_visual",
+          "$unchecked_hover": "beacon_screen.toggle_hover_visual",
+          "$checked": "beacon_screen.toggle_checked_visual",
+          "$checked_hover": "beacon_screen.toggle_checked_visual",
+          "$locked": "beacon_screen.toggle_locked_visual",
+          "$extra_contents": "beacon_screen.toggle_icon",    
+          "variables": {
+            "requires": "($cb_is_thick_menu_buttons = true)",
+          
+            "$unchecked": "Thickly_Be-Beveled_Buttons.toggle_unchecked_visual",
+            "$unchecked_hover": "Thickly_Be-Beveled_Buttons.toggle_hover_visual",
+            "$checked": "Thickly_Be-Beveled_Buttons.toggle_checked_visual",
+            "$checked_hover": "Thickly_Be-Beveled_Buttons.toggle_checked_visual",
+            "$locked": "Thickly_Be-Beveled_Buttons.toggle_locked_visual"
+          }
         }
       }
     ]
   },
-  "advanced_icons@screen_content.image_element": {
+  "beacon_toggle_texture_template@screen_content.image_element": {
     "size": [22, 22],
     "layer": 4,
-    "$advanced_button_icon|default": "",
-    "texture": "$button_texture",
-    "controls": [
-      {
-        "advanced_icons@screen_content.image_element": {
-          "texture": "$advanced_button_icon",
-          "layer": 6,
-          "anchor_from": "center",
-          "anchor_to": "center",
-          "size": [18, 18]
-        }
-      }
-    ]
+    "nineslice_size": 2
+  },
+  "toggle_unchecked_visual@beacon_screen.beacon_toggle_texture_template" : {"texture": "assets/beacon_button_sprites/default"  },
+  "toggle_hover_visual@beacon_screen.beacon_toggle_texture_template"     : {"texture": "assets/beacon_button_sprites/hover"    },
+  "toggle_checked_visual@beacon_screen.beacon_toggle_texture_template"   : {"texture": "assets/beacon_button_sprites/selected" },
+  "toggle_locked_visual@beacon_screen.beacon_toggle_texture_template": {"texture": "assets/beacon_button_sprites/locked"},
+  "toggle_icon@screen_content.image_element": {
+    "size": [18, 18],
+    "layer": 5,
+    "anchor_from": "center",
+    "anchor_to": "center",
+    "texture": "$icon_path"
   }
 }

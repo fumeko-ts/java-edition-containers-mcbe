@@ -44,7 +44,6 @@
   },
 
   //layout
-  
 
   "recipe_toggle@screen_content.image_element": {
     "size": [20, 18],
@@ -67,5 +66,20 @@
   },
   "filter_enabled_highlighted@crafting_common.filter_button_template": {
     "texture": "assets/minecraft/textures/gui/sprites/recipe_book/filter_enabled_highlighted.png"
+  },
+
+  //beacon buttons
+
+  "toggle_unchecked_visual@beacon_screen.beacon_toggle_texture_template": {
+    "texture": "assets/minecraft/textures/gui/sprites/container/beacon/button.png"
+  },
+  "toggle_hover_visual@beacon_screen.beacon_toggle_texture_template": {
+    "texture": "assets/minecraft/textures/gui/sprites/container/beacon/button_highlighted.png"
+  },
+  "toggle_checked_visual@beacon_screen.beacon_toggle_texture_template": {
+    "texture": "assets/minecraft/textures/gui/sprites/container/beacon/button_selected.png"
+  },
+  "toggle_locked_visual@beacon_screen.beacon_toggle_texture_template": {
+    "texture": "assets/minecraft/textures/gui/sprites/container/beacon/button_disabled.png"
   }
 }

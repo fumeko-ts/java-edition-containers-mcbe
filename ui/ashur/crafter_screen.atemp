@@ -17,7 +17,6 @@
 {
   "namespace": "crafter_screen",
   "panel_crafter@container_common.container_details": {
-    "layer": 1,
     "size": [176, 166],
     "$screen_controls": [
       { "base_panel@screen_content.crafter": {} },

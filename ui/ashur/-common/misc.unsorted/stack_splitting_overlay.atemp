@@ -17,26 +17,26 @@
 {
   "namespace": "stack_splitting_overlay",
   "stack_splitting_overlay@global.empty_panel": {
-    "size": [ 128, 20 ],
+    "size": [128, 20],
     "layer": 900,
     "anchor_from": "top_middle",
     "anchor_to": "top_middle",
-    "offset": [ 0, 10 ],
+    "offset": [0, 10],
     "controls": [
       {
         "progressive_select_progress_bar_underlay@screen_content.image_element": {
           "layer": 1,
           "texture": "textures/stack_split_underlay",
-          "max_size": [ 128, 17 ],
-          "size": [ "default", "default" ]
+          "max_size": [128, 17],
+          "size": ["default", "default"]
         }
       },
       {
         "progressive_select_progress_bar@screen_content.image_element": {
           "layer": 2,
           "texture": "textures/stack_split_progress",
-          "size": [ "default", "default" ],
-          "max_size": [ 122, 17 ],
+          "size": ["default", "default"],
+          "max_size": [122, 17],
           "clip_direction": "left",
           "clip_pixelperfect": false,
           "bindings": [
@@ -49,16 +49,17 @@
         }
       },
       {
-        "progressive_select_text@global.empty_label": {
+        "progressive_select_text": {
+          "type": "label",
           "text": "#progressive_select_text",
           "color": "white",
           "layer": 3,
-          "bindings": [ {"binding_name": "#progressive_select_text", "binding_condition": "always"} ]
+          "bindings": [{ "binding_name": "#progressive_select_text", "binding_condition": "always" }]
         }
       }
     ],
     "bindings": [
-      {"binding_condition": "always", "binding_name": "#progressive_select_text"},
+      { "binding_condition": "always", "binding_name": "#progressive_select_text" },
       {
         "binding_type": "view",
         "binding_condition": "always",

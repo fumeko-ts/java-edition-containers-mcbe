@@ -135,9 +135,6 @@
     "type": "input_panel",
     "size": [25, 25],
     "layer": 4,
-    "$binding_value|default": "#none",
-    "$cell_image_binding|default": "#none",
-    "$texture|default": "textures/ui/white",
     "controls": [
       {
         "item_holder@global.empty_panel": {
@@ -149,19 +146,9 @@
         }
       },
       {
-        "recipe_button@button_mappings.recipe_button_item": {
+        "recipe_button@button_mappings.survival_recipe_cell_button": {
           "hover_control": "hover",
-          "focus_enabled": false,
-          "focus_wrap_enabled": false,
-          "focus_magnet_enabled": false,
-          "layer": 2,
-          "bindings": [
-            {
-              "binding_type": "collection_details",
-              "binding_collection_name": "recipe_book",
-              "binding_condition": "once"
-            }
-          ],
+          "pressed_control": "hover",
           "controls": [
             {
               "hover@global.hover_text": {
@@ -208,6 +195,8 @@
     ]
   },
   "touch_selected@global.empty_panel": {
+    "$texture|default": "",
+    "$binding_value|default": "",
     "controls": [
       {
         "touch_item@global.empty_image": {
@@ -219,8 +208,7 @@
               "binding_name": "$binding_value",
               "binding_name_override": "#visible",
               "binding_type": "collection",
-              "binding_collection_name": "crafting_output_items",
-              "binding_condition": "always"
+              "binding_collection_name": "crafting_output_items"
             }
           ]
         }

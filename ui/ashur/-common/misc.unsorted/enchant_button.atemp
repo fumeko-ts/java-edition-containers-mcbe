@@ -256,7 +256,7 @@
           ],
           "$mapping_type|default": "pressed",
           "variables": {
-            "requires": "($touch or $pocket_edition)",
+            "requires": "$touch",
             "$mapping_type|default": "double_pressed"
           },
           "$selectable_orb|default": "('assets/sprites/container/enchanting_table/level_' + $collection_index)",

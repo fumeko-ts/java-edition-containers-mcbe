@@ -145,7 +145,7 @@
                                                     "$background_images": "crafting_textures.main_cell_panel",
                                                     "$item_renderer_binding_condition": "always",
                                                     "$cell_size": [26, 26],
-                                                    "$button_ref": "button_mappings.crafting_output_button",
+                                                    "$button_control": "button_mappings.crafting_output_button",
                                                     "$stack_count_offset": [-3, -3],
                                                     "anchor_from": "center",
                                                     "anchor_to": "center",

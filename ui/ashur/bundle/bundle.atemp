@@ -189,7 +189,7 @@
                       "bindings": [
                         {
                           "binding_name": "#bundle_tooltip_grid_dimensions",
-                          "binding_condition": "always"
+                          "binding_condition": "always_when_visible"// was always but now its not
                         }
                       ]
                     }
@@ -226,7 +226,7 @@
                         {
                           "binding_name": "#bundle_weight_bar_ratio",
                           "binding_name_override": "#clip_ratio",
-                          "binding_condition": "always"
+                          "binding_condition": "always_when_visible"
                         },
                         { "binding_name": "(not #is_selected_bundle_full)", "binding_name_override": "#visible" }
                       ]

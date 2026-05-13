@@ -15,5 +15,14 @@
 */
 
 {
-  "smithing_table_screen@global.container_screen": {"$screen_content": "smithing_table_screen.smithing_table_panel"}
+  "smithing_table_screen@global.container_screen": {
+    "$screen_content": "smithing_table_screen.smithing_table_panel"
+    // ,
+    // "variables": [
+    //   {
+    //     "requires": "$is_déesse_ui_pack",
+    //     "$extra_screen_elements": "Déesse_UI_Pack.smithing_overlay"
+    //   }
+    // ]
+  }
 }

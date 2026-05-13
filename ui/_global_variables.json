@@ -1,22 +1,8 @@
-/**
-// © 2026 ashura_temps,    All Rights Reserved.
-//
-// This UI is custom-made. You are allowed to use it **only as-is**, inside the game.
-// Do not modify, extract, reuse, or share any part of this UI including .json, .atemp files,
-// layout structure, or design.
-//
-// Not allowed:
-//   - Editing the UI (even for private/personal use)
-//   - Using parts of the code or layout in your own pack
-//   - Reuploading, redistributing, or hosting these files elsewhere
-//   - Converting texture packs to Bedrock using this UI
-//
-// By using this project, you agree to these terms.
-*/
-
 {
   //used for compatibility
   "$is_java_containers": true,
+
+  "$_pack_creator": "ashura_temps/ashura_tepes",
 
   //set UI transparency 0 - 1 (can be a float or a int)
   "$container_opacity": 1,
@@ -67,6 +53,9 @@
   "$is_jei_recipe_book_layout_pack": false,
   "$is_déesse_ui_pack": false,
   "$ashur:brewing_guide": false,//var for a pack im working on (a full brewing guide thats interactive and performance light)
+
+  "$pack_scope": "global",
+
 
   "$brewing_content": "global.empty_panel",
   "$jc:dev": false

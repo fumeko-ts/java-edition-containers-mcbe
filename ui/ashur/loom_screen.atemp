@@ -139,7 +139,7 @@
                 "anchor_to": "bottom_left",
                 "anchor_from": "bottom_left",
                 "$item_collection": "loom_result_items",
-                "$button_ref": "button_mappings.loom_result_slot_button"
+                "$button_control": "button_mappings.loom_output_button"
               }
             }
           ]

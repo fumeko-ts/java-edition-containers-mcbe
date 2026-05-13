@@ -135,22 +135,27 @@
   "variables": {},
   "radio_toggle@global.empty_panel": {
     "size": "$size",
-    "$size": [18, 18], // by default 18 because most elements i use this for is 18x18
+    "$size": [18, 18], 
+
+    "$toggle_control_name|default": "Toggle",
+    "$toggle_name|default": "Default_toggle",
+
     "$is_radio_toggle|default": true,
     "$radio_collection_name|default": "none",
     "$is_default_active|default": false,
     "$toggle_group_forced_index|default": -1,
     "$sound_name|default": "random.click",
     "$radio_collection_condition|default": "always",
+    "$pressed_id|default": "button.menu_ok",
     "$button_mappings|default": [
       {
         "from_button_id": "button.menu_select",
-        "to_button_id": "button.menu_select",
+        "to_button_id": "$pressed_id",
         "mapping_type": "pressed"
       },
       {
         "from_button_id": "button.menu_ok",
-        "to_button_id": "button.menu_ok",
+        "to_button_id": "$pressed_id",
         "mapping_type": "pressed"
       }
     ],
@@ -196,7 +201,7 @@
       {
         "$toggle_control_name@$toggle_variables": {
           "type": "toggle",
-          "size": "$size",
+          "size": ["100%", "100%"],
           "focus_enabled": false,
           "focus_wrap_enabled": false,
           "focus_magnet_enabled": false,
