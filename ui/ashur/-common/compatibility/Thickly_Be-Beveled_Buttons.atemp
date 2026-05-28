@@ -55,16 +55,16 @@
   },
   //crafting recipe book filter
 
-  "filter_disabled@crafting_common.filter_button_template": {
+  "crafting_filter_unchecked@screen_content.filter_texture_template": {
     "texture": "assets/minecraft/textures/gui/sprites/recipe_book/filter_disabled.png"
   },
-  "filter_disabled_highlighted@crafting_common.filter_button_template": {
+  "crafting_filter_unchecked_hover@screen_content.filter_texture_template": {
     "texture": "assets/minecraft/textures/gui/sprites/recipe_book/filter_disabled_highlighted.png"
   },
-  "filter_enabled@crafting_common.filter_button_template": {
+  "crafting_filter_checked@screen_content.filter_texture_template": {
     "texture": "assets/minecraft/textures/gui/sprites/recipe_book/filter_enabled.png"
   },
-  "filter_enabled_highlighted@crafting_common.filter_button_template": {
+  "crafting_filter_checked_hover@screen_content.filter_texture_template": {
     "texture": "assets/minecraft/textures/gui/sprites/recipe_book/filter_enabled_highlighted.png"
   },
 

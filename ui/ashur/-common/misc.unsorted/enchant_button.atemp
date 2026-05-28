@@ -164,8 +164,11 @@
           "type": "button",
           "layer": 500,
           "size": [108, 19],
-          "default_focus_precedence": 1,
           "hover_control": "hover",
+          "focus_enabled": "$game_pad",
+          "focus_wrap_enabled": false,
+          "focus_magnet_enabled": false,
+          "default_focus_precedence": 1,
           "consume_event": false,
           "button_mappings": [
             {

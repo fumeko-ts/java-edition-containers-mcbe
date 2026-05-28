@@ -214,7 +214,7 @@
       }
     ]
   },
-  "beacon_ore_texture_template@screen_content.image_element": {"size": [16, 16],"texture": "$ore_path"},
+  "beacon_ore_texture_template@global.empty_image": {"size": [16, 16],"texture": "$ore_path"},
 
   "beacon_labels@global.empty_label": {
     "size": ["default", "default"],
@@ -263,6 +263,9 @@
           "type": "button",
           "layer": 7,
           "size": [22, 22],
+          "focus_enabled": "$game_pad",
+          "focus_wrap_enabled": false,
+          "focus_magnet_enabled": false,
           "default_focus_precedence": 1,
           "hover_control": "hover_text",
           "consume_event": false,
@@ -359,7 +362,7 @@
   "toggle_hover_visual@beacon_screen.beacon_toggle_texture_template"     : {"texture": "assets/beacon_button_sprites/hover"    },
   "toggle_checked_visual@beacon_screen.beacon_toggle_texture_template"   : {"texture": "assets/beacon_button_sprites/selected" },
   "toggle_locked_visual@beacon_screen.beacon_toggle_texture_template": {"texture": "assets/beacon_button_sprites/locked"},
-  "toggle_icon@screen_content.image_element": {
+  "toggle_icon@global.empty_image": {
     "size": [18, 18],
     "layer": 5,
     "anchor_from": "center",

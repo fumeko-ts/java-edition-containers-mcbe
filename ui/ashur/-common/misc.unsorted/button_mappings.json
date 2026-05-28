@@ -64,6 +64,11 @@
     "$has_cancel_button|default": false,
     "$has_shape_drawing|default": true,
     "$has_coalesce_action|default": false,
+    "$hover_action_mapping|default": "pressed",
+    "variables": {
+      "requires": "$touch",
+      "$hover_action_mapping|default": "focused"
+    },
     
     "button_mappings": [
       { "from_button_id": "button.menu_cancel"                 , "to_button_id": "$cancel_button_action"     , "mapping_type": "pressed"              , "ignored": "(not $has_cancel_button)" },
@@ -79,7 +84,7 @@
       { "to_button_id"  : "$shape_drawing_action"              , "mapping_type": "pressed"                   , "ignored": "(not $has_shape_drawing)" },
       { "from_button_id": "button.menu_select"                 , "to_button_id": "$coalesce_button_action"   , "mapping_type": "double_pressed"       , "ignored": "(not $has_coalesce_action)" },
       { "from_button_id": "button.menu_ok"                     , "to_button_id": "$coalesce_button_action"   , "mapping_type": "double_pressed"       , "ignored": "(not $has_coalesce_action)" },
-      { "to_button_id"  : "$hovered_action"                    , "mapping_type": "pressed" }
+      { "to_button_id"  : "$hovered_action"                    , "mapping_type": "$hover_action_mapping" }
     ]
   },
 

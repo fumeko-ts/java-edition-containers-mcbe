@@ -37,8 +37,7 @@
                 "controls": [
                   { "left_filler@global.empty_panel": { "size": [1, "fill"] } },
                   {
-                    "enchantments_button_grid": {
-                      "type": "grid",
+                    "enchantments_button_grid@global.empty_grid": {
                       "layer": 6,
                       "size": [108, 57],
                       "collection_name": "#enchant_buttons",

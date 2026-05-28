@@ -115,13 +115,11 @@
                                       }
                                     },
                                     {
-                                      "crafting_3x3_grid": {
-                                        "type": "grid",
+                                      "crafting_3x3_grid@global.empty_grid": {
                                         "size": [54, 54],
                                         "grid_dimensions": [3, 3],
                                         "collection_name": "$item_collection",
                                         "$item_collection": "crafting_input_items",
-                                        "$cell_size": [18, 18],
                                         "$background_images": "crafting_textures.main_cell_panel",
                                         "$item_renderer_binding_condition": "always",
                                         "grid_item_template": "jc_container_item.container_item"
@@ -141,15 +139,17 @@
                                               "size": [26, 26],
                                               "controls": [
                                                 {
+                                                  "underlay@crafting_textures.main_cell_panel": {
+                                                    "$item_collection|default": "crafting_output_items"
+                                                  }
+                                                },
+                                                {
                                                   "crafting_output_slot@jc_container_item.container_item": {
-                                                    "$background_images": "crafting_textures.main_cell_panel",
-                                                    "$item_renderer_binding_condition": "always",
-                                                    "$cell_size": [26, 26],
                                                     "$button_control": "button_mappings.crafting_output_button",
-                                                    "$stack_count_offset": [-3, -3],
+                                                    "$item_renderer_binding_condition": "always",
+                                                    "$item_collection": "crafting_output_items",
                                                     "anchor_from": "center",
-                                                    "anchor_to": "center",
-                                                    "$item_collection": "crafting_output_items"
+                                                    "anchor_to": "center"
                                                   }
                                                 }
                                               ]

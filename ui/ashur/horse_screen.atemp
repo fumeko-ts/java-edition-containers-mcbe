@@ -60,8 +60,7 @@
           "anchor_from": "top_right",
           "controls": [
             {
-              "inventory_grid": {
-                "type": "grid",
+              "inventory_grid@global.empty_grid": {
                 "anchor_to": "bottom_left",
                 "anchor_from": "bottom_left",
                 "$item_collection": "container_items",
@@ -109,8 +108,7 @@
                           }
                         },
                         {
-                          "equip_grid": {
-                            "type": "grid",
+                          "equip_grid@global.empty_grid": {
                             "max_size": [18, 36],
                             "min_size": [18, 18],
                             "collection_name": "horse_equip_items",

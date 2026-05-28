@@ -221,7 +221,7 @@
         }
       },
       {
-        "anvil_highlight@screen_content.image_element": {
+        "anvil_highlight@global.empty_image": {
           "texture": "textures/anvil_highlight.png",
           "alpha": "@anvil_screen.anvil_highlight_alpha_1",
           "size": [68, 33],

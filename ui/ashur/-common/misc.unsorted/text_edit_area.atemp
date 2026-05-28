@@ -113,6 +113,12 @@
         "binding_name_override": "#enabled"
       }
     ],
+
+    "focus_enabled": "$game_pad", // true when a controller is connected ?
+    "focus_wrap_enabled": false,
+    "focus_magnet_enabled": false,
+    "default_focus_precedence": 1,
+    
     "controls": [
       {
         "text_clipping_panel@global.empty_panel": {

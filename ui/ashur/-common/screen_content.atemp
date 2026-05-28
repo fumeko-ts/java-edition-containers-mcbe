@@ -16,15 +16,18 @@
 
 {
   "namespace": "screen_content",
+  //need to rewrite this file again its gotten messy
 
   //base ui elements
-  "image_element@global.empty_image": { "alpha": "$container_opacity" },
-  "screen_background": {
-    "type": "image",
+  "image_element@global.empty_image": {
+    "color": "$container_color",
+    "alpha": "$container_opacity"
+  },
+
+  "screen_background@global.empty_image": {
     "texture": "textures/ui/screen_background",
     "layer": -1000,
-    "$screen_background_alpha|default": 0.78,
-    "alpha": "$screen_background_alpha"
+    "alpha": 0.79
   },
   // base ui template
   "container_template@screen_content.image_element": {
@@ -42,17 +45,6 @@
         "close_button@global.close_button": {}
       }
     ]
-  },
-  // debug viewer
-  "debug_element@screen_content.image_element": {
-    "texture": "textures/ui/white",
-    "alpha": 0.4,
-    "nineslice_size": 1,
-    "uv": [2, 2],
-    "uv_size": [1, 1],
-    "color": "cyan",
-    "size": ["100%", "100%"],
-    "layer": 30
   },
   // creative inventory sprites
 
@@ -74,8 +66,7 @@
 
   //recipe book button textures
   "recipe_direction_base@screen_content.image_element": {
-    "size": [12, 17],
-    "layer": 2
+    "size": [12, 17]
   },
   "page_left@screen_content.recipe_direction_base": {
     "texture": "assets/sprites/recipe_book/page_backward"
@@ -212,16 +203,12 @@
   },
   "recipe_book@screen_content.image_element": {
     "texture": "assets/recipe_book",
-    "size": [147, 166],
-    "layer": 1
+    "size": [147, 166]
   },
   //slot overlays and highlights
-  "highlight_slot@screen_content.image_element": {
+  "highlight_slot@global.empty_image": {
     "texture": "textures/ui/ashur/white_slot",
-    "size": "$white_highlight_slot_size",
-    "offset": "$white_highlight_slot_offset",
-    "$white_highlight_slot_offset|default": [0, 0],
-    "$white_highlight_slot_size|default": [16, 16],
+    "size": [16, 16],
     "alpha": 0.45
   },
   "armor_overlay@screen_content.image_element": {
@@ -272,13 +259,12 @@
   },
   "crafter_disabled_slot@screen_content.image_element": {
     "size": [18, 18],
-    "nineslice_size": 1,
     "texture": "assets/sprites/container/crafter/disabled_slot"
   },
 
   //buttons and interactive elements
 
-  "redstone_activated_bindings@screen_content.image_element": {
+  "redstone_activated_bindings@global.empty_image": {
     "size": [16, 16],
     "layer": 12,
     "texture": "$arrow_texture",
@@ -310,5 +296,22 @@
     "nineslice_size": 1,
     "texture": "assets/sprites/recipe_book/text_field_highlighted",
     "size": ["100%", "100%"]
+  },
+
+  //craftin recipe book filter
+  "filter_texture_template@screen_content.image_element": {
+    "size": [26, 16]
+  },
+  "crafting_filter_unchecked@screen_content.filter_texture_template": {
+    "texture": "assets/sprites/recipe_book/filter_disabled"
+  },
+  "crafting_filter_unchecked_hover@screen_content.filter_texture_template": {
+    "texture": "assets/sprites/recipe_book/filter_disabled_highlighted"
+  },
+  "crafting_filter_checked@screen_content.filter_texture_template": {
+    "texture": "assets/sprites/recipe_book/filter_enabled"
+  },
+  "crafting_filter_checked_hover@screen_content.filter_texture_template": {
+    "texture": "assets/sprites/recipe_book/filter_enabled_highlighted"
   }
 }

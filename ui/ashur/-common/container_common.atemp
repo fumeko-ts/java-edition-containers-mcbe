@@ -17,61 +17,26 @@
 {
   "namespace": "container_common",
   "container_details@global.root_panel": {
-    "$size": ["100%", "100%"],
-    "anchor_to": "center",
-    "anchor_from": "center",
     "layer": 5,
     "controls": [
-      { "screen@global.empty_panel": { "size": ["100%", "100%"], "controls": "$screen_controls" } },
-      { "flying_selected@container_common.item_flying_selected": {} },
       {
-        "controller_pointer": {
+        "screen@global.empty_panel": {
+          "size": ["100%", "100%"],
+          "controls": "$screen_controls"
+        }
+      },
+      {
+        "item_flying_selected": {
           "type": "button",
-          "visible": "$game_pad",
           "layer": -10,
-          "size": [16, 16],
+          "size": [18, 18],
           "follows_cursor": true,
           "always_handle_pointer": true,
-          "controls": [
-            {
-              "gamepad_cursor_image@global.empty_image": {
-                "texture": "textures/ui/pointer",
-                "size": [14, 14],
-                "layer": 60,
-                "follows_cursor": true,
-
-                "bindings": [
-                  {
-                    "binding_name": "#gamepad_cursor_visible",
-                    "binding_name_override": "#visible",
-                    "binding_condition": "always"
-                  }
-                ]
-              }
-            }
-          ]
-        }
-      }
-    ]
-  },
-  "item_flying_selected": {
-    "type": "button",
-    "anchor_from": "center",
-    "anchor_to": "center",
-    "layer": -10,
-    "size": [16, 16],
-    "follows_cursor": true,
-    "always_handle_pointer": true,
-    "controls": [
-      {
-        "held_flying_renderer@global.empty_panel": {
-          "size": [18, 18],
           "controls": [
             {
               "inventory_selected_icon@jc_container_item.item_renderer": {
                 "layer": 50,
                 "size": [16, 16],
-                "offset": [-1, -2],
                 "bindings": [
                   {
                     "binding_name": "#inventory_selected_item",
@@ -128,91 +93,87 @@
                 "anchor_from": "bottom_right",
                 "layer": 53,
                 "shadow": true,
-                "offset": [-1, -1],
+                "offset": [0, 1],
                 "color": "$selected_item_stack_count_color",
                 "text": "#inventory_selected_item_stack_count",
                 "bindings": [
-                  { "binding_name": "#inventory_selected_item_stack_count", "binding_condition": "always_when_visible" }
+                  {
+                    "binding_name": "#inventory_selected_item_stack_count",
+                    "binding_condition": "always_when_visible"
+                  }
                 ]
               }
             },
             {
-              "hover_text@global.hover_text": {
-                "layer": 59,
-                "bindings": [{ "binding_name": "#using_touch", "binding_name_override": "#visible" }]
+              "durability_bar_grabbed@global.custom_renderer": {
+                "$type": "progress_bar_renderer",
+                "layer": 61,
+                "offset": [-2, -2],
+                "anchor_from": "bottom_right",
+                "anchor_to": "bottom_right",
+                "size": [12, 1],
+                "property_bag": {
+                  "drop_shadow": true,
+                  "is_durability": true,
+                  "round_value": true
+                },
+                "bindings": [
+                  {
+                    "binding_name": "#selected_item_durability_visible",
+                    "binding_name_override": "#touch_progress_bar_visible",
+                    "binding_condition": "always_when_visible"
+                  },
+                  {
+                    "binding_name": "#selected_item_durability_total_amount",
+                    "binding_name_override": "#progress_bar_total_amount",
+                    "binding_condition": "always_when_visible"
+                  },
+                  {
+                    "binding_name": "#selected_item_durability_current_amount",
+                    "binding_name_override": "#progress_bar_current_amount",
+                    "binding_condition": "always_when_visible"
+                  }
+                ]
               }
-            }
-          ]
-        }
-      },
-      {
-        "durability_bar_grabbed@global.custom_renderer": {
-          "$type": "progress_bar_renderer",
-          "layer": 61,
-          "offset": [-3, -4],
-          "anchor_from": "bottom_right",
-          "anchor_to": "bottom_right",
-          "size": [12, 1],
-          "property_bag": {
-            "drop_shadow": true,
-            "is_durability": true,
-            "round_value": true
-          },
-          "bindings": [
-            {
-              "binding_name": "#selected_item_durability_visible",
-              "binding_name_override": "#touch_progress_bar_visible",
-              "binding_condition": "always_when_visible"
             },
             {
-              "binding_name": "#selected_item_durability_total_amount",
-              "binding_name_override": "#progress_bar_total_amount",
-              "binding_condition": "always_when_visible"
-            },
-            {
-              "binding_name": "#selected_item_durability_current_amount",
-              "binding_name_override": "#progress_bar_current_amount",
-              "binding_condition": "always_when_visible"
-            }
-          ]
-        }
-      },
-      {
-        "storage_bar_grabbed@global.custom_renderer": {
-          "$type": "progress_bar_renderer",
-          "offset": [-3, -4],
-          "anchor_from": "bottom_right",
-          "anchor_to": "bottom_right",
-          "size": [12, 1],
-          "layer": 61,
-          "primary_color": [0.4, 0.4, 1.0, 1.0],
-          "full_storage_color": [1.0, 0.4, 0.4],
-          "property_bag": {
-            "drop_shadow": true,
-            "is_storage_bar": true
-          },
-          "bindings": [
-            {
-              "binding_name": "#selected_item_storage_visible",
-              "binding_name_override": "#progress_bar_visible",
-              "binding_condition": "always_when_visible"
-            },
-            {
-              "binding_name": "#selected_item_storage_total_amount",
-              "binding_name_override": "#progress_bar_total_amount",
-              "binding_condition": "always_when_visible"
-            },
-            {
-              "binding_name": "#selected_item_storage_current_amount",
-              "binding_name_override": "#progress_bar_current_amount",
-              "binding_condition": "always_when_visible"
+              "storage_bar_grabbed@global.custom_renderer": {
+                "$type": "progress_bar_renderer",
+                "offset": [-2, -2],
+                "anchor_from": "bottom_right",
+                "anchor_to": "bottom_right",
+                "size": [12, 1],
+                "layer": 61,
+                "primary_color": [0.4, 0.4, 1.0, 1.0],
+                "full_storage_color": [1.0, 0.4, 0.4],
+                "property_bag": {
+                  "drop_shadow": true,
+                  "is_storage_bar": true
+                },
+                "bindings": [
+                  {
+                    "binding_name": "#selected_item_storage_visible",
+                    "binding_name_override": "#progress_bar_visible",
+                    "binding_condition": "always_when_visible"
+                  },
+                  {
+                    "binding_name": "#selected_item_storage_total_amount",
+                    "binding_name_override": "#progress_bar_total_amount",
+                    "binding_condition": "always_when_visible"
+                  },
+                  {
+                    "binding_name": "#selected_item_storage_current_amount",
+                    "binding_name_override": "#progress_bar_current_amount",
+                    "binding_condition": "always_when_visible"
+                  }
+                ]
+              }
             }
           ]
         }
       }
     ]
   },
-
   //container element sections
 
   "container_bottom_section@global.empty_stack": {

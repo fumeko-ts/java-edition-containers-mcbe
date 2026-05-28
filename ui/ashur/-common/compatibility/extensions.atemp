@@ -1,6 +1,101 @@
 {
   "namespace": "jc-extensions",
+  "compatability": {
+    "type": "panel",
+    "$compatability_content|default": "jc-extensions.empty_panel",
+    /*
+      any defs and controls placed within $compatability_content or $compatability_controls
+      will have access to the $is_*_screen vars below, they all return true/false,
+    
+      $is_crafting_screen       - outputs - true|false 
+      $is_inventory_screen      - outputs - true|false 
+      $is_anvil_screen          - outputs - true|false 
+      $is_beacon_screen         - outputs - true|false 
+      $is_blast_furnace_screen  - outputs - true|false 
+      $is_brewing_stand_screen  - outputs - true|false 
+      $is_cartography_screen    - outputs - true|false 
+      $is_small_chest_screen    - outputs - true|false 
+      $is_double_chest_screen   - outputs - true|false 
+      $is_ender_chest_screen    - outputs - true|false 
+      $is_shulker_screen        - outputs - true|false 
+      $is_barrel_screen         - outputs - true|false 
+      $is_enchanting_screen     - outputs - true|false 
+      $is_furnace_screen        - outputs - true|false 
+      $is_grindstone_screen     - outputs - true|false 
+      $is_mount_screen          - outputs - true|false 
+      $is_loom_screen           - outputs - true|false 
+      $is_crafter_screen        - outputs - true|false 
+      $is_dropper_screen        - outputs - true|false 
+      $is_dispenser_screen      - outputs - true|false 
+      $is_hopper_screen         - outputs - true|false 
+      $is_smithing_table_screen - outputs - true|false
+      $is_smoker_screen         - outputs - true|false 
+      $is_stonecutter_screen    - outputs - true|false 
+      $is_trading_screen        - outputs - true|false 
 
+      creative_inventory is a special case. it shares the inventory screen
+      so there is no $is_creative_inventory_screen variable
+
+      to show/hide elements based on creative mode use a binding instead
+
+      "bindings": [
+        {
+          "binding_type": "global",
+          "binding_condition": "always",
+          "binding_name": "(not #is_creative_mode)",  // flip condition to show only in creative
+          "binding_name_override": "#visible"
+        }
+      ]
+    */
+    "controls": "$compatability_controls",
+    "$compatability_controls": [
+      {
+        "$compatability_content@$compatability_content": {}
+      }
+    ],
+
+    "variables": [
+      /*
+        if you want to inject a single element or a tree of elements (like a stack panel)
+        use $compatability_content like this
+
+        {
+          "requires": "$is_hopper_screen",  // fires when the hopper screen is open
+
+          "$compatability_content": "<namespace>.<definition_to_inject>"
+        },
+
+
+        if you need to inject multiple separate things that cant live under one parent
+        use $compatability_controls instead:
+
+        {
+          "requires": "$is_dropper_screen",  // fires when the dropper screen is open
+
+          "$compatability_controls": [
+            { "thing_1@<namespace>.<definition_to_inject_1>": {} },
+            { "thing_2@<namespace>.<definition_to_inject_2>": {} },
+            { "thing_3@<namespace>.<definition_to_inject_3>": {} }
+          ]
+        },
+
+        {
+          // $some_other_variable should be a global var defined in your _global_variables.json within your own pack
+
+          "requires": "($is_dropper_screen and $some_other_variable)",
+
+          "$compatability_content": "<namespace>.<definition_to_inject>",
+
+          "$compatability_controls": [
+            // extending $compatability_content here reuses the def set above in this same entry
+            { "thing_1@$compatability_content": {} },
+            { "thing_2@<namespace>.<definition_to_inject_2>": {} },
+            { "thing_3@<namespace>.<definition_to_inject_3>": {} }
+          ]
+        }
+      */
+    ]
+  },
   // screens
   "anvil_screen@jc-extensions.compatability": {},
   "blast_furnace_screen@jc-extensions.compatability": {},
@@ -16,51 +111,20 @@
   "stonecutter_screen@jc-extensions.compatability": {},
   "trading_screen@jc-extensions.compatability": {},
   "beacon_screen@jc-extensions.compatability": {},
-
-  //inventorys
-  "inventory_screen@jc-extensions.compatability_inventory_contents": {},
-  "crafting_screen@jc-extensions.compatability_inventory_contents": {},
-
-  "creative_inventory@jc-extensions.compatability_inventory_contents": {},
-
+  // inventories
+  "inventory_screen@jc-extensions.compatability": {},
+  "crafting_screen@jc-extensions.compatability": {},
+  "creative_inventory@jc-extensions.compatability": {},
   // redstone blocks
   "crafter_screen@jc-extensions.compatability": {},
   "dispenser_screen@jc-extensions.compatability": {},
   "dropper_screen@jc-extensions.compatability": {},
   "hopper_screen@jc-extensions.compatability": {},
-
   // container blocks
-  "barrel_screen@jc-extensions.compatability_container_contents": {},
-  "double_chest_screen@jc-extensions.compatability_container_contents": {},
-  "ender_chest_screen@jc-extensions.compatability_container_contents": {},
-  "shulker_screen@jc-extensions.compatability_container_contents": {},
-  "small_chest_screen@jc-extensions.compatability_container_contents": {},
-
-  //extended defs
-  "compatability": {
-    "type": "panel",
-    "$compatability_content|default": "global.empty_panel",
-    "$is_crafting_screen|default": "($screen_content = 'crafting_screen.screen_base')",
-    "$is_inventory_screen|default": "($screen_content = 'inventory_screen.screen_base')",
-    "controls": [
-      {
-        "$compatability_content@$compatability_content": {}
-      }
-    ]
-  },
-
-  "compatability_container_contents@jc-extensions.compatability": {
-    // "variables": {
-    //   "requires": "$is_déesse_ui_pack",
-    //   "$compatability_content|default": "Déesse_UI_Pack.chest_contents"
-    // }
-  },
-
-  //inventory and crafting screens
-  "compatability_inventory_contents@jc-extensions.compatability_container_contents": {
-    // "variables": {
-    //   "requires": "$is_déesse_ui_pack",
-    //   "$compatability_content|default": "Déesse_UI_Pack.inventory_content"
-    // }
-  }
+  "barrel_screen@jc-extensions.compatability": {},
+  "double_chest_screen@jc-extensions.compatability": {},
+  "ender_chest_screen@jc-extensions.compatability": {},
+  "shulker_screen@jc-extensions.compatability": {},
+  "small_chest_screen@jc-extensions.compatability": {},
+  "empty_panel": { "type": "panel" }
 }

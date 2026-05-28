@@ -16,6 +16,7 @@
 
 {
   "namespace": "stonecutter_screen",
+  //pending rewrite
   "stonecutter_panel@container_common.container_details": {
     "size": [176, 166],
     "$item_collection|default": "stones",
@@ -320,8 +321,7 @@
     "controls": [
       { "scroll_buffer@global.empty_panel": { "size": [64, "100%sm"] } },
       {
-        "grid": {
-          "type": "grid",
+        "grid@global.empty_grid": {
           "size": [64, "default"],
           "anchor_to": "top_middle",
           "anchor_from": "top_middle",

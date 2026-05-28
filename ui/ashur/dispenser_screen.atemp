@@ -58,8 +58,7 @@
                           }
                         },
                         {
-                          "dispenser_item_input": {
-                            "type": "grid",
+                          "dispenser_item_input@global.empty_grid": {
                             "size": [54, 54],
                             "grid_dimensions": [3, 3],
                             "$item_collection": "container_items",

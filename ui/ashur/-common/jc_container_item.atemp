@@ -16,8 +16,8 @@
     "$stack_count_offset|default": [0, 1],
 
     "$background_image_control_name|default": "bg",
-
     "$background_images|default": "global.empty_panel",
+
     "$button_control|default": "button_mappings.container_item_button",
     "$cell_overlay_ref|default": "global.empty_image",
 
@@ -37,12 +37,6 @@
       }
     ],
     "$additional_slot_content|default": "global.empty_panel",
-    "variables": [
-      {
-        "requires": "$is_déesse_ui_pack",
-        "$additional_slot_content|default": "Déesse_UI_Pack.item_slot_bridge"
-      }
-    ],
     "controls": [
       { "$button_control@$button_control": {} },
       { "$additional_slot_content@$additional_slot_content": {} },
@@ -137,10 +131,11 @@
           ],
           "bindings": [
             {
-              "binding_name": "(not #bundle_selected_item_visible)",
-              "binding_name_override": "#visible",
-              "binding_type": "collection",
-              "binding_collection_name": "$item_collection"
+              "binding_type": "view",
+              "resolve_sibling_scope": true,
+              "source_control_name": "bundle_selected_item_panel",
+              "source_property_name": "(not #visible)",
+              "target_property_name": "#visible"
             }
           ]
         }
@@ -201,7 +196,6 @@
                 "$renderer_type": "open_front"
               }
             },
-
             {
               "storage_bar@global.custom_renderer": {
                 "$type": "progress_bar_renderer",

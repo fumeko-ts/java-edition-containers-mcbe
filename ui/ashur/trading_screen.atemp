@@ -223,7 +223,7 @@
                 "offset": [0, 16],
                 "controls": [
                   {
-                    "empty_progress_bar@screen_content.image_element": {
+                    "empty_progress_bar@global.empty_image": {
                       "size": [101, 5],
                       "texture": "assets/sprites/container/villager/experience_bar_background",
                       "layer": 6
@@ -296,16 +296,56 @@
     "layer": 6,
     "texture": "assets/container/villager"
   },
-  "progress_bar_template@screen_content.image_element": {
+  "progress_bar_template@global.empty_image": {
     "size": [101, 5],
     "clip_direction": "left",
     "clip_pixelperfect": true
   },
-  "trade_tier_base": {
-    "type": "stack_panel",
+  "trade_scroller@screen_content.image_element": {
+    "nineslice_size": [3, 6, 3, 7],
+    "anchor_to": "center",
+    "anchor_from": "center",
+    "allow_clipping": false,
+    "tiled": true,
+    "tiled_scale": [1, 1],
+    "size": [6, "100%"],
+    "layer": 5,
+    "texture": "assets/sprites/container/villager/scroller"
+  },
+  "grid_holder@global.empty_stack": {
+    "orientation": "vertical",
+    "size": [88, "100%c"],
+    "anchor_to": "center",
+    "anchor_from": "center",
+    "offset": [0, -1],
+    "controls": [
+      {
+        "trade_selector_stack_panel@global.empty_stack": {
+          "orientation": "vertical",
+          "size": [88, "default"],
+          "factory": {
+            "name": "selected_pack_factory",
+            "control_name": "trading_screen.trade_tier_base"
+          },
+          "collection_name": "trade_tiers",
+          "bindings": [
+            {
+              "binding_name": "#trade_selector_total",
+              "binding_name_override": "#collection_length"
+            }
+          ]
+        }
+      },
+      { "buffer@global.empty_panel": { "size": ["fill", 0.4] } }
+    ]
+  },
+  "trade_tier_base@global.empty_stack": {
     "orientation": "vertical",
     "size": ["100%", "default"],
-    "factory": { "name": "selected_pack_factory", "control_name": "trading_screen.trade_toggle" },
+    "factory": {
+      "name": "selected_pack_factory",
+      "control_name": "trading_screen.trade_toggle"
+    },
     "collection_name": "trades",
     "bindings": [
       {
@@ -323,53 +363,56 @@
       }
     ]
   },
-  "trade_toggle@common_toggles.light_image_toggle_collection": {
+
+  "trade_toggle@toggle.radio_toggle": {
     "size": [88, 20],
     "$toggle_name": "trade_toggle",
-    "$template_toggle": "trade_global.trade_toggle",
-    "$toggle_binding_type": "global",
-    "$toggle_state_binding_name": "#trade_toggle_state",
-    "$toggle_enabled_binding_type": "global",
+
+    "$extra_contents": "trade_global.toggle_contents",
+    "$unchecked": "trade_global.unchecked_control",
+    "$unchecked_hover": "trade_global.unchecked_hover_control",
+    "$checked": "trade_global.checked_control",
+    "$checked_hover": "trade_global.checked_hover_control",
+    "$locked": "trade_global.locked_control",
+
+    "variables": {
+      "requires": "$cb_is_thick_menu_buttons",
+      "$unchecked": "Thickly_Be-Beveled_Buttons.unchecked_control",
+      "$checked": "Thickly_Be-Beveled_Buttons.checked_control",
+      "$unchecked_hover": "Thickly_Be-Beveled_Buttons.unchecked_hover_control",
+      "$checked_hover": "Thickly_Be-Beveled_Buttons.checked_hover_control"
+    },
+
+    "$toggle_binding_value": "#trade_toggle_state",
     "$toggle_enabled_binding_name": "#trade_toggle_enabled",
-    "$toggle_enabled_binding_condition": "always"
-  },
-  "trade_scroller@screen_content.image_element": {
-    "nineslice_size": [3, 6, 3, 7],
-    "anchor_to": "center",
-    "anchor_from": "center",
-    "allow_clipping": false,
-    "tiled": true,
-    "tiled_scale": [1, 1],
-    "size": [6, "100%"],
-    "layer": 5,
-    "texture": "assets/sprites/container/villager/scroller"
-  },
-  "grid_holder": {
-    "type": "stack_panel",
-    "orientation": "vertical",
-    "size": [88, "100%c"],
-    "anchor_to": "center",
-    "anchor_from": "center",
-    "offset": [0, -1],
-    "controls": [
+    "$toggle_binding_condition": "visible",
+
+    "$button_mappings": [
       {
-        "trade_buttons@global.empty_panel": {
-          "size": [88, "100%c"],
-          "controls": [
-            {
-              "trade_selector_stack_panel": {
-                "type": "stack_panel",
-                "orientation": "vertical",
-                "size": ["100%", "default"],
-                "factory": { "name": "selected_pack_factory", "control_name": "trading_screen.trade_tier_base" },
-                "collection_name": "trade_tiers",
-                "bindings": [{ "binding_name": "#trade_selector_total", "binding_name_override": "#collection_length" }]
-              }
-            }
-          ]
-        }
+        "from_button_id": "button.menu_select",
+        "to_button_id": "button.trade_select",
+        "mapping_type": "pressed"
       },
-      { "buffer@global.empty_panel": { "size": ["fill", 0.4] } }
+      {
+        "from_button_id": "button.menu_secondary_select",
+        "to_button_id": "button.trade_secondary_select",
+        "mapping_type": "pressed"
+      },
+      {
+        "from_button_id": "button.menu_ok",
+        "to_button_id": "button.trade_select",
+        "mapping_type": "focused"
+      },
+      {
+        "from_button_id": "button.controller_back",
+        "to_button_id": "button.trade_select",
+        "mapping_type": "focused",
+        "ignored": "(not $is_ps4)"
+      },
+      {
+        "to_button_id": "button.trade_toggle_hovered",
+        "mapping_type": "pressed"
+      }
     ]
   }
 }

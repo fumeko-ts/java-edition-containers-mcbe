@@ -97,7 +97,7 @@
             },
             {
               "binding_type": "view",
-              "binding_condition": "always",
+              "binding_condition": "always_when_visible",
               "source_property_name": "((not #using_touch) and #is_selected_bundle_item_slot)",
               "target_property_name": "#visible"
             }

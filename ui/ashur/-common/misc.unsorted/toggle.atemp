@@ -57,14 +57,12 @@
     "$tab_texture_bindings|default": [
       {
         "binding_type": "view",
-        "binding_condition": "always",
         "source_control_name": "$toggle_control_name",
         "source_property_name": "#toggle_state",
         "target_property_name": "#tab_selected"
       },
       {
         "binding_type": "view",
-        "binding_condition": "always",
         "source_property_name": "('#tab_texture_offset_' + (#tab_selected * 1))",
         "target_property_name": "#offset"
       }
@@ -86,14 +84,12 @@
           "bindings": [
             {
               "binding_type": "view",
-              "binding_condition": "always",
               "source_control_name": "$toggle_control_name",
               "source_property_name": "#toggle_state",
               "target_property_name": "#tab_selected"
             },
             {
               "binding_type": "view",
-              "binding_condition": "always",
               "source_property_name": "('#icon_offset_' + (#tab_selected * 1))",
               "target_property_name": "#offset"
             }
@@ -132,56 +128,75 @@
       }
     ]
   },
-  "variables": {},
   "radio_toggle@global.empty_panel": {
-    "size": "$size",
-    "$size": [18, 18], 
-
+    "size": [18, 18], 
+    
     "$toggle_control_name|default": "Toggle",
     "$toggle_name|default": "Default_toggle",
 
+    "$toggle_variables|default": "toggle.variables",
+    "$default_selected_index|default": 0,
+    "$sound_name|default": "random.click",
+    "$button_volume|default": 1.0,
+    "$toggle_focus_enabled|default": "$game_pad",
+
     "$is_radio_toggle|default": true,
-    "$radio_collection_name|default": "none",
     "$is_default_active|default": false,
     "$toggle_group_forced_index|default": -1,
-    "$sound_name|default": "random.click",
-    "$radio_collection_condition|default": "always",
-    "$pressed_id|default": "button.menu_ok",
+
+    "$toggle_enabled_binding_name|default": "",
+
+    "$toggle_binding_value|default": "",
+    "$toggle_binding_condition|default": "always",
+    
+    "$pressed_action|default": "button.menu_ok",
+    "$hover_action|default": "button.filter_toggle_hovered",
     "$button_mappings|default": [
       {
-        "from_button_id": "button.menu_select",
-        "to_button_id": "$pressed_id",
-        "mapping_type": "pressed"
+        "ignored": "($hover_action = '')", 
+        "to_button_id": "$hover_action", 
+        "mapping_type": "pressed" 
       },
-      {
-        "from_button_id": "button.menu_ok",
-        "to_button_id": "$pressed_id",
-        "mapping_type": "pressed"
-      }
+      { "from_button_id": "button.menu_select"                 ,"to_button_id": "$pressed_action", "mapping_type": "pressed"},
+     // { "from_button_id": "button.menu_secondary_select"       ,"to_button_id": "$pressed_action", "mapping_type": "pressed"},
+      { "from_button_id": "button.menu_ok"                     ,"to_button_id": "$pressed_action", "mapping_type": "pressed"}
+     // ,
+     // { "from_button_id": "button.controller_select"           ,"to_button_id": "$pressed_action", "mapping_type": "pressed"},
+     // { "from_button_id": "button.controller_secondary_select" ,"to_button_id": "$pressed_action", "mapping_type": "pressed"}
     ],
+
+    "$property_bag|default": { "#enabled": true, "#toggle_state": true },
+
     "$bindings|default": [
+      {"binding_type": "collection_details"},
       {
-        "binding_type": "collection_details",
-        "binding_collection_name": "$radio_collection_name",
-        "binding_condition": "$radio_collection_condition"
+        "binding_type": "global",
+        "binding_condition": "$toggle_binding_condition",
+        "binding_name": "$toggle_binding_value",
+        "binding_name_override": "#toggle_state"
       },
       {
         "binding_type": "global",
         "binding_condition": "always",
-        "binding_name": "$toggle_binding_value",
-        "binding_name_override": "#toggle_state"
+        "ignored": "($toggle_enabled_binding_name = '')",
+        "binding_name": "$toggle_enabled_binding_name",
+        "binding_name_override": "#enabled"
       }
     ],
-    "$toggle_variables|default": "toggle.variables",
-    "$default_selected_index|default": 0,
+    
+    "$unchecked_control_name|default": "default",
+    "$unchecked_hover_control_name|default": "default_hover",
+    "$checked_control_name|default": "checked",
+    "$checked_hover_control_name|default": "checked_hover",
+    "$locked_control_name|default": "locked",
+
     "$extra_contents|default": "global.empty_panel",
-    "$property_bag|default": { "#toggle_state": true },
-    "$button_volume|default": 1.0,
     "$unchecked|default": "global.empty_panel",
     "$unchecked_hover|default": "global.empty_panel",
     "$checked|default": "global.empty_panel",
     "$checked_hover|default": "global.empty_panel",
     "$locked|default": "global.empty_panel",
+
     "$controls|default": [
       { "default@$unchecked": {} },
       { "default_hover@$unchecked_hover": {} },
@@ -192,25 +207,17 @@
         "$extra_contents@$extra_contents": {}
       }
     ],
-    "$unchecked_control_name|default": "default",
-    "$unchecked_hover_control_name|default": "default_hover",
-    "$checked_control_name|default": "checked",
-    "$checked_hover_control_name|default": "checked_hover",
-    "$locked_control_name|default": "locked",
+
     "controls": [
       {
         "$toggle_control_name@$toggle_variables": {
           "type": "toggle",
           "size": ["100%", "100%"],
-          "focus_enabled": false,
-          "focus_wrap_enabled": false,
-          "focus_magnet_enabled": false,
-          "$hover|default": false,
           "sound_name": "$sound_name",
           "sound_volume": "$button_volume",
           "sound_pitch": 1.0,
           "toggle_name": "$toggle_name",
-
+          
           "unchecked_control": "$unchecked_control_name",
           "unchecked_hover_control": "$unchecked_hover_control_name",
           "checked_control": "$checked_control_name",
@@ -224,14 +231,24 @@
           "radio_toggle_group": "$is_radio_toggle",
           "toggle_group_forced_index": "$toggle_group_forced_index",
           "toggle_group_default_selected": "$default_selected_index",
-          "reset_on_focus_lost": true,
           "toggle_default_state": "$is_default_active",
+
           "property_bag": "$property_bag",
           "controls": "$controls",
           "bindings": "$bindings",
-          "button_mappings": "$button_mappings"
+          "button_mappings": "$button_mappings",
+
+          "enabled": "#enabled",
+
+          //focus mappings for console and or pc
+          "focus_enabled": "$toggle_focus_enabled", // true when a controller is connected ?
+          "reset_on_focus_lost": true,
+          "focus_wrap_enabled": false,
+          "focus_magnet_enabled": false,
+          "default_focus_precedence": 1
         }
       }
     ]
-  }
+  },
+  "variables": {}
 }

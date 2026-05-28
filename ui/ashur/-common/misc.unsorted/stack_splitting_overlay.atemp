@@ -16,7 +16,7 @@
 
 {
   "namespace": "stack_splitting_overlay",
-  "stack_splitting_overlay@global.empty_panel": {
+  "stack_splitting_overlay@global.empty_image": {
     "size": [128, 20],
     "layer": 900,
     "anchor_from": "top_middle",
@@ -49,17 +49,26 @@
         }
       },
       {
-        "progressive_select_text": {
+        "progressive_text_label": {
           "type": "label",
           "text": "#progressive_select_text",
+          "shadow": true,
           "color": "white",
           "layer": 3,
-          "bindings": [{ "binding_name": "#progressive_select_text", "binding_condition": "always" }]
+          "bindings": [
+            {
+              "binding_name": "#progressive_select_text",
+              "binding_condition": "always"
+            }
+          ]
         }
       }
     ],
     "bindings": [
-      { "binding_condition": "always", "binding_name": "#progressive_select_text" },
+      {
+        "binding_name": "#progressive_select_text",
+        "binding_condition": "always"
+      },
       {
         "binding_type": "view",
         "binding_condition": "always",

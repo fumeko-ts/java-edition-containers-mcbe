@@ -63,8 +63,7 @@
                 "controls": [
                   { "filler_3@global.empty_panel": { "size": [7, "fill"] } },
                   {
-                    "small_chest_grid": {
-                      "type": "grid",
+                    "small_chest_grid@global.empty_grid": {
                       "size": [162, 54],
                       "grid_dimensions": [9, 3],
                       "grid_item_template": "jc_container_item.container_item",

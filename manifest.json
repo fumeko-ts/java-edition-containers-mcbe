@@ -1,35 +1,39 @@
 {
-  "format_version": 2,
+  "format_version": 3,
   "header": {
     "name": "§lJava Containers",
     "description": "By @Ashura_temps\n§fDiscord: §bhttps://discord.gg/sFnE7zv75t",
     "uuid": "9537c60a-2d6b-455b-8e49-e0baf87083d2",
-    "version": [2, 9, 0],
-    "min_engine_version": [1, 21, 110]
+    "version": "2.9.0",
+    "min_engine_version": "1.26.10"
   },
   "modules": [
     {
       "type": "resources",
       "description": "Created by Ashura_temps",
       "uuid": "7058f009-f95f-4fe3-b8ed-134c6b16ba89",
-      "version": [2, 9, 0]
+      "version": "2.9.0"
     }
   ],
   "metadata": {
-    "code_author": "Ashura_temps",
-    "url": "https://discord.gg/sFnE7zv75t"
+    "authors": [
+      //ui code creator
+      "Ashura_temps",
+      //discord link
+      "https://discord.gg/sFnE7zv75t"
+    ]
   },
+  "capabilities": ["pbr"],
   "subpacks": [
     {
       "folder_name": "no_close_button",
       "name": "§bNo Close Buttons§r\n§7The normal pack but without exit buttons§r",
-      "memory_tier": 1
+      "memory_performance_tier": 0
     },
     {
       "folder_name": "performance_mode",
       "name": "§eDefault Mode§r\n§7The default pack§r",
-      "memory_tier": 2
+      "memory_performance_tier": 0
     }
-  ],
-  "capabilities": ["pbr"]
+  ]
 }

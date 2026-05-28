@@ -52,8 +52,7 @@
                 "controls": [
                   { "filler_2@global.empty_panel": { "size": [43, "fill"] } },
                   {
-                    "hopper_input_grid": {
-                      "type": "grid",
+                    "hopper_input_grid@global.empty_grid": {
                       "size": [90, 18],
                       "grid_dimensions": [5, 1],
                       "$item_collection": "container_items",

@@ -147,7 +147,7 @@
                       "offset": [-6, -1],
                       "text": "#bundle_name",
                       "min_size": ["default", "default"],
-                      "bindings": [{ "binding_name": "#bundle_name", "binding_condition": "always" }]
+                      "bindings": [{ "binding_name": "#bundle_name", "binding_condition": "always_when_visible" }]
                     }
                   }
                 ]

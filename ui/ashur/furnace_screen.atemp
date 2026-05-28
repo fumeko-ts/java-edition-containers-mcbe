@@ -23,6 +23,41 @@
     "min_size": [176, 166],
     "max_size": [360, 166],
     "controls": [
+      // {
+      //   "recipe_book@recipe_book.recipe_book": {
+      //     "$tab_stack_controls": [
+      //       {
+      //         "search_tab@recipe_book.recipe_tab_template": {
+      //           "$is_default_active": true,
+      //           "$toggle_control_name": "search_tab_toggle",
+      //           "$toggle_group_forced_index": "$search_index",
+      //           "$toggle_binding_value": "#is_search_tab"
+      //         }
+      //       },
+      //       {
+      //         "items_tab@recipe_book.recipe_tab_template": {
+      //           "$toggle_control_name": "items_tab_toggle",
+      //           "$toggle_group_forced_index": "$items_index",
+      //           "$toggle_binding_value": "#is_items_tab"
+      //         }
+      //       },
+      //       {
+      //         "blocks_tab@recipe_book.recipe_tab_template": {
+      //           "$toggle_control_name": "blocks_tab_toggle",
+      //           "$toggle_group_forced_index": "$blocks_index",
+      //           "$toggle_binding_value": "#is_blocks_tab"
+      //         }
+      //       },
+      //       {
+      //         "food_tab@recipe_book.recipe_tab_template": {
+      //           "$toggle_control_name": "food_tab_toggle",
+      //           "$toggle_group_forced_index": "$food_index",
+      //           "$toggle_binding_value": "#is_food_tab"
+      //         }
+      //       }
+      //     ]
+      //   }
+      // },
       {
         "main_furnace_contents@container_common.container_details": {
           "size": [176, 166],
@@ -48,7 +83,7 @@
                             "size": [109, 10],
                             "controls": [
                               {
-                                "furnace_title_label@global.empty_label":{
+                                "furnace_title_label@global.empty_label": {
                                   "anchor_to": "top_left",
                                   "anchor_from": "top_left",
                                   "offset": [0, -1],
@@ -76,6 +111,7 @@
                             "controls": [
                               {
                                 "smelt_input_item@jc_container_item.container_item": {
+                                //  "$background_images": "crafting_textures.main_cell_panel",
                                   "$item_collection": "furnace_ingredient_items"
                                 }
                               },
@@ -135,6 +171,11 @@
                                 "cell_holder@global.empty_panel": {
                                   "size": [26, 26],
                                   "controls": [
+                                    // {
+                                    //   "underlay@crafting_textures.main_cell_panel": {
+                                    //     "$item_collection|default": "furnace_output_items"
+                                    //   }
+                                    // },
                                     {
                                       "output_item@jc_container_item.container_item": {
                                         "anchor_to": "center",

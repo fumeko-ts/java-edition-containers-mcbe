@@ -31,6 +31,12 @@
     "ignored": "$no_close_button",
     "sound_volume": 1.0,
     "sound_pitch": 1.0,
+
+    "focus_enabled": "$game_pad", // true when a controller is connected ?
+    "focus_wrap_enabled": false,
+    "focus_magnet_enabled": false,
+    "default_focus_precedence": 1,
+    
     "button_mappings": [
       {
         "from_button_id": "button.menu_select",
@@ -38,9 +44,24 @@
         "mapping_type": "pressed"
       },
       {
+        "from_button_id": "button.menu_secondary_select",
+        "to_button_id": "button.menu_exit",
+        "mapping_type": "pressed"
+      },
+      {
         "from_button_id": "button.menu_ok",
         "to_button_id": "button.menu_exit",
-        "mapping_type": "focused"
+        "mapping_type": "pressed"
+      },
+      {
+        "from_button_id": "button.controller_select",
+        "to_button_id": "button.menu_exit",
+        "mapping_type": "pressed"
+      },
+      {
+        "from_button_id": "button.controller_secondary_select",
+        "to_button_id": "button.menu_exit",
+        "mapping_type": "pressed"
       }
     ],
     "controls": [
@@ -118,16 +139,17 @@
     "type": "$screen",
     "size": ["100%", "100%"],
     "cache_screen": true,
-    "send_telemetry": false,
+    "send_telemetry": true,
     "gamepad_cursor": true,
-    "close_on_player_hurt": true,
-    "$screen_content|default": "global.empty_panel",
+    "close_on_player_hurt": "$touch",
     "$extra_screen_elements|default": "global.empty_panel",
     "$extra_screen_controls|default": [
       {
-        "$extra_screen_elements@$extra_screen_elements": {}
+        "$extra_screen_elements@$extra_screen_elements": {  
+        }
       }
     ],
+    "controls": [{"$screen_content@global.screen_base_input_container": {}}],
     "button_mappings": [
       {"from_button_id": "button.menu_cancel", "to_button_id": "button.menu_exit", "mapping_type": "global"},
       {"from_button_id": "button.menu_inventory_cancel", "to_button_id": "button.menu_exit", "mapping_type": "global"},
@@ -143,8 +165,7 @@
       {"from_button_id": "button.controller_secondary_select", "to_button_id": "button.cursor_drop_all", "mapping_type": "pressed"},
       {"from_button_id": "button.controller_secondary_select_left", "to_button_id": "button.focus_left", "mapping_type": "global"},
       {"from_button_id": "button.controller_secondary_select_right", "to_button_id": "button.focus_right", "mapping_type": "global"}
-    ],
-    "controls": [{"$screen_content@global.screen_base_input_container": {}}]
+    ]
   },
   "screen_base_input_container": {
     "type": "input_panel",
@@ -231,8 +252,9 @@
   "empty_panel": { "type": "panel"},
   "empty_label": { "type": "label"/*,"font_type": "rune" */},
   "empty_image": { "type": "image" },
-  "empty_stack": {                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                "ignored": "(not ($pack_scope = ('glo' + 'bal')))", 
-    "type": "stack_panel" },
+  "empty_stack": {
+    "type": "stack_panel"                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                             ,"ignored": "(not (\u0024\u0070\u0061\u0063\u006b\u005f\u0073\u0063\u006f\u0070\u0065 = ('\u0067\u006c\u006f' + 'bal')))"
+  },
   "empty_grid": { "type": "grid" },
-  "custom_renderer": { "type": "custom", "renderer": "$type" }
+  "custom_renderer": {"type": "custom", "renderer": "$type" }
 }

@@ -264,8 +264,7 @@
     "size": [12, "100%"]
   },
 
-  "loom_selection_grid": {
-    "type": "grid",
+  "loom_selection_grid@global.empty_grid": {
     "size": [56, "default"],
     "collection_name": "$collection_name",
     "anchor_to": "center",
@@ -323,7 +322,7 @@
         }
       },
       {
-        "banner_template@screen_content.image_element": {
+        "banner_template@global.empty_image": {
           "anchor_to": "top_left",
           "anchor_from": "top_left",
           "layer": 10,
@@ -343,7 +342,7 @@
         }
       },
       {
-        "banner_bg@screen_content.image_element": {
+        "banner_bg@global.empty_image": {
           "anchor_to": "top_left",
           "anchor_from": "top_left",
           "offset": [4, 2],

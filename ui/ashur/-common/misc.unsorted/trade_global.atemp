@@ -16,6 +16,8 @@
 
 {
   "namespace": "trade_global",
+  //this files going to get a rewrite
+
   "toggle_content@global.empty_panel": {
     "size": [88, 20],
     "controls": [
@@ -33,36 +35,22 @@
                 "size": [10, 9],
                 "$alpha|default": 1.0,
                 "variables": {
-                  "requires": "($locked_toggle = true)",
+                  "requires": "$locked_toggle",
                   "$alpha|default": 0.25
                 },
                 "controls": [
                   {
-                    "trade_cross_out@screen_content.image_element": {
-                      "texture": "assets/sprites/container/villager/trade_arrow_out_of_stock",
+                    "trade_arrow@global.empty_image": {
                       "size": [10, 9],
-                      "anchor_from": "center",
-                      "anchor_to": "center",
                       "layer": 5,
                       "alpha": "$alpha",
+                      "property_bag": {
+                        "#cross_out_true": "assets/sprites/container/villager/trade_arrow_out_of_stock",
+                        "#cross_out_false": "assets/sprites/container/villager/trade_arrow"
+                      },
                       "bindings": [
                         { "binding_type": "collection_details" },
-                        { "binding_name": "#trade_cross_out_visible", "binding_name_override": "#visible" }
-                      ]
-                    }
-                  },
-
-                  {
-                    "trade_arrow@screen_content.image_element": {
-                      "texture": "assets/sprites/container/villager/trade_arrow",
-                      "size": [10, 9],
-                      "anchor_from": "center",
-                      "anchor_to": "center",
-                      "layer": 5,
-                      "alpha": "$alpha",
-                      "bindings": [
-                        { "binding_type": "collection_details" },
-                        { "binding_name": "(not #trade_cross_out_visible)", "binding_name_override": "#visible" }
+                        { "binding_name": "('#cross_out_' + #trade_cross_out_visible)","binding_name_override": "#texture"}
                       ]
                     }
                   }
@@ -96,7 +84,6 @@
       { "binding_name": "#second_trade_item_count" },
       {
         "binding_type": "view",
-        "binding_condition": "always",
         "ignored": "$is_second_item",
         "source_property_name": "(not (#second_trade_item_count = '1'))",
         "target_property_name": "#visible"
@@ -127,13 +114,18 @@
     "anchor_to": "bottom_right",
     "default_focus_precedence": 1,
     "hover_control": "hover_text",
+
+    "focus_enabled": false,
+    "focus_wrap_enabled": false,
+    "focus_magnet_enabled": false,
+
     "consume_event": false,
     "button_mappings": [
       { "to_button_id": "button.container_slot_hovered", "mapping_type": "pressed", "consume_event": false }
     ],
     "controls": [
       {
-        "hover_text@common.hover_text": {
+        "hover_text@global.hover_text": {
           "offset": [10, 0],
           "bindings": [
             { "binding_type": "collection_details" },
@@ -143,183 +135,73 @@
       }
     ]
   },
-  "trade_toggle@common.toggle": {
-    "button_mappings": [
-      {
-        "from_button_id": "button.menu_select",
-        "to_button_id": "button.trade_select",
-        "mapping_type": "pressed"
-      },
-      {
-        "from_button_id": "button.menu_secondary_select",
-        "to_button_id": "button.trade_secondary_select",
-        "mapping_type": "pressed"
-      },
-      {
-        "from_button_id": "button.menu_ok",
-        "to_button_id": "button.trade_select",
-        "mapping_type": "focused"
-      },
-      {
-        "from_button_id": "button.controller_back",
-        "to_button_id": "button.trade_select",
-        "mapping_type": "focused",
-        "ignored": "(not $is_ps4)"
-      },
-      { "to_button_id": "button.trade_toggle_hovered", "mapping_type": "pressed" }
-    ],
-    "$unchecked_control": "trade_global.unchecked_control",
-    "$checked_control": "trade_global.checked_control",
-    "$unchecked_hover_control": "trade_global.unchecked_hover_control",
-    "$checked_hover_control": "trade_global.checked_hover_control",
-    "variables": {
-      "requires": "($cb_is_thick_menu_buttons = true)",
-      "$unchecked_control": "Thickly_Be-Beveled_Buttons.unchecked_control",
-      "$checked_control": "Thickly_Be-Beveled_Buttons.checked_control",
-      "$unchecked_hover_control": "Thickly_Be-Beveled_Buttons.unchecked_hover_control",
-      "$checked_hover_control": "Thickly_Be-Beveled_Buttons.checked_hover_control"
-    },
-    "$unchecked_locked_control": "trade_global.locked_control",
-    "$unchecked_locked_hover_control": "trade_global.locked_control",
-    "$checked_locked_control": "trade_global.locked_control",
-    "$checked_locked_hover_control": "trade_global.locked_control",
+  "toggle_contents@global.empty_panel": {
+    "$is_second_item|default": false,
+    "size": [88, 20],
+    "offset": [1, 1],
     "controls": [
       {
-        "contents@global.empty_panel": {
-          "$is_second_item|default": false,
-          "size": [88, 20],
-          "offset": [1, 1],
+        "item_1@trade_global.collection": {
+          "layer": 6,
+          "$item_collection": "trade_item_1",
           "controls": [
             {
-              "item_1@trade_global.collection": {
-                "layer": 6,
-                "$item_collection": "trade_item_1",
+              "item_1@global.empty_panel": {
+                "size": [21, 17],
+                "anchor_from": "top_left",
+                "anchor_to": "top_left",
                 "controls": [
                   {
-                    "item_1@global.empty_panel": {
+                    "item_counts@global.empty_panel": {
                       "size": [21, 17],
-                      "anchor_from": "top_left",
-                      "anchor_to": "top_left",
                       "controls": [
                         {
-                          "item_counts@global.empty_panel": {
-                            "size": [21, 17],
+                          "item_count_default@trade_global.label_template": {
+                            "$item_count_binding_name": "(not #trade_price_different)"
+                          }
+                        },
+                        {
+                          "item_count_changed@trade_global.label_template": {
+                            "$item_count_binding_name": "#trade_price_different",
                             "controls": [
                               {
-                                "item_count_default@trade_global.label_template": {
-                                  "$item_count_binding_name": "(not #trade_price_different)"
+                                "red_slash@trade_global.red_slash": {
+                                  "size": [6, 2],
+                                  "$slash_binding": "#single_slash_visible"
                                 }
                               },
                               {
-                                "item_count_changed@trade_global.label_template": {
-                                  "$item_count_binding_name": "#trade_price_different",
-                                  "controls": [
-                                    {
-                                      "red_slash@trade_global.red_slash": {
-                                        "size": [6, 2],
-                                        "$slash_binding": "#single_slash_visible"
-                                      }
-                                    },
-                                    {
-                                      "red_slash_double@trade_global.red_slash": {
-                                        "size": [12, 2],
-                                        "$slash_binding": "#double_slash_visible"
-                                      }
-                                    }
-                                  ]
+                                "red_slash_double@trade_global.red_slash": {
+                                  "size": [12, 2],
+                                  "$slash_binding": "#double_slash_visible"
                                 }
-                              },
-                              { "hover_control@trade_global.hover_text_button": {} }
+                              }
                             ]
                           }
                         },
-                        { "item_renderer@trade_global.item_renderer": {} }
+                        { "hover_control@trade_global.hover_text_button": {} }
                       ]
                     }
                   },
-                  {
-                    "label_2_holder@global.empty_panel": {
-                      "size": [35, 17],
-                      "anchor_to": "top_left",
-                      "anchor_from": "top_left",
-                      "$is_second_item": true,
-                      "controls": [{ "second_trade_count@trade_global.second_trade_item_count": {} }],
-                      "bindings": [
-                        { "binding_type": "collection_details" },
-                        { "binding_name": "#double_slash_visible" },
-                        { "binding_name": "#single_slash_visible" },
-                        {
-                          "binding_type": "view",
-                          "binding_condition": "always",
-                          "source_property_name": "(#double_slash_visible or #single_slash_visible)",
-                          "target_property_name": "#visible"
-                        }
-                      ]
-                    }
-                  }
+                  { "item_renderer@trade_global.item_renderer": {} }
                 ]
               }
             },
             {
-              "item_2@trade_global.collection": {
-                "layer": 6,
-                "$item_collection": "trade_item_2",
-                "controls": [
+              "label_2_holder@global.empty_panel": {
+                "size": [35, 17],
+                "anchor_to": "top_left",
+                "anchor_from": "top_left",
+                "$is_second_item": true,
+                "controls": [{ "second_trade_count@trade_global.second_trade_item_count": {} }],
+                "bindings": [
+                  { "binding_type": "collection_details" },
+                  { "binding_name": "#double_slash_visible" },
+                  { "binding_name": "#single_slash_visible" },
                   {
-                    "item_2@global.empty_panel": {
-                      "size": [52, 17],
-                      "anchor_from": "top_left",
-                      "anchor_to": "top_left",
-                      "controls": [
-                        {
-                          "item_counts@global.empty_panel": {
-                            "size": [52, 17],
-                            "controls": [{ "hover_control@trade_global.hover_text_button": {} }]
-                          }
-                        },
-                        { "item_renderer@trade_global.item_renderer": {} }
-                      ]
-                    }
-                  },
-                  {
-                    "label_2_holder@global.empty_panel": {
-                      "size": [52, 17],
-                      "anchor_to": "top_left",
-                      "anchor_from": "top_left",
-                      "controls": [{ "second_trade_count@trade_global.second_trade_item_count": {} }]
-                    }
-                  }
-                ]
-              }
-            },
-            {
-              "item_3@trade_global.collection": {
-                "layer": 6,
-                "$item_collection": "sell_item",
-                "controls": [
-                  {
-                    "item_3@global.empty_panel": {
-                      "size": [84, 17],
-                      "anchor_from": "top_left",
-                      "anchor_to": "top_left",
-                      "controls": [
-                        {
-                          "hover_text@global.empty_panel": {
-                            "size": [84, 17],
-                            "controls": [{ "hover_control@trade_global.hover_text_button": {} }]
-                          }
-                        },
-                        { "item_renderer@trade_global.item_renderer": {} }
-                      ]
-                    }
-                  },
-                  {
-                    "label_2_holder@global.empty_panel": {
-                      "size": [84, 17],
-                      "anchor_to": "top_left",
-                      "anchor_from": "top_left",
-                      "controls": [{ "second_trade_count@trade_global.second_trade_item_count": {} }]
-                    }
+                    "binding_type": "view",
+                    "source_property_name": "(#double_slash_visible or #single_slash_visible)",
+                    "target_property_name": "#visible"
                   }
                 ]
               }
@@ -327,14 +209,70 @@
           ]
         }
       },
-      { "unchecked@$unchecked_control": {} },
-      { "checked@$checked_control": {} },
-      { "unchecked_hover@$unchecked_hover_control": {} },
-      { "checked_hover@$checked_hover_control": {} },
-      { "unchecked_locked@$unchecked_locked_control": {} },
-      { "checked_locked@$checked_locked_control": {} },
-      { "unchecked_locked_hover@$unchecked_locked_hover_control": {} },
-      { "checked_locked_hover@$checked_locked_hover_control": {} }
+      {
+        "item_2@trade_global.collection": {
+          "layer": 6,
+          "$item_collection": "trade_item_2",
+          "controls": [
+            {
+              "item_2@global.empty_panel": {
+                "size": [52, 17],
+                "anchor_from": "top_left",
+                "anchor_to": "top_left",
+                "controls": [
+                  {
+                    "item_counts@global.empty_panel": {
+                      "size": [52, 17],
+                      "controls": [{ "hover_control@trade_global.hover_text_button": {} }]
+                    }
+                  },
+                  { "item_renderer@trade_global.item_renderer": {} }
+                ]
+              }
+            },
+            {
+              "label_2_holder@global.empty_panel": {
+                "size": [52, 17],
+                "anchor_to": "top_left",
+                "anchor_from": "top_left",
+                "controls": [{ "second_trade_count@trade_global.second_trade_item_count": {} }]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "item_3@trade_global.collection": {
+          "layer": 6,
+          "$item_collection": "sell_item",
+          "controls": [
+            {
+              "item_3@global.empty_panel": {
+                "size": [84, 17],
+                "anchor_from": "top_left",
+                "anchor_to": "top_left",
+                "controls": [
+                  {
+                    "hover_text@global.empty_panel": {
+                      "size": [84, 17],
+                      "controls": [{ "hover_control@trade_global.hover_text_button": {} }]
+                    }
+                  },
+                  { "item_renderer@trade_global.item_renderer": {} }
+                ]
+              }
+            },
+            {
+              "label_2_holder@global.empty_panel": {
+                "size": [84, 17],
+                "anchor_to": "top_left",
+                "anchor_from": "top_left",
+                "controls": [{ "second_trade_count@trade_global.second_trade_item_count": {} }]
+              }
+            }
+          ]
+        }
+      }
     ]
   },
   "unchecked_control@trade_global.button_state_common": {
@@ -353,7 +291,7 @@
     "$locked_toggle": true,
     "$button_sprite": "assets/sprites/container/villager/button_disabled.png"
   },
-  "button_state_common@global.empty_image": {
+  "button_state_common@screen_content.image_element": {
     "texture": "$button_sprite",
     "nineslice_size": [2, 2, 2, 2],
     "size": [88, 20],
@@ -362,7 +300,7 @@
     "$locked_toggle|default": false,
     "controls": [{ "button_content_panel@trade_global.toggle_content": { "layer": 3 } }]
   },
-  "red_slash@screen_content.image_element": {
+  "red_slash@global.empty_image": {
     "keep_ratio": true,
     "size": ["default", 2],
     "nineslice_size": 1,
@@ -391,7 +329,6 @@
       { "binding_name": "$item_count_binding_name", "binding_name_override": "#visible" },
       {
         "binding_type": "view",
-        "binding_condition": "always",
         "source_property_name": "(not (#second_trade_item_count = '1'))",
         "target_property_name": "#visible"
       }
