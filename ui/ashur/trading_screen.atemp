@@ -44,15 +44,15 @@
           "anchor_to": "top_left",
           "anchor_from": "top_left",
           "size": [100, 144],
-          "offset": [4, 18],
+          "offset": [5, 18],
           "$scroll_size": [6, 140],
-          "$scroll_track_offset": [43, -2],
+          "$scroll_track_offset": [42, -2],
           "$scroll_view_port_size": [92, 140.4],
           "$scrolling_pane_size": ["100%", "100%"],
           "$collection_name": "trade_tiers",
           "$scroll_track_icon": "trading_screen.trade_scroll_track",
           "$scroll_box_image_control": "trading_screen.trade_scroller",
-          "$scrolling_content": "trading_screen.grid_holder"
+          "$scrolling_content": "trading_screen.trade_tier_stack_holder"
         }
       },
       {
@@ -61,20 +61,6 @@
           "size": [141, 55],
           "anchor_to": "top_right",
           "anchor_from": "top_right",
-          "$trade_cell_bindings|default": [
-            {
-              "binding_name": "$hover_text_binding_name",
-              "binding_name_override": "#hover_text",
-              "binding_condition": "always",
-              "binding_type": "collection",
-              "binding_collection_name": "$item_collection"
-            },
-            {
-              "binding_name": "(not #show_bundle_tooltip_hover)",
-              "binding_name_override": "#visible",
-              "binding_condition": "always"
-            }
-          ],
           "controls": [
             {
               "vertical_1@global.empty_stack": {
@@ -82,12 +68,7 @@
                 "size": [18, 55],
                 "controls": [
                   { "filler_1@global.empty_panel": { "size": ["fill", 36] } },
-                  {
-                    "input_1@jc_container_item.container_item": {
-                      "$item_collection": "trade2_ingredient1_item",
-                      "$cell_hover_text_bindings": "$trade_cell_bindings"
-                    }
-                  },
+                  { "input_1@jc_container_item.container_item": { "$item_collection": "trade2_ingredient1_item" } },
                   { "filler_2@global.empty_panel": { "size": ["fill", 1] } }
                 ]
               }
@@ -99,12 +80,7 @@
                 "size": [18, 55],
                 "controls": [
                   { "filler_1@global.empty_panel": { "size": ["fill", 36] } },
-                  {
-                    "input_2@jc_container_item.container_item": {
-                      "$item_collection": "trade2_ingredient2_item",
-                      "$cell_hover_text_bindings": "$trade_cell_bindings"
-                    }
-                  },
+                  { "input_2@jc_container_item.container_item": { "$item_collection": "trade2_ingredient2_item" } },
                   { "filler_2@global.empty_panel": { "size": ["fill", 1] } }
                 ]
               }
@@ -164,32 +140,23 @@
         }
       },
       {
-        "label_holder@global.empty_stack": {
-          "orientation": "horizontal",
-          "size": [276, 21],
+        "label_holder@global.empty_panel": {
+          "size": [101, 21],
           "layer": 10,
-          "anchor_to": "top_middle",
-          "anchor_from": "top_middle",
+          "anchor_to": "top_left",
+          "anchor_from": "top_left",
           "controls": [
             {
-              "label_holder@global.empty_panel": {
-                "size": [101, 21],
-                "controls": [
-                  {
-                    "label@global.empty_label": {
-                      "text": "atemp.merchant.trades",
-                      "size": ["default", 10],
-                      "color": "$title_text_color",
-                      "layer": 14,
-                      "anchor_to": "top_middle",
-                      "anchor_from": "top_middle",
-                      "offset": [0, 5]
-                    }
-                  }
-                ]
+              "trades_title@global.empty_label": {
+                "text": "atemp.merchant.trades",
+                "size": ["default", 10],
+                "color": "$container_title_color",
+                "layer": 14,
+                "anchor_to": "top_middle",
+                "anchor_from": "top_middle",
+                "offset": [0, 5]
               }
-            },
-            { "filler_1@global.empty_panel": { "size": [175, "fill"] } }
+            }
           ]
         }
       },
@@ -204,15 +171,10 @@
                 "anchor_from": "top_middle",
                 "anchor_to": "top_middle",
                 "offset": [0, 5],
-                "color": "$title_text_color",
+                "color": "$container_title_color",
                 "layer": 6,
                 "text": "#name_label",
-                "bindings": [
-                  {
-                    "binding_name": "#name_label",
-                    "binding_condition": "always"
-                  }
-                ]
+                "bindings": [{ "binding_name": "#name_label", "binding_condition": "always" }]
               }
             },
             {
@@ -274,7 +236,7 @@
                 "size": [28, 21],
                 "anchor_to": "top_left",
                 "anchor_from": "top_left",
-                "controls": [{ "a@selected_trade_invalid.invalid_trade_arrow_collection": {} }]
+                "controls": [{ "trade_invalid@selected_trade_invalid.invalid_trade_arrow_collection": {} }]
               }
             }
           ]
@@ -296,11 +258,7 @@
     "layer": 6,
     "texture": "assets/container/villager"
   },
-  "progress_bar_template@global.empty_image": {
-    "size": [101, 5],
-    "clip_direction": "left",
-    "clip_pixelperfect": true
-  },
+  "progress_bar_template@global.empty_image": { "size": [101, 5], "clip_direction": "left", "clip_pixelperfect": true },
   "trade_scroller@screen_content.image_element": {
     "nineslice_size": [3, 6, 3, 7],
     "anchor_to": "center",
@@ -312,20 +270,17 @@
     "layer": 5,
     "texture": "assets/sprites/container/villager/scroller"
   },
-  "grid_holder@global.empty_stack": {
+  "trade_tier_stack_holder@global.empty_stack": {
     "orientation": "vertical",
-    "size": [88, "100%c"],
-    "anchor_to": "center",
-    "anchor_from": "center",
-    "offset": [0, -1],
+    "size": [88, "default"],
     "controls": [
       {
-        "trade_selector_stack_panel@global.empty_stack": {
+        "trade_tier_stacker@global.empty_stack": {
           "orientation": "vertical",
           "size": [88, "default"],
           "factory": {
             "name": "selected_pack_factory",
-            "control_name": "trading_screen.trade_tier_base"
+            "control_name": "trading_screen.trade_tier_generator"
           },
           "collection_name": "trade_tiers",
           "bindings": [
@@ -336,12 +291,12 @@
           ]
         }
       },
-      { "buffer@global.empty_panel": { "size": ["fill", 0.4] } }
+      { "bottom_buffer@global.empty_panel": { "size": [88, 0.6] } }
     ]
   },
-  "trade_tier_base@global.empty_stack": {
+  "trade_tier_generator@global.empty_stack": {
     "orientation": "vertical",
-    "size": ["100%", "default"],
+    "size": [88, "default"],
     "factory": {
       "name": "selected_pack_factory",
       "control_name": "trading_screen.trade_toggle"
@@ -363,30 +318,25 @@
       }
     ]
   },
-
   "trade_toggle@toggle.radio_toggle": {
     "size": [88, 20],
     "$toggle_name": "trade_toggle",
-
     "$extra_contents": "trade_global.toggle_contents",
-    "$unchecked": "trade_global.unchecked_control",
-    "$unchecked_hover": "trade_global.unchecked_hover_control",
-    "$checked": "trade_global.checked_control",
-    "$checked_hover": "trade_global.checked_hover_control",
-    "$locked": "trade_global.locked_control",
-
+    "$unchecked": "screen_content.unchecked_control",
+    "$unchecked_hover": "screen_content.unchecked_hover_control",
+    "$checked": "screen_content.checked_control",
+    "$checked_hover": "screen_content.checked_hover_control",
+    "$locked": "screen_content.locked_control",
     "variables": {
       "requires": "$cb_is_thick_menu_buttons",
-      "$unchecked": "Thickly_Be-Beveled_Buttons.unchecked_control",
-      "$checked": "Thickly_Be-Beveled_Buttons.checked_control",
-      "$unchecked_hover": "Thickly_Be-Beveled_Buttons.unchecked_hover_control",
-      "$checked_hover": "Thickly_Be-Beveled_Buttons.checked_hover_control"
+      "$unchecked": "beveled_buttons_bridge.unchecked_control",
+      "$checked": "beveled_buttons_bridge.checked_control",
+      "$unchecked_hover": "beveled_buttons_bridge.unchecked_hover_control",
+      "$checked_hover": "beveled_buttons_bridge.checked_hover_control"
     },
-
     "$toggle_binding_value": "#trade_toggle_state",
     "$toggle_enabled_binding_name": "#trade_toggle_enabled",
     "$toggle_binding_condition": "visible",
-
     "$button_mappings": [
       {
         "from_button_id": "button.menu_select",
@@ -409,10 +359,7 @@
         "mapping_type": "focused",
         "ignored": "(not $is_ps4)"
       },
-      {
-        "to_button_id": "button.trade_toggle_hovered",
-        "mapping_type": "pressed"
-      }
+      { "to_button_id": "button.trade_toggle_hovered", "mapping_type": "pressed" }
     ]
   }
 }

@@ -34,12 +34,12 @@
                 "size": [176, 13],
                 "controls": [
                   {
-                    "item_hopper_label@global.empty_label":{
+                    "item_hopper_label@global.empty_label": {
                       "offset": [8, -1],
                       "anchor_from": "top_left",
                       "anchor_to": "top_left",
                       "text": "atemp.container.hopper",
-                      "color": "$title_text_color"
+                      "color": "$container_title_color"
                     }
                   }
                 ]

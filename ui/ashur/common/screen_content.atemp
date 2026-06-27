@@ -1,0 +1,446 @@
+/**
+// © 2026 ashura_temps,    All Rights Reserved.
+//
+// This UI is custom-made. You are allowed to use it **only as-is**, inside the game.
+// Do not modify, extract, reuse, or share any part of this UI including .json, .atemp files,
+// layout structure, or design.
+//
+// Not allowed:
+//   - Editing the UI (even for private/personal use)
+//   - Using parts of the code or layout in your own pack
+//   - Reuploading, redistributing, or hosting these files elsewhere
+//   - Converting texture packs to Bedrock using this UI
+//
+// By using this project, you agree to these terms.
+*/
+
+{
+  "namespace": "screen_content",
+
+  "image_element@global.empty_image": {
+    "color": "$container_color",
+    "alpha": "$container_opacity"
+  },
+  "screen_background@global.empty_image": {
+    "texture": "textures/ui/screen_background",
+    "layer": -1000,
+    "alpha": 0.79
+  },
+  "button_state_common@screen_content.image_element": {
+    "size": [88, 20],
+    "layer": 4
+  },
+  "container_template@screen_content.image_element": {
+    "size": "$size",
+    "uv_size": "$size",
+    "$extra_ui_contents|default": [],
+    "controls": [
+      {
+        "extra_content@global.empty_panel": {
+          "size": "$size",
+          "controls": "$extra_ui_contents"
+        }
+      },
+      {
+        "close_button@global.close_button": {}
+      }
+    ]
+  },
+  "highlight_slot@global.empty_image": {
+    "texture": "textures/ui/ashur/white_slot",
+    "size": [16, 16],
+    "alpha": 0.45
+  },
+
+  //anvil
+  "anvil@screen_content.container_template": {
+    "$size": [176, 166],
+    "texture": "assets/container/anvil"
+  },
+  "anvil_text_field@screen_content.image_element": {
+    "nineslice_size": 2,
+    "texture": "assets/sprites/container/anvil/text_field_disabled",
+    "size": [110, 16]
+  },
+  "anvil_edit_box_focused@screen_content.image_element": {
+    "nineslice_size": 2,
+    "texture": "assets/sprites/container/anvil/text_field",
+    "size": [110, 16]
+  },
+
+  //barrel
+  "barrel@global.empty_panel": {
+    "size": [176, 166],
+    "controls": [
+      {
+        "close_button@global.close_button": {}
+      },
+      {
+        "top_half@screen_content.image_element": {
+          "anchor_from": "top_middle",
+          "anchor_to": "top_middle",
+          "uv": [0, 0],
+          "uv_size": [176, 71],
+          "size": [176, 71],
+          "texture": "assets/container/generic_54"
+        }
+      },
+      {
+        "bottom_half@screen_content.image_element": {
+          "anchor_from": "bottom_middle",
+          "anchor_to": "bottom_middle",
+          "uv": [0, 127],
+          "uv_size": [176, 95],
+          "size": [176, 95],
+          "texture": "assets/container/generic_54"
+        }
+      }
+    ]
+  },
+
+  //beacon
+  "beacon@screen_content.container_template": {
+    "$size": [230, 219],
+    "texture": "assets/container/beacon"
+  },
+
+  //blast furnace
+  "blast_furnace@screen_content.container_template": {
+    "$size": [176, 166],
+    "texture": "assets/container/blast_furnace"
+  },
+
+  //brewing stand
+  "brewing_stand@screen_content.container_template": {
+    "$size": [176, 166],
+    "texture": "assets/container/brewing_stand"
+  },
+
+  //cartography table
+  "cartography@screen_content.container_template": {
+    "$size": [176, 166],
+    "texture": "assets/container/cartography_table"
+  },
+
+  //crafter
+  "crafter@screen_content.container_template": {
+    "$size": [176, 166],
+    "texture": "assets/container/crafter"
+  },
+  "crafter_disabled_slot@screen_content.image_element": {
+    "size": [18, 18],
+    "texture": "assets/sprites/container/crafter/disabled_slot"
+  },
+
+  //crafting table
+  "crafting@screen_content.container_template": {
+    "$size": [176, 166],
+    "texture": "assets/container/crafting_table"
+  },
+  "recipe_book@screen_content.image_element": {
+    "texture": "assets/recipe_book",
+    "size": [147, 166]
+  },
+  "recipe_direction_base@screen_content.image_element": {
+    "size": [12, 17]
+  },
+  "page_left@screen_content.recipe_direction_base": {
+    "texture": "assets/sprites/recipe_book/page_backward"
+  },
+  "page_left_hover@screen_content.recipe_direction_base": {
+    "texture": "assets/sprites/recipe_book/page_backward_highlighted"
+  },
+  "page_right@screen_content.recipe_direction_base": {
+    "texture": "assets/sprites/recipe_book/page_forward"
+  },
+  "page_right_hover@screen_content.recipe_direction_base": {
+    "texture": "assets/sprites/recipe_book/page_forward_highlighted"
+  },
+  "text_field@screen_content.image_element": {
+    "nineslice_size": 1,
+    "texture": "assets/sprites/recipe_book/text_field",
+    "size": ["100%", "100%"]
+  },
+  "text_field_highlighted@screen_content.image_element": {
+    "nineslice_size": 1,
+    "texture": "assets/sprites/recipe_book/text_field_highlighted",
+    "size": ["100%", "100%"]
+  },
+  "recipe_toggle@screen_content.image_element": {
+    "size": [20, 18],
+    "texture": "assets/sprites/recipe_book/button"
+  },
+  "recipe_hover_toggle@screen_content.image_element": {
+    "size": [20, 18],
+    "texture": "assets/sprites/recipe_book/button_highlighted"
+  },
+  //crafting recipe filter
+  "filter_texture_template@screen_content.image_element": {
+    "size": [26, 16]
+  },
+  "crafting_filter_unchecked@screen_content.filter_texture_template": {
+    "texture": "assets/sprites/recipe_book/filter_disabled"
+  },
+  "crafting_filter_unchecked_hover@screen_content.filter_texture_template": {
+    "texture": "assets/sprites/recipe_book/filter_disabled_highlighted"
+  },
+  "crafting_filter_checked@screen_content.filter_texture_template": {
+    "texture": "assets/sprites/recipe_book/filter_enabled"
+  },
+  "crafting_filter_checked_hover@screen_content.filter_texture_template": {
+    "texture": "assets/sprites/recipe_book/filter_enabled_highlighted"
+  },
+
+  //creative inventory
+  "creative_inventory@screen_content.container_template": {
+    "$size": [195, 136],
+    "texture": "assets/container/creative_inventory/tab_inventory",
+    "layer": 3
+  },
+  "creative_inventory_misc@screen_content.container_template": {
+    "$size": [195, 136],
+    "texture": "assets/container/creative_inventory/tab_items",
+    "layer": 3
+  },
+  "creative_inventory_search@screen_content.container_template": {
+    "$size": [195, 136],
+    "texture": "assets/container/creative_inventory/tab_item_search",
+    "layer": 3
+  },
+
+  //dispenser / dropper
+  "dispenser@screen_content.container_template": {
+    "$size": [176, 166],
+    "texture": "assets/container/dispenser"
+  },
+  "dropper@screen_content.container_template": {
+    "$size": [176, 166],
+    "texture": "assets/container/dispenser"
+  },
+
+  //double chest
+  "double_chest@screen_content.container_template": {
+    "$size": [176, 222],
+    "texture": "assets/container/generic_54"
+  },
+
+  //enchanting table
+  "enchanting@screen_content.container_template": {
+    "$size": [176, 166],
+    "texture": "assets/container/enchanting_table"
+  },
+  "enchanting_lapis@screen_content.image_element": {
+    "layer": 5,
+    "size": [16, 16],
+    "texture": "assets/sprites/container/slot/lapis_lazuli"
+  },
+
+  //ender chest
+  "ender_chest@global.empty_panel": {
+    "size": [176, 166],
+    "controls": [
+      {
+        "close_button@global.close_button": {}
+      },
+      {
+        "top_half@screen_content.image_element": {
+          "anchor_from": "top_middle",
+          "anchor_to": "top_middle",
+          "uv": [0, 0],
+          "uv_size": [176, 71],
+          "size": [176, 71],
+          "texture": "assets/container/generic_54"
+        }
+      },
+      {
+        "bottom_half@screen_content.image_element": {
+          "anchor_from": "bottom_middle",
+          "anchor_to": "bottom_middle",
+          "uv": [0, 127],
+          "uv_size": [176, 95],
+          "size": [176, 95],
+          "texture": "assets/container/generic_54"
+        }
+      }
+    ]
+  },
+
+  //furnace
+  "furnace@screen_content.container_template": {
+    "$size": [176, 166],
+    "texture": "assets/container/furnace"
+  },
+  //smelting recipe filter
+  "smelting_filter_unchecked@screen_content.filter_texture_template": {
+    "texture": "assets/sprites/recipe_book/furnace_filter_disabled"
+  },
+  "smelting_filter_unchecked_hover@screen_content.filter_texture_template": {
+    "texture": "assets/sprites/recipe_book/furnace_filter_disabled_highlighted"
+  },
+  "smelting_filter_checked@screen_content.filter_texture_template": {
+    "texture": "assets/sprites/recipe_book/furnace_filter_enabled"
+  },
+  "smelting_filter_checked_hover@screen_content.filter_texture_template": {
+    "texture": "assets/sprites/recipe_book/furnace_filter_enabled_highlighted"
+  },
+
+  //grindstone
+  "grindstone@screen_content.container_template": {
+    "$size": [176, 166],
+    "texture": "assets/container/grindstone"
+  },
+
+  //hopper
+  "hopper@screen_content.container_template": {
+    "$size": [176, 133],
+    "texture": "assets/container/hopper"
+  },
+
+  //horse
+  "horse@screen_content.container_template": {
+    "$size": [176, 166],
+    "texture": "assets/container/horse"
+  },
+
+  //inventory
+  "inventory@screen_content.container_template": {
+    "$size": [176, 166],
+    "texture": "assets/container/inventory"
+  },
+  "armor_overlay@screen_content.image_element": {
+    "size": [16, 16],
+    "layer": 5,
+    "bindings": [
+      {
+        "binding_name": "#empty_armor_image_visible",
+        "binding_name_override": "#visible",
+        "binding_type": "collection",
+        "binding_collection_name": "$item_collection"
+      }
+    ]
+  },
+  "offhand_overlay@screen_content.image_element": {
+    "size": [16, 16],
+    "layer": 5,
+    "bindings": [
+      {
+        "binding_name": "#empty_offhand_image_visible",
+        "binding_name_override": "#visible",
+        "binding_type": "collection",
+        "binding_collection_name": "$item_collection"
+      }
+    ]
+  },
+  "armor_overlay_helmet@screen_content.armor_overlay": {
+    "size": [16, 16],
+    "texture": "assets/sprites/container/slot/helmet"
+  },
+  "armor_overlay_chest@screen_content.armor_overlay": {
+    "size": [16, 16],
+    "texture": "assets/sprites/container/slot/chestplate"
+  },
+  "armor_overlay_legs@screen_content.armor_overlay": {
+    "size": [16, 16],
+    "texture": "assets/sprites/container/slot/leggings"
+  },
+  "armor_image_feet@screen_content.armor_overlay": {
+    "size": [16, 16],
+    "texture": "assets/sprites/container/slot/boots"
+  },
+  "armor_overlay_shield@screen_content.offhand_overlay": {
+    "size": [16, 16],
+    "texture": "assets/sprites/container/slot/shield"
+  },
+
+  //loom
+  "loom@screen_content.container_template": {
+    "$size": [176, 166],
+    "texture": "assets/container/loom"
+  },
+
+  //shulker box
+  "shulker_box@screen_content.container_template": {
+    "$size": [176, 166],
+    "texture": "assets/container/shulker_box"
+  },
+
+  //small chest
+  "small_chest@global.empty_panel": {
+    "size": [176, 166],
+    "controls": [
+      {
+        "close_button@global.close_button": {}
+      },
+      {
+        "top_half@screen_content.image_element": {
+          "anchor_from": "top_middle",
+          "anchor_to": "top_middle",
+          "uv": [0, 0],
+          "uv_size": [176, 71],
+          "size": [176, 71],
+          "texture": "assets/container/generic_54"
+        }
+      },
+      {
+        "bottom_half@screen_content.image_element": {
+          "anchor_from": "bottom_middle",
+          "anchor_to": "bottom_middle",
+          "uv": [0, 127],
+          "uv_size": [176, 95],
+          "size": [176, 95],
+          "texture": "assets/container/generic_54"
+        }
+      }
+    ]
+  },
+
+  //smithing table
+  "smithing@screen_content.container_template": {
+    "$size": [176, 166],
+    "texture": "assets/container/smithing"
+  },
+
+  //smoker
+  "smoker@screen_content.container_template": {
+    "$size": [176, 166],
+    "texture": "assets/container/smoker"
+  },
+
+  //stonecutter
+  "stonecutter@screen_content.container_template": {
+    "$size": [176, 166],
+    "texture": "assets/container/stonecutter"
+  },
+  "redstone_activated_bindings@global.empty_image": {
+    "size": [16, 16],
+    "layer": 12,
+    "texture": "$arrow_texture",
+    "bindings": [
+      {
+        "binding_name": "$binding_value",
+        "binding_name_override": "#visible"
+      }
+    ]
+  },
+
+  //villager trade
+  "trade@screen_content.container_template": {
+    "$size": [276, 166],
+    "texture": "assets/container/villager"
+  },
+  "unchecked_control@screen_content.button_state_common": {
+    "texture": "assets/sprites/container/villager/button"
+  },
+  "checked_control@screen_content.button_state_common": {
+    "texture": "assets/sprites/container/villager/button_highlighted"
+  },
+  "unchecked_hover_control@screen_content.button_state_common": {
+    "texture": "assets/sprites/container/villager/button_highlighted"
+  },
+  "checked_hover_control@screen_content.button_state_common": {
+    "texture": "assets/sprites/container/villager/button_highlighted"
+  },
+  "locked_control@screen_content.button_state_common": {
+    "texture": "assets/sprites/container/villager/button_disabled"
+  }
+}

@@ -51,7 +51,7 @@
                                   "offset": [2, -1],
                                   "size": ["default", 10],
                                   "text": "atemp.container.dispenser",
-                                  "color": "$title_text_color"
+                                  "color": "$container_title_color"
                                 }
                               }
                             ]

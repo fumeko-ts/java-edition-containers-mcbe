@@ -1,21 +1,43 @@
-/**
-// © 2026 ashura_temps,    All Rights Reserved.
-//
-// This UI is custom-made. You are allowed to use it **only as-is**, inside the game.
-// Do not modify, extract, reuse, or share any part of this UI including .json, .atemp files,
-// layout structure, or design.
-//
-// Not allowed:
-//   - Editing the UI (even for private/personal use)
-//   - Using parts of the code or layout in your own pack
-//   - Reuploading, redistributing, or hosting these files elsewhere
-//   - Converting texture packs to Bedrock using this UI
-//
-// By using this project, you agree to these terms.
-*/
-
 {
-  "ui_defs": [
+  "ui_defs": [                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            "assets/sprites/container/slot_transparent.png",
+    // core
+    "ui/ashur/common/global.atemp",
+    "ui/ashur/common/safezone.atemp",
+    "ui/ashur/common/screen_content.atemp",
+    "ui/ashur/common/container_common.atemp",
+    "ui/ashur/common/bundle.atemp",
+
+    // elements
+    "ui/ashur/common/elements/button_mappings.atemp",
+    "ui/ashur/common/elements/toggle.atemp",
+    "ui/ashur/common/elements/scroll_panel.atemp",
+    "ui/ashur/common/elements/text_edit_area.atemp",
+    "ui/ashur/common/elements/jc_container_item.atemp",
+    "ui/ashur/common/elements/stack_splitting_overlay.atemp",
+    "ui/ashur/common/elements/crafting_common.atemp",
+    "ui/ashur/common/elements/crafting_textures.atemp",
+    "ui/ashur/common/elements/recipe_book.atemp",
+    "ui/ashur/common/elements/survival_recipe_grid.atemp",
+    "ui/ashur/common/elements/creative_recipe_item.atemp",
+    "ui/ashur/common/elements/enchant_button.atemp",
+    "ui/ashur/common/elements/trade_global.atemp",
+    "ui/ashur/common/elements/selected_trade_invalid.atemp",
+
+    // compatibility
+    "ui/ashur/common/compatibility/extensions.atemp",
+    "ui/ashur/common/compatibility/advanced/compatibility_variables.atemp",
+    "ui/ashur/common/compatibility/advanced/compatibility_container_item.atemp",
+    "ui/ashur/common/compatibility/advanced/compatibility_common.atemp",
+
+    // pack specific compatibility
+    "ui/ashur/common/compatibility/bridges/beveled_buttons_bridge.atemp",
+    "ui/ashur/common/compatibility/bridges/deesse_ui_bridge.atemp",
+    "ui/ashur/common/compatibility/bridges/jei_layout_bridge.atemp",
+
+    // screens
+    "ui/ashur/inventory_screen.atemp",
+    "ui/ashur/creative_inventory.atemp",
+    "ui/ashur/crafting_screen.atemp",
     "ui/ashur/anvil_screen.atemp",
     "ui/ashur/barrel_screen.atemp",
     "ui/ashur/beacon_screen.atemp",
@@ -23,67 +45,21 @@
     "ui/ashur/brewing_stand_screen.atemp",
     "ui/ashur/cartography_screen.atemp",
     "ui/ashur/crafter_screen.atemp",
-    "ui/ashur/crafting_screen.atemp",
-    "ui/ashur/creative_inventory.atemp",
     "ui/ashur/dispenser_screen.atemp",
-    "ui/ashur/double_chest_screen.atemp",
     "ui/ashur/dropper_screen.atemp",
-    "ui/ashur/enchanting_screen.atemp",
+    "ui/ashur/double_chest_screen.atemp",
     "ui/ashur/ender_chest_screen.atemp",
-    "ui/ashur/furnace_ids.atemp",
+    "ui/ashur/enchanting_screen.atemp",
     "ui/ashur/furnace_screen.atemp",
     "ui/ashur/grindstone_screen.atemp",
     "ui/ashur/hopper_screen.atemp",
     "ui/ashur/horse_screen.atemp",
-    "ui/ashur/inventory_screen.atemp",
     "ui/ashur/loom_screen.atemp",
     "ui/ashur/shulker_screen.atemp",
     "ui/ashur/small_chest_screen.atemp",
     "ui/ashur/smithing_table_screen.atemp",
     "ui/ashur/smoker_screen.atemp",
     "ui/ashur/stonecutter_screen.atemp",
-    "ui/ashur/trading_screen.atemp",
-    "ui/ashur/-common/safezone.atemp",
-    "ui/ashur/-common/container_common.atemp",
-    "ui/ashur/-common/jc_container_item.atemp",
-    "ui/ashur/-common/global.atemp",
-    "ui/ashur/-common/screen_content.atemp",
-    "ui/ashur/-common/misc.unsorted/banner.atemp",
-    "ui/ashur/-common/misc.unsorted/enchant_button.atemp",
-    "ui/ashur/-common/misc.unsorted/button.json",
-    "ui/ashur/-common/misc.unsorted/button_mappings.json",
-    "ui/ashur/-common/misc.unsorted/crafting_common.atemp",
-    "ui/ashur/-common/misc.unsorted/crafting_textures.atemp",
-    "ui/ashur/-common/misc.unsorted/creative_recipe_item.atemp",
-    "ui/ashur/-common/misc.unsorted/java_hover_text.atemp",                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                "assets/sprites/container/slot_2.png",
-    "ui/ashur/-common/misc.unsorted/recipe_grid.atemp",
-    "ui/ashur/-common/misc.unsorted/scroll_panel.atemp",
-    "ui/ashur/-common/misc.unsorted/selected_trade_invalid.atemp",
-    "ui/ashur/-common/misc.unsorted/smithing_animations.atemp",
-    "ui/ashur/-common/misc.unsorted/stack_splitting_overlay.atemp",
-    "ui/ashur/-common/misc.unsorted/text_edit_area.atemp",
-    "ui/ashur/-common/misc.unsorted/toggle.atemp",
-    "ui/ashur/-common/misc.unsorted/trade_global.atemp",
-    "ui/ashur/furnace_recipe/blast_furnace_recipe_book.atemp",
-    "ui/ashur/furnace_recipe/furnace_recipe_book.atemp",
-    "ui/ashur/furnace_recipe/furnace_tabs.atemp",
-    "ui/ashur/furnace_recipe/smelting_common.atemp",
-    "ui/ashur/furnace_recipe/smoker_recipe_book.atemp",
-    "ui/ashur/-common/misc.unsorted/survival_recipe_grid.atemp",
-    "ui/ashur/-common/misc.unsorted/selected_item.atemp",
-    "ui/ashur/bundle/bundle.atemp",
-    "ui/ashur/bundle/bundle_grid_item.atemp",
-    "ui/ashur/-common/compatibility/extensions.atemp",
-    "ui/ashur/-common/recipe_book.atemp",
-    
-    //compatibility sections
-
-
-    //pack [https://www.curseforge.com/minecraft-bedrock/texture-packs/deesse-ui-pack]
-    "ui/ashur/-common/compatibility/Déesse_UI_Pack.atemp",
-    //pack [https://www.curseforge.com/minecraft-bedrock/texture-packs/jei-recipe-book-layout]
-    "ui/ashur/-common/compatibility/JEI_Recipe_Book_Layout.atemp",
-    //pack [https://www.planetminecraft.com/texture-pack/thickly-be-beveled-buttons-bedrock-edition/]
-    "ui/ashur/-common/compatibility/Thickly_Be-Beveled_Buttons.atemp"
+    "ui/ashur/trading_screen.atemp"
   ]
 }

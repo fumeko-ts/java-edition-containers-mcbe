@@ -1,0 +1,145 @@
+{
+  // this file is free use, you may embed a modified variant into your pack for compatibility purposes, or if you just want to use the compat system for your own compat.
+  "namespace": "compatibility_container_item",
+
+  "container_item_bridge@global.empty_panel": {
+    "$custom_slot_content|default": "global.empty_panel",
+    "$item_tag_controls|default": [],
+    "$item_interact_controls|default": [],
+    "variables": [
+      {
+        "requires": "$is_déesse_ui_pack",
+        "$custom_slot_content|default": "compatibility_container_item.buttons",
+        "$item_tag_controls|default": [
+          { "rarity_highlight@déesse_gameplay.rarity_highlight": {"layer": 5} },
+          { "lodestone_compass_index@déesse_gameplay.lodestone_compass_index": {} },
+          {
+            "container_item_utils@déesse_searchItems.container_item_utils": {
+              "$is_inventory_screen|default": false
+            }
+          }
+        ],
+        "$item_interact_controls|default": [
+          { "1@compatibility_container_item.drop_one_action_button": { /*"debug": "red"*/ } },
+          { "2@compatibility_container_item.drop_all_action_button": { /*"debug": "green"*/ } },
+          { "3@compatibility_container_item.move_one_action_button": { /*"debug": "blue"*/ } },
+          { "4@compatibility_container_item.move_all_action_button": { /*"debug": "purple"*/ } }
+        ]
+      }
+    ]
+  },
+
+  "buttons@global.empty_panel": {
+    "$pressed_action|default": "",
+    "controls": [
+      {
+        "item_cell_tags@global.empty_panel": {
+          "controls": "$item_tag_controls"
+        }
+      },
+
+      {
+        "item_interact_buttons@global.empty_panel": {
+          "controls": "$item_interact_controls",
+          //we never want these working in creative inventory due to the creative inventories unusual layout
+          "bindings": [
+            {
+              "binding_type": "global",
+              "binding_condition": "always_when_visible",
+              "binding_name": "#is_creative_mode",
+              "binding_name_override": "#creative_mode"
+            },
+            {
+              "binding_type": "view",
+              "source_property_name": "(not (#creative_mode and $is_inventory_screen))",
+              "target_property_name": "#visible"
+            }
+          ]
+        }
+      }
+    ]
+  },
+  "action_button@button_mappings.custom_mapping_template": {
+    "size": [18, 18],
+    "layer": 29,
+    "$highlight_control": "compatibility_container_item.highlight_slot",
+    "$pressed_action|default": "(o_o)",
+    "$mode_prefix|default": "current_screen",
+    "$single_source|default": "current_screen",
+    "bindings": "$action_bindings",
+    "variables": [
+      {
+        "requires": "$is_déesse_ui_pack",
+        "$action_bindings|default": [
+          {
+            "binding_type": "collection_details",
+            "binding_collection_name": "$item_collection",
+            "binding_condition": "once"
+          },
+          {
+            "binding_type": "view",
+            "source_control_name": "(($mode_prefix - '_all' - '_one') + '_mode_toggle')",
+            "source_property_name": "#toggle_state",
+            "target_property_name": "#mode_toggle"
+          },
+          {
+            "binding_type": "view",
+            "source_control_name": "($mode_prefix + '_toggle')",
+            "source_property_name": "#toggle_state",
+            "target_property_name": "#sub_toggle"
+          },
+          {
+            "binding_type": "view",
+            "source_property_name": "(#mode_toggle and #sub_toggle)",
+            "target_property_name": "#visible"
+          }
+        ]
+      }
+    ],
+    "$action_bindings|default": [
+      {
+        "binding_type": "collection_details",
+        "binding_collection_name": "$item_collection",
+        "binding_condition": "once"
+      },
+      {
+        "binding_type": "view",
+        "source_control_name": "$single_source",
+        "source_property_name": "#toggle_state",
+        "target_property_name": "#visible"
+      }
+    ],
+    "button_mappings": [
+      { "from_button_id": "button.menu_select", "mapping_type": "pressed", "to_button_id": "$pressed_action" },
+      { "from_button_id": "button.menu_ok", "mapping_type": "pressed", "to_button_id": "$pressed_action" },
+      { "from_button_id": "button.controller_select", "mapping_type": "pressed", "to_button_id": "$pressed_action" },
+      { "from_button_id": "button.menu_auto_place", "mapping_type": "pressed", "to_button_id": "$pressed_action" },
+      {
+        "from_button_id": "button.container_auto_place_one",
+        "mapping_type": "pressed",
+        "to_button_id": "$pressed_action"
+      }
+    ]
+  },
+
+  "highlight_slot@jc_container_item.highlight_slot": {
+    "layer": -29
+  },
+
+  "drop_one_action_button@compatibility_container_item.action_button": {
+    "$pressed_action": "button.drop_one",
+    "$mode_prefix": "drop_one"
+  },
+  "drop_all_action_button@compatibility_container_item.action_button": {
+    "$pressed_action": "button.drop_all",
+    "$mode_prefix": "drop_all"
+  },
+  "move_one_action_button@compatibility_container_item.action_button": {
+    "$pressed_action": "button.container_auto_place_one",
+    "$mode_prefix": "auto_place_one"
+  },
+  "move_all_action_button@compatibility_container_item.action_button": {
+    "$pressed_action": "button.container_auto_place",
+    "$mode_prefix": "auto_place_all"
+  }
+}

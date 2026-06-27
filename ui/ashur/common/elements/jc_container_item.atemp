@@ -1,0 +1,281 @@
+/**
+// © 2026 ashura_temps,    All Rights Reserved.
+//
+// This UI is custom-made. You are allowed to use it **only as-is**, inside the game.
+// Do not modify, extract, reuse, or share any part of this UI including .json, .atemp files,
+// layout structure, or design.
+//
+// Not allowed:
+//   - Editing the UI (even for private/personal use)
+//   - Using parts of the code or layout in your own pack
+//   - Reuploading, redistributing, or hosting these files elsewhere
+//   - Converting texture packs to Bedrock using this UI
+//
+// By using this project, you agree to these terms.
+*/
+
+// if you want to modify the item cell contents use ui/ashur/common/compatibility/advanced/compatibility_container_item.atemp
+// its made for overrideing variables in this file without touching this file
+
+{
+  "namespace": "jc_container_item",
+
+  "container_item@compatibility_container_item.container_item_bridge": {
+    "layer": 1,
+    "size": [18, 18],
+
+    "$dont_render_hover_text|default": false,
+    "$dont_render_item|default": false,
+    "$dont_render_item_count|default": false,
+
+    "$stack_count_offset|default": [0, 1],
+    "$progress_bar_offset|default": [-3, -3],
+    "$progress_bar_anchor|default": "bottom_right",
+
+    "$background_control|default": "global.empty_panel",
+    "$item_renderer_control|default": "jc_container_item.item_renderer",
+    "$button_control|default": "button_mappings.container_item_button",
+
+    "$bundle_cycled_item_renderer|default": "jc_container_item.bundle_item_template",
+    "$storage_bar_control|default": "jc_container_item.storage_bar",
+    "$durability_bar_control|default": "jc_container_item.durability_bar",
+
+    "$stack_count_control|default": "jc_container_item.stack_count_label",
+
+    "$touch_slot_selected_control|default": "jc_container_item.touch_slot_selected",
+
+    "$item_collection|default": "Minecraft",
+    "$item_collection_name": "$item_collection",
+
+    "$cell_hover_text_bindings|default": [
+      {
+        "binding_type": "collection",
+        "binding_collection_name": "$item_collection",
+        "binding_name": "#hover_text",
+        "binding_name_override": "#hover_text"
+      },
+      {
+        "binding_name": "(not #show_bundle_tooltip_hover)",
+        "binding_name_override": "#visible"
+      }
+    ],
+
+    "controls": [
+      { "$custom_slot_content@$custom_slot_content": {} },
+      { "$background_control@$background_control": {} },
+      { "$button_control@$button_control": {} },
+
+      {
+        "$item_renderer_control@$item_renderer_control": {
+          "ignored": "$dont_render_item",
+          "$visible_binding_name": "(not #bundle_selected_item_visible)"
+        }
+      },
+      { "$stack_count_control@$stack_count_control": {} },
+      { "$touch_slot_selected_control@$touch_slot_selected_control": {} },
+      { "bundle_open_icon_back@jc_container_item.bundle_item_template": { "layer": 6, "$renderer_type": "open_back" } },
+      {
+        "bundle_selected_item_icon@$bundle_cycled_item_renderer": {
+          "$visible_binding_name": "#bundle_selected_item_visible",
+          "$renderer_type": "item_renderer_data"
+        }
+      },
+      { "bundle_open_icon_front@jc_container_item.bundle_item_template": { "layer": 8, "$renderer_type": "open_front" } },
+
+      { "$storage_bar_control@$storage_bar_control": {} },
+      { "$durability_bar_control@$durability_bar_control": {} }
+    ]
+  },
+  "touch_slot_selected@screen_content.image_element": {
+    "texture": "textures/ui/ashur/touch_ui_selected",
+    "size": [18, 18],
+    "visible": false,
+    "layer": 4,
+    "bindings": [
+      {
+        "binding_type": "collection",
+        "binding_collection_name": "$item_collection",
+        "binding_name": "#is_selected_slot",
+        "binding_name_override": "#visible"
+      }
+    ]
+  },
+  "storage_bar@jc_container_item.durability_bar": {
+    "primary_color": [0.4, 0.4, 1.0, 1.0],
+    "full_storage_color": [1.0, 0.4, 0.4],
+    "property_bag": {
+      "drop_shadow": true,
+      "is_storage_bar": true
+    },
+    "bindings": [
+      {
+        "binding_type": "collection",
+        "binding_collection_name": "$item_collection",
+        "binding_name": "#item_storage_total_amount",
+        "binding_name_override": "#progress_bar_total_amount"
+      },
+      {
+        "binding_type": "collection",
+        "binding_collection_name": "$item_collection",
+        "binding_name": "#item_storage_current_amount",
+        "binding_name_override": "#progress_bar_current_amount"
+      },
+      {
+        "binding_type": "collection",
+        "binding_collection_name": "$item_collection",
+        "binding_name": "#item_storage_visible",
+        "binding_name_override": "#progress_bar_visible"
+      }
+    ]
+  },
+
+  "durability_bar@global.custom_renderer": {
+    "$type": "progress_bar_renderer",
+    "layer": 15,
+    "offset": "$progress_bar_offset",
+    "anchor_from": "$progress_bar_anchor",
+    "anchor_to": "$progress_bar_anchor",
+    "size": [12, 1],
+    "property_bag": {
+      "drop_shadow": true,
+      "is_durability": true,
+      "round_value": true
+    },
+    "bindings": [
+      {
+        "binding_type": "collection",
+        "binding_collection_name": "$item_collection",
+        "binding_name": "#item_durability_total_amount",
+        "binding_name_override": "#progress_bar_total_amount"
+      },
+      {
+        "binding_type": "collection",
+        "binding_collection_name": "$item_collection",
+        "binding_name": "#item_durability_current_amount",
+        "binding_name_override": "#progress_bar_current_amount"
+      },
+      {
+        "binding_type": "collection",
+        "binding_collection_name": "$item_collection",
+        "binding_name": "#item_durability_visible",
+        "binding_name_override": "#touch_progress_bar_visible"
+      }
+    ]
+  },
+
+  "stack_count_label": {
+    "type": "label",
+    "offset": "$stack_count_offset",
+    "anchor_to": "bottom_right",
+    "anchor_from": "bottom_right",
+    "layer": 9,
+    "shadow": true,
+    "size": ["default", 10],
+    "text": "#inventory_stack_count",
+    "ignored": "$dont_render_item_count",
+    "bindings": [
+      {
+        "binding_type": "collection",
+        "binding_collection_name": "$item_collection",
+        "binding_name": "#inventory_stack_count"
+      }
+    ]
+  },
+
+  "bundle_item_template@jc_container_item.item_renderer": {
+    "$renderer_type|default": "none",
+    "bindings": [
+      {
+        "binding_type": "collection",
+        "binding_collection_name": "$item_collection",
+        "binding_name": "#bundle_selected_item_visible",
+        "binding_name_override": "#visible"
+      },
+      {
+        "binding_type": "collection",
+        "binding_collection_name": "$item_collection",
+        "binding_condition": "$item_renderer_binding_condition",
+        "binding_name": "('#bundle_' + $renderer_type)"
+      }
+    ]
+  },
+
+  "highlight_slot@global.empty_panel": {
+    "controls": [
+      {
+        //nested like this because the highlight slot def cant directly contain visibility bindings due to it breaking button hover state
+        "highlight_slot_content@global.empty_panel": {
+          "controls": [
+            {
+              "highlight_slot@global.empty_image": {
+                "texture": "assets/sprites/container/slot_highlight_back",
+                "size": [18, 18],
+                "layer": 4
+              }
+            },
+            {
+              "highlight_slot_overlay@global.empty_image": {
+                "texture": "assets/sprites/container/slot_highlight_front",
+                "size": [18, 18],
+                "layer": 12
+              }
+            },
+            {
+              "hover_text_controler@global.hover_text": {
+                "offset": [10, -10],
+                "ignored": "$dont_render_hover_text",
+                "bindings": "$cell_hover_text_bindings"
+              }
+            }
+          ],
+          "bindings": [
+            {
+              "ignored": "$use_pc_hover_text_with_touch_input",
+              "binding_name": "(not #using_touch)",
+              "binding_name_override": "#visible"
+            }
+          ]
+        }
+      }
+    ]
+  },
+
+  "item_renderer@global.custom_renderer": {
+    "$type": "inventory_item_renderer",
+    "layer": 7,
+    "size": [16, 16],
+    "anchor_to": "center",
+    "anchor_from": "center",
+    "property_bag": {
+      "#filtered_light_multiplier": 0.9,
+      "#disabled_filter_visible": true
+    },
+    "$item_renderer_binding_condition|default": "visible",
+    "$visible_binding_name|default": "",
+    "bindings": [
+      {
+        "binding_type": "collection_details",
+        "binding_collection_name": "$item_collection"
+      },
+      {
+        "binding_type": "collection",
+        "binding_collection_name": "$item_collection",
+        "binding_condition": "$item_renderer_binding_condition",
+        "binding_name": "#item_renderer_data"
+      },
+      {
+        "binding_type": "collection",
+        "binding_collection_name": "$item_collection",
+        "binding_condition": "visible",
+        "binding_name": "#group_item_group_name"
+      },
+      {
+        "binding_type": "collection",
+        "binding_collection_name": "$item_collection",
+        "ignored": "($visible_binding_name = '')",
+        "binding_name": "$visible_binding_name",
+        "binding_name_override": "#visible"
+      }
+    ]
+  }
+}

@@ -45,9 +45,19 @@
                             "orientation": "horizontal",
                             "size": [38, 18],
                             "controls": [
-                              {"banner_slot@jc_container_item.container_item": {"$item_collection": "loom_input_items","$cell_overlay_ref": "loom_screen.banner_empty_image"}},
-                              {"slot_center_filler@global.empty_panel"       : {"size": [2, 18]                                                                             }},
-                              {"dye_slot@jc_container_item.container_item"   : {"$item_collection": "loom_dye_items"  ,"$cell_overlay_ref": "loom_screen.dye_empty_image"   }}
+                              {
+                                "banner_slot@jc_container_item.container_item": {
+                                  "$item_collection": "loom_input_items",
+                                  "$background_control": "loom_screen.banner_empty_image"
+                                }
+                              },
+                              { "slot_center_filler@global.empty_panel": { "size": [2, 18] } },
+                              {
+                                "dye_slot@jc_container_item.container_item": {
+                                  "$item_collection": "loom_dye_items",
+                                  "$background_control": "loom_screen.dye_empty_image"
+                                }
+                              }
                             ]
                           }
                         },
@@ -78,7 +88,7 @@
                                     {
                                       "pattern_slot_visual_fix@jc_container_item.container_item": {
                                         "$item_collection": "loom_material_items",
-                                        "$cell_overlay_ref": "loom_screen.pattern_empty_image",
+                                        "$background_control": "loom_screen.pattern_empty_image",
                                         "$dont_render_item": true,
                                         "$dont_render_hover_text": true,
                                         "$dont_render_item_count": true,
@@ -122,7 +132,7 @@
                 "size": ["default", 10],
                 "layer": 5,
                 "text": "atemp.container.loom",
-                "color": "$title_text_color"
+                "color": "$container_title_color"
               }
             }
           ]
@@ -165,8 +175,18 @@
                 "$collection_name": "patterns",
                 "$scrolling_content": "loom_screen.loom_selection_grid",
                 "bindings": [
-                  {"binding_type": "collection","binding_collection_name": "loom_dye_items"  ,"binding_name": "#item_id_aux","binding_name_override": "#slot_has_banner"},
-                  {"binding_type": "collection","binding_collection_name": "loom_input_items","binding_name": "#item_id_aux","binding_name_override": "#slot_has_dye"   },
+                  {
+                    "binding_type": "collection",
+                    "binding_collection_name": "loom_dye_items",
+                    "binding_name": "#item_id_aux",
+                    "binding_name_override": "#slot_has_banner"
+                  },
+                  {
+                    "binding_type": "collection",
+                    "binding_collection_name": "loom_input_items",
+                    "binding_name": "#item_id_aux",
+                    "binding_name_override": "#slot_has_dye"
+                  },
                   {
                     "binding_type": "view",
                     "binding_condition": "always",
@@ -218,8 +238,16 @@
                 "anchor_from": "bottom_left",
                 "anchor_to": "bottom_left",
                 "bindings": [
-                  {"binding_name": "#result_patterns","binding_name_override": "#banner_patterns","binding_condition": "always"},
-                  {"binding_name": "#result_colors","binding_name_override": "#banner_colors","binding_condition": "always"}
+                  {
+                    "binding_name": "#result_patterns",
+                    "binding_name_override": "#banner_patterns",
+                    "binding_condition": "always"
+                  },
+                  {
+                    "binding_name": "#result_colors",
+                    "binding_name_override": "#banner_colors",
+                    "binding_condition": "always"
+                  }
                 ]
               }
             }
@@ -234,9 +262,9 @@
       }
     ]
   },
-
   "item_empty_image@screen_content.image_element": {
     "size": [16, 16],
+    "layer": 5,
     "anchor_from": "center",
     "anchor_to": "center",
     "bindings": [
@@ -248,11 +276,9 @@
       }
     ]
   },
-
-  "banner_empty_image@loom_screen.item_empty_image" : {"texture": "assets/sprites/container/loom/banner_slot" },
-  "dye_empty_image@loom_screen.item_empty_image"    : {"texture": "assets/sprites/container/loom/dye_slot"    },
-  "pattern_empty_image@loom_screen.item_empty_image": {"texture": "assets/sprites/container/loom/pattern_slot"},
-
+  "banner_empty_image@loom_screen.item_empty_image": { "texture": "assets/sprites/container/loom/banner_slot" },
+  "dye_empty_image@loom_screen.item_empty_image": { "texture": "assets/sprites/container/loom/dye_slot" },
+  "pattern_empty_image@loom_screen.item_empty_image": { "texture": "assets/sprites/container/loom/pattern_slot" },
   "scroller@screen_content.image_element": {
     "tiled": true,
     "nineslice_size": [6, 7, 6, 6],
@@ -263,7 +289,6 @@
     "texture": "assets/sprites/container/loom/scroller",
     "size": [12, "100%"]
   },
-
   "loom_selection_grid@global.empty_grid": {
     "size": [56, "default"],
     "collection_name": "$collection_name",
@@ -282,7 +307,6 @@
       }
     ]
   },
-
   "pattern_button": {
     "type": "input_panel",
     "size": [14, 14],
@@ -331,7 +355,11 @@
           "offset": [4, 2],
           "size": [5, 10],
           "bindings": [
-            {"binding_name": "#banner_patterns","binding_type": "collection","binding_collection_name": "patterns"},
+            {
+              "binding_name": "#banner_patterns",
+              "binding_type": "collection",
+              "binding_collection_name": "patterns"
+            },
             {
               "binding_type": "view",
               "binding_condition": "always",
@@ -361,18 +389,61 @@
           "sound_pitch": 1.0,
           "default_focus_precedence": 1,
           "layer": 1,
-          "bindings": [{"binding_type": "collection_details","binding_collection_name": "$collection_name","binding_condition": "once"}],
+          "bindings": [
+            {
+              "binding_type": "collection_details",
+              "binding_collection_name": "$collection_name",
+              "binding_condition": "once"
+            }
+          ],
           "button_mappings": [
-            {"from_button_id": "button.menu_select"                 , "to_button_id": "button.pattern_select" , "mapping_type": "pressed"},
-            {"from_button_id": "button.menu_ok"                     , "to_button_id": "button.pattern_select" , "mapping_type": "pressed"},
-            {"from_button_id": "button.controller_back"             , "to_button_id": "button.pattern_select" , "mapping_type": "pressed" , "ignored": "(not $is_ps4)"},
-            {"from_button_id": "button.menu_secondary_select"       , "to_button_id": "button.pattern_select" , "mapping_type": "pressed"},
-            {"from_button_id": "button.controller_select"           , "to_button_id": "button.pattern_select" , "mapping_type": "pressed"},
-            {"from_button_id": "button.menu_auto_place"             , "to_button_id": "button.pattern_select" , "mapping_type": "pressed"},
-            {"from_button_id": "button.controller_secondary_select" , "to_button_id": "button.pattern_select" , "mapping_type": "pressed"},
-            {"from_button_id": "button.menu_inventory_drop"         , "to_button_id": "button.pattern_select" , "mapping_type": "pressed"},
-            {"from_button_id": "button.menu_inventory_drop_all"     , "to_button_id": "button.pattern_select" , "mapping_type": "pressed"},
-            {"to_button_id"  : "button.container_slot_hovered"                                                , "mapping_type": "pressed"}
+            {
+              "from_button_id": "button.menu_select",
+              "to_button_id": "button.pattern_select",
+              "mapping_type": "pressed"
+            },
+            {
+              "from_button_id": "button.menu_ok",
+              "to_button_id": "button.pattern_select",
+              "mapping_type": "pressed"
+            },
+            {
+              "from_button_id": "button.controller_back",
+              "to_button_id": "button.pattern_select",
+              "mapping_type": "pressed",
+              "ignored": "(not $is_ps4)"
+            },
+            {
+              "from_button_id": "button.menu_secondary_select",
+              "to_button_id": "button.pattern_select",
+              "mapping_type": "pressed"
+            },
+            {
+              "from_button_id": "button.controller_select",
+              "to_button_id": "button.pattern_select",
+              "mapping_type": "pressed"
+            },
+            {
+              "from_button_id": "button.menu_auto_place",
+              "to_button_id": "button.pattern_select",
+              "mapping_type": "pressed"
+            },
+            {
+              "from_button_id": "button.controller_secondary_select",
+              "to_button_id": "button.pattern_select",
+              "mapping_type": "pressed"
+            },
+            {
+              "from_button_id": "button.menu_inventory_drop",
+              "to_button_id": "button.pattern_select",
+              "mapping_type": "pressed"
+            },
+            {
+              "from_button_id": "button.menu_inventory_drop_all",
+              "to_button_id": "button.pattern_select",
+              "mapping_type": "pressed"
+            },
+            { "to_button_id": "button.container_slot_hovered", "mapping_type": "pressed" }
           ],
           "hover_control": "hover",
           "controls": [
@@ -380,6 +451,66 @@
               "hover@global.empty_panel": {
                 "size": [14, 14],
                 "controls": [
+                  // {
+                  //   "hover_text@global.hover_text": {
+                  //     "property_bag": {
+                  //       "#0_1_": "§a0_1_",//
+                  //       "#0_2_": "§c0_2_",
+                  //       "#0_3_": "§e0_3_",
+                  //       "#0_4_": "§b0_4_",
+                  //       "#0_5_": "§d0_5_",
+                  //       "#0_6_": "§60_6_",
+                  //       "#0_7_": "§90_7_",
+                  //       "#0_8_": "§f0_8_",
+                  //       "#0_9_": "§40_9_",
+                  //       "#0_10_": "§50_10_",
+                  //       "#0_11_": "§10_11_",
+                  //       "#0_12_": "§30_12_",
+                  //       "#0_13_": "§70_13_",
+                  //       "#0_14_": "§20_14_",
+                  //       "#0_15_": "§80_15_",
+                  //       "#0_16_": "§a0_16_",
+                  //       "#0_17_": "§c0_17_",
+                  //       "#0_18_": "§e0_18_",
+                  //       "#0_20_": "§b0_20_",
+                  //       "#0_21_": "§d0_21_",
+                  //       "#0_22_": "§60_22_",
+                  //       "#0_23_": "§90_23_",
+                  //       "#0_24_": "§f0_24_",
+                  //       "#0_25_": "§40_25_",
+                  //       "#0_26_": "§50_26_",
+                  //       "#0_27_": "§10_27_",
+                  //       "#0_28_": "§30_28_",
+                  //       "#0_29_": "§70_29_",
+                  //       "#0_30_": "§20_30_",
+                  //       "#0_31_": "§80_31_",
+                  //       "#0_32_": "§a0_32_",
+                  //       "#0_33_": "§c0_33_",
+                  //       "#0_34_": "§e0_34_",
+                  //       "#0_35_": "§b0_35_",
+                  //       "#0_36_": "§d0_36_",
+                  //       "#0_37_": "§60_37_",
+                  //       "#0_38_": "§90_38_",
+                  //       "#0_39_": "§f0_39_",
+                  //       "#0_40_": "§40_40_",
+                  //       "#0_41_": "§50_41_",
+                  //       "#0_42_": "§10_42_",
+                  //       "#0_43_": "§30_43_"
+                  //     },
+                  //     "bindings": [
+                  //       {
+                  //         "binding_name": "#banner_patterns",
+                  //         "binding_type": "collection",
+                  //         "binding_collection_name": "patterns"
+                  //       },
+                  //       {
+                  //         "binding_type": "view",
+                  //         "source_property_name": "('#' + #banner_patterns)",
+                  //         "target_property_name": "#hover_text"
+                  //       }
+                  //     ]
+                  //   }
+                  // },
                   {
                     "hover@screen_content.image_element": {
                       "size": [14, 14],

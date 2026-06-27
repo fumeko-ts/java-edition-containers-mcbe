@@ -1,0 +1,181 @@
+{
+  /*
+      this file is intended to be copied and placed into another pack
+      it allows you to add new ui elements, modify it as needed.
+  */
+  "namespace": "jc-extensions",
+  /*
+      to modify container item / item slots use this file ui/ashur/common/compatibility/advanced/compatibility_container_item.atemp
+
+      $is_crafting_screen       - outputs - true|false 
+      $is_inventory_screen      - outputs - true|false 
+      $is_anvil_screen          - outputs - true|false 
+      $is_beacon_screen         - outputs - true|false 
+      $is_blast_furnace_screen  - outputs - true|false 
+      $is_brewing_stand_screen  - outputs - true|false 
+      $is_cartography_screen    - outputs - true|false 
+      $is_small_chest_screen    - outputs - true|false 
+      $is_double_chest_screen   - outputs - true|false 
+      $is_ender_chest_screen    - outputs - true|false 
+      $is_shulker_screen        - outputs - true|false 
+      $is_barrel_screen         - outputs - true|false 
+      $is_enchanting_screen     - outputs - true|false 
+      $is_furnace_screen        - outputs - true|false 
+      $is_grindstone_screen     - outputs - true|false 
+      $is_mount_screen          - outputs - true|false 
+      $is_loom_screen           - outputs - true|false 
+      $is_crafter_screen        - outputs - true|false 
+      $is_dropper_screen        - outputs - true|false 
+      $is_dispenser_screen      - outputs - true|false 
+      $is_hopper_screen         - outputs - true|false 
+      $is_smithing_table_screen - outputs - true|false
+      $is_smoker_screen         - outputs - true|false 
+      $is_stonecutter_screen    - outputs - true|false 
+      $is_trading_screen        - outputs - true|false 
+
+      
+      $is_large_chest = $is_double_chest_screen
+      $is_chest_screen = ($is_shulker_screen or $is_ender_chest_screen or $is_barrel_screen or $is_small_chest_screen)
+      $is_redstone_screen = ($is_hopper_screen or $is_dispenser_screen or $is_dropper_screen or $is_crafter_screen)
+
+      creative_inventory is a special case. it shares the inventory screen
+      so there is no $is_creative_inventory_screen variable
+
+      to show/hide elements based on creative mode use a binding instead
+
+      "bindings": [
+        {
+          "binding_type": "global",
+          "binding_condition": "always",//always incase gamemode changes wilst inside container ui you want the element to update
+          "binding_name": "(not #is_creative_mode)",  // flip condition to show only in creative
+          "binding_name_override": "#visible"
+        }
+      ]
+    */
+
+  "compatibility@compatibility_variables._client_variables": {
+    "$compatibility_content|default": "jc-extensions.empty_panel",
+
+    "controls": "$compatibility_controls",
+    "$compatibility_controls": [
+      {
+        "$compatibility_content@$compatibility_content": {}
+      }
+    ],
+    "variables": [
+      {
+        "requires": "$is_d\u00e9esse_ui_pack",
+        "$compatibility_content|default": "deesse_ui_bridge.desse_main_content"
+      }
+/*
+      ,
+     
+       // if you want to inject a single element or a tree of elements (like a stack panel)
+       // use $compatibility_content like this
+
+        {
+          "requires": "$is_hopper_screen",  // fires when the hopper screen is open
+
+          "$compatibility_content": "<namespace>.<definition_to_inject>"
+        },
+
+
+       // if you need to inject multiple separate things that cant live under one parent
+       // use $compatibility_controls instead:
+
+        {
+          "requires": "$is_dropper_screen",  // fires when the dropper screen is open
+
+          "$compatibility_controls": [
+            { "thing_1@<namespace>.<definition_to_inject_1>": {} },
+            { "thing_2@<namespace>.<definition_to_inject_2>": {} },
+            { "thing_3@<namespace>.<definition_to_inject_3>": {} }
+          ]
+        },
+
+        {
+          // $some_other_variable should be a global var defined in your _global_variables.json within your own pack
+
+          "requires": "($is_dropper_screen and $some_other_variable)",
+
+          "$compatibility_content": "<namespace>.<definition_to_inject>",
+
+          "$compatibility_controls": [
+            // extending $compatibility_content here reuses the def set above in this same entry
+            { "thing_1@$compatibility_content": {} },
+            { "thing_2@<namespace>.<definition_to_inject_2>": {} },
+            { "thing_3@<namespace>.<definition_to_inject_3>": {} }
+          ]
+        }
+
+        //tho that being said i would prefer if you do it the way i did the Deesse-UI compat
+*/
+    ]
+  },
+  // screens
+  "anvil_screen@jc-extensions.compatibility": {},
+  "blast_furnace_screen@jc-extensions.compatibility": {},
+  "brewing_stand_screen@jc-extensions.compatibility": {},
+  "cartography_screen@jc-extensions.compatibility": {},
+  "enchanting_screen@jc-extensions.compatibility": {},
+  "furnace_screen@jc-extensions.compatibility": {},
+  "grindstone_screen@jc-extensions.compatibility": {},
+  "loom_screen@jc-extensions.compatibility": {},
+  "mount_screen@jc-extensions.compatibility": {},
+  "smithing_table_screen@jc-extensions.compatibility": {},
+  "smoker_screen@jc-extensions.compatibility": {},
+  "stonecutter_screen@jc-extensions.compatibility": {},
+  "trading_screen@jc-extensions.compatibility": {},
+  "beacon_screen@jc-extensions.compatibility": {},
+  // inventories
+  "inventory_screen@jc-extensions.compatibility": {},
+  "crafting_screen@jc-extensions.compatibility": {},
+  "creative_inventory@jc-extensions.compatibility": {}, //this one is not connected do not use please
+  // redstone blocks
+  "crafter_screen@jc-extensions.compatibility": {},
+  "dispenser_screen@jc-extensions.compatibility": {},
+  "dropper_screen@jc-extensions.compatibility": {},
+  "hopper_screen@jc-extensions.compatibility": {},
+  // container blocks
+  "barrel_screen@jc-extensions.compatibility": {},
+  "double_chest_screen@jc-extensions.compatibility": {},
+  "ender_chest_screen@jc-extensions.compatibility": {},
+  "shulker_screen@jc-extensions.compatibility": {},
+  "small_chest_screen@jc-extensions.compatibility": {},
+  "empty_panel": { "type": "panel", "size": [0, 0] },
+
+  //made this seprate because theres multiple brewing guide recipe book packs
+  "brewing_guide@compatibility_variables._client_variables": {
+    "size": ["100%c + 2px", 166],
+    "variables": [
+      {
+        "requires": "$is_d\u00e9esse_ui_pack",
+        "$recipe_book_content|default": "d\u00e9esse_brewing.brewing_guide_panel"
+      }
+    ],
+    "$recipe_book_content|default": "jc-extensions.empty_panel",
+    "controls": "$brewing_recipe_book_controls",
+    "$brewing_recipe_book_controls": [
+      {
+        "$recipe_book_content@$recipe_book_content": {}
+      }
+    ]
+  },
+
+  // this def injects elements out of safezone so eanything placed within isint affected by custom safezones
+  "out_of_safezone_compatibility@compatibility_variables._client_variables": {
+    "variables": [
+      {
+        "requires": "($is_d\u00e9esse_ui_pack and $is_inventory_screen)",
+        "$out_of_safezone_content|default": "deesse_ui_bridge.out_of_safezone_durability_viewer"
+      }
+    ],
+    "$out_of_safezone_content|default": "jc-extensions.empty_panel",
+    "controls": "$out_of_safezone_controls",
+    "$out_of_safezone_controls": [
+      {
+        "$out_of_safezone_content@$out_of_safezone_content": {}
+      }
+    ]
+  }
+}

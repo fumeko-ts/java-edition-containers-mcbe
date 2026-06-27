@@ -23,9 +23,30 @@
     "min_size": [176, 166],
     "max_size": [360, 166],
     "controls": [
-      // {
-      //   "recipe_book@recipe_book.recipe_book": {"$tab_stack_controls": []} //thats alot of recipe_books
-      // },
+      {
+        "recipe_book@recipe_book.recipe_book": {
+          "$recipe_filter_control": "crafting_common.furnace_filter_toggle",
+          "$tab_stack_controls": [
+            {
+              "search_tab@recipe_book.recipe_tab_template": {
+                "$is_default_active": true,
+                "$extra_contents": "crafting_common.search_tab_icon",
+                "$toggle_control_name": "search_tab_toggle",
+                "$toggle_group_forced_index": "$search_index",
+                "$toggle_binding_value": "#is_search_tab"
+              }
+            },
+            {
+              "food_tab@recipe_book.recipe_tab_template": {
+                "$extra_contents": "crafting_common.smoker_food_tab_icon",
+                "$toggle_control_name": "food_tab_toggle",
+                "$toggle_group_forced_index": "$food_index",
+                "$toggle_binding_value": "#is_food_tab"
+              }
+            }
+          ]
+        }
+      },
       {
         "main_smoker_contents@container_common.container_details": {
           "size": [176, 166],
@@ -33,114 +54,122 @@
             { "common_panel@screen_content.smoker": {} },
             { "extensions@jc-extensions.smoker_screen": {} },
             {
-              "smoker_top_half@global.empty_stack": {
+              "smoker_main_content@global.empty_stack": {
                 "orientation": "vertical",
                 "size": [176, 70],
                 "anchor_from": "top_middle",
                 "anchor_to": "top_middle",
                 "controls": [
-                  { "filler_1@global.empty_panel": { "size": ["fill", 6] } },
+                  { "filler_0@global.empty_panel": { "size": [176, 4] } },
                   {
-                    "label_stack@global.empty_stack": {
-                      "orientation": "horizontal",
-                      "size": [176, 10],
+                    "title_holder@global.empty_panel": {
+                      "size": [176, 12],
                       "controls": [
-                        { "filler_1@global.empty_panel": { "size": [67, "fill"] } },
                         {
-                          "label_holder@global.empty_panel": {
-                            "size": [109, 10],
-                            "controls": [
-                              {
-                                "smoker_title_label@global.empty_label":{
-                                  "anchor_to": "top_left",
-                                  "anchor_from": "top_left",
-                                  "offset": [3, -1],
-                                  "text": "atemp.container.smoker",
-                                  "color": "$title_text_color"
-                                }
-                              }
-                            ]
+                          "smoker_title@global.empty_label": {
+                            "anchor_to": "top_middle",
+                            "anchor_from": "top_middle",
+                            "offset": [0, 1],
+                            "size": ["default", 10],
+                            "text": "atemp.container.smoker",
+                            "color": "$container_title_color"
                           }
                         }
                       ]
                     }
                   },
                   {
-                    "main_content@global.empty_stack": {
+                    "main_cell_stacks@global.empty_stack": {
                       "orientation": "horizontal",
                       "size": [176, 54],
                       "controls": [
-                        { "filler_1@global.empty_panel": { "size": [55, "fill"] } },
+                        { "filler_1@global.empty_panel": { "size": [20, "fill"] } },
                         {
-                          "inputs@global.empty_stack": {
+                          "layout_toggle_stack@global.empty_stack": {
                             "orientation": "vertical",
-                            "size": [18, 54],
+                            "size": [20, "fill"],
+                            "controls": [
+                              { "filler_2@global.empty_panel": { "size": ["fill", 18] } },
+                              { "layout_toggle@crafting_common.recipe_layout_toggle": {} },
+                              { "filler_3@global.empty_panel": { "size": ["fill", 18] } }
+                            ]
+                          }
+                        },
+                        { "filler_4@global.empty_panel": { "size": [15, "fill"] } },
+                        {
+                          "fuel_and_ingredient_stack@global.empty_stack": {
+                            "orientation": "vertical",
+                            "size": [18, "fill"],
                             "controls": [
                               {
-                                "smelt_input_item@jc_container_item.container_item": {
+                                "smoker_smeltable_item@jc_container_item.container_item": {
+                                  "$background_control": "crafting_textures.main_cell_panel",
                                   "$item_collection": "furnace_ingredient_items"
                                 }
                               },
                               {
-                                "flame_buffer_and_holder": {
-                                  "type": "input_panel",
-                                  "contained": true,
-                                  "size": [18, 18],
+                                "fuel_fire_wrapper@global.empty_panel": {
+                                  "size": ["fill", 18],
                                   "controls": [
                                     {
-                                      "flame_progress@smoker_screen.smoker_image_controls": {
+                                      "fuel_fire_progress@smoker_screen.smoker_clipping_image_template": {
                                         "size": [14, 14],
-                                        "offset": [-1, 0],
-                                        "anchor_to": "center",
-                                        "anchor_from": "center",
-                                        "$smoker_sprite": "lit_progress",
-                                        "$source": "#furnace_flame_ratio",
-                                        "$houkou": "down"
+                                        "offset": [1, 3],
+                                        "anchor_to": "top_left",
+                                        "anchor_from": "top_left",
+                                        "texture": "assets/sprites/container/smoker/lit_progress",
+                                        "clip_direction": "down",
+                                        "$progress_ratio_binding": "#furnace_flame_ratio"
                                       }
                                     }
                                   ]
                                 }
                               },
                               {
-                                "fuel_input_item@jc_container_item.container_item": {
+                                "smoker_burnable_item@jc_container_item.container_item": {
                                   "$item_collection": "furnace_fuel_items"
                                 }
                               }
                             ]
                           }
                         },
-                        { "filler_2@global.empty_panel": { "size": [6, "fill"] } },
+                        { "filler_5@global.empty_panel": { "size": [6, "fill"] } },
                         {
-                          "arrow_holder@global.empty_stack": {
+                          "smoker_arrow_holding_stack@global.empty_stack": {
                             "orientation": "vertical",
-                            "size": [24, 54],
+                            "size": [24, "fill"],
                             "controls": [
-                              { "filler_1@global.empty_panel": { "size": ["fill", 18] } },
+                              { "filler_6@global.empty_panel": { "size": ["fill", 18] } },
                               {
-                                "arrow_progress@smoker_screen.smoker_image_controls": {
+                                "smoker_arrow_progress@smoker_screen.smoker_clipping_image_template": {
                                   "size": [24, 16],
-                                  "$smoker_sprite": "burn_progress",
-                                  "$source": "#furnace_arrow_ratio",
-                                  "$houkou": "left"
+                                  "texture": "assets/sprites/container/smoker/burn_progress",
+                                  "clip_direction": "left",
+                                  "$progress_ratio_binding": "#furnace_arrow_ratio"
                                 }
                               },
-                              { "filler_2@global.empty_panel": { "size": ["fill", 20] } }
+                              { "filler_7@global.empty_panel": { "size": ["fill", 20] } }
                             ]
                           }
                         },
-                        { "filler_3@global.empty_panel": { "size": [8, "fill"] } },
+                        { "filler_8@global.empty_panel": { "size": [8, "fill"] } },
                         {
-                          "item_output_holder@global.empty_stack": {
+                          "output_slot_holding_stack@global.empty_stack": {
                             "orientation": "vertical",
-                            "size": [26, 54],
+                            "size": [26, "fill"],
                             "controls": [
-                              { "filler_1@global.empty_panel": { "size": ["fill", 14] } },
+                              { "filler_9@global.empty_panel": { "size": ["fill", 14] } },
                               {
-                                "cell_holder@global.empty_panel": {
+                                "output_slot_wrapper@global.empty_panel": {
                                   "size": [26, 26],
                                   "controls": [
                                     {
-                                      "output_item@jc_container_item.container_item": {
+                                      "output_slot_underlay@crafting_textures.main_cell_panel": {
+                                        "$item_collection|default": "furnace_output_items"
+                                      }
+                                    },
+                                    {
+                                      "output_item_slot@jc_container_item.container_item": {
                                         "anchor_to": "center",
                                         "anchor_from": "center",
                                         "$item_collection": "furnace_output_items"
@@ -149,11 +178,11 @@
                                   ]
                                 }
                               },
-                              { "filler_2@global.empty_panel": { "size": ["fill", 14] } }
+                              { "filler_10@global.empty_panel": { "size": ["fill", 14] } }
                             ]
                           }
                         },
-                        { "filler_4@global.empty_panel": { "size": [35, "fill"] } }
+                        { "filler_11@global.empty_panel": { "size": [39, "fill"] } }
                       ]
                     }
                   }
@@ -171,13 +200,15 @@
       }
     ]
   },
-  "smoker_image_controls@global.empty_image": {
+  "smoker_clipping_image_template@global.empty_image": {
     "layer": 3,
-    "texture": "$smoker_sprite_src",
-    "$smoker_sprite_src": "('assets/sprites/container/smoker/' + $smoker_sprite)",
-    "clip_direction": "$houkou",
-    "keep_ratio": true,
     "clip_pixelperfect": true,
-    "bindings": [{ "binding_name": "$source", "binding_name_override": "#clip_ratio", "binding_condition": "always" }]
+    "bindings": [
+      {
+        "binding_name": "$progress_ratio_binding",
+        "binding_name_override": "#clip_ratio",
+        "binding_condition": "always"
+      }
+    ]
   }
 }

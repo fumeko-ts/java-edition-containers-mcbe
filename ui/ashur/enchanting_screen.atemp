@@ -44,24 +44,9 @@
                       "$collection_index|default": 0,
                       "grid_dimensions": [1, 3],
                       "controls": [
-                        {
-                          "button1@enchant_button.button": {
-                            "grid_position": [0, 0],
-                            "$collection_index": 1
-                          }
-                        },
-                        {
-                          "button2@enchant_button.button": {
-                            "grid_position": [0, 1],
-                            "$collection_index": 2
-                          }
-                        },
-                        {
-                          "button3@enchant_button.button": {
-                            "grid_position": [0, 2],
-                            "$collection_index": 3
-                          }
-                        }
+                        { "button1@enchant_button.button": { "grid_position": [0, 0], "$collection_index": 1 } },
+                        { "button2@enchant_button.button": { "grid_position": [0, 1], "$collection_index": 2 } },
+                        { "button3@enchant_button.button": { "grid_position": [0, 2], "$collection_index": 3 } }
                       ]
                     }
                   },
@@ -91,7 +76,7 @@
                       "anchor_from": "top_left",
                       "layer": 5,
                       "text": "atemp.container.enchant",
-                      "color": "$title_text_color"
+                      "color": "$container_title_color"
                     }
                   }
                 ]
@@ -109,7 +94,7 @@
                   {
                     "lapis_input@jc_container_item.container_item": {
                       "$item_collection": "enchanting_lapis_items",
-                      "$cell_overlay_ref": "screen_content.enchanting_lapis"
+                      "$background_control": "screen_content.enchanting_lapis"
                     }
                   }
                 ]

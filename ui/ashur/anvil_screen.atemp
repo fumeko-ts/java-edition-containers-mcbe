@@ -47,7 +47,7 @@
                             "offset": [0, -1],
                             "layer": 5,
                             "text": "atemp.container.repair",
-                            "color": "$title_text_color"
+                            "color": "$container_title_color"
                           }
                         }
                       ]
@@ -66,7 +66,6 @@
                     "anvil_text_control@text_edit_area.text_edit_box": {
                       "size": [110, 16],
                       "$edit_label_offset": [1, 0],
-
                       "$default_control": "global.empty_panel",
                       "$locked_control": "global.empty_panel",
                       "$hover_control": "global.empty_panel",
@@ -191,7 +190,7 @@
                       "controls": [
                         {
                           "cost_text_red@anvil_screen.cost_label": {
-                            "color": "$anvil_cost_fail_text_color",
+                            "color": [1.0, 0.35, 0.35],
                             "$cost_bindings": "#cost_text_red"
                           }
                         },

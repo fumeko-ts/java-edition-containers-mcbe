@@ -46,7 +46,7 @@
                             "size": ["default", 10],
                             "layer": 5,
                             "text": "atemp.container.enderchest",
-                            "color": "$title_text_color"
+                            "color": "$container_title_color"
                           }
                         }
                       ]

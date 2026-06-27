@@ -29,9 +29,7 @@
           "max_size": [359, 166],
           "layer": 1,
           "controls": [
-            {
-              "recipe_book@recipe_book.recipe_book": {}
-            },
+            { "recipe_book@recipe_book.recipe_book": {} },
             {
               "inventory@global.root_panel": {
                 "size": [176, 166],
@@ -60,7 +58,7 @@
                                         "offset": [29, 2],
                                         "layer": 2,
                                         "size": ["default", 10],
-                                        "color": "$title_text_color",
+                                        "color": "$container_title_color",
                                         "text": "atemp.container.crafting"
                                       }
                                     }
@@ -90,27 +88,6 @@
                                             }
                                           },
                                           { "toggle_bottom_spacing@global.empty_panel": { "size": ["fill", 18] } }
-                                        ],
-                                        "bindings": [
-                                          {
-                                            "binding_type": "global",
-                                            "binding_condition": "always",
-                                            "binding_name": "(not #is_creative_mode)",
-                                            "binding_name_override": "#visible"
-                                          }
-                                        ]
-                                      }
-                                    },
-                                    {
-                                      "filler@global.empty_panel": {
-                                        "size": [29, 54],
-                                        "bindings": [
-                                          {
-                                            "binding_type": "global",
-                                            "binding_condition": "always",
-                                            "binding_name": "#is_creative_mode",
-                                            "binding_name_override": "#visible"
-                                          }
                                         ]
                                       }
                                     },
@@ -120,7 +97,7 @@
                                         "grid_dimensions": [3, 3],
                                         "collection_name": "$item_collection",
                                         "$item_collection": "crafting_input_items",
-                                        "$background_images": "crafting_textures.main_cell_panel",
+                                        "$background_control": "crafting_textures.main_cell_panel",
                                         "$item_renderer_binding_condition": "always",
                                         "grid_item_template": "jc_container_item.container_item"
                                       }

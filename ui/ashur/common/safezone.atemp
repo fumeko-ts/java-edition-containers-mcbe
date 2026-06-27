@@ -1,0 +1,107 @@
+/**
+// © 2026 ashura_temps,    All Rights Reserved.
+//
+// This UI is custom-made. You are allowed to use it **only as-is**, inside the game.
+// Do not modify, extract, reuse, or share any part of this UI including .json, .atemp files,
+// layout structure, or design.
+//
+// Not allowed:
+//   - Editing the UI (even for private/personal use)
+//   - Using parts of the code or layout in your own pack
+//   - Reuploading, redistributing, or hosting these files elsewhere
+//   - Converting texture packs to Bedrock using this UI
+//
+// By using this project, you agree to these terms.
+*/
+
+{
+  "namespace": "safezone",
+  "safezone_buffer@global.empty_panel": {
+    "bindings": [{ "binding_name": "$safezone_binding_name", "binding_name_override": "#visible" }]
+  },
+  "top_safezone_vertical_buffer@safezone.safezone_buffer": { "size": "$top_vertical_safezone_size" },
+  "bottom_safezone_vertical_buffer@safezone.safezone_buffer": { "size": "$bottom_vertical_safezone_size" },
+  "left_safezone_horizontal_buffer@safezone.safezone_buffer": { "size": "$left_horizontal_safezone_size" },
+  "right_safezone_horizontal_buffer@safezone.safezone_buffer": { "size": "$right_horizontal_safezone_size" },
+  "screen_holder_safezone@global.empty_stack": {
+    "orientation": "horizontal",
+    "size": ["100%", "100%"],
+    "controls": [
+      {
+        "outer_left@safezone.left_safezone_horizontal_buffer": { "$safezone_binding_name": "#safezone_outer_left" }
+      },
+      {
+        "inner_left@safezone.left_safezone_horizontal_buffer": {
+          "$safezone_binding_name": "#safezone_inner_left",
+          "anchor_from": "top_left",
+          "anchor_to": "top_left"
+        }
+      },
+      {
+        "safezone_inner_matrix@global.empty_stack": {
+          "size": ["fill", "100%"],
+          "orientation": "vertical",
+          "controls": [
+            {
+              "outer_top@safezone.top_safezone_vertical_buffer": { "$safezone_binding_name": "#safezone_outer_top" }
+            },
+            {
+              "inner_top@safezone.top_safezone_vertical_buffer": { "$safezone_binding_name": "#safezone_inner_top" }
+            },
+            {
+              "container_content@global.empty_panel": {
+                "size": ["100%", "fill"],
+                "controls": [
+                  { "root_screen_panel@$screen_content": {} },
+                  {
+                    "bundle_tooltip_wrapper@global.empty_panel": {
+                      "size": ["100%", "100% - 22px"],
+                      "controls": [
+                        {
+                          "bundle_cursor_tooltip@global.custom_renderer": {
+                            "$type": "bundle_tooltip_renderer",
+                            "size": ["100%c", "100%c - 26px"],
+                            "layer": 20,
+                            "controls": [{ "tooltip@bundle.bundle_tooltip": {} }],
+                            "bindings": [
+                              { "binding_name": "#show_bundle_tooltip_hover", "binding_name_override": "#visible" }
+                            ]
+                          }
+                        },
+                        {
+                          "bundle_touch_tooltip@bundle.bundle_tooltip": {
+                            "anchor_from": "bottom_middle",
+                            "anchor_to": "bottom_middle",
+                            "bindings": [
+                              { "binding_name": "#show_bundle_tooltip_pocket", "binding_name_override": "#visible" }
+                            ]
+                          }
+                        }
+                      ]
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "inner_bottom@safezone.bottom_safezone_vertical_buffer": {
+                "$safezone_binding_name": "#safezone_inner_bottom"
+              }
+            },
+            {
+              "outer_bottom@safezone.bottom_safezone_vertical_buffer": {
+                "$safezone_binding_name": "#safezone_outer_bottom"
+              }
+            }
+          ]
+        }
+      },
+      {
+        "inner_right@safezone.right_safezone_horizontal_buffer": { "$safezone_binding_name": "#safezone_inner_right" }
+      },
+      {
+        "outer_right@safezone.right_safezone_horizontal_buffer": { "$safezone_binding_name": "#safezone_outer_right" }
+      }
+    ]
+  }
+}

@@ -1,0 +1,249 @@
+/**
+// © 2026 ashura_temps,    All Rights Reserved.
+//
+// This UI is custom-made. You are allowed to use it **only as-is**, inside the game.
+// Do not modify, extract, reuse, or share any part of this UI including .json, .atemp files,
+// layout structure, or design.
+//
+// Not allowed:
+//   - Editing the UI (even for private/personal use)
+//   - Using parts of the code or layout in your own pack
+//   - Reuploading, redistributing, or hosting these files elsewhere
+//   - Converting texture packs to Bedrock using this UI
+//
+// By using this project, you agree to these terms.
+*/
+
+{
+  "namespace": "crafting_common",
+
+  "filter_toggle@toggle.radio_toggle": {
+    "size": [26, 16],
+    "$is_radio_toggle": false,
+    "$toggle_name": "toggle.enableFiltering",
+    "$toggle_control_name": "recipe_filter",
+    "$toggle_binding_value": "#filtering_enabled",
+    "$hover_action": "button.filter_toggle_hovered",
+    "$unchecked": "screen_content.crafting_filter_unchecked",
+    "$unchecked_hover": "screen_content.crafting_filter_unchecked_hover",
+    "$checked": "screen_content.crafting_filter_checked",
+    "$checked_hover": "screen_content.crafting_filter_checked_hover",
+    "variables": {
+      "requires": "$cb_is_thick_menu_buttons",
+      "$unchecked": "beveled_buttons_bridge.crafting_filter_unchecked",
+      "$unchecked_hover": "beveled_buttons_bridge.crafting_filter_unchecked_hover",
+      "$checked": "beveled_buttons_bridge.crafting_filter_checked",
+      "$checked_hover": "beveled_buttons_bridge.crafting_filter_checked_hover"
+    }
+  },
+  "furnace_filter_toggle@crafting_common.filter_toggle": {
+    "$toggle_name": "toggle.enable_filtering",
+    "$unchecked": "screen_content.smelting_filter_unchecked",
+    "$unchecked_hover": "screen_content.smelting_filter_unchecked_hover",
+    "$checked": "screen_content.smelting_filter_checked",
+    "$checked_hover": "screen_content.smelting_filter_checked_hover",
+    "variables": {
+      "requires": "$cb_is_thick_menu_buttons",
+      "$unchecked": "beveled_buttons_bridge.smelting_filter_unchecked",
+      "$unchecked_hover": "beveled_buttons_bridge.smelting_filter_unchecked_hover",
+      "$checked": "beveled_buttons_bridge.smelting_filter_checked",
+      "$checked_hover": "beveled_buttons_bridge.smelting_filter_checked_hover"
+    }
+  },
+  "tab_item_renderer@global.custom_renderer": {
+    "$type": "inventory_item_renderer",
+    "size": [16, 16],
+    "layer": 7,
+    "anchor_from": "center",
+    "anchor_to": "center",
+    "$item_id|default": -1,
+    "property_bag": {
+      "#item_id_aux": "($item_id * 65536)"
+    }
+  },
+  "anchored_item_renderer@crafting_common.tab_item_renderer": {
+    "anchor_from": "top_left",
+    "anchor_to": "top_left"
+  },
+  "single_tab_icon_template@global.empty_panel": {
+    "$center_item_id|default": -1,
+    "controls": [
+      {
+        "single_tab_icons@crafting_common.anchored_item_renderer": {
+          "offset": [14, 5],
+          "$item_id": "$center_item_id"
+        }
+      }
+    ]
+  },
+
+  "double_tab_icon_template@global.empty_panel": {
+    "$right_item_id|default": -1,
+    "$left_item_id|default": -1,
+    "controls": [
+      {
+        "left_tab_item@crafting_common.anchored_item_renderer": {
+          "offset": [8, 5],
+          "layer": 6,
+          "$item_id": "$left_item_id"
+        }
+      },
+      {
+        "right_tab_item@crafting_common.anchored_item_renderer": {
+          "offset": [19, 5],
+          "$item_id": "$right_item_id"
+        }
+      }
+    ]
+  },
+
+  //tab defs
+  "search_tab_icon@crafting_common.single_tab_icon_template": {
+    "$center_item_id": "$compass_item_index"
+  },
+
+  //furnace recipe book
+  "furnace_food_tab_icon@crafting_common.single_tab_icon_template": {
+    "$center_item_id": "$raw_porkchop_item_index"
+  },
+  "furnace_blocks_tab_icon@crafting_common.single_tab_icon_template": {
+    "$center_item_id": "$stone_item_index"
+  },
+  "furnace_items_tab_icon@crafting_common.double_tab_icon_template": {
+    "$right_item_id": "$emerald_item_index",
+    "$left_item_id": "$bucket_lava_item_index"
+  },
+
+  //blast_furnace recipe book
+  "blast_furnace_items_tab@crafting_common.double_tab_icon_template": {
+    "$right_item_id": "$golden_leggings_item_index",
+    "$left_item_id": "$iron_shovel_item_index"
+  },
+
+  //smoker recipe book
+  "smoker_food_tab_icon@crafting_common.single_tab_icon_template": {
+    "$center_item_id": "$raw_porkchop_item_index"
+  },
+
+  //crafting recipe book
+  "crafting_nature_tab_icon@crafting_common.double_tab_icon_template": {
+    "$right_item_id": "$apple_item_index",
+    "$left_item_id": "$bucket_lava_item_index"
+  },
+  "crafting_construction_tab_icon@crafting_common.single_tab_icon_template": {
+    "$center_item_id": "$bricks_item_index"
+  },
+  "crafting_equipment_tab_icon@crafting_common.double_tab_icon_template": {
+    "$right_item_id": "$golden_sword_item_index",
+    "$left_item_id": "$iron_axe_item_index"
+  },
+  "crafting_items_tab_icon@crafting_common.single_tab_icon_template": {
+    "$center_item_id": "$redstone_item_index"
+  },
+
+  "creative_tab_icons@global.empty_panel": {
+    "controls": [
+      {
+        "inventory@crafting_common.tab_item_renderer": {
+          "$item_id": "$chest_item_index",
+          "offset": [0, -1],
+          "ignored": "(not ($toggle_control_name = 'survival_tab_toggle'))"
+        }
+      },
+      {
+        "search@crafting_common.tab_item_renderer": {
+          "$item_id": "$compass_item_index",
+          "ignored": "(not ($toggle_control_name = 'search_tab_toggle'))"
+        }
+      },
+      {
+        "items@crafting_common.tab_item_renderer": {
+          "$item_id": "$redstone_item_index",
+          "ignored": "(not ($toggle_control_name = 'items_tab_toggle'))"
+        }
+      },
+      {
+        "equipment@crafting_common.tab_item_renderer": {
+          "$item_id": "$iron_sword_item_index",
+          "ignored": "(not ($toggle_control_name = 'equipment_tab_toggle'))"
+        }
+      },
+      {
+        "nature@crafting_common.tab_item_renderer": {
+          "$item_id": "$purple_froglight_item_index",
+          "ignored": "(not ($toggle_control_name = 'nature_tab_toggle'))"
+        }
+      },
+      {
+        "construction@crafting_common.tab_item_renderer": {
+          "$item_id": "$bricks_item_index",
+          "ignored": "(not ($toggle_control_name = 'construction_tab_toggle'))"
+        }
+      }
+    ]
+  },
+
+  "recipe_toggle_base@toggle.radio_toggle": {
+    "size": [20, 18],
+    "$unchecked": "screen_content.recipe_toggle",
+    "$unchecked_hover": "screen_content.recipe_hover_toggle",
+    "$checked": "screen_content.recipe_toggle",
+    "$checked_hover": "screen_content.recipe_hover_toggle",
+    "$toggle_name": "layout_toggle",
+    "variables": {
+      "requires": "$cb_is_thick_menu_buttons",
+      "$unchecked": "beveled_buttons_bridge.recipe_toggle",
+      "$unchecked_hover": "beveled_buttons_bridge.recipe_hover_toggle",
+      "$checked": "beveled_buttons_bridge.recipe_toggle",
+      "$checked_hover": "beveled_buttons_bridge.recipe_hover_toggle"
+    }
+  },
+  "recipe_layout_toggle@global.empty_panel": {
+    "size": [20, 18],
+    "layer": 10,
+    "controls": [
+      {
+        "layout_toggle_wrapper@global.empty_panel": {
+          "controls": [
+            {
+              "recipe_book_layout_toggle@crafting_common.recipe_toggle_base": {
+                "$toggle_group_forced_index": "$recipe_book_layout_index",
+                "$toggle_binding_value": "#is_recipe_book_layout",
+                "$toggle_control_name": "is_recipe_book_layout",
+                "bindings": [
+                  {
+                    "binding_type": "global",
+                    "binding_name": "(not #is_recipe_book_layout)",
+                    "binding_name_override": "#visible"
+                  }
+                ]
+              }
+            },
+            {
+              "survival_inventory_toggle@crafting_common.recipe_toggle_base": {
+                "$toggle_group_forced_index": "$survival_layout_index",
+                "$toggle_binding_value": "#is_survival_layout",
+                "$toggle_control_name": "is_survival_layout",
+                "bindings": [
+                  {
+                    "binding_type": "global",
+                    "binding_name": "#is_recipe_book_layout",
+                    "binding_name_override": "#visible"
+                  }
+                ]
+              }
+            }
+          ],
+          "bindings": [
+            {
+              "binding_type": "global",
+              "binding_condition": "always",
+              "binding_name": "(not #is_creative_mode)",
+              "binding_name_override": "#visible"
+            }
+          ]
+        }
+      }
+    ]
+  }
+}

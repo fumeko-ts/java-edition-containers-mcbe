@@ -4,28 +4,45 @@
   "$_pack_creator": "ashura_temps/ashura_tepes",
   //set UI transparency
   "$container_opacity": 1,
-  "$container_color": [],//[0.584, 0.576, 1.000]     //https://fumeko-ts.github.io/fumeko-ts/hex_to_rgba.html
+  "$container_color": [],//hex to rgba converter --> https://fumeko-ts.github.io/fumeko-ts/hex_to_rgba.html
 
-  "$no_close_button": false,
+  "$show_exit_buttons": true,
   //if true makes so pc users dont need to move their mouse to reselect the page button
   "$use_experimental_direction_buttons": true,
   //if true allows pc users to trigger the page buttons useing the scroll wheel
   "$use_experimental_recipe_scroll_input": false,
+  //if true allows touch input users to use pc tooltip instead of the mobile one
+  "$use_pc_hover_text_with_touch_input": false,
   //title text color
-  "$title_text_color": [0.247, 0.247, 0.247],
-  //these ids are whats used to render the items in the tab icons (inventory and crafting table)
-  //you can find the ids for a item useing this --> https://www.planetminecraft.com/texture-pack/item-id-visualizer-mcbe-mcpe/
-  //item id = (#item_id_aux / 65536)
-  "$apple_id": 285,
-  "$bricks_id": 45,
-  "$bucket_lava_id": 395,
-  "$chest_id": 54,
-  "$compass_id": 423,
-  "$golden_sword_id": 354,
-  "$iron_axe_id": 329,
-  "$iron_sword_id": 338,
-  "$purple_froglight_id": -469,
-  "$redstone_id": 405,
+  "$container_title_color": [0.247, 0.247, 0.247],
+
+  //these item indexes are whats used to render the items in the recipe book tabs
+  //you can find the index for a item useing this --> https://www.planetminecraft.com/texture-pack/item-id-visualizer-mcbe-mcpe/
+  //item_index = (#item_id_aux / 65536)
+
+  //creative inventory tabs
+  "$chest_item_index": 54,
+  "$compass_item_index": 423,
+  "$redstone_item_index": 405,
+  "$iron_sword_item_index": 338,
+  "$purple_froglight_item_index": -469,
+  "$bricks_item_index": 45,
+
+  //crafting recipe book tabs
+  "$apple_item_index": 285,
+  "$bucket_lava_item_index": 395,
+  "$golden_sword_item_index": 354,
+  "$iron_axe_item_index": 329,
+
+  //furnace recipe book tabs
+  "$raw_porkchop_item_index": 291,
+  "$stone_item_index": 1,
+  "$emerald_item_index": 552,
+
+  //blast furnace recipe book tabs
+  "$golden_leggings_item_index": 385,
+  "$iron_shovel_item_index": 327,
+
   //enchanting table text colors
   "$xp_price_color_enabled_state": [0.4941, 0.9882, 0.1255, 1],
   "$xp_price_shadow_color_enabled_state": [0.1255, 0.2431, 0.0314, 1],
@@ -36,14 +53,13 @@
   "$runes_disabled_color": [0.2, 0.1804, 0.1451, 1],
   "$runes_enabled_color": [0.4039, 0.3647, 0.2863, 1],
   "$runes_enabled_hover_color": [0.988, 0.988, 0.494],
+
   //development variables (dont modify)
   //will add links to each creators pages when i get the chance
-  /*"$is_java_aspects": false,
-  "$item_icons_enabled": false,*/
   "$cb_is_thick_menu_buttons": false,
   "$is_jei_recipe_book_layout_pack": false,
   "$is_déesse_ui_pack": false,
   "$ashur:brewing_guide": false, //var for a pack im working on (a full brewing guide thats interactive and performance light)
-  "$pack_scope": "global",
-  "$brewing_content": "global.empty_panel"
+
+  "$pack_scope": "global"
 }

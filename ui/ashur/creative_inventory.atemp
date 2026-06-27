@@ -22,7 +22,7 @@
     "anchor_to": "center",
     "layer": 3,
     "controls": [
-      { "extensions@jc-extensions.creative_inventory": {} },
+      // { "extensions@jc-extensions.creative_inventory": {} },
       {
         "disabled_scroller@screen_content.image_element": {
           "texture": "assets/sprites/container/creative_inventory/scroller_disabled.png",
@@ -169,7 +169,7 @@
                                   "layer": 6,
                                   "localize": true,
                                   "text": "ashur.tab.search",
-                                  "color": "$title_text_color"
+                                  "color": "$container_title_color"
                                 }
                               }
                             ]
@@ -267,7 +267,6 @@
                 "anchor_from": "top_left",
                 "size": [125, 50],
                 "controls": [
-                  // i mainly use @global.empty ect for performance and to make writeing code faster (doing so makes it so i can work more clearly)
                   { "far_left_filler@global.empty_panel": { "size": [34, 50] } },
                   {
                     "offhand_stack@global.empty_stack": {
@@ -278,7 +277,7 @@
                         {
                           "offhand_slot_button@jc_container_item.container_item": {
                             "$item_collection": "offhand_items",
-                            "$cell_overlay_ref": "screen_content.armor_overlay_shield"
+                            "$background_control": "screen_content.armor_overlay_shield"
                           }
                         },
                         { "bottom_offhand_filler@global.empty_panel": { "size": [13, 18] } }
@@ -296,14 +295,14 @@
                         { "left_slots_top_filler@global.empty_panel": { "size": [18, 5] } },
                         {
                           "hemlet_slot_button@jc_container_item.container_item": {
-                            "$cell_overlay_ref": "screen_content.armor_overlay_helmet",
+                            "$background_control": "screen_content.armor_overlay_helmet",
                             "collection_index": 0
                           }
                         },
                         { "left_slots_middle_filler@global.empty_panel": { "size": [18, 9] } },
                         {
                           "chestplate_slot_button@jc_container_item.container_item": {
-                            "$cell_overlay_ref": "screen_content.armor_overlay_chest",
+                            "$background_control": "screen_content.armor_overlay_chest",
                             "collection_index": 1
                           }
                         }
@@ -321,14 +320,14 @@
                         { "right_slots_top_filler@global.empty_panel": { "size": [18, 5] } },
                         {
                           "leggings_slot_button@jc_container_item.container_item": {
-                            "$cell_overlay_ref": "screen_content.armor_overlay_legs",
+                            "$background_control": "screen_content.armor_overlay_legs",
                             "collection_index": 2
                           }
                         },
                         { "right_slots_middle_filler@global.empty_panel": { "size": [18, 9] } },
                         {
                           "boots_slot_button@jc_container_item.container_item": {
-                            "$cell_overlay_ref": "screen_content.armor_image_feet",
+                            "$background_control": "screen_content.armor_image_feet",
                             "collection_index": 3
                           }
                         }
@@ -436,10 +435,7 @@
       }
     ]
   },
-  "highlight@screen_content.highlight_slot": {
-    "ignored": "$touch",
-    "size": [16, 16]
-  },
+  "highlight@screen_content.highlight_slot": { "ignored": "$touch", "size": [16, 16] },
   "remove_item_button": {
     "type": "toggle",
     "size": [18, 18],
@@ -449,11 +445,7 @@
     "focus_wrap_enabled": false,
     "focus_magnet_enabled": false,
     "default_focus_precedence": 1,
-    "controls": [
-      {
-        "default_hover@creative_inventory.highlight": {}
-      }
-    ],
+    "controls": [{ "default_hover@creative_inventory.highlight": {} }],
     "button_mappings": [
       {
         "from_button_id": "button.menu_select",
@@ -477,7 +469,6 @@
       }
     ]
   },
-
   "delete_zone_grid_item@creative_inventory.remove_item_button": {
     "controls": [
       { "default_hover@creative_inventory.highlight": {} },
@@ -533,15 +524,9 @@
     "size": ["default", 10],
     "layer": 6,
     "localize": true,
-    "color": "$title_text_color",
+    "color": "$container_title_color",
     "$label_visibility|default": "none",
-    "bindings": [
-      {
-        "binding_type": "global",
-        "binding_name": "$label_visibility",
-        "binding_name_override": "#visible"
-      }
-    ]
+    "bindings": [{ "binding_type": "global", "binding_name": "$label_visibility", "binding_name_override": "#visible" }]
   },
   "scroller@screen_content.image_element": {
     "tiled": true,
@@ -567,13 +552,12 @@
   },
   "tab_template@toggle.tab_toggle": {
     "size": [26, 32],
-    "$default_selected_index": "$construction_index", //$construction_index=1
+    "$default_selected_index": "$construction_index",
     "$toggle_name": "navigation_tab",
     "$extra_contents": "crafting_common.creative_tab_icons",
     "$checked_hover_layer": 4,
     "$checked_layer": 4,
     "$default_hover_layer": 2,
-    "$default_layer": 2,
-    "$toggle_binding_value": "#toggle_state"
+    "$default_layer": 2
   }
 }

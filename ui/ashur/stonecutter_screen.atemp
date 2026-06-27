@@ -16,7 +16,6 @@
 
 {
   "namespace": "stonecutter_screen",
-  //pending rewrite
   "stonecutter_panel@container_common.container_details": {
     "size": [176, 166],
     "$item_collection|default": "stones",
@@ -57,7 +56,7 @@
                       "offset": [8, -1],
                       "layer": 5,
                       "text": "atemp.container.stonecutter",
-                      "color": "$title_text_color"
+                      "color": "$container_title_color"
                     }
                   }
                 ]

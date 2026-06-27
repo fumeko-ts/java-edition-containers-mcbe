@@ -1,0 +1,73 @@
+/**
+// © 2026 ashura_temps,    All Rights Reserved.
+//
+// This UI is custom-made. You are allowed to use it **only as-is**, inside the game.
+// Do not modify, extract, reuse, or share any part of this UI including .json, .atemp files,
+// layout structure, or design.
+//
+// Not allowed:
+//   - Editing the UI (even for private/personal use)
+//   - Using parts of the code or layout in your own pack
+//   - Reuploading, redistributing, or hosting these files elsewhere
+//   - Converting texture packs to Bedrock using this UI
+//
+// By using this project, you agree to these terms.
+*/
+
+{
+  "namespace": "stack_splitting_overlay",
+  "stack_splitting_overlay@screen_content.image_element": {
+    "layer": 900,
+    "size": [128, 17],
+    "offset": [0, 10],
+    "texture": "textures/stack_split_underlay",
+    "anchor_from": "top_middle",
+    "anchor_to": "top_middle",
+    "controls": [
+      {
+        "progressive_select_progress_bar@screen_content.image_element": {
+          //layer is relative to parent layer so the parents layer is the new 0
+          "layer": 2,
+          "texture": "textures/stack_split_progress",
+          "size": [122, 17],
+          "clip_direction": "left",
+          "clip_pixelperfect": false,
+          "bindings": [
+            {
+              "binding_name": "#progressive_select_bar_ratio",
+              "binding_name_override": "#clip_ratio",
+              "binding_condition": "always"
+            }
+          ]
+        }
+      },
+      {
+        "progressive_text_label": {
+          "type": "label",
+          "text": "#progressive_select_text",
+          "shadow": true,
+          "size": ["default", 10],
+          "anchor_from": "top_middle",
+          "anchor_to": "top_middle",
+          "offset": [0, 3],
+          "layer": 3,
+          "bindings": [
+            {
+              "binding_name": "#progressive_select_text",
+              "binding_condition": "always"
+            }
+          ]
+        }
+      }
+    ],
+    "bindings": [
+      { "binding_name": "#progressive_select_text", "binding_condition": "always" },
+      {
+        "binding_type": "view",
+        "binding_condition": "always",
+        "source_property_name": "((('%.1s' * #progressive_select_text) * 1) > 0)",
+        "target_property_name": "#visible"
+      }
+    ]
+  }
+}

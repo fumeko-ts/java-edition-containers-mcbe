@@ -46,7 +46,7 @@
                             "size": ["default", 10],
                             "layer": 5,
                             "text": "$container_title",
-                            "color": "$title_text_color"
+                            "color": "$container_title_color"
                           }
                         }
                       ]

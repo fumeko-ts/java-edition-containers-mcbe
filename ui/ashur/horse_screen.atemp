@@ -16,7 +16,6 @@
 
 {
   "namespace": "horse_screen",
-
   "horse_panel@container_common.container_details": {
     "size": [176, 166],
     "$screen_controls": [
@@ -40,11 +39,7 @@
                       "anchor_from": "center",
                       "anchor_to": "center",
                       "layer": 7,
-                      "bindings": [
-                        {
-                          "binding_name": "#entity_id"
-                        }
-                      ]
+                      "bindings": [{ "binding_name": "#entity_id" }]
                     }
                   }
                 ]
@@ -67,17 +62,12 @@
                 "collection_name": "$item_collection",
                 "grid_item_template": "jc_container_item.container_item",
                 "grid_dimension_binding": "#inv_grid_dimensions",
-                "$background_images": "horse_screen.slot_collection",
+                "$background_control": "horse_screen.slot_collection",
                 "bindings": [{ "binding_name": "#inv_grid_dimensions" }]
               }
             }
           ],
-          "bindings": [
-            {
-              "binding_name": "#is_chested",
-              "binding_name_override": "#visible"
-            }
-          ]
+          "bindings": [{ "binding_name": "#is_chested", "binding_name_override": "#visible" }]
         }
       },
       {
@@ -97,7 +87,7 @@
                   {
                     "input_grids_holder@global.empty_stack": {
                       "size": [18, 54],
-                      "orientation": "vertical", // dynamic sizeing because its beter this way   probaly :)
+                      "orientation": "vertical",
                       "controls": [
                         {
                           "top_filler@global.empty_panel": {
@@ -114,11 +104,7 @@
                             "collection_name": "horse_equip_items",
                             "grid_item_template": "horse_screen.container_item",
                             "grid_dimension_binding": "#equip_grid_dimensions",
-                            "bindings": [
-                              {
-                                "binding_name": "#equip_grid_dimensions"
-                              }
-                            ]
+                            "bindings": [{ "binding_name": "#equip_grid_dimensions" }]
                           }
                         },
                         {
@@ -133,10 +119,7 @@
                           "bottom_filler@global.empty_panel": {
                             "size": [18, 18],
                             "bindings": [
-                              {
-                                "binding_name": "(not #has_only_carpet_slot)",
-                                "binding_name_override": "#visible"
-                              }
+                              { "binding_name": "(not #has_only_carpet_slot)", "binding_name_override": "#visible" }
                             ]
                           }
                         }
@@ -168,7 +151,7 @@
                       "layer": 5,
                       "offset": [7, -1],
                       "text": "$container_title",
-                      "color": "$title_text_color"
+                      "color": "$container_title_color"
                     }
                   }
                 ]
@@ -188,11 +171,7 @@
   "container_item@global.empty_panel": {
     "size": [18, 18],
     "controls": [
-      {
-        "slot@jc_container_item.container_item": {
-          "$item_collection": "horse_equip_items"
-        }
-      },
+      { "slot@jc_container_item.container_item": { "$item_collection": "horse_equip_items" } },
       {
         "slot_underlays@global.empty_panel": {
           "size": [18, 18],
@@ -240,7 +219,7 @@
     "controls": [
       {
         "overlay@screen_content.image_element": {
-          "layer": 4,
+          "layer": 5,
           "texture": "$slot_icon",
           "size": [16, 16],
           "anchor_from": "center",

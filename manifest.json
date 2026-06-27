@@ -26,12 +26,12 @@
   "capabilities": ["pbr"],
   "subpacks": [
     {
-      "folder_name": "no_close_button",
+      "folder_name": "mode_0",
       "name": "§bNo Close Buttons§r\n§7The normal pack but without exit buttons§r",
       "memory_performance_tier": 0
     },
     {
-      "folder_name": "performance_mode",
+      "folder_name": "mode_1",
       "name": "§eDefault Mode§r\n§7The default pack§r",
       "memory_performance_tier": 0
     }

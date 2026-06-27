@@ -1,1 +1,7 @@
-{"nineslice_size": [ 2, 2, 2, 2 ], "base_size": [ 84, 84 ]}//texture pack made by @ashura_temps
+{
+  "nineslice_size": 4, 
+  "base_size": [ 
+    84, 
+    84 
+  ]
+}

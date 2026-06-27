@@ -16,7 +16,6 @@
 
 {
   "namespace": "cartography_screen",
-  // this file is pending remake
   "cartography_panel@container_common.container_details": {
     "size": [176, 166],
     "$screen_controls": [
@@ -42,7 +41,7 @@
                       "size": ["default", 10],
                       "layer": 5,
                       "text": "atemp.container.cartography_table",
-                      "color": "$title_text_color"
+                      "color": "$container_title_color"
                     }
                   }
                 ]
