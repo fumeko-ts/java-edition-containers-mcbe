@@ -17,75 +17,50 @@
 {
   "namespace": "crafting_textures",
   "main_cell_panel@global.empty_panel": {
-    "size": [ "100%", "100%" ],
     "controls": [
       {
-        "red@global.empty_panel": {
-          "size": [ "100%", "100%" ],
-          "controls": [
-            {
-              "white@global.empty_image": {
-                "size": [ "100%", "100%" ],
-                "nineslice_size": 2,
-                "texture": "textures/ui/ashur/cell_icons/cell_white_transparent.png",
-                "alpha": 0.2,
-                "layer": 12
-              }
-            },
-            {
-              "cell_image_red@global.empty_image": {
-                "size": [ "100%", "100%" ],
-                "nineslice_size": 2,
-                "texture": "textures/ui/ashur/cell_icons/cell_red_transparent.png",
-                "layer": 3
-              }
-            }
-          ],
-          "bindings": [
-            {
-              "binding_name": "(#container_item_background = 3)",
-              "binding_name_override": "#visible",
-              "binding_condition": "always",
-              "binding_type": "collection",
-              "binding_collection_name": "$item_collection"
-            }
-          ]
+        "default_uncraftable@crafting_textures.cell_state_control": {
+          "$slot_underlay_control": "crafting_textures.uncraftable_slot",
+          "$underlay_index": 3
         }
       },
+      {"console_selected@crafting_textures.cell_state_control": {}}
+    ]
+  },
+
+  "cell_state_control@global.empty_panel": {
+    "$slot_underlay_control|default": "crafting_textures.console_unselected_slot",
+    "$underlay_index|default": 7,
+    "controls": [
       {
-        "console_selected@global.empty_panel": {
-          "size": [ "100%", "100%" ],
-          "controls": [
-            {
-              "white@global.empty_image": {
-                "size": [ "100%", "100%" ],
-                "nineslice_size": 2,
-                "texture": "textures/ui/ashur/cell_icons/cell_white_transparent.png",
-                "alpha": 0.2,
-                "layer": 12
-              }
-            },
-            {
-              "cell_image_red@global.empty_image": {
-                "size": [ "100%", "100%" ],
-                "nineslice_size": 2,
-                "alpha": 0.4,
-                "texture": "textures/ui/ashur/cell_icons/cell_focus_unselect.png",
-                "layer": 3
-              }
-            }
-          ],
-          "bindings": [
-            {
-              "binding_name": "(#container_item_background = 7)",
-              "binding_name_override": "#visible",
-              "binding_condition": "always",
-              "binding_type": "collection",
-              "binding_collection_name": "$item_collection"
-            }
-          ]
+        "white@global.empty_image": {
+          "size": [18, 18],
+          "anchor_from": "center",
+          "anchor_to": "center",
+          "texture": "assets/sprites/container/slot_highlight_front.png",
+          "layer": 12
         }
+      },
+      {"slot_underlay@$slot_underlay_control": {}}
+    ],
+    "bindings": [
+      {
+        "binding_name": "(#container_item_background = $underlay_index)",
+        "binding_name_override": "#visible",
+        "binding_condition": "always",
+        "binding_type": "collection",
+        "binding_collection_name": "$item_collection"
       }
     ]
+  },
+  "uncraftable_slot@crafting_textures.console_unselected_slot": {
+    "color": [0.631, 0.443, 0.443], //#a17171
+    "texture": "textures/ui/ashur/cell_icons/cell_white.png"
+  },
+  "console_unselected_slot@global.empty_image": {
+    "size": ["100%", "100%"],
+    "nineslice_size": 2,
+    "texture": "textures/ui/ashur/cell_icons/cell_focus_unselect.png",
+    "layer": 3
   }
 }
