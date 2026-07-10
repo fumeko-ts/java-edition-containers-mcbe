@@ -24,7 +24,9 @@
   "screen_background@global.empty_image": {
     "texture": "textures/ui/screen_background",
     "layer": -1000,
-    "alpha": 0.79
+    "alpha": "$background_blur_opacity",
+    "nineslice_size": 1,
+    "size": ["100%", "100%"]
   },
   "button_state_common@screen_content.image_element": {
     "size": [88, 20],

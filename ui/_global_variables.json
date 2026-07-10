@@ -5,6 +5,7 @@
   //set UI transparency
   "$container_opacity": 1,
   "$container_color": [],//hex to rgba converter --> https://fumeko-ts.github.io/fumeko-ts/hex_to_rgba.html
+  "$background_blur_opacity": 1,//the base png is transparent
 
   "$show_exit_buttons": true,
   //if true makes so pc users dont need to move their mouse to reselect the page button

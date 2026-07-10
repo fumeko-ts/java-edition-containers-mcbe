@@ -24,7 +24,7 @@
           "$underlay_index": 3
         }
       },
-      {"console_selected@crafting_textures.cell_state_control": {}}
+      { "console_selected@crafting_textures.cell_state_control": {} }
     ]
   },
 
@@ -33,15 +33,17 @@
     "$underlay_index|default": 7,
     "controls": [
       {
-        "white@global.empty_image": {
+        "white_overlay@global.empty_image": {
           "size": [18, 18],
           "anchor_from": "center",
           "anchor_to": "center",
-          "texture": "assets/sprites/container/slot_highlight_front.png",
-          "layer": 12
+          "nineslice_size": 2,
+          "texture": "textures/ui/ashur/cell_icons/cell_white.png",
+          "layer": 12,
+          "alpha": 0.1915
         }
       },
-      {"slot_underlay@$slot_underlay_control": {}}
+      { "slot_underlay@$slot_underlay_control": {} }
     ],
     "bindings": [
       {
@@ -53,14 +55,17 @@
       }
     ]
   },
+
   "uncraftable_slot@crafting_textures.console_unselected_slot": {
-    "color": [0.631, 0.443, 0.443], //#a17171
+    "color": [0.996, 0.0, 0.008],
+    "alpha": 0.19,
     "texture": "textures/ui/ashur/cell_icons/cell_white.png"
   },
+
   "console_unselected_slot@global.empty_image": {
     "size": ["100%", "100%"],
     "nineslice_size": 2,
     "texture": "textures/ui/ashur/cell_icons/cell_focus_unselect.png",
-    "layer": 3
+    "layer": 5
   }
 }
