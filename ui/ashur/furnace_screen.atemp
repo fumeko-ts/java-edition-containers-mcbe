@@ -33,15 +33,15 @@
                 "$extra_contents": "crafting_common.search_tab_icon",
                 "$toggle_control_name": "search_tab_toggle",
                 "$toggle_group_forced_index": "$search_index",
-                "$toggle_binding_value": "#is_search_tab"
+                "$toggle_binding_value": "#is_left_tab_search"
               }
             },
-            {
+            { 
               "food_tab@recipe_book.recipe_tab_template": {
                 "$extra_contents": "crafting_common.furnace_food_tab_icon",
                 "$toggle_control_name": "food_tab_toggle",
                 "$toggle_group_forced_index": "$food_index",
-                "$toggle_binding_value": "#is_food_tab"
+                "$toggle_binding_value": "#is_left_tab_food"
               }
             },
             {
@@ -49,7 +49,7 @@
                 "$extra_contents": "crafting_common.furnace_blocks_tab_icon",
                 "$toggle_control_name": "blocks_tab_toggle",
                 "$toggle_group_forced_index": "$blocks_index",
-                "$toggle_binding_value": "#is_blocks_tab"
+                "$toggle_binding_value": "#is_left_tab_blocks"
               }
             },
             {
@@ -57,7 +57,7 @@
                 "$extra_contents": "crafting_common.furnace_items_tab_icon",
                 "$toggle_control_name": "items_tab_toggle",
                 "$toggle_group_forced_index": "$items_index",
-                "$toggle_binding_value": "#is_items_tab"
+                "$toggle_binding_value": "#is_left_tab_items"
               }
             }
           ]

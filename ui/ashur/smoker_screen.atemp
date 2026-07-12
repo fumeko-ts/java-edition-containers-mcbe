@@ -22,7 +22,7 @@
     "anchor_from": "center",
     "min_size": [176, 166],
     "max_size": [360, 166],
-    "controls": [
+    "controls": [ 
       {
         "recipe_book@recipe_book.recipe_book": {
           "$recipe_filter_control": "crafting_common.furnace_filter_toggle",
@@ -33,7 +33,7 @@
                 "$extra_contents": "crafting_common.search_tab_icon",
                 "$toggle_control_name": "search_tab_toggle",
                 "$toggle_group_forced_index": "$search_index",
-                "$toggle_binding_value": "#is_search_tab"
+                "$toggle_binding_value": "#is_left_tab_search"
               }
             },
             {
@@ -41,7 +41,7 @@
                 "$extra_contents": "crafting_common.smoker_food_tab_icon",
                 "$toggle_control_name": "food_tab_toggle",
                 "$toggle_group_forced_index": "$food_index",
-                "$toggle_binding_value": "#is_food_tab"
+                "$toggle_binding_value": "#is_left_tab_food"
               }
             }
           ]
