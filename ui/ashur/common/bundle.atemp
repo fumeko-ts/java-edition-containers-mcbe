@@ -69,7 +69,7 @@
       {
         "tooltip@global.empty_image": {
           "size": ["100%cm", "100%c"],
-          "texture": "textures/ui/purpleBorder",
+          "texture": "assets/sprites/container/bundle/tooltip_background",
           "nineslice_size": 2,
           "controls": [
             {
@@ -81,10 +81,11 @@
                   {
                     "selected_item_tooltip@global.empty_image": {
                       "layer": 5,
-                      "texture": "textures/ui/purpleBorder",
+                      "texture": "assets/sprites/container/bundle/tooltip_background",
                       "size": ["100%c + 10px", "100%c + 8px"],
                       "anchor_to": "bottom_middle",
                       "anchor_from": "top_middle",
+                      "nineslice_size": 2,
                       "controls": [
                         {
                           "item_text_label": {
