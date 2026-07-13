@@ -39,7 +39,7 @@ jobs:
         run: |
           mkdir -p /tmp/out
           zip -r "/tmp/out/package.zip" . -x ".git/*" -x ".github/*"
-          mv "/tmp/out/package.zip" "/tmp/out/beta${{ steps.beta.outputs.next }}.mcpack"
+          mv "/tmp/out/package.zip" "/tmp/out/java_containers_preview.v${{ steps.beta.outputs.next }}.mcpack"
 
       - name: Create release
         env:
