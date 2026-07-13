@@ -11,7 +11,7 @@
 ## Notes
 
 *   **This pack is still in development so expect texture improvements and bug fixes.**
-*   **you can leave feedback on [discord](https://discord.gg/sFnE7zv75t) or in the comments here**
+*   **you can leave feedback on [discord](https://discord.gg/sFnE7zv75t)**
 
 **compatible packs**
 
