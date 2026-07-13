@@ -1,5 +1,4 @@
 name: CI
-
 on:
   push:
     branches: [ "light-mode" ]
@@ -12,7 +11,6 @@ jobs:
     runs-on: ubuntu-latest
     permissions:
       contents: write
-
     steps:
       - uses: actions/checkout@v4
 
@@ -21,32 +19,32 @@ jobs:
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
+          set -euo pipefail
           LAST=$(gh release list --repo "$GITHUB_REPOSITORY" --limit 100 \
             | awk -F'\t' '{print $1}' \
             | grep -Eo '^beta [0-9]+$' \
             | grep -Eo '[0-9]+' \
             | sort -n \
             | tail -1)
-          if [ -z "$LAST" ]; then
-            NEXT=1
-          else
-            NEXT=$((LAST + 1))
-          fi
+          NEXT=$(( ${LAST:-0} + 1 ))
           echo "next=$NEXT" >> "$GITHUB_OUTPUT"
           echo "Next beta number: $NEXT"
 
       - name: Build .mcpack
         run: |
+          set -euo pipefail
           mkdir -p /tmp/out
-          zip -r "/tmp/out/package.zip" . -x ".git/*" -x ".github/*"
-          mv "/tmp/out/package.zip" "/tmp/out/java_containers_preview.v${{ steps.beta.outputs.next }}.mcpack"
+          FILE="/tmp/out/java_containers_preview.v${{ steps.beta.outputs.next }}.mcpack"
+          zip -r "$FILE" . -x ".git/*" -x ".github/*"
+          echo "MCPACK_PATH=$FILE" >> "$GITHUB_ENV"
 
       - name: Create release
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
+          set -euo pipefail
           gh release create "beta${{ steps.beta.outputs.next }}" \
-            "/tmp/out/beta${{ steps.beta.outputs.next }}.mcpack" \
+            "$MCPACK_PATH" \
             --repo "$GITHUB_REPOSITORY" \
             --title "beta ${{ steps.beta.outputs.next }}" \
             --notes "Automated beta build from commit ${{ github.sha }}"
