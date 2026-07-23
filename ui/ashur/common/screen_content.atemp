@@ -360,6 +360,16 @@
     "texture": "assets/container/loom"
   },
 
+  "banner_empty_image@loom_screen.item_empty_image": {
+    "texture": "assets/sprites/container/loom/banner_slot"
+  },
+  "dye_empty_image@loom_screen.item_empty_image": {
+    "texture": "assets/sprites/container/loom/dye_slot"
+  },
+  "pattern_empty_image@loom_screen.item_empty_image": {
+    "texture": "assets/sprites/container/loom/pattern_slot"
+  },
+
   //shulker box
   "shulker_box@screen_content.container_template": {
     "$size": [176, 166],

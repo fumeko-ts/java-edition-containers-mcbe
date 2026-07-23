@@ -44,7 +44,7 @@
           "size": [18, 18],
           "texture": "textures/ui/ashur/touch_ui_selected",
           "nineslice_size": 1,
-          "layer": 2,
+          "layer": 3,
           "bindings": [
             {
               "binding_name": "(#container_item_background_texture = 'textures/ui/recipe_book_touch_cell_selected')",
@@ -85,7 +85,7 @@
     "anchor_from": "bottom_right",
     "anchor_to": "bottom_right",
     "offset": [-1, -1],
-    "layer": 9,
+    "layer": 9, 
     "property_bag": {
       "#icon_1": "textures/ui/recipe_book_collapse_icon",
       "#icon_2": "textures/ui/recipe_book_expand_icon"

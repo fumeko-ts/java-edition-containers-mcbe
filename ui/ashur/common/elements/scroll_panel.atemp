@@ -195,20 +195,22 @@
 
     "consume_hover_events": "$touch",
 
+    "$scroll_view_name|default": "new_scroll_view",
     "$viewport_clip_offset|default": [0, -1],
 
     "$view_port_size|default": [160, 22],
     "$scroll_track_size|default": [16, 22],
     "$viewport_and_track_spacer_size|default": [2, 22],
+    "$scroll_buffer_size|default": ["100%sm", 1],
 
     "$track_offset|default": [0, 0],
     "$view_port_offset|default": [0, 0],
+    "$view_port_clip_offset|default": [0, 0.4],
 
     "$scrolling_content|default": "global.empty_image",
 
     "$scroll_box_icon|default": "global.empty_image",
     "$scroll_track_icon|default": "global.empty_panel",
-    "$scroll_view_name|default": "new_scroll_view",
 
     "tts_ignore_count": true,
     "controls": [
@@ -237,6 +239,7 @@
               "button_up_right_of_first_refusal": true
             }
           ],
+          "layer": 1,
           "bindings": [
             {
               "binding_name": "#gesture_control_enabled"
@@ -248,7 +251,7 @@
                 "size": ["100%c", "100%c"],
                 "anchor_from": "top_left",
                 "anchor_to": "top_left",
-                "debug": "red",
+                //   "debug": "red",
                 "controls": [
                   {
                     "scroll_area_stack@global.empty_stack": {
@@ -259,7 +262,7 @@
                           "scrolling_view_port@global.empty_panel": {
                             "size": "$view_port_size",
                             "layer": 1,
-                            "clip_offset": [0, 0.4],
+                            "clip_offset": "$view_port_clip_offset",
                             "clips_children": true,
                             "controls": [
                               {
@@ -271,7 +274,7 @@
                                   "layer": 2,
                                   "controls": [
                                     { "center_content@$scrolling_content": {} },
-                                    { "scroll_1px_buffer@global.empty_panel": { "size": ["100%sm", 1] } }
+                                    { "scroll_1px_buffer@global.empty_panel": { "size": "$scroll_buffer_size" } }
                                   ]
                                 }
                               }
@@ -283,13 +286,13 @@
                           "bar_and_track@global.empty_panel": {
                             "size": "$scroll_track_size",
                             "offset": "$track_offset",
-                            "debug": "blue",
+                            //   "debug": "blue",
+                                  "layer": 4,
                             "controls": [
                               {
                                 "track": {
                                   "type": "scroll_track",
                                   "size": ["default", "default"],
-                                  "layer": 4,
                                   "anchor_from": "center",
                                   "anchor_to": "center",
                                   "controls": [{ "scroll_track_icon@$scroll_track_icon": {} }],
@@ -305,7 +308,6 @@
                               {
                                 "scroll_box@global.empty_panel": {
                                   "size": ["100%", "100%"],
-                                  "layer": 5,
                                   "controls": [
                                     {
                                       "box": {
@@ -314,7 +316,6 @@
                                         "anchor_from": "top_left",
                                         "contained": true,
                                         "draggable": "vertical",
-                                        "layer": 5,
                                         "button_mappings": [
                                           {
                                             "from_button_id": "button.menu_select",
@@ -344,7 +345,7 @@
     ]
   },
 
-  "test_scrolling_pane@scroll_panel.scroll_panel": {
+  "test_scrolling_pane@scroll_panel.test_scroll_panel": {
     "$view_port_size": [162, 55],
     "$scroll_track_size": [16, 54],
     "$viewport_and_track_spacer_size": [2, 54],
@@ -356,7 +357,7 @@
 
     "$scrolling_content": "scroll_panel.scrolling_content"
   },
-  
+
   "icon@global.empty_image": {
     "texture": "assets/sprites/container/slot.png",
     "nineslice_size": 1,

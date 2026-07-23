@@ -159,5 +159,41 @@
       {"from_button_id": "button.menu_inventory_drop"         , "to_button_id": "button.tapped_bundle_item_icon" , "mapping_type": "pressed"},
       {"from_button_id": "button.menu_inventory_drop_all"     , "to_button_id": "button.tapped_bundle_item_icon" , "mapping_type": "pressed"}
     ]
+  },
+
+  "pattern_item_button@button_mappings.bundle_item_slot_button": {
+    "sound_name": "ui.loom.select_pattern",
+    "sound_volume": 1.0,
+    "sound_pitch": 1.0,
+    "button_mappings": [
+      {"from_button_id": "button.menu_select"                 , "to_button_id": "button.pattern_select" , "mapping_type": "pressed"},
+      {"from_button_id": "button.menu_ok"                     , "to_button_id": "button.pattern_select" , "mapping_type": "pressed"},
+      {"from_button_id": "button.controller_back"             , "to_button_id": "button.pattern_select" , "mapping_type": "pressed","ignored": "(not $is_ps4)"},
+      {"from_button_id": "button.menu_secondary_select"       , "to_button_id": "button.pattern_select" , "mapping_type": "pressed"},
+      {"from_button_id": "button.controller_select"           , "to_button_id": "button.pattern_select" , "mapping_type": "pressed"},
+      {"from_button_id": "button.menu_auto_place"             , "to_button_id": "button.pattern_select" , "mapping_type": "pressed"},
+      {"from_button_id": "button.controller_secondary_select" , "to_button_id": "button.pattern_select" , "mapping_type": "pressed"},
+      {"from_button_id": "button.menu_inventory_drop"         , "to_button_id": "button.pattern_select" , "mapping_type": "pressed"},
+      {"from_button_id": "button.menu_inventory_drop_all"     , "to_button_id": "button.pattern_select" , "mapping_type": "pressed"},
+      {"to_button_id": "button.container_slot_hovered", "mapping_type": "pressed" }
+    ],
+    "hover_control": "$hover_control",
+    "$extra_controls|default": [],
+    "controls": [
+      {
+        "extra_elements@global.empty_panel": {
+          "controls": "$extra_controls"
+        }
+      },
+      {
+        "$hover_control@global.empty_panel": {
+          "controls": [
+            {
+              "hover_slot@$hover_control": {}
+            }
+          ]
+        }
+      }
+    ]
   }
 }

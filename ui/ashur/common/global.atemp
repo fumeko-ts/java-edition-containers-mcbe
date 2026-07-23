@@ -217,8 +217,8 @@
   },
   "selected_item_details@global.empty_image": {
     "texture": "textures/ui/purpleBorder.png",
-    "size": ["100%c + 8px", "100%c + 8px"],
-    "nineslice_size": 2,
+    "nineslice_size": 3,
+    "size": ["100%c + 10px", "100%c + 8px"],
     "alpha": {
       "anim_type": "alpha",
       "easing": "in_quint",
