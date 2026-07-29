@@ -12,9 +12,13 @@
   "$use_experimental_direction_buttons": true,
   //if true allows pc users to trigger the page buttons useing the scroll wheel
   "$use_experimental_recipe_scroll_input": false,
+  //if true allows the user to hover over a tab to auto select it
+  "$use_experimental_tab_toggle_input": false,
+  //if true will unlock villager trades
+  "$use_unlocked_villager_trades": false,
   //if true allows touch input users to use pc tooltip instead of the mobile one
   "$use_pc_hover_text_with_touch_input": false,
-  //title text color
+  //title text color 
   "$container_title_color": [0.247, 0.247, 0.247],
 
   //these item indexes are whats used to render the items in the recipe book tabs

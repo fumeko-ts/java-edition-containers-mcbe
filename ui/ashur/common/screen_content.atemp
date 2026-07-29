@@ -430,6 +430,7 @@
     "bindings": [
       {
         "binding_name": "$binding_value",
+        "binding_condition": "always",
         "binding_name_override": "#visible"
       }
     ]

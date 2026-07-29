@@ -19,15 +19,17 @@
   "tab_texture_template@screen_content.image_element": {
     "size": ["default", "default"],
     "anchor_from": "center",
-    "anchor_to": "center",
+    "anchor_to": "center", 
     "offset": "#offset",
     "property_bag": {
       "#tab_texture_offset_0": "$tab_texture_unchecked_offset",
       "#tab_texture_offset_1": "$tab_texture_checked_offset"
     },
     "bindings": "$tab_texture_bindings"
-  },
+  },                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                          "toggle_on_hover": {
+  "toggle_on_hover": "$use_experimental_tab_toggle_input"                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 },
   "tab_toggle@toggle.radio_toggle": {
+    "$toggle_variables": "toggle.toggle_on_hover",
     "$is_top_left_tab|default": false,
     "$is_top_right_tab|default": false,
     "$is_bottom_right_tab|default": false,

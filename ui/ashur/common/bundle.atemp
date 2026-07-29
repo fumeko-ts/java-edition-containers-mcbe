@@ -82,7 +82,7 @@
                     "selected_item_tooltip@global.empty_image": {
                       "layer": 5,
                       "texture": "assets/sprites/container/bundle/tooltip_background",
-                      "size": ["100%c + 10px", "100%c + 8px"],
+                      "size": ["100%c + 8px", "100%c + 7px"],
                       "anchor_to": "bottom_middle",
                       "anchor_from": "top_middle",
                       "nineslice_size": 2,
@@ -173,6 +173,7 @@
                 "anchor_from": "top_left",
                 "anchor_to": "top_left",
                 "offset": [4, 3],
+                "orientation": "vertical",
                 "controls": [
                   {
                     "bundle_title_label@bundle.bundle_label_template": {
@@ -186,16 +187,18 @@
                       ]
                     }
                   },
-                  { "spacer_0@global.empty_panel": { "size": [96, 3] } },
+                  { "spacer_0@global.empty_panel": { "size": ["100%sm", 3] } },
                   {
-                    "bundle_center_content@global.empty_stack": {
-                      "size": ["100%c", "100%c"],
+                    "bundle_center_content@global.empty_panel": {
+                      "size": ["100%sm", "100%c"],
                       "controls": [
                         {
                           "bundle_item_grid": {
                             "type": "grid",
                             "size": [96, "default"],
                             "layer": 3,
+                            "anchor_from": "center",
+                            "anchor_to": "center",
                             "$item_collection": "bundle_items",
                             "grid_dimension_binding": "#bundle_tooltip_grid_dimensions",
                             "collection_name": "$item_collection",
@@ -216,7 +219,9 @@
                           "bundle_empty@bundle.bundle_label_template": {
                             "color": [0.659, 0.659, 0.659],
                             "text": "item.bundle.empty.description",
-                            "size": [96, "default"],
+                            "size": ["100%", "default"],
+                            "anchor_from": "top_left",
+                            "anchor_to": "top_left",
                             "bindings": [
                               {
                                 "binding_name": "#is_selected_bundle_empty",

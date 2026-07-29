@@ -313,6 +313,7 @@
         "binding_name": "#tier_visible",
         "binding_name_override": "#visible",
         "binding_type": "collection",
+        "ignored": "$use_unlocked_villager_trades",
         "binding_collection_name": "trade_tiers",
         "binding_condition": "always"
       }
@@ -321,22 +322,32 @@
   "trade_toggle@toggle.radio_toggle": {
     "size": [88, 20],
     "$toggle_name": "trade_toggle",
+
     "$extra_contents": "trade_global.toggle_contents",
+
     "$unchecked": "screen_content.unchecked_control",
     "$unchecked_hover": "screen_content.unchecked_hover_control",
     "$checked": "screen_content.checked_control",
     "$checked_hover": "screen_content.checked_hover_control",
     "$locked": "screen_content.locked_control",
-    "variables": {
-      "requires": "$cb_is_thick_menu_buttons",
-      "$unchecked": "beveled_buttons_bridge.unchecked_control",
-      "$checked": "beveled_buttons_bridge.checked_control",
-      "$unchecked_hover": "beveled_buttons_bridge.unchecked_hover_control",
-      "$checked_hover": "beveled_buttons_bridge.checked_hover_control"
-    },
+
     "$toggle_binding_value": "#trade_toggle_state",
     "$toggle_enabled_binding_name": "#trade_toggle_enabled",
     "$toggle_binding_condition": "visible",
+
+    "variables": [
+      {
+        "requires": "$cb_is_thick_menu_buttons",
+        "$unchecked": "beveled_buttons_bridge.unchecked_control",
+        "$checked": "beveled_buttons_bridge.checked_control",
+        "$unchecked_hover": "beveled_buttons_bridge.unchecked_hover_control",
+        "$checked_hover": "beveled_buttons_bridge.checked_hover_control"
+      },
+      {
+        "requires": "$use_unlocked_villager_trades",
+        "$toggle_enabled_binding_name": "#none"
+      }
+    ],
     "$button_mappings": [
       {
         "from_button_id": "button.menu_select",
