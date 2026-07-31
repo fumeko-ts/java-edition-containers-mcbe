@@ -207,7 +207,7 @@
             },
             {
               "binding_type": "view",
-              "source_property_name": "((not (#first_slot = -1)) and (not (#second_slot = -1)) and (not (#result_slot = -1)))",
+              "source_property_name": "((not (#first_slot = -1)) and (not (#second_slot = -1)) and (#result_slot = -1))",
               "target_property_name": "#visible"
             }
           ]
