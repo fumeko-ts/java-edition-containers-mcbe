@@ -27,26 +27,26 @@
 
   //creative inventory tabs
   "$chest_item_index": 54,
-  "$compass_item_index": 423,
-  "$redstone_item_index": 405,
-  "$iron_sword_item_index": 338,
+  "$compass_item_index": 394,
+  "$redstone_item_index": 376,
+  "$iron_sword_item_index": 309,
   "$purple_froglight_item_index": -469,
   "$bricks_item_index": 45,
 
   //crafting recipe book tabs
-  "$apple_item_index": 285,
-  "$bucket_lava_item_index": 395,
-  "$golden_sword_item_index": 354,
-  "$iron_axe_item_index": 329,
+  "$apple_item_index": 878,
+  "$bucket_lava_item_index": 366,
+  "$golden_sword_item_index": 325,
+  "$iron_axe_item_index": 300,
 
   //furnace recipe book tabs
-  "$raw_porkchop_item_index": 291,
+  "$raw_porkchop_item_index": 262,
   "$stone_item_index": 1,
-  "$emerald_item_index": 552,
+  "$emerald_item_index": 523,
 
   //blast furnace recipe book tabs
-  "$golden_leggings_item_index": 385,
-  "$iron_shovel_item_index": 327,
+  "$golden_leggings_item_index": 356,
+  "$iron_shovel_item_index": 298,
 
   //enchanting table text colors
   "$xp_price_color_enabled_state": [0.4941, 0.9882, 0.1255, 1],
