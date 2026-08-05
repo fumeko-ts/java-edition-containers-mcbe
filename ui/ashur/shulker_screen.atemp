@@ -46,7 +46,7 @@
                             "size": ["default", 10],
                             "layer": 5,
                             "text": "$container_title",
-                            "color": "$title_text_color"
+                            "color": "$container_title_color"
                           }
                         }
                       ]
@@ -63,8 +63,7 @@
                 "controls": [
                   { "filler_3@global.empty_panel": { "size": [7, "fill"] } },
                   {
-                    "shulker_grid": {
-                      "type": "grid",
+                    "shulker_grid@global.empty_grid": {
                       "size": [162, 54],
                       "grid_dimensions": [9, 3],
                       "grid_item_template": "jc_container_item.container_item",

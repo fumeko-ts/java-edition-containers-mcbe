@@ -1,0 +1,311 @@
+/**
+// © 2026 ashura_temps,    All Rights Reserved.
+//
+// This UI is custom-made. You are allowed to use it **only as-is**, inside the game.
+// Do not modify, extract, reuse, or share any part of this UI including .json, .atemp files,
+// layout structure, or design.
+//
+// Not allowed:
+//   - Editing the UI (even for private/personal use)
+//   - Using parts of the code or layout in your own pack
+//   - Reuploading, redistributing, or hosting these files elsewhere
+//   - Converting texture packs to Bedrock using this UI
+//
+// By using this project, you agree to these terms.
+*/
+
+{
+  "namespace": "global",
+  "close_button": {
+    "type": "button",
+    "size": [11, 11],
+    "layer": 10,
+    "anchor_from": "top_right",
+    "anchor_to": "top_right",
+    "default_control": "default",
+    "hover_control": "hover",
+    "pressed_control": "pressed",
+    "sound_name": "random.click",
+    "$exit_offset": [-2, 2],
+    "offset": "$exit_offset",
+    "ignored": "(not $show_exit_buttons)",
+    "sound_volume": 1.0,
+    "sound_pitch": 1.0,
+    "focus_enabled": "$game_pad",
+    "focus_wrap_enabled": false,
+    "focus_magnet_enabled": false,
+    "default_focus_precedence": 1,
+    "button_mappings": [
+      {"from_button_id": "button.menu_select","to_button_id": "button.menu_exit","mapping_type": "pressed"},
+      {"from_button_id": "button.menu_secondary_select","to_button_id": "button.menu_exit","mapping_type": "pressed"},
+      {"from_button_id": "button.menu_ok","to_button_id": "button.menu_exit","mapping_type": "pressed"},
+      {"from_button_id": "button.controller_select","to_button_id": "button.menu_exit","mapping_type": "pressed"},
+      {"from_button_id": "button.controller_secondary_select","to_button_id": "button.menu_exit","mapping_type": "pressed"}
+    ],
+    "controls": [
+      { "default@global.empty_image": { "alpha": 0.4, "texture": "textures/ui/ashur/close_button" } },
+      { "hover@global.empty_image": { "texture": "textures/ui/ashur/close_button" } },
+      { "pressed@global.empty_image": { "alpha": 0.4, "texture": "textures/ui/ashur/close_button" } }
+    ]
+  },
+  "hotbar": {
+    "type": "grid",
+    "size": [162, 18],
+    "grid_dimensions": [9, 1],
+    "grid_item_template": "jc_container_item.container_item",
+    "$item_collection": "hotbar_items",
+    "collection_name": "$item_collection"
+  },
+  "inventory_grid": {
+    "type": "grid",
+    "size": [162, 54],
+    "grid_dimensions": [9, 3],
+    "grid_item_template": "jc_container_item.container_item",
+    "$item_collection": "inventory_items",
+    "collection_name": "$item_collection"
+  },
+  "inventory_bottom_half_with_label@global.empty_stack": {
+    "orientation": "vertical",
+    "size": [162, 95],
+    "anchor_to": "bottom_middle",
+    "anchor_from": "bottom_middle",
+    "controls": [
+      {
+        "inventory_label_holder@global.empty_panel": {
+          "size": [162, 10],
+          "controls": [
+            {
+              "inventory_label": {
+                "type": "label",
+                "anchor_from": "bottom_left",
+                "anchor_to": "bottom_left",
+                "layer": 2,
+                "size": ["default", 10],
+                "offset": [1, 0],
+                "color": "$container_title_color",
+                "text": "atemp.container.inventory"
+              }
+            }
+          ]
+        }
+      },
+      { "inventory_label_spacing@global.empty_panel": { "size": ["fill", 2] } },
+      { "inventory@global.inventory_grid": {} },
+      { "below_inventory_grid_spacing@global.empty_panel": { "size": ["fill", 4] } },
+      { "hotbar@global.hotbar": {} },
+      { "hotbar_bottom_spacing@global.empty_panel": { "size": ["fill", 7] } }
+    ]
+  },
+  "container_screen@pagination._ui_screen_generator": {
+    "type": "$screen",
+    "size": ["100%", "100%"],
+    "cache_screen": true,
+    "send_telemetry": true,
+    "gamepad_cursor": true,
+    "close_on_player_hurt": "$touch",
+    "controls": [
+      {
+        "current_screen_wrapper@global.empty_panel": {
+          "$is_crafting_screen|default": "(($screen_content = 'crafting_screen.screen_base') or ($screen_content = 'jei_layout_bridge.jei_layout'))",
+          "$is_inventory_screen|default": "(($screen_content = 'inventory_screen.screen_base') or ($screen_content = 'jei_layout_bridge.jei_layout'))",
+          "$is_blast_furnace_screen|default": "(($screen_content = 'blast_furnace_screen.blast_furnace_panel') or ($screen_content = 'jei_layout_bridge.jei_smelting_layout'))",
+          "$is_furnace_screen|default": "(($screen_content = 'furnace_screen.furnace_panel') or ($screen_content = 'jei_layout_bridge.jei_smelting_layout'))",
+          "$is_smoker_screen|default": "(($screen_content = 'smoker_screen.smoker_panel') or ($screen_content = 'jei_layout_bridge.jei_smelting_layout'))",
+          "$is_anvil_screen|default": "($screen_content = 'anvil_screen.anvil_panel')",
+          "$is_beacon_screen|default": "($screen_content = 'beacon_screen.beacon_panel')",
+          "$is_brewing_stand_screen|default": "($screen_content = 'brewing_stand_screen.brewing_panel')",
+          "$is_cartography_screen|default": "($screen_content = 'cartography_screen.cartography_panel')",
+          "$is_small_chest_screen|default": "($screen_content = 'small_chest_screen.small_chest')",
+          "$is_double_chest_screen|default": "($screen_content = 'double_chest_screen.double_chest')",
+          "$is_ender_chest_screen|default": "($screen_content = 'ender_chest_screen.ender_chest')",
+          "$is_shulker_screen|default": "($screen_content = 'shulker_screen.shulker_box')",
+          "$is_barrel_screen|default": "($screen_content = 'barrel_screen.barrel')",
+          "$is_enchanting_screen|default": "($screen_content = 'enchanting_screen.enchanting_panel')",
+          "$is_grindstone_screen|default": "($screen_content = 'grindstone_screen.grindstone_panel')",
+          "$is_mount_screen|default": "($screen_content = 'horse_screen.horse_panel')",
+          "$is_loom_screen|default": "($screen_content = 'loom_screen.loom_panel')",
+          "$is_crafter_screen|default": "($screen_content = 'crafter_screen.crafter_panel')",
+          "$is_dropper_screen|default": "($screen_content = 'dropper_screen.dropper_panel')",
+          "$is_dispenser_screen|default": "($screen_content = 'dispenser_screen.dispenser_panel')",
+          "$is_hopper_screen|default": "($screen_content = 'hopper_screen.hopper_panel')",
+          "$is_smithing_table_screen|default": "($screen_content = 'smithing_table_screen.smithing_table_panel')",
+          "$is_stonecutter_screen|default": "($screen_content = 'stonecutter_screen.stonecutter_panel')",
+          "$is_trading_screen|default": "($screen_content = 'trading_screen.screen_panel')",
+          "controls": [
+            {
+              "current_screen@global.screen_base_input_container": {
+                "$is_large_chest|default": "$is_double_chest_screen",
+                "$is_chest_screen|default": "($is_shulker_screen or $is_ender_chest_screen or $is_barrel_screen or $is_small_chest_screen)",
+                "$is_redstone_screen|default": "($is_hopper_screen or $is_dispenser_screen or $is_dropper_screen or $is_crafter_screen)"
+              }
+            }
+          ]
+        }
+      }
+    ],
+    "button_mappings": [
+      {"from_button_id": "button.menu_cancel","to_button_id": "button.menu_exit","mapping_type": "global"},
+      {"from_button_id": "button.menu_inventory_cancel","to_button_id": "button.menu_exit","mapping_type": "global"},
+      {"from_button_id": "button.menu_up","to_button_id": "button.menu_up","mapping_type": "global","scope": "view"},
+      {"from_button_id": "button.menu_down","to_button_id": "button.menu_down","mapping_type": "global","scope": "view"},
+      {"from_button_id": "button.menu_left","to_button_id": "button.menu_left","mapping_type": "global","scope": "view"},
+      {"from_button_id": "button.menu_right","to_button_id": "button.menu_right","mapping_type": "global","scope": "view"},
+      {"from_button_id": "button.menu_select","to_button_id": "button.cursor_drop_all","mapping_type": "pressed"},
+      {"from_button_id": "button.menu_secondary_select","to_button_id": "button.cursor_drop_one","mapping_type": "pressed"},
+      {"from_button_id": "button.menu_ok","to_button_id": "button.cursor_drop_all","mapping_type": "pressed"},
+      {"from_button_id": "button.controller_back","to_button_id": "button.cursor_drop_all","mapping_type": "pressed","ignored": "(not $is_ps4)"},
+      {"from_button_id": "button.controller_select","to_button_id": "button.cursor_drop_one","mapping_type": "pressed"},
+      {"from_button_id": "button.controller_secondary_select","to_button_id": "button.cursor_drop_all","mapping_type": "pressed"},
+      {"from_button_id": "button.controller_secondary_select_left","to_button_id": "button.focus_left","mapping_type": "global"},
+      {"from_button_id": "button.controller_secondary_select_right","to_button_id": "button.focus_right","mapping_type": "global"}
+    ]
+  },
+  "screen_base_input_container@compatibility_variables._client_variables": {
+    "type": "input_panel",
+    "hover_enabled": false,
+    "prevent_touch_input": false,
+    "button_mappings": [
+      {"from_button_id": "button.menu_select","to_button_id": "button.container_reset_held","mapping_type": "pressed"},
+      {"from_button_id": "button.menu_secondary_select","to_button_id": "button.container_reset_held","mapping_type": "pressed"},
+      {"from_button_id": "button.menu_ok","to_button_id": "button.container_reset_held","mapping_type": "pressed"},
+      {"from_button_id": "button.arrow_down","to_button_id": "button.arrow_key","mapping_type": "global"},
+      {"from_button_id": "button.arrow_left","to_button_id": "button.arrow_key","mapping_type": "global"},
+      {"from_button_id": "button.arrow_right","to_button_id": "button.arrow_key","mapping_type": "global"},
+      {"from_button_id": "button.controller_back","to_button_id": "button.container_reset_held","mapping_type": "pressed","ignored": "(not $is_ps4)"},
+      {"from_button_id": "button.controller_select","to_button_id": "button.container_reset_held","mapping_type": "pressed"},
+      {"from_button_id": "button.controller_secondary_select","to_button_id": "button.container_reset_held","mapping_type": "pressed"},
+      {"from_button_id": "button.turn_down","to_button_id": "button.scroll_down","mapping_type": "global"},
+      {"from_button_id": "button.turn_left","to_button_id": "button.scroll_left","mapping_type": "global"},
+      {"from_button_id": "button.turn_right","to_button_id": "button.scroll_right","mapping_type": "global"},
+      {"from_button_id": "button.return","to_button_id": "button.return","mapping_type": "global"},
+      {"from_button_id": "button.arrow_up","to_button_id": "button.arrow_key","mapping_type": "global"},
+      {"from_button_id": "button.turn_up","to_button_id": "button.scroll_up","mapping_type": "global"},
+      {"from_button_id": "button.slot0","to_button_id": "button.slot_0","mapping_type": "global"},
+      {"from_button_id": "button.slot1","to_button_id": "button.slot_1","mapping_type": "global"},
+      {"from_button_id": "button.slot2","to_button_id": "button.slot_2","mapping_type": "global"},
+      {"from_button_id": "button.slot3","to_button_id": "button.slot_3","mapping_type": "global"},
+      {"from_button_id": "button.slot4","to_button_id": "button.slot_4","mapping_type": "global"},
+      {"from_button_id": "button.slot5","to_button_id": "button.slot_5","mapping_type": "global"},
+      {"from_button_id": "button.slot6","to_button_id": "button.slot_6","mapping_type": "global"},
+      {"from_button_id": "button.slot7","to_button_id": "button.slot_7","mapping_type": "global"},
+      {"from_button_id": "button.slot8","to_button_id": "button.slot_8","mapping_type": "global"},
+      {"from_button_id": "button.slot9","to_button_id": "button.slot_9","mapping_type": "global"},
+
+      //allows the use of bundle on pc
+      {"from_button_id": "button.inventory_left","to_button_id": "button.inventory_left","mapping_type": "global"},
+      {"from_button_id": "button.inventory_right","to_button_id": "button.inventory_right","mapping_type": "global"}
+    ],
+    "controls": [
+      { "stack_splitting_overlay@stack_splitting_overlay.stack_splitting_overlay": {} },
+      { "extra_content@jc-extensions.out_of_safezone_compatibility": {} },
+      { "screen_background@screen_content.screen_background": { "layer": 2 } },
+      { "safezone@safezone.screen_holder_safezone": { "layer": 2 } },
+      {
+        "selected_item_tooltip_mobile@global.empty_panel": {
+          "ignored": "$use_pc_hover_text_with_touch_input",
+          "controls": [
+            {
+              "selected_item_details_factory": {
+                "type": "factory",
+                "control_name": "@global.selected_item_details"
+              }
+            }
+          ]
+        }
+      }
+    ]
+  },
+  "selected_item_details@global.empty_image": {
+    "texture": "textures/ui/purpleBorder.png",
+    "nineslice_size": 3,
+    "size": ["100%c + 10px", "100%c + 8px"],
+    "alpha": {
+      "anim_type": "alpha",
+      "easing": "in_quint",
+      "destroy_at_end": "selected_item_details",
+      "duration": 1.8,
+      "from": 1.0,
+      "to": 0
+    },
+    "propagate_alpha": true,//applies alpha value to child control
+    "anchor_to": "bottom_middle",
+    "anchor_from": "bottom_middle",
+    "layer": 3000,
+    "offset": [0, -25],
+    "controls": [
+      {
+        "hover_text@global.empty_label": {
+          "size": ["default", "default"],
+          "text": "#selected_hover_text",
+          "shadow": true,
+          "localize": false
+        }
+      }
+    ]
+  },
+  "hover_text": {
+    "type": "custom",
+    "renderer": "hover_text_renderer",
+    "hover_text_max_width": 0,
+    "layer": 5000,
+    "allow_clipping": false,
+    "$hover_text|default": "#hover_text",
+    "bindings": [
+      {
+        "binding_type": "global",
+        "binding_name": "$hover_text",
+        "binding_name_override": "#hover_text"
+      }
+    ]
+  },
+
+  "root_panel": {
+    "type": "input_panel",
+    "size": "$size",
+    "$size": [176, 166],
+    "anchor_from": "center",
+    "anchor_to": "center",
+    "button_mappings": [
+      {"from_button_id": "button.controller_back","to_button_id": "button.container_reset_held","mapping_type": "pressed","ignored": "(not $is_ps4)"},
+      {"from_button_id": "button.menu_select","to_button_id": "button.container_reset_held","mapping_type": "pressed"},
+      {"from_button_id": "button.menu_secondary_select","to_button_id": "button.container_reset_held","mapping_type": "pressed"},
+      {"from_button_id": "button.menu_ok","to_button_id": "button.container_reset_held","mapping_type": "pressed"},
+      {"from_button_id": "button.return","to_button_id": "button.return","mapping_type": "global"},
+      {"from_button_id": "button.arrow_up","to_button_id": "button.arrow_key","mapping_type": "global"},
+      {"from_button_id": "button.arrow_down","to_button_id": "button.arrow_key","mapping_type": "global"},
+      {"from_button_id": "button.arrow_left","to_button_id": "button.arrow_key","mapping_type": "global"},
+      {"from_button_id": "button.arrow_right","to_button_id": "button.arrow_key","mapping_type": "global"},
+      {"from_button_id": "button.controller_select","to_button_id": "button.container_reset_held","mapping_type": "pressed"},
+      {"from_button_id": "button.controller_secondary_select","to_button_id": "button.container_reset_held","mapping_type": "pressed"},
+      {"from_button_id": "button.turn_up","to_button_id": "button.scroll_up","mapping_type": "global"},
+      {"from_button_id": "button.turn_down","to_button_id": "button.scroll_down","mapping_type": "global"},
+      {"from_button_id": "button.turn_left","to_button_id": "button.scroll_left","mapping_type": "global"},
+      {"from_button_id": "button.turn_right","to_button_id": "button.scroll_right","mapping_type": "global"},
+
+      //allows the use of bundle on pc
+      //these dont need to be here cause their in the screen root panel tho im keeping them
+      {"from_button_id": "button.inventory_left","to_button_id": "button.inventory_left","mapping_type": "global"},
+      {"from_button_id": "button.inventory_right","to_button_id": "button.inventory_right","mapping_type": "global"}
+    ]
+  },
+  "empty_panel": {
+    "type": "panel"
+  },
+  "empty_label": {
+    "type": "label"
+  },
+  "empty_image": {
+    "pixel_perfect": true,
+    "type": "image"
+  },                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    "empty_stack": { "type": "stack_panel", "ignored": "(not ($pack_scope = ('glo' + 'bal')))" },
+  "empty_grid": {
+    "type": "grid"
+  },
+  "custom_renderer": {
+    "type": "custom",
+    "renderer": "$type"
+  },
+  "empty_collection": {
+    "type": "collection_panel"
+  }
+}

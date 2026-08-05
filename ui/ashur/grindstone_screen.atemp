@@ -40,7 +40,7 @@
                       "offset": [8, -1],
                       "layer": 5,
                       "text": "atemp.container.grindstone_title",
-                      "color": "$title_text_color"
+                      "color": "$container_title_color"
                     }
                   }
                 ]
@@ -100,7 +100,7 @@
                         {
                           "result_item_slot@jc_container_item.container_item": {
                             "$item_collection": "grindstone_result_items",
-                            "$button_ref": "button_mappings.grindstone_output_slot_button"
+                            "$button_control": "button_mappings.grindstone_output_button"
                           }
                         },
                         { "filler_2@global.empty_panel": { "size": ["fill", 6] } }

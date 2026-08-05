@@ -1,0 +1,15 @@
+{
+  /*
+    none of the variables in this file are mine – they're from other packs.
+    their only here in this file to stop content log errors.
+    if i could avoided including them, i would have.
+  */
+  "namespace": "compatibility_variables",
+  "_client_variables@global.empty_panel": {
+
+    //deesse ui specific vars 
+    "$is_quick_items_right_mode": true,
+    "$is_full_feature_mode": false,
+    "$is_performance_mode": false
+  }
+}

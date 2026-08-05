@@ -1,0 +1,12 @@
+{
+  "random.click": {
+    "category": "ui",
+    "sounds": [
+      {
+        "name": "sounds/random/click",
+        "volume": 1.0,
+        "load_on_low_memory": true
+      }
+    ]
+  }
+}

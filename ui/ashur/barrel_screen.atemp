@@ -29,13 +29,13 @@
           "anchor_from": "top_middle",
           "controls": [
             {
-              "label_holder@global.empty_stack": {
+              "label_holding_stack@global.empty_stack": {
                 "orientation": "horizontal",
                 "size": [176, 17],
                 "controls": [
                   { "filler_1@global.empty_panel": { "size": [8, "fill"] } },
                   {
-                    "chest_label_holder@global.empty_panel": {
+                    "barrel_label_holder@global.empty_panel": {
                       "size": [57, 10],
                       "controls": [
                         {
@@ -46,7 +46,7 @@
                             "size": ["default", 10],
                             "layer": 5,
                             "text": "atemp.container.barrel",
-                            "color": "$title_text_color"
+                            "color": "$container_title_color"
                           }
                         }
                       ]
@@ -57,14 +57,13 @@
               }
             },
             {
-              "chest_grid_holder@global.empty_stack": {
+              "barrel_grid_holder@global.empty_stack": {
                 "orientation": "horizontal",
                 "size": [176, 54],
                 "controls": [
                   { "filler_3@global.empty_panel": { "size": [7, "fill"] } },
                   {
-                    "barrel_grid": {
-                      "type": "grid",
+                    "barrel_grid@global.empty_grid": {
                       "size": [162, 54],
                       "grid_dimensions": [9, 3],
                       "grid_item_template": "jc_container_item.container_item",

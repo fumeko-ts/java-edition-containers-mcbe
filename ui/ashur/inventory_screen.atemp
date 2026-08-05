@@ -19,19 +19,14 @@
   "screen_base@container_common.container_details": {
     "min_size": [176, 166],
     "max_size": [359, 166],
-    "anchor_to": "center",
-    "anchor_from": "center",
     "$screen_controls": [
       {
         "survival_inventory@global.empty_stack": {
           "orientation": "horizontal",
           "min_size": [176, 166],
           "max_size": [359, 166],
-          "layer": 1,
           "controls": [
-            {
-              "recipe_book@recipe_book.recipe_book": {} //thats alot of recipe_books
-            },
+            { "recipe_book@recipe_book.recipe_book": {} },
             {
               "inventory@global.root_panel": {
                 "size": [176, 166],
@@ -52,25 +47,24 @@
                             "anchor_to": "left_middle",
                             "layer": 2,
                             "size": ["default", 10],
-                            "color": "$title_text_color",
+                            "color": "$container_title_color",
                             "text": "atemp.container.crafting"
                           }
                         },
                         { "buffer_1@global.empty_panel": { "size": ["fill", 2] } },
                         {
-                          "cell_stack@global.empty_stack": {
+                          "crafting_slots_cell_stack@global.empty_stack": {
                             "orientation": "horizontal",
                             "size": [79, 36],
                             "controls": [
                               {
-                                "2x2_crafting_grid": {
-                                  "type": "grid",
+                                "2x2_crafting_grid@global.empty_grid": {
                                   "size": [36, 36],
                                   "grid_dimensions": [2, 2],
                                   "collection_name": "$item_collection",
                                   "$item_collection": "crafting_input_items",
-                                  "$background_images": "crafting_textures.main_cell_panel",
                                   "$item_renderer_binding_condition": "always",
+                                  "$background_control": "crafting_textures.main_cell_panel",
                                   "grid_item_template": "jc_container_item.container_item"
                                 }
                               },
@@ -83,13 +77,10 @@
                                     { "buffer_3@global.empty_panel": { "size": ["fill", 10] } },
                                     {
                                       "crafting_table_output_slot@jc_container_item.container_item": {
-                                        "$item_collection": "crafting_output_items",
-                                        "$item_collection_name": "crafting_output_items",
-                                        "$button_ref": "button_mappings.crafting_output_button",
-                                        "$background_images": "crafting_textures.main_cell_panel",
+                                        "$button_control": "button_mappings.crafting_output_button",
                                         "$item_renderer_binding_condition": "always",
-                                        "$stack_count_binding_condition": "always",
-                                        "$cell_size": [18, 18]
+                                        "$item_collection": "crafting_output_items",
+                                        "$background_control": "crafting_textures.main_cell_panel"
                                       }
                                     },
                                     { "buffer_4@global.empty_panel": { "size": ["fill", 8] } }
@@ -114,9 +105,7 @@
                       ]
                     }
                   },
-                  {
-                    "inventory_section@container_common.container_bottom_section": {}
-                  },
+                  { "inventory_section@container_common.container_bottom_section": {} },
                   {
                     "stack_top_buffer_stack@global.empty_stack": {
                       "orientation": "vertical",
@@ -132,8 +121,7 @@
                             "controls": [
                               { "buffer_1@global.empty_panel": { "size": [7, "fill"] } },
                               {
-                                "armor_grid": {
-                                  "type": "grid",
+                                "armor_grid@global.empty_grid": {
                                   "size": [18, 72],
                                   "grid_dimensions": [1, 4],
                                   "$item_collection": "armor_items",
@@ -142,29 +130,29 @@
                                     {
                                       "head_grid_item@jc_container_item.container_item": {
                                         "grid_position": [0, 0],
-                                        "$cell_overlay_ref": "screen_content.armor_overlay_helmet",
-                                        "$button_ref": "button_mappings.crafting_misc_button"
+                                        "$background_control": "screen_content.armor_overlay_helmet",
+                                        "$button_control": "button_mappings.armor_input_button"
                                       }
                                     },
                                     {
                                       "chest_grid_item@jc_container_item.container_item": {
                                         "grid_position": [0, 1],
-                                        "$cell_overlay_ref": "screen_content.armor_overlay_chest",
-                                        "$button_ref": "button_mappings.crafting_misc_button"
+                                        "$background_control": "screen_content.armor_overlay_chest",
+                                        "$button_control": "button_mappings.armor_input_button"
                                       }
                                     },
                                     {
                                       "legs_grid_item@jc_container_item.container_item": {
                                         "grid_position": [0, 2],
-                                        "$cell_overlay_ref": "screen_content.armor_overlay_legs",
-                                        "$button_ref": "button_mappings.crafting_misc_button"
+                                        "$background_control": "screen_content.armor_overlay_legs",
+                                        "$button_control": "button_mappings.armor_input_button"
                                       }
                                     },
                                     {
                                       "feet_grid_item@jc_container_item.container_item": {
                                         "grid_position": [0, 3],
-                                        "$cell_overlay_ref": "screen_content.armor_image_feet",
-                                        "$button_ref": "button_mappings.crafting_misc_button"
+                                        "$background_control": "screen_content.armor_image_feet",
+                                        "$button_control": "button_mappings.armor_input_button"
                                       }
                                     }
                                   ]
@@ -205,8 +193,8 @@
                                     {
                                       "offhand_slot@jc_container_item.container_item": {
                                         "$item_collection": "offhand_items",
-                                        "$cell_overlay_ref": "screen_content.armor_overlay_shield",
-                                        "$button_ref": "button_mappings.crafting_misc_button"
+                                        "$background_control": "screen_content.armor_overlay_shield",
+                                        "$button_control": "button_mappings.offhand_input_button"
                                       }
                                     }
                                   ]
@@ -225,6 +213,7 @@
           "bindings": [
             {
               "binding_type": "global",
+              "binding_condition": "always",
               "binding_name": "(not #is_creative_mode)",
               "binding_name_override": "#visible"
             }
@@ -236,6 +225,7 @@
           "bindings": [
             {
               "binding_type": "global",
+              "binding_condition": "always",
               "binding_name": "#is_creative_mode",
               "binding_name_override": "#visible"
             }

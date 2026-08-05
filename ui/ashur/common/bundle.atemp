@@ -1,0 +1,339 @@
+/**
+// © 2026 ashura_temps,    All Rights Reserved.
+//
+// This UI is custom-made. You are allowed to use it **only as-is**, inside the game.
+// Do not modify, extract, reuse, or share any part of this UI including .json, .atemp files,
+// layout structure, or design.
+//
+// Not allowed:
+//   - Editing the UI (even for private/personal use)
+//   - Using parts of the code or layout in your own pack
+//   - Reuploading, redistributing, or hosting these files elsewhere
+//   - Converting texture packs to Bedrock using this UI
+//
+// By using this project, you agree to these terms.
+*/
+
+{
+  "namespace": "bundle",
+  //this is java acurate bundle ui like pixel perfect to java ver (i spent hours on this it was very hard to get it this minimal)
+  "bundle_tooltip@global.root_panel": {
+    "size": ["100%cm", "100%cm"],
+    "offset": [1, -6],
+    "layer": 40,
+    "controls": [
+      {
+        "close_button": {
+          "type": "button",
+          "size": [20, 20],
+          "offset": [3, 0],
+          "anchor_from": "top_right",
+          "anchor_to": "top_left",
+          "default_control": "default",
+          "hover_control": "hover",
+          "pressed_control": "pressed",
+          "sound_name": "random.click",
+          "sound_volume": 1.0,
+          "sound_pitch": 1.0,
+          "button_mappings": [
+            { "to_button_id": "button.hide_bundle_tooltip", "mapping_type": "pressed" },
+            {
+              "from_button_id": "button.menu_ok",
+              "to_button_id": "button.hide_bundle_tooltip",
+              "mapping_type": "focused"
+            },
+            {
+              "from_button_id": "button.menu_select",
+              "to_button_id": "button.hide_bundle_tooltip",
+              "mapping_type": "pressed"
+            },
+            {
+              "from_button_id": "button.menu_up",
+              "to_button_id": "button.hide_bundle_tooltip",
+              "mapping_type": "global"
+            }
+          ],
+          "controls": [
+            { "default@global.empty_image": { "texture": "assets/sprites/cross_button.png" } },
+            { "hover@global.empty_image": { "texture": "assets/sprites/cross_button_highlighted.png" } },
+            { "pressed@global.empty_image": { "texture": "assets/sprites/cross_button.png" } }
+          ],
+          "bindings": [
+            {
+              "binding_name": "#show_bundle_tooltip_pocket",
+              "binding_name_override": "#visible"
+            }
+          ]
+        }
+      },
+      {
+        "tooltip@global.empty_image": {
+          "size": ["100%cm", "100%c"],
+          "texture": "assets/sprites/container/bundle/tooltip_background",
+          "nineslice_size": 2,
+          "controls": [
+            {
+              "item_text_center_buffer@global.empty_panel": {
+                "size": ["100%sm - 2px", 1],
+                "anchor_from": "top_middle",
+                "anchor_to": "top_middle",
+                "controls": [
+                  {
+                    "selected_item_tooltip@global.empty_image": {
+                      "layer": 5,
+                      "texture": "assets/sprites/container/bundle/tooltip_background",
+                      "size": ["100%c + 8px", "100%c + 7px"],
+                      "anchor_to": "bottom_middle",
+                      "anchor_from": "top_middle",
+                      "nineslice_size": 2,
+                      "controls": [
+                        {
+                          "item_text_label": {
+                            "type": "label",
+                            "text": "#selected_bundle_item_text",
+                            "size": ["default", "default"],
+                            "shadow": true,
+                            "bindings": [
+                              {
+                                "binding_name": "#selected_bundle_item_text",
+                                "binding_condition": "visible"
+                              }
+                            ]
+                          }
+                        }
+                      ],
+                      "bindings": [
+                        {
+                          "binding_name": "#bundle_has_selected_item",
+                          "binding_name_override": "#visible"
+                        }
+                      ]
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "bundle_progress_bar_border@global.empty_image": {
+                "texture": "assets/sprites/container/bundle/bundle_progressbar_border.png",
+                "size": ["100%sm - 8px", 13],
+                "min_size": [96, 13],
+                "nineslice_size": 2,
+                "anchor_from": "bottom_middle",
+                "anchor_to": "top_middle",
+                "offset": [0, -18],
+                "layer": 3,
+                "controls": [
+                  {
+                    "bundle_fill_progress_bar@bundle.bundle_bar_template": {
+                      "texture": "assets/sprites/container/bundle/bundle_progress",
+                      "clip_direction": "left",
+                      "clip_pixelperfect": false,
+                      "bindings": [
+                        {
+                          "binding_name": "#bundle_weight_bar_ratio",
+                          "binding_name_override": "#clip_ratio",
+                          "binding_condition": "always_when_visible"
+                        }
+                      ]
+                    }
+                  },
+                  {
+                    "bundle_full_progress_bar@bundle.bundle_bar_template": {
+                      "texture": "assets/sprites/container/bundle/bundle_full_progress",
+                      "controls": [
+                        { "bundle_full_label@bundle.bundle_label_template": { "text": "item.bundle.full" } }
+                      ],
+                      "bindings": [
+                        {
+                          "binding_name": "#is_selected_bundle_full",
+                          "binding_name_override": "#visible"
+                        }
+                      ]
+                    }
+                  },
+                  {
+                    "bundle_empty_label@bundle.bundle_label_template": {
+                      "text": "item.bundle.empty",
+                      "bindings": [
+                        {
+                          "binding_name": "#is_selected_bundle_empty",
+                          "binding_name_override": "#visible"
+                        }
+                      ]
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "bundle_main_content_wrapper@global.empty_stack": {
+                "size": ["100%cm + 8px", "100%c + 10px"],
+                "layer": 2,
+                "anchor_from": "top_left",
+                "anchor_to": "top_left",
+                "offset": [4, 3],
+                "orientation": "vertical",
+                "controls": [
+                  {
+                    "bundle_title_label@bundle.bundle_label_template": {
+                      "text": "#bundle_name",
+                      "localize": false,
+                      "bindings": [
+                        {
+                          "binding_name": "#bundle_name",
+                          "binding_condition": "always_when_visible"
+                        }
+                      ]
+                    }
+                  },
+                  { "spacer_0@global.empty_panel": { "size": ["100%sm", 3] } },
+                  {
+                    "bundle_center_content@global.empty_panel": {
+                      "size": ["100%sm", "100%c"],
+                      "controls": [
+                        {
+                          "bundle_item_grid": {
+                            "type": "grid",
+                            "size": [96, "default"],
+                            "layer": 3,
+                            "anchor_from": "center",
+                            "anchor_to": "center",
+                            "$item_collection": "bundle_items",
+                            "grid_dimension_binding": "#bundle_tooltip_grid_dimensions",
+                            "collection_name": "$item_collection",
+                            "grid_item_template": "bundle.bundle_slot_item",
+                            "bindings": [
+                              {
+                                "binding_name": "#bundle_tooltip_grid_dimensions",
+                                "binding_condition": "always_when_visible"
+                              },
+                              {
+                                "binding_name": "(not #is_selected_bundle_empty)",
+                                "binding_name_override": "#visible"
+                              }
+                            ]
+                          }
+                        },
+                        {
+                          "bundle_empty@bundle.bundle_label_template": {
+                            "color": [0.659, 0.659, 0.659],
+                            "text": "item.bundle.empty.description",
+                            "size": ["100%", "default"],
+                            "anchor_from": "top_left",
+                            "anchor_to": "top_left",
+                            "bindings": [
+                              {
+                                "binding_name": "#is_selected_bundle_empty",
+                                "binding_name_override": "#visible"
+                              }
+                            ]
+                          }
+                        }
+                      ]
+                    }
+                  },
+                  { "spacer_1@global.empty_panel": { "size": [96, 2] } }
+                ]
+              }
+            }
+          ]
+        }
+      }
+    ]
+  },
+  "bundle_bar_template@global.empty_image": {
+    "layer": 2,
+    "nineslice_size": 2,
+    "size": ["100%", 13]
+  },
+  //dosent use global.empty_label because if its a number it will break
+  "bundle_label_template": {
+    "type": "label",
+    "size": ["default", 10],
+    "layer": 3,
+    "localize": true,
+    "shadow": true
+  },
+
+  //tooltip grid items
+
+  "bundle_slot_item@jc_container_item.container_item": {
+    "size": [24, 24],
+    "$stack_count_offset": [-3, -2],
+    "$progress_bar_offset": [-6, -6],
+
+    "$background_control": "bundle.bundle_item_slot_content",
+    "$button_control": "button_mappings.bundle_item_slot_button"
+  },
+  "bundle_item_slot_content@global.empty_panel": {
+    "size": [24, 24],
+    "controls": [
+      {
+        "bundle_slot_highlight@global.empty_image": {
+          "texture": "assets/sprites/container/bundle/slot_background.png",
+          "layer": 1,
+          "controls": [
+            {
+              "bundle_cell_image@global.empty_panel": {
+                "controls": [
+                  {
+                    "highlight_slot@global.empty_image": {
+                      "texture": "assets/sprites/container/bundle/slot_highlight_back.png",
+                      "layer": 4
+                    }
+                  },
+                  {
+                    "highlight_slot_overlay@global.empty_image": {
+                      "texture": "assets/sprites/container/bundle/slot_highlight_front.png",
+                      "layer": 16
+                    }
+                  }
+                ],
+                "bindings": [
+                  {
+                    "binding_name": "#is_selected_bundle_item_slot",
+                    "binding_type": "collection",
+                    "binding_collection_name": "$item_collection",
+                    "binding_name_override": "#visible"
+                  }
+                ]
+              }
+            }
+          ],
+          "bindings": [
+            {
+              "binding_name": "#show_bundle_item_slot",
+              "binding_name_override": "#visible",
+              "binding_type": "collection",
+              "binding_collection_name": "$item_collection"
+            }
+          ]
+        }
+      },
+      {
+        "bundle_more_items_count": {
+          "type": "label",
+          "size": ["default", 10],
+          "anchor_from": "center",
+          "anchor_to": "center",
+          "layer": 3,
+          "text": "#more_hidden_items_text",
+          "shadow": true,
+          "bindings": [
+            {
+              "binding_name": "#is_hidden_items_label",
+              "binding_name_override": "#visible",
+              "binding_type": "collection",
+              "binding_collection_name": "$item_collection"
+            },
+            {
+              "binding_name": "#more_hidden_items_text",
+              "binding_condition": "visible"
+            }
+          ]
+        }
+      }
+    ]
+  }
+}

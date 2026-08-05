@@ -16,6 +16,7 @@
 
 {
   "namespace": "double_chest_screen",
+
   "double_chest@container_common.container_details": {
     "size": [176, 222],
     "$screen_controls": [
@@ -44,7 +45,7 @@
                             "anchor_from": "top_left",
                             "layer": 5,
                             "text": "$container_title",
-                            "color": "$title_text_color"
+                            "color": "$container_title_color"
                           }
                         }
                       ]
@@ -60,8 +61,7 @@
                 "controls": [
                   { "filler_3@global.empty_panel": { "size": [7, "fill"] } },
                   {
-                    "double_chest_grid": {
-                      "type": "grid",
+                    "double_chest_grid@global.empty_grid": {
                       "size": [162, 108],
                       "grid_dimensions": [9, 6],
                       "grid_item_template": "jc_container_item.container_item",

@@ -1,0 +1,115 @@
+{
+  //used for compatibility
+  "$is_java_containers_dark": true,
+  "$_pack_creator": "ashura_temps/ashura_tepes",
+  //set UI transparency
+  "$container_opacity": 1,
+  "$container_color": [], //hex to rgba converter --> https://fumeko-ts.github.io/fumeko-ts/hex_to_rgba.html
+  "$background_blur_opacity": 1, //the base png is transparent
+
+  "$show_exit_buttons": false,
+  //if true makes so pc users dont need to move their mouse to reselect the page button
+  "$use_experimental_direction_buttons": true,
+  //if true allows pc users to trigger the page buttons useing the scroll wheel
+  "$use_experimental_recipe_scroll_input": false,
+  //if true allows the user to hover over a tab to auto select it
+  "$use_experimental_tab_toggle_input": false,
+  //if true will unlock villager trades
+  "$use_unlocked_villager_trades": false,
+  //if true allows touch input users to use pc tooltip instead of the mobile one
+  "$use_pc_hover_text_with_touch_input": false,
+  //title text color
+  "$container_title_color": [0.89, 0.89, 0.89],
+
+  //these item indexes are whats used to render the items in the recipe book tabs
+  //you can find the index for a item useing this --> https://www.planetminecraft.com/texture-pack/item-id-visualizer-mcbe-mcpe/
+  //item_index = (#item_id_aux / 65536)
+
+  //creative inventory tabs
+  "$chest_item_index": 54,
+  "$compass_item_index": 394,
+  "$redstone_item_index": 376,
+  "$iron_sword_item_index": 309,
+  "$purple_froglight_item_index": -469,
+  "$bricks_item_index": 45,
+
+  //crafting recipe book tabs
+  "$apple_item_index": 878,
+  "$bucket_lava_item_index": 366,
+  "$golden_sword_item_index": 325,
+  "$iron_axe_item_index": 300,
+
+  //furnace recipe book tabs
+  "$raw_porkchop_item_index": 262,
+  "$stone_item_index": 1,
+  "$emerald_item_index": 523,
+
+  //blast furnace recipe book tabs
+  "$golden_leggings_item_index": 356,
+  "$iron_shovel_item_index": 298,
+
+  //enchanting table text colors
+  "$xp_price_color_enabled_state": [0.4941, 0.9882, 0.1255, 1],
+  "$xp_price_shadow_color_enabled_state": [0.1255, 0.2431, 0.0314, 1],
+
+  "$xp_price_color_disabled_state": [0.2471, 0.4941, 0.0627, 1],
+  "$xp_price_shadow_color_disabled_state": [0.0627, 0.1216, 0.0157, 1],
+
+  "$runes_disabled_color": [0.2, 0.1804, 0.1451, 1],
+  "$runes_enabled_color": [0.396, 0.396, 0.290],
+  "$runes_enabled_hover_color": [0.906, 0.906, 0.533],
+
+  //development variables (dont modify)
+  //will add links to each creators pages when i get the chance
+  "$cb_is_thick_menu_buttons": false,
+  "$is_jei_recipe_book_layout_pack": false,
+  "$is_déesse_ui_pack": false,
+  "$ashur:brewing_guide": false, //var for a pack im working on (a full brewing guide thats interactive and performance light)
+
+  "$pack_scope": "global",
+
+  //vanilla variables
+  "$light_button_default_text_color": [1, 1, 1],
+  "$light_toggle_default_text_color": [1, 1, 1],
+  "$light_toggle_checked_default_text_color": [1, 1, 1],
+  "$dark_button_secondary_default_text_color": [1, 1, 1, 1],
+  "$title_text_color": [1, 1, 1],
+  "$pocket_title_text_color": [1, 1, 1],
+  "$tab_unchecked_text_color": [1, 1, 1],
+  "$tab_unchecked_locked_text_color": [1, 1, 1],
+  "$tab_checked_text_color": [1, 1, 1],
+  "$tab_checked_hover_text_color": [1, 1, 1],
+  "$tab_checked_locked_text_color": [1, 1, 1],
+  "$tab_checked_locked_hover_text_color": [1, 1, 1],
+  "$tab_unchecked_glyph_color": [1, 1, 1],
+  "$tab_unchecked_hover_glyph_color": [1, 1, 1],
+  "$tab_unchecked_locked_glyph_color": [1, 1, 1],
+  "$tab_unchecked_locked_hover_glyph_color": [1, 1, 1],
+  "$tab_checked_glyph_color": [1, 1, 1],
+  "$tab_checked_hover_glyph_color": [1, 1, 1],
+  "$tab_checked_locked_glyph_color": [1, 1, 1],
+  "$tab_checked_locked_hover_glyph_color": [1, 1, 1],
+  "$dark_body_text_color": [1, 1, 1],
+  "$book_page_number_color": [0.665, 0.575, 0.475],
+
+  //////// Glyph colors ////////
+  "$light_glyph_default_color": [1, 1, 1],
+
+  //////// Dropdown item background colors ////////
+  "$dropdown_radio_background_unchecked_color": [0.17, 0.17, 0.17],
+  "$dropdown_radio_background_checked_color": [0.22, 0.22, 0.22],
+  "$dropdown_radio_background_hover_color": [0.35, 0.35, 0.35],
+
+  //////// Store colors ////////
+  "$store_sales_banner_text_color": [1, 1, 1],
+  "$new_offer_icon_text_color": [1, 1, 1],
+  "$store_dark_grey_text_color": [1, 1, 1],
+
+  //////// Dressing Room colors ////////
+  "$dressing_room_sub_category_seperator_color": [1, 1, 1],
+  "$dressing_room_right_side_dark_text_color": [1, 1, 1],
+  "$dressing_room_dark_button_color": [1, 1, 1],
+
+  //////// Profile Create Character Picker  ////////
+  "$profile_create_character_selected_color": [1, 1, 1]
+}

@@ -23,7 +23,7 @@
     "min_size": [176, 166],
     "max_size": [359, 166],
     "controls": [
-      {"$brewing_content@$brewing_content": { "ignored": "(not $ashur:brewing_guide)" }},
+      { "recipe_book@jc-extensions.brewing_guide": {} },
       {
         "right_half@container_common.container_details": {
           "size": [176, 166],
@@ -122,7 +122,7 @@
                                   "layer": 5,
                                   "offset": [0, -1],
                                   "text": "atemp.container.brewing",
-                                  "color": "$title_text_color"
+                                  "color": "$container_title_color"
                                 }
                               }
                             ]
@@ -206,12 +206,13 @@
   },
   "bottle_template@jc_container_item.container_item": {
     "$item_collection": "$collection_type",
-    "$cell_overlay_ref": "brewing_stand_screen.brewing_bottle"
+    "$background_control": "brewing_stand_screen.brewing_bottle"
   },
   "brewing_bottle@screen_content.image_element": {
     "size": [16, 16],
     "anchor_from": "center",
     "anchor_to": "center",
+    "layer": 5,
     "texture": "assets/sprites/container/slot/potion.png",
     "bindings": [
       {

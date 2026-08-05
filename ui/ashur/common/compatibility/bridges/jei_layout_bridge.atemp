@@ -1,0 +1,45 @@
+{
+  "namespace": "jei_layout_bridge",
+  "jei_inventory_layout@d\u00e9esse_JEIlayout.inventory_jei_layout": {
+    "controls": [
+      { "left_half@jei_layout_bridge.template": { "$recipe_direction|default": "$controls_left" } },
+      {
+        "center_content@global.empty_panel": {
+          "size": [180, "100%"],
+          "controls": [
+            {
+              "player_inventory@$recipe_container_type": {
+                "anchor_to": "center",
+                "anchor_from": "center"
+              }
+            }
+          ]
+        }
+      },
+      { "right_half@jei_layout_bridge.template": { "$recipe_direction|default": "$controls_right" } }
+    ]
+  },
+  "jei_smelting_layout@d\u00e9esse_JEIlayout.furnace_jei_layout": {
+    "controls": [
+      { "left_half@jei_layout_bridge.template": { "$recipe_direction|default": "$controls_left" } },
+      {
+        "center_content@global.empty_panel": {
+          "size": [180, "100%"],
+          "controls": [
+            {
+              "player_inventory@$recipe_container_type": {
+                "anchor_to": "center",
+                "anchor_from": "center"
+              }
+            }
+          ]
+        }
+      },
+      { "right_half@jei_layout_bridge.template": { "$recipe_direction|default": "$controls_right" } }
+    ]
+  },
+  "template@global.empty_panel": {
+    "size": ["fill", "100% - 2px"],
+    "controls": [{ "recipe_book@$recipe_direction": {} }]
+  }
+}

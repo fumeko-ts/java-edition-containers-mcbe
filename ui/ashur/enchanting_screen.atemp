@@ -18,7 +18,6 @@
   "namespace": "enchanting_screen",
   "enchanting_panel@container_common.container_details": {
     "size": [176, 166],
-    "layer": 5,
     "$screen_controls": [
       { "common_panel@screen_content.enchanting": {} },
       { "extensions@jc-extensions.enchanting_screen": {} },
@@ -38,32 +37,16 @@
                 "controls": [
                   { "left_filler@global.empty_panel": { "size": [1, "fill"] } },
                   {
-                    "enchantments_button_grid": {
-                      "type": "grid",
+                    "enchantments_button_grid@global.empty_grid": {
                       "layer": 6,
                       "size": [108, 57],
                       "collection_name": "#enchant_buttons",
                       "$collection_index|default": 0,
                       "grid_dimensions": [1, 3],
                       "controls": [
-                        {
-                          "button1@enchant_button.button": {
-                            "grid_position": [0, 0],
-                            "$collection_index": 1
-                          }
-                        },
-                        {
-                          "button2@enchant_button.button": {
-                            "grid_position": [0, 1],
-                            "$collection_index": 2
-                          }
-                        },
-                        {
-                          "button3@enchant_button.button": {
-                            "grid_position": [0, 2],
-                            "$collection_index": 3
-                          }
-                        }
+                        { "button1@enchant_button.button": { "grid_position": [0, 0], "$collection_index": 1 } },
+                        { "button2@enchant_button.button": { "grid_position": [0, 1], "$collection_index": 2 } },
+                        { "button3@enchant_button.button": { "grid_position": [0, 2], "$collection_index": 3 } }
                       ]
                     }
                   },
@@ -72,12 +55,6 @@
               }
             }
           ]
-        }
-      },
-      {
-        "bottom@global.inventory_bottom_half_with_label": {
-          "anchor_to": "bottom_middle",
-          "anchor_from": "bottom_middle"
         }
       },
       {
@@ -99,7 +76,7 @@
                       "anchor_from": "top_left",
                       "layer": 5,
                       "text": "atemp.container.enchant",
-                      "color": "$title_text_color"
+                      "color": "$container_title_color"
                     }
                   }
                 ]
@@ -117,7 +94,7 @@
                   {
                     "lapis_input@jc_container_item.container_item": {
                       "$item_collection": "enchanting_lapis_items",
-                      "$cell_overlay_ref": "screen_content.enchanting_lapis"
+                      "$background_control": "screen_content.enchanting_lapis"
                     }
                   }
                 ]
@@ -161,6 +138,12 @@
               }
             }
           ]
+        }
+      },
+      {
+        "bottom@global.inventory_bottom_half_with_label": {
+          "anchor_to": "bottom_middle",
+          "anchor_from": "bottom_middle"
         }
       }
     ]

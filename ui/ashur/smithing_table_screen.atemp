@@ -87,7 +87,7 @@
                             "offset": [0, -1],
                             "layer": 5,
                             "text": "atemp.container.upgrade",
-                            "color": "$title_text_color"
+                            "color": "$container_title_color"
                           }
                         }
                       ]
@@ -105,19 +105,19 @@
                   { "cell_filler_1@global.empty_panel": { "size": [7, 18] } },
                   {
                     "template_slot@jc_container_item.container_item": {
-                      "$cell_overlay_ref": "smithing_table_screen.slot_overlay",
+                      "$background_control": "smithing_table_screen.slot_overlay",
                       "$item_collection": "smithing_table_template_items"
                     }
                   },
                   {
                     "upgrade_slot@jc_container_item.container_item": {
-                      "$cell_overlay_ref": "smithing_table_screen.slot_overlay",
+                      "$background_control": "smithing_table_screen.slot_overlay",
                       "$item_collection": "smithing_table_input_items"
                     }
                   },
                   {
                     "material_slot@jc_container_item.container_item": {
-                      "$cell_overlay_ref": "smithing_table_screen.slot_overlay",
+                      "$background_control": "smithing_table_screen.slot_overlay",
                       "$item_collection": "smithing_table_material_items"
                     }
                   },
@@ -125,19 +125,13 @@
                   {
                     "result_item_slot@jc_container_item.container_item": {
                       "$item_collection": "smithing_table_result_items",
-                      "$button_ref": "button_mappings.smithing_table_output_slot_button"
+                      "$button_control": "button_mappings.smithing_output_button"
                     }
                   }
                 ]
               }
             }
           ]
-        }
-      },
-      {
-        "bottom@global.inventory_bottom_half_with_label": {
-          "anchor_to": "bottom_middle",
-          "anchor_from": "bottom_middle"
         }
       },
       {
@@ -165,13 +159,18 @@
             }
           ]
         }
+      },
+      {
+        "bottom@global.inventory_bottom_half_with_label": {
+          "anchor_to": "bottom_middle",
+          "anchor_from": "bottom_middle"
+        }
       }
     ]
   },
-
   "slot_overlay@global.empty_panel": {
-    "layer": 1,
     "size": [16, 16],
+    "layer": 5,
     "controls": [
       {
         "template_slot@global.empty_panel": {
@@ -229,15 +228,10 @@
     ]
   },
   "slot_sprite_renderer@global.empty_image": {
-    "layer": 1,
     "size": [16, 16],
     "texture": "$slot_spritesheet",
     "disable_anim_fast_forward": true,
-    "uv": {
-    //planning in makeing this a normal uv anim instead of aseprite 
-      "anim_type": "aseprite_flip_book", 
-      "initial_uv": [0, 0] 
-    },
+    "uv": { "anim_type": "aseprite_flip_book", "initial_uv": [0, 0] },
     "uv_size": [16, 16]
   }
 }

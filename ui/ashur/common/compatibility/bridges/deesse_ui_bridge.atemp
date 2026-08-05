@@ -1,0 +1,248 @@
+{
+  "namespace": "deesse_ui_bridge",
+
+  /*
+    this is a compatibility bridge. It does not copy, redistribute, or modify any of Déesse UI's core code.
+    None of Déesse's definitions are embedded or copied into this pack – they are only referenced.
+
+    all referenced definitions belong to Déesse UI and are only used when that pack is installed by the user.
+
+    this pack uses fully custom UI with no vanilla inheritance, meaning none of Déesse UI's elements would render
+    at all without this file explicitly injecting them.
+  */
+
+  //Inventory Screen
+  "out_of_safezone_durability_viewer@d\u00e9esse_inventory.armor_durability_panel": {
+    "anchor_from": "bottom_middle",
+    "anchor_to": "bottom_middle",
+    "offset": [0, -3]
+  },
+
+  "crafting_control_buttons@d\u00e9esse_qcUtils.crafting_table_stacked_buttons_panel": {
+    "$button_image_size": [17, 17],
+    "anchor_from": "top_right",
+    "anchor_to": "top_right"
+  },
+
+  //Deesse Global
+  "desse_main_content@global.empty_panel": {
+    "controls": [
+      {
+        "item_move_buttons_right@d\u00e9esse_qcMain.content_panel": {
+          "controls": [
+            {
+              "quick_items_stack_button@d\u00e9esse_quickItems.quick_items_stack_button": {}
+            }
+          ]
+        }
+      },
+      {
+        "chest_search_bar_and_toggle@global.empty_panel": {
+          "ignored": "(not ($is_redstone_screen or $is_double_chest_screen or $is_chest_screen or $is_mount_screen))",
+          "controls": [
+            {
+              "search_components@global.empty_panel": {
+                "ignored": "(not $d\u00e9_QC:show_search_bar)",
+                "controls": [
+                  {
+                    "search_panel@d\u00e9esse_searchItems.item_search_panel": {
+                      "size": ["100% - 15px", 14],
+                      "offset": [-7, -2],
+                      "anchor_from": "top_middle",
+                      "anchor_to": "bottom_middle"
+                    }
+                  },
+                  {
+                    "search_toggle@d\u00e9esse_searchItems.search_bar_button_2": {
+                      "size": [20, 20],
+                      "anchor_from": "top_right",
+                      "anchor_to": "top_left",
+                      "offset": [2, 0]
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "bulk_item_move_buttons_left@d\u00e9esse_instantButton.instant_move_stack_button_panel": {
+                "offset": [-2, 0],
+                "anchor_from": "left_middle",
+                "anchor_to": "right_middle",
+                "$is_large_chest|default": "$is_double_chest_screen"
+              }
+            }
+          ]
+        }
+      },
+      //Brewing Stand Screen
+      {
+        "brewing_content@global.empty_panel": {
+          "ignored": "(not $is_brewing_stand_screen)",
+          "controls": [
+            {
+              "recipe_toggle@compatibility_common.recipe_layout_toggle": {
+                "$recipe_book_open_control_name": "brewing_guide_tog",
+                "anchor_from": "top_left",
+                "anchor_to": "top_left",
+                "offset": [16, 49]
+              }
+            },
+            {
+              "fuel_text_wrapper@global.empty_panel": {
+                "size": [42, 12],
+                "offset": [4, 3],
+                "anchor_from": "top_left",
+                "anchor_to": "top_left",
+                "controls": [
+                  {
+                    "fuel_text@d\u00e9esse_brewing.fuel_text_panel": {
+                      "anchor_from": "center",
+                      "anchor_to": "center",
+                      "font_scale_factor": 1,
+                      "shadow": true,
+                      "color": [1.0, 0.639, 0.0]
+                    }
+                  }
+                ],
+                "bindings": [
+                  {
+                    "binding_type": "view",
+                    "source_control_name": "fuel_text",
+                    "resolve_sibling_scope": true,
+                    "source_property_name": "(not ((#total_ratio * 1) = 0))",
+                    "target_property_name": "#visible"
+                  }
+                ]
+              }
+            }
+          ]
+        }
+      },
+      //Crafter Screen
+      {
+        "crafter_content@global.empty_panel": {
+          "ignored": "(not $is_crafter_screen)",
+          "controls": [
+            {
+              "crafter_utility_buttons@d\u00e9esse_qcUtils.crafter_stacked_buttons_panel": {
+                "$button_image_size": [18, 18],
+                "size": [20, 60],
+                "offset": [5, 16]
+              }
+            }
+          ]
+        }
+      },
+      //crafting screens
+      {
+        "inventory_content@global.empty_panel": {
+          "ignored": "(not ($is_inventory_screen or $is_crafting_screen))",
+          "controls": [
+            {
+              "inventory_elements@global.empty_panel": {
+                "ignored": "(not $is_inventory_screen)",
+                "controls": [
+                  {
+                    "armor_slot_empty_button@d\u00e9esse_qcUtils.unequip_armor_button": {
+                      "offset": [27, 65]
+                    }
+                  },
+                  {
+                    "crafting_buttons@deesse_ui_bridge.crafting_control_buttons": {
+                      "orientation": "vertical",
+                      "size": [18, "default"],
+                      "offset": [-82, 6]
+                    }
+                  }
+                ]
+              }
+            },
+
+            {
+              "crafting_table_elements@global.empty_panel": {
+                "ignored": "(not $is_crafting_screen)",
+                "controls": [
+                  {
+                    "crafting_control_buttons@deesse_ui_bridge.crafting_control_buttons": {
+                      "orientation": "horizontal",
+                      "size": ["default", 18],
+                      "offset": [-17.15, 8]
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "inventory_and_move_hotbar_wrapper@global.empty_panel": {
+                "size": [36, 18],
+                "clips_children": true,
+                "offset": [-7, 61],
+                "anchor_from": "top_right",
+                "anchor_to": "top_right",
+                "controls": [
+                  {
+                    "inventory_and_move_hotbar_buttons@d\u00e9esse_instantButton.inv_instant_stack_button": {
+                      "anchor_from": "bottom_right",
+                      "anchor_to": "bottom_right",
+                      "offset": [0, 0]
+                    }
+                  }
+                ]
+              }
+            }
+          ]
+        }
+      },
+      //Smithing Table Screen
+      {
+        "smithing_content@global.empty_panel": {
+          "layer": 40,
+          "ignored": "(not $is_smithing_table_screen)",
+          "controls": [
+            {
+              "inventory_cover_panel@global.root_panel": {
+                "size": ["100%sm", "100%sm"],
+                "controls": [
+                  {
+                    "inventory_cover_image@screen_content.image_element": {
+                      "nineslice_size": 1,
+                      "uv": [163, 3],
+                      "size": ["100%", "100%"],
+                      "uv_size": [10, 10],
+                      "texture": "assets/container/smithing.png"
+                    }
+                  },
+                  {
+                    "exit@global.close_button": {
+                      "anchor_from": "top_right",
+                      "anchor_to": "top_right",
+                      "offset": [5, -5],
+                      "layer": 32
+                    }
+                  }
+                ],
+                "bindings": [
+                  {
+                    "binding_type": "view",
+                    "source_control_name": "smithing_preview_tog",
+                    "source_property_name": "#toggle_state",
+                    "target_property_name": "#visible"
+                  }
+                ]
+              }
+            },
+            { "smithing_preview_panel@d\u00e9esse_smithingPreview.smithing_armor_preview_panel": {} },
+            {
+              "smithing_preview_button@d\u00e9esse_smithingPreview.smithing_armor_preview_button": {
+                "size": [20, 20],
+                "offset": [-2, 0],
+                "anchor_from": "top_left",
+                "anchor_to": "top_right"
+              }
+            }
+          ]
+        }
+      }
+    ]
+  }
+}

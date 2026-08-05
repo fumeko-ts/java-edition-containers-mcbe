@@ -16,7 +16,6 @@
 
 {
   "namespace": "cartography_screen",
-  // this file is pending remake
   "cartography_panel@container_common.container_details": {
     "size": [176, 166],
     "$screen_controls": [
@@ -42,7 +41,7 @@
                       "size": ["default", 10],
                       "layer": 5,
                       "text": "atemp.container.cartography_table",
-                      "color": "$title_text_color"
+                      "color": "$container_title_color"
                     }
                   }
                 ]
@@ -60,9 +59,17 @@
                       "size": [18, 66],
                       "controls": [
                         { "filler_1@global.empty_panel": { "size": ["fill", 1] } },
-                        { "1st_input_slot@jc_container_item.container_item": { "$item_collection": "cartography_input_items" } },
+                        {
+                          "1st_input_slot@jc_container_item.container_item": {
+                            "$item_collection": "cartography_input_items"
+                          }
+                        },
                         { "filler_1@global.empty_panel": { "size": ["fill", 19] } },
-                        { "2nd_input_slot@jc_container_item.container_item": { "$item_collection": "cartography_additional_items" }},
+                        {
+                          "2nd_input_slot@jc_container_item.container_item": {
+                            "$item_collection": "cartography_additional_items"
+                          }
+                        },
                         { "filler_1@global.empty_panel": { "size": ["fill", 10] } }
                       ]
                     }
@@ -142,7 +149,7 @@
                         {
                           "result_item_slot@jc_container_item.container_item": {
                             "$item_collection": "cartography_result_items",
-                            "$button_ref": "button_mappings.cartography_output_slot_button"
+                            "$button_control": "button_mappings.cartography_output_button"
                           }
                         },
                         { "filler_2@global.empty_panel": { "size": ["fill", 23] } }
@@ -154,12 +161,6 @@
               }
             }
           ]
-        }
-      },
-      {
-        "bottom@global.inventory_bottom_half_with_label": {
-          "anchor_to": "bottom_middle",
-          "anchor_from": "bottom_middle"
         }
       },
       {
@@ -186,7 +187,6 @@
             }
           ],
           "bindings": [
-            { "binding_name": "#is_none_mode" },
             {
               "binding_type": "collection",
               "binding_collection_name": "cartography_additional_items",
@@ -200,17 +200,28 @@
               "binding_name_override": "#first_slot"
             },
             {
+              "binding_type": "collection",
+              "binding_collection_name": "cartography_result_items",
+              "binding_name": "#item_id_aux",
+              "binding_name_override": "#result_slot"
+            },
+            {
               "binding_type": "view",
-              "binding_condition": "always",
-              "source_property_name": "((not (#first_slot = -1)) and (not (#second_slot = -1)) and #is_none_mode)",
+              "source_property_name": "((not (#first_slot = -1)) and (not (#second_slot = -1)) and (#result_slot = -1))",
               "target_property_name": "#visible"
             }
           ]
         }
+      },
+      {
+        "bottom@global.inventory_bottom_half_with_label": {
+          "anchor_to": "bottom_middle",
+          "anchor_from": "bottom_middle"
+        }
       }
     ]
   },
-  "map_image@screen_content.image_element": {
+  "map_image@global.empty_image": {
     "texture": "$map_sprite",
     "bindings": [{ "binding_name": "('#is_' + $mode + '_mode')", "binding_name_override": "#visible" }]
   }

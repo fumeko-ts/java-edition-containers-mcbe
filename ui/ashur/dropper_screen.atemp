@@ -51,15 +51,14 @@
                                   "offset": [6, -1],
                                   "size": ["default", 10],
                                   "text": "atemp.container.dropper",
-                                  "color": "$title_text_color"
+                                  "color": "$container_title_color"
                                 }
                               }
                             ]
                           }
                         },
                         {
-                          "dropper_item_input": {
-                            "type": "grid",
+                          "dropper_item_input@global.empty_grid": {
                             "size": [54, 54],
                             "grid_dimensions": [3, 3],
                             "$item_collection": "container_items",
