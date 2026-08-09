@@ -150,7 +150,11 @@
     "variables": [
       {
         "requires": "$is_d\u00e9esse_ui_pack",
-        "$recipe_book_content|default": "d\u00e9esse_brewing.brewing_guide_panel"
+        "$recipe_book_content": "d\u00e9esse_brewing.brewing_guide_panel"
+      },
+      {
+        "requires": "($is_overcomplicated_brewing_guide and $is_brewing_stand_screen)",
+        "$recipe_book_content": "brewing_recipe_book.recipe_book"
       }
     ],
     "$recipe_book_content|default": "jc-extensions.empty_panel",

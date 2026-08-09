@@ -102,7 +102,7 @@
     "cache_screen": true,
     "send_telemetry": true,
     "gamepad_cursor": true,
-    "close_on_player_hurt": "$touch",
+    "close_on_player_hurt": "$touch",                                 
     "controls": [
       {
         "current_screen_wrapper@global.empty_panel": {

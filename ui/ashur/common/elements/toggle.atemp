@@ -184,12 +184,14 @@
     "$checked_control_name|default": "checked",
     "$checked_hover_control_name|default": "checked_hover",
     "$locked_control_name|default": "locked",
+
     "$extra_contents|default": "global.empty_panel",
-    "$unchecked|default": "global.empty_panel",
-    "$unchecked_hover|default": "global.empty_panel",
-    "$checked|default": "global.empty_panel",
-    "$checked_hover|default": "global.empty_panel",
-    "$locked|default": "global.empty_panel",
+    
+    "$unchecked|default": "toggle.default",
+    "$unchecked_hover|default": "toggle.default_hover",
+    "$checked|default": "toggle.checked",
+    "$checked_hover|default": "toggle.checked_hover",
+    "$locked|default": "toggle.locked",
     "$controls|default": [
       { "default@$unchecked": {} },
       { "default_hover@$unchecked_hover": {} },
@@ -233,5 +235,16 @@
       }
     ]
   },
-  "variables": {}
+  "variables": {},
+
+
+  "toggle_button_texture@screen_content.crafter_disabled_slot": {
+    "size": ["100%", "100%"],
+    "nineslice_size": 1
+  },
+  "default@toggle.toggle_button_texture": {} ,
+  "default_hover@toggle.toggle_button_texture": { "color": [0.878, 0.859, 0.859, 0.488] } ,
+  "checked@toggle.toggle_button_texture": { "color": "red" } ,
+  "checked_hover@toggle.toggle_button_texture": { "color": [1.0, 0.447, 0.447, 0.488] } ,
+  "locked@toggle.toggle_button_texture": { "color": "black" }
 }
