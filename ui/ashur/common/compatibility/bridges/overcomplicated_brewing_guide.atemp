@@ -1,0 +1,15 @@
+{
+  "namespace": "overcomplicated_brewing_guide",
+  "brewing_stand_content@global.empty_panel": {
+    "controls": [
+      {
+        "recipe_toggle@compatibility_common.recipe_layout_toggle": {
+          "$recipe_book_open_control_name": "brewing_guide_toggle",
+          "anchor_from": "top_left",
+          "anchor_to": "top_left",
+          "offset": [16, 49]
+        }
+      }
+    ]
+  }
+}

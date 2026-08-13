@@ -19,15 +19,17 @@
   "tab_texture_template@screen_content.image_element": {
     "size": ["default", "default"],
     "anchor_from": "center",
-    "anchor_to": "center", 
+    "anchor_to": "center",
     "offset": "#offset",
     "property_bag": {
       "#tab_texture_offset_0": "$tab_texture_unchecked_offset",
       "#tab_texture_offset_1": "$tab_texture_checked_offset"
     },
     "bindings": "$tab_texture_bindings"
-  },                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                          "toggle_on_hover": {
-  "toggle_on_hover": "$use_experimental_tab_toggle_input"                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 },
+  },
+  "toggle_on_hover": {
+    "toggle_on_hover": "$use_experimental_tab_toggle_input"
+  },
   "tab_toggle@toggle.radio_toggle": {
     "$toggle_variables": "toggle.toggle_on_hover",
     "$is_top_left_tab|default": false,
@@ -52,9 +54,9 @@
     "$icon_checked_offset|default": [0, 0],
     //textures
     "$unchecked_default_image|default": "assets/sprites/container/creative_inventory/tab_top_unselected_2.png",
-    "$unchecked_hover_image|default"  : "assets/sprites/container/creative_inventory/tab_top_unselected_2.png",
-    "$checked_default_image|default"  : "assets/sprites/container/creative_inventory/tab_top_selected_2.png",
-    "$checked_hover_image|default"    : "assets/sprites/container/creative_inventory/tab_top_selected_2.png",
+    "$unchecked_hover_image|default": "assets/sprites/container/creative_inventory/tab_top_unselected_2.png",
+    "$checked_default_image|default": "assets/sprites/container/creative_inventory/tab_top_selected_2.png",
+    "$checked_hover_image|default": "assets/sprites/container/creative_inventory/tab_top_selected_2.png",
     //bindings for tab texture
     "$tab_texture_bindings|default": [
       {
@@ -71,16 +73,26 @@
     ],
     //tab_controls
     "$controls": [
-      {"default@$tab_texture_template_default"             : { "layer": "$default_layer"       , "texture": "$unchecked_default_image" }},
-      {"default_hover@$tab_texture_template_default_hover" : { "layer": "$default_hover_layer" , "texture": "$unchecked_hover_image"   }},
-      {"checked@$tab_texture_template_checked"             : { "layer": "$checked_layer"       , "texture": "$checked_default_image"   }},
-      {"checked_hover@$tab_texture_template_checked_hover" : { "layer": "$checked_hover_layer" , "texture": "$checked_hover_image"     }},
+      { "default@$tab_texture_template_default": { "layer": "$default_layer", "texture": "$unchecked_default_image" } },
+      {
+        "default_hover@$tab_texture_template_default_hover": {
+          "layer": "$default_hover_layer",
+          "texture": "$unchecked_hover_image"
+        }
+      },
+      { "checked@$tab_texture_template_checked": { "layer": "$checked_layer", "texture": "$checked_default_image" } },
+      {
+        "checked_hover@$tab_texture_template_checked_hover": {
+          "layer": "$checked_hover_layer",
+          "texture": "$checked_hover_image"
+        }
+      },
       {
         "$extra_contents@$extra_contents": {
           "offset": "#offset",
           "property_bag": {
-            "#icon_offset_0": "$icon_unchecked_offset", 
-            "#icon_offset_1": "$icon_checked_offset" 
+            "#icon_offset_0": "$icon_unchecked_offset",
+            "#icon_offset_1": "$icon_checked_offset"
           },
           "bindings": [
             {
@@ -129,6 +141,17 @@
       }
     ]
   },
+
+  "toggle_button_texture@screen_content.crafter_disabled_slot": {
+    "size": ["100%", "100%"],
+    "nineslice_size": 1
+  },
+  "default@toggle.toggle_button_texture": {},
+  "default_hover@toggle.toggle_button_texture": { "color": [0.878, 0.859, 0.859, 0.488] },
+  "checked@toggle.toggle_button_texture": { "color": "red" },
+  "checked_hover@toggle.toggle_button_texture": { "color": [1.0, 0.447, 0.447, 0.488] },
+  "locked@toggle.toggle_button_texture": { "color": "black" },
+
   "radio_toggle@global.empty_panel": {
     "size": [18, 18],
     "$toggle_control_name|default": "Toggle",
@@ -151,17 +174,18 @@
       {
         "from_button_id": "button.menu_select",
         "to_button_id": "$pressed_action",
-        "mapping_type": "pressed"
+        "mapping_type": "$mapping_type"
       },
-      { 
-        "from_button_id": "button.menu_ok", 
-        "to_button_id": "$pressed_action", 
-        "mapping_type": "pressed" 
+      {
+        "from_button_id": "button.menu_ok",
+        "to_button_id": "$pressed_action",
+        "mapping_type": "$mapping_type"
       }
     ],
-    "$property_bag|default": { 
-      "#enabled": true, 
-      "#toggle_state": true 
+    "$mapping_type|default": "pressed",
+    "$property_bag|default": {
+      "#enabled": true,
+      "#toggle_state": true
     },
     "$bindings|default": [
       { "binding_type": "collection_details" },
@@ -186,7 +210,7 @@
     "$locked_control_name|default": "locked",
 
     "$extra_contents|default": "global.empty_panel",
-    
+
     "$unchecked|default": "toggle.default",
     "$unchecked_hover|default": "toggle.default_hover",
     "$checked|default": "toggle.checked",
@@ -200,6 +224,7 @@
       { "locked@$locked": {} },
       { "$extra_contents@$extra_contents": {} }
     ],
+    "$toggle_enabled|default": "#enabled",
     "controls": [
       {
         "$toggle_control_name@$toggle_variables": {
@@ -225,7 +250,7 @@
           "controls": "$controls",
           "bindings": "$bindings",
           "button_mappings": "$button_mappings",
-          "enabled": "#enabled",
+          "enabled": "$toggle_enabled",
           "focus_enabled": "$toggle_focus_enabled",
           "reset_on_focus_lost": true,
           "focus_wrap_enabled": false,
@@ -237,14 +262,65 @@
   },
   "variables": {},
 
+  //used to avoid loop crash when a toggle is defined inside a toggle
+  "secondary_radio_toggle@toggle.radio_toggle": {
+    "size": [18, 18],
+    "$secondary_toggle_control_name|default": "Toggle",
+    "$toggle_name|default": "Default_toggle",
 
-  "toggle_button_texture@screen_content.crafter_disabled_slot": {
-    "size": ["100%", "100%"],
-    "nineslice_size": 1
-  },
-  "default@toggle.toggle_button_texture": {} ,
-  "default_hover@toggle.toggle_button_texture": { "color": [0.878, 0.859, 0.859, 0.488] } ,
-  "checked@toggle.toggle_button_texture": { "color": "red" } ,
-  "checked_hover@toggle.toggle_button_texture": { "color": [1.0, 0.447, 0.447, 0.488] } ,
-  "locked@toggle.toggle_button_texture": { "color": "black" }
+    "$secondary_toggle_group_forced_index|default": -1,
+    "$secondary_toggle_binding_value|default": "#toggle_state",
+    "$secondary_button_mappings|default": [
+      {
+        "from_button_id": "button.menu_select",
+        "to_button_id": "$pressed_action",
+        "mapping_type": "pressed"
+      },
+      {
+        "from_button_id": "button.menu_ok",
+        "to_button_id": "$pressed_action",
+        "mapping_type": "pressed"
+      }
+    ],
+    "$secondary_property_bag|default": {
+      "#enabled": true,
+      "#toggle_state": true
+    },
+    "$secondary_bindings|default": [
+      { "binding_type": "collection_details" },
+      {
+        "binding_type": "global",
+        "binding_condition": "$toggle_binding_condition",
+        "binding_name": "$secondary_toggle_binding_value",
+        "binding_name_override": "#toggle_state"
+      }
+    ],
+    "$secondary_controls|default": [],
+    "controls": [
+      {
+        "$secondary_toggle_control_name@$toggle_variables": {
+          "type": "toggle",
+          "size": ["100%", "100%"],
+          "sound_name": "$sound_name",
+          "sound_volume": "$button_volume",
+          "sound_pitch": 1.0,
+          "toggle_name": "$toggle_name",
+          "radio_toggle_group": "$is_radio_toggle",
+          "toggle_group_forced_index": "$secondary_toggle_group_forced_index",
+          "toggle_group_default_selected": "$default_selected_index",
+          "property_bag": "$secondary_property_bag",
+          "controls": "$secondary_controls",
+          "bindings": "$secondary_bindings",
+          "button_mappings": "$secondary_button_mappings",
+          "toggle_default_state": "$is_default_active",
+          "enabled": "#enabled",
+          "focus_enabled": "$toggle_focus_enabled",
+          "reset_on_focus_lost": true,
+          "focus_wrap_enabled": false,
+          "focus_magnet_enabled": false,
+          "default_focus_precedence": 1
+        }
+      }
+    ]
+  }
 }

@@ -33,6 +33,7 @@
     "ui/ashur/common/compatibility/bridges/beveled_buttons_bridge.atemp",
     "ui/ashur/common/compatibility/bridges/deesse_ui_bridge.atemp",
     "ui/ashur/common/compatibility/bridges/jei_layout_bridge.atemp",
+    "ui/ashur/common/compatibility/bridges/overcomplicated_brewing_guide.atemp",
 
     // screens
     "ui/ashur/inventory_screen.atemp",

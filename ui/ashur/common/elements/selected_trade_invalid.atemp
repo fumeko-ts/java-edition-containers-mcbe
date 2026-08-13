@@ -71,12 +71,14 @@
     "$toggle_name": "trade_toggle",
     "$toggle_variables": "selected_trade_invalid.state_variables",
     "$toggle_focus_enabled": false,
-    "$checked": "selected_trade_invalid.arrow_content",
-    "$checked_hover": "selected_trade_invalid.arrow_content",
     "$toggle_binding_value": "#trade_toggle_state",
     "$toggle_enabled_binding_name": "#trade_toggle_enabled",
     "$toggle_binding_condition": "visible",
     "layer": 3,
+    "$controls": [
+      { "checked@selected_trade_invalid.arrow_content": {} },
+      { "checked_hover@selected_trade_invalid.arrow_content": {} }
+    ],
     "$button_mappings": []
   }
 }

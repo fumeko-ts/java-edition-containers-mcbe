@@ -66,6 +66,10 @@
       {
         "requires": "$is_d\u00e9esse_ui_pack",
         "$compatibility_content|default": "deesse_ui_bridge.desse_main_content"
+      },
+      {
+        "requires": "($is_overcomplicated_brewing_guide and $is_brewing_stand_screen)",
+        "$compatibility_content|default": "overcomplicated_brewing_guide.brewing_stand_content"
       }
 /*
       ,
@@ -153,7 +157,7 @@
         "$recipe_book_content": "d\u00e9esse_brewing.brewing_guide_panel"
       },
       {
-        "requires": "($is_overcomplicated_brewing_guide and $is_brewing_stand_screen)",
+        "requires": "$is_overcomplicated_brewing_guide",
         "$recipe_book_content": "brewing_recipe_book.recipe_book"
       }
     ],

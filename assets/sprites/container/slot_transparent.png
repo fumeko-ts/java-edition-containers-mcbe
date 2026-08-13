@@ -134,6 +134,7 @@
       "requires": "$use_experimental_direction_buttons",
       "$toggle_variables": "pagination.additional_toggle_properties"
     },
+    "$controls": [],
     "$button_mappings": [
       {
         "from_button_id": "button.menu_select",

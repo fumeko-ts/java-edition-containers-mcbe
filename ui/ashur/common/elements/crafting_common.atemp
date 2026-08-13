@@ -28,12 +28,14 @@
     "$unchecked_hover": "screen_content.crafting_filter_unchecked_hover",
     "$checked": "screen_content.crafting_filter_checked",
     "$checked_hover": "screen_content.crafting_filter_checked_hover",
+    "$locked": "screen_content.crafting_filter_unchecked",
     "variables": {
       "requires": "$cb_is_thick_menu_buttons",
       "$unchecked": "beveled_buttons_bridge.crafting_filter_unchecked",
       "$unchecked_hover": "beveled_buttons_bridge.crafting_filter_unchecked_hover",
       "$checked": "beveled_buttons_bridge.crafting_filter_checked",
-      "$checked_hover": "beveled_buttons_bridge.crafting_filter_checked_hover"
+      "$checked_hover": "beveled_buttons_bridge.crafting_filter_checked_hover",
+      "$locked": "beveled_buttons_bridge.crafting_filter_unchecked"
     }
   },
   "furnace_filter_toggle@crafting_common.filter_toggle": {
@@ -42,12 +44,14 @@
     "$unchecked_hover": "screen_content.smelting_filter_unchecked_hover",
     "$checked": "screen_content.smelting_filter_checked",
     "$checked_hover": "screen_content.smelting_filter_checked_hover",
+    "$locked": "screen_content.smelting_filter_unchecked",
     "variables": {
       "requires": "$cb_is_thick_menu_buttons",
       "$unchecked": "beveled_buttons_bridge.smelting_filter_unchecked",
       "$unchecked_hover": "beveled_buttons_bridge.smelting_filter_unchecked_hover",
       "$checked": "beveled_buttons_bridge.smelting_filter_checked",
-      "$checked_hover": "beveled_buttons_bridge.smelting_filter_checked_hover"
+      "$checked_hover": "beveled_buttons_bridge.smelting_filter_checked_hover",
+      "$locked": "beveled_buttons_bridge.smelting_filter_unchecked"
     }
   },
   "tab_item_renderer@global.custom_renderer": {
