@@ -123,6 +123,7 @@
   },
 
   "highlight_slot@jc_container_item.highlight_slot": {
+    //the parent with the nearest layer property is the new 0 so if parent has layer of 100 the child would need to use layer -100 to get the base 0
     "layer": -29
   },
 

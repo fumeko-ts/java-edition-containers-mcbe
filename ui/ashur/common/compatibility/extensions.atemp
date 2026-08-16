@@ -64,12 +64,14 @@
     ],
     "variables": [
       {
+        // if the variable "$is_d\u00e9esse_ui_pack" inside ui/_global_variables.json = true
         "requires": "$is_d\u00e9esse_ui_pack",
-        "$compatibility_content|default": "deesse_ui_bridge.desse_main_content"
+        "$compatibility_content": "deesse_ui_bridge.desse_main_content"
       },
       {
+        // if the variable "$is_overcomplicated_brewing_guide" inside ui/_global_variables.json = true and if the current screen is the brewing stand "$is_brewing_stand_screen"
         "requires": "($is_overcomplicated_brewing_guide and $is_brewing_stand_screen)",
-        "$compatibility_content|default": "overcomplicated_brewing_guide.brewing_stand_content"
+        "$compatibility_content": "brewing_recipe_book.layout_toggle"
       }
 /*
       ,
@@ -153,10 +155,12 @@
     "size": ["100%c + 2px", 166],
     "variables": [
       {
+        // if the variable "$is_d\u00e9esse_ui_pack" inside ui/_global_variables.json = true
         "requires": "$is_d\u00e9esse_ui_pack",
         "$recipe_book_content": "d\u00e9esse_brewing.brewing_guide_panel"
       },
       {
+        // if the variable "$is_overcomplicated_brewing_guide" inside ui/_global_variables.json = true
         "requires": "$is_overcomplicated_brewing_guide",
         "$recipe_book_content": "brewing_recipe_book.recipe_book"
       }
@@ -174,6 +178,7 @@
   "out_of_safezone_compatibility@compatibility_variables._client_variables": {
     "variables": [
       {
+        // if the variable "$is_d\u00e9esse_ui_pack" inside ui/_global_variables.json = true and if the current screen is the inventory screen "$is_inventory_screen"
         "requires": "($is_d\u00e9esse_ui_pack and $is_inventory_screen)",
         "$out_of_safezone_content|default": "deesse_ui_bridge.out_of_safezone_durability_viewer"
       }

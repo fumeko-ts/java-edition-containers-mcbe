@@ -126,15 +126,28 @@
     "anchor_from": "right_middle",
     "offset": [-10, 0],
     "layer": 6,
+    "property_bag": {
+      "#enabled_alpha_true": 1,
+      "#enabled_alpha_false": 0.6
+    },
+    "alpha": "#alpha",
     "bindings": [
       { "binding_type": "collection_details" },
       { "binding_name": "#double_slash_visible" },
       { "binding_name": "#single_slash_visible" },
+      { "binding_name": "#trade_toggle_enabled" },
       {
         "binding_type": "view",
         "binding_condition": "always",
         "source_property_name": "(#double_slash_visible or #single_slash_visible)",
         "target_property_name": "#visible"
+      },
+      {
+        "binding_type": "view",
+        "binding_condition": "always",
+        "ignored": "$use_unlocked_villager_trades",
+        "source_property_name": "('#enabled_alpha_' + #trade_toggle_enabled)",
+        "target_property_name": "#alpha"
       }
     ]
   },
@@ -143,6 +156,8 @@
     "anchor_from": "top_left",
     "anchor_to": "top_left",
     "layer": 5,
+    "$enabled_float_1|default": 0.5,
+    "$enabled_float_2|default": 0.28,
     "bindings": [
       { "binding_type": "collection_details" },
       { "binding_name": "#item_id_aux" },
@@ -150,7 +165,16 @@
       { "binding_name": "#item_pickup_time" },
       { "binding_name": "#banner_patterns" },
       { "binding_name": "#banner_colors" },
-      { "binding_name": "#banner_type" }
+      { "binding_name": "#banner_type" },
+      { "binding_name": "#trade_toggle_enabled" },
+      {
+        "binding_type": "view",
+        "binding_condition": "always",
+        "ignored": "$use_unlocked_villager_trades",
+        //outputs 0.78 when the toggle is enabled and 0.50 when its not
+        "source_property_name": "($enabled_float_1 + (#trade_toggle_enabled * $enabled_float_2))",
+        "target_property_name": "#filtered_light_multiplier"
+      }
     ],
     "controls": [
       {
@@ -172,11 +196,17 @@
     "anchor_from": "bottom_right",
     "anchor_to": "bottom_right",
     "offset": [1, 2],
+    "property_bag": {
+      "#enabled_alpha_true": 1,
+      "#enabled_alpha_false": 0.6
+    },
+    "alpha": "#alpha",
     "bindings": [
       { "binding_type": "collection_details" },
       { "binding_name": "$item_count_binding_name" },
       { "binding_name": "#double_slash_visible" },
       { "binding_name": "#single_slash_visible" },
+      { "binding_name": "#trade_toggle_enabled" },
       {
         "binding_type": "view",
         "binding_condition": "always",
@@ -190,6 +220,13 @@
         "ignored": "($item_count_binding_name = '#trade_item_count')",
         "source_property_name": "(#double_slash_visible or #single_slash_visible)",
         "target_property_name": "#visible"
+      },
+      {
+        "binding_type": "view",
+        "binding_condition": "always",
+        "ignored": "$use_unlocked_villager_trades",
+        "source_property_name": "('#enabled_alpha_' + #trade_toggle_enabled)",
+        "target_property_name": "#alpha"
       }
     ]
   },
