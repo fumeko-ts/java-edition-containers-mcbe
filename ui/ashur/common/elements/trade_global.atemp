@@ -145,8 +145,7 @@
       {
         "binding_type": "view",
         "binding_condition": "always",
-        "ignored": "$use_unlocked_villager_trades",
-        "source_property_name": "('#enabled_alpha_' + #trade_toggle_enabled)",
+        "source_property_name": "('#enabled_alpha_' + (#trade_toggle_enabled or $use_unlocked_villager_trades))",
         "target_property_name": "#alpha"
       }
     ]
@@ -156,8 +155,11 @@
     "anchor_from": "top_left",
     "anchor_to": "top_left",
     "layer": 5,
-    "$enabled_float_1|default": 0.5,
-    "$enabled_float_2|default": 0.28,
+    "property_bag": {
+      "#disabled_filter_visible": true,
+      "#enabled_true": 0.9,
+      "#enabled_false": 0.50
+    },
     "bindings": [
       { "binding_type": "collection_details" },
       { "binding_name": "#item_id_aux" },
@@ -170,9 +172,7 @@
       {
         "binding_type": "view",
         "binding_condition": "always",
-        "ignored": "$use_unlocked_villager_trades",
-        //outputs 0.78 when the toggle is enabled and 0.50 when its not
-        "source_property_name": "($enabled_float_1 + (#trade_toggle_enabled * $enabled_float_2))",
+        "source_property_name": "('#enabled_' + (#trade_toggle_enabled or $use_unlocked_villager_trades))",
         "target_property_name": "#filtered_light_multiplier"
       }
     ],
@@ -224,8 +224,7 @@
       {
         "binding_type": "view",
         "binding_condition": "always",
-        "ignored": "$use_unlocked_villager_trades",
-        "source_property_name": "('#enabled_alpha_' + #trade_toggle_enabled)",
+        "source_property_name": "('#enabled_alpha_' + (#trade_toggle_enabled or $use_unlocked_villager_trades))",
         "target_property_name": "#alpha"
       }
     ]
