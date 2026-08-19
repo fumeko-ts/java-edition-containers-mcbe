@@ -1,10 +1,10 @@
 {
   "format_version": 3,
   "header": {
-    "name": "§lJava Containers",
+    "name": "§lJava Containers§r",
     "description": "By @Ashura_temps\n§fDiscord: §bhttps://discord.gg/sFnE7zv75t",
     "uuid": "9537c60a-2d6b-455b-8e49-e0baf87083d2",
-    "version": "3.0.1",
+    "version": "3.0.2",
     "min_engine_version": "1.26.40"
   },
   "modules": [
@@ -12,7 +12,7 @@
       "type": "resources",
       "description": "Created by Ashura_temps",
       "uuid": "7058f009-f95f-4fe3-b8ed-134c6b16ba89",
-      "version": "3.0.1"
+      "version": "3.0.2"
     }
   ],
   "metadata": {
