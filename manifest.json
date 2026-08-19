@@ -4,7 +4,7 @@
     "name": "§lJava Containers §i|§r §8dark§r",
     "description": "By @Ashura_temps\n§fDiscord: §bhttps://discord.gg/sFnE7zv75t",
     "uuid": "b2016389-6b4b-48e9-ac45-c9e877dad72f",
-    "version": "3.0.1",
+    "version": "3.0.2",
     "min_engine_version": "1.26.40"
   },
   "modules": [
@@ -12,7 +12,7 @@
       "type": "resources",
       "description": "Created by Ashura_temps",
       "uuid": "08df99a3-7983-4870-98df-74bfe72e3f19",
-      "version": "3.0.1"
+      "version": "3.0.2"
     }
   ],
   "metadata": {

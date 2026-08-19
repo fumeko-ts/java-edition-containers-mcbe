@@ -4,8 +4,8 @@
   "$_pack_creator": "ashura_temps/ashura_tepes",
   //set UI transparency
   "$container_opacity": 1,
-  "$container_color": [], //hex to rgba converter --> https://fumeko-ts.github.io/fumeko-ts/hex_to_rgba.html
-  "$background_blur_opacity": 1, //the base png is transparent
+  "$container_color": [],//hex to rgba converter --> https://fumeko-ts.github.io/fumeko-ts/hex_to_rgba.html
+  "$background_blur_opacity": 1,//the base png is transparent
 
   "$show_exit_buttons": false,
   //if true makes so pc users dont need to move their mouse to reselect the page button
@@ -16,9 +16,11 @@
   "$use_experimental_tab_toggle_input": false,
   //if true will unlock villager trades
   "$use_unlocked_villager_trades": false,
+  //if true will show villager trades
+  "$use_view_villager_trades": false,
   //if true allows touch input users to use pc tooltip instead of the mobile one
   "$use_pc_hover_text_with_touch_input": false,
-  //title text color
+  //title text color 
   "$container_title_color": [0.89, 0.89, 0.89],
 
   //these item indexes are whats used to render the items in the recipe book tabs
@@ -56,7 +58,7 @@
   "$xp_price_shadow_color_disabled_state": [0.0627, 0.1216, 0.0157, 1],
 
   "$runes_disabled_color": [0.2, 0.1804, 0.1451, 1],
-  "$runes_enabled_color": [0.396, 0.396, 0.290],
+  "$runes_enabled_color": [0.396, 0.396, 0.29],
   "$runes_enabled_hover_color": [0.906, 0.906, 0.533],
 
   //development variables (dont modify)
@@ -64,7 +66,7 @@
   "$cb_is_thick_menu_buttons": false,
   "$is_jei_recipe_book_layout_pack": false,
   "$is_déesse_ui_pack": false,
-  "$ashur:brewing_guide": false, //var for a pack im working on (a full brewing guide thats interactive and performance light)
+  "$is_overcomplicated_brewing_guide": false, 
 
   "$pack_scope": "global",
 

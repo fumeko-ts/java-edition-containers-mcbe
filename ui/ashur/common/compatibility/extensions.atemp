@@ -59,15 +59,25 @@
     "controls": "$compatibility_controls",
     "$compatibility_controls": [
       {
-        "$compatibility_content@$compatibility_content": {}
+        "$compatibility_content@$compatibility_content": {
+          //temporary
+          "$hover_layout_texture|default": "assets/dark/brewing_guide/sprites/recipe_book/button_highlighted",
+          "$default_layout_texture|default": "assets/dark/brewing_guide/sprites/recipe_book/button"
+        }
       }
     ],
     "variables": [
       {
+        // if the variable "$is_d\u00e9esse_ui_pack" inside ui/_global_variables.json = true
         "requires": "$is_d\u00e9esse_ui_pack",
-        "$compatibility_content|default": "deesse_ui_bridge.desse_main_content"
+        "$compatibility_content": "deesse_ui_bridge.desse_main_content"
+      },
+      {
+        // if the variable "$is_overcomplicated_brewing_guide" inside ui/_global_variables.json = true and if the current screen is the brewing stand "$is_brewing_stand_screen"
+        "requires": "($is_overcomplicated_brewing_guide and $is_brewing_stand_screen)",
+        "$compatibility_content": "brewing_recipe_book.layout_toggle"
       }
-/*
+      /*
       ,
      
        // if you want to inject a single element or a tree of elements (like a stack panel)
@@ -149,15 +159,34 @@
     "size": ["100%c + 2px", 166],
     "variables": [
       {
+        // if the variable "$is_d\u00e9esse_ui_pack" inside ui/_global_variables.json = true
         "requires": "$is_d\u00e9esse_ui_pack",
-        "$recipe_book_content|default": "d\u00e9esse_brewing.brewing_guide_panel"
+        "$recipe_book_content": "d\u00e9esse_brewing.brewing_guide_panel"
+      },
+      {
+        // if the variable "$is_overcomplicated_brewing_guide" inside ui/_global_variables.json = true
+        "requires": "$is_overcomplicated_brewing_guide",
+        "$recipe_book_content": "brewing_recipe_book.recipe_book"
       }
     ],
     "$recipe_book_content|default": "jc-extensions.empty_panel",
     "controls": "$brewing_recipe_book_controls",
     "$brewing_recipe_book_controls": [
       {
-        "$recipe_book_content@$recipe_book_content": {}
+        "$recipe_book_content@$recipe_book_content": {
+          //temporaryly added here cause i just updated the guide i goto wait atleast a week to update again
+          "$brewing_recipe_book_texture|default": "assets/dark/brewing_guide/recipe_book",
+          "$brewing_text_field_texture|default": "assets/dark/brewing_guide/sprites/recipe_book/text_field",
+          "$brewing_filter_texture|default": "assets/dark/brewing_guide/sprites/recipe_book/filter_locked",
+          "$brewing_overlay_texture|default": "assets/dark/brewing_guide/sprites/recipe_book/crafting_overlay",
+          "$brewing_slot_texture|default": "assets/dark/brewing_guide/sprites/recipe_book/slot_craftable",
+          "$brewing_secondary_slot_texture|default": "assets/dark/brewing_guide/sprites/recipe_book/slot_craftable",
+          "$brewing_slot_checkmark_texture|default": "assets/dark/brewing_guide/sprites/recipe_book/slot_craftable_secondary_checked",
+          "$unchecked_default_image|default": "assets/dark/brewing_guide/sprites/recipe_book/tab",
+          "$unchecked_hover_image|default": "assets/dark/brewing_guide/sprites/recipe_book/tab",
+          "$checked_default_image|default": "assets/dark/brewing_guide/sprites/recipe_book/tab_selected",
+          "$checked_hover_image|default": "assets/dark/brewing_guide/sprites/recipe_book/tab_selected"
+        }
       }
     ]
   },
@@ -166,6 +195,7 @@
   "out_of_safezone_compatibility@compatibility_variables._client_variables": {
     "variables": [
       {
+        // if the variable "$is_d\u00e9esse_ui_pack" inside ui/_global_variables.json = true and if the current screen is the inventory screen "$is_inventory_screen"
         "requires": "($is_d\u00e9esse_ui_pack and $is_inventory_screen)",
         "$out_of_safezone_content|default": "deesse_ui_bridge.out_of_safezone_durability_viewer"
       }

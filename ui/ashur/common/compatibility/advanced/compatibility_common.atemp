@@ -64,5 +64,53 @@
     "anchor_from": "top_left",
     "anchor_to": "top_left",
     "offset": [16, 49]
+  },
+
+  //render factory
+  // wip to reduce compat lag dont use its unfinished
+  "core_factory": {
+    "type": "collection_panel",
+    "collection_name": "$factory_name",
+    "$screen_0_control": "global.empty_panel",
+    "$screen_1_control": "global.empty_panel",
+    "$screen_2_control": "global.empty_panel",
+    "$screen_3_control": "global.empty_panel",
+    "$screen_4_control": "global.empty_panel",
+    "$screen_5_control": "global.empty_panel",
+    "$screen_6_control": "global.empty_panel",
+    "$screen_7_control": "global.empty_panel",
+    "$screen_8_control": "global.empty_panel",
+    "$screen_9_control": "global.empty_panel",
+    "$screen_10_control": "global.empty_panel",
+    "$screen_11_control": "global.empty_panel",
+    "$screen_12_control": "global.empty_panel",
+    "$screen_13_control": "global.empty_panel",
+    "$screen_14_control": "global.empty_panel",
+    "$screen_15_control": "global.empty_panel",
+    "$screen_16_control": "global.empty_panel",
+    "$screen_17_control": "global.empty_panel",
+    "factory": {
+      "name": "$factory_name",
+      "control_ids": {
+        "screen_0": "$screen_0_control",
+        "screen_1": "$screen_1_control",
+        "screen_2": "$screen_2_control",
+        "screen_3": "$screen_3_control",
+        "screen_4": "$screen_4_control",
+        "screen_5": "$screen_5_control",
+        "screen_6": "$screen_6_control",
+        "screen_7": "$screen_7_control",
+        "screen_8": "$screen_8_control",
+        "screen_9": "$screen_9_control",
+        "screen_10": "$screen_10_control",
+        "screen_11": "$screen_11_control",
+        "screen_12": "$screen_12_control",
+        "screen_13": "$screen_13_control",
+        "screen_14": "$screen_14_control",
+        "screen_15": "$screen_15_control",
+        "screen_16": "$screen_16_control",
+        "screen_17": "$screen_17_control"
+      }
+    }
   }
 }
