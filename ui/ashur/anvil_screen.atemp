@@ -66,6 +66,7 @@
                     "anvil_text_control@text_edit_area.text_edit_box": {
                       "size": [110, 16],
                       "$edit_label_offset": [1, 0],
+                      "$text_edit_label_size": ["default", 10],
                       "$default_control": "global.empty_panel",
                       "$locked_control": "global.empty_panel",
                       "$hover_control": "global.empty_panel",

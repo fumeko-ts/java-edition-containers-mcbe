@@ -32,6 +32,7 @@
     // pack specific compatibility
     "ui/ashur/common/compatibility/bridges/beveled_buttons_bridge.atemp",
     "ui/ashur/common/compatibility/bridges/deesse_ui_bridge.atemp",
+    "ui/ashur/common/compatibility/bridges/container_utilities_bridge.atemp",
     "ui/ashur/common/compatibility/bridges/jei_layout_bridge.atemp",
 
     // screens
@@ -60,6 +61,9 @@
     "ui/ashur/smithing_table_screen.atemp",
     "ui/ashur/smoker_screen.atemp",
     "ui/ashur/stonecutter_screen.atemp",
-    "ui/ashur/trading_screen.atemp"
+    "ui/ashur/trading_screen.atemp",
+
+    //debug/testing
+    "ui/ashur/common/elements/custom_debug_content.atemp"
   ]
 }

@@ -123,6 +123,7 @@
                                               "size": [81, 14],
                                               "$edit_label_offset": [2, 0],
                                               "$place_holder_text_offset": [3, 0],
+                                              "$text_edit_label_size": ["default", 10],
                                               "layer": 4,
                                               "$place_holder_text_color": [0.659, 0.659, 0.659],
                                               "$place_holder_text_shadow_color": [0.165, 0.165, 0.165],

@@ -65,7 +65,7 @@
         "handle_select": false,
         "handle_deselect": true
       },
-      {"to_button_id": "button.text_edit_box_hovered", "mapping_type": "pressed"},
+      { "to_button_id": "button.text_edit_box_hovered", "mapping_type": "pressed" },
       {
         "from_button_id": "button.menu_clear",
         "to_button_id": "button.text_edit_box_clear",
@@ -77,7 +77,7 @@
     "$text_edit_color|default": "white",
     "$text_edit_locked_color|default": "",
     "$text_box_content|default": "#text_box_item_name",
-    "$clipping_panel_size|default": [ "100% - 4px", "100% - 4px" ],
+    "$clipping_panel_size|default": ["100% - 4px", "100% - 4px"],
     "$text_edit_text_control|default": "display_text",
     "$default_control|default": "common.edit_box_indent",
     "$locked_control|default": "common.edit_box_indent",
@@ -85,11 +85,11 @@
     "$pressed_control|default": "common.edit_box_indent_hover",
     "$extra_contents|default": "global.empty_panel",
     "$text_box_name|default": "#text_box_name",
-    "$edit_label_offset|default": [ 0, 0 ],
+    "$edit_label_offset|default": [0, 0],
     "$place_holder_text|default": "",
     "$place_holder_text_color|default": "",
     "$place_holder_text_shadow_color|default": "",
-    "$place_holder_text_offset|default": [ 2, 0 ],
+    "$place_holder_text_offset|default": [2, 0],
     "enabled": "#enabled",
     "bindings": [
       {
@@ -99,6 +99,16 @@
         "binding_name_override": "#enabled"
       }
     ],
+    "$text_box_input_label_bindings|default": [
+      {
+        "binding_type": "global",
+        "binding_condition": "visible",
+        "binding_collection_name": "Minecraft",
+        "binding_name": "$text_box_content",
+        "binding_name_override": "#item_name"
+      }
+    ],
+    "$text_edit_label_size|dafault": ["default", 10],
     "focus_enabled": "$game_pad",
     "focus_wrap_enabled": false,
     "focus_magnet_enabled": false,
@@ -109,7 +119,7 @@
           "size": "$clipping_panel_size",
           "anchor_from": "top_left",
           "anchor_to": "top_left",
-          "offset": [ 2, 2 ],
+          "offset": [2, 2],
           "clips_children": true,
           "controls": [
             {
@@ -120,29 +130,26 @@
                 "color": "$text_edit_color",
                 "locked_color": "$text_edit_locked_color",
                 "localize": false,
-                "property_bag": {"#property_field": "#item_name"},
-                "bindings": [
-                  {
-                    "binding_type": "global",
-                    "binding_condition": "visible",
-                    "binding_collection_name": "Minecraft",
-                    "binding_name": "$text_box_content",
-                    "binding_name_override": "#item_name"
-                  }
-                ]
+                "property_bag": { "#property_field": "#item_name" },
+                "bindings": "$text_box_input_label_bindings"
               }
             },
             {
               "place_holder_text_label@global.empty_label": {
-                "size": [ "100%", "100%" ],
+                "size": ["100%", "100%"],
                 "offset": "$place_holder_text_offset",
                 "controls": [
                   {
-                    "overlay@text_edit_area.label_template": {"layer": 3, "text": "$place_holder_text", "color": "$place_holder_text_color", "localize": true}
+                    "overlay@text_edit_area.label_template": {
+                      "layer": 3,
+                      "text": "$place_holder_text",
+                      "color": "$place_holder_text_color",
+                      "localize": true
+                    }
                   },
                   {
                     "underlay@text_edit_area.label_template": {
-                      "offset": [ 1, 1 ],
+                      "offset": [1, 1],
                       "text": "$place_holder_text",
                       "color": "$place_holder_text_shadow_color",
                       "localize": true
@@ -163,16 +170,16 @@
           ]
         }
       },
-      {"locked@$locked_control": {}},
-      {"default@$default_control": {}},
-      {"hover@$hover_control": {}},
-      {"pressed@$pressed_control": {}},
-      {"$extra_contents@$extra_contents": {}}
+      { "locked@$locked_control": {} },
+      { "default@$default_control": {} },
+      { "hover@$hover_control": {} },
+      { "pressed@$pressed_control": {} },
+      { "$extra_contents@$extra_contents": {} }
     ]
   },
   "label_template": {
     "type": "label",
-    "size": [ "default", 10 ],
+    "size": "$text_edit_label_size",
     "layer": 2,
     "anchor_from": "left_middle",
     "anchor_to": "left_middle",

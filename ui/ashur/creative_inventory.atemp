@@ -132,6 +132,7 @@
                       "size": [90, 12],
                       "anchor_from": "bottom_left",
                       "anchor_to": "bottom_left",
+                      "$text_edit_label_size": ["default", 10],
                       "$clipping_panel_size": ["100% - 4px", "100%"],
                       "$default_control": "global.empty_panel",
                       "$locked_control": "global.empty_panel",

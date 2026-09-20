@@ -4,14 +4,12 @@
   "$_pack_creator": "ashura_temps/ashura_tepes",
   //set UI transparency
   "$container_opacity": 1,
-  "$container_color": [],//hex to rgba converter --> https://fumeko-ts.github.io/fumeko-ts/hex_to_rgba.html
-  "$background_blur_opacity": 1,//the base png is transparent
+  "$container_color": [], //hex to rgba converter --> https://fumeko-ts.github.io/fumeko-ts/hex_to_rgba.html
+  "$background_blur_opacity": 1, //the base png is transparent
 
   "$show_exit_buttons": true,
-  //if true makes so pc users dont need to move their mouse to reselect the page button
-  "$use_experimental_direction_buttons": true,
   //if true allows pc users to trigger the page buttons useing the scroll wheel
-  "$use_experimental_recipe_scroll_input": false,
+  "$use_experimental_recipe_scroll_input": true,
   //if true allows the user to hover over a tab to auto select it
   "$use_experimental_tab_toggle_input": false,
   //if true will unlock villager trades
@@ -20,35 +18,39 @@
   "$use_view_villager_trades": false,
   //if true allows touch input users to use pc tooltip instead of the mobile one
   "$use_pc_hover_text_with_touch_input": false,
-  //title text color 
+  //title text color
   "$container_title_color": [0.247, 0.247, 0.247],
 
-  //these item indexes are whats used to render the items in the recipe book tabs
-  //you can find the index for a item useing this --> https://www.planetminecraft.com/texture-pack/item-id-visualizer-mcbe-mcpe/
-  //item_index = (#item_id_aux / 65536)
+  /*
+    these item indexes are whats used to render the items in the recipe book tabs
+    you can find the index for a item useing this --> https://www.planetminecraft.com/texture-pack/item-id-visualizer-mcbe-mcpe/
+    item_index = (#item_id_aux / 65536)
+  
+    or you can make this var true ($is_java_containers_debug_mode)
+    then open a shulker and place the items in the order the slot_* comment below
+    then copy the text box content and paste it here
+    refers to the slot the items should be in to output id
+  */
+  "$is_java_containers_debug_mode": false,
 
-  //creative inventory tabs
-  "$chest_item_index": 54,
-  "$compass_item_index": 394,
-  "$redstone_item_index": 376,
-  "$iron_sword_item_index": 309,
-  "$purple_froglight_item_index": -469,
-  "$bricks_item_index": 45,
+  /*slot_1*/ "$chest_item_index": 54,
+  /*slot_2*/ "$compass_item_index": 394,
+  /*slot_3*/ "$redstone_item_index": 376,
+  /*slot_4*/ "$iron_sword_item_index": 309,
+  /*slot_5*/ "$purple_froglight_item_index": -469,
+  /*slot_6*/ "$bricks_item_index": 45,
 
-  //crafting recipe book tabs
-  "$apple_item_index": 878,
-  "$bucket_lava_item_index": 366,
-  "$golden_sword_item_index": 325,
-  "$iron_axe_item_index": 300,
+  /*slot_7*/ "$apple_item_index": 882,
+  /*slot_8*/ "$bucket_lava_item_index": 366,
+  /*slot_9*/ "$golden_sword_item_index": 325,
+  /*slot_10*/ "$iron_axe_item_index": 300,
 
-  //furnace recipe book tabs
-  "$raw_porkchop_item_index": 262,
-  "$stone_item_index": 1,
-  "$emerald_item_index": 523,
+  /*slot_11*/ "$raw_porkchop_item_index": 262,
+  /*slot_12*/ "$stone_item_index": 1,
+  /*slot_13*/ "$emerald_item_index": 523,
 
-  //blast furnace recipe book tabs
-  "$golden_leggings_item_index": 356,
-  "$iron_shovel_item_index": 298,
+  /*slot_14*/ "$golden_leggings_item_index": 356,
+  /*slot_15*/ "$iron_shovel_item_index": 298,
 
   //enchanting table text colors
   "$xp_price_color_enabled_state": [0.4941, 0.9882, 0.1255, 1],
@@ -66,7 +68,8 @@
   "$cb_is_thick_menu_buttons": false,
   "$is_jei_recipe_book_layout_pack": false,
   "$is_déesse_ui_pack": false,
-  "$is_overcomplicated_brewing_guide": false, //var for a pack im working on (a full brewing guide thats interactive and performance light)
+  "$is_overcomplicated_brewing_guide": false,
+  "$is_container_utilities": false,
 
   "$pack_scope": "global"
 }

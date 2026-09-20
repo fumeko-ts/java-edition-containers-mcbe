@@ -1,0 +1,127 @@
+{
+  "namespace": "container_utilities_bridge",
+  "utility_content@global.empty_panel": {
+    "$utility_control|default": "container_utilities_bridge.right_container_content",
+    "variables": [
+      {
+        "requires": "$is_chest_screen",
+        "$utility_control": "single_chest_content.container_elements"
+      },
+      {
+        "requires": "$is_large_chest",
+        "$utility_control": "double_chest_content.container_elements"
+      }
+    ],
+    "controls": [
+      {
+        "$utility_control@$utility_control": {
+          "$container_slot_highlight_control|default": "container_utilities_bridge.custom_slot_highlight",
+          "$inventory_slot_highlight_control|default": "container_utilities_bridge.custom_slot_highlight",
+          "$hotbar_slot_highlight_control|default": "container_utilities_bridge.custom_slot_highlight",
+
+          "$hotbar_slot_pressed_control|default": "container_utilities_bridge.custom_item_cell",
+          "$inventory_slot_pressed_control|default": "container_utilities_bridge.custom_item_cell",
+          "$container_slot_pressed_control|default": "container_utilities_bridge.custom_item_cell",
+
+          "$search_field_default_control|default": "screen_content.text_field",
+          "$search_field_hover_control|default": "screen_content.text_field_highlighted",
+
+          "$container_overlay_offset|default": [0, 8],
+          "$inventory_overlay_offset|default": [0, -38],
+          "$hotbar_overlay_offset|default": [0, -16]
+        }
+      }
+    ]
+  },
+  "right_container_content@global.empty_panel": {
+    "controls": [
+      {
+        "primary_elements@toggle_manager.primary_management_toggles": { "$toggle_position": "right" }
+      }
+    ]
+  },
+
+  "input_manager@item_data.item_movement_factory": {
+    "layer": 0,
+    "$hover_control": "jc_container_item.highlight_slot"
+  },
+
+  "custom_item_renderer@jc_container_item.item_renderer": {
+    "property_bag": {
+      "#filtered_light_multiplier": 0.2
+    },
+    "bindings": [
+      {
+        "binding_type": "collection_details",
+        "binding_collection_name": "$item_collection"
+      },
+      {
+        "binding_type": "collection",
+        "binding_collection_name": "$item_collection",
+        "binding_condition": "$item_renderer_binding_condition",
+        "binding_name": "#item_renderer_data"
+      },
+      {
+        "binding_type": "collection",
+        "binding_collection_name": "$item_collection",
+        "binding_condition": "visible",
+        "binding_name": "#group_item_group_name"
+      },
+      {
+        "binding_type": "collection",
+        "binding_collection_name": "$item_collection_name",
+        "binding_name": "#hover_text"
+      },
+      {
+        "binding_type": "view",
+        "source_control_name": "utility_search_box",
+        "source_property_name": "#item_name",
+        "target_property_name": "#item_name"
+      },
+      {
+        "binding_type": "view",
+        "ignored": "((not (($screen_content - 'cartography' - 'crafting' - 'anvil' - 'smoke' - 'furnace') = $screen_content)) or (not (($item_collection_name - 'bundle_items' - 'recipe_book' - 'result' - 'output') = $item_collection_name)))",
+        "source_property_name": "((not (#item_name = '')) and ((#hover_text - #item_name) = #hover_text))",
+        "target_property_name": "#disabled_filter_visible"
+      },
+      {
+        "binding_type": "collection",
+        "binding_collection_name": "$item_collection",
+        "ignored": "($visible_binding_name = '')",
+        "binding_name": "$visible_binding_name",
+        "binding_name_override": "#visible"
+      }
+    ]
+  },
+
+  "custom_item_cell@single_chest_content.default_cell_control": {
+    "texture": "assets/sprites/container/slot"
+  },
+
+  "custom_slot_highlight@global.empty_panel": {
+    "layer": -103,
+    "controls": [
+      {
+        "cell_image@single_chest_content.default_cell_control": {
+          "layer": 3
+        }
+      },
+      {
+        "highlight_slot@global.empty_image": {
+          "texture": "assets/sprites/container/slot_highlight_back",
+          "size": ["100%", "100%"],
+          "nineslice_size": 3,
+          "layer": 4
+        }
+      },
+      {
+        "highlight_slot_overlay@global.empty_image": {
+          "texture": "assets/sprites/container/slot_highlight_front",
+          "size": ["100%", "100%"],
+          "nineslice_size": 3,
+          "layer": 12
+        }
+      }
+    ]
+  }
+}

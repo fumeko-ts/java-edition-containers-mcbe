@@ -322,5 +322,23 @@
         }
       }
     ]
+  },
+  "test_toggle@global.empty_panel": {
+    "size": ["100%c", "100%c"],
+    "controls": [
+      {
+        "test_toggle_controller@toggle.radio_toggle": {
+          "size": [26, 16],
+          "$toggle_name": "tab.toggle_test",
+          "$toggle_group_forced_index": "$toggle_index",
+
+          "$unchecked": "screen_content.crafting_filter_unchecked",
+          "$unchecked_hover": "screen_content.crafting_filter_unchecked_hover",
+          "$checked": "screen_content.crafting_filter_checked",
+          "$checked_hover": "screen_content.crafting_filter_checked_hover",
+          "$locked": "screen_content.crafting_filter_unchecked"
+        }
+      }
+    ]
   }
 }

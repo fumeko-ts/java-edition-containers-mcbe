@@ -6,7 +6,13 @@
     "$custom_slot_content|default": "global.empty_panel",
     "$item_tag_controls|default": [],
     "$item_interact_controls|default": [],
+    "$button_ref|default": "$button_control",
     "variables": [
+      {
+        "requires": "$is_container_utilities",
+        "$item_renderer_control": "container_utilities_bridge.custom_item_renderer",
+        "$button_control_name": "container_utilities_bridge.input_manager"
+      },
       {
         "requires": "$is_déesse_ui_pack",
         "$custom_slot_content|default": "compatibility_container_item.buttons",

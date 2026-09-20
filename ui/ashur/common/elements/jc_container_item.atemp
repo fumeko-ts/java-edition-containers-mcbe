@@ -34,7 +34,8 @@
 
     "$background_control|default": "global.empty_panel",
     "$item_renderer_control|default": "jc_container_item.item_renderer",
-    "$button_control|default": "button_mappings.container_item_button",
+    "$button_control": "button_mappings.container_item_button",
+    "$button_control_name|default": "$button_control",
 
     "$bundle_cycled_item_renderer|default": "jc_container_item.bundle_item_template",
     "$storage_bar_control|default": "jc_container_item.storage_bar",
@@ -46,6 +47,8 @@
 
     "$item_collection|default": "Minecraft",
     "$item_collection_name": "$item_collection",
+
+    "$button_binding|default": "#none",
 
     "$cell_hover_text_bindings|default": [
       {
@@ -59,11 +62,10 @@
         "binding_name_override": "#visible"
       }
     ],
-
     "controls": [
       { "$custom_slot_content@$custom_slot_content": {} },
       { "$background_control@$background_control": {} },
-      { "$button_control@$button_control": {} },
+      { "$button_control_name@$button_control_name": {} },
 
       {
         "$item_renderer_control@$item_renderer_control": {
@@ -80,7 +82,9 @@
           "$renderer_type": "item_renderer_data"
         }
       },
-      { "bundle_open_icon_front@jc_container_item.bundle_item_template": { "layer": 8, "$renderer_type": "open_front" } },
+      {
+        "bundle_open_icon_front@jc_container_item.bundle_item_template": { "layer": 8, "$renderer_type": "open_front" }
+      },
 
       { "$storage_bar_control@$storage_bar_control": {} },
       { "$durability_bar_control@$durability_bar_control": {} }

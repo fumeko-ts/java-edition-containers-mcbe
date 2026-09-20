@@ -202,7 +202,7 @@
       {
         "crafter_item@jc_container_item.container_item": {
           "$background_control": "crafter_screen.disabled_button_overlay",
-          "$button_binding|default": "('#button_visible' + $crafter_button_index)",
+          "$button_binding": "('#button_visible' + $crafter_button_index)",
           "$disabled_button_action|default": "('disabled_button' + $crafter_button_index)",
           "$crafter_button_mappings|default": [
             { 

@@ -130,10 +130,7 @@
     "size": [18, 17],
     "layer": 4,
     "$toggle_binding_value": "('#recipe_toggle_index_binding_' + $current_page)",
-    "variables": {
-      "requires": "$use_experimental_direction_buttons",
-      "$toggle_variables": "pagination.additional_toggle_properties"
-    },
+    "$toggle_variables": "pagination.additional_toggle_properties",
     "$controls": [],
     "$button_mappings": [
       {

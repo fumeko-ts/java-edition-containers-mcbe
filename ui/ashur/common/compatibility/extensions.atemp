@@ -72,9 +72,14 @@
         // if the variable "$is_overcomplicated_brewing_guide" inside ui/_global_variables.json = true and if the current screen is the brewing stand "$is_brewing_stand_screen"
         "requires": "($is_overcomplicated_brewing_guide and $is_brewing_stand_screen)",
         "$compatibility_content": "brewing_recipe_book.layout_toggle"
+      },
+      {
+        // if the variable "$is_container_utilities" inside ui/_global_variables.json = true
+        "requires": "$is_container_utilities",
+        "$compatibility_content": "container_utilities_bridge.utility_content"
       }
 /*
-      ,
+      , 
      
        // if you want to inject a single element or a tree of elements (like a stack panel)
        // use $compatibility_content like this
@@ -180,7 +185,11 @@
       {
         // if the variable "$is_d\u00e9esse_ui_pack" inside ui/_global_variables.json = true and if the current screen is the inventory screen "$is_inventory_screen"
         "requires": "($is_d\u00e9esse_ui_pack and $is_inventory_screen)",
-        "$out_of_safezone_content|default": "deesse_ui_bridge.out_of_safezone_durability_viewer"
+        "$out_of_safezone_content": "deesse_ui_bridge.out_of_safezone_durability_viewer"
+      },
+      {
+        "requires": "($is_shulker_screen and $is_java_containers_debug_mode)",
+        "$out_of_safezone_content": "custom_debug_content.item_id_getter"
       }
     ],
     "$out_of_safezone_content|default": "jc-extensions.empty_panel",
