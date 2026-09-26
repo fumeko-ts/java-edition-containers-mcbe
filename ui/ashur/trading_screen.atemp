@@ -322,9 +322,7 @@
   "trade_toggle@global.empty_panel": {
     "size": [88, 20],
     "controls": [
-      {
-        "trade_toggle_content@trade_global.toggle_contents": {}
-      },
+      { "trade_toggle_content@trade_global.toggle_contents": {} },
       {
         "toggle@toggle.radio_toggle": {
           "size": [88, 20],
@@ -343,10 +341,11 @@
           "variables": [
             {
               "requires": "$cb_is_thick_menu_buttons",
-              "$unchecked": "beveled_buttons_bridge.unchecked_control",
-              "$checked": "beveled_buttons_bridge.checked_control",
-              "$unchecked_hover": "beveled_buttons_bridge.unchecked_hover_control",
-              "$checked_hover": "beveled_buttons_bridge.checked_hover_control"
+              "$unchecked": "beveled_buttons_bridge.trade_unchecked_control",
+              "$checked": "beveled_buttons_bridge.trade_checked_control",
+              "$unchecked_hover": "beveled_buttons_bridge.trade_unchecked_hover_control",
+              "$checked_hover": "beveled_buttons_bridge.trade_checked_hover_control",
+              "$locked": "beveled_buttons_bridge.trade_locked_control"
             },
             {
               "requires": "$use_unlocked_villager_trades",

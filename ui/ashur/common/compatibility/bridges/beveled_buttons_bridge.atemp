@@ -1,81 +1,42 @@
 {
   "namespace": "beveled_buttons_bridge",
-  "enchanting_button@enchant_button.enchant_texture_template": {
-    "texture": "assets/minecraft/textures/gui/sprites/container/enchanting_table/enchantment_slot.png"
-  },
-  "enchanting_button_highlight@enchant_button.enchant_texture_template": {
-    "texture": "assets/minecraft/textures/gui/sprites/container/enchanting_table/enchantment_slot_highlighted.png"
-  },
-  "unchecked_control@screen_content.button_state_common": {
-    "nineslice_size": 3,
-    "$button_sprite": "assets/minecraft/textures/gui/sprites/widget/button.png"
-  },
-  "checked_control@screen_content.button_state_common": {
-    "nineslice_size": 3,
-    "$button_sprite": "assets/minecraft/textures/gui/sprites/widget/button_highlighted.png"
-  },
-  "unchecked_hover_control@screen_content.button_state_common": {
-    "nineslice_size": 3,
-    "$button_sprite": "assets/minecraft/textures/gui/sprites/widget/button_highlighted.png"
-  },
-  "checked_hover_control@screen_content.button_state_common": {
-    "nineslice_size": 3,
-    "$button_sprite": "assets/minecraft/textures/gui/sprites/widget/button_highlighted.png"
-  },
-  "page_left@screen_content.recipe_direction_base": {
-    "texture": "assets/minecraft/textures/gui/sprites/recipe_book/page_backward.png"
-  },
-  "page_left_hover@screen_content.recipe_direction_base": {
-    "texture": "assets/minecraft/textures/gui/sprites/recipe_book/page_backward_highlighted.png"
-  },
-  "page_right@screen_content.recipe_direction_base": {
-    "texture": "assets/minecraft/textures/gui/sprites/recipe_book/page_forward.png"
-  },
-  "page_right_hover@screen_content.recipe_direction_base": {
-    "texture": "assets/minecraft/textures/gui/sprites/recipe_book/page_forward_highlighted.png"
-  },
-  "recipe_toggle@screen_content.image_element": {
-    "size": [20, 18],
-    "texture": "assets/minecraft/textures/gui/sprites/recipe_book/button"
-  },
-  "recipe_hover_toggle@screen_content.image_element": {
-    "size": [20, 18],
-    "texture": "assets/minecraft/textures/gui/sprites/recipe_book/button_highlighted"
-  },
-  "crafting_filter_unchecked@screen_content.filter_texture_template": {
-    "texture": "assets/minecraft/textures/gui/sprites/recipe_book/filter_disabled.png"
-  },
-  "crafting_filter_unchecked_hover@screen_content.filter_texture_template": {
-    "texture": "assets/minecraft/textures/gui/sprites/recipe_book/filter_disabled_highlighted.png"
-  },
-  "crafting_filter_checked@screen_content.filter_texture_template": {
-    "texture": "assets/minecraft/textures/gui/sprites/recipe_book/filter_enabled.png"
-  },
-  "crafting_filter_checked_hover@screen_content.filter_texture_template": {
-    "texture": "assets/minecraft/textures/gui/sprites/recipe_book/filter_enabled_highlighted.png"
-  },
-  "smelting_filter_unchecked@screen_content.filter_texture_template": {
-    "texture": "assets/minecraft/textures/gui/sprites/recipe_book/furnace_filter_disabled"
-  },
-  "smelting_filter_unchecked_hover@screen_content.filter_texture_template": {
-    "texture": "assets/minecraft/textures/gui/sprites/recipe_book/furnace_filter_disabled_highlighted"
-  },
-  "smelting_filter_checked@screen_content.filter_texture_template": {
-    "texture": "assets/minecraft/textures/gui/sprites/recipe_book/furnace_filter_enabled"
-  },
-  "smelting_filter_checked_hover@screen_content.filter_texture_template": {
-    "texture": "assets/minecraft/textures/gui/sprites/recipe_book/furnace_filter_enabled_highlighted"
-  },
-  "toggle_unchecked_visual@beacon_screen.beacon_toggle_texture_template": {
-    "texture": "assets/minecraft/textures/gui/sprites/container/beacon/button.png"
-  },
-  "toggle_hover_visual@beacon_screen.beacon_toggle_texture_template": {
-    "texture": "assets/minecraft/textures/gui/sprites/container/beacon/button_highlighted.png"
-  },
-  "toggle_checked_visual@beacon_screen.beacon_toggle_texture_template": {
-    "texture": "assets/minecraft/textures/gui/sprites/container/beacon/button_selected.png"
-  },
-  "toggle_locked_visual@beacon_screen.beacon_toggle_texture_template": {
-    "texture": "assets/minecraft/textures/gui/sprites/container/beacon/button_disabled.png"
-  }
+  
+  //enchanting table button textures
+  "enchanting_button@enchant_button.enchant_texture_template"              : {"texture": "assets/minecraft/textures/gui/sprites/container/enchanting_table/enchantment_slot"             },
+  "enchanting_button_highlight@enchant_button.enchant_texture_template"    : {"texture": "assets/minecraft/textures/gui/sprites/container/enchanting_table/enchantment_slot_highlighted" },
+
+  //villager trade toggle textures
+  "trade_unchecked_control@screen_content.button_state_common"             : {"nineslice_size": 3,"texture": "assets/minecraft/textures/gui/sprites/widget/button"                       },
+  "trade_checked_control@screen_content.button_state_common"               : {"nineslice_size": 3,"texture": "assets/minecraft/textures/gui/sprites/widget/button_highlighted"           },
+  "trade_unchecked_hover_control@screen_content.button_state_common"       : {"nineslice_size": 3,"texture": "assets/minecraft/textures/gui/sprites/widget/button_highlighted"           },
+  "trade_checked_hover_control@screen_content.button_state_common"         : {"nineslice_size": 3,"texture": "assets/minecraft/textures/gui/sprites/widget/button_highlighted"           },
+  "trade_locked_control@screen_content.button_state_common"                : {"nineslice_size": 3,"texture": "assets/minecraft/textures/gui/sprites/widget/button_disabled"              },
+
+  //next/prev page button textures
+  "page_left@screen_content.recipe_direction_base"                         : {"texture": "assets/minecraft/textures/gui/sprites/recipe_book/page_backward"                               },
+  "page_left_hover@screen_content.recipe_direction_base"                   : {"texture": "assets/minecraft/textures/gui/sprites/recipe_book/page_backward_highlighted"                   },
+  "page_right@screen_content.recipe_direction_base"                        : {"texture": "assets/minecraft/textures/gui/sprites/recipe_book/page_forward"                                },
+  "page_right_hover@screen_content.recipe_direction_base"                  : {"texture": "assets/minecraft/textures/gui/sprites/recipe_book/page_forward_highlighted"                    },
+
+  //layout toggle textures
+  "recipe_layout_toggle_default@screen_content.image_element"              : {"texture": "assets/minecraft/textures/gui/sprites/recipe_book/button"                                      },
+  "recipe_layout_toggle_hover@screen_content.image_element"                : {"texture": "assets/minecraft/textures/gui/sprites/recipe_book/button_highlighted"                          },
+
+  //crafting filter toggle textures
+  "crafting_filter_unchecked@screen_content.filter_texture_template"       : {"texture": "assets/minecraft/textures/gui/sprites/recipe_book/filter_disabled"                             },
+  "crafting_filter_unchecked_hover@screen_content.filter_texture_template" : {"texture": "assets/minecraft/textures/gui/sprites/recipe_book/filter_disabled_highlighted"                 },
+  "crafting_filter_checked@screen_content.filter_texture_template"         : {"texture": "assets/minecraft/textures/gui/sprites/recipe_book/filter_enabled"                              },
+  "crafting_filter_checked_hover@screen_content.filter_texture_template"   : {"texture": "assets/minecraft/textures/gui/sprites/recipe_book/filter_enabled_highlighted"                  },
+
+  //smelting filter toggle textures
+  "smelting_filter_unchecked@screen_content.filter_texture_template"       : {"texture": "assets/minecraft/textures/gui/sprites/recipe_book/furnace_filter_disabled"                     },
+  "smelting_filter_unchecked_hover@screen_content.filter_texture_template" : {"texture": "assets/minecraft/textures/gui/sprites/recipe_book/furnace_filter_disabled_highlighted"         },
+  "smelting_filter_checked@screen_content.filter_texture_template"         : {"texture": "assets/minecraft/textures/gui/sprites/recipe_book/furnace_filter_enabled"                      },
+  "smelting_filter_checked_hover@screen_content.filter_texture_template"   : {"texture": "assets/minecraft/textures/gui/sprites/recipe_book/furnace_filter_enabled_highlighted"          },
+  
+  //beacon toggle textures
+  "beacon_toggle_unchecked_control@beacon_screen.beacon_toggle_texture_template"       : {"texture": "assets/minecraft/textures/gui/sprites/container/beacon/button"                     },
+  "beacon_toggle_unchecked_hover_control@beacon_screen.beacon_toggle_texture_template" : {"texture": "assets/minecraft/textures/gui/sprites/container/beacon/button_highlighted"         },
+  "beacon_toggle_checked_control@beacon_screen.beacon_toggle_texture_template"         : {"texture": "assets/minecraft/textures/gui/sprites/container/beacon/button_selected"            },
+  "beacon_toggle_locked_control@beacon_screen.beacon_toggle_texture_template"          : {"texture": "assets/minecraft/textures/gui/sprites/container/beacon/button_disabled"            }
 }

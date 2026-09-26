@@ -4,7 +4,7 @@
     "name": "§lJava Containers§r",
     "description": "By @Ashura_temps\n§fDiscord: §bhttps://discord.gg/sFnE7zv75t",
     "uuid": "94d7784c-ef5b-48b7-a3de-7385fce38281",
-    "version": "3.1.0",
+    "version": "3.1.3",
     "min_engine_version": "1.26.40"
   },
   "modules": [
@@ -12,7 +12,7 @@
       "type": "resources",
       "description": "Created by Ashura_temps",
       "uuid": "f2b29bda-ffb1-428b-a619-ac0485d18fa7",
-      "version": "3.1.0"
+      "version": "3.1.3"
     }
   ],
   "metadata": {
@@ -27,7 +27,7 @@
   "subpacks": [
     {
       "folder_name": "mode_0",
-      "name": "§bNo Close Buttons§r\n§7The normal pack but without exit buttons§r",
+      "name": "§bNo Close Buttons§r\n§7The pack but without exit buttons§r",
       "memory_performance_tier": 0
     },
     {

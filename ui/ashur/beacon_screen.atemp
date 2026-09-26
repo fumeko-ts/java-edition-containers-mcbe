@@ -335,12 +335,12 @@
           "$locked": "beacon_screen.toggle_locked_visual",
           "$extra_contents": "beacon_screen.toggle_icon",
           "variables": {
-            "requires": "($cb_is_thick_menu_buttons = true)",
-            "$unchecked": "beveled_buttons_bridge.toggle_unchecked_visual",
-            "$unchecked_hover": "beveled_buttons_bridge.toggle_hover_visual",
-            "$checked": "beveled_buttons_bridge.toggle_checked_visual",
-            "$checked_hover": "beveled_buttons_bridge.toggle_checked_visual",
-            "$locked": "beveled_buttons_bridge.toggle_locked_visual"
+            "requires": "$cb_is_thick_menu_buttons",
+            "$unchecked": "beveled_buttons_bridge.beacon_toggle_unchecked_control",
+            "$unchecked_hover": "beveled_buttons_bridge.beacon_toggle_unchecked_hover_control",
+            "$checked": "beveled_buttons_bridge.beacon_toggle_checked_control",
+            "$checked_hover": "beveled_buttons_bridge.beacon_toggle_checked_control",
+            "$locked": "beveled_buttons_bridge.beacon_toggle_locked_control"
           }
         }
       }

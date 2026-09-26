@@ -196,10 +196,10 @@
     "$toggle_name": "layout_toggle",
     "variables": {
       "requires": "$cb_is_thick_menu_buttons",
-      "$unchecked": "beveled_buttons_bridge.recipe_toggle",
-      "$unchecked_hover": "beveled_buttons_bridge.recipe_hover_toggle",
-      "$checked": "beveled_buttons_bridge.recipe_toggle",
-      "$checked_hover": "beveled_buttons_bridge.recipe_hover_toggle"
+      "$unchecked": "beveled_buttons_bridge.recipe_layout_toggle_default",
+      "$unchecked_hover": "beveled_buttons_bridge.recipe_layout_toggle_hover",
+      "$checked": "beveled_buttons_bridge.recipe_layout_toggle_default",
+      "$checked_hover": "beveled_buttons_bridge.recipe_layout_toggle_hover"
     }
   },
   "recipe_layout_toggle@global.empty_panel": {
