@@ -21,7 +21,7 @@
     "controls": [
       { "screen@global.empty_panel": { "size": ["100%", "100%"], "controls": "$screen_controls" } },
       {
-        "item_flying_selected": {
+        "item_floating_selected_element": {
           "type": "button",
           "layer": -10,
           "size": [18, 18],
@@ -29,138 +29,18 @@
           "always_handle_pointer": true,
           "controls": [
             {
-              "item_renderer_top_layer@global.empty_panel": {
+              "item_renderer_top_layer@compatibility_container_item.floating_item_compatibility": {
                 "size": [18, 18],
-                "layer": 40,
+                "layer": 60,
+                "$floating_item_renderer_control|default": "container_common.floating_item_renderer_control",
+                "$floating_stack_count_label_control|default": "container_common.floating_stack_count_label",
+                "$floating_durability_bar_control|default": "container_common.floating_durability_bar",
+                "$floating_storage_bar_control|default": "container_common.floating_storage_bar",
                 "controls": [
-                  {
-                    "inventory_selected_icon@jc_container_item.item_renderer": {
-                      "size": [16, 16],
-                      "layer": 40,
-                      "bindings": [
-                        {
-                          "binding_name": "#inventory_selected_item",
-                          "binding_name_override": "#item_id_aux",
-                          "binding_condition": "always_when_visible"
-                        },
-                        {
-                          "binding_name": "#inventory_selected_item_charged_item",
-                          "binding_name_override": "#charged_item",
-                          "binding_condition": "always_when_visible"
-                        },
-                        {
-                          "binding_name": "#inventory_selected_item_color",
-                          "binding_name_override": "#item_custom_color",
-                          "binding_condition": "always_when_visible"
-                        },
-                        {
-                          "binding_name": "#inventory_selected_armor_trim_material",
-                          "binding_name_override": "#armor_trim_material",
-                          "binding_condition": "always_when_visible"
-                        },
-                        {
-                          "binding_name": "#inventory_selected_banner_patterns",
-                          "binding_name_override": "#banner_patterns",
-                          "binding_condition": "always_when_visible"
-                        },
-                        {
-                          "binding_name": "#shield_base_color_hovered",
-                          "binding_name_override": "#shield_base_color",
-                          "binding_condition": "always_when_visible"
-                        },
-                        {
-                          "binding_name": "#inventory_selected_banner_colors",
-                          "binding_name_override": "#banner_colors",
-                          "binding_condition": "always_when_visible"
-                        },
-                        {
-                          "binding_name": "#inventory_selected_banner_type",
-                          "binding_name_override": "#banner_type",
-                          "binding_condition": "always_when_visible"
-                        },
-                        {
-                          "binding_name": "#inventory_selected_decorated_pot_sherds",
-                          "binding_name_override": "#decorated_pot_sherds",
-                          "binding_condition": "always_when_visible"
-                        }
-                      ]
-                    }
-                  },
-                  {
-                    "stack_text": {
-                      "type": "label",
-                      "layer": 42,
-                      "shadow": true,
-                      "offset": [0, 1],
-                      "anchor_to": "bottom_right",
-                      "anchor_from": "bottom_right",
-                      "text": "#inventory_selected_item_stack_count",
-                      "bindings": [
-                        {
-                          "binding_name": "#inventory_selected_item_stack_count",
-                          "binding_condition": "always_when_visible"
-                        }
-                      ]
-                    }
-                  },
-                  {
-                    "durability_bar_grabbed@global.custom_renderer": {
-                      "$type": "progress_bar_renderer",
-                      "layer": 43,
-                      "offset": [-3, -3],
-                      "anchor_from": "bottom_right",
-                      "anchor_to": "bottom_right",
-                      "size": [12, 1],
-                      "property_bag": { "drop_shadow": true, "is_durability": true, "round_value": true },
-                      "bindings": [
-                        {
-                          "binding_name": "#selected_item_durability_visible",
-                          "binding_name_override": "#touch_progress_bar_visible",
-                          "binding_condition": "always_when_visible"
-                        },
-                        {
-                          "binding_name": "#selected_item_durability_total_amount",
-                          "binding_name_override": "#progress_bar_total_amount",
-                          "binding_condition": "always_when_visible"
-                        },
-                        {
-                          "binding_name": "#selected_item_durability_current_amount",
-                          "binding_name_override": "#progress_bar_current_amount",
-                          "binding_condition": "always_when_visible"
-                        }
-                      ]
-                    }
-                  },
-                  {
-                    "storage_bar_grabbed@global.custom_renderer": {
-                      "$type": "progress_bar_renderer",
-                      "offset": [-3, -3],
-                      "anchor_from": "bottom_right",
-                      "anchor_to": "bottom_right",
-                      "size": [12, 1],
-                      "layer": 44,
-                      "primary_color": [0.4, 0.4, 1.0, 1.0],
-                      "full_storage_color": [1.0, 0.4, 0.4],
-                      "property_bag": { "drop_shadow": true, "is_storage_bar": true },
-                      "bindings": [
-                        {
-                          "binding_name": "#selected_item_storage_visible",
-                          "binding_name_override": "#progress_bar_visible",
-                          "binding_condition": "always_when_visible"
-                        },
-                        {
-                          "binding_name": "#selected_item_storage_total_amount",
-                          "binding_name_override": "#progress_bar_total_amount",
-                          "binding_condition": "always_when_visible"
-                        },
-                        {
-                          "binding_name": "#selected_item_storage_current_amount",
-                          "binding_name_override": "#progress_bar_current_amount",
-                          "binding_condition": "always_when_visible"
-                        }
-                      ]
-                    }
-                  }
+                  { "$floating_item_renderer_control@$floating_item_renderer_control": {} },
+                  { "$floating_stack_count_label_control@$floating_stack_count_label_control": {} },
+                  { "$floating_durability_bar_control@$floating_durability_bar_control": {} },
+                  { "$floating_storage_bar_control@$floating_storage_bar_control": {} }
                 ]
               }
             }
@@ -169,6 +49,71 @@
       }
     ]
   },
+  "floating_storage_bar@container_common.floating_durability_bar": {
+    "$type": "progress_bar_renderer",
+    "offset": [-3, -3],
+    "anchor_from": "bottom_right",
+    "anchor_to": "bottom_right",
+    "size": [12, 1],
+    "layer": 3,
+    "primary_color": [0.4, 0.4, 1.0, 1.0],
+    "full_storage_color": [1.0, 0.4, 0.4],
+    "property_bag": { "drop_shadow": true, "is_storage_bar": true },
+    "bindings": [
+      {"binding_name":"#selected_item_storage_visible"        ,"binding_name_override":"#progress_bar_visible"        ,"binding_condition":"always_when_visible"},
+      {"binding_name":"#selected_item_storage_total_amount"   ,"binding_name_override":"#progress_bar_total_amount"   ,"binding_condition":"always_when_visible"},
+      {"binding_name":"#selected_item_storage_current_amount" ,"binding_name_override":"#progress_bar_current_amount" ,"binding_condition":"always_when_visible"}
+    ]
+  },
+  "floating_durability_bar@global.custom_renderer": {
+    "$type": "progress_bar_renderer",
+    "layer": 2,
+    "offset": [-3, -3],
+    "anchor_from": "bottom_right",
+    "anchor_to": "bottom_right",
+    "size": [12, 1],
+    "property_bag": {
+      "drop_shadow": true,
+      "is_durability": true,
+      "round_value": true
+    },
+    "bindings": [
+      {"binding_name":"#selected_item_durability_visible"        ,"binding_name_override":"#touch_progress_bar_visible"  ,"binding_condition":"always_when_visible"},
+      {"binding_name":"#selected_item_durability_total_amount"   ,"binding_name_override":"#progress_bar_total_amount"   ,"binding_condition":"always_when_visible"},
+      {"binding_name":"#selected_item_durability_current_amount" ,"binding_name_override":"#progress_bar_current_amount" ,"binding_condition":"always_when_visible"}
+    ]
+  },
+  "floating_stack_count_label": {
+    "type": "label",
+    "layer": 1,
+    "shadow": true,
+    "offset": [0, 1],
+    "anchor_to": "bottom_right",
+    "anchor_from": "bottom_right",
+    "text": "#inventory_selected_item_stack_count",
+    "bindings": [
+      {
+        "binding_name": "#inventory_selected_item_stack_count",
+        "binding_condition": "always_when_visible"
+      }
+    ]
+  },
+  "floating_item_renderer_control@jc_container_item.item_renderer": {
+    "size": [16, 16],
+    "layer": 0,
+    "bindings": [
+      {"binding_name":"#inventory_selected_item"                 , "binding_name_override":"#item_id_aux"             ,"binding_condition":"always_when_visible"},
+      {"binding_name":"#inventory_selected_item_charged_item"    , "binding_name_override":"#charged_item"            ,"binding_condition":"always_when_visible"},
+      {"binding_name":"#inventory_selected_item_color"           , "binding_name_override":"#item_custom_color"       ,"binding_condition":"always_when_visible"},
+      {"binding_name":"#inventory_selected_armor_trim_material"  , "binding_name_override":"#armor_trim_material"     ,"binding_condition":"always_when_visible"},
+      {"binding_name":"#inventory_selected_banner_patterns"      , "binding_name_override":"#banner_patterns"         ,"binding_condition":"always_when_visible"},
+      {"binding_name":"#shield_base_color_hovered"               , "binding_name_override":"#shield_base_color"       ,"binding_condition":"always_when_visible"},
+      {"binding_name":"#inventory_selected_banner_colors"        , "binding_name_override":"#banner_colors"           ,"binding_condition":"always_when_visible"},
+      {"binding_name":"#inventory_selected_banner_type"          , "binding_name_override":"#banner_type"             ,"binding_condition":"always_when_visible"},
+      {"binding_name":"#inventory_selected_decorated_pot_sherds" , "binding_name_override":"#decroated_pot_sherds"    ,"binding_condition":"always_when_visible"}
+    ]
+  },
+  //soon this will be configured to be the inventory section for every screen
   "container_bottom_section@global.empty_stack": {
     "orientation": "vertical",
     "size": [162, 83],

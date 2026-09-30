@@ -6,11 +6,11 @@
   "enchanting_button_highlight@enchant_button.enchant_texture_template"    : {"texture": "assets/minecraft/textures/gui/sprites/container/enchanting_table/enchantment_slot_highlighted" },
 
   //villager trade toggle textures
-  "trade_unchecked_control@screen_content.button_state_common"             : {"nineslice_size": 3,"texture": "assets/minecraft/textures/gui/sprites/widget/button"                       },
-  "trade_checked_control@screen_content.button_state_common"               : {"nineslice_size": 3,"texture": "assets/minecraft/textures/gui/sprites/widget/button_highlighted"           },
-  "trade_unchecked_hover_control@screen_content.button_state_common"       : {"nineslice_size": 3,"texture": "assets/minecraft/textures/gui/sprites/widget/button_highlighted"           },
-  "trade_checked_hover_control@screen_content.button_state_common"         : {"nineslice_size": 3,"texture": "assets/minecraft/textures/gui/sprites/widget/button_highlighted"           },
-  "trade_locked_control@screen_content.button_state_common"                : {"nineslice_size": 3,"texture": "assets/minecraft/textures/gui/sprites/widget/button_disabled"              },
+  "trade_unchecked_control@screen_content.button_state_common"             : {"texture": "assets/minecraft/textures/gui/sprites/widget/button"                                           },
+  "trade_checked_control@screen_content.button_state_common"               : {"texture": "assets/minecraft/textures/gui/sprites/widget/button_highlighted"                               },
+  "trade_unchecked_hover_control@screen_content.button_state_common"       : {"texture": "assets/minecraft/textures/gui/sprites/widget/button_highlighted"                               },
+  "trade_checked_hover_control@screen_content.button_state_common"         : {"texture": "assets/minecraft/textures/gui/sprites/widget/button_highlighted"                               },
+  "trade_locked_control@screen_content.button_state_common"                : {"texture": "assets/minecraft/textures/gui/sprites/widget/button_disabled"                                  },
 
   //next/prev page button textures
   "page_left@screen_content.recipe_direction_base"                         : {"texture": "assets/minecraft/textures/gui/sprites/recipe_book/page_backward"                               },

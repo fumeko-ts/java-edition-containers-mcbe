@@ -28,10 +28,6 @@
     "nineslice_size": 1,
     "size": ["100%", "100%"]
   },
-  "button_state_common@screen_content.image_element": {
-    "size": [88, 20],
-    "layer": 4
-  },
   "container_template@screen_content.image_element": {
     "size": "$size",
     "uv_size": "$size",
@@ -440,6 +436,16 @@
   "trade@screen_content.container_template": {
     "$size": [276, 166],
     "texture": "assets/container/villager"
+  },
+
+  //changed to a tiled ver (forgot tiled property existed)
+  "button_state_common@screen_content.image_element": {
+    "size": [88, 20],
+    "tiled": true,
+    //"alpha": 5,
+    "nineslice_size": 3,
+    "tiled_scale": [1, 1],
+    "layer": 4
   },
   "unchecked_control@screen_content.button_state_common": {
     "texture": "assets/sprites/container/villager/button"

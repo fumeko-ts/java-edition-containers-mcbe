@@ -23,6 +23,7 @@
       {
         "binding_name": "$binding_name",
         "binding_name_override": "#visible",
+        "binding_condition": "always",
         "binding_collection_name": "#enchant_buttons",
         "binding_type": "collection"
       }
@@ -87,6 +88,7 @@
             {
               "binding_name": "#selectable_dust_is_visible",
               "binding_name_override": "#visible",
+              "binding_condition": "always",
               "binding_collection_name": "#enchant_buttons",
               "binding_type": "collection"
             }
@@ -110,6 +112,7 @@
             {
               "binding_name": "#unselectable_dust_is_visible",
               "binding_name_override": "#visible",
+              "binding_condition": "always",
               "binding_collection_name": "#enchant_buttons",
               "binding_type": "collection"
             }
@@ -135,6 +138,7 @@
       {
         "binding_name": "$binding_name",
         "binding_name_override": "#visible",
+        "binding_condition": "always",
         "binding_collection_name": "#enchant_buttons",
         "binding_type": "collection"
       }
@@ -190,6 +194,7 @@
                       "bindings": [
                         {
                           "binding_name": "#hover_text",
+                          "binding_condition": "always_when_visible",
                           "binding_collection_name": "#enchant_buttons",
                           "binding_type": "collection"
                         },
@@ -209,6 +214,7 @@
           "bindings": [
             {
               "binding_name": "#hover_text",
+              "binding_condition": "always",
               "binding_collection_name": "#enchant_buttons",
               "binding_type": "collection"
             },
@@ -235,6 +241,7 @@
             {
               "binding_name": "#selectable_dust_is_visible",
               "binding_name_override": "#enabled",
+              "binding_condition": "always",
               "binding_collection_name": "#enchant_buttons",
               "binding_type": "collection"
             }

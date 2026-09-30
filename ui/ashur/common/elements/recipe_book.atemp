@@ -163,6 +163,7 @@
           "bindings": [
             {
               "binding_type": "global",
+              "binding_condition": "always",
               "binding_name": "(not #is_survival_layout)",
               "binding_name_override": "#visible"
             }
@@ -173,6 +174,7 @@
     "bindings": [
       {
         "binding_type": "global",
+        "binding_condition": "always",
         "binding_name": "(not #is_creative_mode)",
         "binding_name_override": "#visible"
       }
