@@ -22,12 +22,16 @@
     "anchor_to": "center",
     "offset": "#offset",
     "property_bag": {
-      "#tab_texture_offset_0": "$tab_texture_unchecked_offset",
-      "#tab_texture_offset_1": "$tab_texture_checked_offset"
+      "#tab_texture_offset_false": "$tab_texture_unchecked_offset",
+      "#tab_texture_offset_true": "$tab_texture_checked_offset"
     },
     "bindings": "$tab_texture_bindings"
   },
   "toggle_on_hover": {
+    "unchecked_control": "default",
+    "unchecked_hover_control": "default_hover",
+    "checked_control": "checked",
+    "checked_hover_control": "checked_hover",
     "toggle_on_hover": "$use_experimental_tab_toggle_input"
   },
   "tab_toggle@toggle.radio_toggle": {
@@ -67,7 +71,7 @@
       },
       {
         "binding_type": "view",
-        "source_property_name": "('#tab_texture_offset_' + (#tab_selected * 1))",
+        "source_property_name": "('#tab_texture_offset_' + #tab_selected)",
         "target_property_name": "#offset"
       }
     ],
@@ -91,8 +95,8 @@
         "$extra_contents@$extra_contents": {
           "offset": "#offset",
           "property_bag": {
-            "#icon_offset_0": "$icon_unchecked_offset",
-            "#icon_offset_1": "$icon_checked_offset"
+            "#icon_offset_false": "$icon_unchecked_offset",
+            "#icon_offset_true": "$icon_checked_offset"
           },
           "bindings": [
             {
@@ -103,7 +107,7 @@
             },
             {
               "binding_type": "view",
-              "source_property_name": "('#icon_offset_' + (#tab_selected * 1))",
+              "source_property_name": "('#icon_offset_' + #tab_selected)",
               "target_property_name": "#offset"
             }
           ]
@@ -168,9 +172,14 @@
     "$toggle_binding_value|default": "#toggle_state",
     "$toggle_binding_condition|default": "always",
     "$pressed_action|default": "button.menu_ok",
-    "$hover_action|default": "button.filter_toggle_hovered",
+    "$hover_action|default": "",
     "$button_mappings|default": [
       { "ignored": "($hover_action = '')", "to_button_id": "$hover_action", "mapping_type": "pressed" },
+      {
+        "from_button_id": "button.menu_secondary_select",
+        "to_button_id": "$pressed_action",
+        "mapping_type": "$mapping_type"
+      },
       {
         "from_button_id": "button.menu_select",
         "to_button_id": "$pressed_action",
@@ -203,11 +212,6 @@
         "binding_name_override": "#enabled"
       }
     ],
-    "$unchecked_control_name|default": "default",
-    "$unchecked_hover_control_name|default": "default_hover",
-    "$checked_control_name|default": "checked",
-    "$checked_hover_control_name|default": "checked_hover",
-    "$locked_control_name|default": "locked",
 
     "$extra_contents|default": "global.empty_panel",
 
@@ -234,14 +238,7 @@
           "sound_volume": "$button_volume",
           "sound_pitch": 1.0,
           "toggle_name": "$toggle_name",
-          "unchecked_control": "$unchecked_control_name",
-          "unchecked_hover_control": "$unchecked_hover_control_name",
-          "checked_control": "$checked_control_name",
-          "checked_hover_control": "$checked_hover_control_name",
-          "checked_locked_control": "locked",
-          "checked_locked_hover_control": "locked",
-          "unchecked_locked_control": "locked",
-          "unchecked_locked_hover_control": "locked",
+
           "radio_toggle_group": "$is_radio_toggle",
           "toggle_group_forced_index": "$toggle_group_forced_index",
           "toggle_group_default_selected": "$default_selected_index",
@@ -260,7 +257,16 @@
       }
     ]
   },
-  "variables": {},
+  "variables": {
+    "unchecked_control": "default",
+    "unchecked_hover_control": "default_hover",
+    "checked_control": "checked",
+    "checked_hover_control": "checked_hover",
+    "checked_locked_control": "locked",
+    "checked_locked_hover_control": "locked",
+    "unchecked_locked_control": "locked",
+    "unchecked_locked_hover_control": "locked"
+  },
 
   //used to avoid loop crash when a toggle is defined inside a toggle
   "secondary_radio_toggle@toggle.radio_toggle": {

@@ -1,4 +1,5 @@
 {
+  // -->  https://www.curseforge.com/minecraft-bedrock/texture-packs/container-utilities
   "namespace": "container_utilities_bridge",
   "utility_content@global.empty_panel": {
     "$utility_control|default": "container_utilities_bridge.right_container_content",

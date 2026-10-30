@@ -34,6 +34,8 @@
     "ui/ashur/common/compatibility/bridges/deesse_ui_bridge.atemp",
     "ui/ashur/common/compatibility/bridges/container_utilities_bridge.atemp",
     "ui/ashur/common/compatibility/bridges/jei_layout_bridge.atemp",
+    //wip (commented out at the moment because it's being weird)
+    //"ui/ashur/common/compatibility/bridges/advanced_container_bridge.atemp",
 
     // screens
     "ui/ashur/inventory_screen.atemp",
@@ -61,9 +63,6 @@
     "ui/ashur/smithing_table_screen.atemp",
     "ui/ashur/smoker_screen.atemp",
     "ui/ashur/stonecutter_screen.atemp",
-    "ui/ashur/trading_screen.atemp",
-
-    //debug/testing
-    "ui/ashur/common/elements/custom_debug_content.atemp"
+    "ui/ashur/trading_screen.atemp"
   ]
 }

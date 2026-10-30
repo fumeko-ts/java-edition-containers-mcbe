@@ -38,3 +38,11 @@ ashur.tab.nature=Природа
 ashur.tab.equipment=Спорядження
 ashur.tab.construction=Будівництво
 ashur.tab.search=Пошук
+
+atemp.recipebook.next_page=Наступна сторінка
+atemp.recipebook.previous_page=Попередня сторінка
+atemp.recipebook.toggleRecipes.all=Усі
+atemp.recipebook.toggleRecipes.blastable=Доступні для перетоплення
+atemp.recipebook.toggleRecipes.craftable=Доступні для майстрування
+atemp.recipebook.toggleRecipes.smeltable=Доступні для витоплення
+atemp.recipebook.toggleRecipes.smokable=Доступні для копчення

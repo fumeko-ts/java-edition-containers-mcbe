@@ -17,21 +17,15 @@
 {
   "namespace": "crafting_screen",
   "screen_base@container_common.container_details": {
-    "min_size": [176, 166],
-    "max_size": [359, 166],
     "$screen_controls": [
       {
-        "base_horizontal_Stack@global.empty_stack": {
+        "crafting_screen_stack@global.empty_stack": {
           "orientation": "horizontal",
-          "anchor_to": "center",
-          "anchor_from": "center",
-          "min_size": [176, 166],
-          "max_size": [359, 166],
-          "layer": 1,
+          "size": ["100%c", 166],
           "controls": [
-            { "recipe_book@recipe_book.recipe_book": {} },
+            { "recipe_book_section@recipe_book.recipe_book": {} },
             {
-              "inventory@global.root_panel": {
+              "container_section@global.root_panel": {
                 "size": [176, 166],
                 "controls": [
                   { "container@screen_content.crafting": {} },
@@ -56,8 +50,9 @@
                                         "anchor_from": "left_middle",
                                         "anchor_to": "left_middle",
                                         "offset": [29, 2],
-                                        "layer": 2,
                                         "size": ["default", 10],
+                                        "localize": true,
+                                        "layer": 3,
                                         "color": "$container_title_color",
                                         "text": "atemp.container.crafting"
                                       }
@@ -112,21 +107,14 @@
                                         "controls": [
                                           { "output_top_spacing@global.empty_panel": { "size": ["fill", 14] } },
                                           {
-                                            "crafting_output_holder@global.empty_panel": {
+                                            "crafting_output_holder@crafting_textures.main_cell_panel": {
                                               "size": [26, 26],
-                                              "controls": [
-                                                {
-                                                  "underlay@crafting_textures.main_cell_panel": {
-                                                    "$item_collection|default": "crafting_output_items"
-                                                  }
-                                                },
+                                              "$item_collection": "crafting_output_items",
+                                              "$crafting_cell_controls": [
                                                 {
                                                   "crafting_output_slot@jc_container_item.container_item": {
                                                     "$button_control": "button_mappings.crafting_output_button",
-                                                    "$item_renderer_binding_condition": "always",
-                                                    "$item_collection": "crafting_output_items",
-                                                    "anchor_from": "center",
-                                                    "anchor_to": "center"
+                                                    "$item_renderer_binding_condition": "always"
                                                   }
                                                 }
                                               ]
@@ -146,7 +134,12 @@
                       ]
                     }
                   },
-                  { "bottom@global.inventory_bottom_half_with_label": {} }
+                  {
+                    "inventory_section@container_common.inventory_section_with_label": {
+                      //id really prefer not to do this but im doing it anyways because i cant think of a diffrent way at the moment
+                      "$inventory_label_control_offset": [1, -1]
+                    }
+                  }
                 ]
               }
             }

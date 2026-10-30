@@ -32,6 +32,7 @@
           "size": [122, 17],
           "clip_direction": "left",
           "clip_pixelperfect": false,
+          "color": "$stack_splitting_overlay_color",
           "bindings": [
             {
               "binding_name": "#progressive_select_bar_ratio",

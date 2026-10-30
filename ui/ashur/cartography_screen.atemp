@@ -39,7 +39,7 @@
                       "anchor_to": "left_middle",
                       "anchor_from": "left_middle",
                       "size": ["default", 10],
-                      "layer": 5,
+                      "localize": true,
                       "text": "atemp.container.cartography_table",
                       "color": "$container_title_color"
                     }
@@ -213,12 +213,7 @@
           ]
         }
       },
-      {
-        "bottom@global.inventory_bottom_half_with_label": {
-          "anchor_to": "bottom_middle",
-          "anchor_from": "bottom_middle"
-        }
-      }
+      { "inventory_section@container_common.inventory_section_with_label": {} }
     ]
   },
   "map_image@global.empty_image": {

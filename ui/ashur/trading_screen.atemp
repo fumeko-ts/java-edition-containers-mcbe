@@ -154,7 +154,7 @@
                 "layer": 14,
                 "anchor_to": "top_middle",
                 "anchor_from": "top_middle",
-                "offset": [0, 5]
+                "offset": [3, 5]
               }
             }
           ]
@@ -219,6 +219,12 @@
                       ]
                     }
                   }
+                ],
+                "bindings": [
+                  {
+                    "binding_name": "#exp_bar_visible",
+                    "binding_name_override": "#visible"
+                  }
                 ]
               }
             }
@@ -243,7 +249,7 @@
         }
       },
       {
-        "bottom@global.inventory_bottom_half_with_label": {
+        "inventory_section@container_common.inventory_section_with_label": {
           "offset": [-7, 0],
           "anchor_to": "bottom_right",
           "anchor_from": "bottom_right"
@@ -260,15 +266,30 @@
   },
   "progress_bar_template@global.empty_image": { "size": [101, 5], "clip_direction": "left", "clip_pixelperfect": true },
   "trade_scroller@screen_content.image_element": {
-    "nineslice_size": [3, 6, 3, 7],
+    "nineslice_size": 1,
     "anchor_to": "center",
     "anchor_from": "center",
     "allow_clipping": false,
-    "tiled": true,
-    "tiled_scale": [1, 1],
     "size": [6, "100%"],
     "layer": 5,
-    "texture": "assets/sprites/container/villager/scroller"
+    "texture": "assets/sprites/container/villager/scroller",
+    "controls": [
+      {
+        "scroller_ridges@screen_content.image_element": {
+          "tiled": true,
+          "tiled_scale": [1, 1],
+          "ignored": "(not $should_tile_scroll_boxes)",
+          "layer": 1,
+          "nineslice_size": [0, 0, 0, 1],
+          "uv": [1, 1],
+          "uv_size": [4, 3],
+          "anchor_to": "center",
+          "anchor_from": "center",
+          "texture": "assets/sprites/container/villager/scroller",
+          "size": ["100% - 2px", "100% - 2px"]
+        }
+      }
+    ]
   },
   "trade_tier_stack_holder@global.empty_stack": {
     "orientation": "vertical",
@@ -374,7 +395,10 @@
               "mapping_type": "focused",
               "ignored": "(not $is_ps4)"
             },
-            { "to_button_id": "button.trade_toggle_hovered", "mapping_type": "pressed" }
+            {
+              "to_button_id": "button.trade_toggle_hovered",
+              "mapping_type": "pressed"
+            }
           ]
         }
       }

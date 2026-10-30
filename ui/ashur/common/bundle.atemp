@@ -93,6 +93,7 @@
                             "text": "#selected_bundle_item_text",
                             "size": ["default", "default"],
                             "shadow": true,
+                            "enable_profanity_filter": true,
                             "bindings": [
                               {
                                 "binding_name": "#selected_bundle_item_text",
@@ -179,6 +180,7 @@
                     "bundle_title_label@bundle.bundle_label_template": {
                       "text": "#bundle_name",
                       "localize": false,
+                      "enable_profanity_filter": true,
                       "bindings": [
                         {
                           "binding_name": "#bundle_name",

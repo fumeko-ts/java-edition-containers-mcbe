@@ -19,7 +19,7 @@
   "text_edit_box": {
     "type": "edit_box",
     "text_box_name": "$text_box_name",
-    "max_length": 30,
+    "max_length": 50,
     "text_type": "ExtendedASCII",
     "text_control": "$text_edit_text_control",
     "place_holder_control": "place_holder_text_label",
@@ -108,7 +108,7 @@
         "binding_name_override": "#item_name"
       }
     ],
-    "$text_edit_label_size|dafault": ["default", 10],
+    "$text_edit_label_size|default": ["default", 10],
     "focus_enabled": "$game_pad",
     "focus_wrap_enabled": false,
     "focus_magnet_enabled": false,

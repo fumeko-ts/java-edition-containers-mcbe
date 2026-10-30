@@ -1,4 +1,5 @@
 {
+  // -->  https://www.curseforge.com/minecraft-bedrock/texture-packs/jei-recipe-book-layout
   "namespace": "jei_layout_bridge",
   "jei_inventory_layout@d\u00e9esse_JEIlayout.inventory_jei_layout": {
     "controls": [

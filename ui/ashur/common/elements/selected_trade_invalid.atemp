@@ -64,7 +64,9 @@
     "consume_hover_events": false,
     "focus_enabled": false,
     "focus_magnet_enabled": false,
-    "prevent_touch_input": true
+    "prevent_touch_input": true,
+    "checked_control": "checked",
+    "checked_hover_control": "checked_hover"
   },
   "arrow_base_visuals@toggle.radio_toggle": {
     "size": [28, 21],

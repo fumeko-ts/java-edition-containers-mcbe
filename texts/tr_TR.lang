@@ -38,3 +38,11 @@ ashur.tab.nature=Doğa
 ashur.tab.equipment=Ekipman
 ashur.tab.construction=İnşaat
 ashur.tab.search=Ara
+
+atemp.recipebook.next_page=Sonraki Sayfa
+atemp.recipebook.previous_page=Önceki Sayfa
+atemp.recipebook.toggleRecipes.all=Tamamı Gösteriliyor
+atemp.recipebook.toggleRecipes.blastable=Eritilebilen Madenler Gösteriliyor
+atemp.recipebook.toggleRecipes.craftable=Üretilebilenler Gösteriliyor
+atemp.recipebook.toggleRecipes.smeltable=Eritilebilenler Gösteriliyor
+atemp.recipebook.toggleRecipes.smokable=Pişirilebilen Etler Gösteriliyor

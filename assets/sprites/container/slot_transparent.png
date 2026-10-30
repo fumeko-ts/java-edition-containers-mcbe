@@ -29,7 +29,7 @@
           "controls": [
             {
               "right_button_holder@global.empty_panel": {
-                "size": [54, 29],
+                "size": [53, 29],
                 "anchor_from": "bottom_right",
                 "anchor_to": "bottom_right",
                 "controls": [
@@ -57,7 +57,7 @@
             },
             {
               "left_button_holder@global.empty_panel": {
-                "size": [54, 29],
+                "size": [51, 29],
                 "anchor_from": "bottom_left",
                 "anchor_to": "bottom_left",
                 "controls": [
@@ -78,6 +78,7 @@
           "bindings": [
             {
               "binding_type": "view",
+              "ignored": "($current_page = 27)",
               "source_control_name": "('page' + ($current_page + 1))",
               "source_property_name": "(not #toggle_state)",
               "target_property_name": "#visible"
@@ -86,12 +87,13 @@
         }
       },
       {
-        "numbers@$page_counter": {}
+        "$page_counter@$page_counter": {}
       }
     ],
     "bindings": [
       {
         "binding_type": "view",
+        "ignored": "($current_page = 1)",
         "source_control_name": "('page' + $current_page)",
         "source_property_name": "#toggle_state",
         "target_property_name": "#visible"
@@ -189,26 +191,19 @@
     "consume_hover_events": false
   },
   "left_button_holder@global.empty_panel": {
-    "size": [54, 29],
+    "size": [51, 29],
     "anchor_from": "bottom_left",
     "anchor_to": "bottom_left",
     "controls": [
+      {"left@recipe_book.button_visuals": {}}
+    ],
+    "bindings": [
       {
-        "left@recipe_book.button_visuals": {
-          "anchor_from": "top_right",
-          "anchor_to": "top_right",
-          "$default_pagination|default": "($namespace + '.page_left')",
-          "$hover_pagination|default": "($namespace + '.page_left_hover')",
-          "bindings": [
-            {
-              "binding_type": "view",
-              "binding_condition": "always",
-              "source_control_name": "recipe_book_grid",
-              "source_property_name": "(not (#raw_current_page = 0))",
-              "target_property_name": "#visible"
-            }
-          ]
-        }
+        "binding_type": "view",
+        "binding_condition": "always",
+        "source_control_name": "recipe_book_grid",
+        "source_property_name": "(not (#raw_current_page = 1))",
+        "target_property_name": "#visible"
       }
     ]
   },
@@ -224,7 +219,7 @@
               "binding_type": "view",
               "binding_condition": "always",
               "source_control_name": "recipe_book_grid",
-              "source_property_name": "('\u00a7r' + (1 + #raw_current_page) + '/' + #maximum_recipe_pages)",
+              "source_property_name": "('\u00a7r' + #raw_current_page + '/' + #maximum_recipe_pages)",
               "target_property_name": "#text"
             },
             {
@@ -244,7 +239,7 @@
               "binding_type": "view",
               "binding_condition": "always",
               "source_control_name": "recipe_book_grid",
-              "source_property_name": "('\u00a7r' + (1 + #raw_current_page) + '/27')",
+              "source_property_name": "('\u00a7r' + #raw_current_page + '/27')",
               "target_property_name": "#text"
             },
             {
@@ -260,7 +255,7 @@
     ]
   },
   "right_button_holder@global.empty_panel": {
-    "size": [54, 29],
+    "size": [53, 29],
     "anchor_from": "bottom_right",
     "anchor_to": "bottom_right",
     "controls": [
@@ -268,19 +263,21 @@
         "right@recipe_book.button_visuals": {
           "anchor_from": "top_left",
           "anchor_to": "top_left",
+          "$recipe_page_button_translation_key": "atemp.recipebook.next_page",
           "$anchor_point": "left_middle",
-          "$default_pagination|default": "($namespace + '.page_right')",
-          "$hover_pagination|default": "($namespace + '.page_right_hover')",
-          "bindings": [
-            {
-              "binding_type": "view",
-              "binding_condition": "always",
-              "source_control_name": "recipe_book_grid",
-              "source_property_name": "(((1 + #raw_current_page) < #maximum_recipe_pages) and ((1 + #raw_current_page) < 27))",
-              "target_property_name": "#visible"
-            }
-          ]
+          "$default_page_button_control": "($namespace + '.page_right')",
+          "$hover_page_button_control": "($namespace + '.page_right_hover')",
+          "$pressed_page_button_control": "($namespace + '.page_right_hover')"
         }
+      }
+    ],
+    "bindings": [
+      {
+        "binding_type": "view",
+        "binding_condition": "always",
+        "source_control_name": "recipe_book_grid",
+        "source_property_name": "((#raw_current_page < #maximum_recipe_pages) and (#raw_current_page < 27))",
+        "target_property_name": "#visible"
       }
     ]
   }

@@ -148,7 +148,7 @@
     "size": [69, 15],
     "anchor_from": "top_left",
     "anchor_to": "top_left",
-    "offset": [20, 2],
+    "offset": [20, 1],
     "clips_children": true,
     "controls": [
       {
@@ -165,16 +165,16 @@
       }
     ]
   },
-  "button@global.empty_panel": {
+  "enchantment_button@global.empty_panel": {
     "size": [108, 19],
     "layer": 3,
     "controls": [
       {
-        "hover_text": {
+        "hover_text_button": {
           "type": "button",
           "layer": 500,
           "size": [108, 19],
-          "hover_control": "hover",
+          "hover_control": "hover_text_renderer",
           "focus_enabled": "$game_pad",
           "focus_wrap_enabled": false,
           "focus_magnet_enabled": false,
@@ -185,27 +185,21 @@
           ],
           "controls": [
             {
-              "hover@global.empty_panel": {
-                "size": [108, 19],
-                "controls": [
+              "hover_text_renderer@global.hover_text": {
+                "offset": [-10, 10],
+                "bindings": [
                   {
-                    "hover_text@global.hover_text": {
-                      "offset": [-10, 10],
-                      "bindings": [
-                        {
-                          "binding_name": "#hover_text",
-                          "binding_condition": "always_when_visible",
-                          "binding_collection_name": "#enchant_buttons",
-                          "binding_type": "collection"
-                        },
-                        {
-                          "binding_type": "view",
-                          "binding_condition": "always_when_visible",
-                          "source_property_name": "('\u00a77' + (#hover_text - '\u00a7f' - '\u00a7o'))",
-                          "target_property_name": "#hover_text"
-                        }
-                      ]
-                    }
+                    "binding_type": "collection",
+                    "binding_collection_name": "#enchant_buttons",
+                    "binding_condition": "always",
+                    "binding_name": "#hover_text",
+                    "binding_name_override": "#enchantment_hover_text"
+                  },
+                  {
+                    "binding_type": "view",
+                    "binding_condition": "always_when_visible",
+                    "source_property_name": "('\u00a77' + (#enchantment_hover_text - '\u00a7f' - '\u00a7o'))",
+                    "target_property_name": "#hover_text"
                   }
                 ]
               }
@@ -213,14 +207,10 @@
           ],
           "bindings": [
             {
-              "binding_name": "#hover_text",
-              "binding_condition": "always",
-              "binding_collection_name": "#enchant_buttons",
-              "binding_type": "collection"
-            },
-            {
               "binding_type": "view",
-              "source_property_name": "(not (#hover_text = ''))",
+              "resolve_sibling_scope": true,
+              "source_control_name": "hover_text_renderer",
+              "source_property_name": "(not (#enchantment_hover_text = ''))",
               "target_property_name": "#visible"
             }
           ]

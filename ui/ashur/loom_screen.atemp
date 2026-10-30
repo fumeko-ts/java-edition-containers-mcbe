@@ -130,7 +130,7 @@
                 "anchor_to": "bottom_left",
                 "anchor_from": "bottom_left",
                 "size": ["default", 10],
-                "layer": 5,
+                "localize": true,
                 "text": "atemp.container.loom",
                 "color": "$container_title_color"
               }
@@ -254,12 +254,7 @@
           ]
         }
       },
-      {
-        "bottom@global.inventory_bottom_half_with_label": {
-          "anchor_to": "bottom_middle",
-          "anchor_from": "bottom_middle"
-        }
-      }
+      { "inventory_section@container_common.inventory_section_with_label": {} }
     ]
   },
   "item_empty_image@screen_content.image_element": {
@@ -277,13 +272,29 @@
     ]
   },
   "scroller@screen_content.image_element": {
-    "tiled": true,
-    "nineslice_size": [6, 7, 6, 6],
-    "tiled_scale": [1, 1],
+    "nineslice_size": 1,
     "offset": [0, 0.8],
     "texture": "assets/sprites/container/loom/scroller",
-    "size": [12, "100%"]
+    "size": [12, "100%"],
+    "controls": [
+      {
+        "scroller_ridges@screen_content.image_element": {
+          "tiled": true,
+          "tiled_scale": [1, 1],
+          "ignored": "(not $should_tile_scroll_boxes)",
+          "layer": 1,
+          "nineslice_size": [0, 0, 0, 1],
+          "uv": [1, 1],
+          "uv_size": [10, 3],
+          "anchor_to": "center",
+          "anchor_from": "center",
+          "texture": "assets/sprites/container/loom/scroller",
+          "size": ["100% - 2px", "100% - 2px"]
+        }
+      }
+    ]
   },
+
   "loom_selection_grid@global.empty_grid": {
     "size": [56, "default"],
     "$item_collection": "patterns",

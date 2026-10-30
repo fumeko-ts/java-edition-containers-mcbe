@@ -44,6 +44,7 @@
                             "anchor_to": "top_left",
                             "anchor_from": "top_left",
                             "size": ["default", 10],
+                            "localize": true,
                             "offset": [0, -1],
                             "layer": 5,
                             "text": "atemp.container.repair",
@@ -177,42 +178,46 @@
           "anchor_from": "top_left",
           "controls": [
             {
-              "status@global.empty_panel": {
-                "size": ["100%c", "100%c"],
+              "anvil_status_label@screen_content.image_element": {
+                "texture": "textures/ui/Gray",
+                "size": ["100%c + 6px", "100%c + 4px"],
                 "anchor_to": "bottom_right",
                 "anchor_from": "bottom_right",
+                "alpha": 0.3,
+                "layer": 4,
                 "controls": [
                   {
-                    "anvil_status_label@screen_content.image_element": {
-                      "texture": "textures/ui/Gray",
-                      "layer": 4,
-                      "size": ["100%c + 6px", "100%c + 4px"],
-                      "alpha": 0.3,
-                      "controls": [
-                        {
-                          "cost_text_red@anvil_screen.cost_label": {
-                            "color": [1.0, 0.35, 0.35],
-                            "$cost_bindings": "#cost_text_red"
-                          }
-                        },
-                        {
-                          "cost_text_green@anvil_screen.cost_label": {
-                            "color": [0.494, 0.988, 0.125, 1.0],
-                            "$cost_bindings": "#cost_text_green"
-                          }
-                        }
-                      ],
+                    "cost_label@global.empty_label": {
+                      "shadow": true,
+                      "layer": 10,
+                      "text": "#text",
+                      "property_bag": {
+                        "#color_1": [1.0, 0.35, 0.35, 1.0],
+                        "#color_2": [0.494, 0.988, 0.125, 1.0]
+                      },
                       "bindings": [
                         { "binding_name": "#cost_text_red" },
                         { "binding_name": "#cost_text_green" },
                         {
                           "binding_type": "view",
-                          "binding_condition": "always",
-                          "source_property_name": "(#cost_text_red or #cost_text_green)",
-                          "target_property_name": "#visible"
+                          "source_property_name": "('#color_' + ((#cost_text_red * 1) + (#cost_text_green * 2)))",
+                          "target_property_name": "#color"
+                        },
+                        {
+                          "binding_name": "#cost_text",
+                          "binding_name_override": "#text"
                         }
                       ]
                     }
+                  }
+                ],
+                "bindings": [
+                  {
+                    "binding_type": "view",
+                    "binding_condition": "always",
+                    "source_control_name": "cost_label",
+                    "source_property_name": "(#cost_text_red or #cost_text_green)",
+                    "target_property_name": "#visible"
                   }
                 ]
               }
@@ -222,8 +227,8 @@
       },
       {
         "anvil_highlight@global.empty_image": {
-          "texture": "textures/anvil_highlight.png",
-          "alpha": "@anvil_screen.anvil_highlight_alpha_1",
+          "texture": "textures/anvil_highlight",
+          "alpha": "@anvil_screen.anvil_blink_1",
           "size": [68, 33],
           "anchor_from": "top_left",
           "anchor_to": "top_left",
@@ -251,12 +256,7 @@
           ]
         }
       },
-      {
-        "bottom@global.inventory_bottom_half_with_label": {
-          "anchor_to": "bottom_middle",
-          "anchor_from": "bottom_middle"
-        }
-      }
+      { "inventory_section@container_common.inventory_section_with_label": {} }
     ]
   },
   "edit_area_background@global.empty_panel": {
@@ -290,22 +290,13 @@
       }
     ]
   },
-  "cost_label@global.empty_label": {
-    "shadow": true,
-    "layer": 10,
-    "text": "#text",
-    "bindings": [
-      { "binding_name": "#cost_text", "binding_name_override": "#text" },
-      { "binding_name": "$cost_bindings", "binding_name_override": "#visible" }
-    ]
-  },
-  "blitsprite_alpha_template": {
+  "anvil_blink_template": {
     "anim_type": "alpha",
-    "duration": 0.4,
+    "duration": 0.3,
     "from": "$frame",
     "to": "$frame",
     "next": "('@anvil_screen.' + $next)"
   },
-  "anvil_highlight_alpha_1@anvil_screen.blitsprite_alpha_template": { "$frame": 0, "$next": "anvil_highlight_alpha_2" },
-  "anvil_highlight_alpha_2@anvil_screen.blitsprite_alpha_template": { "$frame": 1, "$next": "anvil_highlight_alpha_1" }
+  "anvil_blink_1@anvil_screen.anvil_blink_template": { "$frame": 0, "$next": "anvil_blink_2" },
+  "anvil_blink_2@anvil_screen.anvil_blink_template": { "$frame": 1, "$next": "anvil_blink_1" }
 }

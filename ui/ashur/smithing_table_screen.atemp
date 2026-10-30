@@ -22,41 +22,35 @@
       { "common_panel@screen_content.smithing": {} },
       { "extensions@jc-extensions.smithing_table_screen": {} },
       {
-        "result_item_preview_inner@global.empty_panel": {
-          "size": [30, 24],
-          "anchor_to": "right_middle",
-          "anchor_from": "right_middle",
-          "offset": [-17, -40],
-          "controls": [
+        "smithing_preview_renderer@global.custom_renderer": {
+          "$type": "equipment_preview_renderer",
+          "layer": 4,
+          "size": [24, 24],
+          "anchor_to": "top_right",
+          "anchor_from": "top_right",
+          "offset": [-24, 42],
+          "rotation_x": 30,
+          "rotation_y": -30,
+          "bindings": [
             {
-              "smithing_preview_renderer@global.custom_renderer": {
-                "$type": "equipment_preview_renderer",
-                "layer": 8,
-                "rotation_x": 30,
-                "rotation_y": -30,
-                "bindings": [
-                  {
-                    "binding_name": "#item_id_aux",
-                    "binding_type": "collection",
-                    "binding_collection_name": "smithing_table_result_items"
-                  },
-                  {
-                    "binding_name": "#item_custom_color",
-                    "binding_type": "collection",
-                    "binding_collection_name": "smithing_table_result_items"
-                  },
-                  {
-                    "binding_name": "#armor_trim_pattern",
-                    "binding_type": "collection",
-                    "binding_collection_name": "smithing_table_result_items"
-                  },
-                  {
-                    "binding_name": "#armor_trim_material",
-                    "binding_type": "collection",
-                    "binding_collection_name": "smithing_table_result_items"
-                  }
-                ]
-              }
+              "binding_name": "#item_id_aux",
+              "binding_type": "collection",
+              "binding_collection_name": "smithing_table_result_items"
+            },
+            {
+              "binding_name": "#item_custom_color",
+              "binding_type": "collection",
+              "binding_collection_name": "smithing_table_result_items"
+            },
+            {
+              "binding_name": "#armor_trim_pattern",
+              "binding_type": "collection",
+              "binding_collection_name": "smithing_table_result_items"
+            },
+            {
+              "binding_name": "#armor_trim_material",
+              "binding_type": "collection",
+              "binding_collection_name": "smithing_table_result_items"
             }
           ]
         }
@@ -160,12 +154,7 @@
           ]
         }
       },
-      {
-        "bottom@global.inventory_bottom_half_with_label": {
-          "anchor_to": "bottom_middle",
-          "anchor_from": "bottom_middle"
-        }
-      }
+      { "inventory_section@container_common.inventory_section_with_label": {} }
     ]
   },
   "slot_overlay@global.empty_panel": {

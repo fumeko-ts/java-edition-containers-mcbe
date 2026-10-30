@@ -1,6 +1,6 @@
 {
-  "hopper_screen@global.container_screen": {"$screen_content": "hopper_screen.hopper_panel"},
-  "dispenser_screen@global.container_screen": {"$screen_content": "dispenser_screen.dispenser_panel"},
-  "dropper_screen@global.container_screen": {"$screen_content": "dropper_screen.dropper_panel"},
-  "crafter_screen@global.container_screen": {"$screen_content": "crafter_screen.crafter_panel"}
+  "hopper_screen"    : { "variables": [], "$screen_content": "hopper_screen.hopper_panel" },
+  "dispenser_screen" : { "variables": [], "$screen_content": "dispenser_screen.dispenser_panel" },
+  "dropper_screen"   : { "variables": [], "$screen_content": "dropper_screen.dropper_panel" },
+  "crafter_screen"   : { "variables": [], "$screen_content": "crafter_screen.crafter_panel" }
 }

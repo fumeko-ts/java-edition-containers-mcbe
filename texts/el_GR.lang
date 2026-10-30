@@ -38,3 +38,11 @@ ashur.tab.nature=Φύση
 ashur.tab.equipment=Εξοπλισμός
 ashur.tab.construction=Κατασκευή
 ashur.tab.search=Αναζήτηση
+
+atemp.recipebook.next_page=Επόμενη Σελίδα
+atemp.recipebook.previous_page=Προηγούμενη Σελίδα
+atemp.recipebook.toggleRecipes.all=Εμφάνιση Όλων
+atemp.recipebook.toggleRecipes.blastable=Εμφάνιση Αντικειμένων Υψικαμίνου
+atemp.recipebook.toggleRecipes.craftable=Εμφάνιση Αντικειμένων Τραπεζιού Κατασκευής
+atemp.recipebook.toggleRecipes.smeltable=Εμφάνιση Αντικειμένων Φούρνου
+atemp.recipebook.toggleRecipes.smokable=Εμφάνιση Αντικειμένων Καπνιστηριού

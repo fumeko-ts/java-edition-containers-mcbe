@@ -38,3 +38,11 @@ ashur.tab.nature=Luonto
 ashur.tab.equipment=Varusteet
 ashur.tab.construction=Rakentaminen
 ashur.tab.search=Etsi
+
+atemp.recipebook.next_page=Seuraava sivu
+atemp.recipebook.previous_page=Edellinen sivu
+atemp.recipebook.toggleRecipes.all=Näytetään kaikki
+atemp.recipebook.toggleRecipes.blastable=Näytetään masuunissa sulatettavat
+atemp.recipebook.toggleRecipes.craftable=Näytetään työstettävät
+atemp.recipebook.toggleRecipes.smeltable=Näytetään sulatettavat
+atemp.recipebook.toggleRecipes.smokable=Näytetään savustettavat

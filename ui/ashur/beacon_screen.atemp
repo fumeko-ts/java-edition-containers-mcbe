@@ -179,7 +179,7 @@
             {
               "inventory_grid_holder@global.empty_panel": {
                 "size": [162, 83],
-                "controls": [{ "inventory_and_hotbar@container_common.container_bottom_section": {} }]
+                "controls": [{ "inventory_and_hotbar@container_common.inventory_section_without_label": {} }]
               }
             },
             { "filler_17@global.empty_panel": { "size": [33, 83] } }

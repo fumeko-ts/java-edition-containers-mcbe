@@ -33,7 +33,6 @@
       $is_stonecutter_screen    - outputs - true|false 
       $is_trading_screen        - outputs - true|false 
 
-      
       $is_large_chest = $is_double_chest_screen
       $is_chest_screen = ($is_shulker_screen or $is_ender_chest_screen or $is_barrel_screen or $is_small_chest_screen)
       $is_redstone_screen = ($is_hopper_screen or $is_dispenser_screen or $is_dropper_screen or $is_crafter_screen)
@@ -46,8 +45,8 @@
       "bindings": [
         {
           "binding_type": "global",
-          "binding_condition": "always",//always incase gamemode changes wilst inside container ui you want the element to update
-          "binding_name": "(not #is_creative_mode)",  // flip condition to show only in creative
+          "binding_condition": "always", //always incase gamemode changes wilst inside container ui you want the element to update
+          "binding_name": "#is_creative_mode", // screens with a recipe book only like the smelting screens and inventory and crafting table screens
           "binding_name_override": "#visible"
         }
       ]
@@ -78,51 +77,94 @@
         "requires": "$is_container_utilities",
         "$compatibility_content": "container_utilities_bridge.utility_content"
       }
-/*
-      , 
-     
-       // if you want to inject a single element or a tree of elements (like a stack panel)
-       // use $compatibility_content like this
-
-        {
-          "requires": "$is_hopper_screen",  // fires when the hopper screen is open
-
-          "$compatibility_content": "<namespace>.<definition_to_inject>"
-        },
+      // ,
+      // {
+      //   // if the variable "$is_dimz_advanced_container" inside ui/_global_variables.json = true
+      //   "requires": "($is_dimz_advanced_container and $is_chest_screen)",
+      //   "$compatibility_content": "advanced_container_bridge.advanced_container_elements"
+      // }
 
 
-       // if you need to inject multiple separate things that cant live under one parent
-       // use $compatibility_controls instead:
+/*     
+      // if you want to inject a single element or a tree of elements (like a stack panel)
+      // use $compatibility_content like this
 
-        {
-          "requires": "$is_dropper_screen",  // fires when the dropper screen is open
+      {
+        "requires": "$is_hopper_screen",  // fires when the hopper screen is open
+        "$compatibility_content": "<namespace>.<definition_to_inject>"
+      },
 
-          "$compatibility_controls": [
-            { "thing_1@<namespace>.<definition_to_inject_1>": {} },
-            { "thing_2@<namespace>.<definition_to_inject_2>": {} },
-            { "thing_3@<namespace>.<definition_to_inject_3>": {} }
-          ]
-        },
+      // if you need to inject multiple separate things that cant live under one parent
+      // use $compatibility_controls instead:
 
-        {
-          // $some_other_variable should be a global var defined in your _global_variables.json within your own pack
+      {
+        "requires": "$is_dropper_screen",  // fires when the dropper screen is open
+        "$compatibility_controls": [
+          { "thing_1@<namespace>.<definition_to_inject_1>": {} },
+          { "thing_2@<namespace>.<definition_to_inject_2>": {} },
+          { "thing_3@<namespace>.<definition_to_inject_3>": {} }
+        ]
+      },
+      {
+        // $some_other_variable should be a global var defined in your _global_variables.json within your own pack
+ 
+        "requires": "($is_dropper_screen and $some_other_variable)",
+        "$compatibility_content": "<namespace>.<definition_to_inject>",
+        "$compatibility_controls": [
+          // extending $compatibility_content here reuses the def set above in this same entry
+          { "thing_1@$compatibility_content": {} },
+          { "thing_2@<namespace>.<definition_to_inject_2>": {} },
+          { "thing_3@<namespace>.<definition_to_inject_3>": {} }
+        ]
+      }
 
-          "requires": "($is_dropper_screen and $some_other_variable)",
-
-          "$compatibility_content": "<namespace>.<definition_to_inject>",
-
-          "$compatibility_controls": [
-            // extending $compatibility_content here reuses the def set above in this same entry
-            { "thing_1@$compatibility_content": {} },
-            { "thing_2@<namespace>.<definition_to_inject_2>": {} },
-            { "thing_3@<namespace>.<definition_to_inject_3>": {} }
-          ]
-        }
-
-        //tho that being said i would prefer if you do it the way i did the Deesse-UI compat
+      //tho that being said i would prefer if you do it the way i did the Deesse-UI compat
 */
     ]
   },
+
+  //made this seprate because theres multiple brewing guide recipe book packs
+  "brewing_guide@compatibility_variables._client_variables": {
+    "size": ["100%c", 166],
+    "variables": [
+      {
+        // if the variable "$is_d\u00e9esse_ui_pack" inside ui/_global_variables.json = true
+        "requires": "$is_d\u00e9esse_ui_pack",
+        "$recipe_book_content": "d\u00e9esse_brewing.brewing_guide_panel"
+      },
+      {
+        // if the variable "$is_overcomplicated_brewing_guide" inside ui/_global_variables.json = true
+        "requires": "$is_overcomplicated_brewing_guide",
+        "$recipe_book_content": "brewing_recipe_book.recipe_book"
+      }
+    ],
+    "$recipe_book_content|default": "jc-extensions.empty_panel",
+    "controls": "$brewing_recipe_book_controls",
+    "$brewing_recipe_book_controls": [
+      {
+        "$recipe_book_content@$recipe_book_content": {}
+      }
+    ]
+  },
+
+  // this def injects elements out of safezone so eanything placed within isint affected by custom safezones
+  "out_of_safezone_compatibility@compatibility_variables._client_variables": {
+    "variables": [
+      {
+        // if the variable "$is_d\u00e9esse_ui_pack" inside ui/_global_variables.json = true and if the current screen is the inventory screen "$is_inventory_screen"
+        "requires": "($is_d\u00e9esse_ui_pack and $is_inventory_screen)",
+        "$out_of_safezone_content": "deesse_ui_bridge.out_of_safezone_durability_viewer"
+      }
+    ],
+    "$out_of_safezone_content|default": "jc-extensions.empty_panel",
+    "controls": "$out_of_safezone_controls",
+    "$out_of_safezone_controls": [
+      {
+        "$out_of_safezone_content@$out_of_safezone_content": {}
+      }
+    ]
+  },
+
   // screens
   "anvil_screen@jc-extensions.compatibility": {},
   "blast_furnace_screen@jc-extensions.compatibility": {},
@@ -153,51 +195,5 @@
   "ender_chest_screen@jc-extensions.compatibility": {},
   "shulker_screen@jc-extensions.compatibility": {},
   "small_chest_screen@jc-extensions.compatibility": {},
-  "empty_panel": { "type": "panel", "size": [0, 0] },
-
-  //made this seprate because theres multiple brewing guide recipe book packs
-  "brewing_guide@compatibility_variables._client_variables": {
-    "size": ["100%c + 2px", 166],
-    "variables": [
-      {
-        // if the variable "$is_d\u00e9esse_ui_pack" inside ui/_global_variables.json = true
-        "requires": "$is_d\u00e9esse_ui_pack",
-        "$recipe_book_content": "d\u00e9esse_brewing.brewing_guide_panel"
-      },
-      {
-        // if the variable "$is_overcomplicated_brewing_guide" inside ui/_global_variables.json = true
-        "requires": "$is_overcomplicated_brewing_guide",
-        "$recipe_book_content": "brewing_recipe_book.recipe_book"
-      }
-    ],
-    "$recipe_book_content|default": "jc-extensions.empty_panel",
-    "controls": "$brewing_recipe_book_controls",
-    "$brewing_recipe_book_controls": [
-      {
-        "$recipe_book_content@$recipe_book_content": {}
-      }
-    ]
-  },
-
-  // this def injects elements out of safezone so eanything placed within isint affected by custom safezones
-  "out_of_safezone_compatibility@compatibility_variables._client_variables": {
-    "variables": [
-      {
-        // if the variable "$is_d\u00e9esse_ui_pack" inside ui/_global_variables.json = true and if the current screen is the inventory screen "$is_inventory_screen"
-        "requires": "($is_d\u00e9esse_ui_pack and $is_inventory_screen)",
-        "$out_of_safezone_content": "deesse_ui_bridge.out_of_safezone_durability_viewer"
-      },
-      {
-        "requires": "($is_shulker_screen and $is_java_containers_debug_mode)",
-        "$out_of_safezone_content": "custom_debug_content.item_id_getter"
-      }
-    ],
-    "$out_of_safezone_content|default": "jc-extensions.empty_panel",
-    "controls": "$out_of_safezone_controls",
-    "$out_of_safezone_controls": [
-      {
-        "$out_of_safezone_content@$out_of_safezone_content": {}
-      }
-    ]
-  }
+  "empty_panel": { "type": "panel", "size": [0, 0] }
 }

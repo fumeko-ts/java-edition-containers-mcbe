@@ -16,7 +16,30 @@
 
 {
   "namespace": "crafting_common",
-
+  "filter_hover_text@container_common.custom_hover_text_renderer": {
+    "$hover_text_property_bag": {
+      "#filter_false": "atemp.recipebook.toggleRecipes.all",
+      "#filter_true": "$filter_enabled_hover_text"
+    },
+    "$filter_enabled_hover_text|default": "atemp.recipebook.toggleRecipes.craftable",
+    //will change how this is done at some point in time
+    "variables": [
+      {"requires": "$is_smoker_screen","$filter_enabled_hover_text": "atemp.recipebook.toggleRecipes.smokable"},
+      {"requires": "$is_furnace_screen","$filter_enabled_hover_text": "atemp.recipebook.toggleRecipes.smeltable"},
+      {"requires": "$is_blast_furnace_screen","$filter_enabled_hover_text": "atemp.recipebook.toggleRecipes.blastable"}
+    ],
+    "$hover_text_binding": [
+      {
+        "binding_type": "global",
+        "binding_name": "$toggle_binding_value"
+      },
+      {
+        "binding_type": "view",
+        "source_property_name": "('#filter_' + $toggle_binding_value)",
+        "target_property_name": "#hover_text"
+      }
+    ]
+  },
   "filter_toggle@toggle.radio_toggle": {
     "size": [26, 16],
     "$is_radio_toggle": false,
@@ -29,6 +52,7 @@
     "$checked": "screen_content.crafting_filter_checked",
     "$checked_hover": "screen_content.crafting_filter_checked_hover",
     "$locked": "screen_content.crafting_filter_unchecked",
+    "$extra_contents": "crafting_common.filter_hover_text",
     "variables": {
       "requires": "$cb_is_thick_menu_buttons",
       "$unchecked": "beveled_buttons_bridge.crafting_filter_unchecked",
@@ -54,7 +78,9 @@
       "$locked": "beveled_buttons_bridge.smelting_filter_unchecked"
     }
   },
-  "tab_item_renderer@global.custom_renderer": {
+
+  //renderer
+  "tab_icon_renderer_template@global.custom_renderer": {
     "$type": "inventory_item_renderer",
     "size": [16, 16],
     "layer": 7,
@@ -65,7 +91,7 @@
       "#item_id_aux": "($item_id * 65536)"
     }
   },
-  "anchored_item_renderer@crafting_common.tab_item_renderer": {
+  "anchored_item_renderer@crafting_common.tab_icon_renderer_template": {
     "anchor_from": "top_left",
     "anchor_to": "top_left"
   },
@@ -101,92 +127,82 @@
     ]
   },
 
-  //tab defs
-  "search_tab_icon@crafting_common.single_tab_icon_template": {
-    "$center_item_id": "$compass_item_index"
+  //image
+  "tab_icon_image_template@global.empty_image": {
+    "size": [16, 16],
+    "layer": 7,
+    "texture": "$tab_icon_path",
+    "anchor_from": "center",
+    "anchor_to": "center"
   },
 
-  //furnace recipe book
-  "furnace_food_tab_icon@crafting_common.single_tab_icon_template": {
-    "$center_item_id": "$raw_porkchop_item_index"
+  "anchored_icon_image@crafting_common.tab_icon_image_template": {
+    "anchor_from": "top_left",
+    "anchor_to": "top_left"
   },
-  "furnace_blocks_tab_icon@crafting_common.single_tab_icon_template": {
-    "$center_item_id": "$stone_item_index"
-  },
-  "furnace_items_tab_icon@crafting_common.double_tab_icon_template": {
-    "$right_item_id": "$emerald_item_index",
-    "$left_item_id": "$bucket_lava_item_index"
-  },
-
-  //blast_furnace recipe book
-  "blast_furnace_items_tab@crafting_common.double_tab_icon_template": {
-    "$right_item_id": "$golden_leggings_item_index",
-    "$left_item_id": "$iron_shovel_item_index"
-  },
-
-  //smoker recipe book
-  "smoker_food_tab_icon@crafting_common.single_tab_icon_template": {
-    "$center_item_id": "$raw_porkchop_item_index"
-  },
-
-  //crafting recipe book
-  "crafting_nature_tab_icon@crafting_common.double_tab_icon_template": {
-    "$right_item_id": "$apple_item_index",
-    "$left_item_id": "$bucket_lava_item_index"
-  },
-  "crafting_construction_tab_icon@crafting_common.single_tab_icon_template": {
-    "$center_item_id": "$bricks_item_index"
-  },
-  "crafting_equipment_tab_icon@crafting_common.double_tab_icon_template": {
-    "$right_item_id": "$golden_sword_item_index",
-    "$left_item_id": "$iron_axe_item_index"
-  },
-  "crafting_items_tab_icon@crafting_common.single_tab_icon_template": {
-    "$center_item_id": "$redstone_item_index"
-  },
-
-  "creative_tab_icons@global.empty_panel": {
+  "single_tab_icon_image@global.empty_panel": {
+    "$center_item_texture|default": "",
     "controls": [
       {
-        "inventory@crafting_common.tab_item_renderer": {
-          "$item_id": "$chest_item_index",
-          "offset": [0, -1],
-          "ignored": "(not ($toggle_control_name = 'survival_tab_toggle'))"
-        }
-      },
-      {
-        "search@crafting_common.tab_item_renderer": {
-          "$item_id": "$compass_item_index",
-          "ignored": "(not ($toggle_control_name = 'search_tab_toggle'))"
-        }
-      },
-      {
-        "items@crafting_common.tab_item_renderer": {
-          "$item_id": "$redstone_item_index",
-          "ignored": "(not ($toggle_control_name = 'items_tab_toggle'))"
-        }
-      },
-      {
-        "equipment@crafting_common.tab_item_renderer": {
-          "$item_id": "$iron_sword_item_index",
-          "ignored": "(not ($toggle_control_name = 'equipment_tab_toggle'))"
-        }
-      },
-      {
-        "nature@crafting_common.tab_item_renderer": {
-          "$item_id": "$purple_froglight_item_index",
-          "ignored": "(not ($toggle_control_name = 'nature_tab_toggle'))"
-        }
-      },
-      {
-        "construction@crafting_common.tab_item_renderer": {
-          "$item_id": "$bricks_item_index",
-          "ignored": "(not ($toggle_control_name = 'construction_tab_toggle'))"
+        "single_tab_icons@crafting_common.anchored_icon_image": {
+          "offset": [14, 5],
+          "$tab_icon_path": "$center_item_texture"
         }
       }
     ]
   },
 
+  "double_tab_icon_image@global.empty_panel": {
+    "$right_item_texture|default": "",
+    "$left_item_texture|default": "",
+    "controls": [
+      {
+        "left_tab_item@crafting_common.anchored_icon_image": {
+          "offset": [8, 5],
+          "layer": 6,
+          "$tab_icon_path": "$left_item_texture"
+        }
+      },
+      {
+        "right_tab_item@crafting_common.anchored_icon_image": {
+          "offset": [19, 5],
+          "$tab_icon_path": "$right_item_texture"
+        }
+      }
+    ]
+  },
+
+  //tab icon defs
+  "search_tab_icon@crafting_common.single_tab_icon_image"         : {"$center_item_texture": "textures/items/compass_item"  },
+  "furnace_food_tab_icon@crafting_common.single_tab_icon_image"   : {"$center_item_texture": "textures/items/porkchop_raw"  },
+  "smoker_food_tab_icon@crafting_common.single_tab_icon_image"    : {"$center_item_texture": "textures/items/porkchop_raw"  },
+  "crafting_items_tab_icon@crafting_common.single_tab_icon_image" : {"$center_item_texture": "textures/items/redstone_dust" },
+
+  "furnace_items_tab_icon@crafting_common.double_tab_icon_image"      : {"$right_item_texture": "textures/items/emerald"       , "$left_item_texture": "textures/items/bucket_lava" },
+  "blast_furnace_items_tab@crafting_common.double_tab_icon_image"     : {"$right_item_texture": "textures/items/gold_leggings" , "$left_item_texture": "textures/items/iron_shovel" },
+  "crafting_nature_tab_icon@crafting_common.double_tab_icon_image"    : {"$right_item_texture": "textures/items/apple"         , "$left_item_texture": "textures/items/bucket_lava" },
+  "crafting_equipment_tab_icon@crafting_common.double_tab_icon_image" : {"$right_item_texture": "textures/items/gold_sword"    , "$left_item_texture": "textures/items/iron_axe"    },
+  //renderer since these are 3d
+  "crafting_construction_tab_icon@crafting_common.single_tab_icon_template" : {"$center_item_id": "$bricks_item_index" },
+  "furnace_blocks_tab_icon@crafting_common.single_tab_icon_template"        : {"$center_item_id": "$stone_item_index"  },
+
+  "creative_tab_icons@global.empty_panel": {
+    "controls": [
+      { "search@crafting_common.tab_icon_image_template"    : {"$tab_icon_path": "textures/items/compass_item"  , "ignored": "(not ($toggle_control_name = 'search_tab_toggle'))"    }},
+      { "items@crafting_common.tab_icon_image_template"     : {"$tab_icon_path": "textures/items/redstone_dust" , "ignored": "(not ($toggle_control_name = 'items_tab_toggle'))"     }},
+      { "equipment@crafting_common.tab_icon_image_template" : {"$tab_icon_path": "textures/items/iron_sword"    , "ignored": "(not ($toggle_control_name = 'equipment_tab_toggle'))" }},
+      //renderer since these are 3d
+      {
+        "inventory@crafting_common.tab_icon_renderer_template": {
+          "$item_id": "$chest_item_index",
+          "offset": [0, -1],
+          "ignored": "(not ($toggle_control_name = 'survival_tab_toggle'))"
+        }
+      },
+      { "nature@crafting_common.tab_icon_renderer_template"       : {"$item_id": "$purple_froglight_item_index" ,"ignored": "(not ($toggle_control_name = 'nature_tab_toggle'))"       }},
+      { "construction@crafting_common.tab_icon_renderer_template" : {"$item_id": "$bricks_item_index"           ,"ignored": "(not ($toggle_control_name = 'construction_tab_toggle'))" }}
+    ]
+  },
   "recipe_toggle_base@toggle.radio_toggle": {
     "size": [20, 18],
     "$unchecked": "screen_content.recipe_toggle",
@@ -204,11 +220,12 @@
   },
   "recipe_layout_toggle@global.empty_panel": {
     "size": [20, 18],
-    "layer": 10,
+    "layer": 6,
     "controls": [
       {
         "layout_toggle_wrapper@global.empty_panel": {
-          "controls": [
+          "controls": "$layout_toggle_controls",
+          "$layout_toggle_controls": [
             {
               "recipe_book_layout_toggle@crafting_common.recipe_toggle_base": {
                 "$toggle_group_forced_index": "$recipe_book_layout_index",
@@ -238,6 +255,39 @@
               }
             }
           ],
+          "variables": {
+            "requires": "($is_smelting_screen and $pocket_screen)",
+            "$layout_toggle_controls": [
+              {
+                "recipe_book_layout_toggle@crafting_common.recipe_toggle_base": {
+                  "$toggle_group_forced_index": 1,
+                  "$toggle_control_name": "is_recipe_book_layout",
+                  "bindings": [
+                    {
+                      "binding_type": "view",
+                      "source_control_name": "survival_inventory_toggle",
+                      "source_property_name": "(not #visible)",
+                      "target_property_name": "#visible"
+                    }
+                  ]
+                }
+              },
+              {
+                "survival_inventory_toggle@crafting_common.recipe_toggle_base": {
+                  "$toggle_group_forced_index": 0,
+                  "$toggle_control_name": "is_survival_layout",
+                  "bindings": [
+                    {
+                      "binding_type": "view",
+                      "source_control_name": "is_recipe_book_layout",
+                      "source_property_name": "#toggle_state",
+                      "target_property_name": "#visible"
+                    }
+                  ]
+                }
+              }
+            ]
+          },
           "bindings": [
             {
               "binding_type": "global",

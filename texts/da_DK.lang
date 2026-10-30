@@ -38,3 +38,11 @@ ashur.tab.nature=Natur
 ashur.tab.equipment=Udstyr
 ashur.tab.construction=Bygning
 ashur.tab.search=Søg
+
+atemp.recipebook.next_page=Næste side
+atemp.recipebook.previous_page=Forrige side
+atemp.recipebook.toggleRecipes.all=Viser alle
+atemp.recipebook.toggleRecipes.blastable=Viser højovnbare
+atemp.recipebook.toggleRecipes.craftable=Viser fremstillingsbare
+atemp.recipebook.toggleRecipes.smeltable=Viser smeltbare
+atemp.recipebook.toggleRecipes.smokable=Viser rygbare

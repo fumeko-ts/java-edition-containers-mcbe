@@ -38,3 +38,11 @@ ashur.tab.nature=自然
 ashur.tab.equipment=裝備
 ashur.tab.construction=建築
 ashur.tab.search=搜尋
+
+atemp.recipebook.next_page=下一頁
+atemp.recipebook.previous_page=上一頁
+atemp.recipebook.toggleRecipes.all=已列出所有項目
+atemp.recipebook.toggleRecipes.blastable=已列出高爐可熔煉項目
+atemp.recipebook.toggleRecipes.craftable=已列出可合成項目
+atemp.recipebook.toggleRecipes.smeltable=已列出可熔煉項目
+atemp.recipebook.toggleRecipes.smokable=已列出可燻製項目

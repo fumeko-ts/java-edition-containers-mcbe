@@ -1,0 +1,52 @@
+{
+  // -->  https://www.curseforge.com/minecraft-bedrock/texture-packs/advanced-container
+  "namespace": "advanced_container_bridge",
+  /*
+     this is wip so doesnt work at the moment because i was running into issues with vanilla its vanilla inheritance
+  */
+  "additional_item_slot_content@global.empty_panel": {
+    "$use_container_item_mode|default": true,
+    "$use_item_highlighter|default": true,
+    "$collection_name|default": "$item_collection",
+    "controls": [
+      { "$button_control@container_ds-acr.item_button_ref_switcher": { "layer": 1 } },
+      { "slot_highlighter@container_ds-acr.container_item_highlighter": { "layer": 3 } }
+    ]
+  },
+  "advanced_container_elements@global.empty_panel": {
+    "$advanced_container_elements|default": "advanced_container_bridge.9x3_container_elements",
+    "controls": [{ "$advanced_container_elements@$advanced_container_elements": {} }]
+  },
+  "9x3_container_elements@global.empty_panel": {
+    "$use_container_item_mode|default": true,
+    "$use_item_highlighter|default": true,
+    "$use_search_bar|default": true,
+    "$is_chest_screen|default": true,
+    "$use_custom_close_button|default": false,
+    "controls": [
+      {
+        "tooltip_button@container_ds-acr.tooltip_button_panel": {
+          "anchor_from": "top_left",
+          "anchor_to": "top_right"
+        }
+      },
+      {
+        "container_item_data@container_data_ds-acr.data": {}
+      },
+      {
+        "container_control_panel@container_ds-acr.container_control_panel": {
+          "anchor_from": "top_right",
+          "anchor_to": "top_left"
+        }
+      },
+      {
+        "search_bar@container_ds-acr.search_bar": {
+          "size": ["47%", 12],
+          "anchor_from": "top_right",
+          "anchor_to": "top_right",
+          "offset": [-14, 4]
+        }
+      }
+    ]
+  }
+}

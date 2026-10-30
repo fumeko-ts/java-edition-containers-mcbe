@@ -17,33 +17,30 @@
 {
   "namespace": "container_common",
   "container_details@global.root_panel": {
+    "size": ["100%c", "100%c"],
     "layer": 5,
+    "controls": "$screen_controls"
+  },
+  "item_floating_selected_element": {
+    "type": "button",
+    "layer": -10,
+    "size": [18, 18],
+    "follows_cursor": true,
+    "always_handle_pointer": true,
     "controls": [
-      { "screen@global.empty_panel": { "size": ["100%", "100%"], "controls": "$screen_controls" } },
       {
-        "item_floating_selected_element": {
-          "type": "button",
-          "layer": -10,
+        "item_renderer_top_layer@compatibility_container_item.floating_item_compatibility": {
           "size": [18, 18],
-          "follows_cursor": true,
-          "always_handle_pointer": true,
+          "layer": 60,
+          "$floating_item_renderer_control|default": "container_common.floating_item_renderer_control",
+          "$floating_stack_count_label_control|default": "container_common.floating_stack_count_label",
+          "$floating_durability_bar_control|default": "container_common.floating_durability_bar",
+          "$floating_storage_bar_control|default": "container_common.floating_storage_bar",
           "controls": [
-            {
-              "item_renderer_top_layer@compatibility_container_item.floating_item_compatibility": {
-                "size": [18, 18],
-                "layer": 60,
-                "$floating_item_renderer_control|default": "container_common.floating_item_renderer_control",
-                "$floating_stack_count_label_control|default": "container_common.floating_stack_count_label",
-                "$floating_durability_bar_control|default": "container_common.floating_durability_bar",
-                "$floating_storage_bar_control|default": "container_common.floating_storage_bar",
-                "controls": [
-                  { "$floating_item_renderer_control@$floating_item_renderer_control": {} },
-                  { "$floating_stack_count_label_control@$floating_stack_count_label_control": {} },
-                  { "$floating_durability_bar_control@$floating_durability_bar_control": {} },
-                  { "$floating_storage_bar_control@$floating_storage_bar_control": {} }
-                ]
-              }
-            }
+            { "$floating_item_renderer_control@$floating_item_renderer_control": {} },
+            { "$floating_stack_count_label_control@$floating_stack_count_label_control": {} },
+            { "$floating_durability_bar_control@$floating_durability_bar_control": {} },
+            { "$floating_storage_bar_control@$floating_storage_bar_control": {} }
           ]
         }
       }
@@ -113,23 +110,67 @@
       {"binding_name":"#inventory_selected_decorated_pot_sherds" , "binding_name_override":"#decroated_pot_sherds"    ,"binding_condition":"always_when_visible"}
     ]
   },
-  //soon this will be configured to be the inventory section for every screen
-  "container_bottom_section@global.empty_stack": {
+
+  "inventory_section_with_label@global.empty_stack": {
     "orientation": "vertical",
-    "size": [162, 83],
+    "size": [162, "100%c"],
     "anchor_to": "bottom_middle",
     "anchor_from": "bottom_middle",
+    "layer": 2,
+    "$inventory_label_control|default":  [
+      {
+        "inventory_label@global.empty_label": {
+          "size": [162, 10],
+          "localize": true,
+          "text_alignment": "left",
+          "color": "$container_title_color",
+          "text": "atemp.container.inventory"
+        }
+      }
+    ],
+    "$inventory_label_control_offset|default": [1, -1],
     "controls": [
       {
-        "inventory_grid@global.empty_grid": {
-          "size": [162, 54],
-          "grid_dimensions": [9, 3],
-          "$item_collection": "inventory_items",
-          "grid_item_template": "jc_container_item.container_item",
-          "collection_name": "inventory_items"
+        "inventory_label_wrapper@global.empty_panel": {
+          "size": [162, "100%c"],
+          "controls": [
+            {
+              "inventory_label@global.empty_panel": {
+                "size": [162, "100%c"],
+                "offset": "$inventory_label_control_offset",
+                "controls": "$inventory_label_control"
+              }
+            }
+          ]
         }
       },
-      { "buffer_2@global.empty_panel": { "size": [162, 4] } },
+      { "filler_0@global.empty_panel": {"size": [162, 1]} },
+      { "inventory_and_hotbar_grids@container_common.inventory_section_without_label": {} }
+    ]
+  },
+  "inventory_section_without_label@global.empty_stack": {
+    "orientation": "vertical",
+    "size": [162, 83],
+    "$inventory_grid_control_bindings|default": [],
+    "controls": [
+      {
+        "inventory_grid_wrapper@global.empty_panel": {
+          "size": [162, 54],
+          "controls": [
+            {
+              "inventory_grid@global.empty_grid": {
+                "size": [162, 54],
+                "grid_dimensions": [9, 3],
+                "$item_collection": "inventory_items",
+                "grid_item_template": "jc_container_item.container_item",
+                "collection_name": "$item_collection",
+                "bindings": "$inventory_grid_control_bindings"
+              }
+            }
+          ]
+        }
+      },
+      { "filler_0@global.empty_panel": { "size": [162, 4] } },
       {
         "hotbar@global.empty_grid": {
           "size": [162, 18],
@@ -139,7 +180,99 @@
           "collection_name": "$item_collection"
         }
       },
-      { "buffer_3@global.empty_panel": { "size": [162, 7] } }
+      { "filler_1@global.empty_panel": { "size": [162, 7] } }
+    ]
+  },
+
+  //custom hover text elements
+  "hover_text_follow_parent": {
+    "type": "input_panel",
+    "follows_cursor": true,
+    "always_handle_pointer": true,
+    "size": [18, 18]
+  },
+  "hover_text_nofollow_parent@global.empty_panel": {
+    "anchor_from": "$hover_text_anchor_from",
+    "anchor_to": "$hover_text_anchor_to",
+
+    "$hover_text_anchor_from": "right_middle",
+    "$hover_text_anchor_to": "left_middle",
+
+    "variables": {
+      "requires": "($touch_tooltip_anchor = 'bottom')",
+      "$hover_text_anchor_from": "bottom_middle",
+      "$hover_text_anchor_to": "top_middle"
+    }
+  },
+
+  "custom_hover_text_renderer@trade_global.trade_text_area": {
+    "$hover_text_binding|default": [],
+    "$hover_text_visuals_binding|default": [],
+    "$hover_text_property_bag|default": {},
+    "ignored": "$hide_custom_hover_texts",
+    "$touch_tooltip_anchor|default": "right",
+    "controls": [
+      {
+        "hover_text_wrapper@global.empty_panel": {
+          "$hover_text_parent_control|default": "container_common.hover_text_follow_parent",
+          "$hover_text_offset|default": [18, 18],
+          "$hover_text_anchor|default": "top_left",
+          "variables": {
+            "requires": "$touch",
+            "$hover_text_parent_control": "container_common.hover_text_nofollow_parent",
+            "$hover_text_offset": [0, 0],
+            "$hover_text_anchor": "top_middle"
+          },
+          "controls": [
+            {
+              "$hover_text_parent_control@$hover_text_parent_control": {
+                "layer": -200,
+                "controls": [
+                  {
+                    "hover_text@global.empty_image": {
+                      "texture": "textures/ui/purpleBorder",
+                      "size": ["100%c + 10px", "100%c + 8px"],
+                      "nineslice_size": 4,
+                      "layer": 400,
+                      "anchor_from": "$hover_text_anchor",
+                      "anchor_to": "$hover_text_anchor",
+                      "offset": "$hover_text_offset",
+                      "propagate_alpha": true,
+                      "allow_clipping": false,
+                      "controls": [
+                        {
+                          "hover_text_label": {
+                            "type": "label",
+                            "text": "#hover_text",
+                            "shadow": false,
+                            "localize": true,
+                            "anchor_from": "center",
+                            "anchor_to": "center",
+                            "size": ["default", "default"],
+                            "layer": 2,
+                            "bindings": "$hover_text_binding",
+                            "property_bag": "$hover_text_property_bag"
+                          }
+                        }
+                      ],
+                      "bindings": [
+                        //using visibility binding on a control that the button is set to use for a visual state will break said state so we use alpha instead
+                        {
+                          "binding_type": "view",
+                          "resolve_sibling_scope": true,
+                          "source_control_name": "hover_text_label",
+                          "source_property_name": "((not (#hover_text = '')) * 1)",
+                          "target_property_name": "#alpha"
+                        }
+                      ]
+                    }
+                  }
+                ]
+              }
+            }
+          ]
+        }
+      }
     ]
   }
 }

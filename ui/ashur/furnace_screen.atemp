@@ -16,199 +16,191 @@
 
 {
   "namespace": "furnace_screen",
-  "furnace_panel@global.empty_stack": {
-    "orientation": "horizontal",
-    "anchor_to": "center",
-    "anchor_from": "center",
-    "min_size": [176, 166],
-    "max_size": [360, 166],
-    "controls": [
+  "furnace_panel@container_common.container_details": {
+    "$screen_controls": [
       {
-        "recipe_book@recipe_book.recipe_book": {
-          "$recipe_filter_control": "crafting_common.furnace_filter_toggle",
-          "$tab_stack_controls": [
+        "furnace_content@global.empty_stack": {
+          "orientation": "horizontal",
+          "size": ["100%c", 166],
+          "controls": [
             {
-              "search_tab@recipe_book.recipe_tab_template": {
-                "$is_default_active": true,
-                "$extra_contents": "crafting_common.search_tab_icon",
-                "$toggle_control_name": "search_tab_toggle",
-                "$toggle_group_forced_index": "$search_index",
-                "$toggle_binding_value": "#is_left_tab_search"
-              }
-            },
-            { 
-              "food_tab@recipe_book.recipe_tab_template": {
-                "$extra_contents": "crafting_common.furnace_food_tab_icon",
-                "$toggle_control_name": "food_tab_toggle",
-                "$toggle_group_forced_index": "$food_index",
-                "$toggle_binding_value": "#is_left_tab_food"
-              }
-            },
-            {
-              "blocks_tab@recipe_book.recipe_tab_template": {
-                "$extra_contents": "crafting_common.furnace_blocks_tab_icon",
-                "$toggle_control_name": "blocks_tab_toggle",
-                "$toggle_group_forced_index": "$blocks_index",
-                "$toggle_binding_value": "#is_left_tab_blocks"
-              }
-            },
-            {
-              "items_tab@recipe_book.recipe_tab_template": {
-                "$extra_contents": "crafting_common.furnace_items_tab_icon",
-                "$toggle_control_name": "items_tab_toggle",
-                "$toggle_group_forced_index": "$items_index",
-                "$toggle_binding_value": "#is_left_tab_items"
-              }
-            }
-          ]
-        }
-      },
-      {
-        "main_furnace_contents@container_common.container_details": {
-          "size": [176, 166],
-          "$screen_controls": [
-            { "common_panel@screen_content.furnace": {} },
-            { "extensions@jc-extensions.furnace_screen": {} },
-            {
-              "furnace_main_content@global.empty_stack": {
-                "orientation": "vertical",
-                "size": [176, 70],
-                "anchor_from": "top_middle",
-                "anchor_to": "top_middle",
-                "controls": [
-                  { "filler_0@global.empty_panel": { "size": [176, 4] } },
+              "recipe_book_section@recipe_book.recipe_book": {
+                "$recipe_filter_control": "crafting_common.furnace_filter_toggle",
+                "$tab_stack_controls": [
                   {
-                    "title_holder@global.empty_panel": {
-                      "size": [176, 12],
-                      "controls": [
-                        {
-                          "furnace_title@global.empty_label": {
-                            "anchor_to": "top_middle",
-                            "anchor_from": "top_middle",
-                            "offset": [0, 1],
-                            "size": ["default", 10],
-                            "text": "atemp.container.furnace",
-                            "color": "$container_title_color"
-                          }
-                        }
-                      ]
+                    "search_tab@recipe_book.recipe_tab_template": {
+                      "$is_default_active": true,
+                      "$extra_contents": "crafting_common.search_tab_icon",
+                      "$toggle_control_name": "search_tab_toggle",
+                      "$toggle_group_forced_index": "$search_index",
+                      "$toggle_binding_value": "#is_left_tab_search"
                     }
                   },
                   {
-                    "main_cell_stacks@global.empty_stack": {
-                      "orientation": "horizontal",
-                      "size": [176, 54],
-                      "controls": [
-                        { "filler_1@global.empty_panel": { "size": [20, "fill"] } },
-                        {
-                          "layout_toggle_stack@global.empty_stack": {
-                            "orientation": "vertical",
-                            "size": [20, "fill"],
-                            "controls": [
-                              { "filler_2@global.empty_panel": { "size": ["fill", 18] } },
-                              { "layout_toggle@crafting_common.recipe_layout_toggle": {} },
-                              { "filler_3@global.empty_panel": { "size": ["fill", 18] } }
-                            ]
-                          }
-                        },
-                        { "filler_4@global.empty_panel": { "size": [15, "fill"] } },
-                        {
-                          "fuel_and_ingredient_stack@global.empty_stack": {
-                            "orientation": "vertical",
-                            "size": [18, "fill"],
-                            "controls": [
-                              {
-                                "furnace_smeltable_item@jc_container_item.container_item": {
-                                  "$background_control": "crafting_textures.main_cell_panel",
-                                  "$item_collection": "furnace_ingredient_items"
-                                }
-                              },
-                              {
-                                "fuel_fire_wrapper@global.empty_panel": {
-                                  "size": ["fill", 18],
-                                  "controls": [
-                                    {
-                                      "fuel_fire_progress@furnace_screen.furnace_clipping_image_template": {
-                                        "size": [14, 14],
-                                        "offset": [1, 3],
-                                        "anchor_to": "top_left",
-                                        "anchor_from": "top_left",
-                                        "texture": "assets/sprites/container/furnace/lit_progress",
-                                        "clip_direction": "down",
-                                        "$progress_ratio_binding": "#furnace_flame_ratio"
-                                      }
-                                    }
-                                  ]
-                                }
-                              },
-                              {
-                                "furnace_burnable_item@jc_container_item.container_item": {
-                                  "$item_collection": "furnace_fuel_items"
-                                }
-                              }
-                            ]
-                          }
-                        },
-                        { "filler_5@global.empty_panel": { "size": [6, "fill"] } },
-                        {
-                          "furnace_arrow_holding_stack@global.empty_stack": {
-                            "orientation": "vertical",
-                            "size": [24, "fill"],
-                            "controls": [
-                              { "filler_6@global.empty_panel": { "size": ["fill", 18] } },
-                              {
-                                "furnace_arrow_progress@furnace_screen.furnace_clipping_image_template": {
-                                  "size": [24, 16],
-                                  "texture": "assets/sprites/container/furnace/burn_progress",
-                                  "clip_direction": "left",
-                                  "$progress_ratio_binding": "#furnace_arrow_ratio"
-                                }
-                              },
-                              { "filler_7@global.empty_panel": { "size": ["fill", 20] } }
-                            ]
-                          }
-                        },
-                        { "filler_8@global.empty_panel": { "size": [8, "fill"] } },
-                        {
-                          "output_slot_holding_stack@global.empty_stack": {
-                            "orientation": "vertical",
-                            "size": [26, "fill"],
-                            "controls": [
-                              { "filler_9@global.empty_panel": { "size": ["fill", 14] } },
-                              {
-                                "output_slot_wrapper@global.empty_panel": {
-                                  "size": [26, 26],
-                                  "controls": [
-                                    {
-                                      "output_slot_underlay@crafting_textures.main_cell_panel": {
-                                        "$item_collection|default": "furnace_output_items"
-                                      }
-                                    },
-                                    {
-                                      "output_item_slot@jc_container_item.container_item": {
-                                        "anchor_to": "center",
-                                        "anchor_from": "center",
-                                        "$item_collection": "furnace_output_items"
-                                      }
-                                    }
-                                  ]
-                                }
-                              },
-                              { "filler_10@global.empty_panel": { "size": ["fill", 14] } }
-                            ]
-                          }
-                        },
-                        { "filler_11@global.empty_panel": { "size": [39, "fill"] } }
-                      ]
+                    "food_tab@recipe_book.recipe_tab_template": {
+                      "$extra_contents": "crafting_common.furnace_food_tab_icon",
+                      "$toggle_control_name": "food_tab_toggle",
+                      "$toggle_group_forced_index": "$food_index",
+                      "$toggle_binding_value": "#is_left_tab_food"
+                    }
+                  },
+                  {
+                    "blocks_tab@recipe_book.recipe_tab_template": {
+                      "$extra_contents": "crafting_common.furnace_blocks_tab_icon",
+                      "$toggle_control_name": "blocks_tab_toggle",
+                      "$toggle_group_forced_index": "$blocks_index",
+                      "$toggle_binding_value": "#is_left_tab_blocks"
+                    }
+                  },
+                  {
+                    "items_tab@recipe_book.recipe_tab_template": {
+                      "$extra_contents": "crafting_common.furnace_items_tab_icon",
+                      "$toggle_control_name": "items_tab_toggle",
+                      "$toggle_group_forced_index": "$items_index",
+                      "$toggle_binding_value": "#is_left_tab_items"
                     }
                   }
                 ]
               }
             },
             {
-              "bottom@global.inventory_bottom_half_with_label": {
-                "anchor_to": "bottom_middle",
-                "anchor_from": "bottom_middle"
+              "container_section@global.empty_panel": {
+                "size": [176, 166],
+                "controls": [
+                  { "common_panel@screen_content.furnace": {} },
+                  { "extensions@jc-extensions.furnace_screen": {} },
+                  {
+                    "furnace_main_content@global.empty_stack": {
+                      "orientation": "vertical",
+                      "size": [176, 70],
+                      "anchor_from": "top_middle",
+                      "anchor_to": "top_middle",
+                      "controls": [
+                        { "filler_0@global.empty_panel": { "size": [176, 4] } },
+                        {
+                          "title_holder@global.empty_panel": {
+                            "size": [176, 12],
+                            "controls": [
+                              {
+                                "furnace_title@global.empty_label": {
+                                  "anchor_to": "top_middle",
+                                  "anchor_from": "top_middle",
+                                  "offset": [0, 1],
+                                  "size": ["default", 10],
+                                  "localize": true,
+                                  "layer": 3,
+                                  "text": "atemp.container.furnace",
+                                  "color": "$container_title_color"
+                                }
+                              }
+                            ]
+                          }
+                        },
+                        {
+                          "main_cell_stacks@global.empty_stack": {
+                            "orientation": "horizontal",
+                            "size": [176, 54],
+                            "controls": [
+                              { "filler_1@global.empty_panel": { "size": [20, "fill"] } },
+                              {
+                                "layout_toggle_stack@global.empty_stack": {
+                                  "orientation": "vertical",
+                                  "size": [20, "fill"],
+                                  "controls": [
+                                    { "filler_2@global.empty_panel": { "size": ["fill", 18] } },
+                                    { "layout_toggle@crafting_common.recipe_layout_toggle": {} },
+                                    { "filler_3@global.empty_panel": { "size": ["fill", 18] } }
+                                  ]
+                                }
+                              },
+                              { "filler_4@global.empty_panel": { "size": [15, "fill"] } },
+                              {
+                                "fuel_and_ingredient_stack@global.empty_stack": {
+                                  "orientation": "vertical",
+                                  "size": [18, "fill"],
+                                  "controls": [
+                                    {
+                                      "furnace_smeltable_item@jc_container_item.container_item": {
+                                        "$background_control": "crafting_textures.main_cell_panel",
+                                        "$item_collection": "furnace_ingredient_items"
+                                      }
+                                    },
+                                    {
+                                      "fuel_fire_wrapper@global.empty_panel": {
+                                        "size": ["fill", 18],
+                                        "controls": [
+                                          {
+                                            "fuel_fire_progress@furnace_screen.furnace_clipping_image_template": {
+                                              "size": [14, 14],
+                                              "offset": [1, 3],
+                                              "anchor_to": "top_left",
+                                              "anchor_from": "top_left",
+                                              "texture": "assets/sprites/container/furnace/lit_progress",
+                                              "clip_direction": "down",
+                                              "$progress_ratio_binding": "#furnace_flame_ratio"
+                                            }
+                                          }
+                                        ]
+                                      }
+                                    },
+                                    {
+                                      "furnace_burnable_item@jc_container_item.container_item": {
+                                        "$item_collection": "furnace_fuel_items"
+                                      }
+                                    }
+                                  ]
+                                }
+                              },
+                              { "filler_5@global.empty_panel": { "size": [6, "fill"] } },
+                              {
+                                "furnace_arrow_holding_stack@global.empty_stack": {
+                                  "orientation": "vertical",
+                                  "size": [24, "fill"],
+                                  "controls": [
+                                    { "filler_6@global.empty_panel": { "size": ["fill", 18] } },
+                                    {
+                                      "furnace_arrow_progress@furnace_screen.furnace_clipping_image_template": {
+                                        "size": [24, 16],
+                                        "texture": "assets/sprites/container/furnace/burn_progress",
+                                        "clip_direction": "left",
+                                        "$progress_ratio_binding": "#furnace_arrow_ratio"
+                                      }
+                                    },
+                                    { "filler_7@global.empty_panel": { "size": ["fill", 20] } }
+                                  ]
+                                }
+                              },
+                              { "filler_8@global.empty_panel": { "size": [8, "fill"] } },
+                              {
+                                "output_slot_holding_stack@global.empty_stack": {
+                                  "orientation": "vertical",
+                                  "size": [26, "fill"],
+                                  "controls": [
+                                    { "filler_9@global.empty_panel": { "size": ["fill", 14] } },
+                                    {
+                                      "smelting_output_holder@crafting_textures.main_cell_panel": {
+                                        "size": [26, 26],
+                                        "$item_collection": "furnace_output_items",
+                                        "$crafting_cell_controls": [
+                                          {
+                                            "smelting_output_slot@jc_container_item.container_item": {}
+                                          }
+                                        ]
+                                      }
+                                    },
+                                    { "filler_10@global.empty_panel": { "size": ["fill", 14] } }
+                                  ]
+                                }
+                              },
+                              { "filler_11@global.empty_panel": { "size": [39, "fill"] } }
+                            ]
+                          }
+                        }
+                      ]
+                    }
+                  },
+                  { "inventory_section@container_common.inventory_section_with_label": {} }
+                ]
               }
             }
           ]

@@ -38,3 +38,11 @@ ashur.tab.nature=Nature
 ashur.tab.equipment=Équipement
 ashur.tab.construction=Construction
 ashur.tab.search=Rechercher
+
+atemp.recipebook.next_page=Page suivante
+atemp.recipebook.previous_page=Page précédente
+atemp.recipebook.toggleRecipes.all=Toutes les recettes
+atemp.recipebook.toggleRecipes.blastable=Fontes réalisables
+atemp.recipebook.toggleRecipes.craftable=Crafts réalisables
+atemp.recipebook.toggleRecipes.smeltable=Cuissons réalisables
+atemp.recipebook.toggleRecipes.smokable=Fumages réalisables

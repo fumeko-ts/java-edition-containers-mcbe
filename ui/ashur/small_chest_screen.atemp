@@ -17,51 +17,45 @@
 {
   "namespace": "small_chest_screen",
   "small_chest@container_common.container_details": {
-    "size": [176, 166],
+    "size": [176, 167],
     "$screen_controls": [
       { "common_panel@screen_content.small_chest": {} },
       { "extensions@jc-extensions.small_chest_screen": {} },
       {
-        "small_chest_top_half@global.empty_stack": {
+        "small_chest_top_section@global.empty_stack": {
           "orientation": "vertical",
-          "size": [176, 77],
-          "anchor_to": "top_middle",
+          "size": [176, 71],
           "anchor_from": "top_middle",
+          "anchor_to": "top_middle",
           "controls": [
+            { "filler_0@global.empty_panel": { "size": ["fill", 5] } },
             {
-              "label_holder@global.empty_stack": {
+              "container_title_stack@global.empty_stack": {
                 "orientation": "horizontal",
-                "size": [176, 17],
+                "size": [176, 10],
                 "controls": [
                   { "filler_1@global.empty_panel": { "size": [8, "fill"] } },
                   {
-                    "chest_label_holder@global.empty_panel": {
-                      "size": [57, 10],
-                      "controls": [
-                        {
-                          "small_chest_label@global.empty_label": {
-                            "offset": [0, 5],
-                            "size": ["default", 10],
-                            "anchor_to": "top_left",
-                            "anchor_from": "top_left",
-                            "layer": 5,
-                            "text": "$container_title",
-                            "color": "$container_title_color"
-                          }
-                        }
-                      ]
+                    "small_chest_label@global.empty_label": {
+                      "size": [154, 10],
+                      "localize": true,
+                      "text_alignment": "left",
+                      "text": "$container_title",
+                      "color": "$container_title_color",
+                      "enable_profanity_filter": true
                     }
                   },
-                  { "filler_2@global.empty_panel": { "size": [111, "fill"] } }
+                  { "filler_2@global.empty_panel": { "size": [14, "fill"] } }
                 ]
               }
             },
+            { "filler_3@global.empty_panel": { "size": ["fill", 2] } },
             {
-              "chest_grid_holder@global.empty_stack": {
+              "container_grid_stack@global.empty_stack": {
                 "orientation": "horizontal",
                 "size": [176, 54],
                 "controls": [
-                  { "filler_3@global.empty_panel": { "size": [7, "fill"] } },
+                  { "filler_4@global.empty_panel": { "size": [7, "fill"] } },
                   {
                     "small_chest_grid@global.empty_grid": {
                       "size": [162, 54],
@@ -71,7 +65,7 @@
                       "collection_name": "$item_collection"
                     }
                   },
-                  { "filler_4@global.empty_panel": { "size": [7, "fill"] } }
+                  { "filler_5@global.empty_panel": { "size": [7, "fill"] } }
                 ]
               }
             }
@@ -79,9 +73,8 @@
         }
       },
       {
-        "bottom@global.inventory_bottom_half_with_label": {
-          "anchor_to": "bottom_middle",
-          "anchor_from": "bottom_middle"
+        "inventory_section@container_common.inventory_section_with_label": {
+          "$inventory_label_control_offset": [1, 0]
         }
       }
     ]

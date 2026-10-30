@@ -122,6 +122,11 @@
         "requires": "$is_déesse_ui_pack",
         "$custom_slot_content": "deesse_ui_bridge.buttons"
       }
+      // ,
+      // {
+      //   "requires": "$is_dimz_advanced_container",
+      //   "$button_control_name": "advanced_container_bridge.additional_item_slot_content"
+      // }
     ]
   },
   "floating_item_compatibility@global.empty_panel": {
