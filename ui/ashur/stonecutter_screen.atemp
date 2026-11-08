@@ -112,29 +112,18 @@
           "size": [57, 30],
           "controls": [
             {
-              "locked_scroll_box@global.empty_panel": {
+              "locked_scroll_box@screen_content.image_element": {
+                "texture": "assets/sprites/container/stonecutter/scroller_disabled.png",
                 "size": [12, 15],
+                "layer": 5,
                 "anchor_to": "bottom_left",
                 "anchor_from": "bottom_left",
-                "controls": [
+                "bindings": [
                   {
-                    "locked_scroll_box@screen_content.image_element": {
-                      "allow_clipping": true,
-                      "texture": "assets/sprites/container/stonecutter/scroller_disabled.png",
-                      "size": [12, 15],
-                      "alpha": 1,
-                      "anchor_from": "center",
-                      "anchor_to": "center",
-                      "layer": 5,
-                      "bindings": [
-                        {
-                          "binding_name": "(#stone_selector_total_items < 13)",
-                          "binding_name_override": "#visible",
-                          "binding_type": "collection",
-                          "binding_collection_name": "stones"
-                        }
-                      ]
-                    }
+                    "binding_name": "(#stone_selector_total_items < 13)",
+                    "binding_name_override": "#visible",
+                    "binding_type": "collection",
+                    "binding_collection_name": "stones"
                   }
                 ]
               }
@@ -144,14 +133,6 @@
       },
       { "inventory_section@container_common.inventory_section_with_label": {} }
     ]
-  },
-  "button_sprite_template@screen_content.image_element": {
-    "size": [16, 18],
-    "nineslice_size": 2,
-    "keep_ratio": true,
-    "texture": "$sprite",
-    "layer": 4,
-    "offset": [1, 1]
   },
   "stone_slot_button": {
     "type": "button",
@@ -222,6 +203,18 @@
         "hover@global.empty_panel": {
           "size": [16, 18],
           "controls": [
+            {
+              "hover_text@global.hover_text": {
+                "ignored": "$touch",
+                "bindings": [
+                  {
+                    "binding_type": "collection",
+                    "binding_collection_name": "$item_collection",
+                    "binding_name": "#hover_text"
+                  }
+                ]
+              }
+            },
             {
               "hover@screen_content.image_element": {
                 "size": [16, 18],

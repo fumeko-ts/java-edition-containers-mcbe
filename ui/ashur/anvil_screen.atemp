@@ -196,15 +196,18 @@
                         "#color_2": [0.494, 0.988, 0.125, 1.0]
                       },
                       "bindings": [
-                        { "binding_name": "#cost_text_red" },
-                        { "binding_name": "#cost_text_green" },
+                        //using these incase someone has gamemode changed wilst inside container
+                        { "binding_name": "#cost_text_red", "binding_condition": "always" },
+                        { "binding_name": "#cost_text_green", "binding_condition": "always" },
                         {
                           "binding_type": "view",
+                          "binding_condition": "always_when_visible",
                           "source_property_name": "('#color_' + ((#cost_text_red * 1) + (#cost_text_green * 2)))",
                           "target_property_name": "#color"
                         },
                         {
                           "binding_name": "#cost_text",
+                          "binding_condition": "always_when_visible",
                           "binding_name_override": "#text"
                         }
                       ]

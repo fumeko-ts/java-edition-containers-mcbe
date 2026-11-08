@@ -251,10 +251,10 @@
     "$icon_path": "('assets/beacon_button_sprites/' + $effect_name)",
     "bindings": [
       {
-        "binding_name": "#extra_image_selection",
-        "binding_name_override": "#visible",
+        "binding_type": "collection",
         "binding_collection_name": "$effect_name",
-        "binding_type": "collection"
+        "binding_name": "#extra_image_selection",
+        "binding_name_override": "#visible"
       }
     ]
   },
@@ -282,10 +282,10 @@
               "hover_text@global.hover_text": {
                 "bindings": [
                   {
-                    "binding_name": "#button_hover",
-                    "binding_name_override": "#hover_text",
+                    "binding_type": "collection",
                     "binding_collection_name": "$button_name",
-                    "binding_type": "collection"
+                    "binding_name": "#button_hover",
+                    "binding_name_override": "#hover_text"
                   }
                 ]
               }
@@ -310,10 +310,10 @@
           "$bindings": [
             { "binding_collection_name": "$button_name", "binding_type": "collection_details" },
             {
-              "binding_name": "#button_visible",
-              "binding_name_override": "#visible",
+              "binding_type": "collection",
+              "binding_name": "#selected",
               "binding_collection_name": "$button_name",
-              "binding_type": "collection"
+              "binding_name_override": "#toggle_state"
             },
             {
               "binding_type": "collection",
@@ -323,9 +323,10 @@
             },
             {
               "binding_type": "collection",
-              "binding_name": "#selected",
               "binding_collection_name": "$button_name",
-              "binding_name_override": "#toggle_state"
+              "binding_condition": "always",
+              "binding_name": "#button_visible",
+              "binding_name_override": "#visible"
             }
           ],
           "$unchecked": "beacon_screen.toggle_unchecked_visual",

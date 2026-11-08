@@ -168,12 +168,14 @@
           "controls": [
             {
               "villager_name_label@global.empty_label": {
+                "size": ["default", 10],
+                "text": "#name_label",
+                "color": "$container_title_color",
+                "enable_profanity_filter": true,
                 "anchor_from": "top_middle",
                 "anchor_to": "top_middle",
                 "offset": [0, 5],
-                "color": "$container_title_color",
                 "layer": 6,
-                "text": "#name_label",
                 "bindings": [{ "binding_name": "#name_label", "binding_condition": "always" }]
               }
             },
