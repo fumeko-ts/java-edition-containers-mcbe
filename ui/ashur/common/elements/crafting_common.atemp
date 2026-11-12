@@ -28,6 +28,7 @@
       {"requires": "$is_furnace_screen","$filter_enabled_hover_text": "atemp.recipebook.toggleRecipes.smeltable"},
       {"requires": "$is_blast_furnace_screen","$filter_enabled_hover_text": "atemp.recipebook.toggleRecipes.blastable"}
     ],
+    "$is_recipe_filter_toggle": true,
     "$hover_text_binding": [
       {
         "binding_type": "global",
@@ -183,8 +184,8 @@
   "crafting_nature_tab_icon@crafting_common.double_tab_icon_image"    : {"$right_item_texture": "textures/items/apple"         , "$left_item_texture": "textures/items/bucket_lava" },
   "crafting_equipment_tab_icon@crafting_common.double_tab_icon_image" : {"$right_item_texture": "textures/items/gold_sword"    , "$left_item_texture": "textures/items/iron_axe"    },
   //renderer since these are 3d
-  "crafting_construction_tab_icon@crafting_common.single_tab_icon_template" : {"$center_item_id": "$bricks_item_index" },
-  "furnace_blocks_tab_icon@crafting_common.single_tab_icon_template"        : {"$center_item_id": "$stone_item_index"  },
+  "crafting_construction_tab_icon@crafting_common.single_tab_icon_template" : {"$center_item_id": "$recipe_tab_bricks_item_index" },
+  "furnace_blocks_tab_icon@crafting_common.single_tab_icon_template"        : {"$center_item_id": "$recipe_tab_stone_item_index"  },
 
   "creative_tab_icons@global.empty_panel": {
     "controls": [
@@ -194,13 +195,13 @@
       //renderer since these are 3d
       {
         "inventory@crafting_common.tab_icon_renderer_template": {
-          "$item_id": "$chest_item_index",
+          "$item_id": "$recipe_tab_chest_item_index",
           "offset": [0, -1],
           "ignored": "(not ($toggle_control_name = 'survival_tab_toggle'))"
         }
       },
-      { "nature@crafting_common.tab_icon_renderer_template"       : {"$item_id": "$purple_froglight_item_index" ,"ignored": "(not ($toggle_control_name = 'nature_tab_toggle'))"       }},
-      { "construction@crafting_common.tab_icon_renderer_template" : {"$item_id": "$bricks_item_index"           ,"ignored": "(not ($toggle_control_name = 'construction_tab_toggle'))" }}
+      { "nature@crafting_common.tab_icon_renderer_template"       : {"$item_id": "$recipe_tab_purple_froglight_item_index" ,"ignored": "(not ($toggle_control_name = 'nature_tab_toggle'))"       }},
+      { "construction@crafting_common.tab_icon_renderer_template" : {"$item_id": "$recipe_tab_bricks_item_index"           ,"ignored": "(not ($toggle_control_name = 'construction_tab_toggle'))" }}
     ]
   },
   "recipe_toggle_base@toggle.radio_toggle": {

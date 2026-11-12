@@ -27,7 +27,7 @@
           "size": [52, 52],
           "anchor_from": "top_left",
           "anchor_to": "top_left",
-          "clips_children": "$should_clip_entity_renderers",
+          "clips_children": "$clip_entity_renderers",
           "controls": [
             {
               "mount_entity_renderer@global.custom_renderer": {
@@ -140,7 +140,7 @@
                 "localize": true,
                 "text_alignment": "left",
                 "text": "$container_title",
-                "color": "$container_title_color",
+                "color": "$container_title_text_color",
                 "enable_profanity_filter": true
               }
             },

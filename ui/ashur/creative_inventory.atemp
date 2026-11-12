@@ -150,7 +150,7 @@
                                   "layer": 6,
                                   "localize": true,
                                   "text": "ashur.tab.search",
-                                  "color": "$container_title_color"
+                                  "color": "$container_title_text_color"
                                 }
                               }
                             ]
@@ -325,7 +325,7 @@
                 "anchor_to": "top_left",
                 "layer": 5,
                 "offset": [73, 6],
-                "clips_children": "$should_clip_entity_renderers",
+                "clips_children": "$clip_entity_renderers",
                 "controls": [
                   {
                     "player_renderer@global.custom_renderer": {
@@ -514,7 +514,7 @@
     "size": ["default", 10],
     "layer": 6,
     "localize": true,
-    "color": "$container_title_color",
+    "color": "$container_title_text_color",
     "$label_visibility|default": "none",
     "bindings": [{ "binding_type": "global", "binding_name": "$label_visibility", "binding_name_override": "#visible" }]
   },
@@ -531,7 +531,7 @@
         "scroller_ridges@screen_content.image_element": {
           "tiled": true,
           "tiled_scale": [1, 1],
-          "ignored": "(not $should_tile_scroll_boxes)",
+          "ignored": "(not $tile_scroll_boxes)",
           "layer": 1,
           "nineslice_size": [0, 0, 0, 1],
           "uv": [1, 1],

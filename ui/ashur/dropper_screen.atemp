@@ -52,7 +52,7 @@
                                   "size": ["default", 10],
                                   "localize": true,
                                   "text": "atemp.container.dropper",
-                                  "color": "$container_title_color"
+                                  "color": "$container_title_text_color"
                                 }
                               }
                             ]

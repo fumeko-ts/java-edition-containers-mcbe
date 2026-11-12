@@ -185,7 +185,7 @@
       {
         "binding_type": "view",
         "binding_condition": "always",
-        "source_property_name": "('#enabled_alpha_' + (#trade_toggle_enabled or $use_unlocked_villager_trades))",
+        "source_property_name": "('#enabled_alpha_' + (#trade_toggle_enabled or $unlock_villager_trades))",
         "target_property_name": "#alpha"
       },
       {
@@ -218,7 +218,7 @@
       {
         "binding_type": "view",
         "binding_condition": "always",
-        "source_property_name": "('#enabled_' + (#trade_toggle_enabled or $use_unlocked_villager_trades))",
+        "source_property_name": "('#enabled_' + (#trade_toggle_enabled or $unlock_villager_trades))",
         "target_property_name": "#filtered_light_multiplier"
       }
     ]

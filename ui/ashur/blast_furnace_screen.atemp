@@ -74,7 +74,7 @@
                                   "layer": 3,
                                   "localize": true,
                                   "text": "atemp.container.blast_furnace",
-                                  "color": "$container_title_color"
+                                  "color": "$container_title_text_color"
                                 }
                               }
                             ]

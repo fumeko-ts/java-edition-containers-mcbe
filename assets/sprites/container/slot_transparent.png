@@ -164,14 +164,14 @@
       {
         "from_button_id": "button.inventory_left",
         "to_button_id": "button.menu_ok",
-        "ignored": "(not $use_experimental_recipe_scroll_input)",
+        "ignored": "(not $enable_recipe_page_mouse_scroll)",
         "consume_event": false,
         "mapping_type": "pressed"
       },
       {
         "from_button_id": "button.inventory_right",
         "to_button_id": "button.menu_ok",
-        "ignored": "(not $use_experimental_recipe_scroll_input)",
+        "ignored": "(not $enable_recipe_page_mouse_scroll)",
         "consume_event": false,
         "mapping_type": "pressed"
       }

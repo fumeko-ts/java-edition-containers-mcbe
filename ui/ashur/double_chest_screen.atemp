@@ -41,7 +41,7 @@
                       "localize": true,
                       "text_alignment": "left",
                       "text": "$container_title",
-                      "color": "$container_title_color",
+                      "color": "$container_title_text_color",
                       "enable_profanity_filter": true
                     }
                   },

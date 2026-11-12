@@ -150,7 +150,7 @@
               "trades_title@global.empty_label": {
                 "text": "atemp.merchant.trades",
                 "size": ["default", 10],
-                "color": "$container_title_color",
+                "color": "$container_title_text_color",
                 "layer": 14,
                 "anchor_to": "top_middle",
                 "anchor_from": "top_middle",
@@ -170,7 +170,7 @@
               "villager_name_label@global.empty_label": {
                 "size": ["default", 10],
                 "text": "#name_label",
-                "color": "$container_title_color",
+                "color": "$container_title_text_color",
                 "enable_profanity_filter": true,
                 "anchor_from": "top_middle",
                 "anchor_to": "top_middle",
@@ -280,7 +280,7 @@
         "scroller_ridges@screen_content.image_element": {
           "tiled": true,
           "tiled_scale": [1, 1],
-          "ignored": "(not $should_tile_scroll_boxes)",
+          "ignored": "(not $tile_scroll_boxes)",
           "layer": 1,
           "nineslice_size": [0, 0, 0, 1],
           "uv": [1, 1],
@@ -336,7 +336,7 @@
         "binding_name": "#tier_visible",
         "binding_name_override": "#visible",
         "binding_type": "collection",
-        "ignored": "($use_unlocked_villager_trades or $use_view_villager_trades)",
+        "ignored": "($unlock_villager_trades or $show_villager_trades)",
         "binding_collection_name": "trade_tiers",
         "binding_condition": "always"
       }
@@ -371,7 +371,7 @@
               "$locked": "beveled_buttons_bridge.trade_locked_control"
             },
             {
-              "requires": "$use_unlocked_villager_trades",
+              "requires": "$unlock_villager_trades",
               "$toggle_enabled_binding_name": "#none"
             }
           ],

@@ -81,7 +81,7 @@
                             "offset": [0, -1],
                             "layer": 5,
                             "text": "atemp.container.upgrade",
-                            "color": "$container_title_color"
+                            "color": "$container_title_text_color"
                           }
                         }
                       ]

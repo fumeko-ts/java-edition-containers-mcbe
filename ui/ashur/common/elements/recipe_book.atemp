@@ -135,7 +135,8 @@
                                               "$default_control": "screen_content.text_field",
                                               "$locked_control": "screen_content.text_field",
                                               "$hover_control": "screen_content.text_field_highlighted",
-                                              "$pressed_control": "screen_content.text_field_highlighted"
+                                              "$pressed_control": "screen_content.text_field_highlighted",
+                                              "$extra_contents": "recipe_book.search_tab_redirect_toggle"
                                             }
                                           },
                                           { "buffer_2@global.empty_panel": { "size": [81, 1] } }
@@ -201,6 +202,26 @@
     "$icon_unchecked_offset": [0, 0],
     "$icon_checked_offset": [-2, 0]
   },
+  "search_tab_redirect_toggle@toggle.radio_toggle": {
+    "$toggle_name": "navigation_tab",
+    "$toggle_control_name": "search_tab_toggle",
+    "$toggle_group_forced_index": "$search_index",
+    "$toggle_binding_value": "#is_left_tab_search",
+    "$controls": [],
+    "size": [81, 14],
+    "$button_volume": 0,
+    "$toggle_variables": "pagination.additional_toggle_properties",
+    //ignore for this since i do not know of a way to detect hover yet.
+    "ignored": "$enable_tab_hover_to_select",
+    "bindings": [
+      {
+        "binding_type": "global",
+        "binding_condition": "always",
+        "binding_name": "(not #is_left_tab_search)",
+        "binding_name_override": "#visible"
+      }
+    ]
+  },
   "count_template": {
     "type": "label",
     "anchor_from": "top_middle",
@@ -210,7 +231,6 @@
     "shadow": true,
     "visible": false
   },
-  "button_input_variables": { "always_listen_to_input": true, "consume_hover_events": false },
   "page_button_hover_text@container_common.custom_hover_text_renderer": {
     "$touch_tooltip_anchor": "bottom",
     "$hover_text_property_bag": {

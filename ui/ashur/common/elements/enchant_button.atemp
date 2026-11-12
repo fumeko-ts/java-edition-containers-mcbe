@@ -75,12 +75,12 @@
         "enabled@global.empty_panel": {
           "size": ["100%", "100%"],
           "controls": [
-            { "text_overlay@enchant_button.cost_template": { "color": "$xp_price_color_enabled_state" } },
+            { "text_overlay@enchant_button.cost_template": { "color": "$enchant_exp_enabled_color" } },
             {
               "text_shadow@enchant_button.cost_template": {
                 "offset": [1, 1],
                 "layer": 7,
-                "color": "$xp_price_shadow_color_enabled_state"
+                "color": "$enchant_exp_enabled_shadow_color"
               }
             }
           ],
@@ -99,12 +99,12 @@
         "disabled@global.empty_panel": {
           "size": ["100%", "100%"],
           "controls": [
-            { "text_overlay@enchant_button.cost_template": { "color": "$xp_price_color_disabled_state" } },
+            { "text_overlay@enchant_button.cost_template": { "color": "$enchant_exp_disabled_color" } },
             {
               "text_shadow@enchant_button.cost_template": {
                 "offset": [1, 1],
                 "layer": 7,
-                "color": "$xp_price_shadow_color_disabled_state"
+                "color": "$enchant_exp_disabled_shadow_color"
               }
             }
           ],
@@ -148,18 +148,18 @@
     "size": [69, 15],
     "anchor_from": "top_left",
     "anchor_to": "top_left",
-    "offset": [20, 1],
+    "offset": "$enchant_runes_offset",
     "clips_children": true,
     "controls": [
       {
         "disabled@enchant_button.rune_template": {
-          "color": "$runes_disabled_color",
+          "color": "$enchant_rune_disabled_color",
           "$binding_name": "#unselectable_dust_is_visible"
         }
       },
       {
         "enabled@enchant_button.rune_template": {
-          "color": "$runes_selectable_color",
+          "color": "$enchant_rune_selectable_color",
           "$binding_name": "#selectable_dust_is_visible"
         }
       }
@@ -251,16 +251,18 @@
             }
           ],
           "$mapping_type|default": "pressed",
-          "variables": [
-            { "requires": "$touch", "$mapping_type|default": "double_pressed" },
-            {
-              "requires": "$cb_is_thick_menu_buttons",
-              "$default_button_texture|default": "beveled_buttons_bridge.enchanting_button",
-              "$highlighted_button_texture|default": "beveled_buttons_bridge.enchanting_button_highlight"
-            }
-          ],
           "$default_button_texture|default": "enchant_button.enchanting_button",
           "$highlighted_button_texture|default": "enchant_button.enchanting_button_highlight",
+          "$enchant_runes_offset|default": [20, 1],
+          "variables": [
+            { "requires": "$touch", "$mapping_type": "double_pressed" },
+            {
+              "requires": "$cb_is_thick_menu_buttons",
+              "$default_button_texture": "beveled_buttons_bridge.enchanting_button",
+              "$highlighted_button_texture": "beveled_buttons_bridge.enchanting_button_highlight",
+              "$enchant_runes_offset": [20, 2]
+            }
+          ],
           "$selectable_orb|default": "('assets/sprites/container/enchanting_table/level_' + $collection_index)",
           "$unselectable_orb|default": "('assets/sprites/container/enchanting_table/level_' + $collection_index + '_disabled')",
           "$binding_name|default": "none",
@@ -273,7 +275,7 @@
             },
             { "default@$default_button_texture": {} },
             { "pressed@$default_button_texture": {} },
-            { "hover@$highlighted_button_texture": { "$runes_selectable_color": "$runes_enabled_hover_color" } },
+            { "hover@$highlighted_button_texture": { "$enchant_rune_selectable_color": "$enchant_rune_hover_color" } },
             { "locked@enchant_button.enchanting_button_disabled": {} }
           ]
         }
@@ -283,7 +285,7 @@
   "enchant_texture_template@screen_content.image_element": {
     "size": [108, 19],
     "layer": 4,
-    "$runes_selectable_color|default": "$runes_enabled_color",
+    "$enchant_rune_selectable_color|default": "$enchant_rune_enabled_color",
     "controls": [{ "runes@enchant_button.runes": {} }]
   },
   "enchanting_button_disabled@enchant_button.enchant_texture_template": {

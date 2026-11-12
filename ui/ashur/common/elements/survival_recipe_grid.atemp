@@ -155,7 +155,7 @@
                     "binding_collection_name": "$item_collection"
                   },
                   {
-                    "ignored": "$use_pc_hover_text_with_touch_input",
+                    "ignored": "$enable_pc_tooltips_for_touch_input",
                     "binding_name": "(not #using_touch)",
                     "binding_name_override": "#visible"
                   }

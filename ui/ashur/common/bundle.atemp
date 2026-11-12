@@ -82,7 +82,7 @@
                     "selected_item_tooltip@global.empty_image": {
                       "layer": 5,
                       "texture": "assets/sprites/container/bundle/tooltip_background",
-                      "size": ["100%c + 8px", "100%c + 7px"],
+                      "size": ["100%c + 10px", "100%c + 8px"],
                       "anchor_to": "bottom_middle",
                       "anchor_from": "top_middle",
                       "nineslice_size": 2,
@@ -91,8 +91,9 @@
                           "item_text_label": {
                             "type": "label",
                             "text": "#selected_bundle_item_text",
-                            "size": ["default", "default"],
-                            "shadow": true,
+                            "size": ["default", 10],
+                            "anchor_from": "center",
+                            "anchor_to": "center",
                             "enable_profanity_filter": true,
                             "bindings": [
                               {

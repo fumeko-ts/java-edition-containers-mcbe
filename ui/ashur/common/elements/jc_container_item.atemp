@@ -173,7 +173,7 @@
     "offset": "$stack_count_offset",
     "anchor_to": "bottom_right",
     "anchor_from": "bottom_right",
-    "layer": 9,
+    "layer": 13,
     "shadow": true,
     "size": ["default", 10],
     "text": "#inventory_stack_count",
@@ -235,7 +235,7 @@
           ],
           "bindings": [
             {
-              "ignored": "$use_pc_hover_text_with_touch_input",
+              "ignored": "$enable_pc_tooltips_for_touch_input",
               "binding_name": "(not #using_touch)",
               "binding_name_override": "#visible"
             }

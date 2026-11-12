@@ -18,15 +18,17 @@
   "namespace": "screen_content",
 
   "image_element@global.empty_image": {
-    "color": "$container_color",
+    "color": "$container_tint_color",
     "alpha": "$container_opacity"
   },
   "screen_background@global.empty_image": {
     "texture": "textures/ui/screen_background",
     "layer": -1000,
-    "alpha": "$background_blur_opacity",
+    "anchor_from": "center",
+    "anchor_to": "center",
+    "alpha": "$screen_blur_opacity",
     "nineslice_size": 1,
-    "size": ["100%", "100%"]
+    "size": ["140%", "140%"]
   },
   "container_template@screen_content.image_element": {
     "size": "$size",

@@ -2,54 +2,47 @@
   //used for compatibility
   "$is_java_containers": true,
   "$_pack_creator": "ashura_temps/ashura_tepes",
+
   //set UI transparency
   "$container_opacity": 1,
-  "$container_color": [], //hex to rgba converter --> https://fumeko-ts.github.io/fumeko-ts/hex_to_rgba.html
-  "$stack_splitting_overlay_color": [0.188, 0.718, 0.906],
-  "$background_blur_opacity": 1, //the base png is transparent
+  "$screen_blur_opacity": 1, 
 
-  "$show_exit_buttons": true,
-  //if true allows pc users to trigger the page buttons using the scroll wheel
-  "$use_experimental_recipe_scroll_input": false,
-  //if true allows the user to hover over a tab to auto select it
-  "$use_experimental_tab_toggle_input": false,
-  //if true will unlock villager trades
-  "$use_unlocked_villager_trades": false,
-  //if true will show villager trades
-  "$use_view_villager_trades": false,
-  //if true allows touch input users to use pc tooltip instead of the mobile one
-  "$use_pc_hover_text_with_touch_input": false,
-  //cleanly tiles the scroll box texture to create somewhat even ridges
-  "$should_tile_scroll_boxes": true,
-  //if true will render hud behind container uis like in java
-  "$use_experimental_hud_always_visible": false,
-  //if true will clip player renderer and the mount ui entity renderer
-  "$should_clip_entity_renderers": true,
-  //hides the custom hover texts for things like the recipe book filter toggles and the recipe book page buttons 
-  "$hide_custom_hover_texts": false,
+  //hex to rgba converter --> https://fumeko-ts.github.io/fumeko-ts/hex_to_rgba.html
+  "$container_tint_color": [], 
+  "$stack_split_overlay_color": [0.188, 0.718, 0.906],
+  
+  "$show_close_buttons": true,
+  "$enable_recipe_page_mouse_scroll": false,
+  "$enable_tab_hover_to_select": false,
+  "$unlock_villager_trades": false,
+  "$show_villager_trades": false,
+  "$enable_pc_tooltips_for_touch_input": false,
+  "$tile_scroll_boxes": true,
+  "$keep_hud_visible_in_containers": false,
+  "$clip_entity_renderers": true,
+  "$hide_custom_tooltips": false,
+
   //title text color
-  "$container_title_color": [0.247, 0.247, 0.247],
+  "$container_title_text_color": [0.247, 0.247, 0.247],
 
   /*
     these item indexes are whats used to render the items in the recipe book tabs
     you can find the index for a item using this --> https://www.planetminecraft.com/texture-pack/item-id-visualizer-mcbe-mcpe/
   */
 
-  "$chest_item_index": 54,
-  "$purple_froglight_item_index": -469,
-  "$bricks_item_index": 45,
-  "$stone_item_index": 1,
+  "$recipe_tab_chest_item_index": 54,
+  "$recipe_tab_purple_froglight_item_index": -469,
+  "$recipe_tab_bricks_item_index": 45,
+  "$recipe_tab_stone_item_index": 1,
 
   //enchanting table text colors
-  "$xp_price_color_enabled_state": [0.4941, 0.9882, 0.1255, 1],
-  "$xp_price_shadow_color_enabled_state": [0.1255, 0.2431, 0.0314, 1],
-
-  "$xp_price_color_disabled_state": [0.2471, 0.4941, 0.0627, 1],
-  "$xp_price_shadow_color_disabled_state": [0.0627, 0.1216, 0.0157, 1],
-
-  "$runes_disabled_color": [0.2, 0.1804, 0.1451, 1],
-  "$runes_enabled_color": [0.4039, 0.3647, 0.2863, 1],
-  "$runes_enabled_hover_color": [0.988, 0.988, 0.494],
+  "$enchant_exp_enabled_color": [0.4941, 0.9882, 0.1255, 1],
+  "$enchant_exp_enabled_shadow_color": [0.1255, 0.2431, 0.0314, 1],
+  "$enchant_exp_disabled_color": [0.2471, 0.4941, 0.0627, 1],
+  "$enchant_exp_disabled_shadow_color": [0.0627, 0.1216, 0.0157, 1],
+  "$enchant_rune_disabled_color": [0.2, 0.1804, 0.1451, 1],
+  "$enchant_rune_enabled_color": [0.4039, 0.3647, 0.2863, 1],
+  "$enchant_rune_hover_color": [0.988, 0.988, 0.494],
 
   /* 
     Compatibility variables (dont modify)

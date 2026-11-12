@@ -32,7 +32,7 @@
     "unchecked_hover_control": "default_hover",
     "checked_control": "checked",
     "checked_hover_control": "checked_hover",
-    "toggle_on_hover": "$use_experimental_tab_toggle_input"
+    "toggle_on_hover": "$enable_tab_hover_to_select"
   },
   "tab_toggle@toggle.radio_toggle": {
     "$toggle_variables": "toggle.toggle_on_hover",

@@ -96,7 +96,7 @@
                                           {
                                             "player_renderer_clipping_panel@global.empty_panel": {
                                               "size": [49, 70],
-                                              "clips_children": "$should_clip_entity_renderers",
+                                              "clips_children": "$clip_entity_renderers",
                                               "controls": [
                                                 {
                                                   "player_renderer@global.custom_renderer": {
@@ -157,7 +157,7 @@
                                                     "size": [74, 10],
                                                     "anchor_from": "bottom_left",
                                                     "anchor_to": "bottom_left",
-                                                    "color": "$container_title_color",
+                                                    "color": "$container_title_text_color",
                                                     "text": "atemp.container.crafting"
                                                   }
                                                 }

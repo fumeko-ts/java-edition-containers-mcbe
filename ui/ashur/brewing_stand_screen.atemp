@@ -116,7 +116,7 @@
                                         "size": ["default", 10],
                                         "localize": true,
                                         "text": "atemp.container.brewing",
-                                        "color": "$container_title_color"
+                                        "color": "$container_title_text_color"
                                       }
                                     }
                                   ]

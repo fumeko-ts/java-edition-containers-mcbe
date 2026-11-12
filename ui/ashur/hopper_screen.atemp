@@ -41,7 +41,7 @@
                       "size": ["default", 10],
                       "localize": true,
                       "text": "atemp.container.hopper",
-                      "color": "$container_title_color"
+                      "color": "$container_title_text_color"
                     }
                   }
                 ]

@@ -54,7 +54,7 @@
                       "offset": [8, -1],
                       "layer": 5,
                       "text": "atemp.container.stonecutter",
-                      "color": "$container_title_color"
+                      "color": "$container_title_text_color"
                     }
                   }
                 ]
@@ -300,7 +300,7 @@
         "scroller_ridges@screen_content.image_element": {
           "tiled": true,
           "tiled_scale": [1, 1],
-          "ignored": "(not $should_tile_scroll_boxes)",
+          "ignored": "(not $tile_scroll_boxes)",
           "layer": 1,
           "nineslice_size": [0, 0, 0, 1],
           "uv": [1, 1],

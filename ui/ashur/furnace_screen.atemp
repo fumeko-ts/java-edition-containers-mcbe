@@ -90,7 +90,7 @@
                                   "localize": true,
                                   "layer": 3,
                                   "text": "atemp.container.furnace",
-                                  "color": "$container_title_color"
+                                  "color": "$container_title_text_color"
                                 }
                               }
                             ]

@@ -45,6 +45,20 @@
         "consume_event": false
       },
       {
+        "from_button_id": "button.menu_secondary_select",
+        "to_button_id": "button.text_edit_box_selected",
+        "mapping_type": "pressed",
+        "handle_select": true,
+        "handle_deselect": true
+      },
+      {
+        "from_button_id": "button.menu_secondary_select",
+        "to_button_id": "button.text_edit_box_selected",
+        "mapping_type": "global",
+        "handle_select": false,
+        "handle_deselect": true
+      },
+      {
         "from_button_id": "button.menu_ok",
         "to_button_id": "button.text_edit_box_selected",
         "mapping_type": "pressed",
@@ -108,6 +122,15 @@
         "binding_name_override": "#item_name"
       }
     ],
+    "$placeholder_text_bindings|default": [
+      {
+        "binding_type": "view",
+        "source_control_name": "$text_edit_text_control",
+        "source_property_name": "(#item_name = '')",
+        "target_property_name": "#visible",
+        "resolve_sibling_scope": true
+      }
+    ],
     "$text_edit_label_size|default": ["default", 10],
     "focus_enabled": "$game_pad",
     "focus_wrap_enabled": false,
@@ -135,7 +158,7 @@
               }
             },
             {
-              "place_holder_text_label@global.empty_label": {
+              "place_holder_text_label@global.empty_panel": {
                 "size": ["100%", "100%"],
                 "offset": "$place_holder_text_offset",
                 "controls": [
@@ -156,15 +179,7 @@
                     }
                   }
                 ],
-                "bindings": [
-                  {
-                    "binding_type": "view",
-                    "source_control_name": "$text_edit_text_control",
-                    "source_property_name": "(#item_name = '')",
-                    "target_property_name": "#visible",
-                    "resolve_sibling_scope": true
-                  }
-                ]
+                "bindings": "$placeholder_text_bindings"
               }
             }
           ]

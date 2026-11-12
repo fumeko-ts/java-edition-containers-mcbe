@@ -28,7 +28,7 @@
     "sound_name": "random.click",
     "$exit_offset": [-2, 2],
     "offset": "$exit_offset",
-    "ignored": "(not $show_exit_buttons)",
+    "ignored": "(not $show_close_buttons)",
     "sound_volume": 1.0,
     "sound_pitch": 1.0,
     "focus_enabled": "$game_pad",
@@ -54,7 +54,7 @@
     "cache_screen": true,
     "send_telemetry": true,
     "gamepad_cursor": true,
-    "force_render_below": "$use_experimental_hud_always_visible",
+    "force_render_below": "$keep_hud_visible_in_containers",
     "close_on_player_hurt": "$touch",
     "controls": [
       {
@@ -158,7 +158,7 @@
       { "flying_item_renderer@container_common.item_floating_selected_element": {} },
       {
         "selected_item_tooltip_mobile@global.empty_panel": {
-          "ignored": "$use_pc_hover_text_with_touch_input",
+          "ignored": "$enable_pc_tooltips_for_touch_input",
           "controls": [
             {
               "selected_item_details_factory": {

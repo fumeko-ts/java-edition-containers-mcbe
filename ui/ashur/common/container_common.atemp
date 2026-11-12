@@ -123,7 +123,7 @@
           "size": [162, 10],
           "localize": true,
           "text_alignment": "left",
-          "color": "$container_title_color",
+          "color": "$container_title_text_color",
           "text": "atemp.container.inventory"
         }
       }
@@ -198,31 +198,47 @@
     "$hover_text_anchor_from": "right_middle",
     "$hover_text_anchor_to": "left_middle",
 
-    "variables": {
-      "requires": "($touch_tooltip_anchor = 'bottom')",
-      "$hover_text_anchor_from": "bottom_middle",
-      "$hover_text_anchor_to": "top_middle"
-    }
+    "variables": [
+      {
+        "requires": "($touch_tooltip_anchor = 'bottom')",
+        "$hover_text_anchor_from": "bottom_middle",
+        "$hover_text_anchor_to": "top_middle"
+      },
+      {
+        "requires": "$is_recipe_filter_toggle",
+        "$hover_text_anchor_from": "top_middle",
+        "$hover_text_anchor_to": "bottom_middle"
+
+      }
+    ]
   },
 
   "custom_hover_text_renderer@trade_global.trade_text_area": {
     "$hover_text_binding|default": [],
     "$hover_text_visuals_binding|default": [],
     "$hover_text_property_bag|default": {},
-    "ignored": "$hide_custom_hover_texts",
+    "ignored": "$hide_custom_tooltips",
     "$touch_tooltip_anchor|default": "right",
+    "$custon_tooltip_label_size|default": ["default", 10],
+    "$is_recipe_filter_toggle|default": false,
     "controls": [
       {
         "hover_text_wrapper@global.empty_panel": {
           "$hover_text_parent_control|default": "container_common.hover_text_follow_parent",
           "$hover_text_offset|default": [18, 18],
           "$hover_text_anchor|default": "top_left",
-          "variables": {
-            "requires": "$touch",
-            "$hover_text_parent_control": "container_common.hover_text_nofollow_parent",
-            "$hover_text_offset": [0, 0],
-            "$hover_text_anchor": "top_middle"
-          },
+          "variables": [
+            {
+              "requires": "$touch",
+              "$hover_text_parent_control": "container_common.hover_text_nofollow_parent",
+              "$hover_text_offset": [0, 0],
+              "$hover_text_anchor": "top_middle"
+            },
+            {
+              "requires": "($touch and $is_recipe_filter_toggle)",
+              "$hover_text_offset": [0, -2]
+            }
+          ],
           "controls": [
             {
               "$hover_text_parent_control@$hover_text_parent_control": {
@@ -248,7 +264,7 @@
                             "localize": true,
                             "anchor_from": "center",
                             "anchor_to": "center",
-                            "size": ["default", "default"],
+                            "size": "$custon_tooltip_label_size",
                             "layer": 2,
                             "bindings": "$hover_text_binding",
                             "property_bag": "$hover_text_property_bag"

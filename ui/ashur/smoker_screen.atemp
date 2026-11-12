@@ -73,7 +73,7 @@
                                   "layer": 3,
                                   "size": ["default", 10],
                                   "text": "atemp.container.smoker",
-                                  "color": "$container_title_color"
+                                  "color": "$container_title_text_color"
                                 }
                               }
                             ]
