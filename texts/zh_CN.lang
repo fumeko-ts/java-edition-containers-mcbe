@@ -38,3 +38,11 @@ ashur.tab.nature=自然
 ashur.tab.equipment=装备
 ashur.tab.construction=建筑
 ashur.tab.search=搜索
+
+atemp.recipebook.next_page=下一页
+atemp.recipebook.previous_page=上一页
+atemp.recipebook.toggleRecipes.all=显示全部
+atemp.recipebook.toggleRecipes.blastable=仅显示可冶炼
+atemp.recipebook.toggleRecipes.craftable=仅显示可合成
+atemp.recipebook.toggleRecipes.smeltable=仅显示可烧炼
+atemp.recipebook.toggleRecipes.smokable=仅显示可熏制

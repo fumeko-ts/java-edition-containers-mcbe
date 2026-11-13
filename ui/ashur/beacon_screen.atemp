@@ -179,7 +179,7 @@
             {
               "inventory_grid_holder@global.empty_panel": {
                 "size": [162, 83],
-                "controls": [{ "inventory_and_hotbar@container_common.container_bottom_section": {} }]
+                "controls": [{ "inventory_and_hotbar@container_common.inventory_section_without_label": {} }]
               }
             },
             { "filler_17@global.empty_panel": { "size": [33, 83] } }
@@ -251,10 +251,10 @@
     "$icon_path": "('assets/beacon_button_sprites/' + $effect_name)",
     "bindings": [
       {
-        "binding_name": "#extra_image_selection",
-        "binding_name_override": "#visible",
+        "binding_type": "collection",
         "binding_collection_name": "$effect_name",
-        "binding_type": "collection"
+        "binding_name": "#extra_image_selection",
+        "binding_name_override": "#visible"
       }
     ]
   },
@@ -282,10 +282,10 @@
               "hover_text@global.hover_text": {
                 "bindings": [
                   {
-                    "binding_name": "#button_hover",
-                    "binding_name_override": "#hover_text",
+                    "binding_type": "collection",
                     "binding_collection_name": "$button_name",
-                    "binding_type": "collection"
+                    "binding_name": "#button_hover",
+                    "binding_name_override": "#hover_text"
                   }
                 ]
               }
@@ -310,10 +310,10 @@
           "$bindings": [
             { "binding_collection_name": "$button_name", "binding_type": "collection_details" },
             {
-              "binding_name": "#button_visible",
-              "binding_name_override": "#visible",
+              "binding_type": "collection",
+              "binding_name": "#selected",
               "binding_collection_name": "$button_name",
-              "binding_type": "collection"
+              "binding_name_override": "#toggle_state"
             },
             {
               "binding_type": "collection",
@@ -323,9 +323,10 @@
             },
             {
               "binding_type": "collection",
-              "binding_name": "#selected",
               "binding_collection_name": "$button_name",
-              "binding_name_override": "#toggle_state"
+              "binding_condition": "always",
+              "binding_name": "#button_visible",
+              "binding_name_override": "#visible"
             }
           ],
           "$unchecked": "beacon_screen.toggle_unchecked_visual",
@@ -335,12 +336,12 @@
           "$locked": "beacon_screen.toggle_locked_visual",
           "$extra_contents": "beacon_screen.toggle_icon",
           "variables": {
-            "requires": "($cb_is_thick_menu_buttons = true)",
-            "$unchecked": "beveled_buttons_bridge.toggle_unchecked_visual",
-            "$unchecked_hover": "beveled_buttons_bridge.toggle_hover_visual",
-            "$checked": "beveled_buttons_bridge.toggle_checked_visual",
-            "$checked_hover": "beveled_buttons_bridge.toggle_checked_visual",
-            "$locked": "beveled_buttons_bridge.toggle_locked_visual"
+            "requires": "$cb_is_thick_menu_buttons",
+            "$unchecked": "beveled_buttons_bridge.beacon_toggle_unchecked_control",
+            "$unchecked_hover": "beveled_buttons_bridge.beacon_toggle_unchecked_hover_control",
+            "$checked": "beveled_buttons_bridge.beacon_toggle_checked_control",
+            "$checked_hover": "beveled_buttons_bridge.beacon_toggle_checked_control",
+            "$locked": "beveled_buttons_bridge.beacon_toggle_locked_control"
           }
         }
       }

@@ -32,7 +32,10 @@
     // pack specific compatibility
     "ui/ashur/common/compatibility/bridges/beveled_buttons_bridge.atemp",
     "ui/ashur/common/compatibility/bridges/deesse_ui_bridge.atemp",
+    "ui/ashur/common/compatibility/bridges/container_utilities_bridge.atemp",
     "ui/ashur/common/compatibility/bridges/jei_layout_bridge.atemp",
+    //wip (commented out at the moment because it's being weird)
+    //"ui/ashur/common/compatibility/bridges/advanced_container_bridge.atemp",
 
     // screens
     "ui/ashur/inventory_screen.atemp",

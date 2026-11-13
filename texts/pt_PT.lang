@@ -38,3 +38,11 @@ ashur.tab.nature=Natureza
 ashur.tab.equipment=Equipamento
 ashur.tab.construction=Construção
 ashur.tab.search=Pesquisar
+
+atemp.recipebook.next_page=Página seguinte
+atemp.recipebook.previous_page=Página anterior
+atemp.recipebook.toggleRecipes.all=Todas
+atemp.recipebook.toggleRecipes.blastable=Possíveis
+atemp.recipebook.toggleRecipes.craftable=Possíveis
+atemp.recipebook.toggleRecipes.smeltable=Possíveis
+atemp.recipebook.toggleRecipes.smokable=Possíveis

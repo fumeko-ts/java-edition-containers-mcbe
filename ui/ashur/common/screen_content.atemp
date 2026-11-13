@@ -18,19 +18,17 @@
   "namespace": "screen_content",
 
   "image_element@global.empty_image": {
-    "color": "$container_color",
+    "color": "$container_tint_color",
     "alpha": "$container_opacity"
   },
   "screen_background@global.empty_image": {
     "texture": "textures/ui/screen_background",
     "layer": -1000,
-    "alpha": "$background_blur_opacity",
+    "anchor_from": "center",
+    "anchor_to": "center",
+    "alpha": "$screen_blur_opacity",
     "nineslice_size": 1,
-    "size": ["100%", "100%"]
-  },
-  "button_state_common@screen_content.image_element": {
-    "size": [88, 20],
-    "layer": 4
+    "size": ["140%", "140%"]
   },
   "container_template@screen_content.image_element": {
     "size": "$size",
@@ -72,11 +70,9 @@
 
   //barrel
   "barrel@global.empty_panel": {
-    "size": [176, 166],
+    "size": [176, 167],
     "controls": [
-      {
-        "close_button@global.close_button": {}
-      },
+      {"close_button@global.close_button": {}},
       {
         "top_half@screen_content.image_element": {
           "anchor_from": "top_middle",
@@ -91,9 +87,9 @@
         "bottom_half@screen_content.image_element": {
           "anchor_from": "bottom_middle",
           "anchor_to": "bottom_middle",
-          "uv": [0, 127],
-          "uv_size": [176, 95],
-          "size": [176, 95],
+          "uv": [0, 126],
+          "uv_size": [176, 96],
+          "size": [176, 96],
           "texture": "assets/container/generic_54"
         }
       }
@@ -144,6 +140,8 @@
     "size": [147, 166]
   },
   "recipe_direction_base@screen_content.image_element": {
+    "anchor_from": "$anchor_point", 
+    "anchor_to": "$anchor_point",
     "size": [12, 17]
   },
   "page_left@screen_content.recipe_direction_base": {
@@ -221,10 +219,33 @@
   },
 
   //double chest
-  "double_chest@screen_content.container_template": {
-    "$size": [176, 222],
-    "texture": "assets/container/generic_54"
+  "double_chest@global.empty_panel": {
+    "size": [176, 221],
+    "controls": [
+      {"close_button@global.close_button": {}},
+      {
+        "top_half@screen_content.image_element": {
+          "anchor_from": "top_middle",
+          "anchor_to": "top_middle",
+          "uv": [0, 0],
+          "uv_size": [176, 125],
+          "size": [176, 125],
+          "texture": "assets/container/generic_54"
+        }
+      },
+      {
+        "bottom_half@screen_content.image_element": {
+          "anchor_from": "bottom_middle",
+          "anchor_to": "bottom_middle",
+          "uv": [0, 126],
+          "uv_size": [176, 96],
+          "size": [176, 96],
+          "texture": "assets/container/generic_54"
+        }
+      }
+    ]
   },
+
 
   //enchanting table
   "enchanting@screen_content.container_template": {
@@ -239,11 +260,9 @@
 
   //ender chest
   "ender_chest@global.empty_panel": {
-    "size": [176, 166],
+    "size": [176, 167],
     "controls": [
-      {
-        "close_button@global.close_button": {}
-      },
+      {"close_button@global.close_button": {}},
       {
         "top_half@screen_content.image_element": {
           "anchor_from": "top_middle",
@@ -258,9 +277,9 @@
         "bottom_half@screen_content.image_element": {
           "anchor_from": "bottom_middle",
           "anchor_to": "bottom_middle",
-          "uv": [0, 127],
-          "uv_size": [176, 95],
-          "size": [176, 95],
+          "uv": [0, 126],
+          "uv_size": [176, 96],
+          "size": [176, 96],
           "texture": "assets/container/generic_54"
         }
       }
@@ -309,50 +328,23 @@
     "$size": [176, 166],
     "texture": "assets/container/inventory"
   },
-  "armor_overlay@screen_content.image_element": {
+  "inventory_slot_icon_template@screen_content.image_element": {
     "size": [16, 16],
     "layer": 5,
     "bindings": [
       {
-        "binding_name": "#empty_armor_image_visible",
+        "binding_name": "('#empty_' + ($item_collection - 'items') + 'image_visible')",
         "binding_name_override": "#visible",
         "binding_type": "collection",
         "binding_collection_name": "$item_collection"
       }
     ]
   },
-  "offhand_overlay@screen_content.image_element": {
-    "size": [16, 16],
-    "layer": 5,
-    "bindings": [
-      {
-        "binding_name": "#empty_offhand_image_visible",
-        "binding_name_override": "#visible",
-        "binding_type": "collection",
-        "binding_collection_name": "$item_collection"
-      }
-    ]
-  },
-  "armor_overlay_helmet@screen_content.armor_overlay": {
-    "size": [16, 16],
-    "texture": "assets/sprites/container/slot/helmet"
-  },
-  "armor_overlay_chest@screen_content.armor_overlay": {
-    "size": [16, 16],
-    "texture": "assets/sprites/container/slot/chestplate"
-  },
-  "armor_overlay_legs@screen_content.armor_overlay": {
-    "size": [16, 16],
-    "texture": "assets/sprites/container/slot/leggings"
-  },
-  "armor_image_feet@screen_content.armor_overlay": {
-    "size": [16, 16],
-    "texture": "assets/sprites/container/slot/boots"
-  },
-  "armor_overlay_shield@screen_content.offhand_overlay": {
-    "size": [16, 16],
-    "texture": "assets/sprites/container/slot/shield"
-  },
+  "armor_helmet_icon@screen_content.inventory_slot_icon_template"     : {"texture": "assets/sprites/container/slot/helmet"     },
+  "armor_chestplate_icon@screen_content.inventory_slot_icon_template" : {"texture": "assets/sprites/container/slot/chestplate" },
+  "armor_leggings_icon@screen_content.inventory_slot_icon_template"   : {"texture": "assets/sprites/container/slot/leggings"   },
+  "armor_boots_icon@screen_content.inventory_slot_icon_template"      : {"texture": "assets/sprites/container/slot/boots"      },
+  "offhand_icon@screen_content.inventory_slot_icon_template"          : {"texture": "assets/sprites/container/slot/shield"     },
 
   //loom
   "loom@screen_content.container_template": {
@@ -367,7 +359,7 @@
     "texture": "assets/sprites/container/loom/dye_slot"
   },
   "pattern_empty_image@loom_screen.item_empty_image": {
-    "texture": "assets/sprites/container/loom/pattern_slot"
+    "texture": "assets/sprites/container/slot/banner_pattern"
   },
 
   //shulker box
@@ -378,11 +370,9 @@
 
   //small chest
   "small_chest@global.empty_panel": {
-    "size": [176, 166],
+    "size": [176, 167],
     "controls": [
-      {
-        "close_button@global.close_button": {}
-      },
+      {"close_button@global.close_button": {}},
       {
         "top_half@screen_content.image_element": {
           "anchor_from": "top_middle",
@@ -397,9 +387,9 @@
         "bottom_half@screen_content.image_element": {
           "anchor_from": "bottom_middle",
           "anchor_to": "bottom_middle",
-          "uv": [0, 127],
-          "uv_size": [176, 95],
-          "size": [176, 95],
+          "uv": [0, 126],
+          "uv_size": [176, 96],
+          "size": [176, 96],
           "texture": "assets/container/generic_54"
         }
       }
@@ -441,19 +431,19 @@
     "$size": [276, 166],
     "texture": "assets/container/villager"
   },
-  "unchecked_control@screen_content.button_state_common": {
-    "texture": "assets/sprites/container/villager/button"
+
+  //changed to a tiled ver (forgot tiled property existed)
+  "button_state_common@screen_content.image_element": {
+    "size": [88, 20],
+    "tiled": true,
+    //"alpha": 5,
+    "nineslice_size": 3,
+    "tiled_scale": [1, 1],
+    "layer": 4
   },
-  "checked_control@screen_content.button_state_common": {
-    "texture": "assets/sprites/container/villager/button_highlighted"
-  },
-  "unchecked_hover_control@screen_content.button_state_common": {
-    "texture": "assets/sprites/container/villager/button_highlighted"
-  },
-  "checked_hover_control@screen_content.button_state_common": {
-    "texture": "assets/sprites/container/villager/button_highlighted"
-  },
-  "locked_control@screen_content.button_state_common": {
-    "texture": "assets/sprites/container/villager/button_disabled"
-  }
+  "unchecked_control@screen_content.button_state_common"       : {"texture": "assets/sprites/container/villager/button"             },
+  "checked_control@screen_content.button_state_common"         : {"texture": "assets/sprites/container/villager/button_highlighted" },
+  "unchecked_hover_control@screen_content.button_state_common" : {"texture": "assets/sprites/container/villager/button_highlighted" },
+  "checked_hover_control@screen_content.button_state_common"   : {"texture": "assets/sprites/container/villager/button_highlighted" },
+  "locked_control@screen_content.button_state_common"          : {"texture": "assets/sprites/container/villager/button_disabled"    }
 }

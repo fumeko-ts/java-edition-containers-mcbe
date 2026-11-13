@@ -38,3 +38,11 @@ ashur.tab.nature=Příroda
 ashur.tab.equipment=Vybavení
 ashur.tab.construction=Stavba
 ashur.tab.search=Hledat
+
+atemp.recipebook.next_page=Další strana
+atemp.recipebook.previous_page=Předchozí strana
+atemp.recipebook.toggleRecipes.all=Zobrazení všech
+atemp.recipebook.toggleRecipes.blastable=Zobrazení vytavitelných
+atemp.recipebook.toggleRecipes.craftable=Zobrazení vytvořitelných
+atemp.recipebook.toggleRecipes.smeltable=Zobrazení tepelně zpracovatelných
+atemp.recipebook.toggleRecipes.smokable=Zobrazení upečitelných

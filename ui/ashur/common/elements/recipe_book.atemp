@@ -17,11 +17,6 @@
 {
   "namespace": "recipe_book",
   "recipe_book@global.empty_panel": {
-    "$namespace|default": "screen_content",
-    "variables": {
-      "requires": "$cb_is_thick_menu_buttons",
-      "$namespace|default": "beveled_buttons_bridge"
-    },
     "size": ["100%c", 166],
     "ignored": "$is_jei_recipe_book_layout_pack",
     "$recipe_filter_control|default": "crafting_common.filter_toggle",
@@ -68,37 +63,46 @@
         }
       }
     ],
+    "$namespace|default": "screen_content",
+    "variables": {
+      "requires": "$cb_is_thick_menu_buttons",
+      "$namespace": "beveled_buttons_bridge"
+    },
     "controls": [
       {
         "recipe_book@global.root_panel": {
-          "$size": [183, 166],
+          "$size": ["100%c + 16px", 166],
           "controls": [
             {
               "recipe_book_elements@global.empty_stack": {
                 "orientation": "horizontal",
-                "size": [183, 166],
+                "anchor_from": "right_middle",
+                "anchor_to": "right_middle",
+                "size": ["100%c", 166],
                 "controls": [
-                  {
-                    "recipe_book_tab_stack@global.empty_stack": {
-                      "orientation": "vertical",
-                      "size": [35, 166],
-                      "layer": 2,
-                      "controls": [
-                        { "top_static_filler@global.empty_panel": { "size": [35, 3] } },
-                        {
-                          "recipe_book_tabs@global.empty_stack": {
-                            "orientation": "vertical",
-                            "size": [35, "100%c"],
-                            "controls": "$tab_stack_controls"
-                          }
-                        },
-                        { "bottom_expanding_filler@global.empty_panel": { "size": [35, "fill"] } }
-                      ]
-                    }
-                  },
                   {
                     "recipe_book_content@screen_content.recipe_book": {
                       "controls": [
+                        {
+                          "recipe_book_tab_stack@global.empty_stack": {
+                            "orientation": "vertical",
+                            "size": [35, 166],
+                            "layer": 2,
+                            "anchor_from": "top_left",
+                            "anchor_to": "top_right",
+                            "controls": [
+                              { "top_static_filler@global.empty_panel": { "size": [35, 3] } },
+                              {
+                                "recipe_book_tabs@global.empty_stack": {
+                                  "orientation": "vertical",
+                                  "size": [35, "100%c"],
+                                  "controls": "$tab_stack_controls"
+                                }
+                              },
+                              { "bottom_expanding_filler@global.empty_panel": { "size": [35, "fill"] } }
+                            ]
+                          }
+                        },
                         {
                           "holder@global.empty_stack": {
                             "orientation": "vertical",
@@ -123,14 +127,16 @@
                                               "size": [81, 14],
                                               "$edit_label_offset": [2, 0],
                                               "$place_holder_text_offset": [3, 0],
+                                              "$text_edit_label_size": ["default", 10],
                                               "layer": 4,
-                                              "$place_holder_text_color": [0.478, 0.478, 0.478],
-                                              "$place_holder_text_shadow_color": [0.176, 0.176, 0.176],
+                                              "$place_holder_text_color": [0.659, 0.659, 0.659],
+                                              "$place_holder_text_shadow_color": [0.165, 0.165, 0.165],
                                               "$place_holder_text": "atemp.recipe_book.searchBox",
                                               "$default_control": "screen_content.text_field",
                                               "$locked_control": "screen_content.text_field",
                                               "$hover_control": "screen_content.text_field_highlighted",
-                                              "$pressed_control": "screen_content.text_field_highlighted"
+                                              "$pressed_control": "screen_content.text_field_highlighted",
+                                              "$extra_contents": "recipe_book.search_tab_redirect_toggle"
                                             }
                                           },
                                           { "buffer_2@global.empty_panel": { "size": [81, 1] } }
@@ -154,14 +160,22 @@
                       ]
                     }
                   },
-                  { "container_center_spacer@global.empty_panel": { "size": [1, 166] } }
+                  { "container_center_spacer@global.empty_panel": { "size": [2, 166] } }
                 ]
               }
             }
           ],
           "bindings": [
             {
+              "binding_type": "view",
+              "ignored": "(not ($is_smelting_screen and $pocket_screen))",
+              "source_control_name": "is_recipe_book_layout",
+              "source_property_name": "(not #toggle_state)",
+              "target_property_name": "#visible"
+            },
+            {
               "binding_type": "global",
+              "ignored": "($is_smelting_screen and $pocket_screen)",
               "binding_name": "(not #is_survival_layout)",
               "binding_name_override": "#visible"
             }
@@ -172,20 +186,11 @@
     "bindings": [
       {
         "binding_type": "global",
+        "binding_condition": "always",
         "binding_name": "(not #is_creative_mode)",
         "binding_name_override": "#visible"
       }
     ]
-  },
-  "count_template": {
-    "type": "label",
-    "anchor_from": "top_middle",
-    "anchor_to": "top_middle",
-    "size": ["default", 10],
-    "text": "#text",
-    "color": [0.702, 0.702, 0.702],
-    "shadow": true,
-    "visible": false
   },
   "recipe_tab_template@toggle.tab_toggle": {
     "size": [35, 27],
@@ -197,7 +202,41 @@
     "$icon_unchecked_offset": [0, 0],
     "$icon_checked_offset": [-2, 0]
   },
-  "button_input_variables": { "always_listen_to_input": true, "consume_hover_events": false },
+  "search_tab_redirect_toggle@toggle.radio_toggle": {
+    "$toggle_name": "navigation_tab",
+    "$toggle_control_name": "search_tab_toggle",
+    "$toggle_group_forced_index": "$search_index",
+    "$toggle_binding_value": "#is_left_tab_search",
+    "$controls": [],
+    "size": [81, 14],
+    "$button_volume": 0,
+    "$toggle_variables": "pagination.additional_toggle_properties",
+    //ignore for this since i do not know of a way to detect hover yet.
+    "ignored": "$enable_tab_hover_to_select",
+    "bindings": [
+      {
+        "binding_type": "global",
+        "binding_condition": "always",
+        "binding_name": "(not #is_left_tab_search)",
+        "binding_name_override": "#visible"
+      }
+    ]
+  },
+  "count_template": {
+    "type": "label",
+    "anchor_from": "top_middle",
+    "anchor_to": "top_middle",
+    "size": ["default", 10],
+    "text": "#text",
+    "shadow": true,
+    "visible": false
+  },
+  "page_button_hover_text@container_common.custom_hover_text_renderer": {
+    "$touch_tooltip_anchor": "bottom",
+    "$hover_text_property_bag": {
+      "#hover_text": "$recipe_page_button_translation_key"
+    }
+  },
   "button_visuals": {
     "type": "button",
     "size": [18, 17],
@@ -215,21 +254,34 @@
         "to_button_id": "button.menu_select",
         "mapping_type": "pressed"
       },
-      { "from_button_id": "button.menu_ok", "to_button_id": "button.menu_ok", "mapping_type": "focused" }
+      {
+        "from_button_id": "button.menu_ok",
+        "to_button_id": "button.menu_ok",
+        "mapping_type": "focused"
+      }
     ],
     "$anchor_point|default": "right_middle",
-    "controls": [
-      {
-        "touch@$default_pagination": {
-          "layer": 11,
-          "ignored": "(not $touch)",
-          "anchor_from": "$anchor_point",
-          "anchor_to": "$anchor_point"
-        }
-      },
-      { "default@$default_pagination": { "anchor_from": "$anchor_point", "anchor_to": "$anchor_point" } },
-      { "hover@$hover_pagination": { "anchor_from": "$anchor_point", "anchor_to": "$anchor_point" } },
-      { "pressed@$hover_pagination": { "anchor_from": "$anchor_point", "anchor_to": "$anchor_point" } }
+    "anchor_from": "top_right",
+    "anchor_to": "top_right",
+    "$default_page_button_control|default": "($namespace + '.page_left')",
+    "$hover_page_button_control|default": "($namespace + '.page_left_hover')",
+    "$pressed_page_button_control|default": "($namespace + '.page_left_hover')",
+    "$recipe_page_button_translation_key|default": "atemp.recipebook.previous_page",
+    "controls": "$visual_controls",
+    "variables": {
+      "requires": "$touch",
+      "$visual_controls": [
+        { "hover_text_element@recipe_book.page_button_hover_text": {} },
+        { "default@$default_page_button_control": {} },
+        { "hover@$default_page_button_control": {} },
+        { "pressed@$pressed_page_button_control": {} }
+      ]
+    },
+    "$visual_controls": [
+      { "hover_text_element@recipe_book.page_button_hover_text": {} },
+      { "default@$default_page_button_control": {} },
+      { "hover@$hover_page_button_control": {} },
+      { "pressed@$pressed_page_button_control": {} }
     ]
   }
 }

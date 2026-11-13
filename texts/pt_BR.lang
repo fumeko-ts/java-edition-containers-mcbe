@@ -38,3 +38,11 @@ ashur.tab.nature=Natureza
 ashur.tab.equipment=Equipamento
 ashur.tab.construction=Construção
 ashur.tab.search=Buscar
+
+atemp.recipebook.next_page=Seguinte
+atemp.recipebook.previous_page=Anterior
+atemp.recipebook.toggleRecipes.all=Todas
+atemp.recipebook.toggleRecipes.blastable=Explosíveis
+atemp.recipebook.toggleRecipes.craftable=Fabricáveis
+atemp.recipebook.toggleRecipes.smeltable=Fundíveis
+atemp.recipebook.toggleRecipes.smokable=Defumáveis

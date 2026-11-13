@@ -17,6 +17,8 @@
 {
   "namespace": "crafting_textures",
   "main_cell_panel@global.empty_panel": {
+    "$crafting_cell_controls|default": [],
+    "$item_collection|default": "",
     "controls": [
       {
         "default_uncraftable@crafting_textures.cell_state_control": {
@@ -24,7 +26,15 @@
           "$underlay_index": 3
         }
       },
-      { "console_selected@crafting_textures.cell_state_control": {} }
+      { "console_selected@crafting_textures.cell_state_control": {} },
+      {
+        "item_slot_control@global.empty_panel": {
+          "size": ["100%c", "100%c"],
+          "anchor_from": "center",
+          "anchor_to": "center",
+          "controls": "$crafting_cell_controls"
+        }
+      }
     ]
   },
 

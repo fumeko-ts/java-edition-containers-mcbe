@@ -2,9 +2,9 @@
   "format_version": 3,
   "header": {
     "name": "§lJava Containers §i|§r §8dark§r",
-    "description": "By @Ashura_temps\n§fDiscord: §bhttps://discord.gg/sFnE7zv75t",
+    "description": "By @Ashura_temps\n\n§fDiscord: §bhttps://discord.gg/sFnE7zv75t",
     "uuid": "b2016389-6b4b-48e9-ac45-c9e877dad72f",
-    "version": "3.0.2",
+    "version": "3.2.1",
     "min_engine_version": "1.26.40"
   },
   "modules": [
@@ -12,7 +12,7 @@
       "type": "resources",
       "description": "Created by Ashura_temps",
       "uuid": "08df99a3-7983-4870-98df-74bfe72e3f19",
-      "version": "3.0.2"
+      "version": "3.2.1"
     }
   ],
   "metadata": {
@@ -20,14 +20,17 @@
       //ui code creator
       "Ashura_temps",
       //discord link
-      "https://discord.gg/sFnE7zv75t"
+      "https://discord.gg/sFnE7zv75t",
+      //Offical Pages
+      "https://www.planetminecraft.com/member/ashura_tepes/",
+      "https://www.curseforge.com/members/ashura_tepes/projects"
     ]
   },
   "capabilities": ["pbr"],
   "subpacks": [
     {
       "folder_name": "mode_0",
-      "name": "§bNo Close Buttons§r\n§7The normal pack but without exit buttons§r",
+      "name": "§bNo Close Buttons§r\n§7The pack but without exit buttons§r",
       "memory_performance_tier": 0
     },
     {

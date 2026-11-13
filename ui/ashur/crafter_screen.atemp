@@ -39,9 +39,9 @@
                       "anchor_to": "left_middle",
                       "anchor_from": "left_middle",
                       "size": ["default", 10],
-                      "layer": 5,
+                      "localize": true,
                       "text": "atemp.container.crafter",
-                      "color": "$container_title_color"
+                      "color": "$container_title_text_color"
                     }
                   }
                 ]
@@ -188,12 +188,7 @@
           ]
         }
       },
-      {
-        "bottom@global.inventory_bottom_half_with_label": {
-          "anchor_to": "bottom_middle",
-          "anchor_from": "bottom_middle"
-        }
-      }
+      { "inventory_section@container_common.inventory_section_with_label": {} }
     ]
   },
   "crafter_grid_item@global.empty_panel": {
@@ -202,7 +197,7 @@
       {
         "crafter_item@jc_container_item.container_item": {
           "$background_control": "crafter_screen.disabled_button_overlay",
-          "$button_binding|default": "('#button_visible' + $crafter_button_index)",
+          "$button_binding": "('#button_visible' + $crafter_button_index)",
           "$disabled_button_action|default": "('disabled_button' + $crafter_button_index)",
           "$crafter_button_mappings|default": [
             { 

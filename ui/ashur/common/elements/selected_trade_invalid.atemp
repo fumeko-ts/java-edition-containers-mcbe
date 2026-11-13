@@ -64,19 +64,23 @@
     "consume_hover_events": false,
     "focus_enabled": false,
     "focus_magnet_enabled": false,
-    "prevent_touch_input": true
+    "prevent_touch_input": true,
+    "checked_control": "checked",
+    "checked_hover_control": "checked_hover"
   },
   "arrow_base_visuals@toggle.radio_toggle": {
     "size": [28, 21],
     "$toggle_name": "trade_toggle",
     "$toggle_variables": "selected_trade_invalid.state_variables",
     "$toggle_focus_enabled": false,
-    "$checked": "selected_trade_invalid.arrow_content",
-    "$checked_hover": "selected_trade_invalid.arrow_content",
     "$toggle_binding_value": "#trade_toggle_state",
     "$toggle_enabled_binding_name": "#trade_toggle_enabled",
     "$toggle_binding_condition": "visible",
     "layer": 3,
+    "$controls": [
+      { "checked@selected_trade_invalid.arrow_content": {} },
+      { "checked_hover@selected_trade_invalid.arrow_content": {} }
+    ],
     "$button_mappings": []
   }
 }

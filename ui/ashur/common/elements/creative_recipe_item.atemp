@@ -80,7 +80,7 @@
       }
     ]
   },
-  "icon_mappings@screen_content.image_element": {
+  "icon_mappings@global.empty_image": {
     "size": [7, 7],
     "anchor_from": "bottom_right",
     "anchor_to": "bottom_right",

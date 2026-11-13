@@ -38,3 +38,11 @@ ashur.tab.nature=Természet
 ashur.tab.equipment=Felszerelés
 ashur.tab.construction=Építés
 ashur.tab.search=Keresés
+
+atemp.recipebook.next_page=Következő oldal
+atemp.recipebook.previous_page=Előző oldal
+atemp.recipebook.toggleRecipes.all=Összes megjelenítve
+atemp.recipebook.toggleRecipes.blastable=Olvaszthatóak megjelenítve
+atemp.recipebook.toggleRecipes.craftable=Barkácsolhatóak megjelenítve
+atemp.recipebook.toggleRecipes.smeltable=Süthetőek megjelenítve
+atemp.recipebook.toggleRecipes.smokable=Füstölhetőek megjelenítve

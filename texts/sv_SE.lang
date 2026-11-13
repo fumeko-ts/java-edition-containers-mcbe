@@ -38,3 +38,11 @@ ashur.tab.nature=Natur
 ashur.tab.equipment=Utrustning
 ashur.tab.construction=Byggnad
 ashur.tab.search=Sök
+
+atemp.recipebook.next_page=Nästa sida
+atemp.recipebook.previous_page=Föregående sida
+atemp.recipebook.toggleRecipes.all=Visar alla
+atemp.recipebook.toggleRecipes.blastable=Visar smältbara
+atemp.recipebook.toggleRecipes.craftable=Visar tillverkningsbara
+atemp.recipebook.toggleRecipes.smeltable=Visar smältbara
+atemp.recipebook.toggleRecipes.smokable=Visar rökbara

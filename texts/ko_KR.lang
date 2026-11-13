@@ -38,3 +38,11 @@ ashur.tab.nature=자연
 ashur.tab.equipment=장비
 ashur.tab.construction=건축
 ashur.tab.search=검색
+
+atemp.recipebook.next_page=다음 페이지
+atemp.recipebook.previous_page=이전 페이지
+atemp.recipebook.toggleRecipes.all=모두 표시 중
+atemp.recipebook.toggleRecipes.blastable=용광 가능한 아이템 표시 중
+atemp.recipebook.toggleRecipes.craftable=제작 가능한 아이템 표시 중
+atemp.recipebook.toggleRecipes.smeltable=제련 가능한 아이템 표시 중
+atemp.recipebook.toggleRecipes.smokable=훈연 가능한 아이템 표시 중

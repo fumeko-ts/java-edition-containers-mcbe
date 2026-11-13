@@ -38,3 +38,11 @@ ashur.tab.nature=Natuur
 ashur.tab.equipment=Uitrusting
 ashur.tab.construction=Bouw
 ashur.tab.search=Zoeken
+
+atemp.recipebook.next_page=Volgende pagina
+atemp.recipebook.previous_page=Vorige pagina
+atemp.recipebook.toggleRecipes.all=Alles tonen
+atemp.recipebook.toggleRecipes.blastable=Smeltbaar in hoogoven tonen
+atemp.recipebook.toggleRecipes.craftable=Vervaardigbaar tonen
+atemp.recipebook.toggleRecipes.smeltable=Smeltbaar tonen
+atemp.recipebook.toggleRecipes.smokable=Rookbaar tonen

@@ -38,3 +38,11 @@ ashur.tab.nature=Alam
 ashur.tab.equipment=Peralatan
 ashur.tab.construction=Konstruksi
 ashur.tab.search=Cari
+
+atemp.recipebook.next_page=Halaman Berikutnya
+atemp.recipebook.previous_page=Halaman Sebelumnya
+atemp.recipebook.toggleRecipes.all=Menampilkan Semua
+atemp.recipebook.toggleRecipes.blastable=Dapat Dilebur
+atemp.recipebook.toggleRecipes.craftable=Dapat Dibuat
+atemp.recipebook.toggleRecipes.smeltable=Dapat Dibakar
+atemp.recipebook.toggleRecipes.smokable=Dapat Diasap

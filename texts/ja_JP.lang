@@ -38,3 +38,11 @@ ashur.tab.nature=自然
 ashur.tab.equipment=装備
 ashur.tab.construction=建築
 ashur.tab.search=検索
+
+atemp.recipebook.next_page=次のページ
+atemp.recipebook.previous_page=前のページ
+atemp.recipebook.toggleRecipes.all=すべてのアイテムを表示中
+atemp.recipebook.toggleRecipes.blastable=溶鉱可能なアイテムを表示中
+atemp.recipebook.toggleRecipes.craftable=クラフト可能なアイテムを表示中
+atemp.recipebook.toggleRecipes.smeltable=製錬可能なアイテムを表示中
+atemp.recipebook.toggleRecipes.smokable=燻製可能なアイテムを表示中
