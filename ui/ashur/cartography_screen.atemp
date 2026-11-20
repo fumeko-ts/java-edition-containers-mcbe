@@ -179,7 +179,7 @@
                     "error@screen_content.image_element": {
                       "size": [28, 21],
                       "layer": 4,
-                      "texture": "assets/sprites/container/cartography_table/error.png"
+                      "texture": "assets/sprites/container/cartography_table/error"
                     }
                   }
                 ]

@@ -314,21 +314,21 @@
   },
 
   "icon@global.empty_image": {
-    "texture": "assets/sprites/container/slot.png",
+    "texture": "assets/sprites/container/slot",
     "nineslice_size": 1,
     "color": "purple",
     "size": [18, 18]
   },
 
   "box@global.empty_image": {
-    "texture": "assets/sprites/container/slot.png",
+    "texture": "assets/sprites/container/slot",
     "nineslice_size": 1,
     "color": "cyan",
     "size": ["100%", "100%"]
   },
 
   "track@global.empty_image": {
-    "texture": "assets/sprites/container/slot.png",
+    "texture": "assets/sprites/container/slot",
     "nineslice_size": 1,
     "color": "red",
     "size": ["100%", "100%"]

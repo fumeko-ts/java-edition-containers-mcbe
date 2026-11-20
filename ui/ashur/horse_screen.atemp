@@ -197,7 +197,7 @@
     "$binding_name|default": "#has_saddle_slot",
     "$index|default": 0,
     "$slot_icon": "",
-    "texture": "assets/sprites/container/slot.png",
+    "texture": "assets/sprites/container/slot",
     "layer": 3,
     "controls": [
       {
@@ -231,7 +231,7 @@
     ]
   },
   "slot_collection@screen_content.image_element": {
-    "texture": "assets/sprites/container/slot.png",
+    "texture": "assets/sprites/container/slot",
     "layer": 2,
     "size": [18, 18]
   }

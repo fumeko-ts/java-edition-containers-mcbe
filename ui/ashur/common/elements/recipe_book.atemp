@@ -129,8 +129,8 @@
                                               "$place_holder_text_offset": [3, 0],
                                               "$text_edit_label_size": ["default", 10],
                                               "layer": 4,
-                                              "$place_holder_text_color": [0.659, 0.659, 0.659],
-                                              "$place_holder_text_shadow_color": [0.165, 0.165, 0.165],
+                                              "$place_holder_text_color": [0.310, 0.310, 0.310],
+                                              "$place_holder_text_shadow_color": [0.145, 0.145, 0.145],
                                               "$place_holder_text": "atemp.recipe_book.searchBox",
                                               "$default_control": "screen_content.text_field",
                                               "$locked_control": "screen_content.text_field",
@@ -229,6 +229,7 @@
     "size": ["default", 10],
     "text": "#text",
     "shadow": true,
+    "color": [0.478, 0.478, 0.478],
     "visible": false
   },
   "page_button_hover_text@container_common.custom_hover_text_renderer": {

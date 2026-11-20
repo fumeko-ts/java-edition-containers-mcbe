@@ -19,7 +19,7 @@
   //this is java acurate bundle ui like pixel perfect to java ver (i spent hours on this it was very hard to get it this minimal)
   "bundle_tooltip@global.root_panel": {
     "size": ["100%cm", "100%cm"],
-    "offset": [0, -6],
+    "offset": [1, -6],
     "layer": 40,
     "controls": [
       {
@@ -54,9 +54,9 @@
             }
           ],
           "controls": [
-            { "default@global.empty_image": { "texture": "assets/sprites/cross_button.png" } },
-            { "hover@global.empty_image": { "texture": "assets/sprites/cross_button_highlighted.png" } },
-            { "pressed@global.empty_image": { "texture": "assets/sprites/cross_button.png" } }
+            { "default@global.empty_image": { "texture": "assets/sprites/cross_button" } },
+            { "hover@global.empty_image": { "texture": "assets/sprites/cross_button_highlighted" } },
+            { "pressed@global.empty_image": { "texture": "assets/sprites/cross_button" } }
           ],
           "bindings": [
             {
@@ -117,7 +117,7 @@
             },
             {
               "bundle_progress_bar_border@global.empty_image": {
-                "texture": "assets/sprites/container/bundle/bundle_progressbar_border.png",
+                "texture": "assets/sprites/container/bundle/bundle_progressbar_border",
                 "size": ["100%sm - 8px", 13],
                 "min_size": [96, 13],
                 "nineslice_size": 2,
@@ -274,7 +274,7 @@
     "controls": [
       {
         "bundle_slot_highlight@global.empty_image": {
-          "texture": "assets/sprites/container/bundle/slot_background.png",
+          "texture": "assets/sprites/container/bundle/slot_background",
           "layer": 1,
           "controls": [
             {
@@ -282,13 +282,13 @@
                 "controls": [
                   {
                     "highlight_slot@global.empty_image": {
-                      "texture": "assets/sprites/container/bundle/slot_highlight_back.png",
+                      "texture": "assets/sprites/container/bundle/slot_highlight_back",
                       "layer": 4
                     }
                   },
                   {
                     "highlight_slot_overlay@global.empty_image": {
-                      "texture": "assets/sprites/container/bundle/slot_highlight_front.png",
+                      "texture": "assets/sprites/container/bundle/slot_highlight_front",
                       "layer": 16
                     }
                   }

@@ -23,7 +23,7 @@
   "$hide_custom_tooltips": false,
 
   //title text color
-  "$container_title_text_color": [0.89, 0.89, 0.89],
+  "$container_title_text_color": [0.160, 0.160, 0.160],
 
   /*
     these item indexes are whats used to render the items in the recipe book tabs

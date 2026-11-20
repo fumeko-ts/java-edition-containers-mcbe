@@ -57,10 +57,10 @@
     "$icon_unchecked_offset|default": [0, 0],
     "$icon_checked_offset|default": [0, 0],
     //textures
-    "$unchecked_default_image|default": "assets/sprites/container/creative_inventory/tab_top_unselected_2.png",
-    "$unchecked_hover_image|default": "assets/sprites/container/creative_inventory/tab_top_unselected_2.png",
-    "$checked_default_image|default": "assets/sprites/container/creative_inventory/tab_top_selected_2.png",
-    "$checked_hover_image|default": "assets/sprites/container/creative_inventory/tab_top_selected_2.png",
+    "$unchecked_default_image|default": "assets/sprites/container/creative_inventory/tab_top_unselected_2",
+    "$unchecked_hover_image|default": "assets/sprites/container/creative_inventory/tab_top_unselected_2",
+    "$checked_default_image|default": "assets/sprites/container/creative_inventory/tab_top_selected_2",
+    "$checked_hover_image|default": "assets/sprites/container/creative_inventory/tab_top_selected_2",
     //bindings for tab texture
     "$tab_texture_bindings|default": [
       {
@@ -117,31 +117,31 @@
     "variables": [
       {
         "requires": "$is_top_left_tab",
-        "$unchecked_default_image|default": "assets/sprites/container/creative_inventory/tab_top_unselected_1.png",
-        "$unchecked_hover_image|default": "assets/sprites/container/creative_inventory/tab_top_unselected_1.png",
-        "$checked_default_image|default": "assets/sprites/container/creative_inventory/tab_top_selected_1.png",
-        "$checked_hover_image|default": "assets/sprites/container/creative_inventory/tab_top_selected_1.png"
+        "$unchecked_default_image|default": "assets/sprites/container/creative_inventory/tab_top_unselected_1",
+        "$unchecked_hover_image|default": "assets/sprites/container/creative_inventory/tab_top_unselected_1",
+        "$checked_default_image|default": "assets/sprites/container/creative_inventory/tab_top_selected_1",
+        "$checked_hover_image|default": "assets/sprites/container/creative_inventory/tab_top_selected_1"
       },
       {
         "requires": "$is_top_right_tab",
-        "$unchecked_default_image|default": "assets/sprites/container/creative_inventory/tab_top_unselected_7.png",
-        "$unchecked_hover_image|default": "assets/sprites/container/creative_inventory/tab_top_unselected_7.png",
-        "$checked_default_image|default": "assets/sprites/container/creative_inventory/tab_top_selected_7.png",
-        "$checked_hover_image|default": "assets/sprites/container/creative_inventory/tab_top_selected_7.png"
+        "$unchecked_default_image|default": "assets/sprites/container/creative_inventory/tab_top_unselected_7",
+        "$unchecked_hover_image|default": "assets/sprites/container/creative_inventory/tab_top_unselected_7",
+        "$checked_default_image|default": "assets/sprites/container/creative_inventory/tab_top_selected_7",
+        "$checked_hover_image|default": "assets/sprites/container/creative_inventory/tab_top_selected_7"
       },
       {
         "requires": "$is_bottom_right_tab",
-        "$unchecked_default_image|default": "assets/sprites/container/creative_inventory/tab_bottom_unselected_7.png",
-        "$unchecked_hover_image|default": "assets/sprites/container/creative_inventory/tab_bottom_unselected_7.png",
-        "$checked_default_image|default": "assets/sprites/container/creative_inventory/tab_bottom_selected_7.png",
-        "$checked_hover_image|default": "assets/sprites/container/creative_inventory/tab_bottom_selected_7.png"
+        "$unchecked_default_image|default": "assets/sprites/container/creative_inventory/tab_bottom_unselected_7",
+        "$unchecked_hover_image|default": "assets/sprites/container/creative_inventory/tab_bottom_unselected_7",
+        "$checked_default_image|default": "assets/sprites/container/creative_inventory/tab_bottom_selected_7",
+        "$checked_hover_image|default": "assets/sprites/container/creative_inventory/tab_bottom_selected_7"
       },
       {
         "requires": "$is_left_tab",
-        "$unchecked_default_image|default": "assets/sprites/recipe_book/tab.png",
-        "$unchecked_hover_image|default": "assets/sprites/recipe_book/tab.png",
-        "$checked_default_image|default": "assets/sprites/recipe_book/tab_selected.png",
-        "$checked_hover_image|default": "assets/sprites/recipe_book/tab_selected.png"
+        "$unchecked_default_image|default": "assets/sprites/recipe_book/tab",
+        "$unchecked_hover_image|default": "assets/sprites/recipe_book/tab",
+        "$checked_default_image|default": "assets/sprites/recipe_book/tab_selected",
+        "$checked_hover_image|default": "assets/sprites/recipe_book/tab_selected"
       }
     ]
   },

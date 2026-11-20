@@ -21,11 +21,11 @@
     "size": [16, 16],
     "bindings": [
       {
-        "binding_name": "$binding_name",
-        "binding_name_override": "#visible",
-        "binding_condition": "always",
+        "binding_type": "collection",
         "binding_collection_name": "#enchant_buttons",
-        "binding_type": "collection"
+        "binding_condition": "always",
+        "binding_name": "$binding_name",
+        "binding_name_override": "#visible"
       }
     ]
   },
@@ -59,9 +59,9 @@
     "anchor_to": "bottom_right",
     "bindings": [
       {
-        "binding_name": "#cost",
+        "binding_type": "collection",
         "binding_collection_name": "#enchant_buttons",
-        "binding_type": "collection"
+        "binding_name": "#cost"
       }
     ]
   },
@@ -86,11 +86,11 @@
           ],
           "bindings": [
             {
-              "binding_name": "#selectable_dust_is_visible",
-              "binding_name_override": "#visible",
-              "binding_condition": "always",
+              "binding_type": "collection",
               "binding_collection_name": "#enchant_buttons",
-              "binding_type": "collection"
+              "binding_condition": "always",
+              "binding_name": "#selectable_dust_is_visible",
+              "binding_name_override": "#visible"
             }
           ]
         }
@@ -110,11 +110,11 @@
           ],
           "bindings": [
             {
-              "binding_name": "#unselectable_dust_is_visible",
-              "binding_name_override": "#visible",
-              "binding_condition": "always",
+              "binding_type": "collection",
               "binding_collection_name": "#enchant_buttons",
-              "binding_type": "collection"
+              "binding_condition": "always",
+              "binding_name": "#unselectable_dust_is_visible",
+              "binding_name_override": "#visible"
             }
           ]
         }
@@ -131,16 +131,16 @@
     "anchor_to": "top_left",
     "bindings": [
       {
+        "binding_type": "collection",
         "binding_collection_name": "#enchant_buttons",
-        "binding_name": "#runes",
-        "binding_type": "collection"
+        "binding_name": "#runes"
       },
       {
-        "binding_name": "$binding_name",
-        "binding_name_override": "#visible",
-        "binding_condition": "always",
+        "binding_type": "collection",
         "binding_collection_name": "#enchant_buttons",
-        "binding_type": "collection"
+        "binding_condition": "always",
+        "binding_name": "$binding_name",
+        "binding_name_override": "#visible"
       }
     ]
   },
@@ -229,11 +229,11 @@
           "bindings": [
             { "binding_type": "collection_details", "binding_collection_name": "#enchant_buttons" },
             {
-              "binding_name": "#selectable_dust_is_visible",
-              "binding_name_override": "#enabled",
-              "binding_condition": "always",
+              "binding_type": "collection",
               "binding_collection_name": "#enchant_buttons",
-              "binding_type": "collection"
+              "binding_condition": "always",
+              "binding_name": "#selectable_dust_is_visible",
+              "binding_name_override": "#enabled"
             }
           ],
           "button_mappings": [
