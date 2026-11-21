@@ -172,7 +172,7 @@
     ]
   },
   "selected_item_details@global.empty_image": {
-    "texture": "textures/ui/purpleBorder.png",
+    "texture": "textures/ui/purpleBorder",
     "nineslice_size": 3,
     "size": ["100%c + 10px", "100%c + 8px"],
     "alpha": {

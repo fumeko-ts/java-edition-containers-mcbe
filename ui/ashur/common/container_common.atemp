@@ -29,21 +29,68 @@
     "always_handle_pointer": true,
     "controls": [
       {
-        "item_renderer_top_layer@compatibility_container_item.floating_item_compatibility": {
+        //uneeded but nice so its staying for now
+        "modifier_factory@global.empty_collection": {
           "size": [18, 18],
-          "layer": 60,
-          "$floating_item_renderer_control|default": "container_common.floating_item_renderer_control",
-          "$floating_stack_count_label_control|default": "container_common.floating_stack_count_label",
-          "$floating_durability_bar_control|default": "container_common.floating_durability_bar",
-          "$floating_storage_bar_control|default": "container_common.floating_storage_bar",
-          "controls": [
-            { "$floating_item_renderer_control@$floating_item_renderer_control": {} },
-            { "$floating_stack_count_label_control@$floating_stack_count_label_control": {} },
-            { "$floating_durability_bar_control@$floating_durability_bar_control": {} },
-            { "$floating_storage_bar_control@$floating_storage_bar_control": {} }
+          "collection_name": "creative_recipe_book",
+          "factory": {
+            "name": "recipe_modifiers_factory",
+            "max_children_size": 1,
+            "control_name": "@container_common.item_renderer_top_layer",
+            "factory_variables": [
+              "$is_crafting_screen",
+              "$is_inventory_screen",
+              "$is_blast_furnace_screen",
+              "$is_furnace_screen",
+              "$is_smoker_screen",
+              "$is_anvil_screen",
+              "$is_beacon_screen",
+              "$is_brewing_stand_screen",
+              "$is_cartography_screen",
+              "$is_small_chest_screen",
+              "$is_double_chest_screen",
+              "$is_ender_chest_screen",
+              "$is_shulker_screen",
+              "$is_barrel_screen",
+              "$is_enchanting_screen",
+              "$is_grindstone_screen",
+              "$is_mount_screen",
+              "$is_loom_screen",
+              "$is_crafter_screen",
+              "$is_dropper_screen",
+              "$is_dispenser_screen",
+              "$is_hopper_screen",
+              "$is_smithing_table_screen",
+              "$is_stonecutter_screen",
+              "$is_trading_screen",
+              "$is_large_chest",
+              "$is_smelting_screen",
+              "$is_chest_screen" ,
+              "$is_redstone_screen"
+            ]
+          },
+          "bindings": [
+            {
+              "binding_name": "((not (#inventory_selected_item = -1)) * 1)",
+              "binding_name_override": "#collection_length"
+            }
           ]
         }
       }
+    ]
+  },
+  "item_renderer_top_layer@compatibility_container_item.floating_item_compatibility": {
+    "size": [18, 18],
+    "layer": 60,
+    "$floating_item_renderer_control|default": "container_common.floating_item_renderer_control",
+    "$floating_stack_count_label_control|default": "container_common.floating_stack_count_label",
+    "$floating_durability_bar_control|default": "container_common.floating_durability_bar",
+    "$floating_storage_bar_control|default": "container_common.floating_storage_bar",
+    "controls": [
+      { "$floating_item_renderer_control@$floating_item_renderer_control": {} },
+      { "$floating_stack_count_label_control@$floating_stack_count_label_control": {} },
+      { "$floating_durability_bar_control@$floating_durability_bar_control": {} },
+      { "$floating_storage_bar_control@$floating_storage_bar_control": {} }
     ]
   },
   "floating_storage_bar@container_common.floating_durability_bar": {
@@ -282,6 +329,63 @@
                         }
                       ]
                     }
+                  }
+                ]
+              }
+            }
+          ]
+        }
+      }
+    ]
+},
+
+
+
+  "java_hover_text@trade_global.trade_text_area": {
+    "controls": [
+      {
+        "$item_collection@container_common.hover_text_follow_parent": {
+          "layer": -200,
+          "controls": [
+            {
+              "hover_text@global.empty_image": {
+                "texture": "textures/ui/purpleBorder",
+                "size": ["100%c + 10px", "100%c + 8px"],
+                "nineslice_size": 4,
+                "layer": 400,
+                "anchor_from": "top_left",
+                "anchor_to": "top_left",
+                "offset": [18, -10],
+                "propagate_alpha": true,
+                "allow_clipping": false,
+                "controls": [
+                  {
+                    "hover_text_label": {
+                      "type": "label",
+                      "text": "#hover_text",
+                      "shadow": true,
+                      "anchor_from": "center",
+                      "anchor_to": "center",
+                      "size": ["default", "default"],
+                      "layer": 2,
+                      "bindings": [
+                        {
+                          "binding_type": "collection",
+                          "binding_collection_name": "$item_collection",
+                          "binding_name": "#hover_text"
+                        }
+                      ]
+                    }
+                  }
+                ],
+                "bindings": [
+                  //using visibility binding on a control that the button is set to use for a visual state will break said state so we use alpha instead
+                  {
+                    "binding_type": "view",
+                    "resolve_sibling_scope": true,
+                    "source_control_name": "hover_text_label",
+                    "source_property_name": "((not (#hover_text = '')) * 1)",
+                    "target_property_name": "#alpha"
                   }
                 ]
               }

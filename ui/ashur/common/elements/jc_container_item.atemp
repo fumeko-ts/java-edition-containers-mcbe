@@ -205,26 +205,31 @@
     ]
   },
 
+  "slot_highlight_control@global.empty_panel": {
+    "controls": [
+      {
+        "highlight_slot@global.empty_image": {
+          "texture": "assets/sprites/container/slot_highlight_back",
+          "size": [18, 18],
+          "layer": 4
+        }
+      },
+      {
+        "highlight_slot_overlay@global.empty_image": {
+          "texture": "assets/sprites/container/slot_highlight_front",
+          "size": [18, 18],
+          "layer": 12
+        }
+      }
+    ]
+  },
   "highlight_slot@global.empty_panel": {
     "controls": [
       {
         //nested like this because the highlight slot def cant directly contain visibility bindings due to it breaking button hover state
         "highlight_slot_content@global.empty_panel": {
           "controls": [
-            {
-              "highlight_slot@global.empty_image": {
-                "texture": "assets/sprites/container/slot_highlight_back",
-                "size": [18, 18],
-                "layer": 4
-              }
-            },
-            {
-              "highlight_slot_overlay@global.empty_image": {
-                "texture": "assets/sprites/container/slot_highlight_front",
-                "size": [18, 18],
-                "layer": 12
-              }
-            },
+            { "slot_highlight@jc_container_item.slot_highlight_control": {} },
             {
               "hover_text_controler@global.hover_text": {
                 "offset": [10, -10],

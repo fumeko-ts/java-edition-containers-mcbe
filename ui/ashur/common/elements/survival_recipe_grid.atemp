@@ -166,14 +166,11 @@
         }
       },
       {
-        "item_holder@global.empty_panel": {
-          "size": [ 20, 20 ],
+        "item_renderer@jc_container_item.item_renderer": {
           "anchor_from": "top_left",
           "anchor_to": "top_left",
-          "offset": [ 2, 2 ],
-          "controls": [
-            {"item_renderer@jc_container_item.item_renderer": {"size": [ 16, 16 ]}}
-          ]
+          "offset": [4, 4],
+          "size": [16, 16]
         }
       },
       {

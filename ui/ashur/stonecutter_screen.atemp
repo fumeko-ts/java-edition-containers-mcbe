@@ -44,11 +44,11 @@
           "controls": [
             { "filler_1@global.empty_panel": { "size": ["fill", 5] } },
             {
-              "smithing_label@global.empty_panel": {
+              "stonecutter_label_wrapper@global.empty_panel": {
                 "size": ["fill", 10],
                 "controls": [
                   {
-                    "sithing_label@global.empty_label": {
+                    "stonecutter_label@global.empty_label": {
                       "anchor_to": "top_left",
                       "anchor_from": "top_left",
                       "offset": [8, -1],
@@ -113,7 +113,7 @@
           "controls": [
             {
               "locked_scroll_box@screen_content.image_element": {
-                "texture": "assets/sprites/container/stonecutter/scroller_disabled.png",
+                "texture": "assets/sprites/container/stonecutter/scroller_disabled",
                 "size": [12, 15],
                 "layer": 5,
                 "anchor_to": "bottom_left",
@@ -221,7 +221,7 @@
                 "offset": [1, 1],
                 "layer": 3,
                 "nineslice_size": 1,
-                "texture": "assets/sprites/container/stonecutter/recipe_highlighted.png",
+                "texture": "assets/sprites/container/stonecutter/recipe_highlighted",
                 "bindings": [
                   {
                     "binding_type": "collection",
@@ -241,7 +241,7 @@
           "size": [16, 18],
           "nineslice_size": 1,
           "offset": [1, 1],
-          "texture": "assets/sprites/container/stonecutter/recipe.png",
+          "texture": "assets/sprites/container/stonecutter/recipe",
           "bindings": [
             {
               "binding_type": "collection",
@@ -259,7 +259,7 @@
           "nineslice_size": 1,
           "offset": [1, 1],
           "layer": 4,
-          "texture": "assets/sprites/container/stonecutter/recipe_selected.png",
+          "texture": "assets/sprites/container/stonecutter/recipe_selected",
           "bindings": [
             {
               "binding_type": "collection",
@@ -293,7 +293,7 @@
     "offset": [2, 0],
     "anchor_to": "center",
     "anchor_from": "center",
-    "texture": "assets/sprites/container/stonecutter/scroller.png",
+    "texture": "assets/sprites/container/stonecutter/scroller",
     "size": [12, "100% - 2px"],
     "controls": [
       {
@@ -307,7 +307,7 @@
           "uv_size": [10, 3],
           "anchor_to": "center",
           "anchor_from": "center",
-          "texture": "assets/sprites/container/stonecutter/scroller.png",
+          "texture": "assets/sprites/container/stonecutter/scroller",
           "size": ["100% - 2px", "100% - 2px"]
         }
       }

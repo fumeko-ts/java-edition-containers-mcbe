@@ -28,7 +28,7 @@
           "controls": [
             {
               "disabled_scroller@screen_content.image_element": {
-                "texture": "assets/sprites/container/creative_inventory/scroller_disabled.png",
+                "texture": "assets/sprites/container/creative_inventory/scroller_disabled",
                 "layer": 7,
                 "offset": [-8, 18],
                 "anchor_from": "top_right",
@@ -423,7 +423,6 @@
       }
     ]
   },
-  "highlight@screen_content.highlight_slot": { "ignored": "$touch", "size": [16, 16] },
   "remove_item_button": {
     "type": "toggle",
     "size": [18, 18],
@@ -433,7 +432,14 @@
     "focus_wrap_enabled": false,
     "focus_magnet_enabled": false,
     "default_focus_precedence": 1,
-    "controls": [{ "default_hover@creative_inventory.highlight": {} }],
+    "controls": [
+      {
+        "default_hover@jc_container_item.slot_highlight_control": {
+          "alpha": "((not $touch) * 1)",
+          "propagate_alpha": true
+        }
+      }
+    ],
     "button_mappings": [
       {
         "from_button_id": "button.menu_select",
@@ -459,12 +465,18 @@
   },
   "delete_zone_grid_item@creative_inventory.remove_item_button": {
     "controls": [
-      { "default_hover@creative_inventory.highlight": { "layer": 1 } },
+      {
+        "default_hover@jc_container_item.slot_highlight_control": {
+          "alpha": "((not $touch) * 1)",
+          "propagate_alpha": true,
+          "layer": 1
+        }
+      },
       {
         "slot_icon@screen_content.image_element": {
           "nineslice_size": [1, 1, 1, 1],
           "layer": 0,
-          "texture": "assets/sprites/container/slot.png",
+          "texture": "assets/sprites/container/slot",
           "size": [18, 18]
         }
       }
@@ -524,7 +536,7 @@
     "layer": 7,
     "anchor_to": "center",
     "anchor_from": "center",
-    "texture": "assets/sprites/container/creative_inventory/scroller.png",
+    "texture": "assets/sprites/container/creative_inventory/scroller",
     "size": [12, "100% - 2px"],
     "controls": [
       {
@@ -538,7 +550,7 @@
           "uv_size": [10, 3],
           "anchor_to": "center",
           "anchor_from": "center",
-          "texture": "assets/sprites/container/creative_inventory/scroller.png",
+          "texture": "assets/sprites/container/creative_inventory/scroller",
           "size": ["100% - 2px", "100% - 2px"]
         }
       }

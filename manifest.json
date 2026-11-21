@@ -4,7 +4,7 @@
     "name": "§lJava Containers§r",
     "description": "By @Ashura_temps\n§fDiscord: §bhttps://discord.gg/sFnE7zv75t",
     "uuid": "94d7784c-ef5b-48b7-a3de-7385fce38281",
-    "version": "3.2.0",
+    "version": "3.2.2",
     "min_engine_version": "1.26.40"
   },
   "modules": [
@@ -12,7 +12,7 @@
       "type": "resources",
       "description": "Created by Ashura_temps",
       "uuid": "f2b29bda-ffb1-428b-a619-ac0485d18fa7",
-      "version": "3.2.0"
+      "version": "3.2.2"
     }
   ],
   "metadata": {
@@ -20,7 +20,10 @@
       //ui code creator
       "Ashura_temps",
       //discord link
-      "https://discord.gg/sFnE7zv75t"
+      "https://discord.gg/sFnE7zv75t",
+      //Offical Pages
+      "https://www.planetminecraft.com/member/ashura_tepes/",
+      "https://www.curseforge.com/members/ashura_tepes/projects"
     ]
   },
   "capabilities": ["pbr"],

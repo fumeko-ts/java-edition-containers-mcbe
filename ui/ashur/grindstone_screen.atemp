@@ -77,7 +77,7 @@
                             "controls": [
                               {
                                 "cross_out_icon@screen_content.image_element": {
-                                  "texture": "assets/sprites/container/grindstone/error.png",
+                                  "texture": "assets/sprites/container/grindstone/error",
                                   "size": [28, 21],
                                   "bindings": [
                                     { "binding_name": "#cross_out_icon", "binding_name_override": "#visible" }

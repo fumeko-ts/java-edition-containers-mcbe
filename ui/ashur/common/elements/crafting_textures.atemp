@@ -48,7 +48,7 @@
           "anchor_from": "center",
           "anchor_to": "center",
           "nineslice_size": 2,
-          "texture": "textures/ui/ashur/cell_icons/cell_white.png",
+          "texture": "textures/ui/ashur/cell_icons/cell_white",
           "layer": 12,
           "alpha": 0.1915
         }
@@ -57,25 +57,46 @@
     ],
     "bindings": [
       {
+        "binding_type": "collection",
+        "binding_collection_name": "$item_collection",
+        "binding_condition": "always",
         "binding_name": "(#container_item_background = $underlay_index)",
-        "binding_name_override": "#visible",
+        "binding_name_override": "#visible"
+      }
+      /*
+        // on atleast my device (which is super potato) occasionaly i see the overlay for a split second in creative
+      {
+        "binding_name": "#container_item_background",
         "binding_condition": "always",
         "binding_type": "collection",
         "binding_collection_name": "$item_collection"
+      },
+      {
+        "binding_type": "global",
+        "binding_condition": "always",
+        "binding_name": "#is_creative_mode"
+      },
+      {
+        "binding_type": "view",
+        "binding_condition": "always",
+        "source_property_name": "((#container_item_background = $underlay_index) and (not #is_creative_mode))",
+        "target_property_name": "#visible"
       }
+      
+      */
     ]
   },
 
   "uncraftable_slot@crafting_textures.console_unselected_slot": {
     "color": [0.996, 0.0, 0.008],
     "alpha": 0.19,
-    "texture": "textures/ui/ashur/cell_icons/cell_white.png"
+    "texture": "textures/ui/ashur/cell_icons/cell_white"
   },
 
   "console_unselected_slot@global.empty_image": {
     "size": ["100%", "100%"],
     "nineslice_size": 2,
-    "texture": "textures/ui/ashur/cell_icons/cell_focus_unselect.png",
+    "texture": "textures/ui/ashur/cell_icons/cell_focus_unselect",
     "layer": 5
   }
 }

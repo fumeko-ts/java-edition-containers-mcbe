@@ -280,6 +280,7 @@
           "controls": [
             {
               "hover_text@global.hover_text": {
+                "offset": [11, -11],
                 "bindings": [
                   {
                     "binding_type": "collection",
